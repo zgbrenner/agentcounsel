@@ -36,12 +36,14 @@ A skill will not be merged unless it meets all of these.
 
 ## How to contribute
 
-1. Open an issue describing the skill or change, so scope and naming can be agreed.
+1. Open an issue using the appropriate template — **bug report**, **skill request**, or **skill improvement** — so scope and naming can be agreed. The templates live in `.github/ISSUE_TEMPLATE/`.
 2. Create the skill folder under the right practice area in `skills/`, with `SKILL.md` and any `templates/`.
 3. Add the skill to `SKILLS_INDEX.md` and, where relevant, `WORKFLOW_ROUTER.md`.
 4. Re-read the `core/` rules and self-check against the hard requirements above.
-5. Run `python scripts/validate_repo.py` and resolve any errors it reports. See `VALIDATION.md`.
-6. Open a pull request that explains what the skill does and who it is for.
+5. If you changed a skill that is part of the Claude Code plugin bundle, run `python scripts/sync_plugin_skills.py`. See `PLUGIN_SYNC.md`.
+6. Run `python scripts/validate_repo.py` and resolve any errors it reports. See `VALIDATION.md`.
+7. Note any user-facing change under "Unreleased" in `CHANGELOG.md`.
+8. Open a pull request and complete the checklist in the pull request template.
 
 ## Reviews
 
