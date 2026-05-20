@@ -59,6 +59,8 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Is this worker an employee or a contractor?" / "classify a worker" | `skills/employment/worker-classification/SKILL.md` |
 | "Review this offer letter before we send it" | `skills/employment/hiring-review/SKILL.md` |
 | "Wage-and-hour question" / "overtime, exempt status, or final-pay question" | `skills/employment/wage-hour-qa/SKILL.md` |
+| "Run an internal investigation" / "investigate this complaint" | `skills/employment/internal-investigation/SKILL.md` |
+| "Employee is on (or returning from) protected leave" / "medical or family leave situation" | `skills/employment/protected-leave-review/SKILL.md` |
 | "Review this severance / separation agreement" | `skills/employment/severance-review/SKILL.md` |
 | "Review our employee handbook / this workplace policy" | `skills/employment/employee-policy-review/SKILL.md` |
 | "Review our internal employee AI-use policy" | `skills/ai-governance/employee-ai-policy/SKILL.md` |
@@ -98,6 +100,7 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "We received a cease-and-desist letter" | `skills/ip/cease-and-desist-response/SKILL.md` |
 | "Patent freedom-to-operate triage for this product" | `skills/ip/fto-triage/SKILL.md` |
 | "Screen this invention disclosure" | `skills/ip/invention-intake/SKILL.md` |
+| "Is this infringing?" / "triage a possible IP infringement" | `skills/ip/infringement-triage/SKILL.md` |
 | "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
 | "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
 
@@ -110,6 +113,7 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 - **A product launch that raises many issues** -> start with `launch-review`, which spots issues and routes to specialist skills.
 - **A new AI use case** -> start with `ai-use-case-intake`, which triages and routes onward.
 - **A received cease-and-desist letter** -> `cease-and-desist-response`; **drafting an outbound cease-and-desist or demand** -> `demand-letter`.
+- **A possible IP infringement** -> `infringement-triage` for a first-pass factor triage; `fto-triage` for patent freedom-to-operate against specific patents; `trademark-clearance-triage` for clearing a proposed new mark.
 
 ## When nothing matches
 

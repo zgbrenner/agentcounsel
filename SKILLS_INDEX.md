@@ -39,6 +39,8 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Employment | Worker Classification | `skills/employment/worker-classification/SKILL.md` | Structuring the employee vs. contractor analysis for a proposed engagement | Proposed engagement facts, classification purpose, jurisdiction | Classification analysis memo |
 | Employment | Hiring Review | `skills/employment/hiring-review/SKILL.md` | Reviewing an employment offer letter against the work jurisdiction | Offer letter, work location, role and pay | Hiring review memo |
 | Employment | Wage and Hour Question Triage | `skills/employment/wage-hour-qa/SKILL.md` | Structuring a wage-and-hour question and routing rules to verified research | The question, jurisdiction, operative facts | Wage-and-hour analysis |
+| Employment | Internal Investigation | `skills/employment/internal-investigation/SKILL.md` | Supporting an attorney-directed internal investigation and drafting the memo | Allegation, documents, interview notes | Investigation memorandum |
+| Employment | Protected Leave Review | `skills/employment/protected-leave-review/SKILL.md` | Reviewing a protected-leave situation and flagging adverse-action exposure | Leave situation, procedural status, jurisdiction | Protected-leave review |
 | Privacy | DPA Review | `skills/privacy/dpa-review/SKILL.md` | Reviewing a data processing agreement | DPA text, client role | Risk table + review |
 | Privacy | DSAR Workflow | `skills/privacy/dsar-workflow/SKILL.md` | Triaging and structuring a data subject request | The request, requester details | Request-handling record |
 | Privacy | Privacy Policy Gap Review | `skills/privacy/privacy-policy-gap-review/SKILL.md` | Checking a privacy policy against actual practice | Privacy policy, described practices | Gap table + recommendations |
@@ -60,6 +62,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Intellectual Property | Cease and Desist Response | `skills/ip/cease-and-desist-response/SKILL.md` | Triaging a received cease-and-desist letter into response options | The received letter, factual assessment | Response triage memo |
 | Intellectual Property | Patent Freedom-to-Operate Triage | `skills/ip/fto-triage/SKILL.md` | First-pass triage of patent blocking risk for a product or feature | Product/feature description, jurisdictions, known patents | FTO triage memo |
 | Intellectual Property | Invention Disclosure Intake | `skills/ip/invention-intake/SKILL.md` | Screening a proposed invention and flagging filing-deadline urgency | Invention disclosure, disclosure history | Invention screen + verdict |
+| Intellectual Property | Infringement Triage | `skills/ip/infringement-triage/SKILL.md` | First-pass triage of a potential IP-infringement issue | IP right(s), party posture, evidence | Infringement triage memo |
 
 ## Practice areas at a glance
 
@@ -67,9 +70,9 @@ A complete catalog of every skill in the library. The canonical source of truth 
 - **Litigation** — intake, chronology, demand letters, subpoena triage, deposition preparation, legal holds, privilege-log review, claim charts, and brief drafting.
 - **Contracts** — NDAs, commercial contracts, redlines, and statements of work.
 - **Corporate** — board minutes, written consents, closing checklists, due-diligence issue extraction, material-contract schedules, and entity compliance.
-- **Employment** — terminations, worker classification, hiring review, wage-and-hour questions, severance, and workplace policies.
+- **Employment** — terminations, worker classification, hiring review, wage-and-hour questions, internal investigations, protected leave, severance, and workplace policies.
 - **Privacy** — data processing agreements, impact assessments, data subject requests, and policy gaps.
 - **Product Legal** — launch, marketing claims, terms of service, and AI features.
 - **Regulatory** — enforcement risk, rule changes, and compliance gaps.
 - **AI Governance** — AI use-case intake, vendor terms, model risk, and AI policies.
-- **Intellectual Property** — trademark triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, and open-source licensing.
+- **Intellectual Property** — trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, and open-source licensing.

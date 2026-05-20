@@ -68,12 +68,12 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Litigation | Matter intake, chronologies, demand letters, subpoena triage. |
 | Contracts | NDAs, commercial contracts, redlines, statements of work. |
 | Corporate | Board minutes, written consents, closing checklists, due-diligence review, entity compliance. |
-| Employment | Terminations, severance agreements, workplace policies. |
+| Employment | Terminations, worker classification, hiring, internal investigations, protected leave, severance, workplace policies. |
 | Privacy | Data processing agreements, data subject requests, policy gaps. |
 | Product Legal | Launch review, marketing claims, terms of service, AI features. |
 | Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
 | AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |
-| Intellectual Property | Trademark triage, DMCA notices, open-source licensing. |
+| Intellectual Property | Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, open-source licensing. |
 
 See `SKILLS_INDEX.md` for the full catalog.
 

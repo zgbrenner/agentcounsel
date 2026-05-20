@@ -193,6 +193,8 @@ A completeness re-check on 2026-05-20 surfaced two categories of remaining work:
 
 ### D1 — New source prompts (added to `agnostic-skills-for-legal` after this plan)
 
+**Status: resolved.** `internal-investigation` and `infringement-triage` were built as new skills; `leave-tracker` was built as `protected-leave-review` (reframed from a deadline tracker to a decision-support review, since AgentCounsel does not compute deadlines); `takedown` is covered by the existing `dmca-takedown`; `portfolio` is excluded as a tracking/reporting tool.
+
 | Source prompt | Practice area | Assessment | Recommended disposition |
 |---|---|---|---|
 | `employment/internal-investigation` | employment | Structuring a workplace internal investigation (misconduct, fraud, whistleblower complaints). No AgentCounsel equivalent. | **New skill — High** |
