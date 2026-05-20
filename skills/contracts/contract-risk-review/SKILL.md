@@ -75,6 +75,12 @@ If the contract text or the client's role is not provided, stop and request it. 
    - Assignment and change of control
    - Unusual, one-sided, or non-standard clauses
 
+   **Limitation-of-liability decomposition.** Do not collapse the liability-cap and consequential-damages provisions into a single rating. Break the analysis into four dimensions: (a) the treatment of direct versus indirect/consequential damages — quote the exact exclusion language; (b) the cap base or amount as written (e.g., fees paid in the prior 12 months, total contract value) — quote it verbatim; (c) the carve-outs from the cap and how each interacts with the overall allocation (e.g., IP indemnity, fraud, willful misconduct, death/personal injury, data breach); and (d) how the overall allocation sits relative to the client's realistic risk exposure and the value of the contract. Flag each dimension separately in the risk matrix.
+
+   **IP-clause depth.** When the contract assigns or licenses intellectual property, go beyond ownership labeling. Check for: (a) whether assignment language is in the present tense (a present-tense grant, e.g., "hereby assigns") versus a mere promise to assign in the future — a future promise may require a further act to perfect the transfer [verify jurisdiction]; (b) the treatment of moral rights, including whether any waiver is included [verify jurisdiction]; (c) a further-assurances or cooperation obligation requiring the assignor to execute additional documents to perfect the assignment; and (d) carve-outs from the assignment (e.g., retained background IP, pre-existing tools, residual knowledge). Flag any assignment gap as a potential diligence risk.
+
+   **Specialization note.** SaaS, subscription, and vendor agreements warrant heightened attention to: auto-renewal mechanics and notice windows; unilateral price-escalation rights; service levels, uptime commitments, and associated remedies; and data terms (processing, retention, portability, deletion). If the contract is for an AI vendor, AI-enabled service, or involves AI-generated outputs, route to or also apply the `ai-vendor-terms-review` skill, which covers model transparency, output liability, training-data rights, and AI-specific data terms.
+
 5. **Assess missing protections.** Note standard commercial protections that are absent and assess whether their absence is a material risk.
 
 6. **Build the risk matrix.** Complete `templates/contract-risk-matrix.md` for each clause category reviewed.
@@ -92,7 +98,7 @@ Deliver, in order:
 1. **Document Summary** — parties, effective date, governing law, client's role, counterparty's form or negotiated draft, approximate transaction value/risk profile.
 2. **Structural Map** — list of sections present and absent.
 3. **Clause-by-Clause Summary** — plain-language summary of each category with risk note.
-4. **Risk Matrix** — completed using `templates/contract-risk-matrix.md`, with Severity (High / Med / Low) rated per clause.
+4. **Risk Matrix** — completed using `templates/contract-risk-matrix.md`, with two severity dimensions rated per clause: **Legal Risk** (High / Med / Low) for the client's legal exposure, and **Business Friction** (Blocking / Slowing / Confusing / None) for the practical operational impact. A term can be legally enforceable yet operationally damaging, or legally marginal yet a deal-blocker operationally — both dimensions should be captured.
 5. **Prioritized Issue List** — ranked High / Medium / Low, with suggested changes for High and Medium items.
 6. **Missing Provisions** — list of standard protections absent from the agreement.
 7. **Open Items for Attorney Verification** — checkbox list.

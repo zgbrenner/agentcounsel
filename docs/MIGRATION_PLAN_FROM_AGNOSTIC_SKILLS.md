@@ -15,7 +15,7 @@ _Last updated 2026-05-20._
 | A | Improve existing skills | **Partially done** — `nda-review` and `demand-letter` improved (PR #5). The other nine improvement passes were not run; they are carried into Phase D. |
 | B | Add missing high-value skills | **Done** — twelve skills added (PRs #6, #7) and quality-checked (PR #8). |
 | C | Corporate / M&A practice area | **Done** — six skills added as a new `corporate/` practice area (PR #9), quality-checked (PR #10). |
-| D | Newly identified gaps | **Open** — see Phase D below. |
+| D | Newly identified gaps | **Done** — D1 added three new skills; D2 ran the nine Phase A improvement passes. |
 
 AgentCounsel now has 47 canonical skills across 10 practice areas, and a `NOTICE` file records the Apache-2.0 attribution chain.
 
@@ -204,6 +204,8 @@ A completeness re-check on 2026-05-20 surfaced two categories of remaining work:
 | `ip/portfolio` | ip | IP maintenance-deadline calendar — a tracking and reporting tool, not a drafting or analysis workflow. | **Reject** — consistent with excluding other status/tracking prompts |
 
 ### D2 — Phase A improvement passes not yet run
+
+**Status: complete.** All nine passes below were run — each existing skill was compared against the named source prompt and a targeted improvement folded in. The list is retained for reference.
 
 Nine of the eleven Phase A passes were never executed (the executed Phase A was scoped to `nda-review` and `demand-letter`). They remain available as comparison-and-improvement passes on existing skills, each using the named source prompt:
 

@@ -65,7 +65,7 @@ If the client identity or a basic description of the dispute is not provided, st
 
 8. **Record key dates.** List all dates provided: incident date, filing date, service date, answer or response deadline, statute of limitations expiration, arbitration demand deadline, and any other deadlines or milestones. Mark every deadline as `[CONFIRM: attorney must verify deadline and method of calculation]`. Never compute, extend, or assert a deadline.
 
-9. **Flag conflicts check.** Record all party names and aliases for conflicts screening. Note `[ACTION: run conflicts check before proceeding; do not proceed if conflict identified without attorney authorization]`.
+9. **Flag conflicts check — gate.** Record all party names and aliases for conflicts screening. This step is a gate: the matter must not proceed past intake — no work may be performed and no engagement confirmed — while a potential conflict remains unresolved, unless the responsible attorney has documented in writing their authorization to proceed notwithstanding the identified conflict (e.g., informed consent, waiver, or screen). Record the gate status as one of: (a) `[ACTION: conflicts check not yet run — matter gated; do not proceed]`, (b) `[ACTION: potential conflict identified — matter gated pending documented attorney authorization]`, or (c) `[CONFIRM: conflicts check cleared — attorney to confirm before matter proceeds]`. Do not characterize whether a conflict is waivable or consentable; that determination is for the responsible attorney `[verify jurisdiction]`.
 
 10. **Flag litigation hold / preservation obligation.** Based on the parties and claims described, note that an attorney must immediately evaluate whether a litigation hold notice is required and to whom it must be sent. Record known or likely custodians of relevant documents and ESI. Do not assert that a hold is or is not required. When an attorney has determined a hold is warranted, use `legal-hold` to prepare the notice.
 
@@ -73,7 +73,14 @@ If the client identity or a basic description of the dispute is not provided, st
 
 12. **List immediate action items.** Compile a prioritized list of actions that must be taken promptly: conflict check, litigation hold evaluation, insurance notice, answer or response deadline verification, client communication, document preservation, and any other time-sensitive items flagged in the intake.
 
-13. **Assemble the intake summary.** Organize all of the above into a structured document using the output format below. Label every section, mark all placeholders and confirmation items, and append the attorney verification checklist.
+13. **Preliminary risk and materiality assessment.** Based solely on the information provided in this intake — without access to discovery, full facts, or legal analysis — record a preliminary triage signal for portfolio-management purposes only. These are not legal conclusions and are explicitly labeled `[ATTORNEY TO CONFIRM]`.
+
+    - **Risk band:** Assign a preliminary band of Low, Medium, or High with a one-sentence rationale drawn only from the intake facts (e.g., nature of claims, scale of alleged harm, procedural posture). Do not predict outcome or assess legal merit.
+    - **Materiality posture:** Assign a preliminary materiality posture relevant to the organization's financial reporting or risk-management obligations, selecting from: None (no current reporting or reserve signal), Monitor (track but no current action), Reserve (potential financial reserve may be warranted — attorney/finance to assess), or Disclose (potential disclosure obligation — attorney to assess). This signal does not constitute accounting, auditing, or securities advice.
+
+    Both signals must carry the tag `[ATTORNEY TO CONFIRM: preliminary triage only — not a legal conclusion]` and a note that they may change materially as facts develop. If insufficient information was provided to form even a preliminary signal, record `[CONFIRM: insufficient information to assess — attorney to triage]` for each item.
+
+14. **Assemble the intake summary.** Organize all of the above into a structured document using the output format below. Label every section, mark all placeholders and confirmation items, and append the attorney verification checklist.
 
 ## Output Format
 
@@ -87,11 +94,12 @@ Deliver a structured Matter Intake Summary with the following sections:
 6. **Procedural Posture** — Forum, stage, case number if known.
 7. **Jurisdiction and Venue** — Jurisdiction, court/forum, governing law, open issues.
 8. **Key Dates and Deadlines** — Table: Date | Event/Deadline | Source | `[CONFIRM]` flag.
-9. **Conflicts Check Flag** — Party list for conflicts screening; action item.
+9. **Conflicts Check Gate** — Party list for conflicts screening; gate status (not yet run / potential conflict gated / cleared); documented attorney authorization if applicable.
 10. **Litigation Hold / Preservation Flag** — Known custodians; attorney evaluation required.
 11. **Insurance and Indemnity Flag** — Known policies or agreements; notice obligation flag.
 12. **Immediate Action Items** — Prioritized checklist.
-13. **Assumptions and Open Items** — All `[CONFIRM: ...]` placeholders and unresolved items.
+13. **Preliminary Risk and Materiality Assessment** — Risk band (Low / Medium / High) with one-sentence rationale; materiality posture (None / Monitor / Reserve / Disclose); both tagged `[ATTORNEY TO CONFIRM: preliminary triage only — not a legal conclusion]`.
+14. **Assumptions and Open Items** — All `[CONFIRM: ...]` placeholders and unresolved items.
 
 Use `[CONFIRM: ...]` for every unverified or missing item. Use `[ACTION: ...]` for every required attorney or client step.
 
@@ -99,7 +107,7 @@ Use `[CONFIRM: ...]` for every unverified or missing item. Use `[ACTION: ...]` f
 
 - [ ] Client identity and role confirmed with client.
 - [ ] All party names and aliases captured for conflicts screening.
-- [ ] Conflicts check run and cleared before matter proceeds.
+- [ ] Conflicts check run; gate status confirmed: if a potential conflict was identified, documented attorney authorization to proceed is on file before any work is performed.
 - [ ] All deadlines independently verified — none computed or relied upon from this intake alone.
 - [ ] Statute of limitations and any tolling issues evaluated by attorney.
 - [ ] Litigation hold / document preservation obligation evaluated and, if required, hold notice issued.
@@ -107,5 +115,6 @@ Use `[CONFIRM: ...]` for every unverified or missing item. Use `[ACTION: ...]` f
 - [ ] Jurisdiction and venue confirmed; no waiver issues.
 - [ ] Governing law identified and confirmed.
 - [ ] Privilege and confidentiality of intake summary protected; distribution limited.
+- [ ] Preliminary risk band and materiality posture reviewed and confirmed or revised by responsible attorney; triage signals updated as facts develop.
 - [ ] Assumptions and open items resolved before intake summary is relied upon.
 - [ ] Client has been advised of attorney-client relationship scope and engagement terms.

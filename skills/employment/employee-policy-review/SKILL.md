@@ -1,13 +1,13 @@
 ---
 name: Employee Policy Review
-description: Use when reviewing an employee handbook or individual workplace policy for clarity, internal consistency, completeness, and legal risk flags requiring attorney and jurisdiction-specific review.
+description: Use when reviewing an employee handbook or individual workplace policy — or a proposed change to one — for clarity, internal consistency, completeness, and legal risk flags requiring attorney and jurisdiction-specific review.
 ---
 
 # Employee Policy Review
 
 ## Purpose
 
-Produce a structured, attorney-ready review of an employee handbook or individual workplace policy. The skill systematically surfaces clarity problems, internal contradictions, coverage gaps, language that may create unintended contractual commitments, outdated or ambiguous procedures, and acknowledgment or disclaimer issues — so that employment counsel can conduct an efficient substantive review. It does NOT certify legal compliance or conclude that any provision is lawful or unlawful. This is draft legal work product — not legal advice.
+Produce a structured, attorney-ready review of an employee handbook or individual workplace policy, or of a proposed change to an existing handbook or policy. The skill systematically surfaces clarity problems, internal contradictions, coverage gaps, language that may create unintended contractual commitments, outdated or ambiguous procedures, and acknowledgment or disclaimer issues — so that employment counsel can conduct an efficient substantive review. When the input is a proposed change rather than a whole document, the skill additionally checks for ripple effects across the rest of the handbook (cross-references, defined terms, related policies, location supplements) and flags any benefit reductions or altered promises the change would introduce. It does NOT certify legal compliance or conclude that any provision is lawful or unlawful. This is draft legal work product — not legal advice.
 
 ## Use When
 
@@ -17,10 +17,13 @@ Produce a structured, attorney-ready review of an employee handbook or individua
 - A specific policy (e.g., remote work, leave, social media, progressive discipline) has been flagged as potentially problematic and the user needs an organized issues list.
 - Counsel is onboarding a new employer client and needs a first-pass issues inventory of existing policies.
 - The user phrases it as: "does our handbook cover everything it should?" or "flag anything that looks like a risk."
+- A user is proposing a change to one or more sections of an existing handbook and wants to know what else in the handbook the change may break, contradict, or affect before the change is published.
+- A proposed change reduces or removes an employee benefit or alters a commitment the handbook previously made, and the user needs those implications surfaced for attorney review.
 
 ## Required Inputs
 
 - **The full policy or handbook text**: uploaded or pasted. Do not review from a description — the actual document text is required.
+- **If the input is a proposed change**: the text of the proposed change AND the text of the current handbook or section(s) being changed. Both are required to perform the ripple-effect and benefit-reduction checks. If the rest of the handbook is not provided, those checks cannot be completed — flag the omission prominently and request the full document.
 - **Jurisdiction(s)**: the state, province, or country in which the employer operates, or flag as unknown. Multi-state employers should indicate all relevant jurisdictions.
 - **Employer size**: approximate headcount. Certain legal obligations vary by employer size — flag size-dependent topics for attorney confirmation.
 - **Industry or workforce type** (if relevant): e.g., healthcare, construction, remote-only workforce. Flag industry-specific requirements for attorney confirmation.
@@ -45,10 +48,12 @@ If the document text is not provided, stop and request it. If jurisdiction or em
 - Separate what the document says from what you assume and from what the attorney must verify. Label each category.
 - Use `[CONFIRM: ...]` wherever a legal requirement, enforceability question, or factual basis is uncertain.
 - Flag handbook language that may create express or implied contractual commitments as a risk item — do not conclude on enforceability.
+- **Ripple-effect rule (change reviews).** When the input is a proposed change to an existing policy or handbook section, do not treat that section in isolation. Identify every other part of the handbook — cross-references to the changed section, defined terms, related policies, and any state or location supplements — that the change may break or contradict, and surface each ripple effect explicitly. Do not assume that only the changed section matters.
+- **Benefit-reduction and altered-promise rule (change reviews).** A proposed change that reduces or removes an employee benefit, or that alters a commitment the handbook previously made, can carry contractual or reliance exposure depending on the jurisdiction and how the handbook is framed `[verify jurisdiction]`. Flag every such reduction or altered promise prominently with `[ATTORNEY TO CONFIRM: benefit reduction or altered promise — assess contractual/reliance exposure before publication]`. Do not assert whether the original provision created an enforceable obligation or whether the change is permissible — that determination requires attorney review.
 
 ## Workflow
 
-1. **Confirm inputs.** Verify that the document text, jurisdiction, and employer size are available. If the text is missing, stop and request it. Flag unknown jurisdiction or employer size as `[CONFIRM]` and proceed.
+1. **Confirm inputs and review type.** Verify that the document text, jurisdiction, and employer size are available. Determine whether the input is (a) a whole handbook or policy for review or (b) a proposed change to an existing handbook or policy. If the text is missing, stop and request it. If the review is a proposed change and the rest of the handbook has not been provided, flag prominently that the ripple-effect and benefit-reduction checks cannot be completed without the full current document, and request it before proceeding with those checks. Flag unknown jurisdiction or employer size as `[CONFIRM]` and proceed with all other steps.
 
 2. **Identify document structure and scope.** Read through the full document and note: the overall organization, the presence or absence of a table of contents, the types of policies included, and the apparent date of last revision. Flag stale-appearing revision dates for attorney attention.
 
@@ -70,11 +75,15 @@ If the document text is not provided, stop and request it. If jurisdiction or em
 
 11. **Review technology use, monitoring, and confidentiality policies.** Note whether: the policy addresses employer monitoring of devices and communications; the policy addresses remote work security; confidentiality and trade secret obligations are described; social media use on company time or regarding the employer is addressed. Flag monitoring disclosure language for attorney review — requirements vary by jurisdiction.
 
-12. **Build the gap-and-issues table.** Organize all findings by policy area, issue type (gap / contradiction / contractual-risk / clarity / outdated reference / attorney-flag), severity (High / Medium / Low), and recommended action.
+12. **[Change reviews only] Ripple-effect and cross-reference check.** If the input is a proposed change to an existing policy or handbook section, systematically check the rest of the handbook for every location that may be broken or contradicted by the change. Specifically look for: (a) cross-references that point to the changed section by name, number, or heading; (b) defined terms that appear in the changed section and are also used elsewhere with an assumed meaning; (c) related policies whose scope, eligibility rules, or procedures interlock with the changed section; and (d) any state, local, or location-specific supplements that mirror or modify the changed section. For each ripple effect found, identify the location in the handbook, describe the conflict or inconsistency the change would create, and flag it for correction before the change is published. If no ripple effects are found, state that explicitly so counsel can confirm.
 
-13. **Draft prioritized recommendations.** Produce a prioritized list of recommended attorney actions and policy revisions. Label each High, Medium, or Low.
+13. **[Change reviews only] Benefit-reduction and altered-promise flag.** If the input is a proposed change, compare the proposed language side-by-side with the current language it replaces. Identify every instance where the change: (a) reduces or eliminates a benefit employees currently receive under the handbook; (b) removes or narrows a commitment, entitlement, or procedural protection the handbook previously stated; or (c) alters a promise in a way that could disadvantage employees relative to the prior version. For each such instance, produce a prominent flag: `[ATTORNEY TO CONFIRM: benefit reduction or altered promise — assess contractual/reliance exposure before publication] [verify jurisdiction]`. Describe what the prior language said and what the new language says. Do not assert whether the prior provision was enforceable or whether the change is permissible — surface the delta for attorney review.
 
-14. **Assemble the output.** Produce the full structured review labeled as a draft for attorney review.
+14. **Build the gap-and-issues table.** Organize all findings by policy area, issue type (gap / contradiction / contractual-risk / clarity / outdated reference / ripple-effect / benefit-reduction / attorney-flag), severity (High / Medium / Low), and recommended action.
+
+15. **Draft prioritized recommendations.** Produce a prioritized list of recommended attorney actions and policy revisions. Label each High, Medium, or Low.
+
+16. **Assemble the output.** Produce the full structured review labeled as a draft for attorney review.
 
 ## Output Format
 
@@ -87,9 +96,11 @@ Deliver the following sections, clearly labeled:
 5. **Internal Contradictions** — plain-language description of each identified contradiction and the conflicting provisions.
 6. **Contractual-Risk Language** — excerpts or paraphrases of language identified as potentially creating unintended commitments, flagged for attorney review.
 7. **Outdated References** — list of stale, broken, or superseded references identified.
-8. **Prioritized Recommendations** — numbered list ordered High → Medium → Low, describing each recommended revision or attorney action.
-9. **Open Items for Attorney Verification** — numbered list of legal questions that must be resolved before any revision is finalized.
-10. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
+8. **[Change reviews] Ripple-Effect Report** — for each part of the handbook broken or contradicted by the proposed change: location, description of the conflict, and recommended correction before publication. State explicitly if no ripple effects were found or if the check could not be completed because the full handbook was not provided.
+9. **[Change reviews] Benefit-Reduction and Altered-Promise Flags** — side-by-side comparison of prior and proposed language for each instance where the change reduces a benefit or alters a commitment, each flagged `[ATTORNEY TO CONFIRM: benefit reduction or altered promise — assess contractual/reliance exposure before publication] [verify jurisdiction]`.
+10. **Prioritized Recommendations** — numbered list ordered High → Medium → Low, describing each recommended revision or attorney action.
+11. **Open Items for Attorney Verification** — numbered list of legal questions that must be resolved before any revision is finalized.
+12. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]` throughout for any unverified legal or factual point. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
 
@@ -107,3 +118,5 @@ Use `[CONFIRM: ...]` throughout for any unverified legal or factual point. Label
 - [ ] The employee acknowledgment form captures what is legally necessary for the employer's purposes in each operating jurisdiction.
 - [ ] All `[CONFIRM]` placeholders have been resolved by counsel before the handbook is distributed or relied upon.
 - [ ] No legal conclusions in this document have been relied upon without attorney review.
+- [ ] **(Change reviews)** All ripple effects identified in the Ripple-Effect Report have been reviewed and corrected, and no cross-references, defined terms, or related policies in the handbook remain inconsistent with the proposed change.
+- [ ] **(Change reviews)** Every benefit reduction or altered promise flagged with `[ATTORNEY TO CONFIRM: benefit reduction or altered promise]` has been reviewed by counsel for contractual and reliance exposure before the revised handbook is distributed to employees `[verify jurisdiction]`.

@@ -9,6 +9,7 @@
 **Prepared by:** [Attorney / Paralegal / Agent name]
 **Date prepared:** [Date]
 **Status:** DRAFT — Attorney Work Product — For Attorney Review Only
+**Privilege posture of source documents:** [All cleared / Mixed or potentially privileged — `[ATTORNEY TO CONFIRM]` / Unknown — `[ATTORNEY TO CONFIRM]`]
 
 ---
 
@@ -40,7 +41,7 @@ List every document reviewed to build this chronology. No event may appear in th
 
 ## Chronology Table
 
-*Instructions: Each row must cite at least one source document from the Sources Reviewed list above. Do not add events without documentary support. Where a date is approximate, write "circa [date]" and add a [CONFIRM] flag in the Attorney Note column. Where documents conflict, create a separate row for each version and mark both [DISPUTED].*
+*Instructions: Each row must cite at least one source document from the Sources Reviewed list above. Do not add events without documentary support. Where a date is approximate, write "circa [date]" and add a [CONFIRM] flag in the Attorney Note column. Where documents conflict, create a separate row for each version and mark both [DISPUTED]. Where the same event is supported by more than one source without factual conflict, merge into a single row and list all supporting citations in the Source Document / Bates column — do not create separate rows for the same event.*
 
 | Date | Time (if known) | Event Description | Source Document / Bates | Actor(s) | Significance | Disputed? | Attorney Note |
 |---|---|---|---|---|---|---|---|
