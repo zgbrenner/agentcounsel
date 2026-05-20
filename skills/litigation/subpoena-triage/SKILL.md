@@ -32,7 +32,9 @@ If the subpoena text is not provided, stop and request it. Do not complete a tri
 
 - No subpoena has been provided — do not triage from a description; the actual document must be reviewed.
 - The user needs to draft a response or objection to the subpoena — this skill produces a triage summary only; a response or objection requires separate attorney-directed work.
-- The user has received a civil investigative demand, regulatory inquiry, or government investigation demand — those instruments have distinct requirements and should be handled with specialized counsel.
+- The document is a **grand-jury subpoena** or is otherwise part of a criminal proceeding — stop immediately and route to criminal-defense counsel. Do not triage a grand-jury subpoena as a civil subpoena; the procedures, risks, and obligations are materially different and this workflow does not apply.
+- The document is a **civil investigative demand** issued by an enforcement or regulatory authority — those instruments carry enforcement-specific requirements distinct from ordinary civil subpoenas and must be handled with counsel experienced with the issuing authority. Do not triage a civil investigative demand as a civil subpoena.
+- The user has received a regulatory inquiry or government investigation demand — those instruments have distinct requirements and should be handled with specialized counsel.
 - The document is a summons and complaint rather than a subpoena (use `matter-intake` for new litigation service).
 - The user needs an initial matter intake for the underlying litigation (use `matter-intake` first, then return to this skill).
 
@@ -47,13 +49,23 @@ If the subpoena text is not provided, stop and request it. Do not complete a tri
 - Distinguish what the subpoena says from what is assumed or inferred. Quote the subpoena accurately.
 - Do not advise on whether to comply, object, negotiate, or seek a protective order — identify the options and flag them for attorney decision.
 - Identify who must be notified internally but do not assert that notice is or is not legally required — flag it for attorney confirmation.
+- **KILL-SWITCH — Grand-jury subpoena or criminal process:** If at any point the subpoena is identified as a grand-jury subpoena or any other form of criminal process, stop this workflow immediately. Do not complete or deliver a civil triage summary. Flag the matter as criminal process, note that the procedures, risks, and obligations are materially different from those that apply to civil subpoenas, and route immediately to criminal-defense counsel. The same stop-and-route rule applies if, after reviewing the document, it becomes apparent that what was presented as a civil subpoena is in fact criminal process.
+- **KILL-SWITCH — Civil investigative demand:** If the document is a civil investigative demand issued by an enforcement or regulatory authority, stop this civil-triage workflow immediately. Flag that the document is a civil investigative demand, note that it carries enforcement-specific requirements distinct from ordinary civil subpoenas, and route to counsel experienced with the issuing authority.
 - Preserve confidentiality: the triage summary is attorney work product. Limit distribution.
 
 ## Workflow
 
 1. **Confirm inputs.** Verify that the full subpoena text has been provided. If not, stop and request it. Do not proceed without the actual subpoena.
 
-2. **Identify the subpoena type.** Determine whether the subpoena demands: testimony only (deposition subpoena), documents/records only (subpoena duces tecum), or both. Note the specific form of the subpoena as stated.
+2. **Identify the subpoena type — including criminal-process recognition.** Review the face of the document and determine which category applies:
+
+   - **Grand-jury subpoena:** The document commands appearance or production before a grand jury, or is issued in connection with a grand-jury investigation. **STOP — KILL-SWITCH TRIGGERED.** Do not continue this civil-triage workflow. Flag the document as grand-jury/criminal process, note that the procedures, risks, and obligations are materially different from those governing civil subpoenas, and route immediately to criminal-defense counsel. Do not triage it as a civil subpoena.
+   - **Civil investigative demand (CID) or enforcement-authority demand:** The document is issued by an enforcement or regulatory authority (rather than a court in civil litigation) and commands production or responses in connection with an investigation or enforcement action. **STOP — KILL-SWITCH TRIGGERED.** Do not continue this civil-triage workflow. Flag the document as a civil investigative demand, note that it carries enforcement-specific requirements, and route to counsel experienced with the issuing authority. Do not triage it as a civil subpoena.
+   - **Ordinary civil subpoena — testimony only (deposition subpoena):** The subpoena commands testimony in a civil proceeding. Continue the workflow.
+   - **Ordinary civil subpoena — documents/records only (subpoena duces tecum):** The subpoena commands production of documents or records in a civil proceeding. Continue the workflow.
+   - **Ordinary civil subpoena — testimony and documents:** The subpoena commands both. Continue the workflow.
+
+   If the category cannot be determined from the face of the document, flag it as `[VERIFY: nature of process — cannot confirm whether this is a civil subpoena, grand-jury subpoena, or civil investigative demand; attorney must confirm before any further action]` and do not continue the workflow without attorney guidance.
 
 3. **Identify the issuing authority.** Record the court or authority that issued the subpoena (federal court, state court, regulatory agency, arbitral body, etc.), the case name and docket number, and the issuing party (the attorney or party who caused the subpoena to issue).
 

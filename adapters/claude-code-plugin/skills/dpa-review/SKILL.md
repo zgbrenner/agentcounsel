@@ -50,6 +50,7 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 - Use `[CONFIRM: ...]` for every point where the legal consequence, applicable rule, or factual context is uncertain.
 - Flag but do not resolve: conflicts between the DPA and the main agreement; gaps in the DPA relative to any stated regulatory requirement; provisions that may be unenforceable or non-standard.
 - Adverse provisions (provisions unfavorable to the client) must be identified even if the other party's position is commercially common.
+- **Severity floor.** Once an issue has been rated High severity in the risk table, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.
 
 ## Workflow
 
@@ -61,31 +62,33 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 4. **Assess scope and nature of processing.** Identify what personal data categories, data subjects, processing purposes, and processing activities are described. Flag vague or overbroad descriptions as risk items. Note whether the scope matches the commercial relationship as described by the user.
 
-5. **Review processing instructions.** Assess whether the processor is limited to acting on the controller's documented instructions, and what carve-outs exist (e.g., legal obligation processing). Flag any broad discretion granted to the processor.
+5. **Sectoral-overlay check.** Before proceeding to the term-by-term review, assess whether the personal data categories or processing context identified in step 4 may trigger a sector-specific regulatory regime that overlays additional requirements on top of general data-protection law. Common sectors to consider include — but are not limited to — financial or banking data, health or medical data, children's or minors' data, and education records. This check is not exhaustive; the applicable sectors depend on the jurisdiction and factual context `[verify jurisdiction]`. Where a sectoral overlay may apply: (a) flag it prominently as `[CONFIRM: possible sectoral overlay — specialist review recommended]`; (b) note which data categories or processing activities trigger the concern; and (c) state that the sectoral requirements may change the analysis of several DPA terms reviewed in subsequent steps (e.g., security standards, breach notification timelines, deletion obligations). Do not assert which sectoral law applies or what it requires — those are attorney-verification items.
 
-6. **Assess sub-processor provisions.** Identify: whether sub-processor use requires prior written approval or general authorization; the notice and objection mechanism; whether the processor must impose equivalent obligations on sub-processors; and whether a sub-processor list is referenced or provided. Flag gaps or weak controls.
+6. **Review processing instructions.** Assess whether the processor is limited to acting on the controller's documented instructions, and what carve-outs exist (e.g., legal obligation processing). Flag any broad discretion granted to the processor.
 
-7. **Review security measures.** Note what security obligations are specified — whether they reference a standard (e.g., ISO 27001, SOC 2) or are described in general terms only. Flag lack of specificity, absence of minimum standards, and whether security obligations are symmetric or asymmetric.
+7. **Assess sub-processor provisions.** Identify: whether sub-processor use requires prior written approval or general authorization; the notice and objection mechanism; whether the processor must impose equivalent obligations on sub-processors; and whether a sub-processor list is referenced or provided. Flag gaps or weak controls.
 
-8. **Review data subject rights assistance.** Assess whether the processor is obligated to assist the controller in responding to data subject requests, what the scope of that assistance is, and whether it is time-limited. Flag vague or absent assistance obligations.
+8. **Review security measures.** Note what security obligations are specified — whether they reference a standard (e.g., ISO 27001, SOC 2) or are described in general terms only. Flag lack of specificity, absence of minimum standards, and whether security obligations are symmetric or asymmetric.
 
-9. **Review breach notification.** Identify the notification trigger, the notification period, and the required content of notification. Mark any stated timeframe as `[CONFIRM: verify deadline under applicable law and contract]`. Flag absence of breach notification provisions.
+9. **Review data subject rights assistance.** Assess whether the processor is obligated to assist the controller in responding to data subject requests, what the scope of that assistance is, and whether it is time-limited. Flag vague or absent assistance obligations.
 
-10. **Review audit rights.** Identify whether the controller has the right to audit the processor, how audits are triggered and conducted, notice requirements, cost allocation, and whether third-party audit reports are accepted as a substitute. Flag provisions that significantly restrict audit rights.
+10. **Review breach notification.** Identify the notification trigger, the notification period, and the required content of notification. Mark any stated timeframe as `[CONFIRM: verify deadline under applicable law and contract]`. Flag absence of breach notification provisions.
 
-11. **Review cross-border transfer mechanism.** Identify how the DPA addresses transfers of personal data across borders (e.g., by reference to standard contractual clauses, binding corporate rules, adequacy decisions, or other mechanisms). Do not assess whether any mechanism is legally valid — flag for attorney review. Note if no transfer mechanism is addressed.
+11. **Review audit rights.** Identify whether the controller has the right to audit the processor, how audits are triggered and conducted, notice requirements, cost allocation, and whether third-party audit reports are accepted as a substitute. Flag provisions that significantly restrict audit rights.
 
-12. **Review deletion and return obligations.** Identify what happens to personal data on termination or expiration — whether the processor must return, delete, or certify destruction, within what timeframe, and with what exceptions (e.g., legal retention obligations). Flag absence or vagueness.
+12. **Review cross-border transfer mechanism.** Identify how the DPA addresses transfers of personal data across borders (e.g., by reference to standard contractual clauses, binding corporate rules, adequacy decisions, or other mechanisms). Do not assess whether any mechanism is legally valid — flag for attorney review. Note if no transfer mechanism is addressed.
 
-13. **Assess liability and indemnity interplay.** Identify liability caps, exclusions, and indemnity obligations in the DPA, and note any stated relationship to the main commercial agreement's liability regime. Flag conflicts, gaps, or provisions that may effectively remove the processor's liability for data breaches.
+13. **Review deletion and return obligations.** Identify what happens to personal data on termination or expiration — whether the processor must return, delete, or certify destruction, within what timeframe, and with what exceptions (e.g., legal retention obligations). Flag absence or vagueness.
 
-14. **Build the risk table.** Populate `templates/dpa-risk-table.md` with one row per identified issue, severity-rated High / Medium / Low.
+14. **Assess liability and indemnity interplay.** Identify liability caps, exclusions, and indemnity obligations in the DPA, and note any stated relationship to the main commercial agreement's liability regime. Flag conflicts, gaps, or provisions that may effectively remove the processor's liability for data breaches.
 
-15. **Draft prioritized issue list.** Organize findings: (1) High-severity issues requiring redline or walkaway consideration; (2) Medium-severity issues for negotiation; (3) Low-severity issues or minor drafting improvements.
+15. **Build the risk table.** Populate `templates/dpa-risk-table.md` with one row per identified issue, severity-rated High / Medium / Low.
 
-16. **List attorney verification items.** Enumerate every open legal question — applicable law, role confirmation, regulatory deadline, transfer mechanism validity, liability cap adequacy — that requires attorney judgment.
+16. **Draft prioritized issue list.** Organize findings: (1) High-severity issues requiring redline or walkaway consideration; (2) Medium-severity issues for negotiation; (3) Low-severity issues or minor drafting improvements.
 
-17. **Assemble output** and label it as draft legal work product for attorney review.
+17. **List attorney verification items.** Enumerate every open legal question — applicable law, role confirmation, regulatory deadline, transfer mechanism validity, liability cap adequacy — that requires attorney judgment.
+
+18. **Assemble output** and label it as draft legal work product for attorney review.
 
 ## Output Format
 
@@ -102,6 +105,8 @@ Deliver the following, in order:
 ## Attorney Verification Checklist
 
 - [ ] The document reviewed is the complete, executed or near-final version — no sections are missing or truncated.
+- [ ] Any sectoral-overlay flag (`[CONFIRM: possible sectoral overlay]`) has been reviewed by an attorney with relevant sector expertise, and the analysis of affected DPA terms has been updated accordingly `[verify jurisdiction]`.
+- [ ] All High-severity issues remain rated High unless an attorney has explicitly documented the rationale for any downgrade, including their name and the date of the decision.
 - [ ] The client's role (controller, processor, or sub-processor) is correctly identified under the applicable legal framework — the document's labels alone are not conclusive.
 - [ ] The applicable privacy law(s) and regulatory framework(s) have been confirmed, and the DPA satisfies their requirements for a lawful processing arrangement.
 - [ ] All statutory or regulatory deadlines referenced in or relevant to the DPA (especially breach notification periods) have been confirmed under current law — no deadline stated in this review has been computed or assumed.

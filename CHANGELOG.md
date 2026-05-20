@@ -23,6 +23,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `nda-review`: added an overall GREEN / YELLOW / RED triage rating, a scope check for obligations beyond confidentiality, a routing gate for M&A / employment / investment NDAs, and benchmarking against a client playbook — adapted from `agnostic-skills-for-legal` (Phase A migration).
 - `demand-letter`: added a structured intake stage and a pre-draft risk gate (privilege filter, admission risk, accord and satisfaction, settlement-communication posture, privilege-waiver scan, tone, factual accuracy), and clarified that the sent letter carries no work-product header — adapted from `agnostic-skills-for-legal` (Phase A migration).
 - `docs/MIGRATION_PLAN_FROM_AGNOSTIC_SKILLS.md`: refreshed to record Phases A–C as executed and to add a Phase D for newly identified gaps (five new source prompts and the unrun Phase A improvement passes).
+- Phase D2: nine existing skills improved with content adapted from `agnostic-skills-for-legal` — `litigation-chronology`, `matter-intake`, and `subpoena-triage` (litigation); `dpa-review` and `dsar-workflow` (privacy); `termination-risk` and `employee-policy-review` (employment); and `redline-summary` and `contract-risk-review` (contracts).
 
 ## [0.1.0] - 2026-05-20
 

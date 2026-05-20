@@ -32,6 +32,8 @@ If any required input is missing, stop and request it before proceeding. Do not 
 - The termination has already occurred and the question is how to respond to a filed claim or charge — that is separate, attorney-directed litigation-response work, not covered by this skill.
 - The user is asking to draft the termination letter itself rather than assess risk (a separate drafting skill applies).
 - The question is whether a worker should be classified as an employee or an independent contractor (use `worker-classification`).
+- The employee being considered for termination is on, has recently taken, or has recently returned from protected leave (medical/family, military/service, disability-accommodation, or similar), and the primary question is the leave-specific interference or retaliation exposure — use `protected-leave-review` for that analysis. This skill organizes the overall termination picture; `protected-leave-review` handles the leave-specific deep-dive.
+- A wage-and-hour question has surfaced — including whether the employee was correctly classified as exempt or non-exempt, or whether there is back-pay exposure — use `wage-hour-qa` for that analysis. This skill does not analyze pay classification or compute back-pay figures.
 - The user needs jurisdiction-specific legal conclusions about lawfulness — this skill provides workflow discipline, not legal opinions.
 
 ## Legal Safety Rules
@@ -54,7 +56,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 3. **Document the stated business reason.** Record the employer's articulated reason precisely as stated. Assess whether written documentation exists to support that reason. Note gaps between the stated reason and the documentation record.
 
-4. **Identify protected activity and leave.** Review the timeline for: recent complaints of discrimination or harassment by the employee; requests for or use of medical, family, or other protected leave; workers' compensation claims; whistleblower reports; union activity; or any other legally protected activity. Flag the proximity of any such activity to the proposed termination date. Do not conclude on legal significance — flag for attorney.
+4. **Identify protected activity and leave.** Review the timeline for: recent complaints of discrimination or harassment by the employee; requests for or use of medical, family, or other protected leave; workers' compensation claims; whistleblower reports; union activity; or any other legally protected activity. Flag the proximity of any such activity to the proposed termination date. Do not conclude on legal significance — flag for attorney. **Routing note:** If the employee is on, has recently taken, or has recently returned from protected leave (medical/family, military/service, disability-accommodation, or similar), flag the leave-specific interference and retaliation exposure as a matter requiring deeper analysis under the `protected-leave-review` skill. This skill records the timing and flags the issue; `protected-leave-review` performs the leave-specific analysis.
 
 5. **Identify membership in or proximity to protected categories.** Note any known or apparent protected characteristics (e.g., age, race, sex, disability, national origin, religion, pregnancy status). Do not draw conclusions about discrimination. Flag every characteristic present for attorney review.
 
@@ -62,15 +64,17 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 7. **Assess timing concerns.** Note the relationship between the termination date and: vesting events (stock, pension, bonus); end of performance improvement plan periods; conclusion of investigations; medical certification deadlines; contract renewal or notice periods; or any other timing factor provided. Flag all timing issues for attorney review.
 
-8. **Review process and notice.** Assess whether the employer followed its own disciplinary or termination procedures (progressive discipline, investigation requirements, approvals). Note any procedural gaps. Identify whether advance notice of termination or pay-in-lieu may apply — flag as `[CONFIRM: notice and final pay requirements]`.
+8. **Flag wage-and-hour concerns.** If the review surfaces any question about whether the employee was correctly classified as exempt or non-exempt, whether overtime or other pay obligations were met, or whether there is any back-pay exposure, flag the issue as `[CONFIRM: wage-and-hour classification and pay compliance]`. Do not analyze pay classification or compute any back-pay figure here. **Routing note:** Route these questions to the `wage-hour-qa` skill for dedicated analysis.
 
-9. **Identify severance and release considerations.** Note whether severance is being offered and whether a release of claims is contemplated. Flag consideration-period and revocation-period requirements as attorney-verification items, noting that these requirements vary by jurisdiction and by the age and number of employees being released. Do not assert specific statutory timeframes.
+9. **Review process and notice.** Assess whether the employer followed its own disciplinary or termination procedures (progressive discipline, investigation requirements, approvals). Note any procedural gaps. Identify whether advance notice of termination or pay-in-lieu may apply — flag as `[CONFIRM: notice and final pay requirements]`.
 
-10. **Review communications plan.** Note the proposed internal announcement and reference policy. Flag any statements about the reason for departure that could create evidentiary issues.
+10. **Identify severance and release considerations.** Note whether severance is being offered and whether a release of claims is contemplated. Flag consideration-period and revocation-period requirements as attorney-verification items, noting that these requirements vary by jurisdiction and by the age and number of employees being released. Do not assert specific statutory timeframes.
 
-11. **Populate the checklist template.** Complete the `templates/termination-risk-checklist.md` template with the gathered facts and flagged items.
+11. **Review communications plan.** Note the proposed internal announcement and reference policy. Flag any statements about the reason for departure that could create evidentiary issues.
 
-12. **Assemble the output.** Produce: (1) Fact Summary, (2) Risk Factor Summary, (3) Completed checklist referencing the template, (4) Open Items for attorney verification, (5) Stated assumptions. Label the entire output as a draft for attorney review.
+12. **Populate the checklist template.** Complete the `templates/termination-risk-checklist.md` template with the gathered facts and flagged items.
+
+13. **Assemble the output.** Produce: (1) Fact Summary, (2) Risk Factor Summary, (3) Completed checklist referencing the template, (4) Open Items for attorney verification, (5) Stated assumptions. Label the entire output as a draft for attorney review.
 
 ## Output Format
 
@@ -89,11 +93,12 @@ Use `[CONFIRM: ...]` throughout wherever any fact, legal requirement, or procedu
 - [ ] Employment status (at-will, contract, union) has been confirmed and governing documents reviewed.
 - [ ] The stated business reason is accurate, consistent with prior communications, and supported by contemporaneous documentation.
 - [ ] All documentation relied upon has been reviewed in its original form and confirmed to be complete.
-- [ ] The timeline of protected activity, leave, and complaints has been reviewed for retaliation risk.
+- [ ] The timeline of protected activity, leave, and complaints has been reviewed for retaliation risk. If the employee is on, recently took, or recently returned from protected leave, the `protected-leave-review` skill has been used to complete the leave-specific interference and retaliation analysis.
 - [ ] Protected characteristics of the affected employee and comparator employees have been assessed under applicable anti-discrimination law.
 - [ ] Comparator analysis is complete: similarly situated employees with similar conduct have been identified and their treatment confirmed.
 - [ ] Timing of termination relative to vesting events, investigations, leave, or complaints has been reviewed.
 - [ ] All employer-required procedures (progressive discipline, investigation, approvals) have been followed or deviations documented.
+- [ ] Any wage-and-hour concern surfaced during review — including exempt/non-exempt classification or back-pay exposure — has been routed to the `wage-hour-qa` skill and reviewed by counsel; no pay figures have been computed or relied upon from this document.
 - [ ] Jurisdiction-specific final pay, notice, and WARN Act (or equivalent) requirements have been confirmed.
 - [ ] Severance and release terms, including any required consideration and revocation periods, have been reviewed under applicable law.
 - [ ] The communications plan and reference policy have been reviewed for evidentiary and reputational risk.
