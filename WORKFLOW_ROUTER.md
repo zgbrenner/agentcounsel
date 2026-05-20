@@ -1,0 +1,92 @@
+# AgentCounsel — Workflow Router
+
+This guide maps a task to the right skill. Use it to go from "I need to do X" to the correct `SKILL.md`.
+
+> Before running any skill, read the `core/` operating rules. Every skill produces **draft legal work product for attorney review** — never legal advice.
+
+## How routing works
+
+1. Identify the task type from the user's request.
+2. Match it to a row below and open that `SKILL.md`.
+3. If the request spans several skills, pick the **narrowest** one that fits the immediate task; the skill will point to siblings if needed.
+4. If nothing matches, say so — do not improvise a legal workflow.
+
+## Task -> Skill
+
+### Contracts and agreements
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Review this NDA" / "check this confidentiality agreement" | `skills/contracts/nda-review/SKILL.md` |
+| "Summarize the risks in this vendor agreement / MSA / services contract" | `skills/contracts/contract-risk-review/SKILL.md` |
+| "What changed between these two contract drafts?" / "summarize this redline" | `skills/contracts/redline-summary/SKILL.md` |
+| "Review this statement of work" / "does this SOW match the MSA?" | `skills/contracts/sow-review/SKILL.md` |
+| "Review this data processing agreement / DPA" | `skills/privacy/dpa-review/SKILL.md` |
+| "Review this AI vendor's terms" | `skills/ai-governance/ai-vendor-terms-review/SKILL.md` |
+| "Review these terms of service" | `skills/product-legal/terms-of-service-review/SKILL.md` |
+
+### Litigation and disputes
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Open / intake a new litigation matter" | `skills/litigation/matter-intake/SKILL.md` |
+| "Build a factual timeline from these documents" | `skills/litigation/litigation-chronology/SKILL.md` |
+| "Draft a demand letter" | `skills/litigation/demand-letter/SKILL.md` |
+| "We received a subpoena — what now?" | `skills/litigation/subpoena-triage/SKILL.md` |
+| "Research this legal question and write a memo" | `skills/legal-research/legal-research-memo/SKILL.md` |
+
+### Employment
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Help assess a termination" / "is it risky to let this person go?" | `skills/employment/termination-risk/SKILL.md` |
+| "Review this severance / separation agreement" | `skills/employment/severance-review/SKILL.md` |
+| "Review our employee handbook / this workplace policy" | `skills/employment/employee-policy-review/SKILL.md` |
+| "Review our internal employee AI-use policy" | `skills/ai-governance/employee-ai-policy/SKILL.md` |
+
+### Privacy and data
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Review a DPA" | `skills/privacy/dpa-review/SKILL.md` |
+| "We got a data subject access request" / "handle this DSAR" | `skills/privacy/dsar-workflow/SKILL.md` |
+| "Check our privacy policy for gaps" | `skills/privacy/privacy-policy-gap-review/SKILL.md` |
+
+### Product, marketing, and AI features
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Do a legal review before this product / feature launches" | `skills/product-legal/launch-review/SKILL.md` |
+| "Review this marketing / advertising copy" | `skills/product-legal/marketing-claims-review/SKILL.md` |
+| "Review the legal risk of this AI feature" | `skills/product-legal/ai-feature-review/SKILL.md` |
+| "Intake / triage a proposed AI use case" | `skills/ai-governance/ai-use-case-intake/SKILL.md` |
+| "Triage the risk of this AI model / system" | `skills/ai-governance/model-risk-triage/SKILL.md` |
+
+### Regulatory and compliance
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Assess our enforcement exposure on this" | `skills/regulatory/enforcement-risk-memo/SKILL.md` |
+| "Summarize this new rule / regulation and its impact" | `skills/regulatory/rule-change-summary/SKILL.md` |
+| "Map these requirements against our controls" | `skills/regulatory/compliance-gap-matrix/SKILL.md` |
+
+### Intellectual property
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Is this brand / product name available?" (preliminary triage) | `skills/ip/trademark-clearance-triage/SKILL.md` |
+| "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
+| "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
+
+## When several skills could apply
+
+- **A contract that is an NDA** -> `nda-review` (not `contract-risk-review`).
+- **A contract that is a DPA** -> `dpa-review`.
+- **A contract that is a SOW** -> `sow-review`.
+- **An AI vendor contract** -> `ai-vendor-terms-review` for the AI-specific terms; pair with `contract-risk-review` for the broader agreement and `dpa-review` for data terms.
+- **A product launch that raises many issues** -> start with `launch-review`, which spots issues and routes to specialist skills.
+- **A new AI use case** -> start with `ai-use-case-intake`, which triages and routes onward.
+
+## When nothing matches
+
+If the request does not fit a skill, do not invent a workflow. Tell the user the library does not yet cover the task and — if useful — point to the closest skill and explain the gap. New skills can be proposed per `CONTRIBUTING.md`.
