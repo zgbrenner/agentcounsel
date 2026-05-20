@@ -1,10 +1,25 @@
 # Migration Plan — agnostic-skills-for-legal into AgentCounsel
 
-**Status: plan only.** No canonical skills have been changed. This document proposes what to migrate and in what order. Each migration listed here is a separate, reviewed change to be carried out later.
+**Status: Phases A, B, and C executed.** This document is the migration plan for bringing content from `agnostic-skills-for-legal` into AgentCounsel. The new-skill phases are complete; remaining work is tracked in **Phase D** below. See **Migration status** for a summary. The original plan text is retained for reference, with status notes added.
 
 ## Purpose
 
 `foolish-bandit/agnostic-skills-for-legal` is an existing open-source legal-AI library. This plan compares it against AgentCounsel's canonical `skills/` directory and recommends, in priority order, what content to (A) fold into existing skills, (B) add as new skills, or (C) defer or reject.
+
+## Migration status
+
+_Last updated 2026-05-20._
+
+| Phase | Scope | Status |
+|---|---|---|
+| A | Improve existing skills | **Partially done** — `nda-review` and `demand-letter` improved (PR #5). The other nine improvement passes were not run; they are carried into Phase D. |
+| B | Add missing high-value skills | **Done** — twelve skills added (PRs #6, #7) and quality-checked (PR #8). |
+| C | Corporate / M&A practice area | **Done** — six skills added as a new `corporate/` practice area (PR #9), quality-checked (PR #10). |
+| D | Newly identified gaps | **Open** — see Phase D below. |
+
+AgentCounsel now has 47 canonical skills across 10 practice areas, and a `NOTICE` file records the Apache-2.0 attribution chain.
+
+A completeness re-check on 2026-05-20 found that `agnostic-skills-for-legal` has **grown** since this plan was first written — it added five `prompts/` files not covered in the analysis below. Those, together with the unrun Phase A passes, are collected in Phase D.
 
 ## Source overview
 
@@ -101,6 +116,8 @@ AgentCounsel has **no corporate / M&A practice area.** The whole `prompts/corpor
 
 Each item below is a comparison-and-improvement pass on an existing AgentCounsel skill, using the named source prompt(s) as input. No new skills are created in Phase A.
 
+**Status: partially complete.** The two High-priority passes — `nda-review` and `demand-letter` — were executed in PR #5. The nine Medium/Low passes below were not run; they are carried into Phase D (section D2). The table is retained for reference.
+
 | Priority | AgentCounsel skill | Source input | What to fold in |
 |---|---|---|---|
 | High | `contracts/nda-review` | `nda-review` | Triage rating system, a practice-profile intake step, and a gate routing M&A / employment / investment NDAs to specialist counsel |
@@ -118,6 +135,8 @@ Each item below is a comparison-and-improvement pass on an existing AgentCounsel
 ## Phase B — add missing high-value skills
 
 New skills, rewritten into AgentCounsel's `SKILL.md` format. Priority reflects value and fit with the existing library.
+
+**Status: complete.** All twelve skills below were added (PRs #6 and #7) and quality-checked (PR #8). `vendor-agreement-review` / `saas-review` were not added as separate skills and remain a Phase D item.
 
 | Priority | Proposed skill | Practice area | Source prompt | Notes |
 |---|---|---|---|---|
@@ -137,9 +156,11 @@ New skills, rewritten into AgentCounsel's `SKILL.md` format. Priority reflects v
 
 ## Phase C — defer or reject
 
-### Practice areas to keep out of scope for now
+**Status: resolved.** The corporate / M&A area, originally deferred here, was subsequently built (PR #9). The reject lists below stand.
 
-- **Corporate / M&A / transactional.** The entire `prompts/corporate` set is a distinct practice area AgentCounsel does not cover. Adding it would significantly expand scope. Defer it as a possible future practice area; do not migrate it piecemeal.
+### Corporate / M&A — built
+
+- **Corporate / M&A / transactional.** Originally deferred; **subsequently built** (PR #9) as a new `corporate/` practice area with six skills: `board-minutes`, `written-consent`, `closing-checklist`, `diligence-issue-extraction`, `material-contract-schedule`, and `entity-compliance`. The four management- or reporting-oriented corporate prompts — `deal-team-summary`, `integration-management`, `tabular-review`, and `cold-start` — remain excluded.
 
 ### Reject — not draft legal work product
 
@@ -166,6 +187,39 @@ Reconsider only if a full content review shows a genuine, non-duplicative gap.
 
 The source's `skills/<area>/instructions.base.md` scaffolds are too broad for AgentCounsel's narrow per-workflow model. They may be reviewed for `core/` rule ideas only.
 
+## Phase D — newly identified gaps
+
+A completeness re-check on 2026-05-20 surfaced two categories of remaining work: new source prompts added after this plan was written, and Phase A improvement passes that were never run.
+
+### D1 — New source prompts (added to `agnostic-skills-for-legal` after this plan)
+
+| Source prompt | Practice area | Assessment | Recommended disposition |
+|---|---|---|---|
+| `employment/internal-investigation` | employment | Structuring a workplace internal investigation (misconduct, fraud, whistleblower complaints). No AgentCounsel equivalent. | **New skill — High** |
+| `ip/infringement-triage` | ip | First-pass infringement screening across trademark, copyright, patent, and trade secret. Partly overlaps `cease-and-desist-response` and `fto-triage`; needs an overlap analysis before building. | **New skill — Medium-High** |
+| `employment/leave-tracker` | employment | Protected-leave deadline decision support. Tracker-style (compare `entity-compliance`); the source is heavily jurisdiction-specific and would need careful jurisdiction-agnostic adaptation. | **New skill — Medium (judgment call)** |
+| `ip/takedown` | ip | DMCA send / respond / counter-notice. Already covered by AgentCounsel's existing `dmca-takedown`. | **Duplicate** — optionally mine to refine `dmca-takedown` |
+| `ip/portfolio` | ip | IP maintenance-deadline calendar — a tracking and reporting tool, not a drafting or analysis workflow. | **Reject** — consistent with excluding other status/tracking prompts |
+
+### D2 — Phase A improvement passes not yet run
+
+Nine of the eleven Phase A passes were never executed (the executed Phase A was scoped to `nda-review` and `demand-letter`). They remain available as comparison-and-improvement passes on existing skills, each using the named source prompt:
+
+- `litigation/litigation-chronology` <- `chronology`
+- `litigation/matter-intake` <- `matter-intake`
+- `litigation/subpoena-triage` <- `subpoena`
+- `privacy/dpa-review` <- `dpa-review`
+- `privacy/dsar-workflow` <- `dsar-response`
+- `employment/termination-risk` <- `termination-review`
+- `employment/employee-policy-review` <- `handbook-updates`, `policy-drafting`
+- `contracts/redline-summary` <- `amendment-history`
+- `contracts/contract-risk-review` <- `saas-review`, `vendor-agreement-review`, `ip-clause-review`
+
+### D3 — Other unresolved items
+
+- `vendor-agreement-review`, `saas-review`, and `clearance` — the plan flagged these as conditional ("add only if a review shows existing skills are insufficient"); never resolved. Most likely folded into the `contract-risk-review` and `trademark-clearance-triage` passes in D2 rather than added as separate skills.
+- The source's `litigation/demand-letter.md` is an *inbound* demand-triage workflow; AgentCounsel has no general inbound-demand-triage skill (`cease-and-desist-response` covers received IP demands only). A possible future skill.
+
 ## Risks and content-quality concerns
 
 1. **Content not yet read in full.** This plan rests on file names and structural summaries. Every source file must be read and assessed before migration; dispositions may shift after a full read.
@@ -178,6 +232,8 @@ The source's `skills/<area>/instructions.base.md` scaffolds are too broad for Ag
 
 ## Recommended next steps
 
-1. Decide whether to proceed with Phase A, Phase B, or both, and in what order. A reasonable order is: add attribution (`NOTICE`), then Phase A high-priority items, then Phase B high-priority items.
-2. For each chosen item, read the full source file, then open a skill-improvement or skill-request issue and migrate it as its own pull request following `CONTRIBUTING.md`.
-3. Keep the corporate / M&A area as a separate, later decision.
+1. Phases A (partial), B, and C are complete. Remaining work is collected in **Phase D**.
+2. Build the clear D1 gaps — `internal-investigation` and `infringement-triage` — as new skills, each as its own reviewed pull request following `CONTRIBUTING.md`.
+3. Decide the D1 judgment calls: `leave-tracker` (build as a review skill, or treat as a tracking tool and exclude) and `ip/takedown` (leave to the existing `dmca-takedown`, or use it to refine that skill).
+4. Optionally run the D2 improvement passes on existing skills.
+5. Re-run this completeness check periodically — the source repository continues to evolve.
