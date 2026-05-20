@@ -25,6 +25,17 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Review this AI vendor's terms" | `skills/ai-governance/ai-vendor-terms-review/SKILL.md` |
 | "Review these terms of service" | `skills/product-legal/terms-of-service-review/SKILL.md` |
 
+### Corporate and transactions
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Draft minutes for this board meeting" | `skills/corporate/board-minutes/SKILL.md` |
+| "Draft a board written consent" / "action by written consent" | `skills/corporate/written-consent/SKILL.md` |
+| "Build a closing checklist for this deal" | `skills/corporate/closing-checklist/SKILL.md` |
+| "Pull the issues out of these diligence documents" | `skills/corporate/diligence-issue-extraction/SKILL.md` |
+| "Build the material contracts schedule" | `skills/corporate/material-contract-schedule/SKILL.md` |
+| "Review our entities' annual-report / good-standing status" | `skills/corporate/entity-compliance/SKILL.md` |
+
 ### Litigation and disputes
 
 | The task sounds like... | Use this skill |

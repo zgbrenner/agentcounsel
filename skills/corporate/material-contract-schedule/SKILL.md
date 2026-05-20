@@ -1,0 +1,116 @@
+---
+name: Material Contract Schedule
+description: Use when building the disclosure schedule that lists contracts meeting a transaction agreement's definition of "Material Contract," producing a draft for attorney review before it is delivered as an exhibit.
+---
+
+# Material Contract Schedule
+
+## Purpose
+
+Produce a structured, attorney-ready draft of the Material Contract Schedule required as an exhibit to a transaction agreement. The schedule identifies and lists each contract that meets the agreement's own definition of "Material Contract," applies that definition mechanically to the available diligence data, and flags edge cases and consent requirements for attorney decision. It also produces a separate internal consent-tracking overlay that must be stripped before the schedule is delivered.
+
+This skill produces draft legal work product for attorney review — not legal advice and not a final disclosure schedule. The schedule must be reviewed, approved, and authorized for delivery by the attorney of record.
+
+## Use When
+
+- A transaction agreement contains a defined term "Material Contract" (or substantively equivalent defined term) and the user needs to populate the corresponding disclosure schedule.
+- The user has diligence data (a contract inventory, data-room index, or equivalent) and needs those contracts mapped against the agreement's materiality definition.
+- The deal team needs a working draft of the schedule to circulate internally before attorney review and before the schedule is delivered as an exhibit to the counterparty.
+- The user needs a separate internal consent-tracking overlay identifying which scheduled contracts require third-party consent or notice in connection with the transaction.
+
+## Required Inputs
+
+- **The "Material Contract" definition, pasted verbatim from the transaction agreement** (including the section number). This definition controls every inclusion and exclusion determination. The skill cannot proceed without it. `[CONFIRM: definition is final, not from a redline draft]`
+- **At least one other schedule from the agreement** as a format reference, so that the Material Contract Schedule conforms to the agreement's scheduling conventions.
+- **Contract-level diligence data** — a contract inventory, data-room index, privilege review log, or equivalent source listing the contracts available for review. Each entry should identify, to the extent available: counterparty, contract title or type, execution date, term or expiration date, estimated or stated value, and data-room location or Bates reference.
+- **Deal context:**
+  - Deal name or reference
+  - Transaction structure (stock purchase, asset purchase, or merger)
+  - Any regulated-industry overlay (e.g., government contracting, financial services, healthcare) `[VERIFY: regulated-industry requirements — do not assume]`
+
+Optional but recommended:
+- House formatting preferences for schedules, if available.
+- A prior version of the schedule (for amendment transactions or updates).
+
+If the "Material Contract" definition is not provided, **stop and request it.** Do not proceed on an assumed or constructed definition. If other required inputs are missing, flag them explicitly and note which workflow steps are blocked until they are supplied.
+
+## Do Not Use When
+
+- The user wants a full due-diligence issues analysis or risk summary of the contracts — use `diligence-issue-extraction` instead.
+- The user wants the transaction agreement itself drafted, or wants the "Material Contract" representation drafted or revised — that is a drafting task outside this skill's scope.
+- The user wants a closing checklist built — use `closing-checklist` instead.
+- The materiality definition has not been agreed upon and is still being negotiated — the schedule cannot be populated until the definition is final.
+- The only available source for contract data is unreviewed raw documents requiring first-pass diligence review — perform the diligence review first.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice. The schedule is not final and may not be delivered as a transaction exhibit until it has been reviewed, approved, and authorized by the attorney of record.
+- **The agreement's definition controls.** Do not invent, supplement, or substitute a materiality definition. Do not import materiality prongs from model background knowledge, market precedent, or any other source. If the definition is ambiguous on a particular prong, flag the ambiguity for the attorney — do not resolve it silently.
+- **Do not invent contract data.** Do not fabricate counterparty names, dollar amounts, dates, terms, consent requirements, or source references. If a field is not available from the provided diligence data, leave it blank and flag it: `[VERIFY: field not available in source data]`.
+- Under-inclusion and over-inclusion both carry legal risk. Flag every edge case — contracts that are near a dollar threshold, contracts whose term is expiring or has expired, oral or informal arrangements that may qualify, and contracts where a prong's application is uncertain — for attorney decision. Do not resolve edge cases unilaterally.
+- The consent-tracking overlay is internal work product. It must be clearly labeled as such and must be stripped from the schedule before it is delivered to any counterparty. Do not deliver a schedule that includes the overlay.
+- Do not assert or apply specific statutes, regulations, or case law. Governing law, consent requirement triggers, and regulated-industry requirements vary by jurisdiction, by transaction structure, and by contract terms. Treat all such requirements as `[verify jurisdiction]` items.
+- Treat model background knowledge about what typically constitutes a "Material Contract" as unverified background context only — it does not supply prongs the agreement has not itself stated.
+- Distinguish facts (what the diligence data says), assumptions (what has been inferred in the absence of data), and attorney verification items (what must be confirmed before the schedule is final).
+- Preserve confidentiality and privilege. Do not include client-sensitive facts in a reusable copy of the template.
+- Flag every uncertainty with a bracketed placeholder (`[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[deadline verification required]`, `[verify jurisdiction]`). Never resolve uncertainty silently.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that all required inputs are present: the "Material Contract" definition (pasted verbatim), a format reference schedule, diligence data, and deal context. If the definition is missing, stop and request it. If other inputs are missing, note which steps are blocked and proceed only as far as the available inputs allow.
+
+2. **Extract and record the definition.** Quote the "Material Contract" definition verbatim from the agreement (with section reference) at the top of the working analysis. Identify each materiality prong stated in the definition and list them explicitly. Common prongs that transaction agreements employ include: dollar-value thresholds (annual or aggregate), minimum term length, change-of-control or anti-assignment restrictions, exclusivity obligations, top-customer or top-supplier relationships, real property leases or ownership, intellectual property licenses, related-party agreements, government or regulated contracts, and out-of-ordinary-course arrangements — but the agreement's own enumeration governs. Do not add prongs the agreement does not state.
+
+3. **Build the determination table.** Working through the diligence data, apply each prong mechanically to each contract. For each contract record: identify which prong or prongs it meets (if any); reach a preliminary include/exclude determination; and note any edge case that requires attorney decision. Edge-case flags include:
+   - Contract value is near but may not clearly exceed a stated dollar threshold
+   - Contract term is expiring soon or may already have expired
+   - The contract is oral or not fully documented
+   - Prong applicability is uncertain due to ambiguous contract language or incomplete data
+   - Multiple prongs are arguably met but the application of any one is unclear
+   Label edge cases `[ATTORNEY TO CONFIRM: inclusion — edge case]`. Do not resolve them.
+
+4. **Gather schedule data for included contracts.** For each contract preliminarily included based on Step 3, collect: counterparty name; contract title or type; execution date; term commencement and expiration (or auto-renewal mechanics); contract value or fee basis; the specific prong(s) met; any consent-to-assignment, change-of-control notice, or similar requirement visible in the contract or diligence data; and a source reference (filename, data-room tab, section, or Bates number). Where a field is unavailable from the source data, enter a blank cell and flag it `[VERIFY: not available in source data]`. Do not estimate or guess missing fields.
+
+5. **Format the schedule.** Using `templates/material-contract-schedule.md`, organize included contracts by category (e.g., customer agreements, supplier/vendor agreements, IP licenses, real property, financial agreements, government contracts, related-party agreements, other material agreements). Conform the layout, caption style, and heading conventions to the format reference schedule provided. Flag formatting assumptions if no reference schedule is provided: `[CONFIRM: conform to agreement's schedule format]`.
+
+6. **Build the internal consent-tracking overlay.** For each scheduled contract that has a visible consent, notice, waiver, or approval requirement triggered by the transaction, record: the contract identifier (as listed in the schedule); the specific consent or notice requirement; consent or notice status (not started, in progress, obtained, waived, or unknown); the responsible party or owner; and any deadline `[deadline verification required]`. Label the overlay prominently as internal work product to be stripped before delivery.
+
+7. **Cross-check for completeness and accuracy.** Before assembling the final output:
+   - Confirm that every contract in the diligence data that meets at least one prong appears in the determination table and, if included, in the schedule.
+   - Confirm that no contract is scheduled that does not meet at least one prong, and flag any over-inclusion risk for attorney review.
+   - Confirm that every schedule entry has a traceable source reference. If any entry lacks a source, flag it: `[VERIFY: source reference missing — confirm against diligence data]`.
+   - List any contracts where the underlying document was not available for review (identified only from an index or list) and flag them: `[ATTORNEY TO CONFIRM: contract not reviewed — confirm prong applicability]`.
+
+8. **Assemble the output.** Combine the populated schedule (from `templates/material-contract-schedule.md`), the determination table, the internal consent-tracking overlay (clearly labeled), the assumptions section, and the attorney verification checklist. Label the entire output as a draft for attorney review, not for delivery.
+
+## Output Format
+
+Deliver:
+
+1. **Draft Material Contract Schedule** — a complete draft using `templates/material-contract-schedule.md`, organized by contract category, with bracketed placeholders for every missing field and every edge case requiring attorney decision.
+2. **Determination Table** — the full inclusion analysis showing each contract reviewed, the prong(s) it meets (or does not meet), the preliminary include/exclude determination, and any edge-case flag.
+3. **Internal Consent-Tracking Overlay** — a separate table mapping scheduled contracts to consent or notice requirements, status, owner, and deadline. Labeled prominently: **INTERNAL WORK PRODUCT — STRIP BEFORE DELIVERY.**
+4. **Assumptions** — an explicit list of every assumption made, including any formatting assumption, any prong interpretation treated as clear when it may not be, and any contract category assigned in the absence of a definitive document type.
+5. **Attorney Verification Checklist** — the checklist from this skill.
+
+Do not merge the consent-tracking overlay into the schedule body.
+
+## Attorney Verification Checklist
+
+- [ ] The "Material Contract" definition quoted in the schedule is final, matches the executed or agreed form of the agreement, and has not been superseded by a subsequent redline. `[CONFIRM: definition version]`
+- [ ] Every materiality prong has been correctly identified and applied.
+- [ ] The definition has been applied to the complete universe of contracts — not only contracts in the diligence data set, but also oral arrangements, side letters, amendments, and any contracts the target may have entered into after the diligence cut-off date. `[VERIFY: completeness of diligence data]`
+- [ ] Every edge-case contract flagged `[ATTORNEY TO CONFIRM: inclusion — edge case]` has been resolved as included or excluded, with a documented rationale.
+- [ ] No contract has been included that does not meet at least one stated prong; no contract meeting a stated prong has been omitted.
+- [ ] Every schedule entry has a traceable source reference and has been verified against the underlying contract document (not only an index entry).
+- [ ] Contract fields (counterparty, date, term, value, consent requirement) have been verified against the underlying documents, not inferred from index descriptions.
+- [ ] Consent, notice, and approval requirements have been identified for every scheduled contract and verified against the contract language and applicable law. `[verify jurisdiction]`
+- [ ] The consent-tracking overlay has been reviewed; all consent and notice processes have been initiated with adequate lead time. `[deadline verification required]`
+- [ ] The consent-tracking overlay has been removed from the version of the schedule to be delivered.
+- [ ] The schedule format, caption, and cross-references conform to the agreement's scheduling conventions.
+- [ ] Any regulated-industry overlay (government contracting, healthcare, financial services, or other) has been reviewed by counsel with relevant expertise. `[verify jurisdiction]`
+- [ ] The representation to which this schedule is attached has been reviewed; the schedule is complete and accurate as of the representation date (not only the diligence cut-off date).
+- [ ] The schedule has been reviewed for over-disclosure — information included that is not required by the definition or that creates unintended disclosure risk.
+- [ ] No legal authority, statute, or case law has been asserted in the draft without verification.
+- [ ] All `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, and `[deadline verification required]` placeholders have been resolved before the schedule is delivered as an exhibit.
+- [ ] No client-sensitive facts have been included in any reusable copy of the template.
