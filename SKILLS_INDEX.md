@@ -21,6 +21,8 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Litigation | Deposition Preparation | `skills/litigation/deposition-prep/SKILL.md` | Building a structured deposition outline from the record | Case theory, witness, documents | Deposition outline |
 | Litigation | Legal Hold | `skills/litigation/legal-hold/SKILL.md` | Preparing a document-preservation (litigation hold) notice | Matter, preservation scope, custodians, systems | Legal hold notice |
 | Litigation | Privilege Log Review | `skills/litigation/privilege-log-review/SKILL.md` | First-pass sorting of privilege log entries by confidence | Privilege log, forum and jurisdiction | Privilege log review report |
+| Litigation | Claim Chart | `skills/litigation/claim-chart/SKILL.md` | Mapping patent claim limitations or cause-of-action elements against the evidence | Patent or pleaded claim, evidence, jurisdiction | Claim / element chart |
+| Litigation | Brief Section Drafter | `skills/litigation/brief-section-drafter/SKILL.md` | Drafting a section of a litigation brief, cited and flagged for verification | Case theory, section type, record, house style | Brief section draft |
 | Contracts | NDA Review | `skills/contracts/nda-review/SKILL.md` | Reviewing an NDA for risk and redline points | NDA text, client role | Risk review + redline points |
 | Contracts | Contract Risk Review | `skills/contracts/contract-risk-review/SKILL.md` | Risk-reviewing a general commercial contract | Contract text, client role | Risk matrix + review |
 | Contracts | Redline Summary | `skills/contracts/redline-summary/SKILL.md` | Summarizing changes between contract drafts | Two contract versions or tracked changes | Change summary table |
@@ -29,6 +31,8 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Employment | Severance Review | `skills/employment/severance-review/SKILL.md` | Reviewing a severance / separation agreement | Severance agreement, party served | Review + issues table |
 | Employment | Employee Policy Review | `skills/employment/employee-policy-review/SKILL.md` | Reviewing a handbook or workplace policy for gaps | Policy or handbook text | Gap + issues table |
 | Employment | Worker Classification | `skills/employment/worker-classification/SKILL.md` | Structuring the employee vs. contractor analysis for a proposed engagement | Proposed engagement facts, classification purpose, jurisdiction | Classification analysis memo |
+| Employment | Hiring Review | `skills/employment/hiring-review/SKILL.md` | Reviewing an employment offer letter against the work jurisdiction | Offer letter, work location, role and pay | Hiring review memo |
+| Employment | Wage and Hour Question Triage | `skills/employment/wage-hour-qa/SKILL.md` | Structuring a wage-and-hour question and routing rules to verified research | The question, jurisdiction, operative facts | Wage-and-hour analysis |
 | Privacy | DPA Review | `skills/privacy/dpa-review/SKILL.md` | Reviewing a data processing agreement | DPA text, client role | Risk table + review |
 | Privacy | DSAR Workflow | `skills/privacy/dsar-workflow/SKILL.md` | Triaging and structuring a data subject request | The request, requester details | Request-handling record |
 | Privacy | Privacy Policy Gap Review | `skills/privacy/privacy-policy-gap-review/SKILL.md` | Checking a privacy policy against actual practice | Privacy policy, described practices | Gap table + recommendations |
@@ -48,15 +52,17 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Intellectual Property | DMCA Takedown | `skills/ip/dmca-takedown/SKILL.md` | Preparing or evaluating a takedown / counter-notice | The work, the allegedly infringing material | Draft notice / counter-notice |
 | Intellectual Property | Open Source License Review | `skills/ip/open-source-license-review/SKILL.md` | Reviewing OSS license obligations and compatibility | Component / license inventory, distribution model | Obligations table + issues |
 | Intellectual Property | Cease and Desist Response | `skills/ip/cease-and-desist-response/SKILL.md` | Triaging a received cease-and-desist letter into response options | The received letter, factual assessment | Response triage memo |
+| Intellectual Property | Patent Freedom-to-Operate Triage | `skills/ip/fto-triage/SKILL.md` | First-pass triage of patent blocking risk for a product or feature | Product/feature description, jurisdictions, known patents | FTO triage memo |
+| Intellectual Property | Invention Disclosure Intake | `skills/ip/invention-intake/SKILL.md` | Screening a proposed invention and flagging filing-deadline urgency | Invention disclosure, disclosure history | Invention screen + verdict |
 
 ## Practice areas at a glance
 
 - **Legal Research** — turning questions into structured, verifiable memos.
-- **Litigation** — intake, chronology, demand letters, subpoena triage, deposition preparation, legal holds, and privilege-log review.
+- **Litigation** — intake, chronology, demand letters, subpoena triage, deposition preparation, legal holds, privilege-log review, claim charts, and brief drafting.
 - **Contracts** — NDAs, commercial contracts, redlines, and statements of work.
-- **Employment** — terminations, worker classification, severance, and workplace policies.
+- **Employment** — terminations, worker classification, hiring review, wage-and-hour questions, severance, and workplace policies.
 - **Privacy** — data processing agreements, impact assessments, data subject requests, and policy gaps.
 - **Product Legal** — launch, marketing claims, terms of service, and AI features.
 - **Regulatory** — enforcement risk, rule changes, and compliance gaps.
 - **AI Governance** — AI use-case intake, vendor terms, model risk, and AI policies.
-- **Intellectual Property** — trademark triage, cease-and-desist response, DMCA, and open-source licensing.
+- **Intellectual Property** — trademark triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, and open-source licensing.

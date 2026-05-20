@@ -36,6 +36,8 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Prepare for a deposition" / "build a deposition outline" | `skills/litigation/deposition-prep/SKILL.md` |
 | "Issue a litigation hold" / "preserve documents for a matter" | `skills/litigation/legal-hold/SKILL.md` |
 | "Review our privilege log" | `skills/litigation/privilege-log-review/SKILL.md` |
+| "Build a claim chart" / "map claim elements to the evidence" | `skills/litigation/claim-chart/SKILL.md` |
+| "Draft a section of a brief" | `skills/litigation/brief-section-drafter/SKILL.md` |
 | "Research this legal question and write a memo" | `skills/legal-research/legal-research-memo/SKILL.md` |
 
 ### Employment
@@ -44,6 +46,8 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 |---|---|
 | "Help assess a termination" / "is it risky to let this person go?" | `skills/employment/termination-risk/SKILL.md` |
 | "Is this worker an employee or a contractor?" / "classify a worker" | `skills/employment/worker-classification/SKILL.md` |
+| "Review this offer letter before we send it" | `skills/employment/hiring-review/SKILL.md` |
+| "Wage-and-hour question" / "overtime, exempt status, or final-pay question" | `skills/employment/wage-hour-qa/SKILL.md` |
 | "Review this severance / separation agreement" | `skills/employment/severance-review/SKILL.md` |
 | "Review our employee handbook / this workplace policy" | `skills/employment/employee-policy-review/SKILL.md` |
 | "Review our internal employee AI-use policy" | `skills/ai-governance/employee-ai-policy/SKILL.md` |
@@ -81,6 +85,8 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 |---|---|
 | "Is this brand / product name available?" (preliminary triage) | `skills/ip/trademark-clearance-triage/SKILL.md` |
 | "We received a cease-and-desist letter" | `skills/ip/cease-and-desist-response/SKILL.md` |
+| "Patent freedom-to-operate triage for this product" | `skills/ip/fto-triage/SKILL.md` |
+| "Screen this invention disclosure" | `skills/ip/invention-intake/SKILL.md` |
 | "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
 | "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
 
