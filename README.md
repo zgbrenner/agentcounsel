@@ -140,7 +140,7 @@ New skills are welcome. AgentCounsel is Markdown-first and safety-first — see 
 
 ## License
 
-Apache License 2.0. See `LICENSE`.
+Apache License 2.0. See `LICENSE`. Attribution for content adapted from other open-source projects is recorded in `NOTICE`.
 
 ## Disclaimer
 

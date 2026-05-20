@@ -1,18 +1,19 @@
 ---
 name: NDA Review
-description: Use when reviewing a non-disclosure or confidentiality agreement to produce a structured risk summary and prioritized redline points for attorney review.
+description: Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.
 ---
 
 # NDA Review
 
 ## Purpose
 
-Produce a structured, attorney-ready review of a non-disclosure agreement (NDA) or confidentiality agreement. The skill identifies key terms, flags risk-allocation issues, and proposes prioritized redline points. It produces draft legal work product for attorney review — not legal advice and not a final negotiating position.
+Produce a structured, attorney-ready review of a non-disclosure agreement (NDA) or confidentiality agreement. The skill identifies key terms, flags risk-allocation issues, assigns an overall triage rating, and proposes prioritized redline points. It produces draft legal work product for attorney review — not legal advice and not a final negotiating position.
 
 ## Use When
 
 - A user asks to "review this NDA," "check this confidentiality agreement," or "tell me what's risky here."
 - A counterparty has sent an NDA and the user needs a first-pass risk read.
+- The user wants a route / flag / stop call on whether an NDA can move toward signature.
 - The user wants a redline priority list before negotiation.
 - The user wants a plain-language summary of an NDA's obligations.
 
@@ -21,7 +22,8 @@ Produce a structured, attorney-ready review of a non-disclosure agreement (NDA) 
 - The full NDA text (uploaded or pasted). Do not review from a description alone.
 - The client's role: disclosing party, receiving party, or mutual.
 - The business context: what is being shared and why.
-- Optional: the user's standard NDA position or playbook, governing-law preference, and any deal deadline.
+- The transaction context: whether this is a stand-alone commercial NDA, or part of an M&A, employment, or investment deal.
+- Optional but recommended: the client's standard NDA positions or playbook — acceptable terms, "never accept" terms, mutuality default, required carve-outs, term and survival caps, and governing-law preferences. The review benchmarks against these where they are provided.
 
 If the NDA text is not provided, stop and request it. Do not reconstruct or assume contract language.
 
@@ -30,6 +32,7 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 - The document is not an NDA (use `contract-risk-review` for general commercial agreements).
 - The user needs a summary of tracked edits between drafts (use `redline-summary`).
 - The confidentiality terms are one section of a larger commercial agreement (use `contract-risk-review`).
+- The NDA is part of an M&A, employment, or investment transaction — confidentiality terms in those contexts carry deal-specific risk and should be reviewed with specialist counsel rather than triaged as a stand-alone commercial NDA.
 - The request is for a statement of legal advice or a final negotiating position — those require an attorney.
 
 ## Legal Safety Rules
@@ -39,32 +42,43 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 - Do not invent contract terms, defined terms, section numbers, or quotations.
 - Do not invent statutes, regulations, or case law. If legal authority is relevant, mark it as an attorney verification item.
 - Do not invent or assume deadlines. Treat any signing or negotiation deadline as user-supplied or unverified.
+- A triage rating of GREEN ("clear to route for signature") is a workflow signal, not authorization to sign. Attorney review and sign-off remain required before any NDA is signed.
+- Do not draft new clause language or restructure provisions. Propose the direction of a change and route substantive drafting to an attorney.
 - Distinguish what the contract says from what you assume and from what the attorney must confirm.
-- Do not place client-sensitive facts into reusable templates.
+- Preserve confidentiality and privilege: the review is attorney work product. Do not place client-sensitive facts into reusable templates.
 - Flag every point of uncertainty rather than resolving it silently.
 
 ## Workflow
 
-1. **Confirm inputs.** Verify you have the full NDA text and the client's role. If anything is missing, request it before proceeding.
-2. **Identify the structure.** Locate and label the core provisions: parties, definition of Confidential Information, permitted use, standard exclusions, term and survival, return/destruction, remedies, governing law, and any extras (non-solicit, non-compete, IP, residuals, publicity, non-disparagement).
-3. **Summarize each key term** in plain language, citing the section number as written.
-4. **Assess risk allocation from the client's role.** A receiving party and a disclosing party care about opposite asymmetries; analyze from the client's actual position.
-5. **Flag missing or one-sided terms** — for example, no standard exclusions, a perpetual term on all information, broad injunctive-relief language, or unilateral obligations in a document labeled "mutual."
-6. **Build the risk table** using `templates/nda-risk-table.md`.
-7. **Draft prioritized redline points:** High / Medium / Low, each with the issue, why it matters, and a suggested direction of change (not final language unless the user asks for it).
-8. **List attorney verification items** — governing-law implications, enforceability questions, and anything requiring legal judgment.
-9. **Assemble the output** and label it as a draft for attorney review.
+1. **Confirm inputs.** Verify you have the full NDA text, the client's role, and the transaction context. If anything is missing, request it before proceeding.
+2. **Transaction-context check.** If the NDA is part of an M&A, employment, or investment transaction, stop and route the matter to specialist counsel (see Do Not Use When). Continue only for stand-alone commercial NDAs.
+3. **Identify the structure.** Locate and label the core provisions: parties, definition of Confidential Information, permitted use, standard exclusions, term and survival, return/destruction, remedies, and governing law.
+4. **Scope check.** Scan for obligations that go beyond confidentiality — for example a standstill, exclusivity, non-solicitation, non-competition, IP assignment, a licensing grant, a right of first refusal, a most-favored-nation clause, broad arbitration, or a governing-law clause reaching beyond confidentiality disputes. Any such term means the document is more than an NDA: flag it prominently and raise the triage rating accordingly.
+5. **Summarize each key term** in plain language, citing the section number as written.
+6. **Assess risk allocation from the client's role.** A receiving party and a disclosing party care about opposite asymmetries; analyze from the client's actual position.
+7. **Benchmark against the client's standard positions.** If a playbook was provided, note where the NDA matches it, where it deviates, and where any term hits a "never accept" position.
+8. **Flag missing or one-sided terms** — for example, no standard exclusions, a perpetual term on all information, broad injunctive-relief language, or unilateral obligations in a document labeled "mutual."
+9. **Build the risk table** using `templates/nda-risk-table.md`.
+10. **Draft prioritized redline points:** High / Medium / Low, each with the issue, why it matters, and a suggested direction of change (not final language unless the user asks for it).
+11. **Assign an overall triage rating:**
+    - **GREEN — clear to route for signature.** Terms are consistent with the client's role and standard positions; no obligations beyond confidentiality; no missing protection that matters for the client's role. Attorney sign-off is still required.
+    - **YELLOW — flag for negotiation or approver review.** One or more terms deviate from the client's standard positions or are one-sided but not dealbreakers; or a playbook is silent on a material term; or the scope check found a non-confidentiality term that needs review.
+    - **RED — stop and escalate.** A term hits a "never accept" position; there is a structural mismatch (such as unilateral obligations in a "mutual" NDA, or a perpetual term on all information); or the document carries significant non-confidentiality obligations or arises in an M&A, employment, or investment context.
+12. **List attorney verification items** — governing-law implications, enforceability questions, and anything requiring legal judgment.
+13. **Assemble the output** and label it as a draft for attorney review.
 
 ## Output Format
 
 Deliver:
 
-1. **Summary** — 3-5 sentences: document type, client role, overall risk posture.
-2. **Key Terms Table** — plain-language summary with section references.
-3. **Risk Table** — from `templates/nda-risk-table.md`.
-4. **Prioritized Redline Points** — High / Medium / Low, each with rationale.
-5. **Attorney Verification Items** — open questions and items requiring legal judgment.
-6. **Assumptions** — every assumption made, listed explicitly.
+1. **Triage Rating** — GREEN / YELLOW / RED, with a one-line rationale.
+2. **Summary** — 3-5 sentences: document type, client role, overall risk posture.
+3. **Key Terms Table** — plain-language summary with section references.
+4. **Scope Check** — whether the document contains obligations beyond confidentiality, and which.
+5. **Risk Table** — from `templates/nda-risk-table.md`.
+6. **Prioritized Redline Points** — High / Medium / Low, each with rationale.
+7. **Attorney Verification Items** — open questions and items requiring legal judgment.
+8. **Assumptions** — every assumption made, listed explicitly.
 
 Use placeholders like `[CONFIRM: governing law]` wherever information is missing. Do not fill gaps with invented content.
 
@@ -72,10 +86,13 @@ Use placeholders like `[CONFIRM: governing law]` wherever information is missing
 
 - [ ] The NDA text reviewed is complete and final.
 - [ ] The client's role (disclosing / receiving / mutual) is correctly identified.
+- [ ] The transaction context is confirmed; if the NDA arises in an M&A, employment, or investment deal, specialist counsel has been involved.
+- [ ] The scope check is complete; if the document contains obligations beyond confidentiality, it has been reviewed as more than an NDA.
 - [ ] All section references and quotations match the source document.
 - [ ] No legal authority, statute, or case law has been asserted without verification.
 - [ ] Enforceability of remedies and any restrictive covenants has been assessed under the governing law.
 - [ ] Governing law and jurisdiction are appropriate for the client.
 - [ ] Term and survival periods are acceptable for the type of information being shared.
-- [ ] Risk ratings reflect the client's actual negotiating position and leverage.
+- [ ] The triage rating and risk ratings reflect the client's standard positions, role, and leverage.
+- [ ] A GREEN rating has attorney sign-off before the NDA is signed.
 - [ ] All assumptions and open items are resolved before the review is relied upon.

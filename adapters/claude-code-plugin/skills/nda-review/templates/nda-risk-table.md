@@ -6,6 +6,7 @@
 **Matter:** [matter name / number]
 **Document reviewed:** [NDA title and date]
 **Client role:** [Disclosing party / Receiving party / Mutual]
+**Overall triage:** [GREEN — route for signature / YELLOW — flag for review / RED — stop and escalate]
 **Reviewer:** [name]   **Review date:** [date]
 **Governing law (as drafted):** [CONFIRM]
 

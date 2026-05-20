@@ -9,6 +9,8 @@
 **Date prepared:** [Date]
 **Status:** DRAFT — Attorney Work Product — For Attorney Review Only — DO NOT SEND WITHOUT ATTORNEY AUTHORIZATION
 
+> **Internal vs. sent version:** The "Attorney Work Product" status line above is an internal draft marking. Before the letter is finalized and sent, remove it, resolve every `[CONFIRM]` and `[ACTION]` placeholder, and confirm the sent letter carries no work-product or privilege header.
+
 ---
 
 ## Pre-Send Attorney Checklist (complete before sending)

@@ -1,0 +1,28 @@
+AgentCounsel
+Copyright 2026 The AgentCounsel contributors
+
+Licensed under the Apache License, Version 2.0 (the "License"); see the
+LICENSE file. You may not use the files in this repository except in
+compliance with the License.
+
+================================================================================
+Attribution
+================================================================================
+
+Some AgentCounsel skills incorporate legal-workflow ideas adapted from
+prior open-source work, used under the Apache License, Version 2.0:
+
+  agnostic-skills-for-legal
+  https://github.com/foolish-bandit/agnostic-skills-for-legal
+
+That project is itself derived from, and carries attribution to, the
+following projects, each licensed under the Apache License, Version 2.0:
+
+  claude-for-legal — Anthropic
+  https://github.com/anthropics/claude-for-legal
+
+  claude-for-legal-web — veronica-builds
+  https://github.com/veronica-builds/claude-for-legal-web
+
+AgentCounsel is an independent open-source project. It is not affiliated
+with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.

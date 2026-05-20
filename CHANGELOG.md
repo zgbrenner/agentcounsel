@@ -12,6 +12,12 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - GitHub Actions CI (`.github/workflows/validate.yml`) runs the plugin sync check and repository validation on pull requests and pushes to `main`.
 - Repository hygiene: issue templates (bug report, skill request, skill improvement), a pull request template, this changelog, and `.gitignore`.
 - `docs/MIGRATION_PLAN_FROM_AGNOSTIC_SKILLS.md`: a plan for evaluating `agnostic-skills-for-legal` as source material (no canonical skills changed).
+- `NOTICE` file recording Apache-2.0 attribution for content adapted from `agnostic-skills-for-legal` and its upstream projects.
+
+### Changed
+
+- `nda-review`: added an overall GREEN / YELLOW / RED triage rating, a scope check for obligations beyond confidentiality, a routing gate for M&A / employment / investment NDAs, and benchmarking against a client playbook — adapted from `agnostic-skills-for-legal` (Phase A migration).
+- `demand-letter`: added a structured intake stage and a pre-draft risk gate (privilege filter, admission risk, accord and satisfaction, settlement-communication posture, privilege-waiver scan, tone, factual accuracy), and clarified that the sent letter carries no work-product header — adapted from `agnostic-skills-for-legal` (Phase A migration).
 
 ## [0.1.0] - 2026-05-20
 
