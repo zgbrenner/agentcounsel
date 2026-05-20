@@ -40,7 +40,8 @@ A skill will not be merged unless it meets all of these.
 2. Create the skill folder under the right practice area in `skills/`, with `SKILL.md` and any `templates/`.
 3. Add the skill to `SKILLS_INDEX.md` and, where relevant, `WORKFLOW_ROUTER.md`.
 4. Re-read the `core/` rules and self-check against the hard requirements above.
-5. Open a pull request that explains what the skill does and who it is for.
+5. Run `python scripts/validate_repo.py` and resolve any errors it reports. See `VALIDATION.md`.
+6. Open a pull request that explains what the skill does and who it is for.
 
 ## Reviews
 

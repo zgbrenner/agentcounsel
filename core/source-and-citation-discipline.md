@@ -35,10 +35,19 @@ Use sources in this order of reliability:
 
 ## Placeholders over invention
 
-When information is missing, always prefer an explicit placeholder:
+When information is missing, always prefer an explicit placeholder to a guess. Use the general forms for any gap, and the specific forms for common situations.
 
-- `[CONFIRM: governing law]`
-- `[VERIFY: citation for the standard stated above]`
-- `[ATTORNEY TO CONFIRM: applicable filing deadline]`
+**General placeholders**
+
+- `[CONFIRM: ...]` — a fact or input the user or attorney must supply.
+- `[VERIFY: ...]` — an authority or factual claim that must be checked.
+- `[ATTORNEY TO CONFIRM: ...]` — a point of legal judgment.
+
+**Specific placeholders** for recurring research and analysis gaps:
+
+- `[citation needed]` — a legal proposition that requires supporting authority.
+- `[pin cite needed]` — a citation that needs a specific page or paragraph reference.
+- `[verify jurisdiction]` — a point whose answer depends on a jurisdiction that is not yet confirmed.
+- `[deadline verification required]` — any date or deadline; the agent never computes one, and an attorney must confirm it.
 
 A visible gap is safe. An invented fact is not.

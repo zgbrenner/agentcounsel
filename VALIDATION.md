@@ -1,0 +1,54 @@
+# Repository Validation
+
+AgentCounsel ships a lightweight validation script, `scripts/validate_repo.py`, that checks the repository for structural and consistency problems. It uses only the Python standard library — no dependencies, no package manager, no build tooling.
+
+## Running it
+
+```
+python scripts/validate_repo.py
+```
+
+Run it from anywhere; the script locates the repository root relative to its own location. It prints a report and exits with status `0` if all checks pass, or `1` if any error is found. Warnings are advisory and do not affect the exit code.
+
+## What it checks
+
+**Structure**
+
+- Every canonical skill folder under `skills/` contains a `SKILL.md`.
+- Every plugin skill folder under `adapters/claude-code-plugin/skills/` contains a `SKILL.md`.
+- Every `SKILL.md` has valid YAML frontmatter (an opening and a closing `---`).
+- Every `SKILL.md` frontmatter has a non-empty `name` and `description`.
+- Every `SKILL.md` has an H1 title.
+- Every canonical skill under `skills/` contains all eight required sections, in order: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
+
+**Safety and content**
+
+- No file describes AgentCounsel as providing legal advice. Outputs must be described as draft legal work product for attorney review.
+- No file contains the forbidden framing that this project is a ChatGPT Project instructions or package repository.
+- No substantive file contains a leftover placeholder marker (such as a TODO or FIXME note, or lorem ipsum filler text).
+
+**Links and paths**
+
+- Every relative Markdown link resolves to a file that exists.
+- Every skill path referenced in `SKILLS_INDEX.md` and `WORKFLOW_ROUTER.md` points to a real `SKILL.md`.
+- Adapter index files point back to the canonical root files.
+- `adapters/claude-code-plugin/plugin.json` is valid JSON and has `name`, `version`, and `description`.
+
+**Warnings (advisory)**
+
+- A canonical skill that is not listed in `SKILLS_INDEX.md`.
+- An index file with no skill paths to validate.
+
+## What it does not check
+
+The script validates structure and consistency — not legal accuracy. It cannot tell whether a skill's workflow is sound, whether its content is correct, or whether its legal framing is appropriate for a given matter. Substantive review by a qualified, licensed legal professional, together with each skill's Attorney Verification Checklist, remains essential. See `CONTRIBUTING.md` and the `core/` operating rules.
+
+## When to run it
+
+- Before opening or updating a pull request.
+- After adding, renaming, or moving a skill, template, or adapter file.
+- After editing `SKILLS_INDEX.md` or `WORKFLOW_ROUTER.md`.
+
+## Note
+
+`scripts/validate_repo.py` and this file (`VALIDATION.md`) are excluded from the forbidden-phrase scans, because they necessarily describe the phrases being checked for.

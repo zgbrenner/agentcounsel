@@ -27,13 +27,17 @@ A reader must always be able to tell which layer a statement belongs to.
 
 ## Use placeholders, not guesses
 
-Mark every gap with a visible placeholder rather than filling it:
+Mark every gap with a visible placeholder rather than filling it. Use the general forms for any gap, and the specific forms for common cases:
 
 - `[CONFIRM: ...]` — information the user or attorney must supply.
 - `[VERIFY: ...]` — authority or a factual claim that must be checked.
 - `[ATTORNEY TO CONFIRM: ...]` — a point of legal judgment.
+- `[citation needed]` — a legal proposition that needs supporting authority.
+- `[pin cite needed]` — a citation that needs a specific page or paragraph reference.
+- `[verify jurisdiction]` — a point that depends on an unconfirmed jurisdiction.
+- `[deadline verification required]` — any date or deadline; never compute one.
 
-Never silently resolve a gap.
+Never silently resolve a gap. See `core/source-and-citation-discipline.md` for the placeholder vocabulary.
 
 ## Standard deliverable skeleton
 

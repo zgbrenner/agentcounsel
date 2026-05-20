@@ -111,6 +111,16 @@ Adapters are intentionally **thin**. They tell a particular environment how to f
 | Claude Code plugin | Plugin-style packaging | `adapters/claude-code-plugin/` |
 | Claude / Cowork | Local-folder playbook use | `adapters/claude-cowork/` |
 
+## Validation
+
+The repository includes a lightweight validation script that checks every skill has the required structure and frontmatter, that relative links and index paths resolve, and that the safety framing is consistent. It uses only the Python standard library.
+
+```
+python scripts/validate_repo.py
+```
+
+Run it before opening or updating a pull request. See `VALIDATION.md` for the full list of checks.
+
 ## Contributing
 
 New skills are welcome. AgentCounsel is Markdown-first and safety-first — see `CONTRIBUTING.md` for the rules, and `SECURITY.md` for security guidance.

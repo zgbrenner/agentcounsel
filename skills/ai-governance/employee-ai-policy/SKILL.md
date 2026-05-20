@@ -17,7 +17,7 @@ This skill does not certify legal compliance, render an opinion on what any law 
 - Legal, HR, or compliance has been asked "do we have what we need in our AI policy?" or "what should our AI policy cover?"
 - An existing AI policy needs to be updated because new AI tools have been adopted or applicable law has changed.
 - An incident (data leak, confidentiality breach via AI tool, IP dispute) has prompted a policy review.
-- A user asks "what should employees be allowed to do with AI tools?" or "how do we handle employees using ChatGPT for work?"
+- A user asks "what should employees be allowed to do with AI tools?" or "how do we handle employees using generative AI tools for work?"
 
 ## Required Inputs
 
