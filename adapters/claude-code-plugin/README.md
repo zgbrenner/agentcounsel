@@ -27,14 +27,20 @@ The bundle contains a small, high-value subset of the library:
 
 > **The canonical source of truth is the repository's `/skills` directory** (and `/core`).
 >
-> The `SKILL.md` files in this folder are **packaged copies**, included so the bundle is self-contained. They are not the source of truth and can drift from the originals. **Regenerate them from the canonical `/skills` and `/core` files before any release** of this plugin bundle.
+> The skill folders here are **generated copies**. Do not edit them directly. Edit the canonical skill under `/skills`, then regenerate this bundle:
+>
+> ```
+> python scripts/sync_plugin_skills.py
+> ```
+>
+> See `PLUGIN_SYNC.md` for details. Validation (`python scripts/validate_repo.py`) reports any drift between this bundle and `/skills`.
 
-The full library — all practice areas and templates — lives under `/skills`. This adapter is intentionally a thin, partial bundle, not a duplicate of the whole library.
+The full library — all practice areas and templates — lives under `/skills`. This adapter is intentionally a thin, partial bundle, not a duplicate of the whole library. `legal-core` is the one hand-maintained skill here: it summarizes the `/core` operating rules and is preserved by the sync script.
 
 ## Using the bundle
 
 Load `legal-core` first; it carries the operating rules every other skill depends on. Then load the specific skill for your task. Every skill produces draft legal work product for attorney review — see the root `README.md`, `SECURITY.md`, and `core/` for the full safety model.
 
-## Note on templates
+## Templates
 
-Some canonical skills reference templates in a `templates/` folder (for example, `nda-review` references `templates/nda-risk-table.md`). The packaged copies here include the `SKILL.md` workflow only. When a template is needed, copy it from the canonical skill folder under `/skills`, or regenerate this bundle to include it.
+Where a bundled skill has templates, the sync script copies them into the skill's own `templates/` folder, so the bundle is self-contained. (`ai-use-case-intake` has no template; `legal-core` is hand-maintained and has none.)
