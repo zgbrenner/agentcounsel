@@ -20,7 +20,7 @@ Produce a structured deposition outline for attorney review and use. The outline
 
 - **Matter identification** — matter name, matter number, or a brief description sufficient to identify the case.
 - **Case theory** — one sentence stating the factual and legal proposition the deposing party is trying to establish or defend.
-- **Witness profile** — the witness's name, role in the matter, why this witness is being deposed, and posture: adverse, friendly, neutral, or organizational representative (e.g., a Rule 30(b)(6) or equivalent designee).
+- **Witness profile** — the witness's name, role in the matter, why this witness is being deposed, and posture: adverse, friendly, neutral, or organizational representative (an entity's designated representative).
 - **Deposition rules of the forum** — the procedural rules governing the deposition (duration limits, objection conventions, scope limitations). Treat any statement of forum rules as `[verify jurisdiction]` until confirmed by the responsible attorney.
 - **Documentary record** — documents to be used in the deposition, provided in full or described with Bates range or a clear identifying description. At minimum, a list of the key documents must be provided.
 - **Prior testimony** — prior deposition transcripts, sworn statements, or hearing testimony, if any (pasted or described). If none exists, state that explicitly.
