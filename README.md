@@ -2,6 +2,14 @@
 
 **An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
 
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-beta-orange.svg)](#status)
+[![Volumes](https://img.shields.io/badge/volumes-I%20Litigation%20%C2%B7%20II%20Commercial%20%C2%B7%20III%20Privacy%20%C2%B7%20IV%20Employment%20%C2%B7%20V%20IP-purple.svg)](prompts/)
+[![Prompts](https://img.shields.io/badge/prompts-47-success.svg)](prompts/)
+[![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#how-to-use)
+[![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
+[![Unofficial](https://img.shields.io/badge/unofficial-not%20affiliated%20with%20Anthropic-red.svg)](NOTICE)
+
 AgentCounsel is a collection of standalone *legal skills*. Each skill is a structured workflow that helps an AI agent — or a lawyer — produce **draft legal work product for attorney review**. The skills supply discipline and structure: how to scope a task, what inputs to gather, how to organize the output, and what a supervising attorney must verify.
 
 > AgentCounsel does not provide legal advice. It produces draft work product intended for review and adoption by a qualified, licensed legal professional.
