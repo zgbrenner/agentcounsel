@@ -34,10 +34,16 @@ Run it from anywhere; the script locates the repository root relative to its own
 - Adapter index files point back to the canonical root files.
 - `adapters/claude-code-plugin/plugin.json` is valid JSON and has `name`, `version`, and `description`.
 
+**Plugin bundle**
+
+- Every expected plugin skill is present — the eight curated skills plus the hand-maintained `legal-core`.
+- Each curated plugin skill under `adapters/claude-code-plugin/skills/` matches its canonical source in `/skills`, including templates. If they differ, the validator reports drift; run `python scripts/sync_plugin_skills.py` to regenerate the bundle. See `PLUGIN_SYNC.md`.
+
 **Warnings (advisory)**
 
 - A canonical skill that is not listed in `SKILLS_INDEX.md`.
 - An index file with no skill paths to validate.
+- A plugin skill folder that is not part of the curated bundle or the maintained set.
 
 ## What it does not check
 
@@ -48,6 +54,7 @@ The script validates structure and consistency — not legal accuracy. It cannot
 - Before opening or updating a pull request.
 - After adding, renaming, or moving a skill, template, or adapter file.
 - After editing `SKILLS_INDEX.md` or `WORKFLOW_ROUTER.md`.
+- After running `python scripts/sync_plugin_skills.py` to regenerate the plugin bundle (see `PLUGIN_SYNC.md`).
 
 ## Note
 

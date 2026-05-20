@@ -20,6 +20,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+# Allow importing sibling scripts (e.g. sync_plugin_skills) when run directly.
+SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
 errors: list[str] = []
 warnings: list[str] = []
 
@@ -269,6 +274,45 @@ def check_index_coverage(skill_dirs: list[Path]) -> None:
             warn(f"{skill_path}: not listed in SKILLS_INDEX.md")
 
 
+# --- Check: plugin bundle is present and in sync --------------------------
+
+def check_plugin_bundle() -> None:
+    """Detect Claude Code plugin bundle drift against canonical /skills."""
+    try:
+        import sync_plugin_skills as sync
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run plugin bundle checks (import failed: {exc})")
+        return
+
+    expected = list(sync.CURATED_BUNDLE) + list(sync.MAINTAINED_SKILLS)
+
+    for name in expected:
+        skill_md = sync.PLUGIN_ROOT / name / "SKILL.md"
+        if not skill_md.is_file():
+            err(f"plugin bundle: expected skill '{name}' is missing "
+                f"({rel(skill_md)})")
+
+    if sync.PLUGIN_ROOT.is_dir():
+        for sub in sorted(p for p in sync.PLUGIN_ROOT.iterdir() if p.is_dir()):
+            if sub.name not in expected:
+                warn(f"plugin bundle: unexpected skill folder '{sub.name}' "
+                     f"(not in the curated bundle or the maintained set)")
+
+    for name in sync.CURATED_BUNDLE:
+        canonical_dir, _, actions = sync.plan_skill(name)
+        if canonical_dir is None:
+            err(f"plugin bundle: no canonical source found for curated "
+                f"skill '{name}' under skills/")
+            continue
+        drift = [(status, relpath) for status, relpath in actions
+                 if status != "unchanged"]
+        if drift:
+            detail = ", ".join(f"{relpath} ({status})"
+                               for status, relpath in drift)
+            err(f"plugin bundle: '{name}' is out of sync with canonical "
+                f"skills/ [{detail}] — run: python scripts/sync_plugin_skills.py")
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -291,6 +335,7 @@ def main() -> int:
     check_index_paths("WORKFLOW_ROUTER.md")
     check_adapters()
     check_plugin_manifest()
+    check_plugin_bundle()
     check_index_coverage(canonical)
 
     if warnings:

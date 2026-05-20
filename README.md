@@ -102,7 +102,7 @@ Every skill inherits the rules in `core/`:
 
 ## Adapters
 
-Adapters are intentionally **thin**. They tell a particular environment how to find and use the canonical library; they do not re-document or duplicate it. The one exception is the Claude Code plugin bundle, which may carry copied starter skills for packaging — those are regenerated from `skills/` before release.
+Adapters are intentionally **thin**. They tell a particular environment how to find and use the canonical library; they do not re-document or duplicate it. The one exception is the Claude Code plugin bundle, which carries generated copies of a curated set of skills (and their templates) for packaging; run `python scripts/sync_plugin_skills.py` to regenerate it from `skills/`, and see `PLUGIN_SYNC.md`.
 
 | Adapter | For | Path |
 |---|---|---|
@@ -120,6 +120,8 @@ python scripts/validate_repo.py
 ```
 
 Run it before opening or updating a pull request. See `VALIDATION.md` for the full list of checks.
+
+The Claude Code plugin bundle under `adapters/claude-code-plugin/` is **generated** from `skills/`. Regenerate it with `python scripts/sync_plugin_skills.py`; validation reports any drift. See `PLUGIN_SYNC.md`.
 
 ## Contributing
 
