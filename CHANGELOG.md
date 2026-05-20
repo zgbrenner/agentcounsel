@@ -25,6 +25,12 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `docs/MIGRATION_PLAN_FROM_AGNOSTIC_SKILLS.md`: refreshed to record Phases A–C as executed and to add a Phase D for newly identified gaps (five new source prompts and the unrun Phase A improvement passes).
 - Phase D2: nine existing skills improved with content adapted from `agnostic-skills-for-legal` — `litigation-chronology`, `matter-intake`, and `subpoena-triage` (litigation); `dpa-review` and `dsar-workflow` (privacy); `termination-risk` and `employee-policy-review` (employment); and `redline-summary` and `contract-risk-review` (contracts).
 
+### Fixed
+
+- README badges corrected: the practice-area and skills badges linked to a `prompts/` directory that does not exist in this repository and used the source project's terminology and a stale count; they now reflect AgentCounsel's structure (10 practice areas, 50 skills) and link to `SKILLS_INDEX.md`. The "works with" badge anchor was repaired.
+- Refreshed the stale Litigation and Privacy rows of the README practice-area table.
+- `scripts/validate_repo.py` now also checks the link target of Markdown image and badge links (`[![alt](image)](target)`) — a case the link checker previously skipped.
+
 ## [0.1.0] - 2026-05-20
 
 ### Added
