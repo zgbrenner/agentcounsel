@@ -11,6 +11,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - Plugin bundle drift detection in `scripts/validate_repo.py`.
 - GitHub Actions CI (`.github/workflows/validate.yml`) runs the plugin sync check and repository validation on pull requests and pushes to `main`.
 - Repository hygiene: issue templates (bug report, skill request, skill improvement), a pull request template, this changelog, and `.gitignore`.
+- `docs/MIGRATION_PLAN_FROM_AGNOSTIC_SKILLS.md`: a plan for evaluating `agnostic-skills-for-legal` as source material (no canonical skills changed).
 
 ## [0.1.0] - 2026-05-20
 
