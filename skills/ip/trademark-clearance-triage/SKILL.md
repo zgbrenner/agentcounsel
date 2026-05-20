@@ -30,7 +30,7 @@ If the proposed mark text is not provided, stop and request it before proceeding
 ## Do Not Use When
 
 - The user needs a formal trademark clearance opinion or freedom-to-use determination — refer to trademark counsel.
-- The user has already received a cease-and-desist letter, or is responding to an opposition or cancellation proceeding — that is separate, attorney-directed work, not covered by this triage.
+- The user has received a cease-and-desist letter and needs to respond (use `cease-and-desist-response`); responding to an opposition or cancellation proceeding is separate, attorney-directed work.
 - The document to review is a license agreement, co-existence agreement, or assignment — use `contract-risk-review`.
 - The user needs a copyright analysis (use `dmca-takedown` for DMCA takedown matters) or a patent search — general copyright clearance and patent work are outside the scope of this triage.
 

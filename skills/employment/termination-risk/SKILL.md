@@ -31,7 +31,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 - The termination has already occurred and the question is how to respond to a filed claim or charge — that is separate, attorney-directed litigation-response work, not covered by this skill.
 - The user is asking to draft the termination letter itself rather than assess risk (a separate drafting skill applies).
-- The question concerns an independent contractor, not an employee (employment classification is a separate, threshold question requiring attorney guidance).
+- The question is whether a worker should be classified as an employee or an independent contractor (use `worker-classification`).
 - The user needs jurisdiction-specific legal conclusions about lawfulness — this skill provides workflow discipline, not legal opinions.
 
 ## Legal Safety Rules

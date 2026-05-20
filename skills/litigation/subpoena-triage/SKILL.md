@@ -77,7 +77,7 @@ If the subpoena text is not provided, stop and request it. Do not complete a tri
 
 8. **Flag privilege and confidentiality issues.** Identify categories of documents or communications that may be privileged or protected: attorney-client communications, attorney work product, trade secrets, personally identifiable information, healthcare records, financial records, or material subject to a protective order. Flag these for attorney-directed privilege review before any production. Note that a privilege log may be required.
 
-9. **Flag litigation hold / preservation obligation.** Note that receipt of a subpoena may trigger or reinforce a duty to preserve relevant documents and ESI. Flag for attorney evaluation: whether a hold is already in place, whether a new or supplemental hold notice is required, and who the relevant custodians are. Do not assert that a hold is or is not required.
+9. **Flag litigation hold / preservation obligation.** Note that receipt of a subpoena may trigger or reinforce a duty to preserve relevant documents and ESI. Flag for attorney evaluation: whether a hold is already in place, whether a new or supplemental hold notice is required, and who the relevant custodians are. Do not assert that a hold is or is not required. When a hold notice is required, use `legal-hold` to prepare it.
 
 10. **Identify internal notification requirements.** Based on the subpoena's scope and the recipient's organizational role, identify who within the organization should be notified: legal department, HR, IT (for ESI preservation), records management, the specific custodians named or implicated, and senior leadership if appropriate. Mark as `[CONFIRM: attorney to confirm required internal notifications and any applicable corporate policy]`.
 

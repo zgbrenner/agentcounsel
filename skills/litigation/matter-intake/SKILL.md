@@ -67,7 +67,7 @@ If the client identity or a basic description of the dispute is not provided, st
 
 9. **Flag conflicts check.** Record all party names and aliases for conflicts screening. Note `[ACTION: run conflicts check before proceeding; do not proceed if conflict identified without attorney authorization]`.
 
-10. **Flag litigation hold / preservation obligation.** Based on the parties and claims described, note that an attorney must immediately evaluate whether a litigation hold notice is required and to whom it must be sent. Record known or likely custodians of relevant documents and ESI. Do not assert that a hold is or is not required.
+10. **Flag litigation hold / preservation obligation.** Based on the parties and claims described, note that an attorney must immediately evaluate whether a litigation hold notice is required and to whom it must be sent. Record known or likely custodians of relevant documents and ESI. Do not assert that a hold is or is not required. When an attorney has determined a hold is warranted, use `legal-hold` to prepare the notice.
 
 11. **Flag insurance and indemnity.** Note whether any insurance policy, indemnity agreement, or tender obligation may be implicated. Record policy information if provided. Flag as `[ACTION: verify coverage and notice requirements with client and coverage counsel]`. Never assert coverage.
 

@@ -33,6 +33,9 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Build a factual timeline from these documents" | `skills/litigation/litigation-chronology/SKILL.md` |
 | "Draft a demand letter" | `skills/litigation/demand-letter/SKILL.md` |
 | "We received a subpoena — what now?" | `skills/litigation/subpoena-triage/SKILL.md` |
+| "Prepare for a deposition" / "build a deposition outline" | `skills/litigation/deposition-prep/SKILL.md` |
+| "Issue a litigation hold" / "preserve documents for a matter" | `skills/litigation/legal-hold/SKILL.md` |
+| "Review our privilege log" | `skills/litigation/privilege-log-review/SKILL.md` |
 | "Research this legal question and write a memo" | `skills/legal-research/legal-research-memo/SKILL.md` |
 
 ### Employment
@@ -40,6 +43,7 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | The task sounds like... | Use this skill |
 |---|---|
 | "Help assess a termination" / "is it risky to let this person go?" | `skills/employment/termination-risk/SKILL.md` |
+| "Is this worker an employee or a contractor?" / "classify a worker" | `skills/employment/worker-classification/SKILL.md` |
 | "Review this severance / separation agreement" | `skills/employment/severance-review/SKILL.md` |
 | "Review our employee handbook / this workplace policy" | `skills/employment/employee-policy-review/SKILL.md` |
 | "Review our internal employee AI-use policy" | `skills/ai-governance/employee-ai-policy/SKILL.md` |
@@ -51,6 +55,7 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Review a DPA" | `skills/privacy/dpa-review/SKILL.md` |
 | "We got a data subject access request" / "handle this DSAR" | `skills/privacy/dsar-workflow/SKILL.md` |
 | "Check our privacy policy for gaps" | `skills/privacy/privacy-policy-gap-review/SKILL.md` |
+| "Run a privacy impact assessment" / "do a PIA or DPIA" | `skills/privacy/pia-generation/SKILL.md` |
 
 ### Product, marketing, and AI features
 
@@ -75,6 +80,7 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | The task sounds like... | Use this skill |
 |---|---|
 | "Is this brand / product name available?" (preliminary triage) | `skills/ip/trademark-clearance-triage/SKILL.md` |
+| "We received a cease-and-desist letter" | `skills/ip/cease-and-desist-response/SKILL.md` |
 | "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
 | "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
 
@@ -86,6 +92,7 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 - **An AI vendor contract** -> `ai-vendor-terms-review` for the AI-specific terms; pair with `contract-risk-review` for the broader agreement and `dpa-review` for data terms.
 - **A product launch that raises many issues** -> start with `launch-review`, which spots issues and routes to specialist skills.
 - **A new AI use case** -> start with `ai-use-case-intake`, which triages and routes onward.
+- **A received cease-and-desist letter** -> `cease-and-desist-response`; **drafting an outbound cease-and-desist or demand** -> `demand-letter`.
 
 ## When nothing matches
 

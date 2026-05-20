@@ -18,6 +18,9 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Litigation | Litigation Chronology | `skills/litigation/litigation-chronology/SKILL.md` | Building a sourced factual timeline from documents | Documents, records, correspondence | Chronology table |
 | Litigation | Demand Letter | `skills/litigation/demand-letter/SKILL.md` | Drafting a demand letter outline and draft | Facts, client position, relief sought | Demand letter draft |
 | Litigation | Subpoena Triage | `skills/litigation/subpoena-triage/SKILL.md` | Triaging an incoming subpoena and its deadlines | The subpoena, recipient role | Triage summary |
+| Litigation | Deposition Preparation | `skills/litigation/deposition-prep/SKILL.md` | Building a structured deposition outline from the record | Case theory, witness, documents | Deposition outline |
+| Litigation | Legal Hold | `skills/litigation/legal-hold/SKILL.md` | Preparing a document-preservation (litigation hold) notice | Matter, preservation scope, custodians, systems | Legal hold notice |
+| Litigation | Privilege Log Review | `skills/litigation/privilege-log-review/SKILL.md` | First-pass sorting of privilege log entries by confidence | Privilege log, forum and jurisdiction | Privilege log review report |
 | Contracts | NDA Review | `skills/contracts/nda-review/SKILL.md` | Reviewing an NDA for risk and redline points | NDA text, client role | Risk review + redline points |
 | Contracts | Contract Risk Review | `skills/contracts/contract-risk-review/SKILL.md` | Risk-reviewing a general commercial contract | Contract text, client role | Risk matrix + review |
 | Contracts | Redline Summary | `skills/contracts/redline-summary/SKILL.md` | Summarizing changes between contract drafts | Two contract versions or tracked changes | Change summary table |
@@ -25,9 +28,11 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Employment | Termination Risk | `skills/employment/termination-risk/SKILL.md` | Organizing the facts around a proposed termination | Employee facts, stated reason, history | Risk checklist + factors |
 | Employment | Severance Review | `skills/employment/severance-review/SKILL.md` | Reviewing a severance / separation agreement | Severance agreement, party served | Review + issues table |
 | Employment | Employee Policy Review | `skills/employment/employee-policy-review/SKILL.md` | Reviewing a handbook or workplace policy for gaps | Policy or handbook text | Gap + issues table |
+| Employment | Worker Classification | `skills/employment/worker-classification/SKILL.md` | Structuring the employee vs. contractor analysis for a proposed engagement | Proposed engagement facts, classification purpose, jurisdiction | Classification analysis memo |
 | Privacy | DPA Review | `skills/privacy/dpa-review/SKILL.md` | Reviewing a data processing agreement | DPA text, client role | Risk table + review |
 | Privacy | DSAR Workflow | `skills/privacy/dsar-workflow/SKILL.md` | Triaging and structuring a data subject request | The request, requester details | Request-handling record |
 | Privacy | Privacy Policy Gap Review | `skills/privacy/privacy-policy-gap-review/SKILL.md` | Checking a privacy policy against actual practice | Privacy policy, described practices | Gap table + recommendations |
+| Privacy | Privacy Impact Assessment | `skills/privacy/pia-generation/SKILL.md` | Drafting a privacy impact assessment for a processing activity | Activity description, data categories, data flows | PIA draft |
 | Product Legal | Launch Review | `skills/product-legal/launch-review/SKILL.md` | Pre-launch legal issue-spotting for a product or feature | Launch description, data, claims | Issues register + recommendation |
 | Product Legal | Marketing Claims Review | `skills/product-legal/marketing-claims-review/SKILL.md` | Reviewing marketing copy for claim risk | Marketing or advertising copy | Claims register |
 | Product Legal | Terms of Service Review | `skills/product-legal/terms-of-service-review/SKILL.md` | Reviewing terms of service / terms of use | Terms of service text | Review + issues table |
@@ -42,15 +47,16 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Intellectual Property | Trademark Clearance Triage | `skills/ip/trademark-clearance-triage/SKILL.md` | Preliminary triage of a proposed brand or name | Proposed mark, goods/services, markets | Triage summary + signal |
 | Intellectual Property | DMCA Takedown | `skills/ip/dmca-takedown/SKILL.md` | Preparing or evaluating a takedown / counter-notice | The work, the allegedly infringing material | Draft notice / counter-notice |
 | Intellectual Property | Open Source License Review | `skills/ip/open-source-license-review/SKILL.md` | Reviewing OSS license obligations and compatibility | Component / license inventory, distribution model | Obligations table + issues |
+| Intellectual Property | Cease and Desist Response | `skills/ip/cease-and-desist-response/SKILL.md` | Triaging a received cease-and-desist letter into response options | The received letter, factual assessment | Response triage memo |
 
 ## Practice areas at a glance
 
 - **Legal Research** — turning questions into structured, verifiable memos.
-- **Litigation** — intake, chronology, demand letters, and subpoena triage.
+- **Litigation** — intake, chronology, demand letters, subpoena triage, deposition preparation, legal holds, and privilege-log review.
 - **Contracts** — NDAs, commercial contracts, redlines, and statements of work.
-- **Employment** — terminations, severance, and workplace policies.
-- **Privacy** — data processing agreements, data subject requests, and policy gaps.
+- **Employment** — terminations, worker classification, severance, and workplace policies.
+- **Privacy** — data processing agreements, impact assessments, data subject requests, and policy gaps.
 - **Product Legal** — launch, marketing claims, terms of service, and AI features.
 - **Regulatory** — enforcement risk, rule changes, and compliance gaps.
 - **AI Governance** — AI use-case intake, vendor terms, model risk, and AI policies.
-- **Intellectual Property** — trademark triage, DMCA, and open-source licensing.
+- **Intellectual Property** — trademark triage, cease-and-desist response, DMCA, and open-source licensing.
