@@ -108,7 +108,7 @@ Deliver the following, in order:
 6. **Candidate Exemptions and Third-Party Flags** — list for attorney review; no conclusions drawn.
 7. **Response Plan (draft)** — proposed action, data to provide or withhold, format, delivery method, fee/extension flags.
 8. **Escalation Items** — any factors requiring immediate attorney consultation.
-9. **Attorney Verification Items** — checkbox list of all open legal determinations.
+9. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 10. **Assumptions** — explicit list of every assumption made in the handling record.
 
 ## Attorney Verification Checklist

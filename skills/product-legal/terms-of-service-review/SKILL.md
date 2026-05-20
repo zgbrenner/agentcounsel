@@ -31,7 +31,7 @@ If the ToS text is not provided, stop and request it. Do not fabricate terms or 
 ## Do Not Use When
 
 - The document is an NDA or confidentiality agreement (use `nda-review`).
-- The document is a privacy policy reviewed in isolation (use `privacy-policy-review`).
+- The document is a privacy policy reviewed in isolation (use `privacy-policy-gap-review`).
 - The review is of a broad product launch across multiple legal areas (use `launch-review`).
 - The goal is to draft a ToS from scratch — this skill reviews existing documents.
 - The user wants a legal opinion on whether a specific clause is enforceable in a specific jurisdiction — this skill flags risks and routes; it does not render legal opinions.

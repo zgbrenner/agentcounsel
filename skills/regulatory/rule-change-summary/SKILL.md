@@ -94,13 +94,13 @@ Deliver the following sections in order:
 
 8. **Open Questions and Interpretive Issues** — Bulleted list of ambiguities, undefined terms, scope questions, or areas where the document is unclear and further guidance or legal research is needed.
 
-9. **Attorney Verification Items** — Checkbox list of items requiring confirmation before reliance.
+9. **Impact Summary Table** — An at-a-glance table of the obligations and changes identified:
 
-**Impact Summary Table**
+   | Obligation / Change | Source (doc section) | Affected Function | Effective/Compliance Date | Status |
+   |---|---|---|---|---|
+   | [extracted from document] | [section ref] | [org function] | [CONFIRM] | Attorney to assess |
 
-| Obligation / Change | Source (doc section) | Affected Function | Effective/Compliance Date | Status |
-|---|---|---|---|---|
-| [extracted from document] | [section ref] | [org function] | [CONFIRM] | Attorney to assess |
+10. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 
 ## Attorney Verification Checklist
 

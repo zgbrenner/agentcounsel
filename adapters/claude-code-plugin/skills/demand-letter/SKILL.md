@@ -1,6 +1,6 @@
 ---
 name: Demand Letter
-description: Use when drafting a demand letter outline and draft text for attorney review, producing a structured document with factual background, claimed basis, and specific demand — all placeholders confirmed and legal conclusions reviewed by attorney before sending.
+description: Use when drafting a demand letter (outline and draft text) for attorney review, with the factual background, claimed basis, specific demand, damages figures, and response deadline all flagged for attorney confirmation before sending.
 ---
 
 # Demand Letter

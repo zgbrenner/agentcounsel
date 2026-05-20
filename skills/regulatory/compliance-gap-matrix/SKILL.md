@@ -96,7 +96,7 @@ Deliver the following sections in order:
 
 7. **Open Questions** — Bulleted list of requirements whose applicability is unclear, controls whose scope is uncertain, and interpretive questions requiring attorney or subject-matter-expert resolution.
 
-8. **Attorney Verification Items** — Checkbox list.
+8. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 
 ## Attorney Verification Checklist
 

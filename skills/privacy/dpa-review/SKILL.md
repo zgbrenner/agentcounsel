@@ -96,7 +96,7 @@ Deliver the following, in order:
 3. **Risk Table** — completed `templates/dpa-risk-table.md`, with one row per issue.
 4. **Prioritized Issue List** — organized as High / Medium / Low, with plain-language description of each issue and its risk to the client.
 5. **Liability and Indemnity Note** — specific observations on the interplay between the DPA's liability provisions and the main agreement.
-6. **Attorney Verification Items** — checkbox list of all open legal questions.
+6. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 7. **Assumptions** — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).
 
 ## Attorney Verification Checklist

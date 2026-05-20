@@ -119,7 +119,7 @@ Deliver the following, in order:
 
 6. **Prioritized Recommendations** — organized as High / Medium / Low, with plain-language description of each issue and recommended action direction.
 
-7. **Attorney Verification Items** — checkbox list of all open legal determinations.
+7. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 
 8. **Assumptions** — explicit list of every assumption made in the review (about practices, audience, industry norms, etc.).
 

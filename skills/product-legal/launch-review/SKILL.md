@@ -31,7 +31,7 @@ If any of these inputs are missing, stop and request them before proceeding. Do 
 ## Do Not Use When
 
 - The document under review is primarily a contract (use `contract-risk-review` or `nda-review`).
-- The review is limited to a privacy policy or data practices document (use `privacy-policy-review`).
+- The review is limited to a privacy policy or data practices document (use `privacy-policy-gap-review`).
 - The review concerns only marketing copy without a broader product launch context (use `marketing-claims-review`).
 - The scope is exclusively AI/ML model behavior (use `ai-feature-review` or `model-risk-triage`).
 - The team needs advice on whether the product is legally compliant — this skill spots issues and routes them; it does not provide clearance.
@@ -55,7 +55,7 @@ If any of these inputs are missing, stop and request them before proceeding. Do 
 
 3. **Intellectual property and ownership.** Review what IP the product creates or relies on. Spot issues: ownership of outputs, use of third-party content, trademark clearance for product name and claims, patent exposure, and trade-secret handling. Flag for IP counsel.
 
-4. **Privacy and data protection.** For each category of personal data collected: identify the likely legal basis for processing, flag sensitive data categories, assess whether a privacy notice update is required, and identify consent, data retention, cross-border transfer, or data subject rights issues. Route to privacy counsel or `privacy-policy-review` as appropriate.
+4. **Privacy and data protection.** For each category of personal data collected: identify the likely legal basis for processing, flag sensitive data categories, assess whether a privacy notice update is required, and identify consent, data retention, cross-border transfer, or data subject rights issues. Route to privacy counsel or `privacy-policy-gap-review` as appropriate.
 
 5. **Marketing claims and advertising.** Review all user-facing representations. For each material claim, flag whether it is objective, comparative, superlative, health/efficacy, environmental, AI-related, or pricing-related, and identify substantiation requirements. Route detailed claim-by-claim analysis to `marketing-claims-review`.
 

@@ -72,7 +72,7 @@ If any required input is missing, stop and request it. Do not fabricate facts, r
 
 9. **Compile attorney verification items.** List every point in the memo where rule text, precedent, facts, dates, or legal conclusions must be independently confirmed before the memo is relied upon.
 
-10. **Assemble and label the output.** Mark the entire document as a draft for attorney review. Add assumption log and confidence flags.
+10. **Assemble and label the output.** Mark the entire document as a draft for attorney review, confirm the Assumptions section is complete, and ensure every unverified rule, fact, date, or conclusion is flagged with `[CONFIRM]`.
 
 ## Output Format
 
@@ -100,7 +100,7 @@ Deliver the following sections in order:
 
 10. **Recommended Next Steps** — Bulleted preliminary list for attorney consideration (research, remediation, disclosure analysis, privilege review, etc.).
 
-11. **Attorney Verification Items** — Checkbox list of every item requiring independent confirmation before reliance.
+11. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 
 ## Attorney Verification Checklist
 

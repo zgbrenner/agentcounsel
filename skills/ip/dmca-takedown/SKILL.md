@@ -40,7 +40,7 @@ If the required inputs are not provided, stop and request them. Do not fabricate
 
 ## Do Not Use When
 
-- The user needs a patent or trademark enforcement action — use a patent-demand or trademark-enforcement skill.
+- The user needs a patent or trademark enforcement action — that is separate work; refer to patent or trademark enforcement counsel.
 - The user is involved in formal copyright litigation — this skill produces preliminary notices only; litigation strategy requires counsel.
 - The user wants to evaluate a content licensing agreement — use `contract-risk-review`.
 - The matter involves non-US platforms exclusively and the user needs non-DMCA (e.g., EU DSA, UK CDPA) takedown procedures — flag this limitation and refer to counsel familiar with the applicable regime.
@@ -49,7 +49,7 @@ If the required inputs are not provided, stop and request them. Do not fabricate
 
 - This is draft legal work product for attorney review. It is NOT legal advice.
 - Do not invent statutory text, section numbers, or regulatory citations. If referencing DMCA provisions, use general descriptions and flag that the user must verify the current statutory text with counsel.
-- The good-faith belief statement and the accuracy/authority statement in a takedown notice carry legal weight. Knowingly making false statements in a DMCA notice may expose the sender to liability under 17 U.S.C. § 512(f) — characterize this as a general legal risk and flag it for counsel verification; do not assert the exact statutory text.
+- The good-faith belief statement and the accuracy/authority statement in a takedown notice carry legal weight. Knowingly making false statements in a DMCA notice may expose the sender to statutory liability for misrepresentation — characterize this as a general legal risk, flag the applicable provision as `[CONFIRM: misrepresentation provision and current statutory text, with counsel]`, and do not quote or assert specific statutory text.
 - Do not characterize a counter-notice as "safe" or advise that it will succeed. A counter-notice restores content but does not resolve the underlying copyright dispute and may invite litigation.
 - Do not assert whether a use constitutes fair use, transformative use, or any other copyright defense. Fair use analysis is a legal conclusion requiring attorney judgment.
 - Do not assert whether the user has a valid copyright or whether a particular work is protected.
@@ -122,7 +122,7 @@ If the required inputs are not provided, stop and request them. Do not fabricate
 - [ ] The accuracy and authority statement is correct: the submitter is authorized to act on behalf of the rights holder.
 - [ ] The designated DMCA agent for the service provider has been confirmed via the current Copyright Office directory or the platform's published agent information.
 - [ ] No statutory text, section numbers, or regulatory citations have been relied upon without verification of the current text.
-- [ ] The legal consequences of submission (including potential 512(f) liability for misrepresentation) have been explained to and understood by the client.
+- [ ] The legal consequences of submission (including potential statutory liability for misrepresentation) have been explained to and understood by the client.
 - [ ] For counter-notices: the client understands that filing may result in content restoration and potential litigation.
 - [ ] All `[CONFIRM: ...]` placeholders have been resolved before the notice is submitted.
 - [ ] The final notice bears a valid signature and accurate contact information.

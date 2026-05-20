@@ -35,7 +35,7 @@ If the legal question, jurisdiction, or relevant facts are not provided, stop an
 ## Do Not Use When
 
 - The user needs a contract review (use `nda-review` or `contract-risk-review`).
-- The user needs a litigation strategy memo or brief (use `litigation-strategy` where available).
+- The user needs a litigation strategy memo or brief — that is separate work beyond this research-memo workflow.
 - The user needs a regulatory compliance checklist (use the appropriate compliance skill).
 - The question requires a formal legal opinion letter — those require an attorney and carry professional responsibility implications this skill cannot satisfy.
 - The user is asking for real-time legal advice in an ongoing matter requiring immediate attorney judgment.
