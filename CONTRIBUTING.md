@@ -51,4 +51,4 @@ Maintainers review contributions for safety, structure, accuracy of framing, and
 
 ## License
 
-By contributing, you agree that your contributions are licensed under the repository's Apache License 2.0.
+By contributing, you agree that your contributions are licensed under the repository's Apache License 2.0. If a contribution adapts content from another project, keep that project's license compatible with Apache-2.0 and preserve its attribution in `NOTICE`.
