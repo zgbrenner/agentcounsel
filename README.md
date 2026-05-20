@@ -123,6 +123,17 @@ Run it before opening or updating a pull request. See `VALIDATION.md` for the fu
 
 The Claude Code plugin bundle under `adapters/claude-code-plugin/` is **generated** from `skills/`. Regenerate it with `python scripts/sync_plugin_skills.py`; validation reports any drift. See `PLUGIN_SYNC.md`.
 
+### Continuous integration
+
+GitHub Actions runs the same checks on every pull request and on pushes to `main`:
+
+```
+python scripts/sync_plugin_skills.py --check   # plugin bundle is in sync
+python scripts/validate_repo.py                # full repository validation
+```
+
+The workflow is `.github/workflows/validate.yml`. It uses only Python and the standard library — no extra dependencies.
+
 ## Contributing
 
 New skills are welcome. AgentCounsel is Markdown-first and safety-first — see `CONTRIBUTING.md` for the rules, and `SECURITY.md` for security guidance.

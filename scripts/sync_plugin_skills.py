@@ -9,7 +9,11 @@ the canonical skills by this script — it is not maintained by hand.
 Run it after editing any canonical skill in the curated set, and before
 releasing the plugin bundle:
 
-    python scripts/sync_plugin_skills.py
+    python scripts/sync_plugin_skills.py           # copy/update bundle files
+    python scripts/sync_plugin_skills.py --check   # report drift only (CI)
+
+In --check mode the script modifies nothing and exits non-zero if any
+bundled skill is out of sync with canonical /skills.
 
 The script is idempotent and uses the Python standard library only.
 See PLUGIN_SYNC.md.
@@ -17,6 +21,7 @@ See PLUGIN_SYNC.md.
 
 from __future__ import annotations
 
+import argparse
 import filecmp
 import shutil
 import sys
@@ -141,7 +146,8 @@ def apply_skill(name: str) -> tuple[bool, list[tuple[str, str]]]:
     return True, actions
 
 
-def main() -> int:
+def run_sync() -> int:
+    """Copy/update the plugin bundle from canonical /skills."""
     print("Syncing the Claude Code plugin bundle from canonical /skills")
     print()
     PLUGIN_ROOT.mkdir(parents=True, exist_ok=True)
@@ -180,6 +186,57 @@ def main() -> int:
           f"{changed_files} file change(s) written.")
     print("Run 'python scripts/validate_repo.py' to confirm.")
     return 0
+
+
+def run_check() -> int:
+    """Report plugin bundle drift without modifying files. Exit 1 on drift."""
+    print("Checking the Claude Code plugin bundle against canonical /skills")
+    print()
+    problems = 0
+
+    for name in CURATED_BUNDLE:
+        canonical_dir, _, actions = plan_skill(name)
+        if canonical_dir is None:
+            problems += 1
+            print(f"  ERROR     {name}: no canonical skill found under skills/")
+            continue
+        drift = [a for a in actions if a[0] != "unchanged"]
+        if drift:
+            problems += 1
+            detail = ", ".join(f"{relpath} ({status})"
+                               for status, relpath in drift)
+            print(f"  DRIFT     {name}: {detail}")
+        else:
+            print(f"  ok        {name}")
+
+    print()
+    for name in MAINTAINED_SKILLS:
+        skill_md = PLUGIN_ROOT / name / "SKILL.md"
+        if skill_md.is_file():
+            print(f"  ok        {name} (hand-maintained — presence checked)")
+        else:
+            problems += 1
+            print(f"  ERROR     {name}/SKILL.md is missing ({rel(skill_md)})")
+
+    print()
+    if problems:
+        print(f"OUT OF SYNC: {problems} issue(s). Run "
+              f"'python scripts/sync_plugin_skills.py' to regenerate the bundle.")
+        return 1
+    print("Plugin bundle is in sync with canonical /skills.")
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Sync the Claude Code plugin skill bundle from "
+                    "canonical /skills.")
+    parser.add_argument(
+        "--check", action="store_true",
+        help="Report whether the bundle is out of sync and exit non-zero "
+             "if so; do not modify any files.")
+    args = parser.parse_args(argv)
+    return run_check() if args.check else run_sync()
 
 
 if __name__ == "__main__":
