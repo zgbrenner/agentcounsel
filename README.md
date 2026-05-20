@@ -60,6 +60,7 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Legal Research | Turning research questions into structured, verifiable memos. |
 | Litigation | Matter intake, chronologies, demand letters, subpoena triage. |
 | Contracts | NDAs, commercial contracts, redlines, statements of work. |
+| Corporate | Board minutes, written consents, closing checklists, due-diligence review, entity compliance. |
 | Employment | Terminations, severance agreements, workplace policies. |
 | Privacy | Data processing agreements, data subject requests, policy gaps. |
 | Product Legal | Launch review, marketing claims, terms of service, AI features. |

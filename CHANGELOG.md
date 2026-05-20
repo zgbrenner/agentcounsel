@@ -15,6 +15,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `NOTICE` file recording Apache-2.0 attribution for content adapted from `agnostic-skills-for-legal` and its upstream projects.
 - Six new skills adapted from `agnostic-skills-for-legal` (Phase B migration): `worker-classification` (employment); `deposition-prep`, `legal-hold`, and `privilege-log-review` (litigation); `pia-generation` (privacy); and `cease-and-desist-response` (intellectual property).
 - Six further skills adapted from `agnostic-skills-for-legal` (Phase B migration, second batch): `hiring-review` and `wage-hour-qa` (employment); `claim-chart` and `brief-section-drafter` (litigation); and `fto-triage` and `invention-intake` (intellectual property).
+- A new **Corporate** practice area (Phase C migration): six skills adapted from `agnostic-skills-for-legal` — `board-minutes`, `written-consent`, `closing-checklist`, `diligence-issue-extraction`, `material-contract-schedule`, and `entity-compliance`.
 
 ### Changed
 

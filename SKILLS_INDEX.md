@@ -27,6 +27,12 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Contracts | Contract Risk Review | `skills/contracts/contract-risk-review/SKILL.md` | Risk-reviewing a general commercial contract | Contract text, client role | Risk matrix + review |
 | Contracts | Redline Summary | `skills/contracts/redline-summary/SKILL.md` | Summarizing changes between contract drafts | Two contract versions or tracked changes | Change summary table |
 | Contracts | SOW Review | `skills/contracts/sow-review/SKILL.md` | Reviewing a statement of work against its MSA | SOW text, governing MSA | SOW review + issues table |
+| Corporate | Board Minutes | `skills/corporate/board-minutes/SKILL.md` | Drafting minutes of a board or committee meeting | Meeting details, attendance, materials | Draft minutes |
+| Corporate | Written Consent | `skills/corporate/written-consent/SKILL.md` | Drafting a board action by written consent | The action, signatories, effective date | Draft written consent |
+| Corporate | Closing Checklist | `skills/corporate/closing-checklist/SKILL.md` | Building a transaction closing checklist and blocking analysis | Transaction agreement, deal context, diligence findings | Closing checklist |
+| Corporate | Diligence Issue Extraction | `skills/corporate/diligence-issue-extraction/SKILL.md` | Extracting material issues from due-diligence documents | Target documents, deal context, materiality threshold | Diligence issues memo |
+| Corporate | Material Contract Schedule | `skills/corporate/material-contract-schedule/SKILL.md` | Building a disclosure schedule of material contracts | "Material Contract" definition, contract data | Material contract schedule |
+| Corporate | Entity Compliance Review | `skills/corporate/entity-compliance/SKILL.md` | Reviewing corporate-entity filing and good-standing status | Entity list, filing obligations | Entity compliance review |
 | Employment | Termination Risk | `skills/employment/termination-risk/SKILL.md` | Organizing the facts around a proposed termination | Employee facts, stated reason, history | Risk checklist + factors |
 | Employment | Severance Review | `skills/employment/severance-review/SKILL.md` | Reviewing a severance / separation agreement | Severance agreement, party served | Review + issues table |
 | Employment | Employee Policy Review | `skills/employment/employee-policy-review/SKILL.md` | Reviewing a handbook or workplace policy for gaps | Policy or handbook text | Gap + issues table |
@@ -60,6 +66,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 - **Legal Research** — turning questions into structured, verifiable memos.
 - **Litigation** — intake, chronology, demand letters, subpoena triage, deposition preparation, legal holds, privilege-log review, claim charts, and brief drafting.
 - **Contracts** — NDAs, commercial contracts, redlines, and statements of work.
+- **Corporate** — board minutes, written consents, closing checklists, due-diligence issue extraction, material-contract schedules, and entity compliance.
 - **Employment** — terminations, worker classification, hiring review, wage-and-hour questions, severance, and workplace policies.
 - **Privacy** — data processing agreements, impact assessments, data subject requests, and policy gaps.
 - **Product Legal** — launch, marketing claims, terms of service, and AI features.

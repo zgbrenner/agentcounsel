@@ -1,0 +1,125 @@
+---
+name: Diligence Issue Extraction
+description: Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review.
+---
+
+# Diligence Issue Extraction
+
+## Purpose
+
+Extract and organize material issues from a target's due-diligence documents into a structured issues memo, ready for attorney review. The skill inventories the provided documents, maps them to diligence categories, applies a stated materiality threshold, extracts findings per category, flags successor-liability exposure, and identifies gaps in the document set. It produces draft legal work product for attorney review — not legal advice and not a final due-diligence opinion.
+
+## Use When
+
+- A user asks to "pull issues from these diligence documents," "give me a first-pass issues list," or "flag the red flags in the data room."
+- The user has uploaded or pasted due-diligence documents and needs a structured issues memo organized by category and severity.
+- The transaction is an M&A deal or an investment round and a first-pass extraction of material concerns is needed before attorney analysis.
+- The user needs a gap analysis identifying missing diligence categories or document types.
+- The user needs a successor-liability sweep surfaced from the provided materials.
+
+## Required Inputs
+
+- **The target documents** — uploaded or pasted in full. This skill works only from documents provided in the conversation; it does not query a data room or external source.
+- **Deal context** — deal name or working title; the user's side (buy-side or sell-side); and the diligence category or categories under review (e.g., corporate, material contracts, IP, employment, litigation).
+- **Materiality threshold** — the dollar amount, percentage, or qualitative standard that defines a material issue for this deal. If not supplied, stop and request it before proceeding.
+- **Optional:** the firm's or client's preferred diligence categories, severity scheme, and house issues-memo format. Where provided, apply them; where not provided, use the default category and severity framework in this skill.
+
+If the target documents are not provided, stop and request them. Do not reconstruct or assume document contents, defined terms, or diligence findings from background knowledge.
+
+If the materiality threshold is not stated, request it before extracting issues. Applying the wrong threshold silently is a substantive error.
+
+## Do Not Use When
+
+- The user wants a single contract reviewed in depth (use `contract-risk-review`).
+- The user wants to build the material-contract disclosure schedule (use `material-contract-schedule`).
+- The user wants to build the closing checklist (use `closing-checklist`).
+- The user wants the purchase agreement or disclosure schedules drafted — those require attorney-led drafting, not issue extraction.
+- The document set is a single NDA or confidentiality agreement (use `nda-review`).
+- The user is asking for a final due-diligence opinion or a legal sign-off — those require an attorney.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Work only from documents provided. Do not supplement findings with background knowledge of statutes, regulations, case law, or industry standards. A confident but incorrect legal characterization drawn from memory is worse than flagging the point for attorney confirmation.
+- Do not invent document terms, section numbers, quotations, or Bates references. Quote accurately from the provided materials and cite the source.
+- Treat all legal authority as unverified. Where a legal concept is relevant (e.g., successor liability, anti-assignment enforceability, copyleft license terms), name the concept and mark it `[verify jurisdiction]`; do not cite a statute or case.
+- Do not invent or assume deadlines. Treat any closing, consent, or regulatory deadline as unverified unless it appears in the provided documents. Mark it `[deadline verification required]`.
+- Borderline materiality calls — whether a finding clears the stated threshold — are the attorney's judgment, not the skill's. Surface the finding with a `[ATTORNEY TO CONFIRM: materiality]` flag rather than suppressing it.
+- Err toward over-listing rather than under-listing. An over-listed issue is corrected in attorney review; an under-listed issue may never surface. Do not suppress a finding because it seems likely to be waived or cured.
+- The output inherits the privilege and confidentiality status of the underlying documents. Distribution of this memo beyond the privilege circle may waive attorney-client privilege and work-product protection. [CONFIRM: privilege and distribution scope with supervising attorney before sharing.]
+- Distinguish what the documents say from what you assume from what the attorney must confirm. State each separately.
+- Flag every point of uncertainty with a placeholder rather than resolving it silently.
+- Preserve confidentiality: do not place client-sensitive facts into reusable copies of the template.
+
+## Workflow
+
+1. **Confirm inputs.** Verify you have the target documents, the deal context (deal name, side, category), and the materiality threshold. If anything required is missing, request it before proceeding. Acknowledge any optional inputs (firm categories, severity scheme, house format) and note whether defaults are being applied.
+
+2. **Inventory the document set.** List every document provided by name, date (if shown), and type. Map each document to a diligence category. Identify gaps — categories with no documents, document types expected but not provided (e.g., cap table, board minutes, key contracts, IP assignments, litigation docket), and categories placed out of scope by the user. State coverage explicitly: "The following categories are covered by the provided documents; the following are not covered."
+
+3. **Apply the materiality filter.** State the threshold being applied. Review the most significant documents first within each category. Note documents reviewed versus documents that appear on the index but were not provided. Flag any document that appears significant based on its title or description but was not provided as a gap.
+
+4. **Extract issues per category.** For each category in scope, review the provided documents and extract findings. Default category scope:
+
+   - **Corporate:** cap table accuracy and authorization; board and stockholder consents; drag-along, tag-along, and right-of-first-refusal provisions; subsidiary structure and inter-company arrangements; outstanding equity awards, warrants, or convertible instruments; required shareholder or regulatory approvals.
+
+   - **Material Contracts:** change-of-control triggers; assignment and anti-assignment restrictions; exclusivity obligations; most-favored-nation terms; termination rights (for cause, convenience, or change of control); material indemnification obligations; liability caps or uncapped exposure; renewal and auto-renewal terms.
+
+   - **Intellectual Property:** IP ownership chain and assignment gaps; open-source or copyleft license exposure in products or services; licensed versus owned assets; IP litigation or threatened claims; employee or contractor IP assignment coverage; third-party IP embedded in target products.
+
+   - **Employment:** change-of-control severance obligations; key-employee retention exposure; worker classification exposure (employee versus independent contractor); restrictive covenants binding key employees; equity acceleration on a change of control.
+
+   - **Litigation:** pending and threatened claims; regulatory inquiries or investigations; consent decrees or settlement agreements with ongoing obligations; product liability, environmental, or tort exposure. [VERIFY: whether all active matters are disclosed]
+
+5. **State each finding** in the issues table (`templates/diligence-issues-table.md`) with:
+   - Issue title (short, descriptive)
+   - Category
+   - Severity: **Red** (affects deal value, structure, or consummation), **Yellow** (requires attention but potentially solvable by negotiation, representation, indemnity, or cure), or **Green** (noted for the file; unlikely to affect deal economics)
+   - Source: document name and section or Bates reference
+   - Finding: what the document says and why it is a potential issue
+   - Recommendation: a direction — price adjustment, required consent, indemnification carve-out, representation or warranty, escrow, pre-closing cure, or file note. Do not draft contract language; state the direction and route drafting to the attorney.
+
+6. **Run a successor-liability sweep.** Review the provided materials for: pending or threatened tort or product-liability matters; environmental exposure; bulk-sale exposure; fraudulent-transfer patterns (unusual asset transfers, inter-company loans at non-arm's-length terms); and any indications of contingent tax or regulatory liability. Summarize findings and flag each as Red, Yellow, or Green. Note documents not provided that would normally inform a successor-liability sweep (e.g., environmental reports, tax returns, products-liability history). Mark each legal concept `[verify jurisdiction]`.
+
+7. **Flag borderline materiality calls.** Where a finding is close to the stated threshold, include it with a `[ATTORNEY TO CONFIRM: materiality]` tag rather than omitting it.
+
+8. **Identify pre-closing actions surfaced.** List items that appear to require action before closing: consents to be obtained, cure periods to be triggered, regulatory filings, or required stockholder approvals. Mark each `[VERIFY: required and timing]`.
+
+9. **Assemble the output** per the Output Format below. Sort findings within each category by severity (Red first, then Yellow, then Green). Label the memo as a draft for attorney review.
+
+## Output Format
+
+Deliver:
+
+1. **Diligence Issues Memo — Header** — deal name, side, categories in scope, materiality threshold applied, documents reviewed and coverage, date, and a prominent draft-for-attorney-review label.
+
+2. **Document Inventory and Gaps** — list of documents reviewed; categories covered and not covered; missing document types flagged.
+
+3. **Issues Table** — from `templates/diligence-issues-table.md`, sorted by category, then by severity within category.
+
+4. **Successor-Liability Note** — separate section summarizing successor-liability sweep findings and gaps.
+
+5. **Pre-Closing Actions Surfaced** — bulleted list of items appearing to require action before closing, each marked `[VERIFY: required and timing]`.
+
+6. **Assumptions** — every assumption made, listed explicitly, including assumptions about governing law, document completeness, and threshold interpretation.
+
+7. **Attorney Verification Items** — open questions and items requiring legal judgment, keyed to the checklist below.
+
+Use placeholders throughout: `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, `[deadline verification required]`. Do not fill gaps with invented content.
+
+## Attorney Verification Checklist
+
+- [ ] The document set reviewed is complete; no material documents are missing from the provided set.
+- [ ] The materiality threshold applied is correct and has been confirmed by the supervising attorney.
+- [ ] All borderline-materiality findings flagged `[ATTORNEY TO CONFIRM: materiality]` have been assessed.
+- [ ] All document quotations and section references have been verified against the source documents.
+- [ ] No legal authority, statute, regulation, or case name has been asserted as binding law without attorney verification.
+- [ ] All `[verify jurisdiction]` tags have been resolved under the correct governing law.
+- [ ] The successor-liability sweep is complete, including document types not provided (e.g., environmental reports, products-liability history, tax returns).
+- [ ] All change-of-control triggers and assignment restrictions have been assessed for enforceability and required consents have been identified.
+- [ ] IP ownership chain has been confirmed; any open-source or copyleft exposure has been assessed by counsel with relevant expertise.
+- [ ] Worker classification and restrictive-covenant findings have been assessed under the applicable governing law.
+- [ ] All pending and threatened litigation has been confirmed with target counsel; the list is complete.
+- [ ] Pre-closing actions identified are complete, assigned, and deadlined. `[deadline verification required]` tags have been resolved.
+- [ ] Privilege and confidentiality status of this memo has been confirmed; distribution is limited to the privilege circle.
+- [ ] All assumptions and open items are resolved before this memo is relied upon in deal negotiations or documentation.
