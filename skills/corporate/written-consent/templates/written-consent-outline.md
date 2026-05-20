@@ -19,7 +19,7 @@ OF [FULL LEGAL NAME OF ENTITY]
 
 ---
 
-The undersigned, constituting [all of the members / a [majority / quorum — verify threshold] of the members] of the [Board of Directors / [Name] Committee of the Board of Directors] (the "**Board**") of [Full Legal Name of Entity], a [state of formation] [corporation / limited liability company / other entity type] (the "**Company**"), hereby take the following action by written consent in lieu of a [meeting / special meeting] pursuant to [the Company's [bylaws / operating agreement / governing documents] and applicable law] `[verify jurisdiction — cite no specific statute]`:
+The undersigned, constituting [all of the members / a [majority / quorum — verify threshold] of the members] of the [Board of Directors / [Name] Committee of the Board of Directors] (the "**Board**") of [Full Legal Name of Entity], a [state of formation] [corporation / limited liability company / other entity type] (the "**Company**"), hereby take the following action by written consent in lieu of a [meeting / special meeting] pursuant to [the Company's [bylaws / operating agreement / governing documents] and applicable law] `[verify jurisdiction]`:
 
 > **Note for attorney:** The consent threshold (unanimity, majority, or quorum) and the permissibility of action by written consent in lieu of a meeting must be confirmed against the Company's governing documents and applicable law. `[verify jurisdiction]`
 

@@ -99,8 +99,8 @@ _(Credit facilities, notes, guarantees, hedging agreements, and similar financia
 ### Category 7: Related-Party Agreements
 
 | # | Counterparty (and Relationship to Target) | Contract Title / Type | Execution Date | Term / Expiration | Value | Prong(s) Met | Consent / Notice Requirement | Source Reference | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | | | | | | | | `[VERIFY]` | | |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | `[VERIFY]` | | |
 
 ### Category 8: Other Material Agreements
 
