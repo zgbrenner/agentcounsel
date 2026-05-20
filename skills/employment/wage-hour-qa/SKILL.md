@@ -84,40 +84,17 @@ If any required input is missing, stop and request it. Do not infer jurisdiction
 
 ## Output Format
 
-Deliver the output as a labeled draft with the following sections:
+Deliver the output as a labeled draft, headed **DRAFT — ATTORNEY REVIEW REQUIRED. NOT LEGAL ADVICE.**, with the following sections:
 
-**DRAFT — ATTORNEY REVIEW REQUIRED. NOT LEGAL ADVICE.**
-
----
-
-**Question Analyzed**
-Restate the specific wage-and-hour question in precise, unambiguous terms.
-
-**Jurisdiction**
-State the confirmed jurisdiction(s) or flag `[CONFIRM: governing jurisdiction]`. For multi-jurisdiction situations, flag the need to identify the most-restrictive jurisdiction through verified research.
-
-**Operative Facts**
-Summarize the facts as provided — job title, actual duties, compensation structure, schedule, and the events giving rise to the question. Note any factual gaps or ambiguities.
-
-**Assumptions**
-List any assumption made where a fact was unclear. Flag each assumption `[CONFIRM: ...]`.
-
-**Controlling Legal Framework**
-Identify the category of rule that governs the question. Flag every specific threshold, criterion, multiplier, formula, or deadline `[VERIFY]` / `[citation needed]` / `[verify jurisdiction]`. Do not state any rule from memory.
-
-**Application to Facts**
-Apply the identified framework to the operative facts, element by element. Use `[VERIFY: applicable threshold/criterion]` placeholders in place of any specific rule content not yet verified.
-
-**Assessment**
-State whether the answer is **Clear**, **Borderline**, or **In Flux**, with a brief explanation. For borderline answers, identify the more conservative course of action. For in-flux rules, flag `[VERIFY: rule may have changed — confirm effective date and current status]`.
-
-**Computation Components (if applicable)**
-If the question involves a wage or back-pay calculation, list each component that must be researched and verified before any number is calculated. Flag each `[VERIFY]`. Do not compute any figure.
-
-**Attorney Verification Items**
-Numbered list of every open item requiring attorney or verified-research confirmation before this analysis can be relied upon.
-
----
+1. **Question Analyzed** — restate the specific wage-and-hour question in precise, unambiguous terms.
+2. **Jurisdiction** — state the confirmed jurisdiction(s), or flag `[CONFIRM: governing jurisdiction]`. For multi-jurisdiction situations, flag the need to identify the most-restrictive jurisdiction through verified research.
+3. **Operative Facts** — summarize the facts as provided: job title, actual duties, compensation structure, schedule, and the events giving rise to the question. Note any factual gaps or ambiguities.
+4. **Assumptions** — list any assumption made where a fact was unclear; flag each `[CONFIRM: ...]`.
+5. **Controlling Legal Framework** — identify the category of rule that governs the question. Flag every specific threshold, criterion, multiplier, formula, or deadline `[VERIFY]` / `[citation needed]` / `[verify jurisdiction]`. Do not state any rule from memory.
+6. **Application to Facts** — apply the identified framework to the operative facts, element by element. Use `[VERIFY: applicable threshold/criterion]` placeholders in place of any specific rule content not yet verified.
+7. **Assessment** — state whether the answer is Clear, Borderline, or In Flux, with a brief explanation. For borderline answers, identify the more conservative course of action. For in-flux rules, flag `[VERIFY: rule may have changed — confirm effective date and current status]`.
+8. **Computation Components** (if applicable) — if the question involves a wage or back-pay calculation, list each component that must be researched and verified before any number is calculated; flag each `[VERIFY]`. Do not compute any figure.
+9. **Attorney Verification Items** — every open item requiring attorney or verified-research confirmation before this analysis can be relied upon.
 
 ## Attorney Verification Checklist
 
