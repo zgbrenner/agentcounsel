@@ -114,7 +114,7 @@
 - `[ATTORNEY TO CONFIRM: All Tier 2 entries require attorney judgment. No entry may be finalized based on this triage alone.]`
 - `[ATTORNEY TO CONFIRM: All Tier 3 entries require attorney review and authorization before any designation is removed and before any document is produced.]`
 - `[CONFIRM: Format deficiencies identified above — attorney to decide whether to supplement descriptions before service.]`
-- `[DEADLINE VERIFICATION REQUIRED: If there is a log service deadline or a court-ordered production deadline, verify and calendar it independently. This review does not identify or confirm any deadline.]`
+- `[deadline verification required: If there is a log service deadline or a court-ordered production deadline, verify and calendar it independently. This review does not identify or confirm any deadline.]`
 - [Add any additional open items identified during the review.]
 
 ---

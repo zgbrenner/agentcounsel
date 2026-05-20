@@ -137,7 +137,7 @@
 | [Ex. 2] | | | | | |
 | [Ex. 3] | | | | | |
 
-*`[CONFIRM: attorney to finalize exhibit numbers and confirm all exhibits are authenticated or that the method of authentication is confirmed before use at deposition. Confirm applicable rules governing exhibit use at deposition — `[verify jurisdiction]`.]`*
+*`[CONFIRM: attorney to finalize exhibit numbers and confirm all exhibits are authenticated, or the method of authentication is confirmed, before use at deposition. Confirm the applicable rules governing exhibit use at deposition; verify jurisdiction.]`*
 
 ---
 
@@ -167,7 +167,7 @@ The following topics were identified but deferred to keep the outline focused on
 `[List topics or document areas flagged as potentially significant but not yet developed, pending attorney instruction or additional document review.]`
 
 **Privilege and scope issues:**
-`[Flag any anticipated objections on privilege, work-product, or scope grounds. Note the expected basis for any such objection and the attorney's likely response. `[CONFIRM: attorney to address privilege and scope issues before deposition.`]]`
+`[Flag any anticipated objections on privilege, work-product, or scope grounds. Note the expected basis for any such objection and the attorney's likely response. CONFIRM: attorney to address privilege and scope issues before deposition.]`
 
 ---
 

@@ -228,16 +228,16 @@ If reuse: `[Describe the original collection purpose and assess whether this new
 
 | # | Item | Section | Type | Assigned To |
 |---|---|---|---|---|
-| 1 | Whether a formal DPIA or equivalent is legally required for this activity | § 2 / Workflow Step 2 | `[ATTORNEY TO CONFIRM — [verify jurisdiction]]` | Privacy Counsel |
-| 2 | Legal basis for each processing purpose is valid under applicable law | § 2.1 | `[ATTORNEY TO CONFIRM — [verify jurisdiction]]` | Privacy Counsel |
-| 3 | All data categories and data subjects are accurately and completely identified | § 1.4–1.5 | `[CONFIRM]` | Activity Owner |
-| 4 | Policy-consistency check completed against current published policy | § 4 | `[VERIFY]` | Privacy Counsel |
-| 5 | DPAs in place for all subprocessors listed in § 3.3 | § 3.3 | `[ATTORNEY TO CONFIRM]` | Legal / Procurement |
-| 6 | Retention periods verified against applicable legal requirements | § 3.4 | `[verify jurisdiction] [deadline verification required]` | Privacy Counsel |
-| 7 | Cross-border transfer mechanisms confirmed (if applicable) | § 3.2 | `[ATTORNEY TO CONFIRM — [verify jurisdiction]]` | Privacy Counsel |
-| 8 | Data-subject rights applicable to this activity confirmed | § 6 | `[verify jurisdiction]` | Privacy Counsel |
-| 9 | Risk likelihood and impact ratings confirmed by person with operational knowledge | § 5 | `[CONFIRM]` | Activity Owner |
-| 10 | All proposed mitigations are technically and operationally feasible; owners confirmed | § 5 | `[CONFIRM]` | Activity Owner + Privacy Counsel |
+| 1 | Whether a formal DPIA or equivalent is legally required for this activity | Section 2 / Workflow Step 2 | `[ATTORNEY TO CONFIRM — [verify jurisdiction]]` | Privacy Counsel |
+| 2 | Legal basis for each processing purpose is valid under applicable law | Section 2.1 | `[ATTORNEY TO CONFIRM — [verify jurisdiction]]` | Privacy Counsel |
+| 3 | All data categories and data subjects are accurately and completely identified | Section 1.4–1.5 | `[CONFIRM]` | Activity Owner |
+| 4 | Policy-consistency check completed against current published policy | Section 4 | `[VERIFY]` | Privacy Counsel |
+| 5 | DPAs in place for all subprocessors listed in Section 3.3 | Section 3.3 | `[ATTORNEY TO CONFIRM]` | Legal / Procurement |
+| 6 | Retention periods verified against applicable legal requirements | Section 3.4 | `[verify jurisdiction] [deadline verification required]` | Privacy Counsel |
+| 7 | Cross-border transfer mechanisms confirmed (if applicable) | Section 3.2 | `[ATTORNEY TO CONFIRM — [verify jurisdiction]]` | Privacy Counsel |
+| 8 | Data-subject rights applicable to this activity confirmed | Section 6 | `[verify jurisdiction]` | Privacy Counsel |
+| 9 | Risk likelihood and impact ratings confirmed by person with operational knowledge | Section 5 | `[CONFIRM]` | Activity Owner |
+| 10 | All proposed mitigations are technically and operationally feasible; owners confirmed | Section 5 | `[CONFIRM]` | Activity Owner + Privacy Counsel |
 | 11 | `[CONFIRM: additional open items identified during completion]` | | | |
 
 ---

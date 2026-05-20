@@ -32,7 +32,7 @@ If the offer letter text is not provided, stop and request it before proceeding.
 
 ## Do Not Use When
 
-- The task is to **draft an offer letter from scratch** rather than review an existing one (a separate drafting skill applies).
+- The task is to **draft an offer letter from scratch** rather than review an existing one — drafting an offer from scratch is outside the scope of this skill.
 - The document is an **employee handbook or standalone workplace policy** rather than an offer letter (use `employee-policy-review`).
 - The core question is **whether a worker should be classified as an employee or an independent contractor** rather than reviewing the terms of an employment offer (use `worker-classification`).
 - The user is asking the skill to **decide whether to hire the candidate** — hiring decisions are business and human-resources judgments outside this skill's scope.
