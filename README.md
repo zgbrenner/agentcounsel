@@ -3,7 +3,7 @@
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-11-purple.svg)](SKILLS_INDEX.md)
 [![Skills](https://img.shields.io/badge/skills-66-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml)
@@ -52,7 +52,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **66 skills**: 57 across **12 practice areas**, plus 9 cross-cutting skills in two supporting groups.
+AgentCounsel has **66 skills**: 54 across **11 practice areas**, plus 12 cross-cutting skills in three supporting groups.
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -67,12 +67,14 @@ AgentCounsel has **66 skills**: 57 across **12 practice areas**, plus 9 cross-cu
 | AI Governance | 4 | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | 7 | Trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, open-source licensing. |
 | Financial Crime / AML | 2 | KYC onboarding review, and sanctions / PEP / adverse-media screening review. |
-| Legal Operations | 3 | Templated legal responses, meeting briefings, signature routing. |
 
-Two **cross-cutting skill groups** support work in every practice area:
+Three **cross-cutting skill groups** support work in every practice area:
 
 - **Setup** (5 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
 - **Legal Methodology** (4 skills) — red-team verification, statutory interpretation, risk assessment, and source validation.
+- **Legal Operations** (3 skills) — templated legal responses, meeting briefings, and signature-routing checks.
+
+The four-tier taxonomy that classifies these areas and groups — and the model for expanding it — is recorded in [`docs/PRACTICE_AREAS.md`](docs/PRACTICE_AREAS.md).
 
 See [`SKILLS_INDEX.md`](SKILLS_INDEX.md) for the full catalog and [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) to route from a task to a skill.
 
@@ -84,9 +86,10 @@ skills/             The canonical skill library, grouped by practice area.
 examples/           Illustrative sample outputs, with fictional facts.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
 matter-workspaces/  Single-file scaffolds for organizing one specific matter.
+overlays/           Industry and sector overlays that tune skills for a context.
 adapters/           Thin integration files for specific environments.
 metadata/           Generated machine-readable skill index (index.json).
-docs/               The metadata standard, the safety model, and the FAQ.
+docs/               The metadata standard, the safety model, the FAQ, and the practice-area registry.
 scripts/            Standard-library Python helpers (validation, index, packs).
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.

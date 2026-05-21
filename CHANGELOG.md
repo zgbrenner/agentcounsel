@@ -4,6 +4,16 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Added
+
+- `reports/practice-area-expansion-plan.md`: a maintainer-facing audit of the practice-area taxonomy and a four-tier expansion model (core / advanced-specialized / industry overlays / cross-cutting support), with a placement decision framework, a maturity model, a definition of done for new areas, and per-candidate recommendations for 18 proposed practice areas.
+- Practice-area expansion foundation (Wave 0): the `overlays/` mechanism for industry and sector overlays — `overlays/README.md`, an `OVERLAY.md` and overlay-profile template under `overlays/_template/`, and a `validate_repo.py` check that every overlay folder carries an `OVERLAY.md`. Overlays tune existing skills for a sector and never add a parallel skill tree.
+- `docs/PRACTICE_AREAS.md`: a practice-area registry recording each area's taxonomy tier, maturity (`experimental` / `stable`), and profile, cold-start, and eval coverage.
+
+### Changed
+
+- `README.md`, `VALIDATION.md`: classified `legal-ops` as a Tier-4 cross-cutting support group rather than a practice area, per the expansion plan. The library now describes **11 practice areas plus 3 cross-cutting skill groups** (66 skills, unchanged); the practice-area badge and counts are updated to match.
+
 ## [0.1.0] - 2026-05-21
 
 ### Added
