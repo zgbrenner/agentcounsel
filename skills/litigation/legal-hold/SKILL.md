@@ -71,6 +71,7 @@ If matter identification, trigger event, custodian list, or preservation scope i
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The hold notice must not be distributed to any custodian without attorney review, revision, and sign-off. Premature distribution — or distribution of an unreviewed notice — can waive privilege, create obligations the attorney has not intended, or lead to inconsistent preservation efforts.
 - Do not decide whether a duty to preserve has been triggered, when it was triggered, or what the governing standard is. The existence and timing of the preservation duty vary by jurisdiction, the nature of the matter, and the procedural posture — treat all such determinations as `[verify jurisdiction]` until the attorney confirms them.

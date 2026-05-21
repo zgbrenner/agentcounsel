@@ -32,6 +32,9 @@ Mark every gap with a visible placeholder rather than filling it. Use the genera
 - `[CONFIRM: ...]` — information the user or attorney must supply.
 - `[VERIFY: ...]` — authority or a factual claim that must be checked.
 - `[ATTORNEY TO CONFIRM: ...]` — a point of legal judgment.
+- `[Attorney to insert authority]` — a stated legal proposition with no verified authority behind it.
+- `[Verify current law]` — a point that depends on law that may have changed.
+- `[Confirm local rule]` — a procedural or local-rule point to check against the specific forum.
 - `[citation needed]` — a legal proposition that needs supporting authority.
 - `[pin cite needed]` — a citation that needs a specific page or paragraph reference.
 - `[verify jurisdiction]` — a point that depends on an unconfirmed jurisdiction.

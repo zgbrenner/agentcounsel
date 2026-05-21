@@ -60,6 +60,7 @@ If the organization context and jurisdictions are not provided, stop and request
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert what any law or regulation requires of an employee AI policy. Employment law, privacy law, and AI regulation are jurisdiction-specific and fast-moving — flag regulatory considerations for attorney verification.
 - Do not assert that a policy is legally compliant or sufficient.

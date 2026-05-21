@@ -62,6 +62,7 @@ If the model identification and intended use are not provided, stop and request 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert that a model is safe, unbiased, accurate, or fit for a particular use — flag these as matters requiring technical and legal verification.
 - Do not fabricate benchmark results, accuracy metrics, or technical characteristics. If documentation is not provided, state that the information is unavailable.

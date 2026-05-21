@@ -25,7 +25,7 @@ every output. AgentCounsel is not a law firm and does not provide legal advice.
 
 ## How to work in this repository
 
-1. Read every file in `core/` first — the six operating rules every skill
+1. Read every file in `core/` first — the seven operating rules every skill
    inherits. They always apply.
 2. Route the task with `WORKFLOW_ROUTER.md`; browse with `SKILLS_INDEX.md`.
 3. Open the single narrowest relevant skill: its `SKILL.md` and any file in its

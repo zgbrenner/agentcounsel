@@ -74,6 +74,7 @@ If mode, side, or jurisdiction is not provided, stop and request them before pro
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice and must not be treated as a legal conclusion.
 - The claim chart is an internal analytical aid. It must not be filed, served, or produced without attorney review and authorization. Label every output "Privileged & Confidential — Attorney Work Product."
 - Do not conclude on infringement, non-infringement, validity, invalidity, liability, or non-liability. State mappings as analytical characterizations — supported, partial, disputed, gap, or needs-evidence — not as legal determinations.

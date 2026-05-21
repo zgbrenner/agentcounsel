@@ -58,6 +58,7 @@ If the matter identification, case theory, witness profile, or at least a summar
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The deposition outline must not be used as a final litigation strategy document or as a substitute for attorney preparation. The attorney drives every phase of the deposition.
 - **Record fidelity.** Every quotation from a document or prior testimony must be verbatim, exact, and pinpointed to the source (Bates number, transcript page and line, exhibit number). A paraphrase or summarized quotation must be flagged as `[VERIFY: paraphrase — confirm exact language and pinpoint citation]`. Never attribute language to a document or witness that has not been confirmed from the actual text.

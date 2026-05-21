@@ -56,6 +56,7 @@ If the component inventory is not provided, stop and request it. If the distribu
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - This is draft legal work product for attorney review. It is NOT legal advice and does NOT constitute a compliance opinion.
 - Do not invent license terms, obligations, or conditions. If a license text has not been provided or cannot be verified, flag the component as `[LICENSE TEXT: UNVERIFIED]` and do not assert what the license requires.
 - Do not assert that a component's license is `MIT` or `Apache-2.0` or any other identifier based on assumption alone. If the license identifier comes from a manifest or SBOM, note that license identifiers in manifests are often self-reported and must be verified against the actual license file shipped with the component.

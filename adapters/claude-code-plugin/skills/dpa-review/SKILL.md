@@ -62,6 +62,7 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert which privacy law or regulatory framework applies to any given processing arrangement. The applicable law is always an attorney-verification item.
 - Do not invent, paraphrase, or assume document provisions. Review only the language actually present in the provided document. Quote the document directly when characterizing its terms.
@@ -123,6 +124,16 @@ Deliver the following, in order:
 5. **Liability and Indemnity Note** — specific observations on the interplay between the DPA's liability provisions and the main agreement.
 6. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 7. **Assumptions** — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

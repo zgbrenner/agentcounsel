@@ -71,6 +71,7 @@ If the description of the processing activity or the data categories are not pro
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. Privacy-counsel review and sign-off are required before any processing activity is approved or any PIA is treated as final.
 - Do not assert which privacy law, regulation, or framework applies to this activity, or whether a formal assessment is legally required. Those are attorney-verification items. Flag them as `[verify jurisdiction]` and route to privacy counsel.
 - Do not invent, infer, or assume data categories, purposes, access paths, or retention periods. Assess only the facts actually provided. If a material input is missing, flag it as `[CONFIRM: ...]` and note how the gap affects the analysis.
@@ -117,6 +118,16 @@ Deliver a completed draft PIA using `templates/privacy-impact-assessment.md`. Th
 - **Open items for attorney verification**: consolidated list of all flagged items.
 
 Use `[CONFIRM: ...]` wherever inputs were not provided or are uncertain. Do not leave any section blank without a flag.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

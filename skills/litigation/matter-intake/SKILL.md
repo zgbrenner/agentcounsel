@@ -57,6 +57,7 @@ If the client identity or a basic description of the dispute is not provided, st
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not invent, compute, or assert any procedural deadline, statute of limitations period, or response date. Mark every deadline as `[CONFIRM: attorney must verify]`.
 - Do not resolve conflicts-check results — flag that a conflicts check must be run and confirmed by the responsible attorney.

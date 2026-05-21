@@ -60,6 +60,7 @@ If the client identity, recipient identity, or nature of the demand is not provi
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The draft demand letter must not be sent to any party without attorney review, revision, and authorization.
 - Run the pre-draft gate (see Workflow) before drafting. Do not write letter text until the privilege, admission-risk, settlement-posture, and factual-accuracy questions have been addressed on the record.

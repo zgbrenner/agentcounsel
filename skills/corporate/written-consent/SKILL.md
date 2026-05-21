@@ -56,6 +56,7 @@ If the action description or the signatory list is not provided, stop and reques
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - An executed written consent is a corporate record. The draft produced by this skill is work product only; it must not be circulated for signature, treated as effective, or filed anywhere without attorney review and sign-off.
 - Do not invent names, titles, amounts, dates, agreement terms, or factual recitals. Every factual element in the draft must come from the inputs provided; flag anything missing with `[CONFIRM: ...]`.

@@ -58,6 +58,7 @@ If the privilege log itself is not provided, stop and request it. Do not proceed
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The attorney confirms every privilege designation. This skill produces a recommended tier assignment and flags issues; it does not make or finalize privilege calls.
 - **Three-state rule — never silently resolve an uncertain call.** When content is mixed (legal and business advice), when third-party presence is ambiguous, or when litigation-anticipation timing is borderline, keep the privilege designation and route the entry to the Uncertain tier. Do not silently downgrade or upgrade a designation. Prefer the recoverable error: under-marking can waive privilege (potentially irreversible); over-marking is corrected in review (reversible).

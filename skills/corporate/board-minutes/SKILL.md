@@ -59,6 +59,7 @@ If any required input is missing, stop and request it. Do not fabricate attendan
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. An attorney must review, revise, and authorize the finalization and adoption of any minutes before they become a corporate record.
 - Do not invent discussion content, resolution language, attendee names, exhibit descriptions, voting counts, or quorum thresholds. Where materials are missing, insert a clearly labeled placeholder rather than filling the gap with assumed content.
 - Do not assert or apply specific statutes, corporate-code sections, or jurisdiction-specific rules. Quorum requirements, notice rules, voting standards, and procedural requirements vary by jurisdiction and by the entity's governing documents. Treat all such requirements as `[verify jurisdiction]` items for the attorney.

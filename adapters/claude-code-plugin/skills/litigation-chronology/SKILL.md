@@ -59,6 +59,7 @@ If no source documents are provided, stop and request them. Do not populate the 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Every event entered in the chronology must be supported by a specific source document. Record the document name and Bates number or page reference for each event.
 - Do not infer, extrapolate, or assert events that are not explicitly supported by a provided document.

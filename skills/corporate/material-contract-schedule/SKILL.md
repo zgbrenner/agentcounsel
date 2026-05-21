@@ -64,6 +64,7 @@ If the "Material Contract" definition is not provided, **stop and request it.** 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. The schedule is not final and may not be delivered as a transaction exhibit until it has been reviewed, approved, and authorized by the attorney of record.
 - **The agreement's definition controls.** Do not invent, supplement, or substitute a materiality definition. Do not import materiality prongs from model background knowledge, market precedent, or any other source. If the definition is ambiguous on a particular prong, flag the ambiguity for the attorney — do not resolve it silently.
 - **Do not invent contract data.** Do not fabricate counterparty names, dollar amounts, dates, terms, consent requirements, or source references. If a field is not available from the provided diligence data, leave it blank and flag it: `[VERIFY: field not available in source data]`.

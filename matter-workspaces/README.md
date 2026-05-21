@@ -24,10 +24,14 @@ A blank matter workspace template contains no client facts. Once you populate a 
 | `matter-workspaces/contract-review-matter.md` | Contract review, negotiation, or execution | `skills/contracts/contract-risk-review/SKILL.md`, `skills/contracts/redline-summary/SKILL.md`, `skills/contracts/nda-review/SKILL.md`, `skills/contracts/sow-review/SKILL.md` |
 | `matter-workspaces/privacy-matter.md` | Privacy event, data breach, DSAR, DPA review, or processing activity | `skills/privacy/dpa-review/SKILL.md`, `skills/privacy/dsar-workflow/SKILL.md`, `skills/privacy/pia-generation/SKILL.md`, `skills/privacy/privacy-policy-gap-review/SKILL.md` |
 | `matter-workspaces/regulatory-matter.md` | Regulatory inquiry, compliance review, or enforcement | `skills/regulatory/compliance-gap-matrix/SKILL.md`, `skills/regulatory/enforcement-risk-memo/SKILL.md`, `skills/regulatory/rule-change-summary/SKILL.md` |
+| `matter-workspaces/corporate-transaction-matter.md` | Corporate transaction, M&A, financing, or entity matter | `skills/corporate/closing-checklist/SKILL.md`, `skills/corporate/diligence-issue-extraction/SKILL.md`, `skills/corporate/material-contract-schedule/SKILL.md`, `skills/corporate/board-minutes/SKILL.md`, `skills/corporate/written-consent/SKILL.md`, `skills/corporate/entity-compliance/SKILL.md` |
+| `matter-workspaces/employment-matter.md` | Employment matter — termination, investigation, classification, leave, or policy | `skills/employment/termination-risk/SKILL.md`, `skills/employment/internal-investigation/SKILL.md`, `skills/employment/worker-classification/SKILL.md`, `skills/employment/protected-leave-review/SKILL.md`, `skills/employment/severance-review/SKILL.md`, `skills/employment/wage-hour-qa/SKILL.md`, `skills/employment/hiring-review/SKILL.md`, `skills/employment/employee-policy-review/SKILL.md` |
 
 ---
 
 ## How to Use a Matter Workspace
+
+> **Tip:** the `skills/setup/create-matter-workspace/SKILL.md` skill automates Steps 1 and 2 — it recommends the right template for a matter and produces a populated workspace draft from the matter information you provide.
 
 **Step 1 — Copy the template.**
 Copy the appropriate template file to a new, matter-specific location. Name it to identify the matter without embedding client-identifying information in a shared file path if that would be inappropriate. Example:
