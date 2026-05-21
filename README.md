@@ -3,8 +3,8 @@
 **An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-10-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-50-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-58-success.svg)](SKILLS_INDEX.md)
 [![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
 [![Unofficial](https://img.shields.io/badge/unofficial-not%20affiliated%20with%20Anthropic-red.svg)](NOTICE)
@@ -39,11 +39,14 @@ Legal teams are increasingly using AI agents to draft, review, and triage. Most 
 ## How it is organized
 
 ```
-core/        Operating rules every skill inherits (read these first).
-skills/      The canonical skill library, grouped by practice area.
-adapters/    Thin integration files for specific environments.
+core/               Operating rules every skill inherits (read these first).
+skills/             The canonical skill library, grouped by practice area.
+practice-profiles/  Per-practice-area configuration profiles for a legal team.
+matter-workspaces/  Single-file scaffolds for organizing one specific matter.
+adapters/           Thin integration files for specific environments.
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
+COMMANDS.md         Slash-style command shorthands mapped to skills.
 CONTEXT.md          Vocabulary and mental model for AI agents working in the repo.
 ```
 
@@ -75,8 +78,19 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
 | AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, open-source licensing. |
+| Setup | Cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile. |
+| Legal Methodology | Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, source validation. |
 
 See `SKILLS_INDEX.md` for the full catalog.
+
+### Configuring AgentCounsel for a team
+
+Two optional layers let a legal team adapt the library without changing any skill:
+
+- **`practice-profiles/`** — one profile per practice area capturing the team's jurisdictions, escalation thresholds, standard positions, review requirements, and prohibited assumptions. An agent loads the relevant profile alongside `core/` and a skill. The **Setup** skills run a cold-start interview to fill a profile in.
+- **`matter-workspaces/`** — single-file scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, and an index of the draft work product produced by skills.
+
+Both are plain Markdown. They add no backend, runtime, or vendor dependency.
 
 ## Ways to use AgentCounsel
 

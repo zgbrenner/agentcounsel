@@ -63,6 +63,14 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Intellectual Property | Patent Freedom-to-Operate Triage | `skills/ip/fto-triage/SKILL.md` | First-pass triage of patent blocking risk for a product or feature | Product/feature description, jurisdictions, known patents | FTO triage memo |
 | Intellectual Property | Invention Disclosure Intake | `skills/ip/invention-intake/SKILL.md` | Screening a proposed invention and flagging filing-deadline urgency | Invention disclosure, disclosure history | Invention screen + verdict |
 | Intellectual Property | Infringement Triage | `skills/ip/infringement-triage/SKILL.md` | First-pass triage of a potential IP-infringement issue | IP right(s), party posture, evidence | Infringement triage memo |
+| Setup | Contracts Cold-Start Interview | `skills/setup/contracts-cold-start-interview/SKILL.md` | Interviewing a contracts practice group to fill its practice profile | Access to a contracts attorney or designee | Filled practice profile draft |
+| Setup | Litigation Cold-Start Interview | `skills/setup/litigation-cold-start-interview/SKILL.md` | Interviewing a litigation practice group to fill its practice profile | Access to a litigation attorney or designee | Filled practice profile draft |
+| Setup | Privacy Cold-Start Interview | `skills/setup/privacy-cold-start-interview/SKILL.md` | Interviewing a privacy practice group to fill its practice profile | Access to a privacy attorney or designee | Filled practice profile draft |
+| Setup | Corporate Cold-Start Interview | `skills/setup/corporate-cold-start-interview/SKILL.md` | Interviewing a corporate practice group to fill its practice profile | Access to a corporate attorney or designee | Filled practice profile draft |
+| Legal Methodology | Red-Team Verifier | `skills/legal-methodology/red-team-verifier/SKILL.md` | Adversarially stress-testing a draft before attorney review | A draft legal work product to review | Verification findings report |
+| Legal Methodology | Statutory Interpretation | `skills/legal-methodology/statutory-interpretation/SKILL.md` | Working through a statutory, regulatory, or contractual provision | Provision text, the interpretive question | Interpretation worksheet |
+| Legal Methodology | Risk Assessment | `skills/legal-methodology/risk-assessment/SKILL.md` | Identifying, rating, and prioritizing legal risk | The situation, known facts, client posture | Prioritized risk register |
+| Legal Methodology | Source Validation | `skills/legal-methodology/source-validation/SKILL.md` | Checking that cited sources and claims exist and are accurate | A draft and the sources it cites | Source validation table |
 
 ## Practice areas at a glance
 
@@ -76,3 +84,12 @@ A complete catalog of every skill in the library. The canonical source of truth 
 - **Regulatory** — enforcement risk, rule changes, and compliance gaps.
 - **AI Governance** — AI use-case intake, vendor terms, model risk, and AI policies.
 - **Intellectual Property** — trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, and open-source licensing.
+- **Setup** — cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile.
+- **Legal Methodology** — cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.
+
+## Related references
+
+- `practice-profiles/` — per-practice-area configuration profiles an agent loads alongside `core/` and a skill.
+- `matter-workspaces/` — single-file scaffolds for organizing one specific matter.
+- `COMMANDS.md` — slash-style command shorthands mapped to these skills.
+- `skills/contracts/references/` — shared reference material for the contracts skills.

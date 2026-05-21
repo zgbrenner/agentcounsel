@@ -19,6 +19,12 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - Phase D1: three further skills adapted from `agnostic-skills-for-legal` — `internal-investigation` and `protected-leave-review` (employment) and `infringement-triage` (intellectual property).
 - `CONTEXT.md`: a concise vocabulary and mental-model reference for AI agents and LLMs working in the repository.
 - Gemini CLI extension support: a `gemini-extension.json` manifest and a `GEMINI.md` context file at the repository root, plus a new `adapters/gemini/` adapter with a `using-agentcounsel.md` operating guide and a `references/` folder of per-runtime tool maps (`gemini-tools.md`, `copilot-tools.md`, `codex-tools.md`).
+- `practice-profiles/`: nine per-practice-area configuration profile templates (contracts, litigation, corporate, employment, privacy, product-legal, regulatory, ai-governance, ip) capturing jurisdictions, client/team context, escalation thresholds, preferred output style, source-of-truth documents, standard positions, attorney review requirements, and prohibited assumptions.
+- A new **Setup** practice area: four cold-start interview skills — `contracts-cold-start-interview`, `litigation-cold-start-interview`, `privacy-cold-start-interview`, and `corporate-cold-start-interview` — that interview a practice group and produce a filled practice-profile draft for attorney review.
+- A new **Legal Methodology** practice area: four cross-cutting skills — `red-team-verifier`, `statutory-interpretation`, `risk-assessment`, and `source-validation`.
+- `COMMANDS.md`: a command router mapping slash-style command shorthands to every skill, with trigger phrases, required inputs, expected output, and related commands.
+- `skills/contracts/references/`: five shared contract-review reference files — `red-flags.md`, `negotiability-ratings.md`, `market-benchmark-framework.md`, `document-type-checklists.md`, and `redline-output-guidance.md`.
+- `matter-workspaces/`: four single-file matter scaffolds — litigation, contract review, privacy, and regulatory.
 
 ### Changed
 
@@ -26,6 +32,8 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `demand-letter`: added a structured intake stage and a pre-draft risk gate (privilege filter, admission risk, accord and satisfaction, settlement-communication posture, privilege-waiver scan, tone, factual accuracy), and clarified that the sent letter carries no work-product header — adapted from `agnostic-skills-for-legal` (Phase A migration).
 - `docs/MIGRATION_PLAN_FROM_AGNOSTIC_SKILLS.md`: refreshed to record Phases A–C as executed and to add a Phase D for newly identified gaps (five new source prompts and the unrun Phase A improvement passes).
 - Phase D2: nine existing skills improved with content adapted from `agnostic-skills-for-legal` — `litigation-chronology`, `matter-intake`, and `subpoena-triage` (litigation); `dpa-review` and `dsar-workflow` (privacy); `termination-risk` and `employee-policy-review` (employment); and `redline-summary` and `contract-risk-review` (contracts).
+- `nda-review` and `contract-risk-review`: added a Red Flags Quick Scan, a Negotiability Rating, Market Benchmark Notes, Preferred / Fallback Position and Suggested Redline Direction for each redline point, and an Internal Consistency Check — all drawing on the new `skills/contracts/references/` material.
+- `scripts/validate_repo.py`: now recognizes shared `references/` folders under a practice area as non-skill directories, validates skill paths referenced in `COMMANDS.md`, and checks that the library's expected top-level directories exist. README practice-area and skills badges updated to 12 practice areas and 58 skills.
 
 ### Fixed
 

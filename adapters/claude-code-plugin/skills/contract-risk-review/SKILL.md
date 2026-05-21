@@ -52,13 +52,17 @@ If the contract text or the client's role is not provided, stop and request it. 
 
 ## Workflow
 
+This skill draws on shared contract-review reference material in `skills/contracts/references/`: `red-flags.md` (red-flag catalogue), `negotiability-ratings.md` (negotiability rubric), `market-benchmark-framework.md` (benchmarking discipline), `document-type-checklists.md` (per-document-type checklists), and `redline-output-guidance.md` (how to frame redline direction). Consult them at the steps noted below.
+
 1. **Confirm inputs.** Verify that you have the full contract text, the client's role, business context, and whether this is the counterparty's form or a negotiated draft. If anything is missing, request it before proceeding.
 
 2. **Identify and orient.** State the document title, parties, effective date (or `[CONFIRM: effective date]`), governing law (or `[CONFIRM: governing law]`), and the client's contractual role. Note whose form this appears to be.
 
-3. **Map the structure.** Identify each major section and confirm which standard clause categories are present and which are absent. Missing provisions are themselves a risk finding.
+3. **Map the structure.** Identify each major section and confirm which standard clause categories are present and which are absent. Missing provisions are themselves a risk finding. Use the matching checklist in `skills/contracts/references/document-type-checklists.md` for this document type.
 
-4. **Review clause by clause across standard categories.** For each category below, summarize what the contract says in plain language, identify the risk to the client, and note what changes — if any — are warranted:
+4. **Red flags quick scan.** Run a fast first pass against the red-flag catalogue in `skills/contracts/references/red-flags.md`. Record each red-flag pattern present, or note that none surfaced in the scan. This scan orients the deeper review; it does not replace it.
+
+5. **Review clause by clause across standard categories.** For each category below, summarize what the contract says in plain language, identify the risk to the client, and note what changes — if any — are warranted:
    - Parties and authorized signatories
    - Term and renewal (auto-renewal, notice windows)
    - Scope of services / obligations (specificity, exclusivity, change mechanisms)
@@ -81,15 +85,19 @@ If the contract text or the client's role is not provided, stop and request it. 
 
    **Specialization note.** SaaS, subscription, and vendor agreements warrant heightened attention to: auto-renewal mechanics and notice windows; unilateral price-escalation rights; service levels, uptime commitments, and associated remedies; and data terms (processing, retention, portability, deletion). If the contract is for an AI vendor, AI-enabled service, or involves AI-generated outputs, route to or also apply the `ai-vendor-terms-review` skill, which covers model transparency, output liability, training-data rights, and AI-specific data terms.
 
-5. **Assess missing protections.** Note standard commercial protections that are absent and assess whether their absence is a material risk.
+6. **Assess missing protections.** Note standard commercial protections that are absent and assess whether their absence is a material risk.
 
-6. **Build the risk matrix.** Complete `templates/contract-risk-matrix.md` for each clause category reviewed.
+7. **Build the risk matrix.** Complete `templates/contract-risk-matrix.md` for each clause category reviewed.
 
-7. **Draft prioritized issue list.** Rank all identified issues as High / Medium / Low priority for the client based on likelihood and impact. Include a suggested change or fallback position for each High and Medium item.
+8. **Rate negotiability and benchmark.** For each material issue, assign a negotiability rating using the rubric in `skills/contracts/references/negotiability-ratings.md`, with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor. Record any market comparison using `skills/contracts/references/market-benchmark-framework.md`: state the basis for each benchmark and flag every unverified benchmark as an attorney-verification item. AgentCounsel does not supply market data.
 
-8. **List open items for attorney verification.** Include every unverified assumption, every `[CONFIRM: ...]` placeholder, and every issue requiring legal judgment before execution.
+9. **Draft prioritized issue list.** Rank all identified issues as High / Medium / Low priority for the client based on likelihood and impact. For each High and Medium item, following `skills/contracts/references/redline-output-guidance.md`, state a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** — the direction of the change, not final clause language. Route substantive drafting to an attorney.
 
-9. **Assemble the output** and label it clearly as a draft for attorney review.
+10. **Internal consistency check.** Confirm that defined terms, party names, cross-references, exhibit and schedule references, and section numbers are used consistently throughout the contract. Flag any defined-but-unused term, used-but-undefined term, broken cross-reference, mismatched party label, missing exhibit, or numbering gap.
+
+11. **List open items for attorney verification.** Include every unverified assumption, every `[CONFIRM: ...]` placeholder, and every issue requiring legal judgment before execution.
+
+12. **Assemble the output** and label it clearly as a draft for attorney review.
 
 ## Output Format
 
@@ -97,12 +105,16 @@ Deliver, in order:
 
 1. **Document Summary** — parties, effective date, governing law, client's role, counterparty's form or negotiated draft, approximate transaction value/risk profile.
 2. **Structural Map** — list of sections present and absent.
-3. **Clause-by-Clause Summary** — plain-language summary of each category with risk note.
-4. **Risk Matrix** — completed using `templates/contract-risk-matrix.md`, with two severity dimensions rated per clause: **Legal Risk** (High / Med / Low) for the client's legal exposure, and **Business Friction** (Blocking / Slowing / Confusing / None) for the practical operational impact. A term can be legally enforceable yet operationally damaging, or legally marginal yet a deal-blocker operationally — both dimensions should be captured.
-5. **Prioritized Issue List** — ranked High / Medium / Low, with suggested changes for High and Medium items.
-6. **Missing Provisions** — list of standard protections absent from the agreement.
-7. **Open Items for Attorney Verification** — checkbox list.
-8. **Assumptions** — explicit list of all assumptions made about business context, facts, or legal standard.
+3. **Red Flags Quick Scan** — each red-flag pattern from `skills/contracts/references/red-flags.md` found in the contract, or a note that none surfaced in the scan.
+4. **Clause-by-Clause Summary** — plain-language summary of each category with risk note.
+5. **Risk Matrix** — completed using `templates/contract-risk-matrix.md`, with two severity dimensions rated per clause: **Legal Risk** (High / Med / Low) for the client's legal exposure, and **Business Friction** (Blocking / Slowing / Confusing / None) for the practical operational impact. A term can be legally enforceable yet operationally damaging, or legally marginal yet a deal-blocker operationally — both dimensions should be captured.
+6. **Negotiability Rating** — for each material issue, a rating from the rubric in `skills/contracts/references/negotiability-ratings.md`, with a one-line rationale.
+7. **Market Benchmark Notes** — any market comparison, recorded using `skills/contracts/references/market-benchmark-framework.md`, with its basis stated; every unverified benchmark flagged for attorney verification.
+8. **Prioritized Issue List** — ranked High / Medium / Low. Each High and Medium item states a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** (direction of change, not final language), following `skills/contracts/references/redline-output-guidance.md`.
+9. **Missing Provisions** — list of standard protections absent from the agreement.
+10. **Internal Consistency Check** — whether defined terms, party names, cross-references, exhibit/schedule references, and section numbers are used consistently, with any inconsistency flagged.
+11. **Open Items for Attorney Verification** — checkbox list.
+12. **Assumptions** — explicit list of all assumptions made about business context, facts, or legal standard.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or legal conclusion is unverified or ambiguous.
 
@@ -117,6 +129,9 @@ Use `[CONFIRM: ...]` wherever a fact, clause meaning, or legal conclusion is unv
 - [ ] Data privacy obligations have been assessed against applicable regulatory requirements (e.g., GDPR, CCPA) — this skill does not perform a regulatory compliance review.
 - [ ] Indemnification scope and limitation-of-liability caps are consistent with the client's insurance coverage.
 - [ ] No market-standard assertions have been relied upon without independent verification.
+- [ ] The red-flag quick scan and negotiability ratings have been reviewed; every market benchmark has a stated basis and was independently verified.
+- [ ] Preferred and fallback positions reflect the client's actual leverage and risk tolerance.
+- [ ] The internal consistency check is complete; defined terms, cross-references, and exhibits are sound.
 - [ ] All missing provisions have been assessed for materiality and whether their absence is acceptable.
 - [ ] All `[CONFIRM: ...]` placeholders and open items have been resolved before the review is relied upon.
 - [ ] The review has been assessed by counsel before it is used in negotiation, execution, or reliance.
