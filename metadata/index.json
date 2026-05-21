@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 85,
+  "skill_count": 97,
   "practice_areas": {
     "ai-governance": 4,
     "contracts": 5,
@@ -18,16 +18,17 @@
     "product-legal": 4,
     "real-estate": 9,
     "regulatory": 4,
+    "securities-capital-markets": 12,
     "setup": 5
   },
   "task_types": {
-    "analysis": 12,
-    "drafting": 15,
+    "analysis": 15,
+    "drafting": 19,
     "extraction": 7,
-    "intake": 4,
+    "intake": 5,
     "interview": 4,
     "research": 1,
-    "review": 29,
+    "review": 33,
     "summarization": 3,
     "triage": 7,
     "verification": 3
@@ -35,7 +36,7 @@
   "risk_levels": {
     "low": 6,
     "medium": 59,
-    "high": 18,
+    "high": 30,
     "critical": 2
   },
   "skills": [
@@ -2488,6 +2489,330 @@
         "rule-change",
         "regulatory-summary",
         "impact-analysis"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
+      "name": "Capital Markets Closing Checklist",
+      "description": "Use when performing capital markets closing checklist as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "capital-markets-closing-checklist"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+      "name": "Comfort and Backup Request Tracker",
+      "description": "Use when performing comfort and backup tracker as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "comfort-backup-request-tracker"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
+      "name": "Form D and Blue Sky Tracker",
+      "description": "Use when performing Form D and blue sky tracking as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "form-d-blue-sky-tracker"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
+      "name": "Insider Trading Policy Review",
+      "description": "Use when performing insider trading policy review as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "insider-trading-policy-review"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md",
+      "name": "Investor Rights Agreement Review",
+      "description": "Use when performing investor rights agreement review as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "investor-rights-agreement-review"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+      "name": "Offering Document Disclosure Review",
+      "description": "Use when performing offering disclosure review as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "offering-document-disclosure-review"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
+      "name": "Private Placement Checklist",
+      "description": "Use when performing private placement checklist as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "private-placement-checklist"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
+      "name": "Public Company Reporting Calendar Intake",
+      "description": "Use when performing public company reporting calendar intake as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "public-company-reporting-calendar-intake"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/risk-factor-review/SKILL.md",
+      "name": "Risk Factor Review",
+      "description": "Use when performing risk factor review as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "risk-factor-review"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
+      "name": "SEC Filing Consistency Check",
+      "description": "Use when performing SEC filing consistency as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "sec-filing-consistency-check"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
+      "name": "Section 16 and Beneficial Ownership Triage",
+      "description": "Use when performing section 16 and beneficial ownership triage as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "section-16-beneficial-ownership-triage"
+      ]
+    },
+    {
+      "path": "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
+      "name": "Securities Exemption Issue Spotter",
+      "description": "Use when performing securities exemption issue spotting as draft work product for attorney review.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction and governing law (or explicitly unknown)",
+        "Issuer type and public/private status",
+        "Transaction/reporting stage and party role",
+        "Security type and investor type, where relevant",
+        "Full document set or source excerpts, where relevant"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [],
+      "tags": [
+        "securities",
+        "capital-markets",
+        "securities-exemption-issue-spotter"
       ]
     },
     {

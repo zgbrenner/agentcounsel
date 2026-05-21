@@ -186,3 +186,21 @@ Cross-cutting analytical disciplines that support skills in any practice area.
 ## Keeping commands accurate
 
 Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. `scripts/validate_repo.py` checks that each path resolves. When a skill is added, renamed, or moved, update this file, `SKILLS_INDEX.md`, and `WORKFLOW_ROUTER.md` together.
+
+
+## Securities / Capital Markets
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/securities:private-placement` | `skills/securities-capital-markets/private-placement-checklist/SKILL.md` | "private placement checklist" | Issuer/offering facts and source docs | Private placement tracker | `/securities:exemption-issues` |
+| `/securities:exemption-issues` | `skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md` | "exemption issue spotting" | Offering facts, investor/solicitation facts | Pathways and missing-facts matrix | `/securities:private-placement` |
+| `/securities:offering-disclosure` | `skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md` | "review offering document" | Disclosure drafts and sources | Disclosure issue list | `/securities:risk-factors` |
+| `/securities:risk-factors` | `skills/securities-capital-markets/risk-factor-review/SKILL.md` | "review risk factors" | Risk factors and related sections | Risk-factor inventory | `/securities:filing-consistency` |
+| `/securities:filing-consistency` | `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md` | "compare SEC drafts" | Filing set and versions | Inconsistency tracker | `/securities:offering-disclosure` |
+| `/securities:form-d-blue-sky` | `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md` | "Form D tracker" | Offering and investor-jurisdiction facts | Filing workflow tracker | `/securities:private-placement` |
+| `/securities:investor-rights` | `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md` | "review investor rights" | Financing agreement set and role | Terms/risk matrix | `/securities:private-placement` |
+| `/securities:insider-policy` | `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md` | "review insider trading policy" | Policy docs and covered persons | Policy issue list | `/securities:section16-triage` |
+| `/securities:section16-triage` | `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md` | "Section 16 triage" | Ownership/role facts and docs | Facts-to-verify table | `/securities:reporting-intake` |
+| `/securities:closing-checklist` | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` | "capital markets closing checklist" | Transaction docs and responsibilities | Closing deliverables tracker | `/securities:comfort-backup` |
+| `/securities:comfort-backup` | `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md` | "comfort backup tracker" | Disclosure statements and source docs | Numbered backup requests tracker | `/securities:closing-checklist` |
+| `/securities:reporting-intake` | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` | "reporting calendar intake" | Filer profile and reporting workflow facts | Intake checklist + matrix | `/securities:filing-consistency` |
