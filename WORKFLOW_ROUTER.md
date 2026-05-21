@@ -201,3 +201,19 @@ When a skill's output needs to go to a non-lawyer decision-maker — a product o
 ## When nothing matches
 
 If the request does not fit a skill, do not invent a workflow. Tell the user the library does not yet cover the task and — if useful — point to the closest skill and explain the gap. New skills can be proposed per `CONTRIBUTING.md`.
+
+
+## Securities / Capital Markets
+
+- **I need to plan a private offering checklist** -> `skills/securities-capital-markets/private-placement-checklist/SKILL.md`
+- **I need to issue-spot securities exemption pathways without final conclusions** -> `skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md`
+- **I need to review an offering document disclosure draft** -> `skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md`
+- **I need to review risk factors** -> `skills/securities-capital-markets/risk-factor-review/SKILL.md`
+- **I need to compare SEC filing drafts for consistency** -> `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md`
+- **I need Form D/state notice workflow tracking** -> `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md`
+- **I need investor-rights document review** -> `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md`
+- **I need insider-trading policy review** -> `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md`
+- **I need Section 16/13D-13G fact triage** -> `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md`
+- **I need a capital-markets closing checklist** -> `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md`
+- **I need a comfort/backup request tracker** -> `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md`
+- **I need public-company reporting calendar intake** -> `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md`
