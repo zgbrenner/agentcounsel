@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Internal Investigation — AgentCounsel</title>
-<meta name="description" content="Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.">
+<meta name="description" content="&quot;Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.</p>
+<p>"Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -51,7 +51,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>All output is draft legal work product for attorney review and sign-off. This is not legal advice.</li><li>Do not assert privilege. Privilege depends on how the investigation is structured, who directed it, for what purpose, and applicable jurisdiction-specific doctrine — not on labeling. The skill surfaces the privilege-formation question and flags it; it does not guarantee or confirm privilege.</li><li>Do not invent facts, dates, quotations, witness statements, policy language, citations, or legal authority. If something is not in the provided materials, say so and flag it as a gap.</li><li>Separate what the materials show (facts), what is assumed or inferred (assumptions), what requires further gathering (coverage gaps), what requires legal analysis (legal questions), and what requires attorney judgment (attorney items). Label each category in the output.</li><li>Do not make credibility determinations. Surfaces conflicts in the evidence and flag them for attorney assessment. Where a credibility call is unavoidable for the investigation's conclusions, frame it as a question for attorney judgment, not a finding.</li><li>Do not name, apply, or incorporate any specific statute, regulation, case name, or named legal doctrine as authority. Describe applicable legal frameworks generically and mark them <code>[verify jurisdiction]</code>.</li><li>In some jurisdictions and workplace contexts, employees have rights — including representation rights or use-immunity protections — in connection with investigatory interviews. The applicable rules must be researched before any interview is conducted. <code>[verify jurisdiction]</code> This skill does not conduct interviews and does not issue investigatory-interview advisements.</li><li>Distribution of any summary or memorandum beyond the privilege circle can waive privilege over the entire investigation. Flag this risk at every summary output and require attorney authorization for distribution decisions.</li><li>Preserve confidentiality and privilege. Keep client-sensitive facts out of reusable template files; populate only matter-specific instances.</li><li>Flag every point of uncertainty with the appropriate placeholder rather than resolving it silently.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>All output is draft legal work product for attorney review and sign-off. This is not legal advice.</li><li>Do not assert privilege. Privilege depends on how the investigation is structured, who directed it, for what purpose, and applicable jurisdiction-specific doctrine — not on labeling. The skill surfaces the privilege-formation question and flags it; it does not guarantee or confirm privilege.</li><li>Do not invent facts, dates, quotations, witness statements, policy language, citations, or legal authority. If something is not in the provided materials, say so and flag it as a gap.</li><li>Separate what the materials show (facts), what is assumed or inferred (assumptions), what requires further gathering (coverage gaps), what requires legal analysis (legal questions), and what requires attorney judgment (attorney items). Label each category in the output.</li><li>Do not make credibility determinations. Surfaces conflicts in the evidence and flag them for attorney assessment. Where a credibility call is unavoidable for the investigation's conclusions, frame it as a question for attorney judgment, not a finding.</li><li>Do not name, apply, or incorporate any specific statute, regulation, case name, or named legal doctrine as authority. Describe applicable legal frameworks generically and mark them <code>[verify jurisdiction]</code>.</li><li>In some jurisdictions and workplace contexts, employees have rights — including representation rights or use-immunity protections — in connection with investigatory interviews. The applicable rules must be researched before any interview is conducted. <code>[verify jurisdiction]</code> This skill does not conduct interviews and does not issue investigatory-interview advisements.</li><li>Distribution of any summary or memorandum beyond the privilege circle can waive privilege over the entire investigation. Flag this risk at every summary output and require attorney authorization for distribution decisions.</li><li>Preserve confidentiality and privilege. Keep client-sensitive facts out of reusable template files; populate only matter-specific instances.</li><li>Flag every point of uncertainty with the appropriate placeholder rather than resolving it silently.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -83,7 +83,28 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Internal Investigation
-description: Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.
+description: "Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The allegation or complaint under investigation"
+  - "Confirmation that the investigation is attorney-directed"
+  - "Documents, evidence, and interview notes"
+outputs:
+  - "Privileged investigation memorandum"
+  - "Audience-specific summaries for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - employment
+  - internal-investigation
+  - privileged
+  - workplace-complaint
+  - evidence
 ---
 
 # Internal Investigation
@@ -121,6 +142,7 @@ If the allegation summary is not provided, stop and request it before proceeding
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - All output is draft legal work product for attorney review and sign-off. This is not legal advice.
 - Do not assert privilege. Privilege depends on how the investigation is structured, who directed it, for what purpose, and applicable jurisdiction-specific doctrine — not on labeling. The skill surfaces the privilege-formation question and flags it; it does not guarantee or confirm privilege.
 - Do not invent facts, dates, quotations, witness statements, policy language, citations, or legal authority. If something is not in the provided materials, say so and flag it as a gap.
@@ -221,7 +243,28 @@ Operating rules (these always apply):
 === BEGIN SKILL: Internal Investigation ===
 ---
 name: Internal Investigation
-description: Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.
+description: "Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The allegation or complaint under investigation"
+  - "Confirmation that the investigation is attorney-directed"
+  - "Documents, evidence, and interview notes"
+outputs:
+  - "Privileged investigation memorandum"
+  - "Audience-specific summaries for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - employment
+  - internal-investigation
+  - privileged
+  - workplace-complaint
+  - evidence
 ---
 
 # Internal Investigation
@@ -259,6 +302,7 @@ If the allegation summary is not provided, stop and request it before proceeding
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - All output is draft legal work product for attorney review and sign-off. This is not legal advice.
 - Do not assert privilege. Privilege depends on how the investigation is structured, who directed it, for what purpose, and applicable jurisdiction-specific doctrine — not on labeling. The skill surfaces the privilege-formation question and flags it; it does not guarantee or confirm privilege.
 - Do not invent facts, dates, quotations, witness statements, policy language, citations, or legal authority. If something is not in the provided materials, say so and flag it as a gap.

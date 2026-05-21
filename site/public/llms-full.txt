@@ -2,7 +2,7 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 58
+Total skills: 59
 Practice areas: 12
 
 ## Legal Research (1 skill)
@@ -10,7 +10,7 @@ Practice areas: 12
 ### Legal Research Memo
 Path: skills/legal-research/legal-research-memo/SKILL.md
 Catalog page: skills/legal-research/legal-research-memo.html
-Trigger: Use when producing a structured legal research memo in response to a specific legal question, organizing analysis using IRAC discipline (Question Presented, Brief Answer, Facts, Assumptions, Discussion/Analysis, Conclusion) with explicit sourcing requirements and attorney verification checkpoints.
+Trigger: "Use when producing a structured legal research memo in response to a specific legal question, organizing analysis using IRAC discipline (Question Presented, Brief Answer, Facts, Assumptions, Discussion/Analysis, Conclusion) with explicit sourcing requirements and attorney verification checkpoints."
 Use when:
   - A user asks to "research this issue," "write a research memo," "what is the law on X," or "can you analyze whether Y is legal."
   - A lawyer or legal team needs a first-pass research memo before attorney analysis.
@@ -24,7 +24,7 @@ Use when:
 ### Brief Section Drafter
 Path: skills/litigation/brief-section-drafter/SKILL.md
 Catalog page: skills/litigation/brief-section-drafter.html
-Trigger: Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing.
+Trigger: "Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing."
 Use when:
   - Counsel needs a first draft of a specific brief section: a statement of facts, an argument section or sub-section, a standard of review section, a conclusion, or a similar discrete component of a written submission.
   - A user asks to "draft the argument section," "write the statement of facts," or "put together the standard-of-review section."
@@ -35,7 +35,7 @@ Use when:
 ### Claim Chart
 Path: skills/litigation/claim-chart/SKILL.md
 Catalog page: skills/litigation/claim-chart.html
-Trigger: Use when building an element-by-element claim chart — mapping patent claim limitations or the elements of a civil cause of action or affirmative defense against evidence — to produce a structured gap analysis for attorney review.
+Trigger: "Use when building an element-by-element claim chart — mapping patent claim limitations or the elements of a civil cause of action or affirmative defense against evidence — to produce a structured gap analysis for attorney review."
 Use when:
   - Counsel needs an element-by-element mapping of patent claim limitations against an accused product, system, or process (infringement analysis) or against prior art (invalidity analysis).
   - Counsel needs the required elements of a civil cause of action or affirmative defense mapped against the evidence corpus to identify what is supported and what still needs to be developed.
@@ -46,7 +46,7 @@ Use when:
 ### Demand Letter
 Path: skills/litigation/demand-letter/SKILL.md
 Catalog page: skills/litigation/demand-letter.html
-Trigger: Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending.
+Trigger: "Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending."
 Use when:
   - A user asks to "draft a demand letter," "write a demand," or "send a letter before filing suit."
   - Counsel wants a structured first draft before editing and sending a pre-litigation demand.
@@ -57,7 +57,7 @@ Use when:
 ### Deposition Preparation
 Path: skills/litigation/deposition-prep/SKILL.md
 Catalog page: skills/litigation/deposition-prep.html
-Trigger: Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition.
+Trigger: "Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition."
 Use when:
   - Counsel needs to prepare for an upcoming deposition and wants a structured question outline organized around topic blocks.
   - A user asks to "prep for a deposition," "draft a depo outline," or "organize the documents for the [witness] deposition."
@@ -67,7 +67,7 @@ Use when:
 ### Legal Hold
 Path: skills/litigation/legal-hold/SKILL.md
 Catalog page: skills/litigation/legal-hold.html
-Trigger: Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.
+Trigger: "Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians."
 Use when:
   - An attorney has determined that a duty to preserve has been triggered and needs a first-draft hold notice to send to custodians.
   - A prior hold must be refreshed because the scope has changed, additional custodians have been identified, the date range has expanded, or new systems are in scope.
@@ -77,7 +77,7 @@ Use when:
 ### Litigation Chronology
 Path: skills/litigation/litigation-chronology/SKILL.md
 Catalog page: skills/litigation/litigation-chronology.html
-Trigger: Use when building a factual timeline for litigation from provided source documents, producing a structured chronology table with citations, disputed/undisputed flags, and gap analysis for attorney review.
+Trigger: "Use when building a factual timeline for litigation from provided source documents, producing a structured chronology table with citations, disputed/undisputed flags, and gap analysis for attorney review."
 Use when:
   - A user asks to "build a timeline," "create a chronology," or "put the facts in order" from a set of documents.
   - Counsel needs a fact-organized view of events across multiple documents, productions, or depositions.
@@ -89,7 +89,7 @@ Use when:
 ### Matter Intake
 Path: skills/litigation/matter-intake/SKILL.md
 Catalog page: skills/litigation/matter-intake.html
-Trigger: Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.
+Trigger: "Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review."
 Use when:
   - A new dispute, claim, or litigation matter is being opened and a structured intake record is needed.
   - A user asks to "open a new matter," "intake this dispute," or "set up a file for this case."
@@ -100,7 +100,7 @@ Use when:
 ### Privilege Log Review
 Path: skills/litigation/privilege-log-review/SKILL.md
 Catalog page: skills/litigation/privilege-log-review.html
-Trigger: Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.
+Trigger: "Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment."
 Use when:
   - Counsel needs a first-pass triage of a privilege log before conducting a detailed privilege review.
   - A privilege log has been received from opposing counsel and counsel wants a structured analysis before a meet-and-confer or motion challenge.
@@ -110,7 +110,7 @@ Use when:
 ### Subpoena Triage
 Path: skills/litigation/subpoena-triage/SKILL.md
 Catalog page: skills/litigation/subpoena-triage.html
-Trigger: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+Trigger: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
 Use when:
   - A subpoena has been received by the client, the organization, or a custodian of records and triage is needed.
   - A user asks to "triage this subpoena," "we got a subpoena, what do we do," or "review this subpoena."
@@ -123,7 +123,7 @@ Use when:
 ### Contract Risk Review
 Path: skills/contracts/contract-risk-review/SKILL.md
 Catalog page: skills/contracts/contract-risk-review.html
-Trigger: Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.
+Trigger: "Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review."
 Use when:
   - A user asks to "review this contract," "flag the risks in this agreement," "what should I push back on," or "is this MSA standard."
   - A vendor, supplier, or service provider has sent a contract and the client needs a first-pass review before negotiation or execution.
@@ -135,7 +135,7 @@ Use when:
 ### NDA Review
 Path: skills/contracts/nda-review/SKILL.md
 Catalog page: skills/contracts/nda-review.html
-Trigger: Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.
+Trigger: "Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review."
 Use when:
   - A user asks to "review this NDA," "check this confidentiality agreement," or "tell me what's risky here."
   - A counterparty has sent an NDA and the user needs a first-pass risk read.
@@ -146,7 +146,7 @@ Use when:
 ### Redline Summary
 Path: skills/contracts/redline-summary/SKILL.md
 Catalog page: skills/contracts/redline-summary.html
-Trigger: Use when summarizing the substantive changes between two versions of a contract, a set of tracked changes, or a base agreement plus a series of amendments — to produce a change-by-change table and narrative of the most material shifts for attorney review.
+Trigger: "Use when summarizing the substantive changes between two versions of a contract, a set of tracked changes, or a base agreement plus a series of amendments — to produce a change-by-change table and narrative of the most material shifts for attorney review."
 Use when:
   - A counterparty has returned a redlined draft and the user needs a structured summary of what changed.
   - The user asks to "summarize the redlines," "what did they change," "walk me through the markups," or "what should I push back on."
@@ -160,7 +160,7 @@ Use when:
 ### SOW Review
 Path: skills/contracts/sow-review/SKILL.md
 Catalog page: skills/contracts/sow-review.html
-Trigger: Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.
+Trigger: "Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement."
 Use when:
   - A user asks to "review this SOW," "check this work order," "is this statement of work solid," or "does this conflict with our MSA."
   - A vendor or service provider has sent a SOW for signature and the user needs a structured first-pass review.
@@ -174,7 +174,7 @@ Use when:
 ### Board Minutes
 Path: skills/corporate/board-minutes/SKILL.md
 Catalog page: skills/corporate/board-minutes.html
-Trigger: Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.
+Trigger: "Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review."
 Use when:
   - A user asks to "draft the board minutes" or "write up the minutes" for a meeting that has already taken place or is being memorialized.
   - The user has meeting materials (agenda, slides, pre-reads, or notes) and needs a minutes document prepared for attorney review before adoption.
@@ -184,7 +184,7 @@ Use when:
 ### Closing Checklist
 Path: skills/corporate/closing-checklist/SKILL.md
 Catalog page: skills/corporate/closing-checklist.html
-Trigger: Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.
+Trigger: "Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review."
 Use when:
   - A deal team needs to initialize a closing checklist from a purchase agreement, merger agreement, or financing document.
   - Diligence findings have surfaced pre-closing action items — consents, regulatory filings, board or shareholder approvals, releases, or escrow mechanics — that must be tracked to closing.
@@ -195,7 +195,7 @@ Use when:
 ### Diligence Issue Extraction
 Path: skills/corporate/diligence-issue-extraction/SKILL.md
 Catalog page: skills/corporate/diligence-issue-extraction.html
-Trigger: Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review.
+Trigger: "Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review."
 Use when:
   - A user asks to "pull issues from these diligence documents," "give me a first-pass issues list," or "flag the red flags in the data room."
   - The user has uploaded or pasted due-diligence documents and needs a structured issues memo organized by category and severity.
@@ -206,7 +206,7 @@ Use when:
 ### Entity Compliance Review
 Path: skills/corporate/entity-compliance/SKILL.md
 Catalog page: skills/corporate/entity-compliance.html
-Trigger: Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.
+Trigger: "Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review."
 Use when:
   - A user asks to "review our entity compliance," "check our good-standing status," or "organize our filing obligations" across a portfolio of legal entities.
   - An in-house team or outside counsel wants a structured snapshot of where each entity stands on periodic filing and good-standing obligations before a transaction, audit, or board presentation.
@@ -216,7 +216,7 @@ Use when:
 ### Material Contract Schedule
 Path: skills/corporate/material-contract-schedule/SKILL.md
 Catalog page: skills/corporate/material-contract-schedule.html
-Trigger: Use when building the disclosure schedule that lists contracts meeting a transaction agreement's definition of "Material Contract," producing a draft for attorney review before it is delivered as an exhibit.
+Trigger: "Use when building the disclosure schedule that lists contracts meeting a transaction agreement's definition of \"Material Contract,\" producing a draft for attorney review before it is delivered as an exhibit."
 Use when:
   - A transaction agreement contains a defined term "Material Contract" (or substantively equivalent defined term) and the user needs to populate the corresponding disclosure schedule.
   - The user has diligence data (a contract inventory, data-room index, or equivalent) and needs those contracts mapped against the agreement's materiality definition.
@@ -226,7 +226,7 @@ Use when:
 ### Written Consent
 Path: skills/corporate/written-consent/SKILL.md
 Catalog page: skills/corporate/written-consent.html
-Trigger: Use when drafting a board or board-committee action by written consent in lieu of a meeting to produce a structured draft for attorney review.
+Trigger: "Use when drafting a board or board-committee action by written consent in lieu of a meeting to produce a structured draft for attorney review."
 Use when:
   - A user asks to "draft a written consent," "prepare a board consent," or "document a board action in lieu of a meeting."
   - The board of directors or a board committee is taking a formal action outside a meeting and needs a consent instrument to evidence that action.
@@ -238,7 +238,7 @@ Use when:
 ### Employee Policy Review
 Path: skills/employment/employee-policy-review/SKILL.md
 Catalog page: skills/employment/employee-policy-review.html
-Trigger: Use when reviewing an employee handbook or individual workplace policy — or a proposed change to one — for clarity, internal consistency, completeness, and legal risk flags requiring attorney and jurisdiction-specific review.
+Trigger: "Use when reviewing an employee handbook or individual workplace policy — or a proposed change to one — for clarity, internal consistency, completeness, and legal risk flags requiring attorney and jurisdiction-specific review."
 Use when:
   - A user asks to "review our employee handbook" or "check this policy for problems."
   - An HR team is preparing to roll out a new or updated handbook and wants a structured gap and issues analysis before counsel review.
@@ -252,7 +252,7 @@ Use when:
 ### Hiring Review
 Path: skills/employment/hiring-review/SKILL.md
 Catalog page: skills/employment/hiring-review.html
-Trigger: Use when reviewing an employment offer letter (and any restrictive-covenant exhibits) against the candidate's actual work jurisdiction and the employer's standard hiring practices to produce a structured draft review memo with a verdict, for attorney review.
+Trigger: "Use when reviewing an employment offer letter (and any restrictive-covenant exhibits) against the candidate's actual work jurisdiction and the employer's standard hiring practices to produce a structured draft review memo with a verdict, for attorney review."
 Use when:
   - An employer, HR team, or counsel asks for a first-pass review of an offer letter before it is sent to a candidate.
   - A candidate or their counsel asks for a structured review of an offer they have received.
@@ -263,7 +263,7 @@ Use when:
 ### Internal Investigation
 Path: skills/employment/internal-investigation/SKILL.md
 Catalog page: skills/employment/internal-investigation.html
-Trigger: Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.
+Trigger: "Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review."
 Use when:
   - An attorney is directing an internal investigation into employee misconduct, workplace complaints, financial irregularities, executive conduct, or whistleblower allegations and needs a structured framework to organize evidence and draft findings.
   - An attorney or HR professional needs to track evidentiary coverage across documents and interview notes and identify what has not yet been gathered.
@@ -274,7 +274,7 @@ Use when:
 ### Protected Leave Review
 Path: skills/employment/protected-leave-review/SKILL.md
 Catalog page: skills/employment/protected-leave-review.html
-Trigger: Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.
+Trigger: "Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review."
 Use when:
   - An employer, HR professional, or attorney needs to organize the facts of an employee's leave and identify which protected-leave frameworks may apply.
   - A leave situation involves multiple frameworks that may run concurrently or interact (for example, medical leave and disability-accommodation leave arising from the same condition).
@@ -285,7 +285,7 @@ Use when:
 ### Severance Review
 Path: skills/employment/severance-review/SKILL.md
 Catalog page: skills/employment/severance-review.html
-Trigger: Use when reviewing a severance or separation agreement to produce a structured analysis of consideration, release scope, restrictive covenants, and open legal issues for attorney review.
+Trigger: "Use when reviewing a severance or separation agreement to produce a structured analysis of consideration, release scope, restrictive covenants, and open legal issues for attorney review."
 Use when:
   - A user asks to "review this severance agreement" or "what am I giving up if I sign this?"
   - An employee or employer has received a proposed separation agreement and needs a first-pass structured review.
@@ -296,7 +296,7 @@ Use when:
 ### Termination Risk
 Path: skills/employment/termination-risk/SKILL.md
 Catalog page: skills/employment/termination-risk.html
-Trigger: Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs.
+Trigger: "Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs."
 Use when:
   - A manager or HR professional is preparing to terminate an employee and wants to surface legal risk factors before proceeding.
   - An attorney needs a structured intake of termination facts to begin their risk assessment.
@@ -307,7 +307,7 @@ Use when:
 ### Wage and Hour Question Triage
 Path: skills/employment/wage-hour-qa/SKILL.md
 Catalog page: skills/employment/wage-hour-qa.html
-Trigger: Use when a specific wage-and-hour or related employment question — such as overtime eligibility, exemption status, break entitlements, final-pay timing, paid-time-off payout, or leave eligibility — needs to be structured and analyzed against verified, jurisdiction-specific rules, producing a draft analysis for attorney review.
+Trigger: "Use when a specific wage-and-hour or related employment question — such as overtime eligibility, exemption status, break entitlements, final-pay timing, paid-time-off payout, or leave eligibility — needs to be structured and analyzed against verified, jurisdiction-specific rules, producing a draft analysis for attorney review."
 Use when:
   - A user asks a specific question about overtime eligibility, exempt vs. non-exempt status, meal or rest break entitlements, final-pay timing, paid-time-off payout obligations, or leave eligibility for a particular worker or role.
   - An employer, HR professional, or attorney needs a structured, research-ready intake of a wage-and-hour issue before legal analysis begins.
@@ -318,7 +318,7 @@ Use when:
 ### Worker Classification
 Path: skills/employment/worker-classification/SKILL.md
 Catalog page: skills/employment/worker-classification.html
-Trigger: Use when organizing the facts of a proposed worker engagement and structuring an analysis of whether the worker should be classified as an employee or an independent contractor, producing a draft classification analysis memo for attorney review.
+Trigger: "Use when organizing the facts of a proposed worker engagement and structuring an analysis of whether the worker should be classified as an employee or an independent contractor, producing a draft classification analysis memo for attorney review."
 Use when:
   - A company or HR professional is planning a new engagement with an individual worker and needs to think through whether the arrangement is supportable as an independent contractor relationship.
   - An attorney needs a structured intake of engagement facts to begin a classification risk assessment before work begins.
@@ -331,7 +331,7 @@ Use when:
 ### DPA Review
 Path: skills/privacy/dpa-review/SKILL.md
 Catalog page: skills/privacy/dpa-review.html
-Trigger: Use when reviewing a data processing agreement (DPA) or data processing addendum to produce a structured risk summary and prioritized issues for attorney review.
+Trigger: "Use when reviewing a data processing agreement (DPA) or data processing addendum to produce a structured risk summary and prioritized issues for attorney review."
 Use when:
   - A user asks to "review this DPA," "redline the data processing addendum," or "flag the risks in this data processing agreement."
   - The organization is being asked to sign a vendor DPA or is preparing its own DPA for a customer.
@@ -343,7 +343,7 @@ Use when:
 ### DSAR Workflow
 Path: skills/privacy/dsar-workflow/SKILL.md
 Catalog page: skills/privacy/dsar-workflow.html
-Trigger: Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.
+Trigger: "Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review."
 Use when:
   - An individual has submitted a request to access their personal data ("please send me all data you hold about me").
   - An individual has requested deletion, erasure, or "right to be forgotten" of their personal data.
@@ -358,7 +358,7 @@ Use when:
 ### Privacy Impact Assessment
 Path: skills/privacy/pia-generation/SKILL.md
 Catalog page: skills/privacy/pia-generation.html
-Trigger: Use when drafting an internal privacy impact assessment for a new or changed processing activity to document the data involved, design-linked risks, policy consistency, and mitigations for privacy-counsel review.
+Trigger: "Use when drafting an internal privacy impact assessment for a new or changed processing activity to document the data involved, design-linked risks, policy consistency, and mitigations for privacy-counsel review."
 Use when:
   - A product, engineering, or business team is launching a new feature, vendor integration, or processing activity that involves personal data, and an internal PIA is needed before sign-off.
   - An existing processing activity is being materially changed — expanded data categories, new access paths, new subprocessors, changed retention, or changed purpose — and the PIA must be updated.
@@ -369,7 +369,7 @@ Use when:
 ### Privacy Policy Gap Review
 Path: skills/privacy/privacy-policy-gap-review/SKILL.md
 Catalog page: skills/privacy/privacy-policy-gap-review.html
-Trigger: Use when reviewing a published privacy policy or privacy notice to identify gaps, internal inconsistencies, and discrepancies between what the policy says and the organization's described actual data practices.
+Trigger: "Use when reviewing a published privacy policy or privacy notice to identify gaps, internal inconsistencies, and discrepancies between what the policy says and the organization's described actual data practices."
 Use when:
   - A user asks to "review our privacy policy," "find gaps in this privacy notice," or "does our policy match what we actually do."
   - An organization is updating its privacy policy and wants a first-pass review before attorney review and redrafting.
@@ -384,7 +384,7 @@ Use when:
 ### AI Feature Review
 Path: skills/product-legal/ai-feature-review/SKILL.md
 Catalog page: skills/product-legal/ai-feature-review.html
-Trigger: Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review.
+Trigger: "Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review."
 Use when:
   - A team is building, shipping, or updating a feature that uses an AI model, machine learning system, or algorithmic decision-making component.
   - A product manager, engineer, or counsel asks to "review the legal risks of this AI feature," "check if we can use this model," or "what do we need to disclose?"
@@ -396,7 +396,7 @@ Use when:
 ### Launch Review
 Path: skills/product-legal/launch-review/SKILL.md
 Catalog page: skills/product-legal/launch-review.html
-Trigger: Use when conducting a pre-launch legal issue-spotting review for a new product or feature to produce a structured issues register and a draft go/hold/conditions recommendation for attorney sign-off.
+Trigger: "Use when conducting a pre-launch legal issue-spotting review for a new product or feature to produce a structured issues register and a draft go/hold/conditions recommendation for attorney sign-off."
 Use when:
   - A team is preparing to launch a new product, feature, app, or major update and needs a legal issues review before go-live.
   - A product manager, engineer, or counsel asks to "do a legal review of this launch," "check if we're good to ship," or "flag legal risks before we release."
@@ -407,7 +407,7 @@ Use when:
 ### Marketing Claims Review
 Path: skills/product-legal/marketing-claims-review/SKILL.md
 Catalog page: skills/product-legal/marketing-claims-review.html
-Trigger: Use when reviewing marketing or advertising copy for legal risk to produce a claim-by-claim analysis, substantiation requirements, and flagged disclosures for attorney review.
+Trigger: "Use when reviewing marketing or advertising copy for legal risk to produce a claim-by-claim analysis, substantiation requirements, and flagged disclosures for attorney review."
 Use when:
   - A user asks to "review this ad copy," "check our marketing for legal issues," or "tell me which claims might be a problem."
   - New marketing assets (website copy, email campaigns, app store listings, social media posts, press releases, product packaging, or video scripts) are being prepared for publication.
@@ -418,7 +418,7 @@ Use when:
 ### Terms of Service Review
 Path: skills/product-legal/terms-of-service-review/SKILL.md
 Catalog page: skills/product-legal/terms-of-service-review.html
-Trigger: Use when reviewing a terms of service or terms of use document to produce a structured risk summary, issues table, and prioritized recommendations for attorney review.
+Trigger: "Use when reviewing a terms of service or terms of use document to produce a structured risk summary, issues table, and prioritized recommendations for attorney review."
 Use when:
   - A user asks to "review our terms," "check our ToS," "are our terms okay?" or "what are the risks in this agreement?"
   - A company is launching a new product or service and needs its first ToS reviewed before publication.
@@ -432,7 +432,7 @@ Use when:
 ### Compliance Gap Matrix
 Path: skills/regulatory/compliance-gap-matrix/SKILL.md
 Catalog page: skills/regulatory/compliance-gap-matrix.html
-Trigger: Use when mapping a set of regulatory or framework requirements against an organization's current controls to surface gaps, prioritize remediation, and produce an attorney-ready draft gap analysis.
+Trigger: "Use when mapping a set of regulatory or framework requirements against an organization's current controls to surface gaps, prioritize remediation, and produce an attorney-ready draft gap analysis."
 Use when:
   - A user says "map our controls to the regulation," "do a gap analysis," or "show me where we're exposed against this framework."
   - A compliance or legal team needs a structured first-pass matrix before a formal audit, regulatory examination, or board presentation.
@@ -443,7 +443,7 @@ Use when:
 ### Enforcement Risk Memo
 Path: skills/regulatory/enforcement-risk-memo/SKILL.md
 Catalog page: skills/regulatory/enforcement-risk-memo.html
-Trigger: Use when structuring a memo that assesses potential enforcement exposure for a described practice, conduct, or set of facts, to produce attorney-ready draft analysis for review.
+Trigger: "Use when structuring a memo that assesses potential enforcement exposure for a described practice, conduct, or set of facts, to produce attorney-ready draft analysis for review."
 Use when:
   - A user asks to "assess our enforcement risk," "memo out the exposure here," or "what could a regulator do."
   - A client describes a business practice or past conduct and wants to understand how a regulator might view it.
@@ -454,7 +454,7 @@ Use when:
 ### Rule Change Summary
 Path: skills/regulatory/rule-change-summary/SKILL.md
 Catalog page: skills/regulatory/rule-change-summary.html
-Trigger: Use when summarizing a regulatory rule change, proposed rule, or official guidance document and its practical impact on an organization, based on the actual document provided.
+Trigger: "Use when summarizing a regulatory rule change, proposed rule, or official guidance document and its practical impact on an organization, based on the actual document provided."
 Use when:
   - A user says "summarize this new rule," "what does this guidance require," or "what changed from the old rule."
   - Counsel or a compliance team receives a final or proposed rule and needs a structured first-pass summary to brief leadership or begin gap analysis.
@@ -467,7 +467,7 @@ Use when:
 ### AI Use Case Intake
 Path: skills/ai-governance/ai-use-case-intake/SKILL.md
 Catalog page: skills/ai-governance/ai-use-case-intake.html
-Trigger: Use when a new or modified AI/ML use case needs to be documented and triaged so legal, compliance, and governance teams can assess risk and route it to the right specialists.
+Trigger: "Use when a new or modified AI/ML use case needs to be documented and triaged so legal, compliance, and governance teams can assess risk and route it to the right specialists."
 Use when:
   - A product, engineering, or business team is proposing a new AI or ML feature, product, or workflow and needs legal sign-off or triage.
   - An existing AI use case is being materially changed (new model, new data, new affected population, new market).
@@ -478,7 +478,7 @@ Use when:
 ### AI Vendor Terms Review
 Path: skills/ai-governance/ai-vendor-terms-review/SKILL.md
 Catalog page: skills/ai-governance/ai-vendor-terms-review.html
-Trigger: Use when reviewing the terms of service, API agreement, or usage policies of an AI vendor or AI-enabled service to produce a structured risk summary and prioritized redline points for attorney review.
+Trigger: "Use when reviewing the terms of service, API agreement, or usage policies of an AI vendor or AI-enabled service to produce a structured risk summary and prioritized redline points for attorney review."
 Use when:
   - A team wants to adopt a new AI API, AI platform, or AI-enabled SaaS product and needs the legal terms reviewed.
   - An existing AI vendor agreement is up for renewal or the vendor has pushed updated terms.
@@ -489,7 +489,7 @@ Use when:
 ### Employee AI Policy
 Path: skills/ai-governance/employee-ai-policy/SKILL.md
 Catalog page: skills/ai-governance/employee-ai-policy.html
-Trigger: Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.
+Trigger: "Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review."
 Use when:
   - An organization has a draft AI-use policy for employees and wants it reviewed before publication.
   - Legal, HR, or compliance has been asked "do we have what we need in our AI policy?" or "what should our AI policy cover?"
@@ -500,7 +500,7 @@ Use when:
 ### Model Risk Triage
 Path: skills/ai-governance/model-risk-triage/SKILL.md
 Catalog page: skills/ai-governance/model-risk-triage.html
-Trigger: Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review.
+Trigger: "Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review."
 Use when:
   - Engineering, product, or legal teams need to assess a specific model before integration or deployment.
   - A governance committee requires a pre-deployment risk assessment for an AI model.
@@ -513,7 +513,7 @@ Use when:
 ### Cease and Desist Response
 Path: skills/ip/cease-and-desist-response/SKILL.md
 Catalog page: skills/ip/cease-and-desist-response.html
-Trigger: Use when a client has received a cease-and-desist letter or similar IP demand and needs a structured triage memo — covering the assertion, exposure, response options, and immediate actions — for attorney review before responding.
+Trigger: "Use when a client has received a cease-and-desist letter or similar IP demand and needs a structured triage memo — covering the assertion, exposure, response options, and immediate actions — for attorney review before responding."
 Use when:
   - A client has received a cease-and-desist letter, demand letter, or similar written IP demand asserting trademark, copyright, patent, trade secret, or related rights.
   - A user asks to "review this C&D," "what does this letter mean," or "what should we do about this demand."
@@ -523,7 +523,7 @@ Use when:
 ### DMCA Takedown
 Path: skills/ip/dmca-takedown/SKILL.md
 Catalog page: skills/ip/dmca-takedown.html
-Trigger: Use when preparing a takedown notice for infringing content or evaluating a takedown notice received against the user's content, including whether a counter-notice may be appropriate.
+Trigger: "Use when preparing a takedown notice for infringing content or evaluating a takedown notice received against the user's content, including whether a counter-notice may be appropriate."
 Use when:
   - A user says "someone is using my [image/video/code/article] without permission" and wants to have it removed from a platform.
   - A user wants to draft a DMCA notice to send to a hosting provider, platform, or ISP.
@@ -534,7 +534,7 @@ Use when:
 ### Infringement Triage
 Path: skills/ip/infringement-triage/SKILL.md
 Catalog page: skills/ip/infringement-triage.html
-Trigger: Use when a client needs a first-pass, structured triage of a potential intellectual property infringement issue — identifying the key factors, flagging their direction, and routing to IP counsel — without concluding whether infringement occurred.
+Trigger: "Use when a client needs a first-pass, structured triage of a potential intellectual property infringement issue — identifying the key factors, flagging their direction, and routing to IP counsel — without concluding whether infringement occurred."
 Use when:
   - A client believes someone may be infringing its intellectual property right and wants a preliminary read of the situation before engaging IP counsel for an enforcement action.
   - A client has received an informal infringement complaint, a demand, or internal notice that its own product or conduct may infringe a third party's intellectual property, and wants a preliminary structured assessment before engaging IP counsel.
@@ -544,7 +544,7 @@ Use when:
 ### Invention Disclosure Intake
 Path: skills/ip/invention-intake/SKILL.md
 Catalog page: skills/ip/invention-intake.html
-Trigger: Use when a user wants a structured first-pass screen of a proposed invention to assess whether it warrants patent-counsel attention, with filing-deadline urgency flagging.
+Trigger: "Use when a user wants a structured first-pass screen of a proposed invention to assess whether it warrants patent-counsel attention, with filing-deadline urgency flagging."
 Use when:
   - A user presents a new invention and asks whether it is worth pursuing a patent.
   - An engineer, product team, or inventor needs a structured disclosure captured before meeting with patent counsel.
@@ -555,7 +555,7 @@ Use when:
 ### Open Source License Review
 Path: skills/ip/open-source-license-review/SKILL.md
 Catalog page: skills/ip/open-source-license-review.html
-Trigger: Use when reviewing the open-source licenses present in or proposed for a project to identify compliance obligations and flag compatibility or disclosure risks for attorney review.
+Trigger: "Use when reviewing the open-source licenses present in or proposed for a project to identify compliance obligations and flag compatibility or disclosure risks for attorney review."
 Use when:
   - A user asks to "check our open-source dependencies" or "tell me what our OSS obligations are."
   - A project is preparing for a product launch, M&A due diligence, or investment round and needs a license inventory review.
@@ -567,7 +567,7 @@ Use when:
 ### Patent Freedom-to-Operate Triage
 Path: skills/ip/fto-triage/SKILL.md
 Catalog page: skills/ip/fto-triage.html
-Trigger: Use when a user needs a structured first-pass review of potential patent blocking issues for a product, process, or feature against a set of identified patents, to flag risk areas and route findings to patent counsel for a formal freedom-to-operate opinion.
+Trigger: "Use when a user needs a structured first-pass review of potential patent blocking issues for a product, process, or feature against a set of identified patents, to flag risk areas and route findings to patent counsel for a formal freedom-to-operate opinion."
 Use when:
   - A user asks to "check if our product is blocked by these patents" or "do an FTO triage" against a defined list of patents.
   - A product, process, or feature is approaching launch and the team wants a structured first-pass memo to brief patent counsel.
@@ -577,7 +577,7 @@ Use when:
 ### Trademark Clearance Triage
 Path: skills/ip/trademark-clearance-triage/SKILL.md
 Catalog page: skills/ip/trademark-clearance-triage.html
-Trigger: Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search.
+Trigger: "Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search."
 Use when:
   - A user asks to "check if a name is available" or "see if we can trademark this."
   - A user wants to know if a proposed brand name, product name, or slogan is likely to face trademark issues.
@@ -590,18 +590,21 @@ Use when:
 ### Red-Team Verifier
 Path: skills/legal-methodology/red-team-verifier/SKILL.md
 Catalog page: skills/legal-methodology/red-team-verifier.html
-Trigger: Use when adversarially stress-testing a draft legal work product before attorney review to surface invented authority, unsupported claims, hidden assumptions, confidence overstatement, and structural defects.
+Trigger: Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues.
 Use when:
-  - Any AgentCounsel draft is complete and is about to be finalized or passed to attorney review.
-  - An AI-generated legal draft of any type has been produced and a defect check is warranted before reliance.
-  - The user wants to confirm that a draft contains no fabricated authority, no silently-resolved gaps, and no confidence overstatement before it is used.
+  - The user asks to check, sanity-check, or quality-control a legal memo, a contract or document review, a demand letter, a legal analysis, a risk matrix, a client email, a research summary, or a draft filing.
+  - The user asks "is this good enough?", "is this ready to send?", or "can I rely on this?"
+  - The user asks for the weaknesses, blind spots, or missing issues in a legal draft.
+  - The user asks for a hallucination check, a citation check, or a check for invented authority.
+  - The user asks whether a draft is ready for — or has been adequately prepared for — attorney review.
+  - Any AgentCounsel skill has produced a draft and a defect check is warranted before it is finalized or relied upon.
+  - A high-stakes legal output is about to be sent, filed, or acted on and a final adversarial pass is wanted.
   - A draft has been revised and a targeted re-check of the changed sections is needed.
-  - Quality-control review is required before a deliverable is circulated within a legal team.
 
 ### Risk Assessment
 Path: skills/legal-methodology/risk-assessment/SKILL.md
 Catalog page: skills/legal-methodology/risk-assessment.html
-Trigger: Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review.
+Trigger: "Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review."
 Use when:
   - A user asks to "assess the risks," "identify the legal exposure," "flag the issues," or "map the risk" in a transaction, document, agreement, matter, or situation.
   - An attorney or legal team needs a structured first-pass risk inventory before deciding how to proceed.
@@ -613,7 +616,7 @@ Use when:
 ### Source Validation
 Path: skills/legal-methodology/source-validation/SKILL.md
 Catalog page: skills/legal-methodology/source-validation.html
-Trigger: Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`.
+Trigger: "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`."
 Use when:
   - A draft legal work product contains citations, quotations, authority references, or factual claims that need to be checked before the draft is finalized or passed to attorney review.
   - A user asks to "verify the sources," "check the citations," "confirm these quotes are real," or "validate the authority in this draft."
@@ -625,7 +628,7 @@ Use when:
 ### Statutory Interpretation
 Path: skills/legal-methodology/statutory-interpretation/SKILL.md
 Catalog page: skills/legal-methodology/statutory-interpretation.html
-Trigger: Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.
+Trigger: "Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review."
 Use when:
   - A user needs to analyze what a provision means or whether it applies to a given set of facts.
   - The scope, reach, or limits of a statutory, regulatory, or contractual obligation are disputed or unclear.
@@ -634,12 +637,12 @@ Use when:
   - A provision contains ambiguity, a defined term with contested scope, or a structure question (such as whether a modifier applies to one element or all of them) that requires systematic analysis before attorney resolution.
   - A gap or conflict between two provisions needs to be framed before attorney analysis.
 
-## Setup (4 skills)
+## Setup (5 skills)
 
 ### Contracts Cold-Start Interview
 Path: skills/setup/contracts-cold-start-interview/SKILL.md
 Catalog page: skills/setup/contracts-cold-start-interview.html
-Trigger: Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+Trigger: "Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
 Use when:
   - A team is adopting AgentCounsel and needs to configure practice-profiles/contracts.md for the first time.
   - A contracts practice group is being onboarded to the library and no current profile exists.
@@ -649,17 +652,28 @@ Use when:
 ### Corporate Cold-Start Interview
 Path: skills/setup/corporate-cold-start-interview/SKILL.md
 Catalog page: skills/setup/corporate-cold-start-interview.html
-Trigger: Use when a corporate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+Trigger: "Use when a corporate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
 Use when:
   - A team is adopting AgentCounsel and needs to configure practice-profiles/corporate.md for the first time.
   - A corporate practice group is being onboarded to the library and no current profile exists.
   - The library is being stood up for the first time and the corporate area is included in scope.
   - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
+### Create Matter Workspace
+Path: skills/setup/create-matter-workspace/SKILL.md
+Catalog page: skills/setup/create-matter-workspace.html
+Trigger: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
+Use when:
+  - A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.
+  - The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."
+  - Complex or multi-step legal work is about to begin and needs a single organizing file before the first substantive skill is run.
+  - An existing matter has accumulated drafts, dates, and open items across several conversations and now needs a consolidated workspace.
+  - The user is unsure which matter-workspace template fits the matter and wants a recommendation.
+
 ### Litigation Cold-Start Interview
 Path: skills/setup/litigation-cold-start-interview/SKILL.md
 Catalog page: skills/setup/litigation-cold-start-interview.html
-Trigger: Use when a litigation practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+Trigger: "Use when a litigation practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
 Use when:
   - A team is adopting AgentCounsel and needs to configure practice-profiles/litigation.md for the first time.
   - A litigation practice group is being onboarded to the library and no current profile exists.
@@ -669,7 +683,7 @@ Use when:
 ### Privacy Cold-Start Interview
 Path: skills/setup/privacy-cold-start-interview/SKILL.md
 Catalog page: skills/setup/privacy-cold-start-interview.html
-Trigger: Use when a privacy practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+Trigger: "Use when a privacy practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
 Use when:
   - A team is adopting AgentCounsel and needs to configure practice-profiles/privacy.md for the first time.
   - A privacy practice group is being onboarded to the library and no current profile exists.

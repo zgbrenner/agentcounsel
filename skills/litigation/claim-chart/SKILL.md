@@ -1,6 +1,27 @@
 ---
 name: Claim Chart
-description: Use when building an element-by-element claim chart — mapping patent claim limitations or the elements of a civil cause of action or affirmative defense against evidence — to produce a structured gap analysis for attorney review.
+description: "Use when building an element-by-element claim chart — mapping patent claim limitations or the elements of a civil cause of action or affirmative defense against evidence — to produce a structured gap analysis for attorney review."
+practice_area: litigation
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The patent claim, pleaded cause of action, or affirmative defense"
+  - "The evidence to map against each element"
+  - "The applicable jurisdiction"
+outputs:
+  - "Element-by-element claim chart with a structured gap analysis for attorney review"
+related_skills:
+  - skills/litigation/brief-section-drafter/SKILL.md
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/privilege-log-review/SKILL.md
+tags:
+  - litigation
+  - claim-chart
+  - elements-analysis
+  - patent
+  - gap-analysis
 ---
 
 # Claim Chart
@@ -53,6 +74,7 @@ If mode, side, or jurisdiction is not provided, stop and request them before pro
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice and must not be treated as a legal conclusion.
 - The claim chart is an internal analytical aid. It must not be filed, served, or produced without attorney review and authorization. Label every output "Privileged & Confidential — Attorney Work Product."
 - Do not conclude on infringement, non-infringement, validity, invalidity, liability, or non-liability. State mappings as analytical characterizations — supported, partial, disputed, gap, or needs-evidence — not as legal determinations.

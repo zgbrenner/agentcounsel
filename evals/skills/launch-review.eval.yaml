@@ -1,6 +1,6 @@
 # AgentCounsel skill eval — Launch Review (product legal)
 # Schema: see evals/README.md. Validated by scripts/check_evals.py (no API keys).
-skill: product-launch-review
+skill: launch-review
 skill_path: skills/product-legal/launch-review/SKILL.md
 description: Eval cases for the Launch Review skill, checking that it produces a cross-practice issues register, routes issues to specialists, and frames a draft go/hold/conditions recommendation without giving legal clearance.
 shared_assertions:

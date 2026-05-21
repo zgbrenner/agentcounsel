@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contract Risk Review — AgentCounsel</title>
-<meta name="description" content="Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.">
+<meta name="description" content="&quot;Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.</p>
+<p>"Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -52,7 +52,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Review only the language actually present in the provided document. Quote clause language accurately; never paraphrase beyond what the text supports.</li><li>Do not invent contract terms, section numbers, defined terms, or quotations. If you cannot find a clause, say so — do not fabricate its absence or presence.</li><li>Do not invent statutes, regulations, case law, or market-standard assertions. "Market standard" claims require attorney verification unless the user has provided comparative data.</li><li>Do not invent or assume procedural deadlines, notice periods, or cure periods; read them from the document or flag them as missing.</li><li>Distinguish clearly: (1) what the contract says, (2) what you are assuming about the business context, (3) what is flagged for attorney verification.</li><li>Identify (or flag as unknown): jurisdiction and governing law, choice of forum, relevant effective date, and which party's form this is.</li><li>Do not place client-sensitive facts into reusable templates.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever information is missing or uncertain.</li><li>Flag every point of uncertainty rather than resolving it silently.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Review only the language actually present in the provided document. Quote clause language accurately; never paraphrase beyond what the text supports.</li><li>Do not invent contract terms, section numbers, defined terms, or quotations. If you cannot find a clause, say so — do not fabricate its absence or presence.</li><li>Do not invent statutes, regulations, case law, or market-standard assertions. "Market standard" claims require attorney verification unless the user has provided comparative data.</li><li>Do not invent or assume procedural deadlines, notice periods, or cure periods; read them from the document or flag them as missing.</li><li>Distinguish clearly: (1) what the contract says, (2) what you are assuming about the business context, (3) what is flagged for attorney verification.</li><li>Identify (or flag as unknown): jurisdiction and governing law, choice of forum, relevant effective date, and which party's form this is.</li><li>Do not place client-sensitive facts into reusable templates.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever information is missing or uncertain.</li><li>Flag every point of uncertainty rather than resolving it silently.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -78,6 +78,9 @@
 <p>Deliver, in order:</p>
 <ol><li><strong>Document Summary</strong> — parties, effective date, governing law, client's role, counterparty's form or negotiated draft, approximate transaction value/risk profile.</li><li><strong>Structural Map</strong> — list of sections present and absent.</li><li><strong>Red Flags Quick Scan</strong> — each red-flag pattern from <code>skills/contracts/references/red-flags.md</code> found in the contract, or a note that none surfaced in the scan.</li><li><strong>Clause-by-Clause Summary</strong> — plain-language summary of each category with risk note.</li><li><strong>Risk Matrix</strong> — completed using <code>templates/contract-risk-matrix.md</code>, with two severity dimensions rated per clause: <strong>Legal Risk</strong> (High / Med / Low) for the client's legal exposure, and <strong>Business Friction</strong> (Blocking / Slowing / Confusing / None) for the practical operational impact. A term can be legally enforceable yet operationally damaging, or legally marginal yet a deal-blocker operationally — both dimensions should be captured.</li><li><strong>Negotiability Rating</strong> — for each material issue, a rating from the rubric in <code>skills/contracts/references/negotiability-ratings.md</code>, with a one-line rationale.</li><li><strong>Market Benchmark Notes</strong> — any market comparison, recorded using <code>skills/contracts/references/market-benchmark-framework.md</code>, with its basis stated; every unverified benchmark flagged for attorney verification.</li><li><strong>Prioritized Issue List</strong> — ranked High / Medium / Low. Each High and Medium item states a <strong>Preferred Position</strong>, a <strong>Fallback Position</strong>, and a <strong>Suggested Redline Direction</strong> (direction of change, not final language), following <code>skills/contracts/references/redline-output-guidance.md</code>.</li><li><strong>Missing Provisions</strong> — list of standard protections absent from the agreement.</li><li><strong>Internal Consistency Check</strong> — whether defined terms, party names, cross-references, exhibit/schedule references, and section numbers are used consistently, with any inconsistency flagged.</li><li><strong>Open Items for Attorney Verification</strong> — checkbox list.</li><li><strong>Assumptions</strong> — explicit list of all assumptions made about business context, facts, or legal standard.</li></ol>
 <p>Use <code>[CONFIRM: ...]</code> wherever a fact, clause meaning, or legal conclusion is unverified or ambiguous.</p>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -87,7 +90,30 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Contract Risk Review
-description: Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.
+description: "Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full commercial contract text"
+  - "The client's role under the agreement"
+  - "The business and transaction context"
+  - "Optional: the client's standard positions or playbook"
+outputs:
+  - "Structured risk matrix"
+  - "Prioritized issues list for attorney review"
+related_skills:
+  - skills/contracts/nda-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/contracts/sow-review/SKILL.md
+tags:
+  - contracts
+  - contract-review
+  - commercial-contract
+  - risk-matrix
+  - redline
 ---
 
 # Contract Risk Review
@@ -126,6 +152,7 @@ If the contract text or the client's role is not provided, stop and request it. 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided document. Quote clause language accurately; never paraphrase beyond what the text supports.
 - Do not invent contract terms, section numbers, defined terms, or quotations. If you cannot find a clause, say so — do not fabricate its absence or presence.
@@ -204,6 +231,16 @@ Deliver, in order:
 12. **Assumptions** — explicit list of all assumptions made about business context, facts, or legal standard.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or legal conclusion is unverified or ambiguous.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -238,7 +275,30 @@ Operating rules (these always apply):
 === BEGIN SKILL: Contract Risk Review ===
 ---
 name: Contract Risk Review
-description: Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.
+description: "Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full commercial contract text"
+  - "The client's role under the agreement"
+  - "The business and transaction context"
+  - "Optional: the client's standard positions or playbook"
+outputs:
+  - "Structured risk matrix"
+  - "Prioritized issues list for attorney review"
+related_skills:
+  - skills/contracts/nda-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/contracts/sow-review/SKILL.md
+tags:
+  - contracts
+  - contract-review
+  - commercial-contract
+  - risk-matrix
+  - redline
 ---
 
 # Contract Risk Review
@@ -277,6 +337,7 @@ If the contract text or the client's role is not provided, stop and request it. 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided document. Quote clause language accurately; never paraphrase beyond what the text supports.
 - Do not invent contract terms, section numbers, defined terms, or quotations. If you cannot find a clause, say so — do not fabricate its absence or presence.
@@ -355,6 +416,16 @@ Deliver, in order:
 12. **Assumptions** — explicit list of all assumptions made about business context, facts, or legal standard.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or legal conclusion is unverified or ambiguous.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

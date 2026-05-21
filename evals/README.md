@@ -51,12 +51,12 @@ evals/
   skills/
     contract-risk-review.eval.yaml
     nda-review.eval.yaml
-    litigation-matter-intake.eval.yaml
-    chronology-builder.eval.yaml
+    matter-intake.eval.yaml
+    litigation-chronology.eval.yaml
     privilege-log-review.eval.yaml
     dpa-review.eval.yaml
-    product-launch-review.eval.yaml
-    regulatory-gap-analysis.eval.yaml
+    launch-review.eval.yaml
+    compliance-gap-matrix.eval.yaml
 ```
 
 The schema validator lives at `../scripts/check_evals.py`.

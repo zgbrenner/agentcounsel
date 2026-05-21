@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create Matter Workspace — AgentCounsel</title>
+<meta name="description" content="Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/setup.html">Setup</a> / <span>Create Matter Workspace</span></nav>
+<h1>Create Matter Workspace</h1>
+<p class="path">Canonical path: <code>skills/setup/create-matter-workspace/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a populated matter-workspace draft — the single organizing file that carries one legal matter's parties, facts, jurisdiction, deadlines, documents, open items, and the draft work product produced by every skill run for that matter. This skill selects the correct template from <code>matter-workspaces/</code>, interviews the user for the core matter information, fills in what is known, marks what is missing with <code>[CONFIRM: ...]</code> and <code>[ACTION: ...]</code> placeholders, and explains how to keep the workspace current as further skills are run.</p>
+<p>A matter workspace is what preserves context across a multi-step engagement: each skill run is recorded in one place, so facts, deadlines, and drafts are not lost between conversations. This skill produces draft legal work product for attorney review — not legal advice.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.</li><li>The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."</li><li>Complex or multi-step legal work is about to begin and needs a single organizing file before the first substantive skill is run.</li><li>An existing matter has accumulated drafts, dates, and open items across several conversations and now needs a consolidated workspace.</li><li>The user is unsure which matter-workspace template fits the matter and wants a recommendation.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li>The matter type, or enough description of the legal work to infer it: litigation or dispute, contract review, privacy, regulatory, corporate transaction, employment, or other.</li><li>The client's identity and the responsible attorney or team, if known.</li><li>A short description of the matter — what it concerns and what outcome is sought.</li><li>Any already-known parties, jurisdiction or governing law, key dates, and source documents.</li></ul>
+<p>The skill can proceed with partial information; anything not provided is recorded as a <code>[CONFIRM: ...]</code> placeholder. But the matter type (or enough description to infer it) and the client identity are needed to select a template and begin. If the matter type cannot be determined, ask before proceeding — do not guess.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The task is a single, self-contained skill run with no ongoing matter (for example, a one-off NDA review) — run that skill directly; a workspace is unnecessary overhead.</li><li>The matter is already organized in an existing workspace and the task is to run a substantive skill — open the relevant skill and index its output in the existing workspace.</li><li>The user needs to configure AgentCounsel for a whole practice area rather than a single matter — use the cold-start interview skills in <code>skills/setup/</code>.</li><li>The user needs substantive legal analysis — this skill organizes a matter; it does not analyze it. Run the appropriate substantive skill from <code>WORKFLOW_ROUTER.md</code>.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not invent matter facts, party names, jurisdictions, or dates. Record every unknown as a <code>[CONFIRM: ...]</code> placeholder.</li><li>This skill organizes a matter; it does not supply law. Do not invent or assert statutes, regulations, case law, citations, or other legal authority — follow <code>core/source-and-citation-discipline.md</code>.</li><li>Do not compute, calculate, or assert any deadline. Every date entered in the workspace carries a <code>[deadline verification required]</code> flag and must be independently verified by the responsible attorney.</li><li>Do not resolve the conflicts-check gate or the jurisdiction and deadline gates. Carry them into the workspace as gates for the attorney to clear.</li><li>Separate confirmed facts from client representations and from assumptions, using the workspace's distinct Facts and Assumptions sections. Never blend an assumption into the factual record.</li><li>A populated workspace may be attorney-client privileged and/or attorney work product. Label the populated copy with the privilege designation the responsible attorney confirms, and keep client-sensitive facts out of the blank template.</li><li>Recommend, but do not finalize. The responsible attorney confirms the template choice, the matter scope, and every entry before the workspace is relied upon.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm the matter type and scope.</strong> From the user's description, determine which kind of matter this is. If the matter spans more than one type (for example, a contract dispute), select the template for the primary workflow and record the secondary dimension as an open item.</li></ol>
+<ol><li><strong>Select the template.</strong> Map the matter type to a template in <code>matter-workspaces/</code>:<ul><li>Litigation or dispute → <code>matter-workspaces/litigation-matter.md</code></li><li>Contract review, negotiation, or execution → <code>matter-workspaces/contract-review-matter.md</code></li><li>Privacy event, DPA, DSAR, or processing activity → <code>matter-workspaces/privacy-matter.md</code></li><li>Regulatory inquiry, compliance review, or enforcement → <code>matter-workspaces/regulatory-matter.md</code></li><li>Corporate transaction, M&amp;A, financing, or entity matter → <code>matter-workspaces/corporate-transaction-matter.md</code></li><li>Employment matter — termination, investigation, classification, leave, or policy → <code>matter-workspaces/employment-matter.md</code> State the recommended template and the basis for the recommendation. If no template fits, say so rather than forcing a poor match.</li></ul></li></ol>
+<ol><li><strong>Gather the matter header information.</strong> Collect the client's full legal name and entity type, the responsible attorney, a matter name, the practice profile in use, the date opened, and the matter status. Record anything missing as a <code>[CONFIRM: ...]</code> placeholder.</li></ol>
+<ol><li><strong>Interview for the core matter information, section by section.</strong> Work through the selected template's sections and ask targeted questions for what is missing: the parties; the key facts (and, separately, the assumptions); the jurisdiction and governing law; the key dates and deadlines; and the source documents. Ask for one category at a time; do not overwhelm the user with every field at once.</li></ol>
+<ol><li><strong>Record what is known; flag what is missing.</strong> Fill each field with the information the user provided, or with a <code>[CONFIRM: ...]</code> placeholder. Enter every date exactly as provided and append a <code>[deadline verification required]</code> flag — never compute, extend, or infer a date.</li></ol>
+<ol><li><strong>Carry the gates into the workspace.</strong> Leave the conflicts-check gate, the jurisdiction and posture gate (Gate 1), and the deadlines gate (Gate 2) as unresolved gates for the responsible attorney. Do not mark any gate cleared.</li></ol>
+<ol><li><strong>Seed the work-product index.</strong> List the skills likely to be run for this matter type, drawn from the selected template, with empty status rows to be filled in as each skill is run.</li></ol>
+<ol><li><strong>Record an initial open-items list.</strong> Turn every missing required input and every unresolved gate into an action item with an owner and a status of Open.</li></ol>
+<ol><li><strong>Assemble the populated workspace draft</strong> using the selected template's structure, preserving the blank-template and privilege banner at the top.</li></ol>
+<ol><li><strong>Explain how to maintain the workspace</strong> using the maintenance instructions in the Output Format below.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following, labeled as a draft for attorney review:</p>
+<ol><li><strong>Template Recommendation</strong> — The recommended template from <code>matter-workspaces/</code>, the matter type it matches, and a one-line rationale.</li></ol>
+<ol><li><strong>Populated Workspace Draft</strong> — The full selected template with every known field filled in and every unknown marked <code>[CONFIRM: ...]</code> or <code>[ACTION: ...]</code>. It retains the blank-template and privilege-designation banner at the top.</li></ol>
+<ol><li><strong>Maintenance Instructions</strong> — A short, plain set of instructions for keeping the workspace current:<ul><li>Save the populated workspace to a matter-specific location; do not edit the blank template itself.</li><li>After each skill is run, add a row to the Work-Product Index — the skill, the date, the output, its location, and its review status.</li><li>Add new facts to the Key Facts section with their source; add new assumptions to the Assumptions section; never blend the two.</li><li>Add every new date to the deadlines table with a <code>[deadline verification required]</code> flag; never compute a date.</li><li>Update the Open Items list as actions are completed or new ones arise.</li><li>Run <code>red-team-verifier</code> on any high-stakes draft before relying on it.</li><li>Route the workspace to the responsible attorney to clear the gates and complete the sign-off.</li></ul></li></ol>
+<ol><li><strong>Open Items</strong> — The list of missing information the user or the attorney must still supply before the workspace is complete.</li></ol>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The selected matter-workspace template is appropriate for the matter type.</li><li>[ ] Client identity and the responsible attorney are confirmed.</li><li>[ ] All parties are identified and captured for the conflicts check.</li><li>[ ] The conflicts-check gate and the jurisdiction and posture gate (Gate 1) have been addressed before substantive work begins.</li><li>[ ] Every date in the workspace has been independently verified by the attorney; none was computed by the agent.</li><li>[ ] Confirmed facts, client representations, and assumptions are correctly separated.</li><li>[ ] Jurisdiction and governing law are confirmed.</li><li>[ ] The privilege designation for the populated workspace has been set by the responsible attorney.</li><li>[ ] All <code>[CONFIRM: ...]</code> and <code>[ACTION: ...]</code> placeholders are tracked for resolution.</li><li>[ ] The populated workspace is stored in an access-controlled location and shared only with authorized personnel.</li><li>[ ] No client-sensitive facts have been written into the blank template.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Create Matter Workspace
+description: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
+---
+
+# Create Matter Workspace
+
+## Purpose
+
+Produce a populated matter-workspace draft — the single organizing file that carries one legal matter's parties, facts, jurisdiction, deadlines, documents, open items, and the draft work product produced by every skill run for that matter. This skill selects the correct template from `matter-workspaces/`, interviews the user for the core matter information, fills in what is known, marks what is missing with `[CONFIRM: ...]` and `[ACTION: ...]` placeholders, and explains how to keep the workspace current as further skills are run.
+
+A matter workspace is what preserves context across a multi-step engagement: each skill run is recorded in one place, so facts, deadlines, and drafts are not lost between conversations. This skill produces draft legal work product for attorney review — not legal advice.
+
+## Use When
+
+- A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.
+- The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."
+- Complex or multi-step legal work is about to begin and needs a single organizing file before the first substantive skill is run.
+- An existing matter has accumulated drafts, dates, and open items across several conversations and now needs a consolidated workspace.
+- The user is unsure which matter-workspace template fits the matter and wants a recommendation.
+
+## Required Inputs
+
+- The matter type, or enough description of the legal work to infer it: litigation or dispute, contract review, privacy, regulatory, corporate transaction, employment, or other.
+- The client's identity and the responsible attorney or team, if known.
+- A short description of the matter — what it concerns and what outcome is sought.
+- Any already-known parties, jurisdiction or governing law, key dates, and source documents.
+
+The skill can proceed with partial information; anything not provided is recorded as a `[CONFIRM: ...]` placeholder. But the matter type (or enough description to infer it) and the client identity are needed to select a template and begin. If the matter type cannot be determined, ask before proceeding — do not guess.
+
+## Do Not Use When
+
+- The task is a single, self-contained skill run with no ongoing matter (for example, a one-off NDA review) — run that skill directly; a workspace is unnecessary overhead.
+- The matter is already organized in an existing workspace and the task is to run a substantive skill — open the relevant skill and index its output in the existing workspace.
+- The user needs to configure AgentCounsel for a whole practice area rather than a single matter — use the cold-start interview skills in `skills/setup/`.
+- The user needs substantive legal analysis — this skill organizes a matter; it does not analyze it. Run the appropriate substantive skill from `WORKFLOW_ROUTER.md`.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not invent matter facts, party names, jurisdictions, or dates. Record every unknown as a `[CONFIRM: ...]` placeholder.
+- This skill organizes a matter; it does not supply law. Do not invent or assert statutes, regulations, case law, citations, or other legal authority — follow `core/source-and-citation-discipline.md`.
+- Do not compute, calculate, or assert any deadline. Every date entered in the workspace carries a `[deadline verification required]` flag and must be independently verified by the responsible attorney.
+- Do not resolve the conflicts-check gate or the jurisdiction and deadline gates. Carry them into the workspace as gates for the attorney to clear.
+- Separate confirmed facts from client representations and from assumptions, using the workspace's distinct Facts and Assumptions sections. Never blend an assumption into the factual record.
+- A populated workspace may be attorney-client privileged and/or attorney work product. Label the populated copy with the privilege designation the responsible attorney confirms, and keep client-sensitive facts out of the blank template.
+- Recommend, but do not finalize. The responsible attorney confirms the template choice, the matter scope, and every entry before the workspace is relied upon.
+
+## Workflow
+
+1. **Confirm the matter type and scope.** From the user's description, determine which kind of matter this is. If the matter spans more than one type (for example, a contract dispute), select the template for the primary workflow and record the secondary dimension as an open item.
+
+2. **Select the template.** Map the matter type to a template in `matter-workspaces/`:
+   - Litigation or dispute → `matter-workspaces/litigation-matter.md`
+   - Contract review, negotiation, or execution → `matter-workspaces/contract-review-matter.md`
+   - Privacy event, DPA, DSAR, or processing activity → `matter-workspaces/privacy-matter.md`
+   - Regulatory inquiry, compliance review, or enforcement → `matter-workspaces/regulatory-matter.md`
+   - Corporate transaction, M&amp;A, financing, or entity matter → `matter-workspaces/corporate-transaction-matter.md`
+   - Employment matter — termination, investigation, classification, leave, or policy → `matter-workspaces/employment-matter.md`
+   State the recommended template and the basis for the recommendation. If no template fits, say so rather than forcing a poor match.
+
+3. **Gather the matter header information.** Collect the client's full legal name and entity type, the responsible attorney, a matter name, the practice profile in use, the date opened, and the matter status. Record anything missing as a `[CONFIRM: ...]` placeholder.
+
+4. **Interview for the core matter information, section by section.** Work through the selected template's sections and ask targeted questions for what is missing: the parties; the key facts (and, separately, the assumptions); the jurisdiction and governing law; the key dates and deadlines; and the source documents. Ask for one category at a time; do not overwhelm the user with every field at once.
+
+5. **Record what is known; flag what is missing.** Fill each field with the information the user provided, or with a `[CONFIRM: ...]` placeholder. Enter every date exactly as provided and append a `[deadline verification required]` flag — never compute, extend, or infer a date.
+
+6. **Carry the gates into the workspace.** Leave the conflicts-check gate, the jurisdiction and posture gate (Gate 1), and the deadlines gate (Gate 2) as unresolved gates for the responsible attorney. Do not mark any gate cleared.
+
+7. **Seed the work-product index.** List the skills likely to be run for this matter type, drawn from the selected template, with empty status rows to be filled in as each skill is run.
+
+8. **Record an initial open-items list.** Turn every missing required input and every unresolved gate into an action item with an owner and a status of Open.
+
+9. **Assemble the populated workspace draft** using the selected template's structure, preserving the blank-template and privilege banner at the top.
+
+10. **Explain how to maintain the workspace** using the maintenance instructions in the Output Format below.
+
+## Output Format
+
+Deliver the following, labeled as a draft for attorney review:
+
+1. **Template Recommendation** — The recommended template from `matter-workspaces/`, the matter type it matches, and a one-line rationale.
+
+2. **Populated Workspace Draft** — The full selected template with every known field filled in and every unknown marked `[CONFIRM: ...]` or `[ACTION: ...]`. It retains the blank-template and privilege-designation banner at the top.
+
+3. **Maintenance Instructions** — A short, plain set of instructions for keeping the workspace current:
+   - Save the populated workspace to a matter-specific location; do not edit the blank template itself.
+   - After each skill is run, add a row to the Work-Product Index — the skill, the date, the output, its location, and its review status.
+   - Add new facts to the Key Facts section with their source; add new assumptions to the Assumptions section; never blend the two.
+   - Add every new date to the deadlines table with a `[deadline verification required]` flag; never compute a date.
+   - Update the Open Items list as actions are completed or new ones arise.
+   - Run `red-team-verifier` on any high-stakes draft before relying on it.
+   - Route the workspace to the responsible attorney to clear the gates and complete the sign-off.
+
+4. **Open Items** — The list of missing information the user or the attorney must still supply before the workspace is complete.
+
+## Attorney Verification Checklist
+
+- [ ] The selected matter-workspace template is appropriate for the matter type.
+- [ ] Client identity and the responsible attorney are confirmed.
+- [ ] All parties are identified and captured for the conflicts check.
+- [ ] The conflicts-check gate and the jurisdiction and posture gate (Gate 1) have been addressed before substantive work begins.
+- [ ] Every date in the workspace has been independently verified by the attorney; none was computed by the agent.
+- [ ] Confirmed facts, client representations, and assumptions are correctly separated.
+- [ ] Jurisdiction and governing law are confirmed.
+- [ ] The privilege designation for the populated workspace has been set by the responsible attorney.
+- [ ] All `[CONFIRM: ...]` and `[ACTION: ...]` placeholders are tracked for resolution.
+- [ ] The populated workspace is stored in an access-controlled location and shared only with authorized personnel.
+- [ ] No client-sensitive facts have been written into the blank template.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Create Matter Workspace ===
+---
+name: Create Matter Workspace
+description: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
+---
+
+# Create Matter Workspace
+
+## Purpose
+
+Produce a populated matter-workspace draft — the single organizing file that carries one legal matter's parties, facts, jurisdiction, deadlines, documents, open items, and the draft work product produced by every skill run for that matter. This skill selects the correct template from `matter-workspaces/`, interviews the user for the core matter information, fills in what is known, marks what is missing with `[CONFIRM: ...]` and `[ACTION: ...]` placeholders, and explains how to keep the workspace current as further skills are run.
+
+A matter workspace is what preserves context across a multi-step engagement: each skill run is recorded in one place, so facts, deadlines, and drafts are not lost between conversations. This skill produces draft legal work product for attorney review — not legal advice.
+
+## Use When
+
+- A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.
+- The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."
+- Complex or multi-step legal work is about to begin and needs a single organizing file before the first substantive skill is run.
+- An existing matter has accumulated drafts, dates, and open items across several conversations and now needs a consolidated workspace.
+- The user is unsure which matter-workspace template fits the matter and wants a recommendation.
+
+## Required Inputs
+
+- The matter type, or enough description of the legal work to infer it: litigation or dispute, contract review, privacy, regulatory, corporate transaction, employment, or other.
+- The client's identity and the responsible attorney or team, if known.
+- A short description of the matter — what it concerns and what outcome is sought.
+- Any already-known parties, jurisdiction or governing law, key dates, and source documents.
+
+The skill can proceed with partial information; anything not provided is recorded as a `[CONFIRM: ...]` placeholder. But the matter type (or enough description to infer it) and the client identity are needed to select a template and begin. If the matter type cannot be determined, ask before proceeding — do not guess.
+
+## Do Not Use When
+
+- The task is a single, self-contained skill run with no ongoing matter (for example, a one-off NDA review) — run that skill directly; a workspace is unnecessary overhead.
+- The matter is already organized in an existing workspace and the task is to run a substantive skill — open the relevant skill and index its output in the existing workspace.
+- The user needs to configure AgentCounsel for a whole practice area rather than a single matter — use the cold-start interview skills in `skills/setup/`.
+- The user needs substantive legal analysis — this skill organizes a matter; it does not analyze it. Run the appropriate substantive skill from `WORKFLOW_ROUTER.md`.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not invent matter facts, party names, jurisdictions, or dates. Record every unknown as a `[CONFIRM: ...]` placeholder.
+- This skill organizes a matter; it does not supply law. Do not invent or assert statutes, regulations, case law, citations, or other legal authority — follow `core/source-and-citation-discipline.md`.
+- Do not compute, calculate, or assert any deadline. Every date entered in the workspace carries a `[deadline verification required]` flag and must be independently verified by the responsible attorney.
+- Do not resolve the conflicts-check gate or the jurisdiction and deadline gates. Carry them into the workspace as gates for the attorney to clear.
+- Separate confirmed facts from client representations and from assumptions, using the workspace's distinct Facts and Assumptions sections. Never blend an assumption into the factual record.
+- A populated workspace may be attorney-client privileged and/or attorney work product. Label the populated copy with the privilege designation the responsible attorney confirms, and keep client-sensitive facts out of the blank template.
+- Recommend, but do not finalize. The responsible attorney confirms the template choice, the matter scope, and every entry before the workspace is relied upon.
+
+## Workflow
+
+1. **Confirm the matter type and scope.** From the user's description, determine which kind of matter this is. If the matter spans more than one type (for example, a contract dispute), select the template for the primary workflow and record the secondary dimension as an open item.
+
+2. **Select the template.** Map the matter type to a template in `matter-workspaces/`:
+   - Litigation or dispute → `matter-workspaces/litigation-matter.md`
+   - Contract review, negotiation, or execution → `matter-workspaces/contract-review-matter.md`
+   - Privacy event, DPA, DSAR, or processing activity → `matter-workspaces/privacy-matter.md`
+   - Regulatory inquiry, compliance review, or enforcement → `matter-workspaces/regulatory-matter.md`
+   - Corporate transaction, M&amp;A, financing, or entity matter → `matter-workspaces/corporate-transaction-matter.md`
+   - Employment matter — termination, investigation, classification, leave, or policy → `matter-workspaces/employment-matter.md`
+   State the recommended template and the basis for the recommendation. If no template fits, say so rather than forcing a poor match.
+
+3. **Gather the matter header information.** Collect the client's full legal name and entity type, the responsible attorney, a matter name, the practice profile in use, the date opened, and the matter status. Record anything missing as a `[CONFIRM: ...]` placeholder.
+
+4. **Interview for the core matter information, section by section.** Work through the selected template's sections and ask targeted questions for what is missing: the parties; the key facts (and, separately, the assumptions); the jurisdiction and governing law; the key dates and deadlines; and the source documents. Ask for one category at a time; do not overwhelm the user with every field at once.
+
+5. **Record what is known; flag what is missing.** Fill each field with the information the user provided, or with a `[CONFIRM: ...]` placeholder. Enter every date exactly as provided and append a `[deadline verification required]` flag — never compute, extend, or infer a date.
+
+6. **Carry the gates into the workspace.** Leave the conflicts-check gate, the jurisdiction and posture gate (Gate 1), and the deadlines gate (Gate 2) as unresolved gates for the responsible attorney. Do not mark any gate cleared.
+
+7. **Seed the work-product index.** List the skills likely to be run for this matter type, drawn from the selected template, with empty status rows to be filled in as each skill is run.
+
+8. **Record an initial open-items list.** Turn every missing required input and every unresolved gate into an action item with an owner and a status of Open.
+
+9. **Assemble the populated workspace draft** using the selected template's structure, preserving the blank-template and privilege banner at the top.
+
+10. **Explain how to maintain the workspace** using the maintenance instructions in the Output Format below.
+
+## Output Format
+
+Deliver the following, labeled as a draft for attorney review:
+
+1. **Template Recommendation** — The recommended template from `matter-workspaces/`, the matter type it matches, and a one-line rationale.
+
+2. **Populated Workspace Draft** — The full selected template with every known field filled in and every unknown marked `[CONFIRM: ...]` or `[ACTION: ...]`. It retains the blank-template and privilege-designation banner at the top.
+
+3. **Maintenance Instructions** — A short, plain set of instructions for keeping the workspace current:
+   - Save the populated workspace to a matter-specific location; do not edit the blank template itself.
+   - After each skill is run, add a row to the Work-Product Index — the skill, the date, the output, its location, and its review status.
+   - Add new facts to the Key Facts section with their source; add new assumptions to the Assumptions section; never blend the two.
+   - Add every new date to the deadlines table with a `[deadline verification required]` flag; never compute a date.
+   - Update the Open Items list as actions are completed or new ones arise.
+   - Run `red-team-verifier` on any high-stakes draft before relying on it.
+   - Route the workspace to the responsible attorney to clear the gates and complete the sign-off.
+
+4. **Open Items** — The list of missing information the user or the attorney must still supply before the workspace is complete.
+
+## Attorney Verification Checklist
+
+- [ ] The selected matter-workspace template is appropriate for the matter type.
+- [ ] Client identity and the responsible attorney are confirmed.
+- [ ] All parties are identified and captured for the conflicts check.
+- [ ] The conflicts-check gate and the jurisdiction and posture gate (Gate 1) have been addressed before substantive work begins.
+- [ ] Every date in the workspace has been independently verified by the attorney; none was computed by the agent.
+- [ ] Confirmed facts, client representations, and assumptions are correctly separated.
+- [ ] Jurisdiction and governing law are confirmed.
+- [ ] The privilege designation for the populated workspace has been set by the responsible attorney.
+- [ ] All `[CONFIRM: ...]` and `[ACTION: ...]` placeholders are tracked for resolution.
+- [ ] The populated workspace is stored in an access-controlled location and shared only with authorized personnel.
+- [ ] No client-sensitive facts have been written into the blank template.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

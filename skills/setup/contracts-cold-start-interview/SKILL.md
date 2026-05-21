@@ -1,6 +1,26 @@
 ---
 name: Contracts Cold-Start Interview
-description: Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+description: "Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+practice_area: setup
+task_type: interview
+jurisdictions: []
+risk_level: low
+requires_attorney_review: true
+inputs:
+  - "Access to a contracts attorney or authorized designee"
+  - "The practice group's jurisdictions and client context"
+  - "Standard positions, escalation thresholds, and review requirements"
+outputs:
+  - "Filled contracts practice profile draft for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+tags:
+  - setup
+  - cold-start
+  - practice-profile
+  - configuration
+  - contracts
 ---
 
 # Contracts Cold-Start Interview

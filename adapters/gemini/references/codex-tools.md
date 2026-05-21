@@ -24,7 +24,7 @@ points to the same canonical `skills/` and `core/` library.
 
 1. Read `adapters/codex/AGENTS.md` — the repo-agent instructions.
 2. Read `WORKFLOW_ROUTER.md` to map the request to a skill.
-3. Read the six `core/` files.
+3. Read the seven `core/` files.
 4. Read the chosen `skills/.../SKILL.md` and any file in its `templates/`
    folder.
 

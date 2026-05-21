@@ -1,6 +1,28 @@
 ---
 name: Privacy Policy Gap Review
-description: Use when reviewing a published privacy policy or privacy notice to identify gaps, internal inconsistencies, and discrepancies between what the policy says and the organization's described actual data practices.
+description: "Use when reviewing a published privacy policy or privacy notice to identify gaps, internal inconsistencies, and discrepancies between what the policy says and the organization's described actual data practices."
+practice_area: privacy
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The published privacy policy or notice"
+  - "A description of the organization's actual data practices"
+  - "The applicable products and processing context"
+outputs:
+  - "Gap table comparing the policy to actual practice"
+  - "Recommendations for attorney review"
+related_skills:
+  - skills/privacy/dpa-review/SKILL.md
+  - skills/privacy/dsar-workflow/SKILL.md
+  - skills/privacy/pia-generation/SKILL.md
+tags:
+  - privacy
+  - privacy-policy
+  - gap-analysis
+  - policy-review
+  - disclosures
 ---
 
 # Privacy Policy Gap Review
@@ -41,6 +63,7 @@ If the policy text is missing, stop and request it. If the description of actual
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert which privacy law, regulation, or framework applies to the organization or its policy. Applicable law is always an attorney-verification item, even where the applicable framework seems obvious.
 - Do not conclude that a gap constitutes a legal violation, regulatory breach, or non-compliance. Identify gaps; attorneys determine legal consequences.
@@ -122,6 +145,16 @@ Deliver the following, in order:
 7. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 
 8. **Assumptions** — explicit list of every assumption made in the review (about practices, audience, industry norms, etc.).
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

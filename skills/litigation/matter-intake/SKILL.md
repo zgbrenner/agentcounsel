@@ -1,6 +1,26 @@
 ---
 name: Matter Intake
-description: Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.
+description: "Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review."
+practice_area: litigation
+task_type: intake
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The parties and their roles"
+  - "A description of the dispute or claims"
+  - "The procedural posture and any known key dates"
+outputs:
+  - "Structured matter intake summary with key dates and immediate action flags for attorney review"
+related_skills:
+  - skills/litigation/subpoena-triage/SKILL.md
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+tags:
+  - litigation
+  - matter-intake
+  - intake
+  - case-assessment
 ---
 
 # Matter Intake
@@ -37,6 +57,7 @@ If the client identity or a basic description of the dispute is not provided, st
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not invent, compute, or assert any procedural deadline, statute of limitations period, or response date. Mark every deadline as `[CONFIRM: attorney must verify]`.
 - Do not resolve conflicts-check results — flag that a conflicts check must be run and confirmed by the responsible attorney.

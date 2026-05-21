@@ -1,6 +1,28 @@
 ---
 name: Compliance Gap Matrix
-description: Use when mapping a set of regulatory or framework requirements against an organization's current controls to surface gaps, prioritize remediation, and produce an attorney-ready draft gap analysis.
+description: "Use when mapping a set of regulatory or framework requirements against an organization's current controls to surface gaps, prioritize remediation, and produce an attorney-ready draft gap analysis."
+practice_area: regulatory
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The regulatory or framework requirement source"
+  - "The organization's current controls"
+  - "The scope and business context of the assessment"
+outputs:
+  - "Compliance gap matrix mapping requirements to controls"
+  - "Prioritized remediation for attorney review"
+related_skills:
+  - skills/regulatory/rule-change-summary/SKILL.md
+  - skills/regulatory/enforcement-risk-memo/SKILL.md
+  - skills/corporate/entity-compliance/SKILL.md
+tags:
+  - regulatory
+  - compliance
+  - gap-analysis
+  - controls-mapping
+  - remediation
 ---
 
 # Compliance Gap Matrix
@@ -38,6 +60,7 @@ If the requirement source is not provided, stop and request it. If control descr
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert that any control satisfies a legal requirement as a binding conclusion. "Met" status in the matrix means the described control appears to address the requirement based on the information provided — not that legal compliance has been achieved or that the control would withstand regulatory scrutiny.
 - Every requirement listed must trace to the source document provided. Do not add requirements from model background knowledge without clearly marking them `[UNVERIFIED — not from provided source]`.
@@ -97,6 +120,16 @@ Deliver the following sections in order:
 7. **Open Questions** — Bulleted list of requirements whose applicability is unclear, controls whose scope is uncertain, and interpretive questions requiring attorney or subject-matter-expert resolution.
 
 8. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

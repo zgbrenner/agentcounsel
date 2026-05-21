@@ -27,6 +27,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Contracts | Contract Risk Review | `skills/contracts/contract-risk-review/SKILL.md` | Risk-reviewing a general commercial contract | Contract text, client role | Risk matrix + review |
 | Contracts | Redline Summary | `skills/contracts/redline-summary/SKILL.md` | Summarizing changes between contract drafts | Two contract versions or tracked changes | Change summary table |
 | Contracts | SOW Review | `skills/contracts/sow-review/SKILL.md` | Reviewing a statement of work against its MSA | SOW text, governing MSA | SOW review + issues table |
+| Contracts | Vendor Agreement Status | `skills/contracts/vendor-agreement-status/SKILL.md` | Consolidating the agreements in place with a vendor into a status report | Vendor identity, agreement records, relationship context | Vendor agreement status report |
 | Corporate | Board Minutes | `skills/corporate/board-minutes/SKILL.md` | Drafting minutes of a board or committee meeting | Meeting details, attendance, materials | Draft minutes |
 | Corporate | Written Consent | `skills/corporate/written-consent/SKILL.md` | Drafting a board action by written consent | The action, signatories, effective date | Draft written consent |
 | Corporate | Closing Checklist | `skills/corporate/closing-checklist/SKILL.md` | Building a transaction closing checklist and blocking analysis | Transaction agreement, deal context, diligence findings | Closing checklist |
@@ -52,6 +53,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Regulatory | Enforcement Risk Memo | `skills/regulatory/enforcement-risk-memo/SKILL.md` | Structuring an enforcement-exposure assessment | Conduct at issue, relevant rules, facts | Risk memo draft |
 | Regulatory | Rule Change Summary | `skills/regulatory/rule-change-summary/SKILL.md` | Summarizing a rule change and its impact | Rule text or official document | Summary + impact table |
 | Regulatory | Compliance Gap Matrix | `skills/regulatory/compliance-gap-matrix/SKILL.md` | Mapping requirements to controls and gaps | Requirement source, current controls | Gap matrix |
+| Regulatory | Compliance Program Tracker | `skills/regulatory/compliance-program-tracker/SKILL.md` | Tracking framework requirements, controls, evidence, and audit dates over time | Framework source, control inventory, audit context | Compliance program tracker |
 | AI Governance | AI Use Case Intake | `skills/ai-governance/ai-use-case-intake/SKILL.md` | Intaking and triaging a proposed AI use case | Use case description, model, data | Intake record + routing |
 | AI Governance | AI Vendor Terms Review | `skills/ai-governance/ai-vendor-terms-review/SKILL.md` | Reviewing AI vendor or AI-service terms | Vendor terms text | Risk table + redline points |
 | AI Governance | Model Risk Triage | `skills/ai-governance/model-risk-triage/SKILL.md` | Triaging the risk of an AI model or system | Model/system description, use, data | Risk register + tier |
@@ -63,14 +65,26 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Intellectual Property | Patent Freedom-to-Operate Triage | `skills/ip/fto-triage/SKILL.md` | First-pass triage of patent blocking risk for a product or feature | Product/feature description, jurisdictions, known patents | FTO triage memo |
 | Intellectual Property | Invention Disclosure Intake | `skills/ip/invention-intake/SKILL.md` | Screening a proposed invention and flagging filing-deadline urgency | Invention disclosure, disclosure history | Invention screen + verdict |
 | Intellectual Property | Infringement Triage | `skills/ip/infringement-triage/SKILL.md` | First-pass triage of a potential IP-infringement issue | IP right(s), party posture, evidence | Infringement triage memo |
+| Financial Crime / AML | KYC Onboarding Review | `skills/financial-crime/kyc-onboarding-review/SKILL.md` | Reviewing a client or investor onboarding packet against the firm's KYC/AML rules | Onboarding packet, KYC/AML rules grid, screening results | KYC onboarding review |
+| Financial Crime / AML | Sanctions Screening Review | `skills/financial-crime/sanctions-screening-review/SKILL.md` | Adjudicating sanctions, PEP, and adverse-media screening hits by confidence | Screening results, party identifiers, disposition policy | Screening review |
+| Legal Operations | Templated Legal Response | `skills/legal-ops/templated-legal-response/SKILL.md` | Drafting a templated response to a recurring legal inquiry with an escalation gate | The inquiry, response template, customization facts | Draft response + escalation check |
+| Legal Operations | Legal Meeting Briefing | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | Preparing a structured briefing for a meeting with legal relevance | Meeting context, background materials | Meeting briefing + action tracker |
+| Legal Operations | Signature Routing Checklist | `skills/legal-ops/signature-routing-checklist/SKILL.md` | Running a pre-signature readiness check and routing plan for a final document | The document, intended signers, approvals | Signature readiness review |
 | Setup | Contracts Cold-Start Interview | `skills/setup/contracts-cold-start-interview/SKILL.md` | Interviewing a contracts practice group to fill its practice profile | Access to a contracts attorney or designee | Filled practice profile draft |
 | Setup | Litigation Cold-Start Interview | `skills/setup/litigation-cold-start-interview/SKILL.md` | Interviewing a litigation practice group to fill its practice profile | Access to a litigation attorney or designee | Filled practice profile draft |
 | Setup | Privacy Cold-Start Interview | `skills/setup/privacy-cold-start-interview/SKILL.md` | Interviewing a privacy practice group to fill its practice profile | Access to a privacy attorney or designee | Filled practice profile draft |
 | Setup | Corporate Cold-Start Interview | `skills/setup/corporate-cold-start-interview/SKILL.md` | Interviewing a corporate practice group to fill its practice profile | Access to a corporate attorney or designee | Filled practice profile draft |
-| Legal Methodology | Red-Team Verifier | `skills/legal-methodology/red-team-verifier/SKILL.md` | Adversarially stress-testing a draft before attorney review | A draft legal work product to review | Verification findings report |
+| Setup | Create Matter Workspace | `skills/setup/create-matter-workspace/SKILL.md` | Selecting a matter template and producing a populated workspace draft for a new matter | Matter type, client, responsible attorney, known parties / dates / documents | Populated matter workspace draft |
+| Legal Methodology | Red-Team Verifier | `skills/legal-methodology/red-team-verifier/SKILL.md` | A final quality-control pass on any legal output before it is relied upon | Any legal draft or AI output — memo, review, letter, filing, analysis | Verification findings report |
 | Legal Methodology | Statutory Interpretation | `skills/legal-methodology/statutory-interpretation/SKILL.md` | Working through a statutory, regulatory, or contractual provision | Provision text, the interpretive question | Interpretation worksheet |
 | Legal Methodology | Risk Assessment | `skills/legal-methodology/risk-assessment/SKILL.md` | Identifying, rating, and prioritizing legal risk | The situation, known facts, client posture | Prioritized risk register |
 | Legal Methodology | Source Validation | `skills/legal-methodology/source-validation/SKILL.md` | Checking that cited sources and claims exist and are accurate | A draft and the sources it cites | Source validation table |
+
+> **Before relying on any high-stakes legal output**, run `red-team-verifier` (`skills/legal-methodology/red-team-verifier/SKILL.md`) as a final quality-control pass. It adversarially stress-tests any memo, review, letter, filing, risk matrix, or analysis — the output of any skill in this index, or of another tool — for invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues. A PASS verdict does not replace attorney review.
+
+## Business-stakeholder summary mode
+
+Many commercial skills — across **contracts**, **product legal**, **privacy**, **regulatory**, **employment**, and **corporate** — offer an **optional Business Stakeholder Summary** in their Output Format. It is a plain-language layer for briefing non-lawyer decision-makers (product owners, deal leads, managers, founders, executives): a **Business Summary**, the **Decision Needed**, a **Recommended Ask**, a **Fallback Position**, and an **Escalation Needed?** call. Ask for it when the output is going to the business rather than to the supervising attorney. It is an addition to the skill's normal deliverable, never a replacement, and it does not change the attorney-review requirement. See `core/business-stakeholder-communication.md`.
 
 ## Practice areas at a glance
 
@@ -84,6 +98,8 @@ A complete catalog of every skill in the library. The canonical source of truth 
 - **Regulatory** — enforcement risk, rule changes, and compliance gaps.
 - **AI Governance** — AI use-case intake, vendor terms, model risk, and AI policies.
 - **Intellectual Property** — trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, and open-source licensing.
+- **Financial Crime / AML** — KYC onboarding review and sanctions / PEP / adverse-media screening review.
+- **Legal Operations** — templated legal responses, meeting briefings, and signature routing.
 - **Setup** — cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile.
 - **Legal Methodology** — cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.
 

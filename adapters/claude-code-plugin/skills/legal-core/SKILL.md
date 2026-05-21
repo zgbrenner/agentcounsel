@@ -9,7 +9,7 @@ description: Load first for any legal task. Establishes the AgentCounsel core op
 
 Establish the AgentCounsel core operating rules for any legal task. This is not a workflow skill — it is the foundation. Load it before any other AgentCounsel skill so that every deliverable is produced as **draft legal work product for attorney review**, never as legal advice.
 
-> This is a packaged copy of the AgentCounsel core rules. The canonical source is the repository's `core/` directory (`legal-work-product.md`, `confidentiality-and-privilege.md`, `source-and-citation-discipline.md`, `jurisdiction-and-deadline-gates.md`, `attorney-review-checklist.md`, `output-format-rules.md`). Regenerate this file from `core/` before release.
+> This is a packaged copy of the AgentCounsel core rules. The canonical source is the repository's `core/` directory (`legal-work-product.md`, `confidentiality-and-privilege.md`, `source-and-citation-discipline.md`, `jurisdiction-and-deadline-gates.md`, `attorney-review-checklist.md`, `output-format-rules.md`, `business-stakeholder-communication.md`). Regenerate this file from `core/` before release.
 
 ## Use When
 

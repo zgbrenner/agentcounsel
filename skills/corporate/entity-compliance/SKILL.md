@@ -1,6 +1,24 @@
 ---
 name: Entity Compliance Review
-description: Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.
+description: "Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review."
+practice_area: corporate
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The list of legal entities to review"
+  - "Each entity's periodic filing and registered-agent obligations"
+  - "Known filing and good-standing status"
+outputs:
+  - "Entity compliance review flagging overdue, due-soon, and unknown items"
+related_skills:
+  - skills/regulatory/compliance-gap-matrix/SKILL.md
+tags:
+  - corporate
+  - entity-compliance
+  - good-standing
+  - corporate-filings
 ---
 
 # Entity Compliance Review
@@ -50,6 +68,7 @@ If the entity list is not provided, stop and request it. Do not proceed on a par
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. Attorney review and sign-off are required before any filing obligation or compliance posture is relied upon.
 - **Never populate a filing obligation, deadline, fee, or requirement from model background knowledge.** Filing rules are jurisdiction-specific, entity-type-specific, and subject to change. If the user has not supplied an obligation, record its status as "unknown" and flag it for confirmation with the registered agent or the relevant authority.
 - **Entity-type discipline.** Filing obligations depend on both the jurisdiction and the entity type. A corporation, an LLC, and a limited partnership formed in the same jurisdiction can have materially different obligations, due dates, and fees. Never transfer an obligation from one entity type to another. Never assume that because one entity in a jurisdiction has a particular obligation, another entity of a different type in the same jurisdiction shares it.
@@ -105,6 +124,16 @@ Deliver:
 5. **Attorney Verification Checklist** — the checklist from this skill.
 
 Use placeholders consistently. Do not fill any gap with content derived from model background knowledge about filing rules or deadlines.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

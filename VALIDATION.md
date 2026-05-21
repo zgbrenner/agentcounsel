@@ -22,9 +22,16 @@ Run it from anywhere; the script locates the repository root relative to its own
 - Every `SKILL.md` has an H1 title.
 - Every canonical skill under `skills/` contains all eight required sections, in order: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
 
+**Skill metadata**
+
+- Every canonical skill under `skills/` declares valid standardized frontmatter — all eleven fields (`name`, `description`, `practice_area`, `task_type`, `jurisdictions`, `risk_level`, `requires_attorney_review`, `inputs`, `outputs`, `related_skills`, `tags`), each with the correct type.
+- `description` is trigger-rich and begins with `Use when`; `practice_area` matches the directory area; `task_type` and `risk_level` use the allowed values; `related_skills` entries resolve to real skills. The full standard is in `docs/SKILL_METADATA_STANDARD.md`.
+- `metadata/index.json` exists and matches the canonical skills. If it is stale, run `python scripts/build_skill_index.py` to regenerate it.
+
 **Safety and content**
 
 - No file describes AgentCounsel as providing legal advice. Outputs must be described as draft legal work product for attorney review.
+- Every `SKILL.md` references the source/citation discipline core rule (`core/source-and-citation-discipline.md`) or carries equivalent language against inventing legal authority or citations.
 - No file contains the forbidden framing that this project is a ChatGPT Project instructions or package repository.
 - No substantive file contains a leftover placeholder marker (such as a TODO or FIXME note, or lorem ipsum filler text).
 
@@ -54,9 +61,12 @@ The script validates structure and consistency — not legal accuracy. It cannot
 
 - Before opening or updating a pull request.
 - After adding, renaming, or moving a skill, template, or adapter file.
+- After editing a skill's frontmatter — then run `python scripts/build_skill_index.py` to regenerate `metadata/index.json` (see `docs/SKILL_METADATA_STANDARD.md`).
 - After editing `SKILLS_INDEX.md` or `WORKFLOW_ROUTER.md`.
 - After running `python scripts/sync_plugin_skills.py` to regenerate the plugin bundle (see `PLUGIN_SYNC.md`).
 
 ## Note
 
 `scripts/validate_repo.py` and this file (`VALIDATION.md`) are excluded from the forbidden-phrase scans, because they necessarily describe the phrases being checked for.
+
+Generated build output is not validated as repository source: the scan skips `dist/` (platform install packs from `scripts/build_platform_packs.py`) and `node_modules/`. `scripts/build_platform_packs.py` performs its own build-time validation of the packs it generates.

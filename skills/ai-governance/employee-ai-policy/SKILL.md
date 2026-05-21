@@ -1,6 +1,28 @@
 ---
 name: Employee AI Policy
-description: Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.
+description: "Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review."
+practice_area: ai-governance
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The draft or existing internal employee AI-use policy"
+  - "Where no policy exists, the organization's AI-use context"
+  - "The tools and use cases the policy must cover"
+outputs:
+  - "Gap and issues table"
+  - "Prioritized recommendations for attorney and HR review"
+related_skills:
+  - skills/ai-governance/ai-vendor-terms-review/SKILL.md
+  - skills/ai-governance/ai-use-case-intake/SKILL.md
+  - skills/employment/employee-policy-review/SKILL.md
+tags:
+  - ai-governance
+  - ai
+  - employee-policy
+  - policy-review
+  - gap-analysis
 ---
 
 # Employee AI Policy
@@ -38,6 +60,7 @@ If the organization context and jurisdictions are not provided, stop and request
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert what any law or regulation requires of an employee AI policy. Employment law, privacy law, and AI regulation are jurisdiction-specific and fast-moving — flag regulatory considerations for attorney verification.
 - Do not assert that a policy is legally compliant or sufficient.

@@ -1,6 +1,25 @@
 ---
 name: Source Validation
-description: Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`.
+description: "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`."
+practice_area: legal-methodology
+task_type: verification
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The draft legal work product to check"
+  - "The cited sources, authorities, and underlying record"
+  - "The claims, quotations, and dates to validate"
+outputs:
+  - "Source validation table flagging unverifiable or inaccurate citations for attorney review"
+related_skills:
+  - skills/legal-methodology/red-team-verifier/SKILL.md
+  - skills/legal-research/legal-research-memo/SKILL.md
+tags:
+  - legal-methodology
+  - source-validation
+  - citation-check
+  - verification
 ---
 
 # Source Validation

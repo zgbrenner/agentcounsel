@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Subpoena Triage — AgentCounsel</title>
-<meta name="description" content="Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.">
+<meta name="description" content="&quot;Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.</p>
+<p>"Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -52,7 +52,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li><strong>The compliance deadline is time-critical. Never compute, assert, or represent the compliance deadline as established. Mark it as <code>[CRITICAL — CONFIRM IMMEDIATELY: attorney must verify the deadline and any available extensions before any other step is taken]</code>.</strong></li><li>Do not assert that any objection is valid or will be sustained — identify potential objections for attorney evaluation only.</li><li>Do not assert that any document or communication is privileged — flag categories of potentially privileged material for attorney-directed privilege review.</li><li>Do not instruct the recipient to withhold any documents without attorney authorization. Unauthorized non-compliance with a subpoena can result in contempt.</li><li>Do not assert that a litigation hold is or is not required — flag it as a preservation obligation requiring attorney evaluation.</li><li>Distinguish what the subpoena says from what is assumed or inferred. Quote the subpoena accurately.</li><li>Do not advise on whether to comply, object, negotiate, or seek a protective order — identify the options and flag them for attorney decision.</li><li>Identify who must be notified internally but do not assert that notice is or is not legally required — flag it for attorney confirmation.</li><li><strong>KILL-SWITCH — Grand-jury subpoena or criminal process:</strong> If at any point the subpoena is identified as a grand-jury subpoena or any other form of criminal process, stop this workflow immediately. Do not complete or deliver a civil triage summary. Flag the matter as criminal process, note that the procedures, risks, and obligations are materially different from those that apply to civil subpoenas, and route immediately to criminal-defense counsel. The same stop-and-route rule applies if, after reviewing the document, it becomes apparent that what was presented as a civil subpoena is in fact criminal process.</li><li><strong>KILL-SWITCH — Civil investigative demand:</strong> If the document is a civil investigative demand issued by an enforcement or regulatory authority, stop this civil-triage workflow immediately. Flag that the document is a civil investigative demand, note that it carries enforcement-specific requirements distinct from ordinary civil subpoenas, and route to counsel experienced with the issuing authority.</li><li>Preserve confidentiality: the triage summary is attorney work product. Limit distribution.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li><strong>The compliance deadline is time-critical. Never compute, assert, or represent the compliance deadline as established. Mark it as <code>[CRITICAL — CONFIRM IMMEDIATELY: attorney must verify the deadline and any available extensions before any other step is taken]</code>.</strong></li><li>Do not assert that any objection is valid or will be sustained — identify potential objections for attorney evaluation only.</li><li>Do not assert that any document or communication is privileged — flag categories of potentially privileged material for attorney-directed privilege review.</li><li>Do not instruct the recipient to withhold any documents without attorney authorization. Unauthorized non-compliance with a subpoena can result in contempt.</li><li>Do not assert that a litigation hold is or is not required — flag it as a preservation obligation requiring attorney evaluation.</li><li>Distinguish what the subpoena says from what is assumed or inferred. Quote the subpoena accurately.</li><li>Do not advise on whether to comply, object, negotiate, or seek a protective order — identify the options and flag them for attorney decision.</li><li>Identify who must be notified internally but do not assert that notice is or is not legally required — flag it for attorney confirmation.</li><li><strong>KILL-SWITCH — Grand-jury subpoena or criminal process:</strong> If at any point the subpoena is identified as a grand-jury subpoena or any other form of criminal process, stop this workflow immediately. Do not complete or deliver a civil triage summary. Flag the matter as criminal process, note that the procedures, risks, and obligations are materially different from those that apply to civil subpoenas, and route immediately to criminal-defense counsel. The same stop-and-route rule applies if, after reviewing the document, it becomes apparent that what was presented as a civil subpoena is in fact criminal process.</li><li><strong>KILL-SWITCH — Civil investigative demand:</strong> If the document is a civil investigative demand issued by an enforcement or regulatory authority, stop this civil-triage workflow immediately. Flag that the document is a civil investigative demand, note that it carries enforcement-specific requirements distinct from ordinary civil subpoenas, and route to counsel experienced with the issuing authority.</li><li>Preserve confidentiality: the triage summary is attorney work product. Limit distribution.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -85,7 +85,27 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Subpoena Triage
-description: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+description: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
+practice_area: litigation
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received subpoena"
+  - "The recipient's role and relationship to the matter"
+  - "Any related preservation or notification context"
+outputs:
+  - "Structured subpoena triage summary identifying deadlines, scope, objections, and privilege issues for immediate attorney review"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - subpoena
+  - triage
+  - discovery
+  - deadlines
 ---
 
 # Subpoena Triage
@@ -125,6 +145,7 @@ If the subpoena text is not provided, stop and request it. Do not complete a tri
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - **The compliance deadline is time-critical. Never compute, assert, or represent the compliance deadline as established. Mark it as `[CRITICAL — CONFIRM IMMEDIATELY: attorney must verify the deadline and any available extensions before any other step is taken]`.**
 - Do not assert that any objection is valid or will be sustained — identify potential objections for attorney evaluation only.
@@ -233,7 +254,27 @@ Operating rules (these always apply):
 === BEGIN SKILL: Subpoena Triage ===
 ---
 name: Subpoena Triage
-description: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+description: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
+practice_area: litigation
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received subpoena"
+  - "The recipient's role and relationship to the matter"
+  - "Any related preservation or notification context"
+outputs:
+  - "Structured subpoena triage summary identifying deadlines, scope, objections, and privilege issues for immediate attorney review"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - subpoena
+  - triage
+  - discovery
+  - deadlines
 ---
 
 # Subpoena Triage
@@ -273,6 +314,7 @@ If the subpoena text is not provided, stop and request it. Do not complete a tri
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - **The compliance deadline is time-critical. Never compute, assert, or represent the compliance deadline as established. Mark it as `[CRITICAL — CONFIRM IMMEDIATELY: attorney must verify the deadline and any available extensions before any other step is taken]`.**
 - Do not assert that any objection is valid or will be sustained — identify potential objections for attorney evaluation only.

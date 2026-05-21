@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Employee AI Policy — AgentCounsel</title>
-<meta name="description" content="Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.">
+<meta name="description" content="&quot;Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.</p>
+<p>"Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -53,7 +53,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert what any law or regulation requires of an employee AI policy. Employment law, privacy law, and AI regulation are jurisdiction-specific and fast-moving — flag regulatory considerations for attorney verification.</li><li>Do not assert that a policy is legally compliant or sufficient.</li><li>Review only the text actually provided. Do not fabricate policy provisions, assume terms that are not stated, or invent regulatory requirements.</li><li>Distinguish what the policy says, what is missing or ambiguous, and what requires attorney or specialist verification.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever jurisdiction-specific legal input is required or a provision is ambiguous.</li><li>Employee monitoring and consent topics are legally sensitive and jurisdiction-specific — always flag for employment law specialist review.</li><li>Confidentiality and privilege implications of employee AI use are a significant risk area — ensure these are flagged prominently.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert what any law or regulation requires of an employee AI policy. Employment law, privacy law, and AI regulation are jurisdiction-specific and fast-moving — flag regulatory considerations for attorney verification.</li><li>Do not assert that a policy is legally compliant or sufficient.</li><li>Review only the text actually provided. Do not fabricate policy provisions, assume terms that are not stated, or invent regulatory requirements.</li><li>Distinguish what the policy says, what is missing or ambiguous, and what requires attorney or specialist verification.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever jurisdiction-specific legal input is required or a provision is ambiguous.</li><li>Employee monitoring and consent topics are legally sensitive and jurisdiction-specific — always flag for employment law specialist review.</li><li>Confidentiality and privilege implications of employee AI use are a significant risk area — ensure these are flagged prominently.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -95,7 +95,29 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Employee AI Policy
-description: Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.
+description: "Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review."
+practice_area: ai-governance
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The draft or existing internal employee AI-use policy"
+  - "Where no policy exists, the organization's AI-use context"
+  - "The tools and use cases the policy must cover"
+outputs:
+  - "Gap and issues table"
+  - "Prioritized recommendations for attorney and HR review"
+related_skills:
+  - skills/ai-governance/ai-vendor-terms-review/SKILL.md
+  - skills/ai-governance/ai-use-case-intake/SKILL.md
+  - skills/employment/employee-policy-review/SKILL.md
+tags:
+  - ai-governance
+  - ai
+  - employee-policy
+  - policy-review
+  - gap-analysis
 ---
 
 # Employee AI Policy
@@ -133,6 +155,7 @@ If the organization context and jurisdictions are not provided, stop and request
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert what any law or regulation requires of an employee AI policy. Employment law, privacy law, and AI regulation are jurisdiction-specific and fast-moving — flag regulatory considerations for attorney verification.
 - Do not assert that a policy is legally compliant or sufficient.
@@ -247,7 +270,29 @@ Operating rules (these always apply):
 === BEGIN SKILL: Employee AI Policy ===
 ---
 name: Employee AI Policy
-description: Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review.
+description: "Use when reviewing a draft internal employee AI-use policy — or drafting review criteria when no policy exists — to identify gaps, inconsistencies, and priority issues for attorney and HR review."
+practice_area: ai-governance
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The draft or existing internal employee AI-use policy"
+  - "Where no policy exists, the organization's AI-use context"
+  - "The tools and use cases the policy must cover"
+outputs:
+  - "Gap and issues table"
+  - "Prioritized recommendations for attorney and HR review"
+related_skills:
+  - skills/ai-governance/ai-vendor-terms-review/SKILL.md
+  - skills/ai-governance/ai-use-case-intake/SKILL.md
+  - skills/employment/employee-policy-review/SKILL.md
+tags:
+  - ai-governance
+  - ai
+  - employee-policy
+  - policy-review
+  - gap-analysis
 ---
 
 # Employee AI Policy
@@ -285,6 +330,7 @@ If the organization context and jurisdictions are not provided, stop and request
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert what any law or regulation requires of an employee AI policy. Employment law, privacy law, and AI regulation are jurisdiction-specific and fast-moving — flag regulatory considerations for attorney verification.
 - Do not assert that a policy is legally compliant or sufficient.

@@ -1,6 +1,27 @@
 ---
 name: Severance Review
-description: Use when reviewing a severance or separation agreement to produce a structured analysis of consideration, release scope, restrictive covenants, and open legal issues for attorney review.
+description: "Use when reviewing a severance or separation agreement to produce a structured analysis of consideration, release scope, restrictive covenants, and open legal issues for attorney review."
+practice_area: employment
+task_type: review
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The severance or separation agreement text"
+  - "The party the review is for: employer or employee"
+  - "The termination and consideration context"
+outputs:
+  - "Structured analysis of consideration, release scope, and restrictive covenants"
+  - "Open legal issues for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/employment/termination-risk/SKILL.md
+tags:
+  - employment
+  - severance
+  - separation-agreement
+  - release-of-claims
+  - contract-review
 ---
 
 # Severance Review
@@ -35,6 +56,7 @@ If the agreement text is not provided, stop and request it. Do not summarize, an
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Review only the language actually present in the provided document. Do not infer or supply terms that are not written.
 - Do not assert what claims are or are not waivable in any jurisdiction. Flag all waiver questions for attorney confirmation.
@@ -88,6 +110,16 @@ Deliver the following sections, clearly labeled:
 9. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]` throughout for any unverified legal or factual point. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

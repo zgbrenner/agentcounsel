@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Legal Hold — AgentCounsel</title>
-<meta name="description" content="Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.">
+<meta name="description" content="&quot;Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.</p>
+<p>"Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -56,7 +56,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>The hold notice must not be distributed to any custodian without attorney review, revision, and sign-off. Premature distribution — or distribution of an unreviewed notice — can waive privilege, create obligations the attorney has not intended, or lead to inconsistent preservation efforts.</li><li>Do not decide whether a duty to preserve has been triggered, when it was triggered, or what the governing standard is. The existence and timing of the preservation duty vary by jurisdiction, the nature of the matter, and the procedural posture — treat all such determinations as <code>[verify jurisdiction]</code> until the attorney confirms them.</li><li>Do not compute, assert, or assume any preservation trigger date or hold effective date. Use only attorney-supplied dates and mark any date the attorney has not confirmed with <code>[deadline verification required]</code>.</li><li>Scope is an attorney judgment call. An over-broad scope creates disproportionate burden and cost; an under-broad scope risks losing evidence and, in the worst case, sanctions. Flag scope questions explicitly rather than resolving them silently.</li><li>Departed custodians require special attention. Their data cannot be preserved through a personal-acknowledgment workflow alone; system-level preservation must be arranged with IT or a records custodian. Flag every departed custodian with <code>[ACTION: attorney to arrange system-level preservation with IT for departed custodian — personal acknowledgment is insufficient]</code>.</li><li>For Release mode, confirm — and flag for attorney confirmation — that no related matter, appeal, cross-claim, or insurance recovery is live that could independently sustain the obligation. Releasing a hold prematurely can trigger the same consequences as failing to issue one.</li><li>Do not invent legal authority. The duty to preserve, the consequences of non-preservation (including potential sanctions), and the legal standards that govern scope all vary by jurisdiction and forum — treat all such references as <code>[verify jurisdiction]</code> and <code>[citation needed]</code> unless the attorney has supplied specific authority for inclusion.</li><li>Distinguish what the attorney has confirmed from what has been assumed. Every assumption must be flagged with <code>[CONFIRM: ...]</code> or <code>[ATTORNEY TO CONFIRM: ...]</code>.</li><li>Preserve confidentiality and privilege. The hold notice is an internal communication. Keep client-sensitive facts out of reusable copies of the template.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>The hold notice must not be distributed to any custodian without attorney review, revision, and sign-off. Premature distribution — or distribution of an unreviewed notice — can waive privilege, create obligations the attorney has not intended, or lead to inconsistent preservation efforts.</li><li>Do not decide whether a duty to preserve has been triggered, when it was triggered, or what the governing standard is. The existence and timing of the preservation duty vary by jurisdiction, the nature of the matter, and the procedural posture — treat all such determinations as <code>[verify jurisdiction]</code> until the attorney confirms them.</li><li>Do not compute, assert, or assume any preservation trigger date or hold effective date. Use only attorney-supplied dates and mark any date the attorney has not confirmed with <code>[deadline verification required]</code>.</li><li>Scope is an attorney judgment call. An over-broad scope creates disproportionate burden and cost; an under-broad scope risks losing evidence and, in the worst case, sanctions. Flag scope questions explicitly rather than resolving them silently.</li><li>Departed custodians require special attention. Their data cannot be preserved through a personal-acknowledgment workflow alone; system-level preservation must be arranged with IT or a records custodian. Flag every departed custodian with <code>[ACTION: attorney to arrange system-level preservation with IT for departed custodian — personal acknowledgment is insufficient]</code>.</li><li>For Release mode, confirm — and flag for attorney confirmation — that no related matter, appeal, cross-claim, or insurance recovery is live that could independently sustain the obligation. Releasing a hold prematurely can trigger the same consequences as failing to issue one.</li><li>Do not invent legal authority. The duty to preserve, the consequences of non-preservation (including potential sanctions), and the legal standards that govern scope all vary by jurisdiction and forum — treat all such references as <code>[verify jurisdiction]</code> and <code>[citation needed]</code> unless the attorney has supplied specific authority for inclusion.</li><li>Distinguish what the attorney has confirmed from what has been assumed. Every assumption must be flagged with <code>[CONFIRM: ...]</code> or <code>[ATTORNEY TO CONFIRM: ...]</code>.</li><li>Preserve confidentiality and privilege. The hold notice is an internal communication. Keep client-sensitive facts out of reusable copies of the template.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -84,7 +84,27 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Legal Hold
-description: Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.
+description: "Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: critical
+requires_attorney_review: true
+inputs:
+  - "The matter and the attorney-confirmed preservation trigger date"
+  - "The preservation scope"
+  - "The custodians and data systems involved"
+outputs:
+  - "Draft litigation hold notice and preservation-scope summary for attorney review"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+tags:
+  - litigation
+  - legal-hold
+  - preservation
+  - ediscovery
+  - spoliation
 ---
 
 # Legal Hold
@@ -135,6 +155,7 @@ If matter identification, trigger event, custodian list, or preservation scope i
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The hold notice must not be distributed to any custodian without attorney review, revision, and sign-off. Premature distribution — or distribution of an unreviewed notice — can waive privilege, create obligations the attorney has not intended, or lead to inconsistent preservation efforts.
 - Do not decide whether a duty to preserve has been triggered, when it was triggered, or what the governing standard is. The existence and timing of the preservation duty vary by jurisdiction, the nature of the matter, and the procedural posture — treat all such determinations as `[verify jurisdiction]` until the attorney confirms them.
@@ -232,7 +253,27 @@ Operating rules (these always apply):
 === BEGIN SKILL: Legal Hold ===
 ---
 name: Legal Hold
-description: Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.
+description: "Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: critical
+requires_attorney_review: true
+inputs:
+  - "The matter and the attorney-confirmed preservation trigger date"
+  - "The preservation scope"
+  - "The custodians and data systems involved"
+outputs:
+  - "Draft litigation hold notice and preservation-scope summary for attorney review"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+tags:
+  - litigation
+  - legal-hold
+  - preservation
+  - ediscovery
+  - spoliation
 ---
 
 # Legal Hold
@@ -283,6 +324,7 @@ If matter identification, trigger event, custodian list, or preservation scope i
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The hold notice must not be distributed to any custodian without attorney review, revision, and sign-off. Premature distribution — or distribution of an unreviewed notice — can waive privilege, create obligations the attorney has not intended, or lead to inconsistent preservation efforts.
 - Do not decide whether a duty to preserve has been triggered, when it was triggered, or what the governing standard is. The existence and timing of the preservation duty vary by jurisdiction, the nature of the matter, and the procedural posture — treat all such determinations as `[verify jurisdiction]` until the attorney confirms them.

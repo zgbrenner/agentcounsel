@@ -22,6 +22,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/contracts:review` | `skills/contracts/contract-risk-review/SKILL.md` | "review this contract", "flag the risks in this MSA" | Full contract text, client role, business context | Risk matrix and prioritized issue list | `/contracts:nda`, `/contracts:sow`, `/privacy:dpa` |
 | `/contracts:redline-summary` | `skills/contracts/redline-summary/SKILL.md` | "what changed between these drafts", "summarize this redline" | Two contract versions or tracked changes | Change summary table | `/contracts:review` |
 | `/contracts:sow` | `skills/contracts/sow-review/SKILL.md` | "review this SOW", "does this SOW match the MSA" | SOW text, governing MSA | SOW review and issues table | `/contracts:review` |
+| `/contracts:vendor-status` | `skills/contracts/vendor-agreement-status/SKILL.md` | "vendor agreement status", "what agreements do we have with this vendor" | Vendor identity, agreement records, relationship context | Vendor agreement status report | `/contracts:review`, `/privacy:dpa` |
 
 ## Litigation
 
@@ -92,6 +93,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/regulatory:enforcement-risk` | `skills/regulatory/enforcement-risk-memo/SKILL.md` | "assess our enforcement exposure" | Conduct at issue, relevant rules, facts | Enforcement risk memo | `/method:risk-assessment` |
 | `/regulatory:rule-change` | `skills/regulatory/rule-change-summary/SKILL.md` | "summarize this new rule and its impact" | Rule text or official document | Summary and impact table | `/regulatory:gap-matrix` |
 | `/regulatory:gap-matrix` | `skills/regulatory/compliance-gap-matrix/SKILL.md` | "map these requirements against our controls" | Requirement source, current controls | Compliance gap matrix | `/regulatory:rule-change` |
+| `/regulatory:compliance-tracker` | `skills/regulatory/compliance-program-tracker/SKILL.md` | "track our compliance with this framework", "audit prep" | Framework source, control inventory, audit context | Compliance program tracker | `/regulatory:gap-matrix`, `/regulatory:rule-change` |
 
 ## AI Governance
 
@@ -114,9 +116,24 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/ip:invention` | `skills/ip/invention-intake/SKILL.md` | "screen this invention disclosure" | Invention disclosure, disclosure history | Invention screen and verdict | `/ip:fto` |
 | `/ip:infringement` | `skills/ip/infringement-triage/SKILL.md` | "is this infringing", "triage a possible infringement" | IP right(s), party posture, evidence | Infringement triage memo | `/ip:fto`, `/litigation:claim-chart` |
 
+## Financial Crime / AML
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/aml:kyc-onboarding` | `skills/financial-crime/kyc-onboarding-review/SKILL.md` | "run KYC on this client", "review this onboarding packet" | Onboarding packet, KYC/AML rules grid, screening results | KYC onboarding review and escalation packet | `/aml:screening` |
+| `/aml:screening` | `skills/financial-crime/sanctions-screening-review/SKILL.md` | "review these screening hits", "adjudicate these sanctions or PEP matches" | Screening results, party identifiers, disposition policy | Screening review with recommended dispositions | `/aml:kyc-onboarding` |
+
+## Legal Operations
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/legal-ops:response` | `skills/legal-ops/templated-legal-response/SKILL.md` | "draft a response to this DSR / litigation hold / vendor question" | The inquiry, response template, customization facts | Draft response with escalation-gate result | `/privacy:dsar`, `/litigation:legal-hold` |
+| `/legal-ops:meeting-brief` | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | "prepare me for this meeting", "build a meeting briefing" | Meeting context, background materials | Meeting briefing and action-item tracker | `/corporate:board-minutes` |
+| `/legal-ops:signature` | `skills/legal-ops/signature-routing-checklist/SKILL.md` | "is this ready to sign", "set up signing for this document" | The document, intended signers, approvals | Signature readiness review and routing plan | `/contracts:review` |
+
 ## Setup
 
-Commands for configuring AgentCounsel for a practice group. Each runs a cold-start interview and produces a filled-in practice profile under `practice-profiles/`.
+Commands for configuring AgentCounsel and opening a matter. The cold-start interviews configure a practice group and produce a filled-in practice profile under `practice-profiles/`; `create-matter-workspace` sets up a single matter file under `matter-workspaces/`.
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -124,6 +141,7 @@ Commands for configuring AgentCounsel for a practice group. Each runs a cold-sta
 | `/setup:litigation` | `skills/setup/litigation-cold-start-interview/SKILL.md` | "configure the litigation practice" | A knowledgeable litigation attorney or designee | Filled `practice-profiles/litigation.md` draft | `/litigation:intake` |
 | `/setup:privacy` | `skills/setup/privacy-cold-start-interview/SKILL.md` | "configure the privacy practice" | A knowledgeable privacy attorney or designee | Filled `practice-profiles/privacy.md` draft | `/privacy:dpa` |
 | `/setup:corporate` | `skills/setup/corporate-cold-start-interview/SKILL.md` | "configure the corporate practice" | A knowledgeable corporate attorney or designee | Filled `practice-profiles/corporate.md` draft | `/corporate:closing-checklist` |
+| `/setup:matter-workspace` | `skills/setup/create-matter-workspace/SKILL.md` | "set up a matter", "create a workspace", "organize this matter" | Matter type, client, responsible attorney, known parties / dates / documents | Populated matter workspace draft | `/litigation:intake` |
 
 ## Legal Methodology
 

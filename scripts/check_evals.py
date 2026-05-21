@@ -28,15 +28,16 @@ def err(msg: str) -> None:
 
 
 # The eight skills that must each have a sample eval file under evals/skills/.
+# Each slug matches the canonical skill folder name under skills/.
 REQUIRED_EVAL_SLUGS = [
     "contract-risk-review",
     "nda-review",
-    "litigation-matter-intake",
-    "chronology-builder",
+    "matter-intake",
+    "litigation-chronology",
     "privilege-log-review",
     "dpa-review",
-    "product-launch-review",
-    "regulatory-gap-analysis",
+    "launch-review",
+    "compliance-gap-matrix",
 ]
 
 # The recurring shared assertions evals/shared/assertions.md must define.

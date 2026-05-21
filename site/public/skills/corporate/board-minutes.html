@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Board Minutes — AgentCounsel</title>
-<meta name="description" content="Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.">
+<meta name="description" content="&quot;Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.</p>
+<p>"Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -53,7 +53,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice. An attorney must review, revise, and authorize the finalization and adoption of any minutes before they become a corporate record.</li><li>Do not invent discussion content, resolution language, attendee names, exhibit descriptions, voting counts, or quorum thresholds. Where materials are missing, insert a clearly labeled placeholder rather than filling the gap with assumed content.</li><li>Do not assert or apply specific statutes, corporate-code sections, or jurisdiction-specific rules. Quorum requirements, notice rules, voting standards, and procedural requirements vary by jurisdiction and by the entity's governing documents. Treat all such requirements as <code>[verify jurisdiction]</code> items for the attorney.</li><li>Treat model background knowledge about corporate law and procedure as unverified. Do not carry it into the draft as stated authority.</li><li>Distinguish what the meeting materials actually say from what you assume and from what the attorney must confirm. Label assumptions explicitly.</li><li>The draft minutes are attorney work product; they reflect the drafting attorney's mental impressions and should not be circulated as if adopted. The agent does not adopt, finalize, sign, or circulate minutes.</li><li>A quorum defect is a substantive legal problem. If a quorum was not present, do not draft minutes that imply a valid meeting occurred (see Workflow, Step 4).</li><li>Preserve confidentiality and privilege. Do not place client-sensitive facts, sensitive discussion content, or identifying transaction details into a reusable copy of the template.</li><li>Flag every uncertainty with a bracketed placeholder (<code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[verify jurisdiction]</code>). Never resolve uncertainty silently.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice. An attorney must review, revise, and authorize the finalization and adoption of any minutes before they become a corporate record.</li><li>Do not invent discussion content, resolution language, attendee names, exhibit descriptions, voting counts, or quorum thresholds. Where materials are missing, insert a clearly labeled placeholder rather than filling the gap with assumed content.</li><li>Do not assert or apply specific statutes, corporate-code sections, or jurisdiction-specific rules. Quorum requirements, notice rules, voting standards, and procedural requirements vary by jurisdiction and by the entity's governing documents. Treat all such requirements as <code>[verify jurisdiction]</code> items for the attorney.</li><li>Treat model background knowledge about corporate law and procedure as unverified. Do not carry it into the draft as stated authority.</li><li>Distinguish what the meeting materials actually say from what you assume and from what the attorney must confirm. Label assumptions explicitly.</li><li>The draft minutes are attorney work product; they reflect the drafting attorney's mental impressions and should not be circulated as if adopted. The agent does not adopt, finalize, sign, or circulate minutes.</li><li>A quorum defect is a substantive legal problem. If a quorum was not present, do not draft minutes that imply a valid meeting occurred (see Workflow, Step 4).</li><li>Preserve confidentiality and privilege. Do not place client-sensitive facts, sensitive discussion content, or identifying transaction details into a reusable copy of the template.</li><li>Flag every uncertainty with a bracketed placeholder (<code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[verify jurisdiction]</code>). Never resolve uncertainty silently.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -80,7 +80,26 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Board Minutes
-description: Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.
+description: "Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review."
+practice_area: corporate
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "Meeting details: entity, body, date, time, and location"
+  - "Attendance and quorum information"
+  - "Agenda items, materials presented, and actions taken"
+outputs:
+  - "Draft minutes of the board or committee meeting for attorney review"
+related_skills:
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - corporate
+  - governance
+  - board-minutes
+  - corporate-records
+  - drafting
 ---
 
 # Board Minutes
@@ -120,6 +139,7 @@ If any required input is missing, stop and request it. Do not fabricate attendan
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. An attorney must review, revise, and authorize the finalization and adoption of any minutes before they become a corporate record.
 - Do not invent discussion content, resolution language, attendee names, exhibit descriptions, voting counts, or quorum thresholds. Where materials are missing, insert a clearly labeled placeholder rather than filling the gap with assumed content.
 - Do not assert or apply specific statutes, corporate-code sections, or jurisdiction-specific rules. Quorum requirements, notice rules, voting standards, and procedural requirements vary by jurisdiction and by the entity's governing documents. Treat all such requirements as `[verify jurisdiction]` items for the attorney.
@@ -202,7 +222,26 @@ Operating rules (these always apply):
 === BEGIN SKILL: Board Minutes ===
 ---
 name: Board Minutes
-description: Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.
+description: "Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review."
+practice_area: corporate
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "Meeting details: entity, body, date, time, and location"
+  - "Attendance and quorum information"
+  - "Agenda items, materials presented, and actions taken"
+outputs:
+  - "Draft minutes of the board or committee meeting for attorney review"
+related_skills:
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - corporate
+  - governance
+  - board-minutes
+  - corporate-records
+  - drafting
 ---
 
 # Board Minutes
@@ -242,6 +281,7 @@ If any required input is missing, stop and request it. Do not fabricate attendan
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. An attorney must review, revise, and authorize the finalization and adoption of any minutes before they become a corporate record.
 - Do not invent discussion content, resolution language, attendee names, exhibit descriptions, voting counts, or quorum thresholds. Where materials are missing, insert a clearly labeled placeholder rather than filling the gap with assumed content.
 - Do not assert or apply specific statutes, corporate-code sections, or jurisdiction-specific rules. Quorum requirements, notice rules, voting standards, and procedural requirements vary by jurisdiction and by the entity's governing documents. Treat all such requirements as `[verify jurisdiction]` items for the attorney.

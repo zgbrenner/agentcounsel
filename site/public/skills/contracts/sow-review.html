@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SOW Review — AgentCounsel</title>
-<meta name="description" content="Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.">
+<meta name="description" content="&quot;Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.</p>
+<p>"Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -53,7 +53,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Review only the language actually present in the provided documents. Quote clause language accurately.</li><li>Do not invent SOW or MSA terms, section numbers, defined terms, deliverables, or milestones. If a provision is absent, say so — do not fabricate its presence or absence.</li><li>Do not assume what the MSA says if it has not been provided. Any MSA-consistency observation must be based on the actual MSA text, not on assumed "standard" terms.</li><li>Do not invent statutes, regulations, or case law. Do not make "market standard" assertions without flagging them for attorney verification.</li><li>Identify (or flag as unknown): which document controls in a conflict (MSA order of precedence clause), governing law, effective date, and which party's form this is.</li><li>Scope disputes frequently arise from ambiguous SOW language — flag ambiguity explicitly rather than resolving it by assumption.</li><li>Do not place client-sensitive facts into reusable templates.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever information is missing or uncertain.</li><li>Flag every point of uncertainty rather than resolving it silently.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Review only the language actually present in the provided documents. Quote clause language accurately.</li><li>Do not invent SOW or MSA terms, section numbers, defined terms, deliverables, or milestones. If a provision is absent, say so — do not fabricate its presence or absence.</li><li>Do not assume what the MSA says if it has not been provided. Any MSA-consistency observation must be based on the actual MSA text, not on assumed "standard" terms.</li><li>Do not invent statutes, regulations, or case law. Do not make "market standard" assertions without flagging them for attorney verification.</li><li>Identify (or flag as unknown): which document controls in a conflict (MSA order of precedence clause), governing law, effective date, and which party's form this is.</li><li>Scope disputes frequently arise from ambiguous SOW language — flag ambiguity explicitly rather than resolving it by assumption.</li><li>Do not place client-sensitive facts into reusable templates.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever information is missing or uncertain.</li><li>Flag every point of uncertainty rather than resolving it silently.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -77,6 +77,9 @@
 <p>Deliver, in order:</p>
 <ol><li><strong>Document Summary</strong> — SOW title and number, parties, effective date, governing MSA (if provided), client's role, fee structure summary, delivery timeline summary.</li><li><strong>Scope and Deliverables Assessment</strong> — plain-language summary with flagged ambiguities.</li><li><strong>Acceptance Criteria Assessment</strong> — summary of defined (or missing) criteria and process.</li><li><strong>Timeline and Milestone Assessment</strong> — summary with risk flags.</li><li><strong>Pricing and Payment Assessment</strong> — summary with risk flags.</li><li><strong>Assumptions and Dependencies Assessment</strong> — summary of stated assumptions and gaps.</li><li><strong>Change-Order Process Assessment</strong> — summary with risk flags.</li><li><strong>Personnel and Staffing Assessment</strong> — summary with risk flags.</li><li><strong>IP and Deliverable Ownership Assessment</strong> — summary with risk flags.</li><li><strong>MSA-SOW Consistency Analysis</strong> — clause-by-clause conflict and consistency findings, or a prominent flag if MSA was not provided.</li><li><strong>Gap and Issues Table</strong> — structured table: # | Topic | Finding | Severity (High/Med/Low/None) | Recommended Action | Attorney Note.</li><li><strong>Open Items for Attorney Verification</strong> — checkbox list.</li><li><strong>Assumptions</strong> — explicit list of all assumptions made about business context, MSA terms, or legal standard.</li></ol>
 <p>Use <code>[CONFIRM: ...]</code> wherever a fact, clause meaning, or MSA term is unverified or ambiguous.</p>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -86,7 +89,29 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: SOW Review
-description: Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.
+description: "Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The statement of work or work order text"
+  - "The governing master services agreement"
+  - "The client's role and the business context"
+outputs:
+  - "Structured SOW review"
+  - "Issues table flagging scope, deliverable, and MSA-consistency gaps"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+tags:
+  - contracts
+  - sow
+  - statement-of-work
+  - contract-review
+  - msa-consistency
 ---
 
 # SOW Review
@@ -127,6 +152,7 @@ If the SOW text is not provided, stop and request it. If the governing MSA is no
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided documents. Quote clause language accurately.
 - Do not invent SOW or MSA terms, section numbers, defined terms, deliverables, or milestones. If a provision is absent, say so — do not fabricate its presence or absence.
@@ -218,6 +244,16 @@ Deliver, in order:
 13. **Assumptions** — explicit list of all assumptions made about business context, MSA terms, or legal standard.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or MSA term is unverified or ambiguous.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -251,7 +287,29 @@ Operating rules (these always apply):
 === BEGIN SKILL: SOW Review ===
 ---
 name: SOW Review
-description: Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.
+description: "Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The statement of work or work order text"
+  - "The governing master services agreement"
+  - "The client's role and the business context"
+outputs:
+  - "Structured SOW review"
+  - "Issues table flagging scope, deliverable, and MSA-consistency gaps"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+tags:
+  - contracts
+  - sow
+  - statement-of-work
+  - contract-review
+  - msa-consistency
 ---
 
 # SOW Review
@@ -292,6 +350,7 @@ If the SOW text is not provided, stop and request it. If the governing MSA is no
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided documents. Quote clause language accurately.
 - Do not invent SOW or MSA terms, section numbers, defined terms, deliverables, or milestones. If a provision is absent, say so — do not fabricate its presence or absence.
@@ -383,6 +442,16 @@ Deliver, in order:
 13. **Assumptions** — explicit list of all assumptions made about business context, MSA terms, or legal standard.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or MSA term is unverified or ambiguous.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

@@ -1,6 +1,27 @@
 ---
 name: Demand Letter
-description: Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending.
+description: "Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The underlying facts"
+  - "The client's position and the relief sought"
+  - "Any deadlines and the recipient's identity"
+outputs:
+  - "Draft demand letter with legal conclusions, damages figures, and deadlines flagged for attorney confirmation"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/ip/cease-and-desist-response/SKILL.md
+tags:
+  - litigation
+  - demand-letter
+  - pre-litigation
+  - drafting
+  - damages
 ---
 
 # Demand Letter
@@ -39,6 +60,7 @@ If the client identity, recipient identity, or nature of the demand is not provi
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - The draft demand letter must not be sent to any party without attorney review, revision, and authorization.
 - Run the pre-draft gate (see Workflow) before drafting. Do not write letter text until the privilege, admission-risk, settlement-posture, and factual-accuracy questions have been addressed on the record.

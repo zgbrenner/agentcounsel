@@ -1,10 +1,10 @@
-# AgentCounsel
+# AgentCounsel Skills
 
 **An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-58-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-59-success.svg)](SKILLS_INDEX.md)
 [![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
 [![Unofficial](https://img.shields.io/badge/unofficial-not%20affiliated%20with%20Anthropic-red.svg)](NOTICE)
@@ -44,10 +44,13 @@ skills/             The canonical skill library, grouped by practice area.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
 matter-workspaces/  Single-file scaffolds for organizing one specific matter.
 adapters/           Thin integration files for specific environments.
+metadata/           Generated machine-readable skill index (index.json).
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
 COMMANDS.md         Slash-style command shorthands mapped to skills.
 CONTEXT.md          Vocabulary and mental model for AI agents working in the repo.
+AGENTS.md           Operating manual for AI agents working in this repo.
+CLAUDE.md           Claude Code's operating guide (imports AGENTS.md).
 ```
 
 The `skills/` directory is the **canonical source of truth.** Everything else points back to it.
@@ -62,7 +65,7 @@ skills/contracts/nda-review/
   templates/nda-risk-table.md  A copyable, attorney-review-ready template.
 ```
 
-Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, and an Attorney Verification Checklist.
+Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, and an Attorney Verification Checklist. Each one also carries standardized, agent-readable YAML frontmatter so tools and agents can discover and route skills — see `docs/SKILL_METADATA_STANDARD.md`.
 
 ## Practice areas
 
@@ -78,6 +81,8 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
 | AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, open-source licensing. |
+| Financial Crime / AML | KYC onboarding review and sanctions / PEP / adverse-media screening review. |
+| Legal Operations | Templated legal responses, meeting briefings, and signature routing checks. |
 | Setup | Cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile. |
 | Legal Methodology | Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, source validation. |
 
@@ -160,6 +165,19 @@ python scripts/validate_repo.py                # full repository validation
 
 The workflow is `.github/workflows/validate.yml`. It uses only Python and the standard library — no extra dependencies.
 
+## Skill metadata
+
+Every canonical skill carries standardized, agent-readable YAML frontmatter — `name`, `description`, `practice_area`, `task_type`, `jurisdictions`, `risk_level`, `requires_attorney_review`, `inputs`, `outputs`, `related_skills`, and `tags`. This metadata lets LLMs, browser agents, static-site generators, and package builders discover, filter, and route skills without parsing the Markdown body. The full standard — every field, its allowed values, and the formatting rules — is in `docs/SKILL_METADATA_STANDARD.md`.
+
+`scripts/build_skill_index.py` parses that frontmatter and writes `metadata/index.json`, a single machine-readable index of every skill with counts by practice area, task type, and risk level. Regenerate it whenever a skill's frontmatter changes:
+
+```
+python scripts/build_skill_index.py           # write metadata/index.json
+python scripts/build_skill_index.py --check    # report drift only
+```
+
+`scripts/validate_repo.py` enforces the standard: every skill must declare valid frontmatter, and `metadata/index.json` must stay in sync. The build uses only the Python standard library.
+
 ## Browsable skill catalog
 
 A static, browser-readable catalog of every skill lives under `site/`. It is generated from the canonical `skills/` directory and includes a homepage, one page per practice area, one page per skill (each with **Copy Full Skill** and **Copy One-Off Prompt** buttons and the full raw `SKILL.md`), platform setup guides, and `llms.txt` / `llms-full.txt` for browser-based LLM agents.
@@ -174,6 +192,50 @@ npm run dev        # build, then serve
 ```
 
 The output in `site/public/` is plain HTML, one CSS file, and a small script. Deploy it by serving that directory with any static host (GitHub Pages, Netlify, Vercel, an object store, or a plain file server) — there is no backend, no login, and no build step beyond `npm run build`. Re-run the build after adding or editing a skill so the catalog stays in sync. See `site/README.md` for details.
+
+## Platform install packs
+
+`scripts/build_platform_packs.py` generates ready-to-install packs of the library for specific AI environments — all from the canonical `skills/` and `core/` directories, with nothing copied by hand. It uses the Python standard library only.
+
+```
+python scripts/build_platform_packs.py
+```
+
+The build writes everything to `dist/` (git-ignored — regenerate it when skills change):
+
+- `dist/chatgpt/` — one consolidated Markdown file per practice area, plus a global `project-instructions.md`. ChatGPT Projects limit file counts, so each pack consolidates a whole practice area into one file.
+- `dist/claude/` — one ZIP per practice area (`CLAUDE.md`, the practice profile, `commands.md`, `skills/`, `templates/`, `README.md`). Unzip into a Claude Project's knowledge.
+- `dist/gemini/` — one ZIP per practice area with four `source-*.md` files to add as Gemini notebook sources.
+- `dist/repo-agents/` — `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, and a generic install guide for repo-based agents.
+- `dist/index.json`, `dist/manifest.json`, `dist/SKILL_PACKS_INDEX.md` — machine- and human-readable indexes.
+
+The build fails if a skill is missing a required section, a generated pack is empty, a practice area has no index entry, or required safety language is missing from a pack. `dist/SKILL_PACKS_INDEX.md` explains how to install each pack type.
+
+## Improving skills
+
+`scripts/generate_skill_improvement_prompts.py` scans every canonical `SKILL.md` and writes two maintainer aids into `reports/`:
+
+- `reports/skill-improvement-prompts.md` — one copyable prompt per skill, ready to hand to an AI coding agent to revise that one skill. Each prompt names the skill path, skill name, and practice area, restates the skill's core purpose, and asks the agent to strengthen trigger clarity, required inputs, workflow steps, output format, and the attorney-review and source-discipline language — without changing what the skill is for or breaking the AgentCounsel skill structure.
+- `reports/skill-quality-checklist.md` — a reusable, skill-agnostic checklist for reviewing any skill by hand.
+
+```
+python scripts/generate_skill_improvement_prompts.py           # write the reports
+python scripts/generate_skill_improvement_prompts.py --check   # report staleness only
+```
+
+It uses only the Python standard library — no dependencies, nothing to install.
+
+### Using the prompts before a public release
+
+Before publishing a release, maintainers should:
+
+1. Regenerate the reports so they reflect the current skill set: `python scripts/generate_skill_improvement_prompts.py`.
+2. For each skill changed since the last release, copy its prompt from `reports/skill-improvement-prompts.md`, run it with an AI coding agent, review the diff with attorney-style scrutiny, and keep only the changes that genuinely tighten the skill.
+3. Spot-check every revised skill against `reports/skill-quality-checklist.md`.
+4. Run `python scripts/validate_repo.py` and `python scripts/sync_plugin_skills.py --check`.
+5. Regenerate the reports once more and commit them so the released library and its review aids stay in sync.
+
+The prompts never change a skill's core purpose — they only sharpen it. Treat every AI-suggested edit as draft work product for human review, exactly as the library treats its own output.
 
 ## Contributing
 
