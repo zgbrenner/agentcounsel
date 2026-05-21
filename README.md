@@ -48,6 +48,8 @@ SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
 COMMANDS.md         Slash-style command shorthands mapped to skills.
 CONTEXT.md          Vocabulary and mental model for AI agents working in the repo.
+AGENTS.md           Operating manual for AI agents working in this repo.
+CLAUDE.md           Claude Code's operating guide (imports AGENTS.md).
 ```
 
 The `skills/` directory is the **canonical source of truth.** Everything else points back to it.
