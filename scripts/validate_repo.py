@@ -68,6 +68,7 @@ EXPECTED_DIRS = [
     "adapters",
     "practice-profiles",
     "matter-workspaces",
+    "overlays",
     "skills/setup",
     "skills/legal-methodology",
     "skills/contracts/references",
@@ -146,6 +147,25 @@ def check_repo_layout() -> None:
             err(f"expected directory '{relpath}/' is missing")
         elif not any(p.name != ".gitkeep" for p in path.iterdir()):
             warn(f"directory '{relpath}/' is empty")
+
+
+# --- Check: overlays structure --------------------------------------------
+
+def check_overlays() -> None:
+    """Every overlay folder under overlays/ contains an OVERLAY.md.
+
+    overlays/ holds industry and regulatory overlays — profiles and
+    reference packs that tune existing skills for a sector. Overlays are
+    not skills. Folders whose name starts with '_' (such as _template)
+    are scaffolding and are skipped. See overlays/README.md."""
+    base = REPO_ROOT / "overlays"
+    if not base.is_dir():
+        return
+    for sub in sorted(p for p in base.iterdir() if p.is_dir()):
+        if sub.name.startswith("_"):
+            continue
+        if not (sub / "OVERLAY.md").is_file():
+            err(f"{rel(sub)}: missing OVERLAY.md")
 
 
 # --- Check: skill structure ------------------------------------------------
@@ -439,6 +459,7 @@ def main() -> int:
         check_skill(skill_dir, require_sections=False)
 
     check_repo_layout()
+    check_overlays()
     check_citation_discipline(canonical)
     check_content_scans()
     check_links()

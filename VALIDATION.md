@@ -14,8 +14,9 @@ Run it from anywhere; the script locates the repository root relative to its own
 
 **Structure**
 
-- The directories the library is organized around exist: `core/`, `skills/`, `adapters/`, `practice-profiles/`, `matter-workspaces/`, `skills/setup/`, `skills/legal-methodology/`, and `skills/contracts/references/`.
+- The directories the library is organized around exist: `core/`, `skills/`, `adapters/`, `practice-profiles/`, `matter-workspaces/`, `overlays/`, `skills/setup/`, `skills/legal-methodology/`, and `skills/contracts/references/`.
 - Every canonical skill folder under `skills/` contains a `SKILL.md`. A `references/` folder under a practice area is treated as shared reference material, not a skill.
+- Every overlay folder under `overlays/` contains an `OVERLAY.md`. Folders whose name starts with `_` (such as `_template`) are scaffolding and are skipped.
 - Every plugin skill folder under `adapters/claude-code-plugin/skills/` contains a `SKILL.md`.
 - Every `SKILL.md` has valid YAML frontmatter (an opening and a closing `---`).
 - Every `SKILL.md` frontmatter has a non-empty `name` and `description`.
