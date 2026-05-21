@@ -204,3 +204,19 @@ Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. 
 | `/securities:closing-checklist` | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` | "capital markets closing checklist" | Transaction docs and responsibilities | Closing deliverables tracker | `/securities:comfort-backup` |
 | `/securities:comfort-backup` | `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md` | "comfort backup tracker" | Disclosure statements and source docs | Numbered backup requests tracker | `/securities:closing-checklist` |
 | `/securities:reporting-intake` | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` | "reporting calendar intake" | Filer profile and reporting workflow facts | Intake checklist + matrix | `/securities:filing-consistency` |
+
+
+## Antitrust / Competition
+
+| Command | Skill | Use when... | Needs | Returns | Next command |
+|---|---|---|---|---|---|
+| `/antitrust:intake` | `skills/antitrust-competition/antitrust-risk-intake/SKILL.md` | "antitrust intake" | Parties, market, conduct, docs | Intake summary + risk themes | `/antitrust:collaboration` |
+| `/antitrust:collaboration` | `skills/antitrust-competition/competitor-collaboration-review/SKILL.md` | "review collaboration" | Collaboration docs | Issue list + risk matrix | `/antitrust:clean-team` |
+| `/antitrust:clean-team` | `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md` | "review info sharing" | Data-sharing docs/protocols | Inventory + gap table | `/antitrust:policy` |
+| `/antitrust:pricing-algo` | `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md` | "pricing algorithm risk" | Tool/vendor/data facts | Triage matrix + safeguards | `/antitrust:clean-team` |
+| `/antitrust:distribution` | `skills/antitrust-competition/distribution-restraints-review/SKILL.md` | "distribution restraints" | Distribution/reseller docs | Key restraints table | `/antitrust:exclusivity-mfn` |
+| `/antitrust:exclusivity-mfn` | `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md` | "exclusivity/MFN/pricing review" | Clause set + context | Clause matrix + negotiation points | `/antitrust:intake` |
+| `/antitrust:merger-spotter` | `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md` | "M&A antitrust issue spotting" | Deal overview + diligence | Issue list + counsel questions | `/antitrust:gun-jumping` |
+| `/antitrust:gun-jumping` | `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md` | "pre-closing checklist" | Pre-closing covenants + comms plan | Checklist + guardrails | `/antitrust:policy` |
+| `/antitrust:trade-association` | `skills/antitrust-competition/trade-association-meeting-review/SKILL.md` | "review trade association meeting" | Agendas/minutes/talking points | Red-flag topics + edits | `/antitrust:clean-team` |
+| `/antitrust:policy` | `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md` | "review compliance policy" | Policy/training materials | Gap matrix + escalation workflow | `/antitrust:intake` |

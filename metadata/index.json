@@ -1,9 +1,10 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 97,
+  "skill_count": 107,
   "practice_areas": {
     "ai-governance": 4,
+    "antitrust-competition": 10,
     "contracts": 5,
     "corporate": 6,
     "employment": 8,
@@ -22,21 +23,21 @@
     "setup": 5
   },
   "task_types": {
-    "analysis": 15,
+    "analysis": 16,
     "drafting": 19,
     "extraction": 7,
-    "intake": 5,
+    "intake": 6,
     "interview": 4,
     "research": 1,
-    "review": 33,
+    "review": 39,
     "summarization": 3,
-    "triage": 7,
-    "verification": 3
+    "triage": 8,
+    "verification": 4
   },
   "risk_levels": {
     "low": 6,
     "medium": 59,
-    "high": 30,
+    "high": 40,
     "critical": 2
   },
   "skills": [
@@ -167,6 +168,296 @@
         "model-risk",
         "risk-triage",
         "controls"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md",
+      "name": "Antitrust Compliance Policy Review",
+      "description": "Use when performing antitrust compliance policy review as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "antitrust-compliance-policy-review"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+      "name": "Antitrust Risk Intake",
+      "description": "Use when performing antitrust risk intake as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
+        "skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "antitrust-risk-intake"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+      "name": "Competitor Collaboration Review",
+      "description": "Use when performing competitor collaboration review as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
+        "skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "competitor-collaboration-review"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/distribution-restraints-review/SKILL.md",
+      "name": "Distribution Restraints Review",
+      "description": "Use when performing distribution restraints review as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "distribution-restraints-review"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md",
+      "name": "Exclusivity MFN Pricing Review",
+      "description": "Use when performing exclusivity mfn pricing review as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "exclusivity-mfn-pricing-review"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md",
+      "name": "Gun Jumping Clean Team Checklist",
+      "description": "Use when performing gun jumping clean team checklist as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "gun-jumping-clean-team-checklist"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
+      "name": "Information Sharing Clean Team Review",
+      "description": "Use when performing information sharing clean team review as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "information-sharing-clean-team-review"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
+      "name": "Merger Antitrust Issue Spotter",
+      "description": "Use when performing merger antitrust issue spotter as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "merger-antitrust-issue-spotter"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md",
+      "name": "Pricing Algorithm Risk Triage",
+      "description": "Use when performing pricing algorithm risk triage as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "pricing-algorithm-risk-triage"
+      ]
+    },
+    {
+      "path": "skills/antitrust-competition/trade-association-meeting-review/SKILL.md",
+      "name": "Trade Association Meeting Review",
+      "description": "Use when performing trade association meeting review as draft work product for attorney review.",
+      "practice_area": "antitrust-competition",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, market context, parties, role, and conduct/transaction facts",
+        "Relevant documents and source references",
+        "Review stage and urgency"
+      ],
+      "outputs": [
+        "Structured, source-cited draft deliverable",
+        "Missing-information and attorney-verification list"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+      ],
+      "tags": [
+        "antitrust",
+        "competition",
+        "trade-association-meeting-review"
       ]
     },
     {
