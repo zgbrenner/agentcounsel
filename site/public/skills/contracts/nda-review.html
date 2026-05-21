@@ -51,7 +51,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Review only the language actually present in the provided document. Quote it accurately.</li><li>Do not invent contract terms, defined terms, section numbers, or quotations.</li><li>Do not invent statutes, regulations, or case law. If legal authority is relevant, mark it as an attorney verification item.</li><li>Do not invent or assume deadlines. Treat any signing or negotiation deadline as user-supplied or unverified.</li><li>A triage rating of GREEN ("clear to route for signature") is a workflow signal, not authorization to sign. Attorney review and sign-off remain required before any NDA is signed.</li><li>Do not draft new clause language or restructure provisions. Propose the direction of a change and route substantive drafting to an attorney.</li><li>Distinguish what the contract says from what you assume and from what the attorney must confirm.</li><li>Preserve confidentiality and privilege: the review is attorney work product. Do not place client-sensitive facts into reusable templates.</li><li>Flag every point of uncertainty rather than resolving it silently.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Review only the language actually present in the provided document. Quote it accurately.</li><li>Do not invent contract terms, defined terms, section numbers, or quotations.</li><li>Do not invent statutes, regulations, or case law. If legal authority is relevant, mark it as an attorney verification item.</li><li>Do not invent or assume deadlines. Treat any signing or negotiation deadline as user-supplied or unverified.</li><li>A triage rating of GREEN ("clear to route for signature") is a workflow signal, not authorization to sign. Attorney review and sign-off remain required before any NDA is signed.</li><li>Do not draft new clause language or restructure provisions. Propose the direction of a change and route substantive drafting to an attorney.</li><li>Distinguish what the contract says from what you assume and from what the attorney must confirm.</li><li>Preserve confidentiality and privilege: the review is attorney work product. Do not place client-sensitive facts into reusable templates.</li><li>Flag every point of uncertainty rather than resolving it silently.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -63,6 +63,9 @@
 <p>Deliver:</p>
 <ol><li><strong>Triage Rating</strong> — GREEN / YELLOW / RED, with a one-line rationale.</li><li><strong>Summary</strong> — 3-5 sentences: document type, client role, overall risk posture.</li><li><strong>Red Flags Quick Scan</strong> — each red-flag pattern from <code>skills/contracts/references/red-flags.md</code> found in the NDA, or a note that none surfaced in the scan.</li><li><strong>Key Terms Table</strong> — plain-language summary with section references.</li><li><strong>Scope Check</strong> — whether the document contains obligations beyond confidentiality, and which.</li><li><strong>Risk Table</strong> — from <code>templates/nda-risk-table.md</code>.</li><li><strong>Negotiability Rating</strong> — for each material issue, a rating from the rubric in <code>skills/contracts/references/negotiability-ratings.md</code>, with a one-line rationale.</li><li><strong>Market Benchmark Notes</strong> — any market comparison, recorded using <code>skills/contracts/references/market-benchmark-framework.md</code>, with its basis stated; every unverified benchmark flagged for attorney verification.</li><li><strong>Prioritized Redline Points</strong> — High / Medium / Low. Each point states the issue, why it matters, a <strong>Preferred Position</strong>, a <strong>Fallback Position</strong>, and a <strong>Suggested Redline Direction</strong> (direction of change, not final language), following <code>skills/contracts/references/redline-output-guidance.md</code>.</li><li><strong>Internal Consistency Check</strong> — whether defined terms, party names, cross-references, and section numbers are used consistently, with any inconsistency flagged.</li><li><strong>Attorney Verification Items</strong> — open questions and items requiring legal judgment.</li><li><strong>Assumptions</strong> — every assumption made, listed explicitly.</li></ol>
 <p>Use placeholders like <code>[CONFIRM: governing law]</code> wherever information is missing. Do not fill gaps with invented content.</p>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -109,6 +112,7 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided document. Quote it accurately.
 - Do not invent contract terms, defined terms, section numbers, or quotations.
@@ -162,6 +166,16 @@ Deliver:
 12. **Assumptions** — every assumption made, listed explicitly.
 
 Use placeholders like `[CONFIRM: governing law]` wherever information is missing. Do not fill gaps with invented content.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -233,6 +247,7 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided document. Quote it accurately.
 - Do not invent contract terms, defined terms, section numbers, or quotations.
@@ -286,6 +301,16 @@ Deliver:
 12. **Assumptions** — every assumption made, listed explicitly.
 
 Use placeholders like `[CONFIRM: governing law]` wherever information is missing. Do not fill gaps with invented content.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

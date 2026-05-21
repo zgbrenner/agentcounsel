@@ -52,7 +52,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert that any control satisfies a legal requirement as a binding conclusion. "Met" status in the matrix means the described control appears to address the requirement based on the information provided — not that legal compliance has been achieved or that the control would withstand regulatory scrutiny.</li><li>Every requirement listed must trace to the source document provided. Do not add requirements from model background knowledge without clearly marking them <code>[UNVERIFIED — not from provided source]</code>.</li><li>Do not assert penalty exposure, enforcement risk, or legal liability based on gap status alone — surface identified gaps as items for attorney assessment.</li><li>Distinguish: (a) requirements as stated in the source, (b) the analyst's mapping of current controls, (c) gap severity as a workflow assessment, (d) attorney-verification items.</li><li>Use <code>[CONFIRM: ...]</code> placeholders for any control fact, applicability question, or requirement interpretation that cannot be resolved from provided materials.</li><li>Never fabricate control descriptions, system capabilities, or organizational facts.</li><li>Preserve confidentiality; do not incorporate client-identifying sensitive operational details into reusable templates.</li><li>Flag every area of uncertainty, including requirements whose applicability to the organization is unclear.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert that any control satisfies a legal requirement as a binding conclusion. "Met" status in the matrix means the described control appears to address the requirement based on the information provided — not that legal compliance has been achieved or that the control would withstand regulatory scrutiny.</li><li>Every requirement listed must trace to the source document provided. Do not add requirements from model background knowledge without clearly marking them <code>[UNVERIFIED — not from provided source]</code>.</li><li>Do not assert penalty exposure, enforcement risk, or legal liability based on gap status alone — surface identified gaps as items for attorney assessment.</li><li>Distinguish: (a) requirements as stated in the source, (b) the analyst's mapping of current controls, (c) gap severity as a workflow assessment, (d) attorney-verification items.</li><li>Use <code>[CONFIRM: ...]</code> placeholders for any control fact, applicability question, or requirement interpretation that cannot be resolved from provided materials.</li><li>Never fabricate control descriptions, system capabilities, or organizational facts.</li><li>Preserve confidentiality; do not incorporate client-identifying sensitive operational details into reusable templates.</li><li>Flag every area of uncertainty, including requirements whose applicability to the organization is unclear.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -79,6 +79,9 @@
 <ol><li><strong>Gap Detail — Medium and Low Severity Items</strong> — Summarized narrative or table for medium and low items; less detailed than High items.</li></ol>
 <ol><li><strong>Open Questions</strong> — Bulleted list of requirements whose applicability is unclear, controls whose scope is uncertain, and interpretive questions requiring attorney or subject-matter-expert resolution.</li></ol>
 <ol><li><strong>Attorney Verification Items</strong> — see the Attorney Verification Checklist below.</li></ol>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -126,6 +129,7 @@ If the requirement source is not provided, stop and request it. If control descr
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert that any control satisfies a legal requirement as a binding conclusion. "Met" status in the matrix means the described control appears to address the requirement based on the information provided — not that legal compliance has been achieved or that the control would withstand regulatory scrutiny.
 - Every requirement listed must trace to the source document provided. Do not add requirements from model background knowledge without clearly marking them `[UNVERIFIED — not from provided source]`.
@@ -185,6 +189,16 @@ Deliver the following sections in order:
 7. **Open Questions** — Bulleted list of requirements whose applicability is unclear, controls whose scope is uncertain, and interpretive questions requiring attorney or subject-matter-expert resolution.
 
 8. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -253,6 +267,7 @@ If the requirement source is not provided, stop and request it. If control descr
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert that any control satisfies a legal requirement as a binding conclusion. "Met" status in the matrix means the described control appears to address the requirement based on the information provided — not that legal compliance has been achieved or that the control would withstand regulatory scrutiny.
 - Every requirement listed must trace to the source document provided. Do not add requirements from model background knowledge without clearly marking them `[UNVERIFIED — not from provided source]`.
@@ -312,6 +327,16 @@ Deliver the following sections in order:
 7. **Open Questions** — Bulleted list of requirements whose applicability is unclear, controls whose scope is uncertain, and interpretive questions requiring attorney or subject-matter-expert resolution.
 
 8. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

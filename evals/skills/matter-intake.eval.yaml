@@ -1,6 +1,6 @@
 # AgentCounsel skill eval — Matter Intake (litigation)
 # Schema: see evals/README.md. Validated by scripts/check_evals.py (no API keys).
-skill: litigation-matter-intake
+skill: matter-intake
 skill_path: skills/litigation/matter-intake/SKILL.md
 description: Eval cases for the Matter Intake skill, checking that it captures parties, claims, jurisdiction, and key dates, honors the conflicts-check gate, and never computes or asserts a deadline.
 shared_assertions:

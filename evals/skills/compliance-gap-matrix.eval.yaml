@@ -1,6 +1,6 @@
 # AgentCounsel skill eval — Compliance Gap Matrix (regulatory)
 # Schema: see evals/README.md. Validated by scripts/check_evals.py (no API keys).
-skill: regulatory-gap-analysis
+skill: compliance-gap-matrix
 skill_path: skills/regulatory/compliance-gap-matrix/SKILL.md
 description: Eval cases for the Compliance Gap Matrix skill, checking that every requirement traces to the provided source, gap status is a workflow assessment rather than a legal conclusion, and no matrix is built without a requirement source.
 shared_assertions:
