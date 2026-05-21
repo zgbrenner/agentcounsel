@@ -119,12 +119,14 @@ These interviews fill in a profile under `practice-profiles/`. See also `COMMAND
 
 | The task sounds like... | Use this skill |
 |---|---|
-| "Red-team this draft" / "stress-test this work product before review" | `skills/legal-methodology/red-team-verifier/SKILL.md` |
+| "Red-team this draft" / "is this good enough?" / "check this memo, contract review, demand letter, or filing" / "find the weaknesses, missing issues, or hallucinations" | `skills/legal-methodology/red-team-verifier/SKILL.md` |
 | "Interpret this provision" / "work through this statute or clause" | `skills/legal-methodology/statutory-interpretation/SKILL.md` |
 | "Assess the legal risk" / "rate and prioritize these risks" | `skills/legal-methodology/risk-assessment/SKILL.md` |
 | "Validate the sources" / "check these citations and claims" | `skills/legal-methodology/source-validation/SKILL.md` |
 
 These cross-cutting skills support work in any practice area — run them alongside the practice-area skill, not instead of it.
+
+**Final quality-control pass.** Run `red-team-verifier` after any high-stakes legal output — a memo, a contract or document review, a demand letter, a risk matrix, a client email, a research summary, or a draft filing — before it is finalized, sent, filed, or relied upon. It adversarially stress-tests the draft for invented authority, unsupported claims, weak legal reasoning, jurisdiction and deadline gaps, and professional-responsibility issues, and returns a PASS / REVISE verdict. It works on the output of any skill in this library, and on legal output produced by other tools or by a person. A PASS does not replace attorney review.
 
 ## When several skills could apply
 
