@@ -17,6 +17,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - Six further skills adapted from `agnostic-skills-for-legal` (Phase B migration, second batch): `hiring-review` and `wage-hour-qa` (employment); `claim-chart` and `brief-section-drafter` (litigation); and `fto-triage` and `invention-intake` (intellectual property).
 - A new **Corporate** practice area (Phase C migration): six skills adapted from `agnostic-skills-for-legal` — `board-minutes`, `written-consent`, `closing-checklist`, `diligence-issue-extraction`, `material-contract-schedule`, and `entity-compliance`.
 - Phase D1: three further skills adapted from `agnostic-skills-for-legal` — `internal-investigation` and `protected-leave-review` (employment) and `infringement-triage` (intellectual property).
+- `CONTEXT.md`: a concise vocabulary and mental-model reference for AI agents and LLMs working in the repository.
 
 ### Changed
 
