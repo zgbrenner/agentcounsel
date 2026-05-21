@@ -144,3 +144,17 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `COMMANDS.md` — slash-style command shorthands mapped to these skills.
 - `skills/contracts/references/` — shared reference material for the contracts skills.
 - `skills/m-and-a/references/` — shared M&A output-pattern reference for the M&A skills.
+
+
+## Antitrust / Competition
+
+- `skills/antitrust-competition/antitrust-risk-intake/SKILL.md`
+- `skills/antitrust-competition/competitor-collaboration-review/SKILL.md`
+- `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md`
+- `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md`
+- `skills/antitrust-competition/distribution-restraints-review/SKILL.md`
+- `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md`
+- `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md`
+- `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md`
+- `skills/antitrust-competition/trade-association-meeting-review/SKILL.md`
+- `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md`

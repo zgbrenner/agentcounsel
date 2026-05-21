@@ -72,6 +72,22 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Track the post-closing obligations" | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` |
 | "Build a legal integration checklist" | `skills/m-and-a/integration-legal-issues-checklist/SKILL.md` |
 
+
+### Antitrust / competition
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Intake this antitrust risk" | `skills/antitrust-competition/antitrust-risk-intake/SKILL.md` |
+| "Review this competitor collaboration/JV/benchmarking plan" | `skills/antitrust-competition/competitor-collaboration-review/SKILL.md` |
+| "Review this clean-team or information-sharing protocol" | `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md` |
+| "Triage antitrust risk in this pricing algorithm" | `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md` |
+| "Review distribution restraints or reseller restrictions" | `skills/antitrust-competition/distribution-restraints-review/SKILL.md` |
+| "Review exclusivity/MFN/loyalty pricing terms" | `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md` |
+| "Issue-spot merger antitrust concerns" | `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md` |
+| "Build pre-closing gun-jumping checklist" | `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md` |
+| "Review trade-association agenda/minutes" | `skills/antitrust-competition/trade-association-meeting-review/SKILL.md` |
+| "Review antitrust compliance policy/training" | `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md` |
+
 ### Litigation and disputes
 
 | The task sounds like... | Use this skill |
