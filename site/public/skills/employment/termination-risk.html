@@ -51,7 +51,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review only. This is not legal advice.</li><li>Do not assert what is or is not lawful in any jurisdiction. Employment law is highly jurisdiction-specific and fact-specific.</li><li>Do not invent facts, documentation, statutory deadlines, notice requirements, final-pay rules, or protected-class definitions.</li><li>Separate facts provided by the user from assumptions and from items requiring attorney verification. Label each category clearly.</li><li>Flag every potential risk factor — including protected characteristics, timing concerns, and comparator issues — as items for attorney assessment. Never conclude whether a risk factor is legally significant.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever governing law, employment status, jurisdiction, or factual basis is uncertain.</li><li>Do not place client-sensitive identifying information into reusable template files.</li><li>Treat the user's documents as the primary source. Background knowledge about employment law is unverified unless supported by provided or researched authority.</li><li>Timing of the termination relative to protected activity, leave, complaints, or benefit vesting is a legal question — flag it; do not resolve it.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review only. This is not legal advice.</li><li>Do not assert what is or is not lawful in any jurisdiction. Employment law is highly jurisdiction-specific and fact-specific.</li><li>Do not invent facts, documentation, statutory deadlines, notice requirements, final-pay rules, or protected-class definitions.</li><li>Separate facts provided by the user from assumptions and from items requiring attorney verification. Label each category clearly.</li><li>Flag every potential risk factor — including protected characteristics, timing concerns, and comparator issues — as items for attorney assessment. Never conclude whether a risk factor is legally significant.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever governing law, employment status, jurisdiction, or factual basis is uncertain.</li><li>Do not place client-sensitive identifying information into reusable template files.</li><li>Treat the user's documents as the primary source. Background knowledge about employment law is unverified unless supported by provided or researched authority.</li><li>Timing of the termination relative to protected activity, leave, complaints, or benefit vesting is a legal question — flag it; do not resolve it.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -74,6 +74,9 @@
 <p>Deliver the following sections, clearly labeled:</p>
 <ol><li><strong>Fact Summary</strong> — anonymized summary of the key facts organized by input category.</li><li><strong>Risk Factor Summary</strong> — plain-language description of each flagged risk factor, labeled as "identified for attorney review" rather than as a legal conclusion.</li><li><strong>Termination Risk Checklist</strong> — completed instance of <code>templates/termination-risk-checklist.md</code>, with checkboxes marked and notes populated.</li><li><strong>Open Items for Attorney Verification</strong> — numbered list of unresolved questions requiring legal confirmation.</li><li><strong>Assumptions</strong> — explicit list of any facts assumed in the absence of confirmed information.</li></ol>
 <p>Use <code>[CONFIRM: ...]</code> throughout wherever any fact, legal requirement, or procedural step is unverified. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*</p>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -141,6 +144,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Do not assert what is or is not lawful in any jurisdiction. Employment law is highly jurisdiction-specific and fact-specific.
 - Do not invent facts, documentation, statutory deadlines, notice requirements, final-pay rules, or protected-class definitions.
@@ -190,6 +194,16 @@ Deliver the following sections, clearly labeled:
 5. **Assumptions** — explicit list of any facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]` throughout wherever any fact, legal requirement, or procedural step is unverified. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -280,6 +294,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Do not assert what is or is not lawful in any jurisdiction. Employment law is highly jurisdiction-specific and fact-specific.
 - Do not invent facts, documentation, statutory deadlines, notice requirements, final-pay rules, or protected-class definitions.
@@ -329,6 +344,16 @@ Deliver the following sections, clearly labeled:
 5. **Assumptions** — explicit list of any facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]` throughout wherever any fact, legal requirement, or procedural step is unverified. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

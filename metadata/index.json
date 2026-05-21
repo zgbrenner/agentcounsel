@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 58,
+  "skill_count": 59,
   "practice_areas": {
     "ai-governance": 4,
     "contracts": 4,
@@ -14,13 +14,13 @@
     "privacy": 4,
     "product-legal": 4,
     "regulatory": 3,
-    "setup": 4
+    "setup": 5
   },
   "task_types": {
     "analysis": 10,
     "drafting": 9,
     "extraction": 3,
-    "intake": 3,
+    "intake": 4,
     "interview": 4,
     "research": 1,
     "review": 17,
@@ -29,7 +29,7 @@
     "verification": 2
   },
   "risk_levels": {
-    "low": 4,
+    "low": 5,
     "medium": 36,
     "high": 16,
     "critical": 2
@@ -1709,6 +1709,38 @@
         "practice-profile",
         "configuration",
         "corporate"
+      ]
+    },
+    {
+      "path": "skills/setup/create-matter-workspace/SKILL.md",
+      "name": "Create Matter Workspace",
+      "description": "Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.",
+      "practice_area": "setup",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The matter type, or a description of the legal work sufficient to infer it",
+        "The client's identity and the responsible attorney or team",
+        "A short description of what the matter concerns and the outcome sought",
+        "Any known parties, jurisdiction, key dates, and source documents"
+      ],
+      "outputs": [
+        "Matter-workspace template recommendation",
+        "Populated matter-workspace draft for attorney review",
+        "Maintenance instructions and an open-items list"
+      ],
+      "related_skills": [
+        "skills/litigation/matter-intake/SKILL.md",
+        "skills/legal-methodology/red-team-verifier/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "matter-workspace",
+        "matter-intake",
+        "organization",
+        "scaffold"
       ]
     },
     {

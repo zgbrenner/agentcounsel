@@ -52,7 +52,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert which privacy law or regulatory framework applies to any given processing arrangement. The applicable law is always an attorney-verification item.</li><li>Do not invent, paraphrase, or assume document provisions. Review only the language actually present in the provided document. Quote the document directly when characterizing its terms.</li><li>Do not state or compute statutory response deadlines, notification periods, or regulatory timeframes. Mark all such timeframes as <code>[CONFIRM: verify deadline under applicable law]</code>.</li><li>Distinguish clearly: (1) what the document says, (2) what you are assuming about context, (3) what requires legal verification.</li><li>The designation of a party as "controller," "processor," or "sub-processor" carries legal significance that varies by jurisdiction and framework. Flag this role assessment as <code>[CONFIRM]</code> — do not treat the document's own labels as necessarily correct or complete.</li><li>Do not place client-sensitive facts or deal-specific information into the reusable risk table template.</li><li>Use <code>[CONFIRM: ...]</code> for every point where the legal consequence, applicable rule, or factual context is uncertain.</li><li>Flag but do not resolve: conflicts between the DPA and the main agreement; gaps in the DPA relative to any stated regulatory requirement; provisions that may be unenforceable or non-standard.</li><li>Adverse provisions (provisions unfavorable to the client) must be identified even if the other party's position is commercially common.</li><li><strong>Severity floor.</strong> Once an issue has been rated High severity in the risk table, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert which privacy law or regulatory framework applies to any given processing arrangement. The applicable law is always an attorney-verification item.</li><li>Do not invent, paraphrase, or assume document provisions. Review only the language actually present in the provided document. Quote the document directly when characterizing its terms.</li><li>Do not state or compute statutory response deadlines, notification periods, or regulatory timeframes. Mark all such timeframes as <code>[CONFIRM: verify deadline under applicable law]</code>.</li><li>Distinguish clearly: (1) what the document says, (2) what you are assuming about context, (3) what requires legal verification.</li><li>The designation of a party as "controller," "processor," or "sub-processor" carries legal significance that varies by jurisdiction and framework. Flag this role assessment as <code>[CONFIRM]</code> — do not treat the document's own labels as necessarily correct or complete.</li><li>Do not place client-sensitive facts or deal-specific information into the reusable risk table template.</li><li>Use <code>[CONFIRM: ...]</code> for every point where the legal consequence, applicable rule, or factual context is uncertain.</li><li>Flag but do not resolve: conflicts between the DPA and the main agreement; gaps in the DPA relative to any stated regulatory requirement; provisions that may be unenforceable or non-standard.</li><li>Adverse provisions (provisions unfavorable to the client) must be identified even if the other party's position is commercially common.</li><li><strong>Severity floor.</strong> Once an issue has been rated High severity in the risk table, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -79,6 +79,9 @@
 <h2>Output Format</h2>
 <p>Deliver the following, in order:</p>
 <ol><li><strong>Summary</strong> — one paragraph identifying the document, parties, client role (with <code>[CONFIRM]</code> if uncertain), and the top three to five risks.</li><li><strong>Document Structure Map</strong> — list of sections present and any standard sections that appear to be absent.</li><li><strong>Risk Table</strong> — completed <code>templates/dpa-risk-table.md</code>, with one row per issue.</li><li><strong>Prioritized Issue List</strong> — organized as High / Medium / Low, with plain-language description of each issue and its risk to the client.</li><li><strong>Liability and Indemnity Note</strong> — specific observations on the interplay between the DPA's liability provisions and the main agreement.</li><li><strong>Attorney Verification Items</strong> — see the Attorney Verification Checklist below.</li><li><strong>Assumptions</strong> — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).</li></ol>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -150,6 +153,7 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert which privacy law or regulatory framework applies to any given processing arrangement. The applicable law is always an attorney-verification item.
 - Do not invent, paraphrase, or assume document provisions. Review only the language actually present in the provided document. Quote the document directly when characterizing its terms.
@@ -211,6 +215,16 @@ Deliver the following, in order:
 5. **Liability and Indemnity Note** — specific observations on the interplay between the DPA's liability provisions and the main agreement.
 6. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 7. **Assumptions** — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -306,6 +320,7 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert which privacy law or regulatory framework applies to any given processing arrangement. The applicable law is always an attorney-verification item.
 - Do not invent, paraphrase, or assume document provisions. Review only the language actually present in the provided document. Quote the document directly when characterizing its terms.
@@ -367,6 +382,16 @@ Deliver the following, in order:
 5. **Liability and Indemnity Note** — specific observations on the interplay between the DPA's liability provisions and the main agreement.
 6. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 7. **Assumptions** — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

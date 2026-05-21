@@ -52,7 +52,7 @@
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
-<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Work only from documents provided. Do not supplement findings with background knowledge of statutes, regulations, case law, or industry standards. A confident but incorrect legal characterization drawn from memory is worse than flagging the point for attorney confirmation.</li><li>Do not invent document terms, section numbers, quotations, or Bates references. Quote accurately from the provided materials and cite the source.</li><li>Treat all legal authority as unverified. Where a legal concept is relevant (e.g., successor liability, anti-assignment enforceability, copyleft license terms), name the concept and mark it <code>[verify jurisdiction]</code>; do not cite a statute or case.</li><li>Do not invent or assume deadlines. Treat any closing, consent, or regulatory deadline as unverified unless it appears in the provided documents. Mark it <code>[deadline verification required]</code>.</li><li>Borderline materiality calls — whether a finding clears the stated threshold — are the attorney's judgment, not the skill's. Surface the finding with a <code>[ATTORNEY TO CONFIRM: materiality]</code> flag rather than suppressing it.</li><li>Err toward over-listing rather than under-listing. An over-listed issue is corrected in attorney review; an under-listed issue may never surface. Do not suppress a finding because it seems likely to be waived or cured.</li><li>The output inherits the privilege and confidentiality status of the underlying documents. Distribution of this memo beyond the privilege circle may waive attorney-client privilege and work-product protection. [CONFIRM: privilege and distribution scope with supervising attorney before sharing.]</li><li>Distinguish what the documents say from what you assume from what the attorney must confirm. State each separately.</li><li>Flag every point of uncertainty with a placeholder rather than resolving it silently.</li><li>Preserve confidentiality: do not place client-sensitive facts into reusable copies of the template.</li></ul>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Work only from documents provided. Do not supplement findings with background knowledge of statutes, regulations, case law, or industry standards. A confident but incorrect legal characterization drawn from memory is worse than flagging the point for attorney confirmation.</li><li>Do not invent document terms, section numbers, quotations, or Bates references. Quote accurately from the provided materials and cite the source.</li><li>Treat all legal authority as unverified. Where a legal concept is relevant (e.g., successor liability, anti-assignment enforceability, copyleft license terms), name the concept and mark it <code>[verify jurisdiction]</code>; do not cite a statute or case.</li><li>Do not invent or assume deadlines. Treat any closing, consent, or regulatory deadline as unverified unless it appears in the provided documents. Mark it <code>[deadline verification required]</code>.</li><li>Borderline materiality calls — whether a finding clears the stated threshold — are the attorney's judgment, not the skill's. Surface the finding with a <code>[ATTORNEY TO CONFIRM: materiality]</code> flag rather than suppressing it.</li><li>Err toward over-listing rather than under-listing. An over-listed issue is corrected in attorney review; an under-listed issue may never surface. Do not suppress a finding because it seems likely to be waived or cured.</li><li>The output inherits the privilege and confidentiality status of the underlying documents. Distribution of this memo beyond the privilege circle may waive attorney-client privilege and work-product protection. [CONFIRM: privilege and distribution scope with supervising attorney before sharing.]</li><li>Distinguish what the documents say from what you assume from what the attorney must confirm. State each separately.</li><li>Flag every point of uncertainty with a placeholder rather than resolving it silently.</li><li>Preserve confidentiality: do not place client-sensitive facts into reusable copies of the template.</li></ul>
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
@@ -82,6 +82,9 @@
 <ol><li><strong>Assumptions</strong> — every assumption made, listed explicitly, including assumptions about governing law, document completeness, and threshold interpretation.</li></ol>
 <ol><li><strong>Attorney Verification Items</strong> — open questions and items requiring legal judgment, keyed to the checklist below.</li></ol>
 <p>Use placeholders throughout: <code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[verify jurisdiction]</code>, <code>[deadline verification required]</code>. Do not fill gaps with invented content.</p>
+<h5>Optional: Business Stakeholder Summary</h5>
+<p>When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a <strong>Business Stakeholder Summary</strong> as a clearly separated, plainly labeled section, following <code>core/business-stakeholder-communication.md</code>. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. Mind the privilege and distribution limits noted above when sharing it. It contains:</p>
+<ul><li><strong>Business Summary</strong> — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.</li><li><strong>Decision Needed</strong> — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.</li><li><strong>Recommended Ask</strong> — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.</li><li><strong>Fallback Position</strong> — the minimum acceptable alternative if the Recommended Ask cannot be achieved.</li><li><strong>Escalation Needed?</strong> — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.</li></ul>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -151,6 +154,7 @@ If the materiality threshold is not stated, request it before extracting issues.
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Work only from documents provided. Do not supplement findings with background knowledge of statutes, regulations, case law, or industry standards. A confident but incorrect legal characterization drawn from memory is worse than flagging the point for attorney confirmation.
 - Do not invent document terms, section numbers, quotations, or Bates references. Quote accurately from the provided materials and cite the source.
@@ -218,6 +222,16 @@ Deliver:
 7. **Attorney Verification Items** — open questions and items requiring legal judgment, keyed to the checklist below.
 
 Use placeholders throughout: `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, `[deadline verification required]`. Do not fill gaps with invented content.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. Mind the privilege and distribution limits noted above when sharing it. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
@@ -311,6 +325,7 @@ If the materiality threshold is not stated, request it before extracting issues.
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Work only from documents provided. Do not supplement findings with background knowledge of statutes, regulations, case law, or industry standards. A confident but incorrect legal characterization drawn from memory is worse than flagging the point for attorney confirmation.
 - Do not invent document terms, section numbers, quotations, or Bates references. Quote accurately from the provided materials and cite the source.
@@ -378,6 +393,16 @@ Deliver:
 7. **Attorney Verification Items** — open questions and items requiring legal judgment, keyed to the checklist below.
 
 Use placeholders throughout: `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, `[deadline verification required]`. Do not fill gaps with invented content.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. Mind the privilege and distribution limits noted above when sharing it. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
