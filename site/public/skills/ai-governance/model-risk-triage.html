@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Risk Triage — AgentCounsel</title>
+<meta name="description" content="Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/ai-governance.html">AI Governance</a> / <span>Model Risk Triage</span></nav>
+<h1>Model Risk Triage</h1>
+<p class="path">Canonical path: <code>skills/ai-governance/model-risk-triage/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured triage of the legal, governance, and operational risk dimensions of a specific AI model or AI system. The output is a risk register with ownership assignments and recommended controls — not a legal opinion on whether the model may be deployed. It equips attorneys and governance reviewers with the structured information they need to make deployment decisions.</p>
+<p>This skill is model-level and technical in focus. It complements <code>ai-use-case-intake</code> (which covers the business use case) and <code>ai-vendor-terms-review</code> (which covers vendor contractual terms).</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>Engineering, product, or legal teams need to assess a specific model before integration or deployment.</li><li>A governance committee requires a pre-deployment risk assessment for an AI model.</li><li>A model is being upgraded, retrained, or replaced and a delta risk assessment is needed.</li><li>An audit, incident, or regulatory inquiry requires documentation of what risk assessment was performed before deployment.</li><li>A user asks "what are the risks of using this model?" or "what do we need to have in place before we deploy this?"</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>Model identification</strong>: Name, version, provider or source (vendor API, open-source repository, internally trained), and a link to model documentation or model card if available.</li><li><strong>Intended use description</strong>: How the organization plans to use the model — inputs, outputs, and the decision or action outputs will inform or automate.</li><li><strong>Affected individuals</strong>: Who will be impacted by the model's outputs (employees, consumers, patients, job applicants, etc.) and the estimated population size or scope.</li><li><strong>Deployment context</strong>: The application, product, or system the model will be embedded in, and whether outputs will be directly user-facing.</li><li><strong>Available technical documentation</strong>: Model card, data sheet, evaluation reports, accuracy benchmarks, bias evaluation results — whatever is available. Note what is not available.</li></ul>
+<p>If the model identification and intended use are not provided, stop and request them. Do not fabricate technical facts, benchmark results, or model characteristics. If documentation is not available, flag the gap explicitly.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The question is about whether to adopt an AI use case at all — start with <code>ai-use-case-intake</code>.</li><li>The primary question is about the vendor's contractual terms — use <code>ai-vendor-terms-review</code>.</li><li>The question is about internal employee use of AI tools — use <code>employee-ai-policy</code>.</li><li>A full algorithmic audit or technical bias evaluation is required — this triage identifies the need for specialist review; it does not perform the technical evaluation.</li><li>The model is used solely for internal tooling with no individual-facing outputs and no personal data — a lightweight intake record may suffice.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert that a model is safe, unbiased, accurate, or fit for a particular use — flag these as matters requiring technical and legal verification.</li><li>Do not fabricate benchmark results, accuracy metrics, or technical characteristics. If documentation is not provided, state that the information is unavailable.</li><li>Do not assert that any law or regulation applies to the model or its use; flag potential regulatory considerations for attorney review.</li><li>AI regulation is fast-moving and jurisdiction-specific — regulatory risk items require attorney verification.</li><li>Bias and fairness issues require specialist (technical and legal) review; this triage identifies the need, it does not resolve it.</li><li>Distinguish facts from the provided documentation, assumptions, and open items requiring verification.</li><li>Use <code>[CONFIRM: ...]</code> placeholders wherever information is missing or uncertain.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify all required inputs are present. Document which technical materials were provided and which are missing.</li></ol>
+<ol><li><strong>Characterize the model.</strong> Record the model type (generative, classification, regression, ranking, etc.), architecture if known, training data description as disclosed, known evaluation benchmarks, and the provider's own characterization of intended use and limitations from any model card or documentation.</li></ol>
+<ol><li><strong>Assess intended use and foreseeable misuse.</strong> Compare the organization's intended use to the provider's stated intended use and known limitations. Identify foreseeable misuse scenarios — including use outside the intended context, adversarial inputs, prompt injection (for LLMs), and use by unexpected user populations.</li></ol>
+<ol><li><strong>Assess affected individuals and potential harms.</strong> Identify who is affected and how: direct users, downstream affected individuals, third parties. Assess the severity and reversibility of potential harms from model errors or misuse (physical, financial, reputational, discriminatory, legal). Flag high-severity or irreversible harm scenarios.</li></ol>
+<ol><li><strong>Assess accuracy and reliability.</strong> Summarize available accuracy, precision, recall, or performance metrics from documentation. Identify known failure modes, edge cases, and performance degradation scenarios. Flag uses where accuracy requirements are high and the model's documented performance is insufficient or unknown. Note if independent evaluation has not been performed.</li></ol>
+<ol><li><strong>Assess bias and fairness considerations.</strong> Identify whether the model has been evaluated for disparate performance across demographic groups relevant to the use case (race, sex, age, disability, national origin, and others depending on context). Flag any known bias findings from documentation. Note that this assessment identifies the need for specialist review — it does not constitute a bias evaluation. Recommend specialist review if the use case involves consequential decisions about individuals in protected categories.</li></ol>
+<ol><li><strong>Assess transparency and explainability.</strong> Assess whether the model's outputs can be explained to the degree required by the use case and any applicable regulatory context. Flag use cases where explainability is required (credit, employment, housing, healthcare) but the model is a black-box. Note whether the model provides confidence scores or uncertainty estimates.</li></ol>
+<ol><li><strong>Assess data provenance and rights.</strong> Identify what is known about the model's training data — sources, third-party content, personal data, and rights clearance. Flag gaps in training data provenance. Note whether the training data is consistent with the intended use context (e.g., a model trained on English-language professional text used for consumer-facing multilingual applications).</li></ol>
+<ol><li><strong>Assess security and abuse resistance.</strong> Identify known security vulnerabilities — adversarial attacks, prompt injection, data extraction, model inversion. Assess the provider's security posture from documentation. Flag uses where the model could be weaponized or misused by adversarial actors.</li></ol>
+<ol><li><strong>Assess human oversight and escalation design.</strong> Evaluate whether the proposed deployment design includes adequate human review, override, and escalation for model errors and edge cases. Flag uses where outputs will be applied automatically to consequential decisions without human review.</li></ol>
+<ol><li><strong>Assess monitoring and incident response.</strong> Identify whether a plan exists to monitor model outputs in production (accuracy drift, bias drift, unexpected outputs) and to respond to incidents. Flag if no monitoring plan is in place.</li></ol>
+<ol><li><strong>Assign risk tier and build the risk register.</strong> For each dimension assessed, assign a risk level (Low / Medium / High) and an owner. Assign an overall risk tier.</li></ol>
+<ol><li><strong>Recommend controls.</strong> For each High and Medium risk item, recommend a specific control or action (technical, process, contractual, legal, or governance).</li></ol>
+<ol><li><strong>Assemble the output.</strong> Compile all sections, list all assumptions and open items, and label the document as a draft for attorney and governance review.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following sections in order:</p>
+<p><strong>1. Triage Summary</strong> Three to five sentences: model identity, intended use, overall risk tier, and the two or three dominant risk drivers.</p>
+<p><strong>2. Model Characterization</strong> Table: Model name/version, provider/source, model type, training data (as documented), intended use per provider documentation, key documented limitations, and model card / documentation availability.</p>
+<p><strong>3. Risk Register</strong></p>
+<table><thead><tr><th>Risk Dimension</th><th>Finding</th><th>Risk Level</th><th>Recommended Control</th><th>Owner</th></tr></thead><tbody><tr><td>Intended use / foreseeable misuse</td><td></td><td></td><td></td><td></td></tr><tr><td>Affected individuals / harm severity</td><td></td><td></td><td></td><td></td></tr><tr><td>Accuracy and reliability</td><td></td><td></td><td></td><td></td></tr><tr><td>Bias and fairness</td><td></td><td></td><td></td><td></td></tr><tr><td>Transparency / explainability</td><td></td><td></td><td></td><td></td></tr><tr><td>Data provenance and rights</td><td></td><td></td><td></td><td></td></tr><tr><td>Security and abuse resistance</td><td></td><td></td><td></td><td></td></tr><tr><td>Human oversight design</td><td></td><td></td><td></td><td></td></tr><tr><td>Monitoring and incident response</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p><strong>4. Overall Risk Tier</strong> State Low / Medium / High with a two-to-three sentence rationale. Note that this is a governance triage signal, not a legal conclusion.</p>
+<p><strong>5. Recommended Controls Summary</strong> Numbered list of priority actions, sorted High to Low, each with owner and recommended timeline.</p>
+<p><strong>6. Routing Recommendations</strong></p>
+<ul><li><code>ai-use-case-intake</code> — if a full use case intake has not been completed.</li><li><code>ai-vendor-terms-review</code> — if vendor contractual terms have not been reviewed.</li><li>Technical bias specialist — if the use case involves consequential decisions about individuals in protected categories.</li><li>Privacy specialist — if personal data is processed or the model was trained on personal data.</li><li>Regulatory specialist — if a regulated industry or jurisdiction-specific AI regulation applies.</li></ul>
+<p><strong>7. Open Items and Assumptions</strong> Bullet list of every <code>[CONFIRM: ...]</code> item, missing documentation, and assumption made in the absence of provided information.</p>
+<p>*Label the full document: DRAFT — For Attorney and Governance Review — Not Legal Advice.*</p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] Model identification and version have been confirmed with the engineering or product team.</li><li>[ ] All available technical documentation (model card, evaluation reports, bias assessments) has been provided and reviewed.</li><li>[ ] The intended use has been confirmed against the provider's documented intended use and limitations.</li><li>[ ] Affected individuals and potential harm scenarios have been reviewed for completeness.</li><li>[ ] Accuracy and reliability findings are based on provided documentation, not assumed.</li><li>[ ] Bias and fairness assessment has been escalated to a technical specialist if the use case involves consequential decisions about protected categories.</li><li>[ ] Explainability requirements have been assessed in light of the applicable regulatory and legal context, verified by an attorney.</li><li>[ ] Training data provenance gaps have been identified and are being addressed.</li><li>[ ] Human oversight design has been confirmed as sufficient by the governance or product team.</li><li>[ ] A monitoring plan is in place or required before deployment.</li><li>[ ] No law or regulation has been asserted as applying without attorney verification.</li><li>[ ] All open items and <code>[CONFIRM: ...]</code> placeholders have been resolved before the model is deployed.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Model Risk Triage
+description: Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review.
+---
+
+# Model Risk Triage
+
+## Purpose
+
+Produce a structured triage of the legal, governance, and operational risk dimensions of a specific AI model or AI system. The output is a risk register with ownership assignments and recommended controls — not a legal opinion on whether the model may be deployed. It equips attorneys and governance reviewers with the structured information they need to make deployment decisions.
+
+This skill is model-level and technical in focus. It complements `ai-use-case-intake` (which covers the business use case) and `ai-vendor-terms-review` (which covers vendor contractual terms).
+
+## Use When
+
+- Engineering, product, or legal teams need to assess a specific model before integration or deployment.
+- A governance committee requires a pre-deployment risk assessment for an AI model.
+- A model is being upgraded, retrained, or replaced and a delta risk assessment is needed.
+- An audit, incident, or regulatory inquiry requires documentation of what risk assessment was performed before deployment.
+- A user asks "what are the risks of using this model?" or "what do we need to have in place before we deploy this?"
+
+## Required Inputs
+
+- **Model identification**: Name, version, provider or source (vendor API, open-source repository, internally trained), and a link to model documentation or model card if available.
+- **Intended use description**: How the organization plans to use the model — inputs, outputs, and the decision or action outputs will inform or automate.
+- **Affected individuals**: Who will be impacted by the model's outputs (employees, consumers, patients, job applicants, etc.) and the estimated population size or scope.
+- **Deployment context**: The application, product, or system the model will be embedded in, and whether outputs will be directly user-facing.
+- **Available technical documentation**: Model card, data sheet, evaluation reports, accuracy benchmarks, bias evaluation results — whatever is available. Note what is not available.
+
+If the model identification and intended use are not provided, stop and request them. Do not fabricate technical facts, benchmark results, or model characteristics. If documentation is not available, flag the gap explicitly.
+
+## Do Not Use When
+
+- The question is about whether to adopt an AI use case at all — start with `ai-use-case-intake`.
+- The primary question is about the vendor's contractual terms — use `ai-vendor-terms-review`.
+- The question is about internal employee use of AI tools — use `employee-ai-policy`.
+- A full algorithmic audit or technical bias evaluation is required — this triage identifies the need for specialist review; it does not perform the technical evaluation.
+- The model is used solely for internal tooling with no individual-facing outputs and no personal data — a lightweight intake record may suffice.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not assert that a model is safe, unbiased, accurate, or fit for a particular use — flag these as matters requiring technical and legal verification.
+- Do not fabricate benchmark results, accuracy metrics, or technical characteristics. If documentation is not provided, state that the information is unavailable.
+- Do not assert that any law or regulation applies to the model or its use; flag potential regulatory considerations for attorney review.
+- AI regulation is fast-moving and jurisdiction-specific — regulatory risk items require attorney verification.
+- Bias and fairness issues require specialist (technical and legal) review; this triage identifies the need, it does not resolve it.
+- Distinguish facts from the provided documentation, assumptions, and open items requiring verification.
+- Use `[CONFIRM: ...]` placeholders wherever information is missing or uncertain.
+
+## Workflow
+
+1. **Confirm inputs.** Verify all required inputs are present. Document which technical materials were provided and which are missing.
+
+2. **Characterize the model.** Record the model type (generative, classification, regression, ranking, etc.), architecture if known, training data description as disclosed, known evaluation benchmarks, and the provider's own characterization of intended use and limitations from any model card or documentation.
+
+3. **Assess intended use and foreseeable misuse.** Compare the organization's intended use to the provider's stated intended use and known limitations. Identify foreseeable misuse scenarios — including use outside the intended context, adversarial inputs, prompt injection (for LLMs), and use by unexpected user populations.
+
+4. **Assess affected individuals and potential harms.** Identify who is affected and how: direct users, downstream affected individuals, third parties. Assess the severity and reversibility of potential harms from model errors or misuse (physical, financial, reputational, discriminatory, legal). Flag high-severity or irreversible harm scenarios.
+
+5. **Assess accuracy and reliability.** Summarize available accuracy, precision, recall, or performance metrics from documentation. Identify known failure modes, edge cases, and performance degradation scenarios. Flag uses where accuracy requirements are high and the model's documented performance is insufficient or unknown. Note if independent evaluation has not been performed.
+
+6. **Assess bias and fairness considerations.** Identify whether the model has been evaluated for disparate performance across demographic groups relevant to the use case (race, sex, age, disability, national origin, and others depending on context). Flag any known bias findings from documentation. Note that this assessment identifies the need for specialist review — it does not constitute a bias evaluation. Recommend specialist review if the use case involves consequential decisions about individuals in protected categories.
+
+7. **Assess transparency and explainability.** Assess whether the model's outputs can be explained to the degree required by the use case and any applicable regulatory context. Flag use cases where explainability is required (credit, employment, housing, healthcare) but the model is a black-box. Note whether the model provides confidence scores or uncertainty estimates.
+
+8. **Assess data provenance and rights.** Identify what is known about the model's training data — sources, third-party content, personal data, and rights clearance. Flag gaps in training data provenance. Note whether the training data is consistent with the intended use context (e.g., a model trained on English-language professional text used for consumer-facing multilingual applications).
+
+9. **Assess security and abuse resistance.** Identify known security vulnerabilities — adversarial attacks, prompt injection, data extraction, model inversion. Assess the provider's security posture from documentation. Flag uses where the model could be weaponized or misused by adversarial actors.
+
+10. **Assess human oversight and escalation design.** Evaluate whether the proposed deployment design includes adequate human review, override, and escalation for model errors and edge cases. Flag uses where outputs will be applied automatically to consequential decisions without human review.
+
+11. **Assess monitoring and incident response.** Identify whether a plan exists to monitor model outputs in production (accuracy drift, bias drift, unexpected outputs) and to respond to incidents. Flag if no monitoring plan is in place.
+
+12. **Assign risk tier and build the risk register.** For each dimension assessed, assign a risk level (Low / Medium / High) and an owner. Assign an overall risk tier.
+
+13. **Recommend controls.** For each High and Medium risk item, recommend a specific control or action (technical, process, contractual, legal, or governance).
+
+14. **Assemble the output.** Compile all sections, list all assumptions and open items, and label the document as a draft for attorney and governance review.
+
+## Output Format
+
+Deliver the following sections in order:
+
+**1. Triage Summary**
+Three to five sentences: model identity, intended use, overall risk tier, and the two or three dominant risk drivers.
+
+**2. Model Characterization**
+Table: Model name/version, provider/source, model type, training data (as documented), intended use per provider documentation, key documented limitations, and model card / documentation availability.
+
+**3. Risk Register**
+
+| Risk Dimension | Finding | Risk Level | Recommended Control | Owner |
+|---|---|---|---|---|
+| Intended use / foreseeable misuse | | | | |
+| Affected individuals / harm severity | | | | |
+| Accuracy and reliability | | | | |
+| Bias and fairness | | | | |
+| Transparency / explainability | | | | |
+| Data provenance and rights | | | | |
+| Security and abuse resistance | | | | |
+| Human oversight design | | | | |
+| Monitoring and incident response | | | | |
+
+**4. Overall Risk Tier**
+State Low / Medium / High with a two-to-three sentence rationale. Note that this is a governance triage signal, not a legal conclusion.
+
+**5. Recommended Controls Summary**
+Numbered list of priority actions, sorted High to Low, each with owner and recommended timeline.
+
+**6. Routing Recommendations**
+- `ai-use-case-intake` — if a full use case intake has not been completed.
+- `ai-vendor-terms-review` — if vendor contractual terms have not been reviewed.
+- Technical bias specialist — if the use case involves consequential decisions about individuals in protected categories.
+- Privacy specialist — if personal data is processed or the model was trained on personal data.
+- Regulatory specialist — if a regulated industry or jurisdiction-specific AI regulation applies.
+
+**7. Open Items and Assumptions**
+Bullet list of every `[CONFIRM: ...]` item, missing documentation, and assumption made in the absence of provided information.
+
+*Label the full document: DRAFT — For Attorney and Governance Review — Not Legal Advice.*
+
+## Attorney Verification Checklist
+
+- [ ] Model identification and version have been confirmed with the engineering or product team.
+- [ ] All available technical documentation (model card, evaluation reports, bias assessments) has been provided and reviewed.
+- [ ] The intended use has been confirmed against the provider's documented intended use and limitations.
+- [ ] Affected individuals and potential harm scenarios have been reviewed for completeness.
+- [ ] Accuracy and reliability findings are based on provided documentation, not assumed.
+- [ ] Bias and fairness assessment has been escalated to a technical specialist if the use case involves consequential decisions about protected categories.
+- [ ] Explainability requirements have been assessed in light of the applicable regulatory and legal context, verified by an attorney.
+- [ ] Training data provenance gaps have been identified and are being addressed.
+- [ ] Human oversight design has been confirmed as sufficient by the governance or product team.
+- [ ] A monitoring plan is in place or required before deployment.
+- [ ] No law or regulation has been asserted as applying without attorney verification.
+- [ ] All open items and `[CONFIRM: ...]` placeholders have been resolved before the model is deployed.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Model Risk Triage ===
+---
+name: Model Risk Triage
+description: Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review.
+---
+
+# Model Risk Triage
+
+## Purpose
+
+Produce a structured triage of the legal, governance, and operational risk dimensions of a specific AI model or AI system. The output is a risk register with ownership assignments and recommended controls — not a legal opinion on whether the model may be deployed. It equips attorneys and governance reviewers with the structured information they need to make deployment decisions.
+
+This skill is model-level and technical in focus. It complements `ai-use-case-intake` (which covers the business use case) and `ai-vendor-terms-review` (which covers vendor contractual terms).
+
+## Use When
+
+- Engineering, product, or legal teams need to assess a specific model before integration or deployment.
+- A governance committee requires a pre-deployment risk assessment for an AI model.
+- A model is being upgraded, retrained, or replaced and a delta risk assessment is needed.
+- An audit, incident, or regulatory inquiry requires documentation of what risk assessment was performed before deployment.
+- A user asks "what are the risks of using this model?" or "what do we need to have in place before we deploy this?"
+
+## Required Inputs
+
+- **Model identification**: Name, version, provider or source (vendor API, open-source repository, internally trained), and a link to model documentation or model card if available.
+- **Intended use description**: How the organization plans to use the model — inputs, outputs, and the decision or action outputs will inform or automate.
+- **Affected individuals**: Who will be impacted by the model's outputs (employees, consumers, patients, job applicants, etc.) and the estimated population size or scope.
+- **Deployment context**: The application, product, or system the model will be embedded in, and whether outputs will be directly user-facing.
+- **Available technical documentation**: Model card, data sheet, evaluation reports, accuracy benchmarks, bias evaluation results — whatever is available. Note what is not available.
+
+If the model identification and intended use are not provided, stop and request them. Do not fabricate technical facts, benchmark results, or model characteristics. If documentation is not available, flag the gap explicitly.
+
+## Do Not Use When
+
+- The question is about whether to adopt an AI use case at all — start with `ai-use-case-intake`.
+- The primary question is about the vendor's contractual terms — use `ai-vendor-terms-review`.
+- The question is about internal employee use of AI tools — use `employee-ai-policy`.
+- A full algorithmic audit or technical bias evaluation is required — this triage identifies the need for specialist review; it does not perform the technical evaluation.
+- The model is used solely for internal tooling with no individual-facing outputs and no personal data — a lightweight intake record may suffice.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not assert that a model is safe, unbiased, accurate, or fit for a particular use — flag these as matters requiring technical and legal verification.
+- Do not fabricate benchmark results, accuracy metrics, or technical characteristics. If documentation is not provided, state that the information is unavailable.
+- Do not assert that any law or regulation applies to the model or its use; flag potential regulatory considerations for attorney review.
+- AI regulation is fast-moving and jurisdiction-specific — regulatory risk items require attorney verification.
+- Bias and fairness issues require specialist (technical and legal) review; this triage identifies the need, it does not resolve it.
+- Distinguish facts from the provided documentation, assumptions, and open items requiring verification.
+- Use `[CONFIRM: ...]` placeholders wherever information is missing or uncertain.
+
+## Workflow
+
+1. **Confirm inputs.** Verify all required inputs are present. Document which technical materials were provided and which are missing.
+
+2. **Characterize the model.** Record the model type (generative, classification, regression, ranking, etc.), architecture if known, training data description as disclosed, known evaluation benchmarks, and the provider's own characterization of intended use and limitations from any model card or documentation.
+
+3. **Assess intended use and foreseeable misuse.** Compare the organization's intended use to the provider's stated intended use and known limitations. Identify foreseeable misuse scenarios — including use outside the intended context, adversarial inputs, prompt injection (for LLMs), and use by unexpected user populations.
+
+4. **Assess affected individuals and potential harms.** Identify who is affected and how: direct users, downstream affected individuals, third parties. Assess the severity and reversibility of potential harms from model errors or misuse (physical, financial, reputational, discriminatory, legal). Flag high-severity or irreversible harm scenarios.
+
+5. **Assess accuracy and reliability.** Summarize available accuracy, precision, recall, or performance metrics from documentation. Identify known failure modes, edge cases, and performance degradation scenarios. Flag uses where accuracy requirements are high and the model's documented performance is insufficient or unknown. Note if independent evaluation has not been performed.
+
+6. **Assess bias and fairness considerations.** Identify whether the model has been evaluated for disparate performance across demographic groups relevant to the use case (race, sex, age, disability, national origin, and others depending on context). Flag any known bias findings from documentation. Note that this assessment identifies the need for specialist review — it does not constitute a bias evaluation. Recommend specialist review if the use case involves consequential decisions about individuals in protected categories.
+
+7. **Assess transparency and explainability.** Assess whether the model's outputs can be explained to the degree required by the use case and any applicable regulatory context. Flag use cases where explainability is required (credit, employment, housing, healthcare) but the model is a black-box. Note whether the model provides confidence scores or uncertainty estimates.
+
+8. **Assess data provenance and rights.** Identify what is known about the model's training data — sources, third-party content, personal data, and rights clearance. Flag gaps in training data provenance. Note whether the training data is consistent with the intended use context (e.g., a model trained on English-language professional text used for consumer-facing multilingual applications).
+
+9. **Assess security and abuse resistance.** Identify known security vulnerabilities — adversarial attacks, prompt injection, data extraction, model inversion. Assess the provider's security posture from documentation. Flag uses where the model could be weaponized or misused by adversarial actors.
+
+10. **Assess human oversight and escalation design.** Evaluate whether the proposed deployment design includes adequate human review, override, and escalation for model errors and edge cases. Flag uses where outputs will be applied automatically to consequential decisions without human review.
+
+11. **Assess monitoring and incident response.** Identify whether a plan exists to monitor model outputs in production (accuracy drift, bias drift, unexpected outputs) and to respond to incidents. Flag if no monitoring plan is in place.
+
+12. **Assign risk tier and build the risk register.** For each dimension assessed, assign a risk level (Low / Medium / High) and an owner. Assign an overall risk tier.
+
+13. **Recommend controls.** For each High and Medium risk item, recommend a specific control or action (technical, process, contractual, legal, or governance).
+
+14. **Assemble the output.** Compile all sections, list all assumptions and open items, and label the document as a draft for attorney and governance review.
+
+## Output Format
+
+Deliver the following sections in order:
+
+**1. Triage Summary**
+Three to five sentences: model identity, intended use, overall risk tier, and the two or three dominant risk drivers.
+
+**2. Model Characterization**
+Table: Model name/version, provider/source, model type, training data (as documented), intended use per provider documentation, key documented limitations, and model card / documentation availability.
+
+**3. Risk Register**
+
+| Risk Dimension | Finding | Risk Level | Recommended Control | Owner |
+|---|---|---|---|---|
+| Intended use / foreseeable misuse | | | | |
+| Affected individuals / harm severity | | | | |
+| Accuracy and reliability | | | | |
+| Bias and fairness | | | | |
+| Transparency / explainability | | | | |
+| Data provenance and rights | | | | |
+| Security and abuse resistance | | | | |
+| Human oversight design | | | | |
+| Monitoring and incident response | | | | |
+
+**4. Overall Risk Tier**
+State Low / Medium / High with a two-to-three sentence rationale. Note that this is a governance triage signal, not a legal conclusion.
+
+**5. Recommended Controls Summary**
+Numbered list of priority actions, sorted High to Low, each with owner and recommended timeline.
+
+**6. Routing Recommendations**
+- `ai-use-case-intake` — if a full use case intake has not been completed.
+- `ai-vendor-terms-review` — if vendor contractual terms have not been reviewed.
+- Technical bias specialist — if the use case involves consequential decisions about individuals in protected categories.
+- Privacy specialist — if personal data is processed or the model was trained on personal data.
+- Regulatory specialist — if a regulated industry or jurisdiction-specific AI regulation applies.
+
+**7. Open Items and Assumptions**
+Bullet list of every `[CONFIRM: ...]` item, missing documentation, and assumption made in the absence of provided information.
+
+*Label the full document: DRAFT — For Attorney and Governance Review — Not Legal Advice.*
+
+## Attorney Verification Checklist
+
+- [ ] Model identification and version have been confirmed with the engineering or product team.
+- [ ] All available technical documentation (model card, evaluation reports, bias assessments) has been provided and reviewed.
+- [ ] The intended use has been confirmed against the provider's documented intended use and limitations.
+- [ ] Affected individuals and potential harm scenarios have been reviewed for completeness.
+- [ ] Accuracy and reliability findings are based on provided documentation, not assumed.
+- [ ] Bias and fairness assessment has been escalated to a technical specialist if the use case involves consequential decisions about protected categories.
+- [ ] Explainability requirements have been assessed in light of the applicable regulatory and legal context, verified by an attorney.
+- [ ] Training data provenance gaps have been identified and are being addressed.
+- [ ] Human oversight design has been confirmed as sufficient by the governance or product team.
+- [ ] A monitoring plan is in place or required before deployment.
+- [ ] No law or regulation has been asserted as applying without attorney verification.
+- [ ] All open items and `[CONFIRM: ...]` placeholders have been resolved before the model is deployed.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

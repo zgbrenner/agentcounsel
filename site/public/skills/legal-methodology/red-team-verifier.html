@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red-Team Verifier — AgentCounsel</title>
+<meta name="description" content="Use when adversarially stress-testing a draft legal work product before attorney review to surface invented authority, unsupported claims, hidden assumptions, confidence overstatement, and structural defects.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/legal-methodology.html">Legal Methodology</a> / <span>Red-Team Verifier</span></nav>
+<h1>Red-Team Verifier</h1>
+<p class="path">Canonical path: <code>skills/legal-methodology/red-team-verifier/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when adversarially stress-testing a draft legal work product before attorney review to surface invented authority, unsupported claims, hidden assumptions, confidence overstatement, and structural defects.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Adversarially stress-test a draft legal work product before it reaches the reviewing attorney. The skill conducts a systematic, category-by-category challenge pass across the draft, hunting for: invented or unverifiable authority (cases, statutes, citations, quotations); unsupported factual claims; hidden or unstated assumptions; missing or silently-resolved placeholders; overstated confidence and legal-advice framing; blended fact/assumption/analysis/strategy layers; unconfirmed jurisdiction; and computed or asserted deadlines. It produces a verification findings report — a structured, categorized list of defects with severity ratings and recommended fixes — plus an overall PASS / REVISE verdict. It produces draft legal work product for attorney review, not legal advice.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>Any AgentCounsel draft is complete and is about to be finalized or passed to attorney review.</li><li>An AI-generated legal draft of any type has been produced and a defect check is warranted before reliance.</li><li>The user wants to confirm that a draft contains no fabricated authority, no silently-resolved gaps, and no confidence overstatement before it is used.</li><li>A draft has been revised and a targeted re-check of the changed sections is needed.</li><li>Quality-control review is required before a deliverable is circulated within a legal team.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li>The complete draft to be verified (uploaded or pasted). Do not verify from a description alone.</li><li>The skill or workflow that produced the draft, if known — this tells the verifier what structure and sourcing standards apply.</li><li>The stated purpose and intended recipient of the draft.</li><li>Optional: the jurisdiction and governing law the draft is supposed to address — if provided, the verifier can flag jurisdiction mismatches in addition to structural defects.</li></ul>
+<p>If the draft text is not provided, stop and request it. Do not conduct verification on a paraphrase or description of a draft.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The document is already a final, attorney-approved work product — verification before attorney review is the function of this skill; post-approval review is out of scope.</li><li>The task is to create new legal analysis — run the relevant substantive skill first, then apply this skill to the output.</li><li>The user needs a substantive legal review or opinion rather than a structural defect check (use the appropriate substantive skill).</li><li>The input is a source document (contract, filing, statute) rather than a draft work product — use a review or research skill instead.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>This skill identifies defects; it does not fix them. Recommended fixes are directions for correction, not substitute analysis.</li><li>Do not invent corrections. A finding that a citation may be fabricated is a flag for attorney verification, not a conclusion that it is fabricated.</li><li>Never assert that an authority exists or does not exist based on model background knowledge. Mark all unverifiable citations as unverified and route them for attorney confirmation.</li><li>Do not resolve jurisdiction gaps, compute deadlines, or fill in missing analysis in the course of verification. Flag each gap as a defect with a <code>[VERIFY: ...]</code> or <code>[CONFIRM: ...]</code> placeholder.</li><li>A PASS verdict means the draft survived this adversarial pass; it does not mean the draft is legally correct, accurate, or final. Attorney review remains mandatory.</li><li>Do not place client-sensitive facts from the draft into reusable templates or outputs beyond this findings report.</li><li>Keep the findings report clearly labeled as draft work product.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<p>Work through the draft category by category, in this order. Record every finding before moving to the next category.</p>
+<ol><li><strong>Confirm inputs.</strong> Verify that you have the complete draft text, the draft's stated purpose, and the intended recipient. If the draft is incomplete or the purpose is unclear, record that as the first finding and continue with what is available.</li></ol>
+<ol><li><strong>Authority and citation audit.</strong> For every case, statute, regulation, rule, secondary source, citation, and quotation in the draft:<ul><li>Classify the source as: (a) user-provided document (the highest-trust tier), (b) independently researched and verified, or (c) model background knowledge or unverifiable.</li><li>Flag every citation that cannot be traced to a user-provided or independently verified source as <code>[UNVERIFIED — must be confirmed before reliance]</code>.</li><li>Flag every quotation that cannot be verified against its source text.</li><li>Flag section numbers, docket numbers, reporter references, and URLs that cannot be confirmed.</li><li>Record each finding with its location in the draft, the authority name or claim as stated, and the recommended action.</li></ul></li></ol>
+<ol><li><strong>Factual claim audit.</strong> For every factual claim in the draft:<ul><li>Identify whether it traces to a user-provided document, a client-provided representation, or neither.</li><li>Flag facts with no stated source as unsupported.</li><li>Flag facts that contradict or go beyond the provided inputs.</li><li>Note any fact that appears to have been inferred or assumed but is stated as if established.</li></ul></li></ol>
+<ol><li><strong>Assumption audit.</strong> For every assumption the draft makes:<ul><li>Check whether the assumption is explicitly labeled as such.</li><li>Flag hidden assumptions — conclusions that depend on an unstated premise.</li><li>Flag assumptions that have been silently resolved rather than presented for attorney confirmation.</li></ul></li></ol>
+<ol><li><strong>Placeholder audit.</strong> Scan for:<ul><li>Missing placeholders: gaps in jurisdiction, governing law, deadline, party, or required input that should carry a <code>[CONFIRM: ...]</code> or <code>[VERIFY: ...]</code> marker but do not.</li><li>Silently resolved placeholders: markers that were present in an earlier stage but appear to have been filled in without verification.</li><li>Incomplete placeholders: markers like <code>[TBD]</code> or <code>[INSERT]</code> that signal unfinished work.</li></ul></li></ol>
+<ol><li><strong>Confidence and framing audit.</strong> Check every conclusion, summary, and recommendation for:<ul><li>Legal-advice framing ("you must," "you are required to," "this is legal," "this is illegal") not accompanied by a clear draft disclaimer.</li><li>Overstatement of certainty (unhedged conclusions on unsettled or jurisdiction-specific questions).</li><li>Statements that present analysis as a holding or final determination.</li><li>Missing qualification of confidence level on contested or uncertain points.</li></ul></li></ol>
+<ol><li><strong>Layer-separation audit.</strong> Verify that the draft visibly separates:<ul><li>Facts from assumptions.</li><li>Legal authority from analysis.</li><li>Analysis from strategy or recommendation.</li><li>Verification items from resolved conclusions. Flag any passage where two or more layers are blended without labeling.</li></ul></li></ol>
+<ol><li><strong>Jurisdiction and deadline audit.</strong> Confirm:<ul><li>Jurisdiction is stated or explicitly flagged as unknown with a <code>[verify jurisdiction]</code> marker.</li><li>Governing law is identified or flagged.</li><li>No deadline has been computed or asserted by the draft. Flag any date presented as a computed deadline, limitations period, or notice period as <code>[deadline verification required]</code>.</li><li>Any jurisdiction-specific legal proposition is either (a) verified to the stated jurisdiction or (b) carries a <code>[verify jurisdiction]</code> flag.</li></ul></li></ol>
+<ol><li><strong>Completeness check.</strong> Verify that the draft:<ul><li>Addresses all issues it was scoped to address, or explains why an issue is out of scope.</li><li>Includes the required draft label ("draft legal work product for attorney review — not legal advice").</li><li>Includes an attorney verification checklist or routes the reader to one.</li><li>Does not omit an adverse authority or unfavorable analysis that would be material to attorney review.</li></ul></li></ol>
+<ol><li><strong>Assign severity to each finding.</strong> Rate each recorded finding:<ul><li><strong>Critical</strong> — a defect that, if unaddressed, could cause an attorney to rely on invented authority, a missed deadline, a waived right, or a fundamentally incorrect conclusion. Must be resolved before the draft proceeds.</li><li><strong>Material</strong> — a defect that materially affects the reliability or completeness of the draft. Should be resolved before the draft is relied upon.</li><li><strong>Minor</strong> — a formatting, labeling, or style defect that does not affect substance but should be corrected.</li></ul></li></ol>
+<ol><li><strong>Assign the overall verdict:</strong><ul><li><strong>REVISE</strong> — one or more Critical or Material findings are present. The draft must be corrected and re-verified (or reviewed by the attorney with the findings report in hand) before reliance.</li><li><strong>PASS</strong> — no Critical or Material findings. Minor findings, if any, are listed for optional correction. Attorney review remains mandatory regardless of a PASS verdict.</li></ul></li></ol>
+<ol><li><strong>Assemble the findings report</strong> using the output format below.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver a Verification Findings Report with the following sections:</p>
+<ol><li><strong>Report Header</strong> — Draft title or description; date of verification; overall verdict (PASS / REVISE); count of Critical, Material, and Minor findings.</li><li><strong>Overall Verdict</strong> — PASS or REVISE, with a one-paragraph explanation of the basis.</li><li><strong>Findings by Category</strong> — One section per audit category above. Within each section, list findings as a table:</li></ol>
+<table><thead><tr><th>#</th><th>Location</th><th>Finding</th><th>Severity</th><th>Recommended Action</th></tr></thead><tbody></tbody></table>
+<p>If a category produced no findings, record "No findings in this category."</p>
+<ol><li><strong>Critical Findings Summary</strong> — A consolidated list of all Critical findings only, for rapid attorney attention.</li><li><strong>Verification Items for Attorney</strong> — Items the verifier flagged as unverifiable by this skill and that require attorney or researcher confirmation (for example, citation existence, governing-law accuracy, deadline verification).</li><li><strong>Limitations of This Report</strong> — A brief statement of what this skill cannot verify: whether authority says what is claimed, whether analysis is legally correct, whether strategy is sound, and whether the draft is complete for its legal purpose. Those are attorney functions.</li></ol>
+<p>Label the report: <strong>Draft legal work product for attorney review. Not legal advice.</strong></p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] All Critical findings have been reviewed and resolved or consciously accepted with a documented rationale.</li><li>[ ] All Material findings have been reviewed; any accepted without correction are documented.</li><li>[ ] Every citation flagged as unverified has been independently confirmed to exist and to support the stated proposition.</li><li>[ ] Every quotation flagged as unverified has been checked against the source text.</li><li>[ ] Every jurisdiction gap has been resolved; no jurisdiction-specific analysis relies on an unconfirmed jurisdiction.</li><li>[ ] No deadline, limitations period, or notice period in the draft was computed by the agent; all dates have been attorney-verified.</li><li>[ ] All hidden assumptions have been surfaced and either confirmed or corrected.</li><li>[ ] All silently-resolved placeholders have been reviewed and properly completed.</li><li>[ ] The draft's confidence framing is appropriate; no statement presents analysis as legal advice or a final determination.</li><li>[ ] Fact, assumption, authority, analysis, and strategy layers are visibly separated in the revised draft.</li><li>[ ] The PASS verdict (if given) has been noted; attorney review is still required regardless of that verdict.</li><li>[ ] The revised draft carries the required draft label and an attorney verification checklist.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Red-Team Verifier
+description: Use when adversarially stress-testing a draft legal work product before attorney review to surface invented authority, unsupported claims, hidden assumptions, confidence overstatement, and structural defects.
+---
+
+# Red-Team Verifier
+
+## Purpose
+
+Adversarially stress-test a draft legal work product before it reaches the reviewing attorney. The skill conducts a systematic, category-by-category challenge pass across the draft, hunting for: invented or unverifiable authority (cases, statutes, citations, quotations); unsupported factual claims; hidden or unstated assumptions; missing or silently-resolved placeholders; overstated confidence and legal-advice framing; blended fact/assumption/analysis/strategy layers; unconfirmed jurisdiction; and computed or asserted deadlines. It produces a verification findings report — a structured, categorized list of defects with severity ratings and recommended fixes — plus an overall PASS / REVISE verdict. It produces draft legal work product for attorney review, not legal advice.
+
+## Use When
+
+- Any AgentCounsel draft is complete and is about to be finalized or passed to attorney review.
+- An AI-generated legal draft of any type has been produced and a defect check is warranted before reliance.
+- The user wants to confirm that a draft contains no fabricated authority, no silently-resolved gaps, and no confidence overstatement before it is used.
+- A draft has been revised and a targeted re-check of the changed sections is needed.
+- Quality-control review is required before a deliverable is circulated within a legal team.
+
+## Required Inputs
+
+- The complete draft to be verified (uploaded or pasted). Do not verify from a description alone.
+- The skill or workflow that produced the draft, if known — this tells the verifier what structure and sourcing standards apply.
+- The stated purpose and intended recipient of the draft.
+- Optional: the jurisdiction and governing law the draft is supposed to address — if provided, the verifier can flag jurisdiction mismatches in addition to structural defects.
+
+If the draft text is not provided, stop and request it. Do not conduct verification on a paraphrase or description of a draft.
+
+## Do Not Use When
+
+- The document is already a final, attorney-approved work product — verification before attorney review is the function of this skill; post-approval review is out of scope.
+- The task is to create new legal analysis — run the relevant substantive skill first, then apply this skill to the output.
+- The user needs a substantive legal review or opinion rather than a structural defect check (use the appropriate substantive skill).
+- The input is a source document (contract, filing, statute) rather than a draft work product — use a review or research skill instead.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- This skill identifies defects; it does not fix them. Recommended fixes are directions for correction, not substitute analysis.
+- Do not invent corrections. A finding that a citation may be fabricated is a flag for attorney verification, not a conclusion that it is fabricated.
+- Never assert that an authority exists or does not exist based on model background knowledge. Mark all unverifiable citations as unverified and route them for attorney confirmation.
+- Do not resolve jurisdiction gaps, compute deadlines, or fill in missing analysis in the course of verification. Flag each gap as a defect with a `[VERIFY: ...]` or `[CONFIRM: ...]` placeholder.
+- A PASS verdict means the draft survived this adversarial pass; it does not mean the draft is legally correct, accurate, or final. Attorney review remains mandatory.
+- Do not place client-sensitive facts from the draft into reusable templates or outputs beyond this findings report.
+- Keep the findings report clearly labeled as draft work product.
+
+## Workflow
+
+Work through the draft category by category, in this order. Record every finding before moving to the next category.
+
+1. **Confirm inputs.** Verify that you have the complete draft text, the draft's stated purpose, and the intended recipient. If the draft is incomplete or the purpose is unclear, record that as the first finding and continue with what is available.
+
+2. **Authority and citation audit.** For every case, statute, regulation, rule, secondary source, citation, and quotation in the draft:
+   - Classify the source as: (a) user-provided document (the highest-trust tier), (b) independently researched and verified, or (c) model background knowledge or unverifiable.
+   - Flag every citation that cannot be traced to a user-provided or independently verified source as `[UNVERIFIED — must be confirmed before reliance]`.
+   - Flag every quotation that cannot be verified against its source text.
+   - Flag section numbers, docket numbers, reporter references, and URLs that cannot be confirmed.
+   - Record each finding with its location in the draft, the authority name or claim as stated, and the recommended action.
+
+3. **Factual claim audit.** For every factual claim in the draft:
+   - Identify whether it traces to a user-provided document, a client-provided representation, or neither.
+   - Flag facts with no stated source as unsupported.
+   - Flag facts that contradict or go beyond the provided inputs.
+   - Note any fact that appears to have been inferred or assumed but is stated as if established.
+
+4. **Assumption audit.** For every assumption the draft makes:
+   - Check whether the assumption is explicitly labeled as such.
+   - Flag hidden assumptions — conclusions that depend on an unstated premise.
+   - Flag assumptions that have been silently resolved rather than presented for attorney confirmation.
+
+5. **Placeholder audit.** Scan for:
+   - Missing placeholders: gaps in jurisdiction, governing law, deadline, party, or required input that should carry a `[CONFIRM: ...]` or `[VERIFY: ...]` marker but do not.
+   - Silently resolved placeholders: markers that were present in an earlier stage but appear to have been filled in without verification.
+   - Incomplete placeholders: markers like `[TBD]` or `[INSERT]` that signal unfinished work.
+
+6. **Confidence and framing audit.** Check every conclusion, summary, and recommendation for:
+   - Legal-advice framing ("you must," "you are required to," "this is legal," "this is illegal") not accompanied by a clear draft disclaimer.
+   - Overstatement of certainty (unhedged conclusions on unsettled or jurisdiction-specific questions).
+   - Statements that present analysis as a holding or final determination.
+   - Missing qualification of confidence level on contested or uncertain points.
+
+7. **Layer-separation audit.** Verify that the draft visibly separates:
+   - Facts from assumptions.
+   - Legal authority from analysis.
+   - Analysis from strategy or recommendation.
+   - Verification items from resolved conclusions.
+   Flag any passage where two or more layers are blended without labeling.
+
+8. **Jurisdiction and deadline audit.** Confirm:
+   - Jurisdiction is stated or explicitly flagged as unknown with a `[verify jurisdiction]` marker.
+   - Governing law is identified or flagged.
+   - No deadline has been computed or asserted by the draft. Flag any date presented as a computed deadline, limitations period, or notice period as `[deadline verification required]`.
+   - Any jurisdiction-specific legal proposition is either (a) verified to the stated jurisdiction or (b) carries a `[verify jurisdiction]` flag.
+
+9. **Completeness check.** Verify that the draft:
+   - Addresses all issues it was scoped to address, or explains why an issue is out of scope.
+   - Includes the required draft label ("draft legal work product for attorney review — not legal advice").
+   - Includes an attorney verification checklist or routes the reader to one.
+   - Does not omit an adverse authority or unfavorable analysis that would be material to attorney review.
+
+10. **Assign severity to each finding.** Rate each recorded finding:
+    - **Critical** — a defect that, if unaddressed, could cause an attorney to rely on invented authority, a missed deadline, a waived right, or a fundamentally incorrect conclusion. Must be resolved before the draft proceeds.
+    - **Material** — a defect that materially affects the reliability or completeness of the draft. Should be resolved before the draft is relied upon.
+    - **Minor** — a formatting, labeling, or style defect that does not affect substance but should be corrected.
+
+11. **Assign the overall verdict:**
+    - **REVISE** — one or more Critical or Material findings are present. The draft must be corrected and re-verified (or reviewed by the attorney with the findings report in hand) before reliance.
+    - **PASS** — no Critical or Material findings. Minor findings, if any, are listed for optional correction. Attorney review remains mandatory regardless of a PASS verdict.
+
+12. **Assemble the findings report** using the output format below.
+
+## Output Format
+
+Deliver a Verification Findings Report with the following sections:
+
+1. **Report Header** — Draft title or description; date of verification; overall verdict (PASS / REVISE); count of Critical, Material, and Minor findings.
+2. **Overall Verdict** — PASS or REVISE, with a one-paragraph explanation of the basis.
+3. **Findings by Category** — One section per audit category above. Within each section, list findings as a table:
+
+   | # | Location | Finding | Severity | Recommended Action |
+   |---|----------|---------|----------|--------------------|
+
+   If a category produced no findings, record "No findings in this category."
+
+4. **Critical Findings Summary** — A consolidated list of all Critical findings only, for rapid attorney attention.
+5. **Verification Items for Attorney** — Items the verifier flagged as unverifiable by this skill and that require attorney or researcher confirmation (for example, citation existence, governing-law accuracy, deadline verification).
+6. **Limitations of This Report** — A brief statement of what this skill cannot verify: whether authority says what is claimed, whether analysis is legally correct, whether strategy is sound, and whether the draft is complete for its legal purpose. Those are attorney functions.
+
+Label the report: **Draft legal work product for attorney review. Not legal advice.**
+
+## Attorney Verification Checklist
+
+- [ ] All Critical findings have been reviewed and resolved or consciously accepted with a documented rationale.
+- [ ] All Material findings have been reviewed; any accepted without correction are documented.
+- [ ] Every citation flagged as unverified has been independently confirmed to exist and to support the stated proposition.
+- [ ] Every quotation flagged as unverified has been checked against the source text.
+- [ ] Every jurisdiction gap has been resolved; no jurisdiction-specific analysis relies on an unconfirmed jurisdiction.
+- [ ] No deadline, limitations period, or notice period in the draft was computed by the agent; all dates have been attorney-verified.
+- [ ] All hidden assumptions have been surfaced and either confirmed or corrected.
+- [ ] All silently-resolved placeholders have been reviewed and properly completed.
+- [ ] The draft's confidence framing is appropriate; no statement presents analysis as legal advice or a final determination.
+- [ ] Fact, assumption, authority, analysis, and strategy layers are visibly separated in the revised draft.
+- [ ] The PASS verdict (if given) has been noted; attorney review is still required regardless of that verdict.
+- [ ] The revised draft carries the required draft label and an attorney verification checklist.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Red-Team Verifier ===
+---
+name: Red-Team Verifier
+description: Use when adversarially stress-testing a draft legal work product before attorney review to surface invented authority, unsupported claims, hidden assumptions, confidence overstatement, and structural defects.
+---
+
+# Red-Team Verifier
+
+## Purpose
+
+Adversarially stress-test a draft legal work product before it reaches the reviewing attorney. The skill conducts a systematic, category-by-category challenge pass across the draft, hunting for: invented or unverifiable authority (cases, statutes, citations, quotations); unsupported factual claims; hidden or unstated assumptions; missing or silently-resolved placeholders; overstated confidence and legal-advice framing; blended fact/assumption/analysis/strategy layers; unconfirmed jurisdiction; and computed or asserted deadlines. It produces a verification findings report — a structured, categorized list of defects with severity ratings and recommended fixes — plus an overall PASS / REVISE verdict. It produces draft legal work product for attorney review, not legal advice.
+
+## Use When
+
+- Any AgentCounsel draft is complete and is about to be finalized or passed to attorney review.
+- An AI-generated legal draft of any type has been produced and a defect check is warranted before reliance.
+- The user wants to confirm that a draft contains no fabricated authority, no silently-resolved gaps, and no confidence overstatement before it is used.
+- A draft has been revised and a targeted re-check of the changed sections is needed.
+- Quality-control review is required before a deliverable is circulated within a legal team.
+
+## Required Inputs
+
+- The complete draft to be verified (uploaded or pasted). Do not verify from a description alone.
+- The skill or workflow that produced the draft, if known — this tells the verifier what structure and sourcing standards apply.
+- The stated purpose and intended recipient of the draft.
+- Optional: the jurisdiction and governing law the draft is supposed to address — if provided, the verifier can flag jurisdiction mismatches in addition to structural defects.
+
+If the draft text is not provided, stop and request it. Do not conduct verification on a paraphrase or description of a draft.
+
+## Do Not Use When
+
+- The document is already a final, attorney-approved work product — verification before attorney review is the function of this skill; post-approval review is out of scope.
+- The task is to create new legal analysis — run the relevant substantive skill first, then apply this skill to the output.
+- The user needs a substantive legal review or opinion rather than a structural defect check (use the appropriate substantive skill).
+- The input is a source document (contract, filing, statute) rather than a draft work product — use a review or research skill instead.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- This skill identifies defects; it does not fix them. Recommended fixes are directions for correction, not substitute analysis.
+- Do not invent corrections. A finding that a citation may be fabricated is a flag for attorney verification, not a conclusion that it is fabricated.
+- Never assert that an authority exists or does not exist based on model background knowledge. Mark all unverifiable citations as unverified and route them for attorney confirmation.
+- Do not resolve jurisdiction gaps, compute deadlines, or fill in missing analysis in the course of verification. Flag each gap as a defect with a `[VERIFY: ...]` or `[CONFIRM: ...]` placeholder.
+- A PASS verdict means the draft survived this adversarial pass; it does not mean the draft is legally correct, accurate, or final. Attorney review remains mandatory.
+- Do not place client-sensitive facts from the draft into reusable templates or outputs beyond this findings report.
+- Keep the findings report clearly labeled as draft work product.
+
+## Workflow
+
+Work through the draft category by category, in this order. Record every finding before moving to the next category.
+
+1. **Confirm inputs.** Verify that you have the complete draft text, the draft's stated purpose, and the intended recipient. If the draft is incomplete or the purpose is unclear, record that as the first finding and continue with what is available.
+
+2. **Authority and citation audit.** For every case, statute, regulation, rule, secondary source, citation, and quotation in the draft:
+   - Classify the source as: (a) user-provided document (the highest-trust tier), (b) independently researched and verified, or (c) model background knowledge or unverifiable.
+   - Flag every citation that cannot be traced to a user-provided or independently verified source as `[UNVERIFIED — must be confirmed before reliance]`.
+   - Flag every quotation that cannot be verified against its source text.
+   - Flag section numbers, docket numbers, reporter references, and URLs that cannot be confirmed.
+   - Record each finding with its location in the draft, the authority name or claim as stated, and the recommended action.
+
+3. **Factual claim audit.** For every factual claim in the draft:
+   - Identify whether it traces to a user-provided document, a client-provided representation, or neither.
+   - Flag facts with no stated source as unsupported.
+   - Flag facts that contradict or go beyond the provided inputs.
+   - Note any fact that appears to have been inferred or assumed but is stated as if established.
+
+4. **Assumption audit.** For every assumption the draft makes:
+   - Check whether the assumption is explicitly labeled as such.
+   - Flag hidden assumptions — conclusions that depend on an unstated premise.
+   - Flag assumptions that have been silently resolved rather than presented for attorney confirmation.
+
+5. **Placeholder audit.** Scan for:
+   - Missing placeholders: gaps in jurisdiction, governing law, deadline, party, or required input that should carry a `[CONFIRM: ...]` or `[VERIFY: ...]` marker but do not.
+   - Silently resolved placeholders: markers that were present in an earlier stage but appear to have been filled in without verification.
+   - Incomplete placeholders: markers like `[TBD]` or `[INSERT]` that signal unfinished work.
+
+6. **Confidence and framing audit.** Check every conclusion, summary, and recommendation for:
+   - Legal-advice framing ("you must," "you are required to," "this is legal," "this is illegal") not accompanied by a clear draft disclaimer.
+   - Overstatement of certainty (unhedged conclusions on unsettled or jurisdiction-specific questions).
+   - Statements that present analysis as a holding or final determination.
+   - Missing qualification of confidence level on contested or uncertain points.
+
+7. **Layer-separation audit.** Verify that the draft visibly separates:
+   - Facts from assumptions.
+   - Legal authority from analysis.
+   - Analysis from strategy or recommendation.
+   - Verification items from resolved conclusions.
+   Flag any passage where two or more layers are blended without labeling.
+
+8. **Jurisdiction and deadline audit.** Confirm:
+   - Jurisdiction is stated or explicitly flagged as unknown with a `[verify jurisdiction]` marker.
+   - Governing law is identified or flagged.
+   - No deadline has been computed or asserted by the draft. Flag any date presented as a computed deadline, limitations period, or notice period as `[deadline verification required]`.
+   - Any jurisdiction-specific legal proposition is either (a) verified to the stated jurisdiction or (b) carries a `[verify jurisdiction]` flag.
+
+9. **Completeness check.** Verify that the draft:
+   - Addresses all issues it was scoped to address, or explains why an issue is out of scope.
+   - Includes the required draft label ("draft legal work product for attorney review — not legal advice").
+   - Includes an attorney verification checklist or routes the reader to one.
+   - Does not omit an adverse authority or unfavorable analysis that would be material to attorney review.
+
+10. **Assign severity to each finding.** Rate each recorded finding:
+    - **Critical** — a defect that, if unaddressed, could cause an attorney to rely on invented authority, a missed deadline, a waived right, or a fundamentally incorrect conclusion. Must be resolved before the draft proceeds.
+    - **Material** — a defect that materially affects the reliability or completeness of the draft. Should be resolved before the draft is relied upon.
+    - **Minor** — a formatting, labeling, or style defect that does not affect substance but should be corrected.
+
+11. **Assign the overall verdict:**
+    - **REVISE** — one or more Critical or Material findings are present. The draft must be corrected and re-verified (or reviewed by the attorney with the findings report in hand) before reliance.
+    - **PASS** — no Critical or Material findings. Minor findings, if any, are listed for optional correction. Attorney review remains mandatory regardless of a PASS verdict.
+
+12. **Assemble the findings report** using the output format below.
+
+## Output Format
+
+Deliver a Verification Findings Report with the following sections:
+
+1. **Report Header** — Draft title or description; date of verification; overall verdict (PASS / REVISE); count of Critical, Material, and Minor findings.
+2. **Overall Verdict** — PASS or REVISE, with a one-paragraph explanation of the basis.
+3. **Findings by Category** — One section per audit category above. Within each section, list findings as a table:
+
+   | # | Location | Finding | Severity | Recommended Action |
+   |---|----------|---------|----------|--------------------|
+
+   If a category produced no findings, record "No findings in this category."
+
+4. **Critical Findings Summary** — A consolidated list of all Critical findings only, for rapid attorney attention.
+5. **Verification Items for Attorney** — Items the verifier flagged as unverifiable by this skill and that require attorney or researcher confirmation (for example, citation existence, governing-law accuracy, deadline verification).
+6. **Limitations of This Report** — A brief statement of what this skill cannot verify: whether authority says what is claimed, whether analysis is legally correct, whether strategy is sound, and whether the draft is complete for its legal purpose. Those are attorney functions.
+
+Label the report: **Draft legal work product for attorney review. Not legal advice.**
+
+## Attorney Verification Checklist
+
+- [ ] All Critical findings have been reviewed and resolved or consciously accepted with a documented rationale.
+- [ ] All Material findings have been reviewed; any accepted without correction are documented.
+- [ ] Every citation flagged as unverified has been independently confirmed to exist and to support the stated proposition.
+- [ ] Every quotation flagged as unverified has been checked against the source text.
+- [ ] Every jurisdiction gap has been resolved; no jurisdiction-specific analysis relies on an unconfirmed jurisdiction.
+- [ ] No deadline, limitations period, or notice period in the draft was computed by the agent; all dates have been attorney-verified.
+- [ ] All hidden assumptions have been surfaced and either confirmed or corrected.
+- [ ] All silently-resolved placeholders have been reviewed and properly completed.
+- [ ] The draft's confidence framing is appropriate; no statement presents analysis as legal advice or a final determination.
+- [ ] Fact, assumption, authority, analysis, and strategy layers are visibly separated in the revised draft.
+- [ ] The PASS verdict (if given) has been noted; attorney review is still required regardless of that verdict.
+- [ ] The revised draft carries the required draft label and an attorney verification checklist.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

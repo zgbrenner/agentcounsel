@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entity Compliance Review — AgentCounsel</title>
+<meta name="description" content="Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/corporate.html">Corporate</a> / <span>Entity Compliance Review</span></nav>
+<h1>Entity Compliance Review</h1>
+<p class="path">Canonical path: <code>skills/corporate/entity-compliance/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured, attorney-ready review of an organization's corporate-entity compliance posture. The review organizes what the user supplies about each entity's periodic filing obligations — annual reports, franchise filings, foreign-qualification registrations, registered-agent status, and good-standing currency — and flags items that are overdue, due soon, of unknown status, or otherwise requiring verification.</p>
+<p>This skill records and organizes information supplied by the user. It does not populate, calculate, or infer any filing deadline, fee, due date, or filing requirement from model background knowledge. Every obligation in the output comes from the user; everything else is flagged for confirmation with the registered agent or the relevant authority. The output is draft legal work product for attorney review — not legal advice and not a substitute for a registered-agent compliance calendar.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A user asks to "review our entity compliance," "check our good-standing status," or "organize our filing obligations" across a portfolio of legal entities.</li><li>An in-house team or outside counsel wants a structured snapshot of where each entity stands on periodic filing and good-standing obligations before a transaction, audit, or board presentation.</li><li>A prior registered-agent compliance report or internal tracker needs to be organized and gap-flagged in attorney-ready format.</li><li>The user needs to identify which entities are overdue, due soon, or without a recent good-standing confirmation, so the attorney can prioritize remediation.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>Entity list.</strong> For each entity:<ul><li>Legal name (as formed or registered).</li><li>Entity type (corporation, LLC, limited partnership, limited liability limited partnership, or other — specify).</li><li>Jurisdiction of formation.</li><li>Any additional jurisdictions where the entity is qualified or registered to do business (foreign qualification).</li><li>Name of registered agent and, if applicable, whether a registered-agent service is managing the compliance calendar.</li><li>Formation date or, if unavailable, the approximate year of formation.</li></ul></li></ul>
+<ul><li><strong>Filing obligations the user is tracking.</strong> For each obligation:<ul><li>Filing type (e.g., annual report, biennial report, franchise tax filing, foreign-qualification renewal, registered-agent designation — use the user's own label; do not rename or recharacterize).</li><li>Due basis: whether the due date is tied to a fixed calendar date, an anniversary of formation, an anniversary of qualification, or another basis (describe; do not infer).</li><li>Last-filed date (or "unknown" if not on file).</li><li>Current status as reported by the user: current, due soon, overdue, unknown, or managed by registered-agent service.</li></ul></li></ul>
+<p>Optional but recommended:</p>
+<ul><li>A prior compliance review or registered-agent compliance report, to use as a reference for gap identification.</li><li>Any notes the user has about dormant or inactive entities under consideration for dissolution.</li></ul>
+<p>If the entity list is not provided, stop and request it. Do not proceed on a partial entity list without noting which entities are absent and flagging all outputs accordingly. If filing obligations for a given entity and jurisdiction are not provided, record the status as "unknown" and flag it for confirmation — do not supply obligations from model background knowledge.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user wants a filing made, a good-standing certificate obtained, or a registered agent appointed — this skill produces a review document, not filings.</li><li>The user wants to know whether the entity is legally required to qualify to do business in a particular jurisdiction — that is a fact-dependent legal determination for the attorney; this skill can flag a potential foreign-qualification gap but cannot resolve it.</li><li>The user wants a regulatory-compliance gap analysis against a body of substantive regulation (environmental, securities, licensing, etc.) — use <code>compliance-gap-matrix</code> instead.</li><li>The user wants to analyze the entity structure for tax efficiency, restructuring, or M&amp;A purposes — those are separate legal and tax engagements.</li><li>The entity list has not been provided and the user is asking the agent to generate a hypothetical entity list — do not fabricate entities or obligations.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice. Attorney review and sign-off are required before any filing obligation or compliance posture is relied upon.</li><li><strong>Never populate a filing obligation, deadline, fee, or requirement from model background knowledge.</strong> Filing rules are jurisdiction-specific, entity-type-specific, and subject to change. If the user has not supplied an obligation, record its status as "unknown" and flag it for confirmation with the registered agent or the relevant authority.</li><li><strong>Entity-type discipline.</strong> Filing obligations depend on both the jurisdiction and the entity type. A corporation, an LLC, and a limited partnership formed in the same jurisdiction can have materially different obligations, due dates, and fees. Never transfer an obligation from one entity type to another. Never assume that because one entity in a jurisdiction has a particular obligation, another entity of a different type in the same jurisdiction shares it.</li><li><strong>Compute nothing.</strong> Do not calculate whether a filing is overdue or due soon based on a date you derive or assume. Record the status the user provides. Mark every date in the output <code>[deadline verification required]</code> to signal that it has not been confirmed against the filing authority or the registered agent.</li><li>Every deadline, fee, and filing requirement is reference-only. Confirm all items with the registered agent or the relevant authority before relying on them. A registered-agent service's compliance calendar is authoritative; where one is in place, note that the agent's calendar governs.</li><li>Do not invent citations, statutes, regulations, administrative rules, or case law. Treat all model background knowledge about corporate law and filing requirements as unverified.</li><li>Distinguish facts (what the user supplied), assumptions (what was inferred), and items requiring verification. Label each category explicitly.</li><li>Flag every point of uncertainty with a bracketed placeholder: <code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[citation needed]</code>, <code>[verify jurisdiction]</code>, or <code>[deadline verification required]</code>. Never resolve uncertainty silently.</li><li>Foreign-qualification gap flags are informational only. Whether an entity is legally required to qualify in a given jurisdiction depends on the nature and extent of its activities there — a fact-dependent question for the attorney. The skill flags the gap; it does not answer the question.</li><li>Preserve confidentiality and privilege. Do not place client-sensitive entity names, ownership details, or transaction context into a reusable copy of the template.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that the entity list has been provided with, at minimum, each entity's name, entity type, and jurisdiction of formation. Verify that the user has supplied filing obligations for each entity and jurisdiction combination, or has indicated that obligations are unknown. If the entity list is missing or materially incomplete, stop and request it. If filing obligations are not supplied for one or more entities, proceed but record each missing item as "unknown" and note the gap prominently.</li></ol>
+<ol><li><strong>Map the entity roster.</strong> List each entity in the order supplied. For each entity, record: legal name, entity type, jurisdiction of formation, foreign-qualification jurisdictions (if any), registered agent, and formation date. Do not add entities, entity types, or jurisdictions that the user has not mentioned.</li></ol>
+<ol><li><strong>Record filing obligations — user-supplied only.</strong> For each entity and each jurisdiction (formation and any foreign-qualification jurisdictions), record the filing obligations the user has supplied. Use the user's own labels for filing types; do not rename or recharacterize them. For each obligation, capture:<ul><li>Filing type (user-supplied label).</li><li>Due basis (as described by the user: fixed date, anniversary of formation, anniversary of qualification, or other).</li><li>Last-filed date (or "unknown").</li><li>Current status (current, due soon, overdue, unknown, or managed by registered-agent service).</li><li>Any notes the user has provided.</li></ul></li></ol>
+<p>For every obligation not supplied by the user for a given entity-jurisdiction-type combination, insert a row with status "unknown" and flag it: <code>[VERIFY: confirm filing obligations with registered agent or filing authority for this jurisdiction and entity type]</code>.</p>
+<ol><li><strong>Apply entity-type discipline.</strong> Before finalizing the table, confirm that no obligation has been copied or inferred across entity types. Each entity's obligations must derive solely from what the user supplied for that entity. Insert a note wherever entity-type uncertainty exists: <code>[ATTORNEY TO CONFIRM: entity type determines applicable filing obligations — confirm before relying on this row]</code>.</li></ol>
+<ol><li><strong>Flag dates.</strong> Mark every due date and last-filed date in the output <code>[deadline verification required]</code>. Do not compute whether a filing is overdue or due soon from a date you derive. Record the status the user provides.</li></ol>
+<ol><li><strong>Build the status summary.</strong> From the recorded obligations, produce three lists:<ul><li><strong>Overdue items:</strong> obligations where the user-reported status is "overdue." List entity, entity type, jurisdiction, filing type, and any date provided, each marked <code>[deadline verification required]</code>.</li><li><strong>Due-soon items:</strong> obligations where the user-reported status is "due soon." Same columns.</li><li><strong>Unknown-status items:</strong> obligations where the status is "unknown" or where no obligation was supplied. Flag each for confirmation with the registered agent or the relevant authority.</li></ul></li></ol>
+<p>Note: where a registered-agent service is managing an entity's compliance calendar, record that fact and note that the agent's calendar is authoritative for due dates and status.</p>
+<ol><li><strong>Build the audit view.</strong> Flag the following for attorney attention:<ul><li><strong>Dormant or inactive entities:</strong> entities the user has identified as dormant, or entities with no recent filings or activity noted in the supplied information. Flag each for attorney review regarding potential dissolution or withdrawal from foreign jurisdictions.</li><li><strong>Stale good-standing confirmations:</strong> entities for which the user has not supplied a recent good-standing confirmation, or for which the last-confirmed date is not provided. Flag: <code>[VERIFY: obtain current good-standing certificate before reliance — confirm with filing authority or registered agent]</code>.</li><li><strong>Potential foreign-qualification gaps:</strong> entities with operational presence in a jurisdiction for which no foreign qualification is noted in the supplied information. Flag each as a potential gap and note: <code>[ATTORNEY TO CONFIRM: whether this entity's activities in this jurisdiction require foreign qualification is a fact-dependent legal determination — do not rely on this flag as a legal conclusion]</code>. Do not assert that qualification is or is not required.</li></ul></li></ol>
+<ol><li><strong>Assemble the output.</strong> Combine: (a) the entity compliance table from <code>templates/entity-compliance-table.md</code>, populated from the user-supplied information with placeholders for every unknown item; (b) the overdue / due-soon / unknown-status summary; (c) the audit view; (d) the assumptions section; and (e) the attorney verification checklist. Label the entire output as a draft for attorney review.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver:</p>
+<ol><li><strong>Entity Compliance Review</strong> — a complete draft using <code>templates/entity-compliance-table.md</code>, populated from the user-supplied information. Every date flagged <code>[deadline verification required]</code>. Every unknown obligation flagged for confirmation.</li><li><strong>Overdue / Due-Soon / Unknown-Status Summary</strong> — three labeled lists drawn from the table, each identifying the entity, entity type, jurisdiction, filing type, and user-reported status.</li><li><strong>Audit View</strong> — flagged items for attorney attention: dormant entities, stale good-standing confirmations, and potential foreign-qualification gaps, each with the appropriate placeholder and a note on what the attorney must confirm.</li><li><strong>Assumptions</strong> — an explicit list of every assumption made in producing the review, including any inference about entity type, jurisdiction, or filing status drawn from context rather than from a user-supplied statement.</li><li><strong>Attorney Verification Checklist</strong> — the checklist from this skill.</li></ol>
+<p>Use placeholders consistently. Do not fill any gap with content derived from model background knowledge about filing rules or deadlines.</p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The entity list is complete and reflects all active legal entities in the organization's portfolio, including wholly owned subsidiaries, joint ventures, and foreign-qualified entities.</li><li>[ ] Each entity's name, entity type, and jurisdiction of formation are confirmed against the entity's formation documents or official records.</li><li>[ ] Filing obligations for each entity in each jurisdiction have been confirmed with the registered agent or the relevant filing authority — not derived from model background knowledge. <code>[verify jurisdiction]</code></li><li>[ ] Entity-type distinctions have been respected: obligations for one entity type have not been applied to an entity of a different type in the same jurisdiction. <code>[verify jurisdiction]</code></li><li>[ ] Every due date and last-filed date has been confirmed against the registered agent's calendar or the filing authority's records. <code>[deadline verification required]</code></li><li>[ ] All items marked "overdue" have been reviewed and a remediation plan (cure filing, penalty assessment, or reinstatement) has been initiated or documented. <code>[verify jurisdiction]</code></li><li>[ ] All items marked "due soon" are on the registered agent's or counsel's docket for timely action. <code>[deadline verification required]</code></li><li>[ ] All items marked "unknown" have been investigated and resolved before any reliance on the review.</li><li>[ ] Good-standing status for each entity in each jurisdiction has been confirmed by a current good-standing certificate from the filing authority, not by reliance on the last-known status in this review.</li><li>[ ] Dormant or inactive entities flagged in the audit view have been reviewed for dissolution, cancellation, or withdrawal from foreign jurisdictions, as appropriate. <code>[verify jurisdiction]</code></li><li>[ ] Foreign-qualification gaps flagged in the audit view have been reviewed by the attorney to determine whether qualification is legally required given the entity's actual activities in each jurisdiction. <code>[verify jurisdiction]</code></li><li>[ ] Registered-agent designations are current and accurate in every jurisdiction where each entity is formed or qualified.</li><li>[ ] No filing deadline, fee, or legal requirement stated in this review has been asserted on the basis of model background knowledge without independent verification.</li><li>[ ] No legal authority, statute, or regulation has been cited in this review without verification by the attorney.</li><li>[ ] All placeholders and open items are resolved before this review is relied upon for any filing, transaction, or compliance certification.</li><li>[ ] The finalized review has been approved by the reviewing attorney before distribution or filing.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Entity Compliance Review
+description: Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.
+---
+
+# Entity Compliance Review
+
+## Purpose
+
+Produce a structured, attorney-ready review of an organization's corporate-entity compliance posture. The review organizes what the user supplies about each entity's periodic filing obligations — annual reports, franchise filings, foreign-qualification registrations, registered-agent status, and good-standing currency — and flags items that are overdue, due soon, of unknown status, or otherwise requiring verification.
+
+This skill records and organizes information supplied by the user. It does not populate, calculate, or infer any filing deadline, fee, due date, or filing requirement from model background knowledge. Every obligation in the output comes from the user; everything else is flagged for confirmation with the registered agent or the relevant authority. The output is draft legal work product for attorney review — not legal advice and not a substitute for a registered-agent compliance calendar.
+
+## Use When
+
+- A user asks to "review our entity compliance," "check our good-standing status," or "organize our filing obligations" across a portfolio of legal entities.
+- An in-house team or outside counsel wants a structured snapshot of where each entity stands on periodic filing and good-standing obligations before a transaction, audit, or board presentation.
+- A prior registered-agent compliance report or internal tracker needs to be organized and gap-flagged in attorney-ready format.
+- The user needs to identify which entities are overdue, due soon, or without a recent good-standing confirmation, so the attorney can prioritize remediation.
+
+## Required Inputs
+
+- **Entity list.** For each entity:
+  - Legal name (as formed or registered).
+  - Entity type (corporation, LLC, limited partnership, limited liability limited partnership, or other — specify).
+  - Jurisdiction of formation.
+  - Any additional jurisdictions where the entity is qualified or registered to do business (foreign qualification).
+  - Name of registered agent and, if applicable, whether a registered-agent service is managing the compliance calendar.
+  - Formation date or, if unavailable, the approximate year of formation.
+
+- **Filing obligations the user is tracking.** For each obligation:
+  - Filing type (e.g., annual report, biennial report, franchise tax filing, foreign-qualification renewal, registered-agent designation — use the user's own label; do not rename or recharacterize).
+  - Due basis: whether the due date is tied to a fixed calendar date, an anniversary of formation, an anniversary of qualification, or another basis (describe; do not infer).
+  - Last-filed date (or "unknown" if not on file).
+  - Current status as reported by the user: current, due soon, overdue, unknown, or managed by registered-agent service.
+
+Optional but recommended:
+- A prior compliance review or registered-agent compliance report, to use as a reference for gap identification.
+- Any notes the user has about dormant or inactive entities under consideration for dissolution.
+
+If the entity list is not provided, stop and request it. Do not proceed on a partial entity list without noting which entities are absent and flagging all outputs accordingly. If filing obligations for a given entity and jurisdiction are not provided, record the status as "unknown" and flag it for confirmation — do not supply obligations from model background knowledge.
+
+## Do Not Use When
+
+- The user wants a filing made, a good-standing certificate obtained, or a registered agent appointed — this skill produces a review document, not filings.
+- The user wants to know whether the entity is legally required to qualify to do business in a particular jurisdiction — that is a fact-dependent legal determination for the attorney; this skill can flag a potential foreign-qualification gap but cannot resolve it.
+- The user wants a regulatory-compliance gap analysis against a body of substantive regulation (environmental, securities, licensing, etc.) — use `compliance-gap-matrix` instead.
+- The user wants to analyze the entity structure for tax efficiency, restructuring, or M&amp;A purposes — those are separate legal and tax engagements.
+- The entity list has not been provided and the user is asking the agent to generate a hypothetical entity list — do not fabricate entities or obligations.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice. Attorney review and sign-off are required before any filing obligation or compliance posture is relied upon.
+- **Never populate a filing obligation, deadline, fee, or requirement from model background knowledge.** Filing rules are jurisdiction-specific, entity-type-specific, and subject to change. If the user has not supplied an obligation, record its status as "unknown" and flag it for confirmation with the registered agent or the relevant authority.
+- **Entity-type discipline.** Filing obligations depend on both the jurisdiction and the entity type. A corporation, an LLC, and a limited partnership formed in the same jurisdiction can have materially different obligations, due dates, and fees. Never transfer an obligation from one entity type to another. Never assume that because one entity in a jurisdiction has a particular obligation, another entity of a different type in the same jurisdiction shares it.
+- **Compute nothing.** Do not calculate whether a filing is overdue or due soon based on a date you derive or assume. Record the status the user provides. Mark every date in the output `[deadline verification required]` to signal that it has not been confirmed against the filing authority or the registered agent.
+- Every deadline, fee, and filing requirement is reference-only. Confirm all items with the registered agent or the relevant authority before relying on them. A registered-agent service's compliance calendar is authoritative; where one is in place, note that the agent's calendar governs.
+- Do not invent citations, statutes, regulations, administrative rules, or case law. Treat all model background knowledge about corporate law and filing requirements as unverified.
+- Distinguish facts (what the user supplied), assumptions (what was inferred), and items requiring verification. Label each category explicitly.
+- Flag every point of uncertainty with a bracketed placeholder: `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[citation needed]`, `[verify jurisdiction]`, or `[deadline verification required]`. Never resolve uncertainty silently.
+- Foreign-qualification gap flags are informational only. Whether an entity is legally required to qualify in a given jurisdiction depends on the nature and extent of its activities there — a fact-dependent question for the attorney. The skill flags the gap; it does not answer the question.
+- Preserve confidentiality and privilege. Do not place client-sensitive entity names, ownership details, or transaction context into a reusable copy of the template.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the entity list has been provided with, at minimum, each entity's name, entity type, and jurisdiction of formation. Verify that the user has supplied filing obligations for each entity and jurisdiction combination, or has indicated that obligations are unknown. If the entity list is missing or materially incomplete, stop and request it. If filing obligations are not supplied for one or more entities, proceed but record each missing item as "unknown" and note the gap prominently.
+
+2. **Map the entity roster.** List each entity in the order supplied. For each entity, record: legal name, entity type, jurisdiction of formation, foreign-qualification jurisdictions (if any), registered agent, and formation date. Do not add entities, entity types, or jurisdictions that the user has not mentioned.
+
+3. **Record filing obligations — user-supplied only.** For each entity and each jurisdiction (formation and any foreign-qualification jurisdictions), record the filing obligations the user has supplied. Use the user's own labels for filing types; do not rename or recharacterize them. For each obligation, capture:
+   - Filing type (user-supplied label).
+   - Due basis (as described by the user: fixed date, anniversary of formation, anniversary of qualification, or other).
+   - Last-filed date (or "unknown").
+   - Current status (current, due soon, overdue, unknown, or managed by registered-agent service).
+   - Any notes the user has provided.
+
+   For every obligation not supplied by the user for a given entity-jurisdiction-type combination, insert a row with status "unknown" and flag it: `[VERIFY: confirm filing obligations with registered agent or filing authority for this jurisdiction and entity type]`.
+
+4. **Apply entity-type discipline.** Before finalizing the table, confirm that no obligation has been copied or inferred across entity types. Each entity's obligations must derive solely from what the user supplied for that entity. Insert a note wherever entity-type uncertainty exists: `[ATTORNEY TO CONFIRM: entity type determines applicable filing obligations — confirm before relying on this row]`.
+
+5. **Flag dates.** Mark every due date and last-filed date in the output `[deadline verification required]`. Do not compute whether a filing is overdue or due soon from a date you derive. Record the status the user provides.
+
+6. **Build the status summary.** From the recorded obligations, produce three lists:
+   - **Overdue items:** obligations where the user-reported status is "overdue." List entity, entity type, jurisdiction, filing type, and any date provided, each marked `[deadline verification required]`.
+   - **Due-soon items:** obligations where the user-reported status is "due soon." Same columns.
+   - **Unknown-status items:** obligations where the status is "unknown" or where no obligation was supplied. Flag each for confirmation with the registered agent or the relevant authority.
+
+   Note: where a registered-agent service is managing an entity's compliance calendar, record that fact and note that the agent's calendar is authoritative for due dates and status.
+
+7. **Build the audit view.** Flag the following for attorney attention:
+   - **Dormant or inactive entities:** entities the user has identified as dormant, or entities with no recent filings or activity noted in the supplied information. Flag each for attorney review regarding potential dissolution or withdrawal from foreign jurisdictions.
+   - **Stale good-standing confirmations:** entities for which the user has not supplied a recent good-standing confirmation, or for which the last-confirmed date is not provided. Flag: `[VERIFY: obtain current good-standing certificate before reliance — confirm with filing authority or registered agent]`.
+   - **Potential foreign-qualification gaps:** entities with operational presence in a jurisdiction for which no foreign qualification is noted in the supplied information. Flag each as a potential gap and note: `[ATTORNEY TO CONFIRM: whether this entity's activities in this jurisdiction require foreign qualification is a fact-dependent legal determination — do not rely on this flag as a legal conclusion]`. Do not assert that qualification is or is not required.
+
+8. **Assemble the output.** Combine: (a) the entity compliance table from `templates/entity-compliance-table.md`, populated from the user-supplied information with placeholders for every unknown item; (b) the overdue / due-soon / unknown-status summary; (c) the audit view; (d) the assumptions section; and (e) the attorney verification checklist. Label the entire output as a draft for attorney review.
+
+## Output Format
+
+Deliver:
+
+1. **Entity Compliance Review** — a complete draft using `templates/entity-compliance-table.md`, populated from the user-supplied information. Every date flagged `[deadline verification required]`. Every unknown obligation flagged for confirmation.
+2. **Overdue / Due-Soon / Unknown-Status Summary** — three labeled lists drawn from the table, each identifying the entity, entity type, jurisdiction, filing type, and user-reported status.
+3. **Audit View** — flagged items for attorney attention: dormant entities, stale good-standing confirmations, and potential foreign-qualification gaps, each with the appropriate placeholder and a note on what the attorney must confirm.
+4. **Assumptions** — an explicit list of every assumption made in producing the review, including any inference about entity type, jurisdiction, or filing status drawn from context rather than from a user-supplied statement.
+5. **Attorney Verification Checklist** — the checklist from this skill.
+
+Use placeholders consistently. Do not fill any gap with content derived from model background knowledge about filing rules or deadlines.
+
+## Attorney Verification Checklist
+
+- [ ] The entity list is complete and reflects all active legal entities in the organization's portfolio, including wholly owned subsidiaries, joint ventures, and foreign-qualified entities.
+- [ ] Each entity's name, entity type, and jurisdiction of formation are confirmed against the entity's formation documents or official records.
+- [ ] Filing obligations for each entity in each jurisdiction have been confirmed with the registered agent or the relevant filing authority — not derived from model background knowledge. `[verify jurisdiction]`
+- [ ] Entity-type distinctions have been respected: obligations for one entity type have not been applied to an entity of a different type in the same jurisdiction. `[verify jurisdiction]`
+- [ ] Every due date and last-filed date has been confirmed against the registered agent's calendar or the filing authority's records. `[deadline verification required]`
+- [ ] All items marked "overdue" have been reviewed and a remediation plan (cure filing, penalty assessment, or reinstatement) has been initiated or documented. `[verify jurisdiction]`
+- [ ] All items marked "due soon" are on the registered agent's or counsel's docket for timely action. `[deadline verification required]`
+- [ ] All items marked "unknown" have been investigated and resolved before any reliance on the review.
+- [ ] Good-standing status for each entity in each jurisdiction has been confirmed by a current good-standing certificate from the filing authority, not by reliance on the last-known status in this review.
+- [ ] Dormant or inactive entities flagged in the audit view have been reviewed for dissolution, cancellation, or withdrawal from foreign jurisdictions, as appropriate. `[verify jurisdiction]`
+- [ ] Foreign-qualification gaps flagged in the audit view have been reviewed by the attorney to determine whether qualification is legally required given the entity's actual activities in each jurisdiction. `[verify jurisdiction]`
+- [ ] Registered-agent designations are current and accurate in every jurisdiction where each entity is formed or qualified.
+- [ ] No filing deadline, fee, or legal requirement stated in this review has been asserted on the basis of model background knowledge without independent verification.
+- [ ] No legal authority, statute, or regulation has been cited in this review without verification by the attorney.
+- [ ] All placeholders and open items are resolved before this review is relied upon for any filing, transaction, or compliance certification.
+- [ ] The finalized review has been approved by the reviewing attorney before distribution or filing.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Entity Compliance Review ===
+---
+name: Entity Compliance Review
+description: Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.
+---
+
+# Entity Compliance Review
+
+## Purpose
+
+Produce a structured, attorney-ready review of an organization's corporate-entity compliance posture. The review organizes what the user supplies about each entity's periodic filing obligations — annual reports, franchise filings, foreign-qualification registrations, registered-agent status, and good-standing currency — and flags items that are overdue, due soon, of unknown status, or otherwise requiring verification.
+
+This skill records and organizes information supplied by the user. It does not populate, calculate, or infer any filing deadline, fee, due date, or filing requirement from model background knowledge. Every obligation in the output comes from the user; everything else is flagged for confirmation with the registered agent or the relevant authority. The output is draft legal work product for attorney review — not legal advice and not a substitute for a registered-agent compliance calendar.
+
+## Use When
+
+- A user asks to "review our entity compliance," "check our good-standing status," or "organize our filing obligations" across a portfolio of legal entities.
+- An in-house team or outside counsel wants a structured snapshot of where each entity stands on periodic filing and good-standing obligations before a transaction, audit, or board presentation.
+- A prior registered-agent compliance report or internal tracker needs to be organized and gap-flagged in attorney-ready format.
+- The user needs to identify which entities are overdue, due soon, or without a recent good-standing confirmation, so the attorney can prioritize remediation.
+
+## Required Inputs
+
+- **Entity list.** For each entity:
+  - Legal name (as formed or registered).
+  - Entity type (corporation, LLC, limited partnership, limited liability limited partnership, or other — specify).
+  - Jurisdiction of formation.
+  - Any additional jurisdictions where the entity is qualified or registered to do business (foreign qualification).
+  - Name of registered agent and, if applicable, whether a registered-agent service is managing the compliance calendar.
+  - Formation date or, if unavailable, the approximate year of formation.
+
+- **Filing obligations the user is tracking.** For each obligation:
+  - Filing type (e.g., annual report, biennial report, franchise tax filing, foreign-qualification renewal, registered-agent designation — use the user's own label; do not rename or recharacterize).
+  - Due basis: whether the due date is tied to a fixed calendar date, an anniversary of formation, an anniversary of qualification, or another basis (describe; do not infer).
+  - Last-filed date (or "unknown" if not on file).
+  - Current status as reported by the user: current, due soon, overdue, unknown, or managed by registered-agent service.
+
+Optional but recommended:
+- A prior compliance review or registered-agent compliance report, to use as a reference for gap identification.
+- Any notes the user has about dormant or inactive entities under consideration for dissolution.
+
+If the entity list is not provided, stop and request it. Do not proceed on a partial entity list without noting which entities are absent and flagging all outputs accordingly. If filing obligations for a given entity and jurisdiction are not provided, record the status as "unknown" and flag it for confirmation — do not supply obligations from model background knowledge.
+
+## Do Not Use When
+
+- The user wants a filing made, a good-standing certificate obtained, or a registered agent appointed — this skill produces a review document, not filings.
+- The user wants to know whether the entity is legally required to qualify to do business in a particular jurisdiction — that is a fact-dependent legal determination for the attorney; this skill can flag a potential foreign-qualification gap but cannot resolve it.
+- The user wants a regulatory-compliance gap analysis against a body of substantive regulation (environmental, securities, licensing, etc.) — use `compliance-gap-matrix` instead.
+- The user wants to analyze the entity structure for tax efficiency, restructuring, or M&amp;A purposes — those are separate legal and tax engagements.
+- The entity list has not been provided and the user is asking the agent to generate a hypothetical entity list — do not fabricate entities or obligations.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice. Attorney review and sign-off are required before any filing obligation or compliance posture is relied upon.
+- **Never populate a filing obligation, deadline, fee, or requirement from model background knowledge.** Filing rules are jurisdiction-specific, entity-type-specific, and subject to change. If the user has not supplied an obligation, record its status as "unknown" and flag it for confirmation with the registered agent or the relevant authority.
+- **Entity-type discipline.** Filing obligations depend on both the jurisdiction and the entity type. A corporation, an LLC, and a limited partnership formed in the same jurisdiction can have materially different obligations, due dates, and fees. Never transfer an obligation from one entity type to another. Never assume that because one entity in a jurisdiction has a particular obligation, another entity of a different type in the same jurisdiction shares it.
+- **Compute nothing.** Do not calculate whether a filing is overdue or due soon based on a date you derive or assume. Record the status the user provides. Mark every date in the output `[deadline verification required]` to signal that it has not been confirmed against the filing authority or the registered agent.
+- Every deadline, fee, and filing requirement is reference-only. Confirm all items with the registered agent or the relevant authority before relying on them. A registered-agent service's compliance calendar is authoritative; where one is in place, note that the agent's calendar governs.
+- Do not invent citations, statutes, regulations, administrative rules, or case law. Treat all model background knowledge about corporate law and filing requirements as unverified.
+- Distinguish facts (what the user supplied), assumptions (what was inferred), and items requiring verification. Label each category explicitly.
+- Flag every point of uncertainty with a bracketed placeholder: `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[citation needed]`, `[verify jurisdiction]`, or `[deadline verification required]`. Never resolve uncertainty silently.
+- Foreign-qualification gap flags are informational only. Whether an entity is legally required to qualify in a given jurisdiction depends on the nature and extent of its activities there — a fact-dependent question for the attorney. The skill flags the gap; it does not answer the question.
+- Preserve confidentiality and privilege. Do not place client-sensitive entity names, ownership details, or transaction context into a reusable copy of the template.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the entity list has been provided with, at minimum, each entity's name, entity type, and jurisdiction of formation. Verify that the user has supplied filing obligations for each entity and jurisdiction combination, or has indicated that obligations are unknown. If the entity list is missing or materially incomplete, stop and request it. If filing obligations are not supplied for one or more entities, proceed but record each missing item as "unknown" and note the gap prominently.
+
+2. **Map the entity roster.** List each entity in the order supplied. For each entity, record: legal name, entity type, jurisdiction of formation, foreign-qualification jurisdictions (if any), registered agent, and formation date. Do not add entities, entity types, or jurisdictions that the user has not mentioned.
+
+3. **Record filing obligations — user-supplied only.** For each entity and each jurisdiction (formation and any foreign-qualification jurisdictions), record the filing obligations the user has supplied. Use the user's own labels for filing types; do not rename or recharacterize them. For each obligation, capture:
+   - Filing type (user-supplied label).
+   - Due basis (as described by the user: fixed date, anniversary of formation, anniversary of qualification, or other).
+   - Last-filed date (or "unknown").
+   - Current status (current, due soon, overdue, unknown, or managed by registered-agent service).
+   - Any notes the user has provided.
+
+   For every obligation not supplied by the user for a given entity-jurisdiction-type combination, insert a row with status "unknown" and flag it: `[VERIFY: confirm filing obligations with registered agent or filing authority for this jurisdiction and entity type]`.
+
+4. **Apply entity-type discipline.** Before finalizing the table, confirm that no obligation has been copied or inferred across entity types. Each entity's obligations must derive solely from what the user supplied for that entity. Insert a note wherever entity-type uncertainty exists: `[ATTORNEY TO CONFIRM: entity type determines applicable filing obligations — confirm before relying on this row]`.
+
+5. **Flag dates.** Mark every due date and last-filed date in the output `[deadline verification required]`. Do not compute whether a filing is overdue or due soon from a date you derive. Record the status the user provides.
+
+6. **Build the status summary.** From the recorded obligations, produce three lists:
+   - **Overdue items:** obligations where the user-reported status is "overdue." List entity, entity type, jurisdiction, filing type, and any date provided, each marked `[deadline verification required]`.
+   - **Due-soon items:** obligations where the user-reported status is "due soon." Same columns.
+   - **Unknown-status items:** obligations where the status is "unknown" or where no obligation was supplied. Flag each for confirmation with the registered agent or the relevant authority.
+
+   Note: where a registered-agent service is managing an entity's compliance calendar, record that fact and note that the agent's calendar is authoritative for due dates and status.
+
+7. **Build the audit view.** Flag the following for attorney attention:
+   - **Dormant or inactive entities:** entities the user has identified as dormant, or entities with no recent filings or activity noted in the supplied information. Flag each for attorney review regarding potential dissolution or withdrawal from foreign jurisdictions.
+   - **Stale good-standing confirmations:** entities for which the user has not supplied a recent good-standing confirmation, or for which the last-confirmed date is not provided. Flag: `[VERIFY: obtain current good-standing certificate before reliance — confirm with filing authority or registered agent]`.
+   - **Potential foreign-qualification gaps:** entities with operational presence in a jurisdiction for which no foreign qualification is noted in the supplied information. Flag each as a potential gap and note: `[ATTORNEY TO CONFIRM: whether this entity's activities in this jurisdiction require foreign qualification is a fact-dependent legal determination — do not rely on this flag as a legal conclusion]`. Do not assert that qualification is or is not required.
+
+8. **Assemble the output.** Combine: (a) the entity compliance table from `templates/entity-compliance-table.md`, populated from the user-supplied information with placeholders for every unknown item; (b) the overdue / due-soon / unknown-status summary; (c) the audit view; (d) the assumptions section; and (e) the attorney verification checklist. Label the entire output as a draft for attorney review.
+
+## Output Format
+
+Deliver:
+
+1. **Entity Compliance Review** — a complete draft using `templates/entity-compliance-table.md`, populated from the user-supplied information. Every date flagged `[deadline verification required]`. Every unknown obligation flagged for confirmation.
+2. **Overdue / Due-Soon / Unknown-Status Summary** — three labeled lists drawn from the table, each identifying the entity, entity type, jurisdiction, filing type, and user-reported status.
+3. **Audit View** — flagged items for attorney attention: dormant entities, stale good-standing confirmations, and potential foreign-qualification gaps, each with the appropriate placeholder and a note on what the attorney must confirm.
+4. **Assumptions** — an explicit list of every assumption made in producing the review, including any inference about entity type, jurisdiction, or filing status drawn from context rather than from a user-supplied statement.
+5. **Attorney Verification Checklist** — the checklist from this skill.
+
+Use placeholders consistently. Do not fill any gap with content derived from model background knowledge about filing rules or deadlines.
+
+## Attorney Verification Checklist
+
+- [ ] The entity list is complete and reflects all active legal entities in the organization's portfolio, including wholly owned subsidiaries, joint ventures, and foreign-qualified entities.
+- [ ] Each entity's name, entity type, and jurisdiction of formation are confirmed against the entity's formation documents or official records.
+- [ ] Filing obligations for each entity in each jurisdiction have been confirmed with the registered agent or the relevant filing authority — not derived from model background knowledge. `[verify jurisdiction]`
+- [ ] Entity-type distinctions have been respected: obligations for one entity type have not been applied to an entity of a different type in the same jurisdiction. `[verify jurisdiction]`
+- [ ] Every due date and last-filed date has been confirmed against the registered agent's calendar or the filing authority's records. `[deadline verification required]`
+- [ ] All items marked "overdue" have been reviewed and a remediation plan (cure filing, penalty assessment, or reinstatement) has been initiated or documented. `[verify jurisdiction]`
+- [ ] All items marked "due soon" are on the registered agent's or counsel's docket for timely action. `[deadline verification required]`
+- [ ] All items marked "unknown" have been investigated and resolved before any reliance on the review.
+- [ ] Good-standing status for each entity in each jurisdiction has been confirmed by a current good-standing certificate from the filing authority, not by reliance on the last-known status in this review.
+- [ ] Dormant or inactive entities flagged in the audit view have been reviewed for dissolution, cancellation, or withdrawal from foreign jurisdictions, as appropriate. `[verify jurisdiction]`
+- [ ] Foreign-qualification gaps flagged in the audit view have been reviewed by the attorney to determine whether qualification is legally required given the entity's actual activities in each jurisdiction. `[verify jurisdiction]`
+- [ ] Registered-agent designations are current and accurate in every jurisdiction where each entity is formed or qualified.
+- [ ] No filing deadline, fee, or legal requirement stated in this review has been asserted on the basis of model background knowledge without independent verification.
+- [ ] No legal authority, statute, or regulation has been cited in this review without verification by the attorney.
+- [ ] All placeholders and open items are resolved before this review is relied upon for any filing, transaction, or compliance certification.
+- [ ] The finalized review has been approved by the reviewing attorney before distribution or filing.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brief Section Drafter — AgentCounsel</title>
+<meta name="description" content="Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/litigation.html">Litigation</a> / <span>Brief Section Drafter</span></nav>
+<h1>Brief Section Drafter</h1>
+<p class="path">Canonical path: <code>skills/litigation/brief-section-drafter/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a first draft of a single section of a litigation brief for attorney review, revision, and sign-off. The draft is cited to the record, internally consistent with the case theory, and marked throughout with verification placeholders wherever legal authority or factual accuracy must be confirmed. It is draft legal work product for attorney review; it is not legal advice. The draft is never filed unreviewed.</p>
+<p>This skill does not decide litigation strategy, invent legal authority, or produce a final, file-ready document. It writes disciplined, honest prose that gives the supervising attorney a solid working draft — not a shortcut around professional judgment.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>Counsel needs a first draft of a specific brief section: a statement of facts, an argument section or sub-section, a standard of review section, a conclusion, or a similar discrete component of a written submission.</li><li>A user asks to "draft the argument section," "write the statement of facts," or "put together the standard-of-review section."</li><li>The case theory and the relevant record materials are available and can be provided as inputs.</li><li>The matter is in active litigation or an imminent filing posture and the section type is known.</li><li>The draft is for a written submission (motion, opposition, brief, reply) or, with appropriate scope adjustment, a structured outline for oral argument preparation.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>Matter identification</strong> — matter name, matter number, or a brief description sufficient to identify the case.</li><li><strong>Case theory</strong> — one sentence stating the factual and legal proposition the filing party is advancing. The entire draft turns on this sentence; without it, the skill cannot produce a coherent section.</li><li><strong>Section type</strong> — the specific section to be drafted: statement of facts, argument (identify the proposition), standard of review, conclusion, or another named section. If the section type is ambiguous, the skill will ask for clarification before drafting.</li><li><strong>Written submission or oral argument</strong> — confirm which posture applies. Written submissions call for thorough authority development with full citation placeholders; oral argument preparation produces a leaner structure with a sharper lead and fewer supporting points.</li><li><strong>Forum and local rules</strong> — paste the relevant local rules, standing orders, or page and word-count limits directly into the input. If this material is not provided, the skill will flag all format and length requirements as <code>[CONFIRM: forum rules not provided — attorney to verify]</code>. Do not rely on the skill's background knowledge of any court's rules; treat all unstated rules as unconfirmed.</li><li><strong>House style sample</strong> — a sample brief or excerpt from the supervising attorney or firm showing the expected tone, heading style, citation format, and prose register. If none is provided, the skill will note the absence and apply a neutral, professional default, flagging the style choice for attorney review.</li><li><strong>Record materials</strong> — the documents, deposition transcripts, declarations, pleadings, or other record items that will supply the factual predicate for this section. Every fact in the draft must be tied to a provided record item or flagged <code>[VERIFY: record cite needed]</code>. If no record materials are provided, the skill cannot draft a fact-intensive section and will stop to request them.</li><li><strong>Authorities already identified by counsel</strong> — any cases, statutes, rules, or secondary sources that the supervising attorney has already confirmed and directed the skill to use. The skill will insert these as placeholders in the proper locations; it will not add authority beyond what is provided and directed.</li></ul>
+<p>If matter identification, case theory, or section type is missing, stop and request the missing information before proceeding. Do not fabricate any input.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user wants a complete, final, file-ready brief. This skill produces a single-section draft for attorney review and substantial revision; use it section by section and assemble under attorney supervision.</li><li>The user needs to draft a witness statement in the witness's own voice. Some forums restrict how witness statements may be prepared; this skill never drafts in the witness's voice. Use <code>deposition-prep</code> for deposition preparation materials.</li><li>The user needs a standalone legal research memo analyzing authority on a point of law. Use <code>legal-research-memo</code> for that purpose and return to this skill once counsel has identified the authorities to apply.</li><li>The user needs to build an element-by-element claim or liability chart. Use <code>claim-chart</code> for that purpose.</li><li>No record materials exist and the section requires factual development — the skill cannot draft facts it has not been given; factual content must come from provided record items only.</li><li>The matter is in a pre-litigation or counseling posture where no brief or submission is imminent — use a matter-assessment or contract-review skill as appropriate.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li><strong>Draft legal work product for attorney review. This is not legal advice.</strong> The draft must be reviewed, revised, and approved by a licensed attorney before any reliance, filing, or transmission to any tribunal, party, or third party.</li><li><strong>Never invent, assert, or guess any legal authority.</strong> The skill does not know the current state of the law in any jurisdiction. Every legal proposition in the draft that requires supporting authority is marked <code>[citation needed]</code>. Every pinpoint — page number, paragraph, section — is marked <code>[pin cite needed]</code>. No case name, holding, quotation, or statutory text is supplied from the skill's background knowledge. These placeholders are the attorney's work to fill.</li><li><strong>A quotation that is "almost right" is worse than a paraphrase.</strong> If record language is provided verbatim, quote it exactly and pinpoint it to the source. If the skill is paraphrasing, it flags the passage: <code>[VERIFY: paraphrase — confirm exact language and record cite]</code>. Quotation marks are never placed around language that has not been confirmed from the actual source document.</li><li><strong>Record fidelity is mandatory.</strong> Every factual statement in the draft is tied to a provided record item (with a citation to the document and, where applicable, a page, line, paragraph, or Bates number) or is flagged <code>[VERIFY: record cite needed]</code>. The skill does not invent facts, fill gaps in the record, or assume what a document says.</li><li><strong>Flag weak arguments honestly.</strong> If a proposed argument appears weak, contradicted by the record, or strategically risky, the skill says so in the Drafting Notes and offers the attorney options. Dressing up a weak argument as solid briefing exposes the attorney to professional-responsibility risk.</li><li><strong>The duty of candor to the court is the attorney's professional obligation.</strong> The skill does not assess candor compliance, but it flags every argument it cannot substantiate from the provided record and authority, and it never drafts a statement the skill cannot support from the provided inputs.</li><li><strong>Do not compute, state, or imply any deadline.</strong> Use <code>[deadline verification required]</code> wherever a filing date, response period, or limitations period is relevant.</li><li><strong>Treat all forum rules as unverified unless provided.</strong> Format, length, citation style, and local-rule requirements must be confirmed from the pasted source material; the skill never asserts a court rule from background knowledge.</li><li><strong>Treat governing law as <code>[verify jurisdiction]</code>.</strong> The applicable standard of review, burden of proof, and legal test depend on forum-specific law that the attorney must confirm.</li><li><strong>Preserve confidentiality and privilege.</strong> Client-sensitive facts, privileged communications, and attorney work product must not be included in any reusable or shareable copy of this output.</li><li><strong>Separate facts, assumptions, law, analysis, and verification items.</strong> The Drafting Notes section makes these categories explicit so the attorney can assess each independently.</li><li><strong>Filing without attorney review carries professional-responsibility exposure.</strong> The output carries a "DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED" banner. This is not a formality; filing an AI-generated draft without verification of every citation, quotation, and factual statement creates serious professional risk.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that matter identification, case theory, section type, and at least a summary of the record materials have been provided. If required inputs are missing, stop and request them. Do not proceed with fabricated or assumed inputs.</li></ol>
+<ol><li><strong>Check for a witness-statement request.</strong> If the section type is a witness statement or the request is to draft prose in a witness's voice, decline and route to <code>deposition-prep</code>. This skill never drafts in the witness's voice. State the reason and stop.</li></ol>
+<ol><li><strong>Confirm written submission or oral argument posture.</strong><ul><li><strong>Written submission:</strong> develop the argument with full logical structure, topic sentences, transitions, and citation placeholders at every proposition.</li><li><strong>Oral argument preparation:</strong> produce a leaner structure — lead with the strongest point, limit supporting points to the few most essential, omit extended citation development. Note the condensed format in the Drafting Notes.</li></ul></li></ol>
+<ol><li><strong>Theory-consistency check.</strong> Confirm that the proposed section, as framed, is consistent with the stated case theory. If the proposed section contradicts or undermines the case theory, stop, flag the inconsistency explicitly, and ask the attorney to resolve it before drafting begins. Do not draft a section that cuts against the case theory without explicit attorney direction.</li></ol>
+<ol><li><strong>Review forum rules and house style.</strong> From the pasted local rules, standing orders, and style sample:<ul><li>Note the applicable page or word limit, heading requirements, and citation format.</li><li>Flag any rule the skill cannot confirm from the provided material: <code>[CONFIRM: forum rule not verified — attorney to confirm]</code>.</li><li>Note the tone and register from the house style sample. If no sample was provided, flag the style choice: <code>[CONFIRM: no style sample provided — attorney to confirm draft register and heading format]</code>.</li></ul></li></ol>
+<ol><li><strong>Map the record to the section.</strong> For each key fact the section will rely on, identify the record item and the specific page, line, paragraph, or Bates number. Flag every fact that lacks a confirmed record cite as <code>[VERIFY: record cite needed]</code>. Do not draft a factual statement you cannot pin to a provided source.</li></ol>
+<ol><li><strong>Identify authority gaps.</strong> For each legal proposition the section will advance, note the authority that counsel has provided and directed. For every proposition that lacks a directed authority, insert <code>[citation needed]</code> in the draft position and note the gap in the Drafting Notes. Do not add a case name, holding, quotation, or statutory text from background knowledge.</li></ol>
+<ol><li><strong>Flag weak points before drafting.</strong> If any proposed argument appears weak, contradicted by the record, unsupported by any directed authority, or potentially harmful to the case theory, note it in the Drafting Notes with a candid assessment and at least two attorney options: (a) pursue the argument with specified caveats, or (b) omit or reframe it. The attorney decides; the skill flags.</li></ol>
+<ol><li><strong>Draft the section</strong> applying four disciplines simultaneously:<ul><li><strong>Record fidelity:</strong> every fact carries a pinpointed record cite, verbatim quotations are exact and marked as such, and paraphrases are flagged <code>[VERIFY: paraphrase]</code>.</li><li><strong>Citation discipline:</strong> every legal proposition has a citation placeholder — <code>[citation needed]</code> for the primary authority and <code>[pin cite needed]</code> for the pinpoint — and the attorney's directed authorities are placed in the correct logical position. The skill adds no authority beyond what counsel has provided.</li><li><strong>Candor about weak arguments:</strong> weak points are flagged inline with a note — for example, <code>[NOTE TO ATTORNEY: this argument is not supported by the provided record — see Drafting Notes item 3]</code> — rather than papered over with confident prose.</li><li><strong>Echo, do not repeat:</strong> reinforce the case theory and advance the argument; do not restate earlier sections of the brief verbatim. The section should carry the argument forward.</li></ul></li></ol>
+<ol><li><strong>Assemble the output</strong> in the three-part format described below. Apply the banner to the Section Draft. List all placeholders and open items in the Attorney Verification Checklist.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the output in three clearly labeled parts:</p>
+<hr>
+<h5>Part 1 — Drafting Notes (Internal Work Product)</h5>
+<p>An internal memo for the supervising attorney, organized as follows:</p>
+<ul><li><strong>Section summary:</strong> the argument or narrative the section advances and how it connects to the case theory.</li><li><strong>Record items used:</strong> a table or list of every record item cited in the draft, with the document identifier, description, and pinpoint location as provided.</li><li><strong>Record gaps:</strong> every factual proposition in the draft that lacks a confirmed record cite, listed with the <code>[VERIFY]</code> flag used in the draft.</li><li><strong>Authority gaps:</strong> every legal proposition that requires a citation, listed with the <code>[citation needed]</code> placeholder used in the draft and a brief statement of what type of authority is needed (e.g., "standard of review authority in the forum <code>[verify jurisdiction]</code>").</li><li><strong>Weak points and options:</strong> a candid assessment of any argument that appears weak, contradicted, or strategically risky, with the attorney's options stated plainly.</li><li><strong>Forum-rule confirmations needed:</strong> every local rule, length limit, or format requirement that could not be confirmed from the provided material.</li><li><strong>Open questions for the attorney:</strong> any threshold issue — theory consistency, scope of the section, strategic framing — that requires attorney resolution before the draft is finalized.</li></ul>
+<hr>
+<h5>Part 2 — Section Draft</h5>
+<blockquote><p><strong>DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED</strong> *This section is draft legal work product. Every citation marked <code>[citation needed]</code> or <code>[pin cite needed]</code> must be supplied and verified by the supervising attorney. Every passage marked <code>[VERIFY]</code> must be confirmed against the source. This draft has not been reviewed for professional-responsibility compliance and must not be filed, transmitted, or relied upon until the supervising attorney has reviewed, corrected, and approved it.*</p></blockquote>
+<p>The brief section in the house style, with:</p>
+<ul><li>Headings formatted per the pasted local rules and style sample (or flagged for confirmation if no sample was provided).</li><li>Every fact cited to the record with the provided identifier and pinpoint, or flagged <code>[VERIFY: record cite needed]</code>.</li><li>Every verbatim quotation marked as a direct quote with the source pinpointed; every paraphrase flagged <code>[VERIFY: paraphrase — confirm exact language]</code>.</li><li>Every legal proposition followed by <code>[citation needed]</code> and, where pinpoint is required, <code>[pin cite needed]</code>.</li><li>Weak arguments flagged inline: <code>[NOTE TO ATTORNEY: see Drafting Notes item ___]</code>.</li><li>Standard of review stated with the applicable legal test as a placeholder: <code>[standard of review: [verify jurisdiction]]</code>.</li><li>Forum-rule compliance flagged where unconfirmed: <code>[CONFIRM: page/word limit not verified]</code>.</li></ul>
+<hr>
+<h5>Part 3 — Attorney Verification Checklist</h5>
+<p>The checklist from the section below, pre-populated with the specific gaps identified in this draft (record cites, citation placeholders, and open items).</p>
+<hr>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] Case theory is accurately captured and the drafted section is consistent with it.</li><li>[ ] Section type and scope are correct and approved by the responsible attorney.</li><li>[ ] Written submission or oral argument posture confirmed; draft format matches posture.</li><li>[ ] Forum rules confirmed: page or word limit, heading requirements, citation format, and any applicable local rules <code>[verify jurisdiction]</code>.</li><li>[ ] House style confirmed; heading format and prose register approved.</li><li>[ ] Every <code>[citation needed]</code> placeholder has been replaced with a verified, primary-source citation. No AI-generated citation has been accepted without checking it against the actual source.</li><li>[ ] Every <code>[pin cite needed]</code> placeholder has been replaced with the correct page, paragraph, or section number confirmed from the source.</li><li>[ ] Every verbatim quotation has been checked character-by-character against the original document or transcript. No quotation is "close enough."</li><li>[ ] Every <code>[VERIFY: paraphrase]</code> passage has been confirmed or corrected against the source record item.</li><li>[ ] Every <code>[VERIFY: record cite needed]</code> flag has been resolved: either a record cite has been supplied and confirmed, or the factual assertion has been removed or rewritten.</li><li>[ ] Standard of review is correct for the motion type and forum <code>[verify jurisdiction]</code>.</li><li>[ ] All weak points identified in the Drafting Notes have been assessed and the attorney has decided whether to pursue, reframe, or omit each one.</li><li>[ ] All forum-rule confirmations flagged in the Drafting Notes have been resolved.</li><li>[ ] No deadline has been stated or implied in the draft without <code>[deadline verification required]</code> having been resolved by the responsible attorney.</li><li>[ ] Duty of candor to the court has been considered by the responsible attorney as to every argument advanced.</li><li>[ ] All open questions from the Drafting Notes have been resolved before the draft is submitted for filing.</li><li>[ ] Output is held in the appropriate client file and no confidential or privileged content has been shared outside the matter team.</li><li>[ ] The responsible attorney has reviewed, revised, and approved the section and accepts professional responsibility for its contents before filing.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Brief Section Drafter
+description: Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing.
+---
+
+# Brief Section Drafter
+
+## Purpose
+
+Produce a first draft of a single section of a litigation brief for attorney review, revision, and sign-off. The draft is cited to the record, internally consistent with the case theory, and marked throughout with verification placeholders wherever legal authority or factual accuracy must be confirmed. It is draft legal work product for attorney review; it is not legal advice. The draft is never filed unreviewed.
+
+This skill does not decide litigation strategy, invent legal authority, or produce a final, file-ready document. It writes disciplined, honest prose that gives the supervising attorney a solid working draft — not a shortcut around professional judgment.
+
+## Use When
+
+- Counsel needs a first draft of a specific brief section: a statement of facts, an argument section or sub-section, a standard of review section, a conclusion, or a similar discrete component of a written submission.
+- A user asks to "draft the argument section," "write the statement of facts," or "put together the standard-of-review section."
+- The case theory and the relevant record materials are available and can be provided as inputs.
+- The matter is in active litigation or an imminent filing posture and the section type is known.
+- The draft is for a written submission (motion, opposition, brief, reply) or, with appropriate scope adjustment, a structured outline for oral argument preparation.
+
+## Required Inputs
+
+- **Matter identification** — matter name, matter number, or a brief description sufficient to identify the case.
+- **Case theory** — one sentence stating the factual and legal proposition the filing party is advancing. The entire draft turns on this sentence; without it, the skill cannot produce a coherent section.
+- **Section type** — the specific section to be drafted: statement of facts, argument (identify the proposition), standard of review, conclusion, or another named section. If the section type is ambiguous, the skill will ask for clarification before drafting.
+- **Written submission or oral argument** — confirm which posture applies. Written submissions call for thorough authority development with full citation placeholders; oral argument preparation produces a leaner structure with a sharper lead and fewer supporting points.
+- **Forum and local rules** — paste the relevant local rules, standing orders, or page and word-count limits directly into the input. If this material is not provided, the skill will flag all format and length requirements as `[CONFIRM: forum rules not provided — attorney to verify]`. Do not rely on the skill's background knowledge of any court's rules; treat all unstated rules as unconfirmed.
+- **House style sample** — a sample brief or excerpt from the supervising attorney or firm showing the expected tone, heading style, citation format, and prose register. If none is provided, the skill will note the absence and apply a neutral, professional default, flagging the style choice for attorney review.
+- **Record materials** — the documents, deposition transcripts, declarations, pleadings, or other record items that will supply the factual predicate for this section. Every fact in the draft must be tied to a provided record item or flagged `[VERIFY: record cite needed]`. If no record materials are provided, the skill cannot draft a fact-intensive section and will stop to request them.
+- **Authorities already identified by counsel** — any cases, statutes, rules, or secondary sources that the supervising attorney has already confirmed and directed the skill to use. The skill will insert these as placeholders in the proper locations; it will not add authority beyond what is provided and directed.
+
+If matter identification, case theory, or section type is missing, stop and request the missing information before proceeding. Do not fabricate any input.
+
+## Do Not Use When
+
+- The user wants a complete, final, file-ready brief. This skill produces a single-section draft for attorney review and substantial revision; use it section by section and assemble under attorney supervision.
+- The user needs to draft a witness statement in the witness's own voice. Some forums restrict how witness statements may be prepared; this skill never drafts in the witness's voice. Use `deposition-prep` for deposition preparation materials.
+- The user needs a standalone legal research memo analyzing authority on a point of law. Use `legal-research-memo` for that purpose and return to this skill once counsel has identified the authorities to apply.
+- The user needs to build an element-by-element claim or liability chart. Use `claim-chart` for that purpose.
+- No record materials exist and the section requires factual development — the skill cannot draft facts it has not been given; factual content must come from provided record items only.
+- The matter is in a pre-litigation or counseling posture where no brief or submission is imminent — use a matter-assessment or contract-review skill as appropriate.
+
+## Legal Safety Rules
+
+- **Draft legal work product for attorney review. This is not legal advice.** The draft must be reviewed, revised, and approved by a licensed attorney before any reliance, filing, or transmission to any tribunal, party, or third party.
+- **Never invent, assert, or guess any legal authority.** The skill does not know the current state of the law in any jurisdiction. Every legal proposition in the draft that requires supporting authority is marked `[citation needed]`. Every pinpoint — page number, paragraph, section — is marked `[pin cite needed]`. No case name, holding, quotation, or statutory text is supplied from the skill's background knowledge. These placeholders are the attorney's work to fill.
+- **A quotation that is "almost right" is worse than a paraphrase.** If record language is provided verbatim, quote it exactly and pinpoint it to the source. If the skill is paraphrasing, it flags the passage: `[VERIFY: paraphrase — confirm exact language and record cite]`. Quotation marks are never placed around language that has not been confirmed from the actual source document.
+- **Record fidelity is mandatory.** Every factual statement in the draft is tied to a provided record item (with a citation to the document and, where applicable, a page, line, paragraph, or Bates number) or is flagged `[VERIFY: record cite needed]`. The skill does not invent facts, fill gaps in the record, or assume what a document says.
+- **Flag weak arguments honestly.** If a proposed argument appears weak, contradicted by the record, or strategically risky, the skill says so in the Drafting Notes and offers the attorney options. Dressing up a weak argument as solid briefing exposes the attorney to professional-responsibility risk.
+- **The duty of candor to the court is the attorney's professional obligation.** The skill does not assess candor compliance, but it flags every argument it cannot substantiate from the provided record and authority, and it never drafts a statement the skill cannot support from the provided inputs.
+- **Do not compute, state, or imply any deadline.** Use `[deadline verification required]` wherever a filing date, response period, or limitations period is relevant.
+- **Treat all forum rules as unverified unless provided.** Format, length, citation style, and local-rule requirements must be confirmed from the pasted source material; the skill never asserts a court rule from background knowledge.
+- **Treat governing law as `[verify jurisdiction]`.** The applicable standard of review, burden of proof, and legal test depend on forum-specific law that the attorney must confirm.
+- **Preserve confidentiality and privilege.** Client-sensitive facts, privileged communications, and attorney work product must not be included in any reusable or shareable copy of this output.
+- **Separate facts, assumptions, law, analysis, and verification items.** The Drafting Notes section makes these categories explicit so the attorney can assess each independently.
+- **Filing without attorney review carries professional-responsibility exposure.** The output carries a "DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED" banner. This is not a formality; filing an AI-generated draft without verification of every citation, quotation, and factual statement creates serious professional risk.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that matter identification, case theory, section type, and at least a summary of the record materials have been provided. If required inputs are missing, stop and request them. Do not proceed with fabricated or assumed inputs.
+
+2. **Check for a witness-statement request.** If the section type is a witness statement or the request is to draft prose in a witness's voice, decline and route to `deposition-prep`. This skill never drafts in the witness's voice. State the reason and stop.
+
+3. **Confirm written submission or oral argument posture.**
+   - **Written submission:** develop the argument with full logical structure, topic sentences, transitions, and citation placeholders at every proposition.
+   - **Oral argument preparation:** produce a leaner structure — lead with the strongest point, limit supporting points to the few most essential, omit extended citation development. Note the condensed format in the Drafting Notes.
+
+4. **Theory-consistency check.** Confirm that the proposed section, as framed, is consistent with the stated case theory. If the proposed section contradicts or undermines the case theory, stop, flag the inconsistency explicitly, and ask the attorney to resolve it before drafting begins. Do not draft a section that cuts against the case theory without explicit attorney direction.
+
+5. **Review forum rules and house style.** From the pasted local rules, standing orders, and style sample:
+   - Note the applicable page or word limit, heading requirements, and citation format.
+   - Flag any rule the skill cannot confirm from the provided material: `[CONFIRM: forum rule not verified — attorney to confirm]`.
+   - Note the tone and register from the house style sample. If no sample was provided, flag the style choice: `[CONFIRM: no style sample provided — attorney to confirm draft register and heading format]`.
+
+6. **Map the record to the section.** For each key fact the section will rely on, identify the record item and the specific page, line, paragraph, or Bates number. Flag every fact that lacks a confirmed record cite as `[VERIFY: record cite needed]`. Do not draft a factual statement you cannot pin to a provided source.
+
+7. **Identify authority gaps.** For each legal proposition the section will advance, note the authority that counsel has provided and directed. For every proposition that lacks a directed authority, insert `[citation needed]` in the draft position and note the gap in the Drafting Notes. Do not add a case name, holding, quotation, or statutory text from background knowledge.
+
+8. **Flag weak points before drafting.** If any proposed argument appears weak, contradicted by the record, unsupported by any directed authority, or potentially harmful to the case theory, note it in the Drafting Notes with a candid assessment and at least two attorney options: (a) pursue the argument with specified caveats, or (b) omit or reframe it. The attorney decides; the skill flags.
+
+9. **Draft the section** applying four disciplines simultaneously:
+   - **Record fidelity:** every fact carries a pinpointed record cite, verbatim quotations are exact and marked as such, and paraphrases are flagged `[VERIFY: paraphrase]`.
+   - **Citation discipline:** every legal proposition has a citation placeholder — `[citation needed]` for the primary authority and `[pin cite needed]` for the pinpoint — and the attorney's directed authorities are placed in the correct logical position. The skill adds no authority beyond what counsel has provided.
+   - **Candor about weak arguments:** weak points are flagged inline with a note — for example, `[NOTE TO ATTORNEY: this argument is not supported by the provided record — see Drafting Notes item 3]` — rather than papered over with confident prose.
+   - **Echo, do not repeat:** reinforce the case theory and advance the argument; do not restate earlier sections of the brief verbatim. The section should carry the argument forward.
+
+10. **Assemble the output** in the three-part format described below. Apply the banner to the Section Draft. List all placeholders and open items in the Attorney Verification Checklist.
+
+## Output Format
+
+Deliver the output in three clearly labeled parts:
+
+---
+
+### Part 1 — Drafting Notes (Internal Work Product)
+
+An internal memo for the supervising attorney, organized as follows:
+
+- **Section summary:** the argument or narrative the section advances and how it connects to the case theory.
+- **Record items used:** a table or list of every record item cited in the draft, with the document identifier, description, and pinpoint location as provided.
+- **Record gaps:** every factual proposition in the draft that lacks a confirmed record cite, listed with the `[VERIFY]` flag used in the draft.
+- **Authority gaps:** every legal proposition that requires a citation, listed with the `[citation needed]` placeholder used in the draft and a brief statement of what type of authority is needed (e.g., "standard of review authority in the forum `[verify jurisdiction]`").
+- **Weak points and options:** a candid assessment of any argument that appears weak, contradicted, or strategically risky, with the attorney's options stated plainly.
+- **Forum-rule confirmations needed:** every local rule, length limit, or format requirement that could not be confirmed from the provided material.
+- **Open questions for the attorney:** any threshold issue — theory consistency, scope of the section, strategic framing — that requires attorney resolution before the draft is finalized.
+
+---
+
+### Part 2 — Section Draft
+
+&gt; **DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED**
+&gt; *This section is draft legal work product. Every citation marked `[citation needed]` or `[pin cite needed]` must be supplied and verified by the supervising attorney. Every passage marked `[VERIFY]` must be confirmed against the source. This draft has not been reviewed for professional-responsibility compliance and must not be filed, transmitted, or relied upon until the supervising attorney has reviewed, corrected, and approved it.*
+
+The brief section in the house style, with:
+
+- Headings formatted per the pasted local rules and style sample (or flagged for confirmation if no sample was provided).
+- Every fact cited to the record with the provided identifier and pinpoint, or flagged `[VERIFY: record cite needed]`.
+- Every verbatim quotation marked as a direct quote with the source pinpointed; every paraphrase flagged `[VERIFY: paraphrase — confirm exact language]`.
+- Every legal proposition followed by `[citation needed]` and, where pinpoint is required, `[pin cite needed]`.
+- Weak arguments flagged inline: `[NOTE TO ATTORNEY: see Drafting Notes item ___]`.
+- Standard of review stated with the applicable legal test as a placeholder: `[standard of review: [verify jurisdiction]]`.
+- Forum-rule compliance flagged where unconfirmed: `[CONFIRM: page/word limit not verified]`.
+
+---
+
+### Part 3 — Attorney Verification Checklist
+
+The checklist from the section below, pre-populated with the specific gaps identified in this draft (record cites, citation placeholders, and open items).
+
+---
+
+## Attorney Verification Checklist
+
+- [ ] Case theory is accurately captured and the drafted section is consistent with it.
+- [ ] Section type and scope are correct and approved by the responsible attorney.
+- [ ] Written submission or oral argument posture confirmed; draft format matches posture.
+- [ ] Forum rules confirmed: page or word limit, heading requirements, citation format, and any applicable local rules `[verify jurisdiction]`.
+- [ ] House style confirmed; heading format and prose register approved.
+- [ ] Every `[citation needed]` placeholder has been replaced with a verified, primary-source citation. No AI-generated citation has been accepted without checking it against the actual source.
+- [ ] Every `[pin cite needed]` placeholder has been replaced with the correct page, paragraph, or section number confirmed from the source.
+- [ ] Every verbatim quotation has been checked character-by-character against the original document or transcript. No quotation is "close enough."
+- [ ] Every `[VERIFY: paraphrase]` passage has been confirmed or corrected against the source record item.
+- [ ] Every `[VERIFY: record cite needed]` flag has been resolved: either a record cite has been supplied and confirmed, or the factual assertion has been removed or rewritten.
+- [ ] Standard of review is correct for the motion type and forum `[verify jurisdiction]`.
+- [ ] All weak points identified in the Drafting Notes have been assessed and the attorney has decided whether to pursue, reframe, or omit each one.
+- [ ] All forum-rule confirmations flagged in the Drafting Notes have been resolved.
+- [ ] No deadline has been stated or implied in the draft without `[deadline verification required]` having been resolved by the responsible attorney.
+- [ ] Duty of candor to the court has been considered by the responsible attorney as to every argument advanced.
+- [ ] All open questions from the Drafting Notes have been resolved before the draft is submitted for filing.
+- [ ] Output is held in the appropriate client file and no confidential or privileged content has been shared outside the matter team.
+- [ ] The responsible attorney has reviewed, revised, and approved the section and accepts professional responsibility for its contents before filing.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Brief Section Drafter ===
+---
+name: Brief Section Drafter
+description: Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing.
+---
+
+# Brief Section Drafter
+
+## Purpose
+
+Produce a first draft of a single section of a litigation brief for attorney review, revision, and sign-off. The draft is cited to the record, internally consistent with the case theory, and marked throughout with verification placeholders wherever legal authority or factual accuracy must be confirmed. It is draft legal work product for attorney review; it is not legal advice. The draft is never filed unreviewed.
+
+This skill does not decide litigation strategy, invent legal authority, or produce a final, file-ready document. It writes disciplined, honest prose that gives the supervising attorney a solid working draft — not a shortcut around professional judgment.
+
+## Use When
+
+- Counsel needs a first draft of a specific brief section: a statement of facts, an argument section or sub-section, a standard of review section, a conclusion, or a similar discrete component of a written submission.
+- A user asks to "draft the argument section," "write the statement of facts," or "put together the standard-of-review section."
+- The case theory and the relevant record materials are available and can be provided as inputs.
+- The matter is in active litigation or an imminent filing posture and the section type is known.
+- The draft is for a written submission (motion, opposition, brief, reply) or, with appropriate scope adjustment, a structured outline for oral argument preparation.
+
+## Required Inputs
+
+- **Matter identification** — matter name, matter number, or a brief description sufficient to identify the case.
+- **Case theory** — one sentence stating the factual and legal proposition the filing party is advancing. The entire draft turns on this sentence; without it, the skill cannot produce a coherent section.
+- **Section type** — the specific section to be drafted: statement of facts, argument (identify the proposition), standard of review, conclusion, or another named section. If the section type is ambiguous, the skill will ask for clarification before drafting.
+- **Written submission or oral argument** — confirm which posture applies. Written submissions call for thorough authority development with full citation placeholders; oral argument preparation produces a leaner structure with a sharper lead and fewer supporting points.
+- **Forum and local rules** — paste the relevant local rules, standing orders, or page and word-count limits directly into the input. If this material is not provided, the skill will flag all format and length requirements as `[CONFIRM: forum rules not provided — attorney to verify]`. Do not rely on the skill's background knowledge of any court's rules; treat all unstated rules as unconfirmed.
+- **House style sample** — a sample brief or excerpt from the supervising attorney or firm showing the expected tone, heading style, citation format, and prose register. If none is provided, the skill will note the absence and apply a neutral, professional default, flagging the style choice for attorney review.
+- **Record materials** — the documents, deposition transcripts, declarations, pleadings, or other record items that will supply the factual predicate for this section. Every fact in the draft must be tied to a provided record item or flagged `[VERIFY: record cite needed]`. If no record materials are provided, the skill cannot draft a fact-intensive section and will stop to request them.
+- **Authorities already identified by counsel** — any cases, statutes, rules, or secondary sources that the supervising attorney has already confirmed and directed the skill to use. The skill will insert these as placeholders in the proper locations; it will not add authority beyond what is provided and directed.
+
+If matter identification, case theory, or section type is missing, stop and request the missing information before proceeding. Do not fabricate any input.
+
+## Do Not Use When
+
+- The user wants a complete, final, file-ready brief. This skill produces a single-section draft for attorney review and substantial revision; use it section by section and assemble under attorney supervision.
+- The user needs to draft a witness statement in the witness's own voice. Some forums restrict how witness statements may be prepared; this skill never drafts in the witness's voice. Use `deposition-prep` for deposition preparation materials.
+- The user needs a standalone legal research memo analyzing authority on a point of law. Use `legal-research-memo` for that purpose and return to this skill once counsel has identified the authorities to apply.
+- The user needs to build an element-by-element claim or liability chart. Use `claim-chart` for that purpose.
+- No record materials exist and the section requires factual development — the skill cannot draft facts it has not been given; factual content must come from provided record items only.
+- The matter is in a pre-litigation or counseling posture where no brief or submission is imminent — use a matter-assessment or contract-review skill as appropriate.
+
+## Legal Safety Rules
+
+- **Draft legal work product for attorney review. This is not legal advice.** The draft must be reviewed, revised, and approved by a licensed attorney before any reliance, filing, or transmission to any tribunal, party, or third party.
+- **Never invent, assert, or guess any legal authority.** The skill does not know the current state of the law in any jurisdiction. Every legal proposition in the draft that requires supporting authority is marked `[citation needed]`. Every pinpoint — page number, paragraph, section — is marked `[pin cite needed]`. No case name, holding, quotation, or statutory text is supplied from the skill's background knowledge. These placeholders are the attorney's work to fill.
+- **A quotation that is "almost right" is worse than a paraphrase.** If record language is provided verbatim, quote it exactly and pinpoint it to the source. If the skill is paraphrasing, it flags the passage: `[VERIFY: paraphrase — confirm exact language and record cite]`. Quotation marks are never placed around language that has not been confirmed from the actual source document.
+- **Record fidelity is mandatory.** Every factual statement in the draft is tied to a provided record item (with a citation to the document and, where applicable, a page, line, paragraph, or Bates number) or is flagged `[VERIFY: record cite needed]`. The skill does not invent facts, fill gaps in the record, or assume what a document says.
+- **Flag weak arguments honestly.** If a proposed argument appears weak, contradicted by the record, or strategically risky, the skill says so in the Drafting Notes and offers the attorney options. Dressing up a weak argument as solid briefing exposes the attorney to professional-responsibility risk.
+- **The duty of candor to the court is the attorney's professional obligation.** The skill does not assess candor compliance, but it flags every argument it cannot substantiate from the provided record and authority, and it never drafts a statement the skill cannot support from the provided inputs.
+- **Do not compute, state, or imply any deadline.** Use `[deadline verification required]` wherever a filing date, response period, or limitations period is relevant.
+- **Treat all forum rules as unverified unless provided.** Format, length, citation style, and local-rule requirements must be confirmed from the pasted source material; the skill never asserts a court rule from background knowledge.
+- **Treat governing law as `[verify jurisdiction]`.** The applicable standard of review, burden of proof, and legal test depend on forum-specific law that the attorney must confirm.
+- **Preserve confidentiality and privilege.** Client-sensitive facts, privileged communications, and attorney work product must not be included in any reusable or shareable copy of this output.
+- **Separate facts, assumptions, law, analysis, and verification items.** The Drafting Notes section makes these categories explicit so the attorney can assess each independently.
+- **Filing without attorney review carries professional-responsibility exposure.** The output carries a "DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED" banner. This is not a formality; filing an AI-generated draft without verification of every citation, quotation, and factual statement creates serious professional risk.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that matter identification, case theory, section type, and at least a summary of the record materials have been provided. If required inputs are missing, stop and request them. Do not proceed with fabricated or assumed inputs.
+
+2. **Check for a witness-statement request.** If the section type is a witness statement or the request is to draft prose in a witness's voice, decline and route to `deposition-prep`. This skill never drafts in the witness's voice. State the reason and stop.
+
+3. **Confirm written submission or oral argument posture.**
+   - **Written submission:** develop the argument with full logical structure, topic sentences, transitions, and citation placeholders at every proposition.
+   - **Oral argument preparation:** produce a leaner structure — lead with the strongest point, limit supporting points to the few most essential, omit extended citation development. Note the condensed format in the Drafting Notes.
+
+4. **Theory-consistency check.** Confirm that the proposed section, as framed, is consistent with the stated case theory. If the proposed section contradicts or undermines the case theory, stop, flag the inconsistency explicitly, and ask the attorney to resolve it before drafting begins. Do not draft a section that cuts against the case theory without explicit attorney direction.
+
+5. **Review forum rules and house style.** From the pasted local rules, standing orders, and style sample:
+   - Note the applicable page or word limit, heading requirements, and citation format.
+   - Flag any rule the skill cannot confirm from the provided material: `[CONFIRM: forum rule not verified — attorney to confirm]`.
+   - Note the tone and register from the house style sample. If no sample was provided, flag the style choice: `[CONFIRM: no style sample provided — attorney to confirm draft register and heading format]`.
+
+6. **Map the record to the section.** For each key fact the section will rely on, identify the record item and the specific page, line, paragraph, or Bates number. Flag every fact that lacks a confirmed record cite as `[VERIFY: record cite needed]`. Do not draft a factual statement you cannot pin to a provided source.
+
+7. **Identify authority gaps.** For each legal proposition the section will advance, note the authority that counsel has provided and directed. For every proposition that lacks a directed authority, insert `[citation needed]` in the draft position and note the gap in the Drafting Notes. Do not add a case name, holding, quotation, or statutory text from background knowledge.
+
+8. **Flag weak points before drafting.** If any proposed argument appears weak, contradicted by the record, unsupported by any directed authority, or potentially harmful to the case theory, note it in the Drafting Notes with a candid assessment and at least two attorney options: (a) pursue the argument with specified caveats, or (b) omit or reframe it. The attorney decides; the skill flags.
+
+9. **Draft the section** applying four disciplines simultaneously:
+   - **Record fidelity:** every fact carries a pinpointed record cite, verbatim quotations are exact and marked as such, and paraphrases are flagged `[VERIFY: paraphrase]`.
+   - **Citation discipline:** every legal proposition has a citation placeholder — `[citation needed]` for the primary authority and `[pin cite needed]` for the pinpoint — and the attorney's directed authorities are placed in the correct logical position. The skill adds no authority beyond what counsel has provided.
+   - **Candor about weak arguments:** weak points are flagged inline with a note — for example, `[NOTE TO ATTORNEY: this argument is not supported by the provided record — see Drafting Notes item 3]` — rather than papered over with confident prose.
+   - **Echo, do not repeat:** reinforce the case theory and advance the argument; do not restate earlier sections of the brief verbatim. The section should carry the argument forward.
+
+10. **Assemble the output** in the three-part format described below. Apply the banner to the Section Draft. List all placeholders and open items in the Attorney Verification Checklist.
+
+## Output Format
+
+Deliver the output in three clearly labeled parts:
+
+---
+
+### Part 1 — Drafting Notes (Internal Work Product)
+
+An internal memo for the supervising attorney, organized as follows:
+
+- **Section summary:** the argument or narrative the section advances and how it connects to the case theory.
+- **Record items used:** a table or list of every record item cited in the draft, with the document identifier, description, and pinpoint location as provided.
+- **Record gaps:** every factual proposition in the draft that lacks a confirmed record cite, listed with the `[VERIFY]` flag used in the draft.
+- **Authority gaps:** every legal proposition that requires a citation, listed with the `[citation needed]` placeholder used in the draft and a brief statement of what type of authority is needed (e.g., "standard of review authority in the forum `[verify jurisdiction]`").
+- **Weak points and options:** a candid assessment of any argument that appears weak, contradicted, or strategically risky, with the attorney's options stated plainly.
+- **Forum-rule confirmations needed:** every local rule, length limit, or format requirement that could not be confirmed from the provided material.
+- **Open questions for the attorney:** any threshold issue — theory consistency, scope of the section, strategic framing — that requires attorney resolution before the draft is finalized.
+
+---
+
+### Part 2 — Section Draft
+
+&gt; **DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED**
+&gt; *This section is draft legal work product. Every citation marked `[citation needed]` or `[pin cite needed]` must be supplied and verified by the supervising attorney. Every passage marked `[VERIFY]` must be confirmed against the source. This draft has not been reviewed for professional-responsibility compliance and must not be filed, transmitted, or relied upon until the supervising attorney has reviewed, corrected, and approved it.*
+
+The brief section in the house style, with:
+
+- Headings formatted per the pasted local rules and style sample (or flagged for confirmation if no sample was provided).
+- Every fact cited to the record with the provided identifier and pinpoint, or flagged `[VERIFY: record cite needed]`.
+- Every verbatim quotation marked as a direct quote with the source pinpointed; every paraphrase flagged `[VERIFY: paraphrase — confirm exact language]`.
+- Every legal proposition followed by `[citation needed]` and, where pinpoint is required, `[pin cite needed]`.
+- Weak arguments flagged inline: `[NOTE TO ATTORNEY: see Drafting Notes item ___]`.
+- Standard of review stated with the applicable legal test as a placeholder: `[standard of review: [verify jurisdiction]]`.
+- Forum-rule compliance flagged where unconfirmed: `[CONFIRM: page/word limit not verified]`.
+
+---
+
+### Part 3 — Attorney Verification Checklist
+
+The checklist from the section below, pre-populated with the specific gaps identified in this draft (record cites, citation placeholders, and open items).
+
+---
+
+## Attorney Verification Checklist
+
+- [ ] Case theory is accurately captured and the drafted section is consistent with it.
+- [ ] Section type and scope are correct and approved by the responsible attorney.
+- [ ] Written submission or oral argument posture confirmed; draft format matches posture.
+- [ ] Forum rules confirmed: page or word limit, heading requirements, citation format, and any applicable local rules `[verify jurisdiction]`.
+- [ ] House style confirmed; heading format and prose register approved.
+- [ ] Every `[citation needed]` placeholder has been replaced with a verified, primary-source citation. No AI-generated citation has been accepted without checking it against the actual source.
+- [ ] Every `[pin cite needed]` placeholder has been replaced with the correct page, paragraph, or section number confirmed from the source.
+- [ ] Every verbatim quotation has been checked character-by-character against the original document or transcript. No quotation is "close enough."
+- [ ] Every `[VERIFY: paraphrase]` passage has been confirmed or corrected against the source record item.
+- [ ] Every `[VERIFY: record cite needed]` flag has been resolved: either a record cite has been supplied and confirmed, or the factual assertion has been removed or rewritten.
+- [ ] Standard of review is correct for the motion type and forum `[verify jurisdiction]`.
+- [ ] All weak points identified in the Drafting Notes have been assessed and the attorney has decided whether to pursue, reframe, or omit each one.
+- [ ] All forum-rule confirmations flagged in the Drafting Notes have been resolved.
+- [ ] No deadline has been stated or implied in the draft without `[deadline verification required]` having been resolved by the responsible attorney.
+- [ ] Duty of candor to the court has been considered by the responsible attorney as to every argument advanced.
+- [ ] All open questions from the Drafting Notes have been resolved before the draft is submitted for filing.
+- [ ] Output is held in the appropriate client file and no confidential or privileged content has been shared outside the matter team.
+- [ ] The responsible attorney has reviewed, revised, and approved the section and accepts professional responsibility for its contents before filing.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

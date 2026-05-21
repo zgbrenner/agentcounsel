@@ -160,6 +160,21 @@ python scripts/validate_repo.py                # full repository validation
 
 The workflow is `.github/workflows/validate.yml`. It uses only Python and the standard library — no extra dependencies.
 
+## Browsable skill catalog
+
+A static, browser-readable catalog of every skill lives under `site/`. It is generated from the canonical `skills/` directory and includes a homepage, one page per practice area, one page per skill (each with **Copy Full Skill** and **Copy One-Off Prompt** buttons and the full raw `SKILL.md`), platform setup guides, and `llms.txt` / `llms-full.txt` for browser-based LLM agents.
+
+The generator is a zero-dependency Node script — nothing to install — so it keeps the repository's no-dependency, Markdown-first philosophy.
+
+```
+cd site
+npm run build      # generate the static site into site/public/
+npm run serve      # preview it at http://localhost:8080
+npm run dev        # build, then serve
+```
+
+The output in `site/public/` is plain HTML, one CSS file, and a small script. Deploy it by serving that directory with any static host (GitHub Pages, Netlify, Vercel, an object store, or a plain file server) — there is no backend, no login, and no build step beyond `npm run build`. Re-run the build after adding or editing a skill so the catalog stays in sync. See `site/README.md` for details.
+
 ## Contributing
 
 New skills are welcome. AgentCounsel is Markdown-first and safety-first — see `CONTRIBUTING.md` for the rules, and `SECURITY.md` for security guidance.

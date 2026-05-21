@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Feature Review — AgentCounsel</title>
+<meta name="description" content="Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/product-legal.html">Product Legal</a> / <span>AI Feature Review</span></nav>
+<h1>AI Feature Review</h1>
+<p class="path">Canonical path: <code>skills/product-legal/ai-feature-review/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured, attorney-ready legal issues register for a product feature that uses artificial intelligence or machine learning. This skill spots legal exposure across training-data rights, output ownership and infringement, transparency and disclosure obligations, privacy and data use, automated-decision concerns, vendor terms, and high-risk use cases. It routes AI-vendor contract questions to <code>ai-vendor-terms-review</code> and broader AI risk triage to <code>model-risk-triage</code>. It produces draft legal work product for attorney review — not legal advice, not a regulatory clearance, and not a determination that the feature is lawful.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A team is building, shipping, or updating a feature that uses an AI model, machine learning system, or algorithmic decision-making component.</li><li>A product manager, engineer, or counsel asks to "review the legal risks of this AI feature," "check if we can use this model," or "what do we need to disclose?"</li><li>A launch review (see <code>launch-review</code>) has flagged an AI or algorithmic component for deeper analysis.</li><li>An existing AI feature is being modified in a material way: new model, new data inputs, new output use case, or new user population.</li><li>The feature involves a vendor-supplied AI model and the team needs a legal issues overview before completing vendor contracting (route contract detail to <code>ai-vendor-terms-review</code>).</li><li>The feature involves automated decisions that affect users in consequential ways (credit, employment, health, housing, content moderation, pricing).</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>Feature description</strong>: what the feature does, how users interact with it, and what is new or changed.</li><li><strong>Model(s) used</strong>: whether the model is in-house (trained or fine-tuned internally) or vendor-supplied (API, embedded, or licensed). Include model name or vendor name if known.</li><li><strong>Training and input data</strong>: what data was used to train or fine-tune the model (if in-house), and what data the model receives at inference time (user inputs, uploaded files, third-party data, etc.).</li><li><strong>Outputs and how they are used</strong>: what the model produces (text, images, scores, classifications, recommendations, decisions), and how those outputs are displayed to or acted upon by users or internal systems.</li><li><strong>User-facing disclosures</strong>: what, if anything, the product currently discloses to users about AI use, automated decision-making, or the nature of the outputs.</li><li><strong>Human-oversight design</strong>: whether and how a human reviews, approves, or can override AI outputs before they affect users.</li><li><strong>Target markets and users</strong>: geographies, user demographics, and any vulnerable populations (minors, patients, financial consumers, job seekers).</li></ul>
+<p>If the feature description and model type are not provided, stop and request them. Do not fabricate technical details, data practices, or vendor terms.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The review concerns only the AI vendor contract (use <code>ai-vendor-terms-review</code>).</li><li>The review requires a broader multi-area launch review of which AI is one component (use <code>launch-review</code>, which will route AI issues here).</li><li>The review is a high-level AI risk classification or model card assessment (use <code>model-risk-triage</code>).</li><li>The feature does not involve AI, machine learning, or algorithmic decision-making — use the appropriate product-legal skill for the relevant issue area.</li><li>The goal is to determine whether the feature complies with a specific AI regulation — this skill spots issues and routes; it does not render legal compliance opinions.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice and does not constitute a regulatory clearance or AI compliance certification.</li><li>Do not assert that the feature is compliant with any AI regulation, data protection law, or consumer protection standard. Flag risks and route to counsel.</li><li>Do not invent statutes, regulations, agency guidance, technical standards, or enforcement precedents. If a legal framework is relevant (e.g., EU AI Act, state AI transparency laws, FTC guidance on AI), name it and flag it for attorney verification with a <code>[CONFIRM: ...]</code> marker.</li><li>Distinguish what is known from provided inputs, what is assumed, and what must be confirmed.</li><li>Identify jurisdiction, target user population, and applicable regulatory context based on provided inputs — flag as unknown if not provided.</li><li>High-risk use cases (healthcare, employment, credit, education, housing, law enforcement, critical infrastructure) require escalation to specialist counsel — do not minimize or omit these flags.</li><li>Do not place client-sensitive technical architecture, unreleased model details, or proprietary training data descriptions into reusable templates.</li><li>Treat model background knowledge about AI law as unverified; flag for attorney confirmation before relying on it.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that all required inputs are present. List what was received and flag anything missing or assumed. If the feature description is not provided, stop.</li></ol>
+<ol><li><strong>Characterize the feature.</strong> Summarize the AI feature type (generative, classification, recommendation, scoring, decision-automation, or other), its position in the user experience, and whether outputs are directly user-facing or used internally.</li></ol>
+<ol><li><strong>Training-data rights and IP.</strong> Assess whether the training data used (if in-house) or the vendor's training data (if vendor-supplied and disclosed) raises rights issues: licensed data, scraped data, copyrighted works, personal data used for training, and applicable consent or contractual restrictions. Flag for IP and privacy counsel.</li></ol>
+<ol><li><strong>Output ownership and infringement risk.</strong> Assess who owns the AI outputs, whether the outputs could infringe third-party IP (copyright, trademark, trade dress), and whether the feature's output use case is consistent with the applicable model license or vendor terms. Route detailed vendor contract analysis to <code>ai-vendor-terms-review</code>.</li></ol>
+<ol><li><strong>Accuracy, reliability, and disclaimer needs.</strong> Assess whether the feature makes representations — express or implied — about the accuracy, completeness, or reliability of AI outputs. Flag: hallucination risk, outputs presented as factual without verification, medical/legal/financial advice risk, and whether existing disclaimers adequately disclose limitations.</li></ol>
+<ol><li><strong>Transparency and disclosure to users.</strong> Review what the product currently discloses about AI use. Flag: absence of disclosure that a feature is AI-powered, failure to disclose when outputs are AI-generated (particularly for content, recommendations, or decisions), and obligations under applicable AI transparency laws <code>[CONFIRM: applicable jurisdictions]</code>.</li></ol>
+<ol><li><strong>Privacy and data use.</strong> Assess how personal data flows through the feature: data collected at inference, data sent to a vendor model API, data used for model improvement or retraining, and applicable consent, data minimization, and data retention obligations. Route detailed privacy analysis to privacy counsel.</li></ol>
+<ol><li><strong>Automated decision-making and algorithmic accountability.</strong> Assess whether the feature makes or substantially influences consequential decisions affecting users. Flag: absence of human review, failure to provide explanations or rights of contestation, and applicable automated-decision laws <code>[CONFIRM: EU GDPR Art. 22, state AI laws, sector-specific requirements]</code>.</li></ol>
+<ol><li><strong>Vendor terms and model license.</strong> Flag whether the vendor's API terms, model license, or acceptable use policy permits the intended use case. Identify provisions that restrict output use, impose disclosure obligations, or limit commercial use. Route detailed vendor contract review to <code>ai-vendor-terms-review</code>.</li></ol>
+<ol><li><strong>High-risk use cases.</strong> Assess whether the feature operates in a high-risk domain: healthcare or wellness advice, employment screening, credit or insurance decisions, housing, education, legal advice, law enforcement, or critical infrastructure. Flag each domain for specialist counsel and note applicable regulatory frameworks.</li></ol>
+<ol><li><strong>Open-source model considerations.</strong> If an open-source model is used, flag: the model license type and commercial use permissions, any attribution or disclosure requirements, and whether fine-tuning or distribution triggers additional obligations.</li></ol>
+<ol><li><strong>Compile the issues register.</strong> Assemble every flagged issue into the structured table described in the Output Format section. Assign severity (High / Medium / Low / Unknown), practice area owner, routing (attorney or sibling skill), and whether the issue is blocking for launch.</li></ol>
+<ol><li><strong>Draft recommendations.</strong> For High-severity issues, draft a brief recommended action (disclosure language, contractual protection, human-oversight design change, or specialist escalation), framed as options for attorney review — not final guidance.</li></ol>
+<ol><li><strong>List assumptions and open items.</strong> State every assumption and every <code>[CONFIRM: ...]</code> item that must be resolved before the review can be relied upon.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following sections, in order, labeled as <strong>DRAFT — FOR ATTORNEY REVIEW ONLY</strong>:</p>
+<ol><li><strong>Review Summary</strong>: feature name, model type (in-house / vendor), target markets, review date, inputs received, and inputs missing or assumed.</li></ol>
+<ol><li><strong>Feature Characterization</strong>: brief description of the AI feature type, user-facing behavior, and output use.</li></ol>
+<ol><li><strong>AI Feature Issues Register</strong> *(one row per issue)*: a table with columns — Issue Description | Legal Area | Severity (High / Medium / Low / Unknown) | Recommended Owner / Skill | Blocking? (Yes / No / TBD) | Status.</li></ol>
+<ol><li><strong>High-Risk Domain Flags</strong>: a separate callout for any issues in healthcare, employment, credit, housing, education, or other high-risk domains, with recommended escalation path.</li></ol>
+<ol><li><strong>Routing Map</strong>: a brief list linking each High or blocking issue to the recommended next step (specialist attorney, <code>ai-vendor-terms-review</code>, <code>model-risk-triage</code>, or other sibling skill).</li></ol>
+<ol><li><strong>Recommended Actions</strong> *(draft for attorney review)*: for each High-severity issue, a brief recommended action or options framed as drafts for attorney review.</li></ol>
+<ol><li><strong>Assumptions and Open Items</strong>: numbered list of every assumption and <code>[CONFIRM: ...]</code> item.</li></ol>
+<ol><li><strong>Attorney Verification Checklist</strong>: checkbox items (see below).</li></ol>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] All required inputs have been received and accurately describe the feature as it will be deployed.</li><li>[ ] Training-data rights and provenance have been reviewed by IP counsel, including any personal data used in training.</li><li>[ ] Output ownership and infringement risk have been assessed by IP counsel for the specific use case.</li><li>[ ] The vendor model license and API terms have been reviewed using <code>ai-vendor-terms-review</code> or by counsel with vendor contract expertise.</li><li>[ ] User-facing disclosures of AI use have been reviewed against applicable transparency obligations in all target jurisdictions.</li><li>[ ] Automated-decision-making provisions (GDPR Art. 22 or equivalent) have been assessed by privacy counsel if the feature makes consequential decisions affecting users.</li><li>[ ] Any high-risk domain use case (healthcare, employment, credit, housing, etc.) has been escalated to specialist counsel.</li><li>[ ] Personal data flows through the AI feature (including data sent to vendor APIs) have been reviewed by privacy counsel.</li><li>[ ] Open-source model license obligations have been reviewed by IP counsel if an open-source model is used.</li><li>[ ] Accuracy and disclaimer language has been reviewed and approved by counsel before user-facing deployment.</li><li>[ ] No legal authority, regulation, or agency guidance has been asserted without verification.</li><li>[ ] All assumptions and <code>[CONFIRM: ...]</code> items have been resolved.</li><li>[ ] This document is labeled as a draft and is not shared with third parties or used as a regulatory compliance certification.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: AI Feature Review
+description: Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review.
+---
+
+# AI Feature Review
+
+## Purpose
+
+Produce a structured, attorney-ready legal issues register for a product feature that uses artificial intelligence or machine learning. This skill spots legal exposure across training-data rights, output ownership and infringement, transparency and disclosure obligations, privacy and data use, automated-decision concerns, vendor terms, and high-risk use cases. It routes AI-vendor contract questions to `ai-vendor-terms-review` and broader AI risk triage to `model-risk-triage`. It produces draft legal work product for attorney review — not legal advice, not a regulatory clearance, and not a determination that the feature is lawful.
+
+## Use When
+
+- A team is building, shipping, or updating a feature that uses an AI model, machine learning system, or algorithmic decision-making component.
+- A product manager, engineer, or counsel asks to "review the legal risks of this AI feature," "check if we can use this model," or "what do we need to disclose?"
+- A launch review (see `launch-review`) has flagged an AI or algorithmic component for deeper analysis.
+- An existing AI feature is being modified in a material way: new model, new data inputs, new output use case, or new user population.
+- The feature involves a vendor-supplied AI model and the team needs a legal issues overview before completing vendor contracting (route contract detail to `ai-vendor-terms-review`).
+- The feature involves automated decisions that affect users in consequential ways (credit, employment, health, housing, content moderation, pricing).
+
+## Required Inputs
+
+- **Feature description**: what the feature does, how users interact with it, and what is new or changed.
+- **Model(s) used**: whether the model is in-house (trained or fine-tuned internally) or vendor-supplied (API, embedded, or licensed). Include model name or vendor name if known.
+- **Training and input data**: what data was used to train or fine-tune the model (if in-house), and what data the model receives at inference time (user inputs, uploaded files, third-party data, etc.).
+- **Outputs and how they are used**: what the model produces (text, images, scores, classifications, recommendations, decisions), and how those outputs are displayed to or acted upon by users or internal systems.
+- **User-facing disclosures**: what, if anything, the product currently discloses to users about AI use, automated decision-making, or the nature of the outputs.
+- **Human-oversight design**: whether and how a human reviews, approves, or can override AI outputs before they affect users.
+- **Target markets and users**: geographies, user demographics, and any vulnerable populations (minors, patients, financial consumers, job seekers).
+
+If the feature description and model type are not provided, stop and request them. Do not fabricate technical details, data practices, or vendor terms.
+
+## Do Not Use When
+
+- The review concerns only the AI vendor contract (use `ai-vendor-terms-review`).
+- The review requires a broader multi-area launch review of which AI is one component (use `launch-review`, which will route AI issues here).
+- The review is a high-level AI risk classification or model card assessment (use `model-risk-triage`).
+- The feature does not involve AI, machine learning, or algorithmic decision-making — use the appropriate product-legal skill for the relevant issue area.
+- The goal is to determine whether the feature complies with a specific AI regulation — this skill spots issues and routes; it does not render legal compliance opinions.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice and does not constitute a regulatory clearance or AI compliance certification.
+- Do not assert that the feature is compliant with any AI regulation, data protection law, or consumer protection standard. Flag risks and route to counsel.
+- Do not invent statutes, regulations, agency guidance, technical standards, or enforcement precedents. If a legal framework is relevant (e.g., EU AI Act, state AI transparency laws, FTC guidance on AI), name it and flag it for attorney verification with a `[CONFIRM: ...]` marker.
+- Distinguish what is known from provided inputs, what is assumed, and what must be confirmed.
+- Identify jurisdiction, target user population, and applicable regulatory context based on provided inputs — flag as unknown if not provided.
+- High-risk use cases (healthcare, employment, credit, education, housing, law enforcement, critical infrastructure) require escalation to specialist counsel — do not minimize or omit these flags.
+- Do not place client-sensitive technical architecture, unreleased model details, or proprietary training data descriptions into reusable templates.
+- Treat model background knowledge about AI law as unverified; flag for attorney confirmation before relying on it.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that all required inputs are present. List what was received and flag anything missing or assumed. If the feature description is not provided, stop.
+
+2. **Characterize the feature.** Summarize the AI feature type (generative, classification, recommendation, scoring, decision-automation, or other), its position in the user experience, and whether outputs are directly user-facing or used internally.
+
+3. **Training-data rights and IP.** Assess whether the training data used (if in-house) or the vendor's training data (if vendor-supplied and disclosed) raises rights issues: licensed data, scraped data, copyrighted works, personal data used for training, and applicable consent or contractual restrictions. Flag for IP and privacy counsel.
+
+4. **Output ownership and infringement risk.** Assess who owns the AI outputs, whether the outputs could infringe third-party IP (copyright, trademark, trade dress), and whether the feature's output use case is consistent with the applicable model license or vendor terms. Route detailed vendor contract analysis to `ai-vendor-terms-review`.
+
+5. **Accuracy, reliability, and disclaimer needs.** Assess whether the feature makes representations — express or implied — about the accuracy, completeness, or reliability of AI outputs. Flag: hallucination risk, outputs presented as factual without verification, medical/legal/financial advice risk, and whether existing disclaimers adequately disclose limitations.
+
+6. **Transparency and disclosure to users.** Review what the product currently discloses about AI use. Flag: absence of disclosure that a feature is AI-powered, failure to disclose when outputs are AI-generated (particularly for content, recommendations, or decisions), and obligations under applicable AI transparency laws `[CONFIRM: applicable jurisdictions]`.
+
+7. **Privacy and data use.** Assess how personal data flows through the feature: data collected at inference, data sent to a vendor model API, data used for model improvement or retraining, and applicable consent, data minimization, and data retention obligations. Route detailed privacy analysis to privacy counsel.
+
+8. **Automated decision-making and algorithmic accountability.** Assess whether the feature makes or substantially influences consequential decisions affecting users. Flag: absence of human review, failure to provide explanations or rights of contestation, and applicable automated-decision laws `[CONFIRM: EU GDPR Art. 22, state AI laws, sector-specific requirements]`.
+
+9. **Vendor terms and model license.** Flag whether the vendor's API terms, model license, or acceptable use policy permits the intended use case. Identify provisions that restrict output use, impose disclosure obligations, or limit commercial use. Route detailed vendor contract review to `ai-vendor-terms-review`.
+
+10. **High-risk use cases.** Assess whether the feature operates in a high-risk domain: healthcare or wellness advice, employment screening, credit or insurance decisions, housing, education, legal advice, law enforcement, or critical infrastructure. Flag each domain for specialist counsel and note applicable regulatory frameworks.
+
+11. **Open-source model considerations.** If an open-source model is used, flag: the model license type and commercial use permissions, any attribution or disclosure requirements, and whether fine-tuning or distribution triggers additional obligations.
+
+12. **Compile the issues register.** Assemble every flagged issue into the structured table described in the Output Format section. Assign severity (High / Medium / Low / Unknown), practice area owner, routing (attorney or sibling skill), and whether the issue is blocking for launch.
+
+13. **Draft recommendations.** For High-severity issues, draft a brief recommended action (disclosure language, contractual protection, human-oversight design change, or specialist escalation), framed as options for attorney review — not final guidance.
+
+14. **List assumptions and open items.** State every assumption and every `[CONFIRM: ...]` item that must be resolved before the review can be relied upon.
+
+## Output Format
+
+Deliver the following sections, in order, labeled as **DRAFT — FOR ATTORNEY REVIEW ONLY**:
+
+1. **Review Summary**: feature name, model type (in-house / vendor), target markets, review date, inputs received, and inputs missing or assumed.
+
+2. **Feature Characterization**: brief description of the AI feature type, user-facing behavior, and output use.
+
+3. **AI Feature Issues Register** *(one row per issue)*: a table with columns — Issue Description | Legal Area | Severity (High / Medium / Low / Unknown) | Recommended Owner / Skill | Blocking? (Yes / No / TBD) | Status.
+
+4. **High-Risk Domain Flags**: a separate callout for any issues in healthcare, employment, credit, housing, education, or other high-risk domains, with recommended escalation path.
+
+5. **Routing Map**: a brief list linking each High or blocking issue to the recommended next step (specialist attorney, `ai-vendor-terms-review`, `model-risk-triage`, or other sibling skill).
+
+6. **Recommended Actions** *(draft for attorney review)*: for each High-severity issue, a brief recommended action or options framed as drafts for attorney review.
+
+7. **Assumptions and Open Items**: numbered list of every assumption and `[CONFIRM: ...]` item.
+
+8. **Attorney Verification Checklist**: checkbox items (see below).
+
+## Attorney Verification Checklist
+
+- [ ] All required inputs have been received and accurately describe the feature as it will be deployed.
+- [ ] Training-data rights and provenance have been reviewed by IP counsel, including any personal data used in training.
+- [ ] Output ownership and infringement risk have been assessed by IP counsel for the specific use case.
+- [ ] The vendor model license and API terms have been reviewed using `ai-vendor-terms-review` or by counsel with vendor contract expertise.
+- [ ] User-facing disclosures of AI use have been reviewed against applicable transparency obligations in all target jurisdictions.
+- [ ] Automated-decision-making provisions (GDPR Art. 22 or equivalent) have been assessed by privacy counsel if the feature makes consequential decisions affecting users.
+- [ ] Any high-risk domain use case (healthcare, employment, credit, housing, etc.) has been escalated to specialist counsel.
+- [ ] Personal data flows through the AI feature (including data sent to vendor APIs) have been reviewed by privacy counsel.
+- [ ] Open-source model license obligations have been reviewed by IP counsel if an open-source model is used.
+- [ ] Accuracy and disclaimer language has been reviewed and approved by counsel before user-facing deployment.
+- [ ] No legal authority, regulation, or agency guidance has been asserted without verification.
+- [ ] All assumptions and `[CONFIRM: ...]` items have been resolved.
+- [ ] This document is labeled as a draft and is not shared with third parties or used as a regulatory compliance certification.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: AI Feature Review ===
+---
+name: AI Feature Review
+description: Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review.
+---
+
+# AI Feature Review
+
+## Purpose
+
+Produce a structured, attorney-ready legal issues register for a product feature that uses artificial intelligence or machine learning. This skill spots legal exposure across training-data rights, output ownership and infringement, transparency and disclosure obligations, privacy and data use, automated-decision concerns, vendor terms, and high-risk use cases. It routes AI-vendor contract questions to `ai-vendor-terms-review` and broader AI risk triage to `model-risk-triage`. It produces draft legal work product for attorney review — not legal advice, not a regulatory clearance, and not a determination that the feature is lawful.
+
+## Use When
+
+- A team is building, shipping, or updating a feature that uses an AI model, machine learning system, or algorithmic decision-making component.
+- A product manager, engineer, or counsel asks to "review the legal risks of this AI feature," "check if we can use this model," or "what do we need to disclose?"
+- A launch review (see `launch-review`) has flagged an AI or algorithmic component for deeper analysis.
+- An existing AI feature is being modified in a material way: new model, new data inputs, new output use case, or new user population.
+- The feature involves a vendor-supplied AI model and the team needs a legal issues overview before completing vendor contracting (route contract detail to `ai-vendor-terms-review`).
+- The feature involves automated decisions that affect users in consequential ways (credit, employment, health, housing, content moderation, pricing).
+
+## Required Inputs
+
+- **Feature description**: what the feature does, how users interact with it, and what is new or changed.
+- **Model(s) used**: whether the model is in-house (trained or fine-tuned internally) or vendor-supplied (API, embedded, or licensed). Include model name or vendor name if known.
+- **Training and input data**: what data was used to train or fine-tune the model (if in-house), and what data the model receives at inference time (user inputs, uploaded files, third-party data, etc.).
+- **Outputs and how they are used**: what the model produces (text, images, scores, classifications, recommendations, decisions), and how those outputs are displayed to or acted upon by users or internal systems.
+- **User-facing disclosures**: what, if anything, the product currently discloses to users about AI use, automated decision-making, or the nature of the outputs.
+- **Human-oversight design**: whether and how a human reviews, approves, or can override AI outputs before they affect users.
+- **Target markets and users**: geographies, user demographics, and any vulnerable populations (minors, patients, financial consumers, job seekers).
+
+If the feature description and model type are not provided, stop and request them. Do not fabricate technical details, data practices, or vendor terms.
+
+## Do Not Use When
+
+- The review concerns only the AI vendor contract (use `ai-vendor-terms-review`).
+- The review requires a broader multi-area launch review of which AI is one component (use `launch-review`, which will route AI issues here).
+- The review is a high-level AI risk classification or model card assessment (use `model-risk-triage`).
+- The feature does not involve AI, machine learning, or algorithmic decision-making — use the appropriate product-legal skill for the relevant issue area.
+- The goal is to determine whether the feature complies with a specific AI regulation — this skill spots issues and routes; it does not render legal compliance opinions.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice and does not constitute a regulatory clearance or AI compliance certification.
+- Do not assert that the feature is compliant with any AI regulation, data protection law, or consumer protection standard. Flag risks and route to counsel.
+- Do not invent statutes, regulations, agency guidance, technical standards, or enforcement precedents. If a legal framework is relevant (e.g., EU AI Act, state AI transparency laws, FTC guidance on AI), name it and flag it for attorney verification with a `[CONFIRM: ...]` marker.
+- Distinguish what is known from provided inputs, what is assumed, and what must be confirmed.
+- Identify jurisdiction, target user population, and applicable regulatory context based on provided inputs — flag as unknown if not provided.
+- High-risk use cases (healthcare, employment, credit, education, housing, law enforcement, critical infrastructure) require escalation to specialist counsel — do not minimize or omit these flags.
+- Do not place client-sensitive technical architecture, unreleased model details, or proprietary training data descriptions into reusable templates.
+- Treat model background knowledge about AI law as unverified; flag for attorney confirmation before relying on it.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that all required inputs are present. List what was received and flag anything missing or assumed. If the feature description is not provided, stop.
+
+2. **Characterize the feature.** Summarize the AI feature type (generative, classification, recommendation, scoring, decision-automation, or other), its position in the user experience, and whether outputs are directly user-facing or used internally.
+
+3. **Training-data rights and IP.** Assess whether the training data used (if in-house) or the vendor's training data (if vendor-supplied and disclosed) raises rights issues: licensed data, scraped data, copyrighted works, personal data used for training, and applicable consent or contractual restrictions. Flag for IP and privacy counsel.
+
+4. **Output ownership and infringement risk.** Assess who owns the AI outputs, whether the outputs could infringe third-party IP (copyright, trademark, trade dress), and whether the feature's output use case is consistent with the applicable model license or vendor terms. Route detailed vendor contract analysis to `ai-vendor-terms-review`.
+
+5. **Accuracy, reliability, and disclaimer needs.** Assess whether the feature makes representations — express or implied — about the accuracy, completeness, or reliability of AI outputs. Flag: hallucination risk, outputs presented as factual without verification, medical/legal/financial advice risk, and whether existing disclaimers adequately disclose limitations.
+
+6. **Transparency and disclosure to users.** Review what the product currently discloses about AI use. Flag: absence of disclosure that a feature is AI-powered, failure to disclose when outputs are AI-generated (particularly for content, recommendations, or decisions), and obligations under applicable AI transparency laws `[CONFIRM: applicable jurisdictions]`.
+
+7. **Privacy and data use.** Assess how personal data flows through the feature: data collected at inference, data sent to a vendor model API, data used for model improvement or retraining, and applicable consent, data minimization, and data retention obligations. Route detailed privacy analysis to privacy counsel.
+
+8. **Automated decision-making and algorithmic accountability.** Assess whether the feature makes or substantially influences consequential decisions affecting users. Flag: absence of human review, failure to provide explanations or rights of contestation, and applicable automated-decision laws `[CONFIRM: EU GDPR Art. 22, state AI laws, sector-specific requirements]`.
+
+9. **Vendor terms and model license.** Flag whether the vendor's API terms, model license, or acceptable use policy permits the intended use case. Identify provisions that restrict output use, impose disclosure obligations, or limit commercial use. Route detailed vendor contract review to `ai-vendor-terms-review`.
+
+10. **High-risk use cases.** Assess whether the feature operates in a high-risk domain: healthcare or wellness advice, employment screening, credit or insurance decisions, housing, education, legal advice, law enforcement, or critical infrastructure. Flag each domain for specialist counsel and note applicable regulatory frameworks.
+
+11. **Open-source model considerations.** If an open-source model is used, flag: the model license type and commercial use permissions, any attribution or disclosure requirements, and whether fine-tuning or distribution triggers additional obligations.
+
+12. **Compile the issues register.** Assemble every flagged issue into the structured table described in the Output Format section. Assign severity (High / Medium / Low / Unknown), practice area owner, routing (attorney or sibling skill), and whether the issue is blocking for launch.
+
+13. **Draft recommendations.** For High-severity issues, draft a brief recommended action (disclosure language, contractual protection, human-oversight design change, or specialist escalation), framed as options for attorney review — not final guidance.
+
+14. **List assumptions and open items.** State every assumption and every `[CONFIRM: ...]` item that must be resolved before the review can be relied upon.
+
+## Output Format
+
+Deliver the following sections, in order, labeled as **DRAFT — FOR ATTORNEY REVIEW ONLY**:
+
+1. **Review Summary**: feature name, model type (in-house / vendor), target markets, review date, inputs received, and inputs missing or assumed.
+
+2. **Feature Characterization**: brief description of the AI feature type, user-facing behavior, and output use.
+
+3. **AI Feature Issues Register** *(one row per issue)*: a table with columns — Issue Description | Legal Area | Severity (High / Medium / Low / Unknown) | Recommended Owner / Skill | Blocking? (Yes / No / TBD) | Status.
+
+4. **High-Risk Domain Flags**: a separate callout for any issues in healthcare, employment, credit, housing, education, or other high-risk domains, with recommended escalation path.
+
+5. **Routing Map**: a brief list linking each High or blocking issue to the recommended next step (specialist attorney, `ai-vendor-terms-review`, `model-risk-triage`, or other sibling skill).
+
+6. **Recommended Actions** *(draft for attorney review)*: for each High-severity issue, a brief recommended action or options framed as drafts for attorney review.
+
+7. **Assumptions and Open Items**: numbered list of every assumption and `[CONFIRM: ...]` item.
+
+8. **Attorney Verification Checklist**: checkbox items (see below).
+
+## Attorney Verification Checklist
+
+- [ ] All required inputs have been received and accurately describe the feature as it will be deployed.
+- [ ] Training-data rights and provenance have been reviewed by IP counsel, including any personal data used in training.
+- [ ] Output ownership and infringement risk have been assessed by IP counsel for the specific use case.
+- [ ] The vendor model license and API terms have been reviewed using `ai-vendor-terms-review` or by counsel with vendor contract expertise.
+- [ ] User-facing disclosures of AI use have been reviewed against applicable transparency obligations in all target jurisdictions.
+- [ ] Automated-decision-making provisions (GDPR Art. 22 or equivalent) have been assessed by privacy counsel if the feature makes consequential decisions affecting users.
+- [ ] Any high-risk domain use case (healthcare, employment, credit, housing, etc.) has been escalated to specialist counsel.
+- [ ] Personal data flows through the AI feature (including data sent to vendor APIs) have been reviewed by privacy counsel.
+- [ ] Open-source model license obligations have been reviewed by IP counsel if an open-source model is used.
+- [ ] Accuracy and disclaimer language has been reviewed and approved by counsel before user-facing deployment.
+- [ ] No legal authority, regulation, or agency guidance has been asserted without verification.
+- [ ] All assumptions and `[CONFIRM: ...]` items have been resolved.
+- [ ] This document is labeled as a draft and is not shared with third parties or used as a regulatory compliance certification.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

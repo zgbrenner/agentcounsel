@@ -25,6 +25,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `COMMANDS.md`: a command router mapping slash-style command shorthands to every skill, with trigger phrases, required inputs, expected output, and related commands.
 - `skills/contracts/references/`: five shared contract-review reference files — `red-flags.md`, `negotiability-ratings.md`, `market-benchmark-framework.md`, `document-type-checklists.md`, and `redline-output-guidance.md`.
 - `matter-workspaces/`: four single-file matter scaffolds — litigation, contract review, privacy, and regulatory.
+- `site/`: a static, browser-readable skill catalog generated from `skills/` by a zero-dependency Node script — a homepage, practice-area pages, per-skill pages (with the rendered sections, the full raw `SKILL.md`, and Copy Full Skill / Copy One-Off Prompt buttons), platform setup guides, and `llms.txt` / `llms-full.txt`. Build with `npm run build` from `site/`; documented in `site/README.md` and the root `README.md`.
 
 ### Changed
 

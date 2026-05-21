@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSAR Workflow — AgentCounsel</title>
+<meta name="description" content="Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/privacy.html">Privacy</a> / <span>DSAR Workflow</span></nav>
+<h1>DSAR Workflow</h1>
+<p class="path">Canonical path: <code>skills/privacy/dsar-workflow/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured triage record and response plan for a data subject access request (DSAR) or other data subject rights request (deletion, correction, portability, restriction, objection, opt-out, etc.). This skill organizes the operational workflow — logging, identity verification, request classification, system scoping, response structure, and documentation — so that the legal and compliance team has a complete, attorney-ready handling record. It produces draft legal work product for attorney review — not legal advice.</p>
+<p>This skill provides workflow discipline only. It does not determine which privacy law applies, whether a particular exemption is available, whether the requester has a legal right to the requested action, or when the response deadline falls. All such determinations are attorney-verification items. Response deadlines in particular must never be computed from model knowledge — they vary by jurisdiction, framework, and request type, and must be confirmed with counsel or by reference to verified current authority.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>An individual has submitted a request to access their personal data ("please send me all data you hold about me").</li><li>An individual has requested deletion, erasure, or "right to be forgotten" of their personal data.</li><li>An individual has requested correction or rectification of inaccurate personal data.</li><li>An individual has requested portability of their personal data in a structured, machine-readable format.</li><li>An individual has submitted a request to restrict or object to processing of their personal data.</li><li>An individual has submitted an opt-out of sale, sharing, or targeted advertising request.</li><li>An internal team (legal ops, privacy, compliance) needs a structured intake and handling record for any of the above.</li><li>The organization is building or auditing its DSAR intake and response process and needs a template workflow.</li><li>A regulator has inquired about the organization's handling of a specific data subject request.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>The request itself</strong> — the full text or a faithful summary of what the individual submitted, and the channel through which it was received (email, web form, postal mail, in-product form, verbal, etc.).</li><li><strong>Date the request was received</strong> — required for deadline tracking. If the date is ambiguous, flag as <code>[CONFIRM: date received]</code>.</li><li><strong>Organization's name and role</strong> — whether the organization is a controller, processor, or acting in another capacity with respect to the data in question. If unclear, flag as <code>[CONFIRM: client role]</code>.</li><li>Optional: the identity information already provided by the requester (name, email, account number, etc.), needed for the identity verification step.</li><li>Optional: any prior correspondence with the requester about this or related requests.</li><li>Optional: the applicable privacy framework(s) the organization operates under, as confirmed by counsel (e.g., GDPR, CCPA/CPRA, state law). Do not independently assert which law applies.</li><li><strong>Adverse context information</strong> — any known information about the requester's relationship to the organization beyond ordinary customer or employee status: whether the requester is an adverse party in actual or anticipated litigation, a known regulator or regulatory contact, a journalist, or a representative of a third party with an adversarial interest. Also note whether the organization is aware of any active litigation hold, regulatory inquiry, or anticipated dispute that could intersect with the personal data in scope. If no such context is known, state that explicitly; do not assume it is absent.</li></ul>
+<p>If the request text and date received are not provided, stop and request them. Do not fabricate request details.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The task is to review a privacy policy or notice (use <code>privacy-policy-gap-review</code>).</li><li>The task is to review a DPA (use <code>dpa-review</code>).</li><li>The incoming communication is a regulatory inquiry, enforcement action, or subpoena — those require separate legal handling, not a DSAR workflow.</li><li>The organization needs to determine whether it is subject to a specific privacy law — that is an attorney-judgment item and is out of scope for this skill.</li><li>The task is to draft data subject rights provisions in a contract or policy — that is a drafting task.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not compute, state, or assume any response deadline. Deadlines for data subject requests vary by jurisdiction, regulatory framework, request type, and sometimes the size or nature of the organization. Mark all deadline references as <code>[CONFIRM: verify response deadline under applicable law with counsel]</code>.</li><li>Do not determine which privacy law or regulatory framework applies to the requester or the organization. The applicable law is always an attorney-verification item.</li><li>Do not determine whether an exemption applies (e.g., law enforcement exemption, trade secret exemption, third-party privacy exemption). Identify candidate exemptions to flag for attorney review — do not conclude that they apply.</li><li>Do not advise the organization to deny a request without attorney review of the denial basis.</li><li>Do not characterize the requester's legal entitlement. The requester's right to the requested action depends on law and facts that must be assessed by counsel.</li><li>Distinguish clearly: (1) operational steps the organization can take, (2) information that must be gathered, (3) legal determinations that require attorney review.</li><li>Do not place identifying information about the requester into reusable template materials. The handling record for a specific request is a privileged matter record — keep it separate from reusable workflow documentation.</li><li>Use <code>[CONFIRM: ...]</code> for every point where the legal consequence, applicable rule, deadline, or exemption is uncertain.</li><li>Flag any request that may involve third-party personal data, law enforcement interests, legal privilege, or trade secrets as requiring immediate attorney consultation before responding.</li><li><strong>Adverse-context requests must not be processed as routine.</strong> If the requester is an adverse party in actual or anticipated litigation, a regulator, or a journalist, or if the request intersects an active or anticipated litigation matter or litigation hold, flag the request for immediate attorney involvement and do not advance the standard workflow. The timing, scope, and handling of an adverse-context request — including its interaction with discovery obligations, privilege considerations, and litigation-hold duties — present legal questions that differ materially from a routine DSAR and must be directed to counsel before any response steps are taken. <code>[verify jurisdiction]</code></li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Log the request.</strong> Record the following at intake: (a) date and time received <code>[CONFIRM: if ambiguous]</code>; (b) channel received (email, web form, letter, verbal, etc.); (c) requester's stated identity (name, contact information, account reference if provided); (d) the full text or faithful summary of the request; (e) the type(s) of rights being invoked as best understood from the request. Assign a tracking reference number.</li></ol>
+<ol><li><strong>Classify the request type.</strong> Identify which type(s) of data subject rights the request invokes:<ul><li>Access / copy of personal data</li><li>Deletion / erasure</li><li>Correction / rectification</li><li>Portability</li><li>Restriction of processing</li><li>Objection to processing</li><li>Opt-out of sale, sharing, or targeted advertising</li><li>Withdrawal of consent</li><li>Other: <code>[DESCRIBE]</code></li></ul></li></ol>
+<p>A single request may invoke multiple rights. If the request is ambiguous, note the ambiguity and flag whether clarification from the requester is appropriate (seek attorney guidance on whether clarifying questions are permitted under applicable law <code>[CONFIRM]</code>).</p>
+<ol><li><strong>Screen for adverse context.</strong> Before proceeding with the standard response workflow, assess whether any of the following conditions are present based on the inputs provided:<ul><li>The requester appears to be an adverse party in actual or anticipated litigation involving the organization.</li><li>The requester is a known regulator, regulatory contact, or government authority.</li><li>The requester is a journalist or media representative, or the request otherwise suggests a public-interest or investigative purpose.</li><li>The personal data in scope intersects an active litigation hold, a regulatory investigation, or an anticipated legal proceeding.</li><li>The organization's counsel or another authorized source has flagged this requester or this data for special handling.</li></ul></li></ol>
+<p>If any of these conditions is present, or if the inputs are ambiguous on any of them: <strong>stop the standard workflow and escalate immediately to attorney review.</strong> Insert the following flag: <code>[ATTORNEY TO CONFIRM: adverse-context screen triggered — do not process as a routine DSAR until counsel has assessed the impact on litigation, discovery, privilege, and litigation-hold obligations — verify jurisdiction]</code>. Do not advance to identity verification, data scoping, or response drafting until counsel has authorized continuation and provided handling instructions.</p>
+<p>If none of the conditions is present and the inputs are clear, record the adverse-context screen outcome and proceed.</p>
+<ol><li><strong>Identify the response deadline placeholder.</strong> Note the date received and insert a placeholder: "Response deadline: <code>[CONFIRM: verify deadline for [request type] under applicable law and framework — do not compute]</code>." Do not calculate or estimate the deadline from model knowledge.</li></ol>
+<ol><li><strong>Verify the requester's identity.</strong> Assess whether the requester has provided sufficient information to verify their identity before proceeding. Note: (a) what identifying information was provided; (b) whether additional verification is needed; (c) the proposed verification method. Flag for attorney review if: the verification process could be discriminatory, disproportionate, or if applicable law limits what verification can be required <code>[CONFIRM]</code>. Do not collect more personal data than necessary to verify identity.</li></ol>
+<ol><li><strong>Confirm the organization's role and scope.</strong> Assess whether the organization is acting as a controller with respect to the personal data at issue, or whether it is a processor holding data on behalf of another controller. If processor, flag that the request may need to be forwarded to the controller <code>[CONFIRM: confirm whether organization must forward request and within what timeframe]</code>.</li></ol>
+<ol><li><strong>Scope the personal data and systems.</strong> Based on the request type and the organization's data inventory (if available), identify the categories of systems, databases, and records likely to hold personal data relating to the requester. Note: (a) categories of data likely held; (b) systems and teams that need to be queried; (c) any data held by third-party processors that may be in scope. Flag: if data inventory is not available, note the gap as a risk item for attorney and privacy team.</li></ol>
+<ol><li><strong>Identify candidate exemptions and third-party considerations.</strong> Without concluding that any exemption applies, flag the following for attorney review if relevant:<ul><li>Data relating to third parties whose rights may be affected by disclosure</li><li>Legally privileged information</li><li>Trade secrets or confidential business information</li><li>Data subject to legal hold, litigation, or regulatory preservation</li><li>Law enforcement or national security considerations</li><li>Manifestly unfounded or excessive requests <code>[CONFIRM: criteria and consequences under applicable law]</code></li></ul></li></ol>
+<ol><li><strong>Prepare the response plan.</strong> Draft a structured response plan covering: (a) the action to be taken (fulfill, partially fulfill, deny — each denial basis must be attorney-reviewed before use); (b) the data or information to be provided or withheld; (c) the format and delivery method for any data provided; (d) any fee or extension considerations <code>[CONFIRM: whether fee or extension is permissible under applicable law]</code>; (e) the draft response communication (stub only — attorney drafts or reviews before sending).</li></ol>
+<ol><li><strong>Document the handling record.</strong> Compile the full handling record including: intake log, identity verification record, request classification, system scope, exemptions flagged, response plan, and any communications sent. The handling record should be retained in accordance with the organization's record-retention policy <code>[CONFIRM: retention period under applicable law]</code>.</li></ol>
+<ol><li><strong>Flag escalation items.</strong> Identify any factors that warrant immediate attorney consultation before proceeding: large-scale or class-type requests, requests from a known litigant or regulator, requests involving sensitive special-category data, requests that implicate third-party rights, or requests where the response deadline appears imminent <code>[CONFIRM deadline with counsel immediately]</code>.</li></ol>
+<ol><li><strong>Assemble output</strong> and label it as draft legal work product for attorney review.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following, in order:</p>
+<ol><li><strong>Intake Log</strong> — reference number, date received, channel, requester identification, request text or faithful summary.</li><li><strong>Request Classification</strong> — right(s) invoked; ambiguities noted.</li><li><strong>Adverse-Context Screen Result</strong> — outcome of the adverse-context screen (clear to proceed, or escalation flag triggered); if triggered, the <code>[ATTORNEY TO CONFIRM: ...]</code> flag and a halt notice; if clear, a brief statement of the basis for that determination.</li><li><strong>Response Deadline Placeholder</strong> — <code>[CONFIRM: verify deadline under applicable law]</code> — do not compute.</li><li><strong>Identity Verification Record</strong> — what was provided; verification status; any gaps.</li><li><strong>Scope Assessment</strong> — systems and data categories identified; third-party processor considerations.</li><li><strong>Candidate Exemptions and Third-Party Flags</strong> — list for attorney review; no conclusions drawn.</li><li><strong>Response Plan (draft)</strong> — proposed action, data to provide or withhold, format, delivery method, fee/extension flags.</li><li><strong>Escalation Items</strong> — any factors requiring immediate attorney consultation.</li><li><strong>Attorney Verification Items</strong> — see the Attorney Verification Checklist below.</li><li><strong>Assumptions</strong> — explicit list of every assumption made in the handling record.</li></ol>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The applicable privacy law(s) and framework(s) have been confirmed, and the organization is subject to them with respect to this requester and this data.</li><li>[ ] The adverse-context screen has been reviewed: counsel has confirmed whether the requester is an adverse party, regulator, or journalist, and whether the request intersects any active or anticipated litigation hold or regulatory inquiry — and has authorized the handling approach accordingly.</li><li>[ ] The response deadline has been confirmed under current applicable law — it has not been computed from model knowledge.</li><li>[ ] The organization's role (controller or processor) with respect to the data at issue has been confirmed; if processor, the obligation to forward to the controller has been assessed.</li><li>[ ] The identity verification process is proportionate and compliant with applicable law.</li><li>[ ] The scope of personal data to be provided or addressed is complete and accurate — all relevant systems and processors have been queried.</li><li>[ ] Every candidate exemption has been assessed by counsel; no exemption has been applied without attorney review.</li><li>[ ] The interests of third parties whose personal data may appear in the response have been considered.</li><li>[ ] Any denial of the request is based on a confirmed legal basis reviewed by counsel.</li><li>[ ] Any fee charged or extension claimed is permissible under applicable law.</li><li>[ ] The response communication has been reviewed and approved by counsel before being sent.</li><li>[ ] The handling record is complete and will be retained in accordance with applicable law and organizational policy.</li><li>[ ] All <code>[CONFIRM: ...]</code> placeholders in the handling record have been resolved before the response is sent.</li><li>[ ] Escalation items, if any, have been escalated and addressed before the response deadline.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: DSAR Workflow
+description: Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.
+---
+
+# DSAR Workflow
+
+## Purpose
+
+Produce a structured triage record and response plan for a data subject access request (DSAR) or other data subject rights request (deletion, correction, portability, restriction, objection, opt-out, etc.). This skill organizes the operational workflow — logging, identity verification, request classification, system scoping, response structure, and documentation — so that the legal and compliance team has a complete, attorney-ready handling record. It produces draft legal work product for attorney review — not legal advice.
+
+This skill provides workflow discipline only. It does not determine which privacy law applies, whether a particular exemption is available, whether the requester has a legal right to the requested action, or when the response deadline falls. All such determinations are attorney-verification items. Response deadlines in particular must never be computed from model knowledge — they vary by jurisdiction, framework, and request type, and must be confirmed with counsel or by reference to verified current authority.
+
+## Use When
+
+- An individual has submitted a request to access their personal data ("please send me all data you hold about me").
+- An individual has requested deletion, erasure, or "right to be forgotten" of their personal data.
+- An individual has requested correction or rectification of inaccurate personal data.
+- An individual has requested portability of their personal data in a structured, machine-readable format.
+- An individual has submitted a request to restrict or object to processing of their personal data.
+- An individual has submitted an opt-out of sale, sharing, or targeted advertising request.
+- An internal team (legal ops, privacy, compliance) needs a structured intake and handling record for any of the above.
+- The organization is building or auditing its DSAR intake and response process and needs a template workflow.
+- A regulator has inquired about the organization's handling of a specific data subject request.
+
+## Required Inputs
+
+- **The request itself** — the full text or a faithful summary of what the individual submitted, and the channel through which it was received (email, web form, postal mail, in-product form, verbal, etc.).
+- **Date the request was received** — required for deadline tracking. If the date is ambiguous, flag as `[CONFIRM: date received]`.
+- **Organization's name and role** — whether the organization is a controller, processor, or acting in another capacity with respect to the data in question. If unclear, flag as `[CONFIRM: client role]`.
+- Optional: the identity information already provided by the requester (name, email, account number, etc.), needed for the identity verification step.
+- Optional: any prior correspondence with the requester about this or related requests.
+- Optional: the applicable privacy framework(s) the organization operates under, as confirmed by counsel (e.g., GDPR, CCPA/CPRA, state law). Do not independently assert which law applies.
+- **Adverse context information** — any known information about the requester's relationship to the organization beyond ordinary customer or employee status: whether the requester is an adverse party in actual or anticipated litigation, a known regulator or regulatory contact, a journalist, or a representative of a third party with an adversarial interest. Also note whether the organization is aware of any active litigation hold, regulatory inquiry, or anticipated dispute that could intersect with the personal data in scope. If no such context is known, state that explicitly; do not assume it is absent.
+
+If the request text and date received are not provided, stop and request them. Do not fabricate request details.
+
+## Do Not Use When
+
+- The task is to review a privacy policy or notice (use `privacy-policy-gap-review`).
+- The task is to review a DPA (use `dpa-review`).
+- The incoming communication is a regulatory inquiry, enforcement action, or subpoena — those require separate legal handling, not a DSAR workflow.
+- The organization needs to determine whether it is subject to a specific privacy law — that is an attorney-judgment item and is out of scope for this skill.
+- The task is to draft data subject rights provisions in a contract or policy — that is a drafting task.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not compute, state, or assume any response deadline. Deadlines for data subject requests vary by jurisdiction, regulatory framework, request type, and sometimes the size or nature of the organization. Mark all deadline references as `[CONFIRM: verify response deadline under applicable law with counsel]`.
+- Do not determine which privacy law or regulatory framework applies to the requester or the organization. The applicable law is always an attorney-verification item.
+- Do not determine whether an exemption applies (e.g., law enforcement exemption, trade secret exemption, third-party privacy exemption). Identify candidate exemptions to flag for attorney review — do not conclude that they apply.
+- Do not advise the organization to deny a request without attorney review of the denial basis.
+- Do not characterize the requester's legal entitlement. The requester's right to the requested action depends on law and facts that must be assessed by counsel.
+- Distinguish clearly: (1) operational steps the organization can take, (2) information that must be gathered, (3) legal determinations that require attorney review.
+- Do not place identifying information about the requester into reusable template materials. The handling record for a specific request is a privileged matter record — keep it separate from reusable workflow documentation.
+- Use `[CONFIRM: ...]` for every point where the legal consequence, applicable rule, deadline, or exemption is uncertain.
+- Flag any request that may involve third-party personal data, law enforcement interests, legal privilege, or trade secrets as requiring immediate attorney consultation before responding.
+- **Adverse-context requests must not be processed as routine.** If the requester is an adverse party in actual or anticipated litigation, a regulator, or a journalist, or if the request intersects an active or anticipated litigation matter or litigation hold, flag the request for immediate attorney involvement and do not advance the standard workflow. The timing, scope, and handling of an adverse-context request — including its interaction with discovery obligations, privilege considerations, and litigation-hold duties — present legal questions that differ materially from a routine DSAR and must be directed to counsel before any response steps are taken. `[verify jurisdiction]`
+
+## Workflow
+
+1. **Log the request.** Record the following at intake: (a) date and time received `[CONFIRM: if ambiguous]`; (b) channel received (email, web form, letter, verbal, etc.); (c) requester's stated identity (name, contact information, account reference if provided); (d) the full text or faithful summary of the request; (e) the type(s) of rights being invoked as best understood from the request. Assign a tracking reference number.
+
+2. **Classify the request type.** Identify which type(s) of data subject rights the request invokes:
+   - Access / copy of personal data
+   - Deletion / erasure
+   - Correction / rectification
+   - Portability
+   - Restriction of processing
+   - Objection to processing
+   - Opt-out of sale, sharing, or targeted advertising
+   - Withdrawal of consent
+   - Other: `[DESCRIBE]`
+   
+   A single request may invoke multiple rights. If the request is ambiguous, note the ambiguity and flag whether clarification from the requester is appropriate (seek attorney guidance on whether clarifying questions are permitted under applicable law `[CONFIRM]`).
+
+3. **Screen for adverse context.** Before proceeding with the standard response workflow, assess whether any of the following conditions are present based on the inputs provided:
+   - The requester appears to be an adverse party in actual or anticipated litigation involving the organization.
+   - The requester is a known regulator, regulatory contact, or government authority.
+   - The requester is a journalist or media representative, or the request otherwise suggests a public-interest or investigative purpose.
+   - The personal data in scope intersects an active litigation hold, a regulatory investigation, or an anticipated legal proceeding.
+   - The organization's counsel or another authorized source has flagged this requester or this data for special handling.
+
+   If any of these conditions is present, or if the inputs are ambiguous on any of them: **stop the standard workflow and escalate immediately to attorney review.** Insert the following flag: `[ATTORNEY TO CONFIRM: adverse-context screen triggered — do not process as a routine DSAR until counsel has assessed the impact on litigation, discovery, privilege, and litigation-hold obligations — verify jurisdiction]`. Do not advance to identity verification, data scoping, or response drafting until counsel has authorized continuation and provided handling instructions.
+
+   If none of the conditions is present and the inputs are clear, record the adverse-context screen outcome and proceed.
+
+4. **Identify the response deadline placeholder.** Note the date received and insert a placeholder: "Response deadline: `[CONFIRM: verify deadline for [request type] under applicable law and framework — do not compute]`." Do not calculate or estimate the deadline from model knowledge.
+
+5. **Verify the requester's identity.** Assess whether the requester has provided sufficient information to verify their identity before proceeding. Note: (a) what identifying information was provided; (b) whether additional verification is needed; (c) the proposed verification method. Flag for attorney review if: the verification process could be discriminatory, disproportionate, or if applicable law limits what verification can be required `[CONFIRM]`. Do not collect more personal data than necessary to verify identity.
+
+6. **Confirm the organization's role and scope.** Assess whether the organization is acting as a controller with respect to the personal data at issue, or whether it is a processor holding data on behalf of another controller. If processor, flag that the request may need to be forwarded to the controller `[CONFIRM: confirm whether organization must forward request and within what timeframe]`.
+
+7. **Scope the personal data and systems.** Based on the request type and the organization's data inventory (if available), identify the categories of systems, databases, and records likely to hold personal data relating to the requester. Note: (a) categories of data likely held; (b) systems and teams that need to be queried; (c) any data held by third-party processors that may be in scope. Flag: if data inventory is not available, note the gap as a risk item for attorney and privacy team.
+
+8. **Identify candidate exemptions and third-party considerations.** Without concluding that any exemption applies, flag the following for attorney review if relevant:
+   - Data relating to third parties whose rights may be affected by disclosure
+   - Legally privileged information
+   - Trade secrets or confidential business information
+   - Data subject to legal hold, litigation, or regulatory preservation
+   - Law enforcement or national security considerations
+   - Manifestly unfounded or excessive requests `[CONFIRM: criteria and consequences under applicable law]`
+
+9. **Prepare the response plan.** Draft a structured response plan covering: (a) the action to be taken (fulfill, partially fulfill, deny — each denial basis must be attorney-reviewed before use); (b) the data or information to be provided or withheld; (c) the format and delivery method for any data provided; (d) any fee or extension considerations `[CONFIRM: whether fee or extension is permissible under applicable law]`; (e) the draft response communication (stub only — attorney drafts or reviews before sending).
+
+10. **Document the handling record.** Compile the full handling record including: intake log, identity verification record, request classification, system scope, exemptions flagged, response plan, and any communications sent. The handling record should be retained in accordance with the organization's record-retention policy `[CONFIRM: retention period under applicable law]`.
+
+11. **Flag escalation items.** Identify any factors that warrant immediate attorney consultation before proceeding: large-scale or class-type requests, requests from a known litigant or regulator, requests involving sensitive special-category data, requests that implicate third-party rights, or requests where the response deadline appears imminent `[CONFIRM deadline with counsel immediately]`.
+
+12. **Assemble output** and label it as draft legal work product for attorney review.
+
+## Output Format
+
+Deliver the following, in order:
+
+1. **Intake Log** — reference number, date received, channel, requester identification, request text or faithful summary.
+2. **Request Classification** — right(s) invoked; ambiguities noted.
+3. **Adverse-Context Screen Result** — outcome of the adverse-context screen (clear to proceed, or escalation flag triggered); if triggered, the `[ATTORNEY TO CONFIRM: ...]` flag and a halt notice; if clear, a brief statement of the basis for that determination.
+4. **Response Deadline Placeholder** — `[CONFIRM: verify deadline under applicable law]` — do not compute.
+5. **Identity Verification Record** — what was provided; verification status; any gaps.
+6. **Scope Assessment** — systems and data categories identified; third-party processor considerations.
+7. **Candidate Exemptions and Third-Party Flags** — list for attorney review; no conclusions drawn.
+8. **Response Plan (draft)** — proposed action, data to provide or withhold, format, delivery method, fee/extension flags.
+9. **Escalation Items** — any factors requiring immediate attorney consultation.
+10. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+11. **Assumptions** — explicit list of every assumption made in the handling record.
+
+## Attorney Verification Checklist
+
+- [ ] The applicable privacy law(s) and framework(s) have been confirmed, and the organization is subject to them with respect to this requester and this data.
+- [ ] The adverse-context screen has been reviewed: counsel has confirmed whether the requester is an adverse party, regulator, or journalist, and whether the request intersects any active or anticipated litigation hold or regulatory inquiry — and has authorized the handling approach accordingly.
+- [ ] The response deadline has been confirmed under current applicable law — it has not been computed from model knowledge.
+- [ ] The organization's role (controller or processor) with respect to the data at issue has been confirmed; if processor, the obligation to forward to the controller has been assessed.
+- [ ] The identity verification process is proportionate and compliant with applicable law.
+- [ ] The scope of personal data to be provided or addressed is complete and accurate — all relevant systems and processors have been queried.
+- [ ] Every candidate exemption has been assessed by counsel; no exemption has been applied without attorney review.
+- [ ] The interests of third parties whose personal data may appear in the response have been considered.
+- [ ] Any denial of the request is based on a confirmed legal basis reviewed by counsel.
+- [ ] Any fee charged or extension claimed is permissible under applicable law.
+- [ ] The response communication has been reviewed and approved by counsel before being sent.
+- [ ] The handling record is complete and will be retained in accordance with applicable law and organizational policy.
+- [ ] All `[CONFIRM: ...]` placeholders in the handling record have been resolved before the response is sent.
+- [ ] Escalation items, if any, have been escalated and addressed before the response deadline.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: DSAR Workflow ===
+---
+name: DSAR Workflow
+description: Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.
+---
+
+# DSAR Workflow
+
+## Purpose
+
+Produce a structured triage record and response plan for a data subject access request (DSAR) or other data subject rights request (deletion, correction, portability, restriction, objection, opt-out, etc.). This skill organizes the operational workflow — logging, identity verification, request classification, system scoping, response structure, and documentation — so that the legal and compliance team has a complete, attorney-ready handling record. It produces draft legal work product for attorney review — not legal advice.
+
+This skill provides workflow discipline only. It does not determine which privacy law applies, whether a particular exemption is available, whether the requester has a legal right to the requested action, or when the response deadline falls. All such determinations are attorney-verification items. Response deadlines in particular must never be computed from model knowledge — they vary by jurisdiction, framework, and request type, and must be confirmed with counsel or by reference to verified current authority.
+
+## Use When
+
+- An individual has submitted a request to access their personal data ("please send me all data you hold about me").
+- An individual has requested deletion, erasure, or "right to be forgotten" of their personal data.
+- An individual has requested correction or rectification of inaccurate personal data.
+- An individual has requested portability of their personal data in a structured, machine-readable format.
+- An individual has submitted a request to restrict or object to processing of their personal data.
+- An individual has submitted an opt-out of sale, sharing, or targeted advertising request.
+- An internal team (legal ops, privacy, compliance) needs a structured intake and handling record for any of the above.
+- The organization is building or auditing its DSAR intake and response process and needs a template workflow.
+- A regulator has inquired about the organization's handling of a specific data subject request.
+
+## Required Inputs
+
+- **The request itself** — the full text or a faithful summary of what the individual submitted, and the channel through which it was received (email, web form, postal mail, in-product form, verbal, etc.).
+- **Date the request was received** — required for deadline tracking. If the date is ambiguous, flag as `[CONFIRM: date received]`.
+- **Organization's name and role** — whether the organization is a controller, processor, or acting in another capacity with respect to the data in question. If unclear, flag as `[CONFIRM: client role]`.
+- Optional: the identity information already provided by the requester (name, email, account number, etc.), needed for the identity verification step.
+- Optional: any prior correspondence with the requester about this or related requests.
+- Optional: the applicable privacy framework(s) the organization operates under, as confirmed by counsel (e.g., GDPR, CCPA/CPRA, state law). Do not independently assert which law applies.
+- **Adverse context information** — any known information about the requester's relationship to the organization beyond ordinary customer or employee status: whether the requester is an adverse party in actual or anticipated litigation, a known regulator or regulatory contact, a journalist, or a representative of a third party with an adversarial interest. Also note whether the organization is aware of any active litigation hold, regulatory inquiry, or anticipated dispute that could intersect with the personal data in scope. If no such context is known, state that explicitly; do not assume it is absent.
+
+If the request text and date received are not provided, stop and request them. Do not fabricate request details.
+
+## Do Not Use When
+
+- The task is to review a privacy policy or notice (use `privacy-policy-gap-review`).
+- The task is to review a DPA (use `dpa-review`).
+- The incoming communication is a regulatory inquiry, enforcement action, or subpoena — those require separate legal handling, not a DSAR workflow.
+- The organization needs to determine whether it is subject to a specific privacy law — that is an attorney-judgment item and is out of scope for this skill.
+- The task is to draft data subject rights provisions in a contract or policy — that is a drafting task.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not compute, state, or assume any response deadline. Deadlines for data subject requests vary by jurisdiction, regulatory framework, request type, and sometimes the size or nature of the organization. Mark all deadline references as `[CONFIRM: verify response deadline under applicable law with counsel]`.
+- Do not determine which privacy law or regulatory framework applies to the requester or the organization. The applicable law is always an attorney-verification item.
+- Do not determine whether an exemption applies (e.g., law enforcement exemption, trade secret exemption, third-party privacy exemption). Identify candidate exemptions to flag for attorney review — do not conclude that they apply.
+- Do not advise the organization to deny a request without attorney review of the denial basis.
+- Do not characterize the requester's legal entitlement. The requester's right to the requested action depends on law and facts that must be assessed by counsel.
+- Distinguish clearly: (1) operational steps the organization can take, (2) information that must be gathered, (3) legal determinations that require attorney review.
+- Do not place identifying information about the requester into reusable template materials. The handling record for a specific request is a privileged matter record — keep it separate from reusable workflow documentation.
+- Use `[CONFIRM: ...]` for every point where the legal consequence, applicable rule, deadline, or exemption is uncertain.
+- Flag any request that may involve third-party personal data, law enforcement interests, legal privilege, or trade secrets as requiring immediate attorney consultation before responding.
+- **Adverse-context requests must not be processed as routine.** If the requester is an adverse party in actual or anticipated litigation, a regulator, or a journalist, or if the request intersects an active or anticipated litigation matter or litigation hold, flag the request for immediate attorney involvement and do not advance the standard workflow. The timing, scope, and handling of an adverse-context request — including its interaction with discovery obligations, privilege considerations, and litigation-hold duties — present legal questions that differ materially from a routine DSAR and must be directed to counsel before any response steps are taken. `[verify jurisdiction]`
+
+## Workflow
+
+1. **Log the request.** Record the following at intake: (a) date and time received `[CONFIRM: if ambiguous]`; (b) channel received (email, web form, letter, verbal, etc.); (c) requester's stated identity (name, contact information, account reference if provided); (d) the full text or faithful summary of the request; (e) the type(s) of rights being invoked as best understood from the request. Assign a tracking reference number.
+
+2. **Classify the request type.** Identify which type(s) of data subject rights the request invokes:
+   - Access / copy of personal data
+   - Deletion / erasure
+   - Correction / rectification
+   - Portability
+   - Restriction of processing
+   - Objection to processing
+   - Opt-out of sale, sharing, or targeted advertising
+   - Withdrawal of consent
+   - Other: `[DESCRIBE]`
+   
+   A single request may invoke multiple rights. If the request is ambiguous, note the ambiguity and flag whether clarification from the requester is appropriate (seek attorney guidance on whether clarifying questions are permitted under applicable law `[CONFIRM]`).
+
+3. **Screen for adverse context.** Before proceeding with the standard response workflow, assess whether any of the following conditions are present based on the inputs provided:
+   - The requester appears to be an adverse party in actual or anticipated litigation involving the organization.
+   - The requester is a known regulator, regulatory contact, or government authority.
+   - The requester is a journalist or media representative, or the request otherwise suggests a public-interest or investigative purpose.
+   - The personal data in scope intersects an active litigation hold, a regulatory investigation, or an anticipated legal proceeding.
+   - The organization's counsel or another authorized source has flagged this requester or this data for special handling.
+
+   If any of these conditions is present, or if the inputs are ambiguous on any of them: **stop the standard workflow and escalate immediately to attorney review.** Insert the following flag: `[ATTORNEY TO CONFIRM: adverse-context screen triggered — do not process as a routine DSAR until counsel has assessed the impact on litigation, discovery, privilege, and litigation-hold obligations — verify jurisdiction]`. Do not advance to identity verification, data scoping, or response drafting until counsel has authorized continuation and provided handling instructions.
+
+   If none of the conditions is present and the inputs are clear, record the adverse-context screen outcome and proceed.
+
+4. **Identify the response deadline placeholder.** Note the date received and insert a placeholder: "Response deadline: `[CONFIRM: verify deadline for [request type] under applicable law and framework — do not compute]`." Do not calculate or estimate the deadline from model knowledge.
+
+5. **Verify the requester's identity.** Assess whether the requester has provided sufficient information to verify their identity before proceeding. Note: (a) what identifying information was provided; (b) whether additional verification is needed; (c) the proposed verification method. Flag for attorney review if: the verification process could be discriminatory, disproportionate, or if applicable law limits what verification can be required `[CONFIRM]`. Do not collect more personal data than necessary to verify identity.
+
+6. **Confirm the organization's role and scope.** Assess whether the organization is acting as a controller with respect to the personal data at issue, or whether it is a processor holding data on behalf of another controller. If processor, flag that the request may need to be forwarded to the controller `[CONFIRM: confirm whether organization must forward request and within what timeframe]`.
+
+7. **Scope the personal data and systems.** Based on the request type and the organization's data inventory (if available), identify the categories of systems, databases, and records likely to hold personal data relating to the requester. Note: (a) categories of data likely held; (b) systems and teams that need to be queried; (c) any data held by third-party processors that may be in scope. Flag: if data inventory is not available, note the gap as a risk item for attorney and privacy team.
+
+8. **Identify candidate exemptions and third-party considerations.** Without concluding that any exemption applies, flag the following for attorney review if relevant:
+   - Data relating to third parties whose rights may be affected by disclosure
+   - Legally privileged information
+   - Trade secrets or confidential business information
+   - Data subject to legal hold, litigation, or regulatory preservation
+   - Law enforcement or national security considerations
+   - Manifestly unfounded or excessive requests `[CONFIRM: criteria and consequences under applicable law]`
+
+9. **Prepare the response plan.** Draft a structured response plan covering: (a) the action to be taken (fulfill, partially fulfill, deny — each denial basis must be attorney-reviewed before use); (b) the data or information to be provided or withheld; (c) the format and delivery method for any data provided; (d) any fee or extension considerations `[CONFIRM: whether fee or extension is permissible under applicable law]`; (e) the draft response communication (stub only — attorney drafts or reviews before sending).
+
+10. **Document the handling record.** Compile the full handling record including: intake log, identity verification record, request classification, system scope, exemptions flagged, response plan, and any communications sent. The handling record should be retained in accordance with the organization's record-retention policy `[CONFIRM: retention period under applicable law]`.
+
+11. **Flag escalation items.** Identify any factors that warrant immediate attorney consultation before proceeding: large-scale or class-type requests, requests from a known litigant or regulator, requests involving sensitive special-category data, requests that implicate third-party rights, or requests where the response deadline appears imminent `[CONFIRM deadline with counsel immediately]`.
+
+12. **Assemble output** and label it as draft legal work product for attorney review.
+
+## Output Format
+
+Deliver the following, in order:
+
+1. **Intake Log** — reference number, date received, channel, requester identification, request text or faithful summary.
+2. **Request Classification** — right(s) invoked; ambiguities noted.
+3. **Adverse-Context Screen Result** — outcome of the adverse-context screen (clear to proceed, or escalation flag triggered); if triggered, the `[ATTORNEY TO CONFIRM: ...]` flag and a halt notice; if clear, a brief statement of the basis for that determination.
+4. **Response Deadline Placeholder** — `[CONFIRM: verify deadline under applicable law]` — do not compute.
+5. **Identity Verification Record** — what was provided; verification status; any gaps.
+6. **Scope Assessment** — systems and data categories identified; third-party processor considerations.
+7. **Candidate Exemptions and Third-Party Flags** — list for attorney review; no conclusions drawn.
+8. **Response Plan (draft)** — proposed action, data to provide or withhold, format, delivery method, fee/extension flags.
+9. **Escalation Items** — any factors requiring immediate attorney consultation.
+10. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+11. **Assumptions** — explicit list of every assumption made in the handling record.
+
+## Attorney Verification Checklist
+
+- [ ] The applicable privacy law(s) and framework(s) have been confirmed, and the organization is subject to them with respect to this requester and this data.
+- [ ] The adverse-context screen has been reviewed: counsel has confirmed whether the requester is an adverse party, regulator, or journalist, and whether the request intersects any active or anticipated litigation hold or regulatory inquiry — and has authorized the handling approach accordingly.
+- [ ] The response deadline has been confirmed under current applicable law — it has not been computed from model knowledge.
+- [ ] The organization's role (controller or processor) with respect to the data at issue has been confirmed; if processor, the obligation to forward to the controller has been assessed.
+- [ ] The identity verification process is proportionate and compliant with applicable law.
+- [ ] The scope of personal data to be provided or addressed is complete and accurate — all relevant systems and processors have been queried.
+- [ ] Every candidate exemption has been assessed by counsel; no exemption has been applied without attorney review.
+- [ ] The interests of third parties whose personal data may appear in the response have been considered.
+- [ ] Any denial of the request is based on a confirmed legal basis reviewed by counsel.
+- [ ] Any fee charged or extension claimed is permissible under applicable law.
+- [ ] The response communication has been reviewed and approved by counsel before being sent.
+- [ ] The handling record is complete and will be retained in accordance with applicable law and organizational policy.
+- [ ] All `[CONFIRM: ...]` placeholders in the handling record have been resolved before the response is sent.
+- [ ] Escalation items, if any, have been escalated and addressed before the response deadline.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

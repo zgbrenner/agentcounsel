@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deposition Preparation — AgentCounsel</title>
+<meta name="description" content="Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/litigation.html">Litigation</a> / <span>Deposition Preparation</span></nav>
+<h1>Deposition Preparation</h1>
+<p class="path">Canonical path: <code>skills/litigation/deposition-prep/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured deposition outline for attorney review and use. The outline is a strategic map — not a script — that organizes topic blocks, document anchors, and a pivot-fact sequence around the case theory. It is draft legal work product for attorney review; it is not legal advice. The attorney drives the deposition. The skill never drafts a witness statement in the witness's own voice.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>Counsel needs to prepare for an upcoming deposition and wants a structured question outline organized around topic blocks.</li><li>A user asks to "prep for a deposition," "draft a depo outline," or "organize the documents for the [witness] deposition."</li><li>The case theory and witness role are clear enough to define a deposition goal.</li><li>Preparing for an adverse, neutral, friendly, or organizational-representative witness.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>Matter identification</strong> — matter name, matter number, or a brief description sufficient to identify the case.</li><li><strong>Case theory</strong> — one sentence stating the factual and legal proposition the deposing party is trying to establish or defend.</li><li><strong>Witness profile</strong> — the witness's name, role in the matter, why this witness is being deposed, and posture: adverse, friendly, neutral, or organizational representative (an entity's designated representative).</li><li><strong>Deposition rules of the forum</strong> — the procedural rules governing the deposition (duration limits, objection conventions, scope limitations). Treat any statement of forum rules as <code>[verify jurisdiction]</code> until confirmed by the responsible attorney.</li><li><strong>Documentary record</strong> — documents to be used in the deposition, provided in full or described with Bates range or a clear identifying description. At minimum, a list of the key documents must be provided.</li><li><strong>Prior testimony</strong> — prior deposition transcripts, sworn statements, or hearing testimony, if any (pasted or described). If none exists, state that explicitly.</li></ul>
+<p>If the matter identification, case theory, witness profile, or at least a summary of the documentary record is not provided, stop and request the missing information. Do not begin the outline. Do not fabricate any of these inputs.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user intends to take or defend the live deposition without attorney involvement — the skill produces a draft; attorney judgment governs execution.</li><li>The user needs to draft a witness statement in the witness's own voice. Some jurisdictions restrict how a trial witness statement may be prepared and prohibit drafting it in the witness's own voice — confirm the applicable rule <code>[verify jurisdiction]</code>; this skill never drafts a witness statement in the witness's voice.</li><li>A litigation chronology has not yet been built and the factual record is unsettled — use <code>litigation-chronology</code> first, then return to this skill.</li><li>The matter is in the pleading or pre-litigation stage and no deposition is imminent — use matter-intake or a case-assessment skill instead.</li><li>The user needs to evaluate or respond to deposition notices, subpoenas, or protective orders — those are separate workflow skills.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>The deposition outline must not be used as a final litigation strategy document or as a substitute for attorney preparation. The attorney drives every phase of the deposition.</li><li><strong>Record fidelity.</strong> Every quotation from a document or prior testimony must be verbatim, exact, and pinpointed to the source (Bates number, transcript page and line, exhibit number). A paraphrase or summarized quotation must be flagged as <code>[VERIFY: paraphrase — confirm exact language and pinpoint citation]</code>. Never attribute language to a document or witness that has not been confirmed from the actual text.</li><li>Do not predict witness answers, invent testimony, or speculate about how the witness will respond. An outline anticipates topics, not answers.</li><li>Do not assert legal authority (statutes, rules, case law) without attorney direction. Flag any rule-based proposition as <code>[CONFIRM: attorney to verify rule and current authority in forum]</code>.</li><li>Do not compute, state, or imply any deadline. Use <code>[deadline verification required]</code> wherever a date or time limit is relevant.</li><li>Treat all deposition rules and procedural limits as <code>[verify jurisdiction]</code> until confirmed by the responsible attorney.</li><li>Flag every assumption — about posture, scope, document relevance, or legal standard — explicitly, rather than resolving it silently.</li><li>This skill never drafts a witness statement in the witness's own voice. If requested to do so, explain the prohibition and decline.</li><li>Preserve confidentiality and privilege. Keep client-sensitive facts and privileged communications out of any reusable copy of the template.</li><li>Separate facts (from documents and testimony), assumptions (flagged), legal propositions (flagged for attorney confirmation), and strategic judgments (labeled as attorney work product).</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that the matter identification, case theory, witness profile (including posture), deposition forum rules, and documentary record have been provided. If any required input is missing, stop and request it. Do not proceed with fabricated or assumed inputs.</li></ol>
+<ol><li><strong>Identify the witness and posture.</strong> Record the witness's name, role, and relationship to the key facts. Determine deposition posture:<ul><li><strong>Adverse</strong> — use closed, leading questions to control the record and lock in damaging admissions.</li><li><strong>Friendly or aligned</strong> — use open questions to elicit narrative and build the record.</li><li><strong>Neutral</strong> — use a mixed approach: open to establish context, closed to lock specifics.</li><li><strong>Organizational representative</strong> — confirm the scope of designation <code>[CONFIRM: attorney to verify scope of notice or designee]</code>; treat as adverse on disputed topics unless otherwise directed. Flag posture with <code>[CONFIRM: attorney to verify]</code> if it is uncertain or if the witness's alignment may shift.</li></ul></li></ol>
+<ol><li><strong>Check deposition rules of the forum.</strong> Identify stated limits on duration, scope, objection conventions, and any applicable restrictions on witness preparation. Treat all stated rules as <code>[verify jurisdiction]</code>. Flag any rule that may affect question strategy or timing, including limits on speaking objections, coaching, or breaks during testimony.</li></ol>
+<ol><li><strong>Flag the witness-statement restriction.</strong> Note explicitly: some jurisdictions restrict how a trial witness statement may be prepared, including prohibiting drafting it in the witness's own voice. Confirm the applicable rule <code>[verify jurisdiction]</code>. This skill does not draft a witness statement in the witness's voice.</li></ol>
+<ol><li><strong>Organize the documentary record.</strong> Review and organize every provided document chronologically. For each document, note: Bates number or identifier, date, author, recipient, a one-sentence description, and the deposition section where it is most relevant. Flag the documents most important to the case theory. Flag any document whose relevance or authenticity requires attorney confirmation with <code>[CONFIRM]</code>.</li></ol>
+<ol><li><strong>Review prior testimony.</strong> If prior testimony is provided, identify statements that are favorable (to lock in), unfavorable (to confront or impeach), or inconsistent (to use for impeachment). Record exact transcript citations (page and line). Flag every quotation: if verbatim, mark as confirmed; if paraphrased, mark <code>[VERIFY: confirm exact language at p. ___, l. ___]</code>.</li></ol>
+<ol><li><strong>Identify the pivot-fact sequence.</strong> Identify the two to four questions that are most directly case-turning — the sequence where, if the witness answers truthfully, the answer either builds or damages the opponent's position. This sequence is the structural spine of the outline. Draft it before building topic blocks.</li></ol>
+<ol><li><strong>Build topic blocks in the following arc:</strong><ul><li><strong>Background</strong> — establish undisputed biographical and role facts; lock uncontroversial facts the witness cannot credibly walk back.</li><li><strong>Lock in good facts</strong> — open or closed questions (depending on posture) to lock favorable facts already documented.</li><li><strong>Confront with bad facts</strong> — closed, controlled questions (adverse) or open questions (friendly) to build the record on facts that damage the opponent's position.</li><li><strong>Impeachment</strong> — prior inconsistent statements, document contradictions, or prior testimony. Each impeachment point must carry its pinpoint citation.</li><li><strong>Pivot-fact sequence</strong> — the case-turning question chain from step 7.</li></ul></li></ol>
+<ol><li><strong>Calibrate to 3–4 topic blocks.</strong> A focused outline beats an exhaustive one. Lead with the strongest confrontation or the most case-dispositive topic. Trim or defer topics that are secondary. Mark deferred topics as <code>[DEFERRED — attorney to decide whether to include]</code>.</li></ol>
+<ol><li><strong>Flag open items and attorney verification points.</strong> Compile all <code>[CONFIRM]</code>, <code>[VERIFY]</code>, <code>[verify jurisdiction]</code>, <code>[deadline verification required]</code>, and <code>[ATTORNEY TO CONFIRM]</code> items into the open-items section of the outline.</li></ol>
+<ol><li><strong>Assemble the draft outline</strong> using <code>templates/deposition-outline.md</code>. Label the output: "DRAFT — Attorney Work Product — For Attorney Review and Use Only."</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver a complete draft deposition outline using <code>templates/deposition-outline.md</code>. The outline includes:</p>
+<ul><li>A header block (matter, witness, posture, forum rules, deposition goal, connection to the case theory)</li><li>Background section (locking undisputed facts)</li><li>Three to four topic blocks (good facts / bad facts / impeachment) each with stated goal, documents used, and draft questions</li><li>Pivot-fact sequence (the case-turning question chain)</li><li>Exhibit list table</li><li>Notes for the attorney (demeanor considerations, weak points, suggested areas to expand)</li><li>Open items for attorney verification</li></ul>
+<p>Use <code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[verify jurisdiction]</code>, and <code>[deadline verification required]</code> wherever information is unconfirmed or requires attorney judgment. Label the assembled draft as attorney work product for attorney review.</p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] Case theory is accurately captured and confirmed by the responsible attorney.</li><li>[ ] Witness posture (adverse / friendly / neutral / organizational representative) is correct.</li><li>[ ] Deposition forum rules confirmed, including duration limits, scope limitations, and objection conventions <code>[verify jurisdiction]</code>.</li><li>[ ] Witness-statement restriction confirmed for the applicable jurisdiction <code>[verify jurisdiction]</code>.</li><li>[ ] Every document quotation is verbatim and pinpointed to the source; paraphrases have been verified.</li><li>[ ] Every quotation from prior testimony is verbatim with page and line citation confirmed.</li><li>[ ] No legal authority has been asserted without attorney verification.</li><li>[ ] No deadlines have been stated or computed; all date-sensitive items carry <code>[deadline verification required]</code>.</li><li>[ ] Deposition goal and topic block structure are strategically sound and approved by the responsible attorney.</li><li>[ ] Pivot-fact sequence reviewed and approved by the responsible attorney.</li><li>[ ] Exhibit list is complete, accurate, and cross-referenced to the correct topic sections.</li><li>[ ] All assumptions, deferred topics, and flagged items have been resolved before the outline is used.</li><li>[ ] Output is labeled attorney work product and held in the appropriate client file.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Deposition Preparation
+description: Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition.
+---
+
+# Deposition Preparation
+
+## Purpose
+
+Produce a structured deposition outline for attorney review and use. The outline is a strategic map — not a script — that organizes topic blocks, document anchors, and a pivot-fact sequence around the case theory. It is draft legal work product for attorney review; it is not legal advice. The attorney drives the deposition. The skill never drafts a witness statement in the witness's own voice.
+
+## Use When
+
+- Counsel needs to prepare for an upcoming deposition and wants a structured question outline organized around topic blocks.
+- A user asks to "prep for a deposition," "draft a depo outline," or "organize the documents for the [witness] deposition."
+- The case theory and witness role are clear enough to define a deposition goal.
+- Preparing for an adverse, neutral, friendly, or organizational-representative witness.
+
+## Required Inputs
+
+- **Matter identification** — matter name, matter number, or a brief description sufficient to identify the case.
+- **Case theory** — one sentence stating the factual and legal proposition the deposing party is trying to establish or defend.
+- **Witness profile** — the witness's name, role in the matter, why this witness is being deposed, and posture: adverse, friendly, neutral, or organizational representative (an entity's designated representative).
+- **Deposition rules of the forum** — the procedural rules governing the deposition (duration limits, objection conventions, scope limitations). Treat any statement of forum rules as `[verify jurisdiction]` until confirmed by the responsible attorney.
+- **Documentary record** — documents to be used in the deposition, provided in full or described with Bates range or a clear identifying description. At minimum, a list of the key documents must be provided.
+- **Prior testimony** — prior deposition transcripts, sworn statements, or hearing testimony, if any (pasted or described). If none exists, state that explicitly.
+
+If the matter identification, case theory, witness profile, or at least a summary of the documentary record is not provided, stop and request the missing information. Do not begin the outline. Do not fabricate any of these inputs.
+
+## Do Not Use When
+
+- The user intends to take or defend the live deposition without attorney involvement — the skill produces a draft; attorney judgment governs execution.
+- The user needs to draft a witness statement in the witness's own voice. Some jurisdictions restrict how a trial witness statement may be prepared and prohibit drafting it in the witness's own voice — confirm the applicable rule `[verify jurisdiction]`; this skill never drafts a witness statement in the witness's voice.
+- A litigation chronology has not yet been built and the factual record is unsettled — use `litigation-chronology` first, then return to this skill.
+- The matter is in the pleading or pre-litigation stage and no deposition is imminent — use matter-intake or a case-assessment skill instead.
+- The user needs to evaluate or respond to deposition notices, subpoenas, or protective orders — those are separate workflow skills.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- The deposition outline must not be used as a final litigation strategy document or as a substitute for attorney preparation. The attorney drives every phase of the deposition.
+- **Record fidelity.** Every quotation from a document or prior testimony must be verbatim, exact, and pinpointed to the source (Bates number, transcript page and line, exhibit number). A paraphrase or summarized quotation must be flagged as `[VERIFY: paraphrase — confirm exact language and pinpoint citation]`. Never attribute language to a document or witness that has not been confirmed from the actual text.
+- Do not predict witness answers, invent testimony, or speculate about how the witness will respond. An outline anticipates topics, not answers.
+- Do not assert legal authority (statutes, rules, case law) without attorney direction. Flag any rule-based proposition as `[CONFIRM: attorney to verify rule and current authority in forum]`.
+- Do not compute, state, or imply any deadline. Use `[deadline verification required]` wherever a date or time limit is relevant.
+- Treat all deposition rules and procedural limits as `[verify jurisdiction]` until confirmed by the responsible attorney.
+- Flag every assumption — about posture, scope, document relevance, or legal standard — explicitly, rather than resolving it silently.
+- This skill never drafts a witness statement in the witness's own voice. If requested to do so, explain the prohibition and decline.
+- Preserve confidentiality and privilege. Keep client-sensitive facts and privileged communications out of any reusable copy of the template.
+- Separate facts (from documents and testimony), assumptions (flagged), legal propositions (flagged for attorney confirmation), and strategic judgments (labeled as attorney work product).
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the matter identification, case theory, witness profile (including posture), deposition forum rules, and documentary record have been provided. If any required input is missing, stop and request it. Do not proceed with fabricated or assumed inputs.
+
+2. **Identify the witness and posture.** Record the witness's name, role, and relationship to the key facts. Determine deposition posture:
+   - **Adverse** — use closed, leading questions to control the record and lock in damaging admissions.
+   - **Friendly or aligned** — use open questions to elicit narrative and build the record.
+   - **Neutral** — use a mixed approach: open to establish context, closed to lock specifics.
+   - **Organizational representative** — confirm the scope of designation `[CONFIRM: attorney to verify scope of notice or designee]`; treat as adverse on disputed topics unless otherwise directed.
+   Flag posture with `[CONFIRM: attorney to verify]` if it is uncertain or if the witness's alignment may shift.
+
+3. **Check deposition rules of the forum.** Identify stated limits on duration, scope, objection conventions, and any applicable restrictions on witness preparation. Treat all stated rules as `[verify jurisdiction]`. Flag any rule that may affect question strategy or timing, including limits on speaking objections, coaching, or breaks during testimony.
+
+4. **Flag the witness-statement restriction.** Note explicitly: some jurisdictions restrict how a trial witness statement may be prepared, including prohibiting drafting it in the witness's own voice. Confirm the applicable rule `[verify jurisdiction]`. This skill does not draft a witness statement in the witness's voice.
+
+5. **Organize the documentary record.** Review and organize every provided document chronologically. For each document, note: Bates number or identifier, date, author, recipient, a one-sentence description, and the deposition section where it is most relevant. Flag the documents most important to the case theory. Flag any document whose relevance or authenticity requires attorney confirmation with `[CONFIRM]`.
+
+6. **Review prior testimony.** If prior testimony is provided, identify statements that are favorable (to lock in), unfavorable (to confront or impeach), or inconsistent (to use for impeachment). Record exact transcript citations (page and line). Flag every quotation: if verbatim, mark as confirmed; if paraphrased, mark `[VERIFY: confirm exact language at p. ___, l. ___]`.
+
+7. **Identify the pivot-fact sequence.** Identify the two to four questions that are most directly case-turning — the sequence where, if the witness answers truthfully, the answer either builds or damages the opponent's position. This sequence is the structural spine of the outline. Draft it before building topic blocks.
+
+8. **Build topic blocks in the following arc:**
+   - **Background** — establish undisputed biographical and role facts; lock uncontroversial facts the witness cannot credibly walk back.
+   - **Lock in good facts** — open or closed questions (depending on posture) to lock favorable facts already documented.
+   - **Confront with bad facts** — closed, controlled questions (adverse) or open questions (friendly) to build the record on facts that damage the opponent's position.
+   - **Impeachment** — prior inconsistent statements, document contradictions, or prior testimony. Each impeachment point must carry its pinpoint citation.
+   - **Pivot-fact sequence** — the case-turning question chain from step 7.
+
+9. **Calibrate to 3–4 topic blocks.** A focused outline beats an exhaustive one. Lead with the strongest confrontation or the most case-dispositive topic. Trim or defer topics that are secondary. Mark deferred topics as `[DEFERRED — attorney to decide whether to include]`.
+
+10. **Flag open items and attorney verification points.** Compile all `[CONFIRM]`, `[VERIFY]`, `[verify jurisdiction]`, `[deadline verification required]`, and `[ATTORNEY TO CONFIRM]` items into the open-items section of the outline.
+
+11. **Assemble the draft outline** using `templates/deposition-outline.md`. Label the output: "DRAFT — Attorney Work Product — For Attorney Review and Use Only."
+
+## Output Format
+
+Deliver a complete draft deposition outline using `templates/deposition-outline.md`. The outline includes:
+- A header block (matter, witness, posture, forum rules, deposition goal, connection to the case theory)
+- Background section (locking undisputed facts)
+- Three to four topic blocks (good facts / bad facts / impeachment) each with stated goal, documents used, and draft questions
+- Pivot-fact sequence (the case-turning question chain)
+- Exhibit list table
+- Notes for the attorney (demeanor considerations, weak points, suggested areas to expand)
+- Open items for attorney verification
+
+Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` wherever information is unconfirmed or requires attorney judgment. Label the assembled draft as attorney work product for attorney review.
+
+## Attorney Verification Checklist
+
+- [ ] Case theory is accurately captured and confirmed by the responsible attorney.
+- [ ] Witness posture (adverse / friendly / neutral / organizational representative) is correct.
+- [ ] Deposition forum rules confirmed, including duration limits, scope limitations, and objection conventions `[verify jurisdiction]`.
+- [ ] Witness-statement restriction confirmed for the applicable jurisdiction `[verify jurisdiction]`.
+- [ ] Every document quotation is verbatim and pinpointed to the source; paraphrases have been verified.
+- [ ] Every quotation from prior testimony is verbatim with page and line citation confirmed.
+- [ ] No legal authority has been asserted without attorney verification.
+- [ ] No deadlines have been stated or computed; all date-sensitive items carry `[deadline verification required]`.
+- [ ] Deposition goal and topic block structure are strategically sound and approved by the responsible attorney.
+- [ ] Pivot-fact sequence reviewed and approved by the responsible attorney.
+- [ ] Exhibit list is complete, accurate, and cross-referenced to the correct topic sections.
+- [ ] All assumptions, deferred topics, and flagged items have been resolved before the outline is used.
+- [ ] Output is labeled attorney work product and held in the appropriate client file.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Deposition Preparation ===
+---
+name: Deposition Preparation
+description: Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition.
+---
+
+# Deposition Preparation
+
+## Purpose
+
+Produce a structured deposition outline for attorney review and use. The outline is a strategic map — not a script — that organizes topic blocks, document anchors, and a pivot-fact sequence around the case theory. It is draft legal work product for attorney review; it is not legal advice. The attorney drives the deposition. The skill never drafts a witness statement in the witness's own voice.
+
+## Use When
+
+- Counsel needs to prepare for an upcoming deposition and wants a structured question outline organized around topic blocks.
+- A user asks to "prep for a deposition," "draft a depo outline," or "organize the documents for the [witness] deposition."
+- The case theory and witness role are clear enough to define a deposition goal.
+- Preparing for an adverse, neutral, friendly, or organizational-representative witness.
+
+## Required Inputs
+
+- **Matter identification** — matter name, matter number, or a brief description sufficient to identify the case.
+- **Case theory** — one sentence stating the factual and legal proposition the deposing party is trying to establish or defend.
+- **Witness profile** — the witness's name, role in the matter, why this witness is being deposed, and posture: adverse, friendly, neutral, or organizational representative (an entity's designated representative).
+- **Deposition rules of the forum** — the procedural rules governing the deposition (duration limits, objection conventions, scope limitations). Treat any statement of forum rules as `[verify jurisdiction]` until confirmed by the responsible attorney.
+- **Documentary record** — documents to be used in the deposition, provided in full or described with Bates range or a clear identifying description. At minimum, a list of the key documents must be provided.
+- **Prior testimony** — prior deposition transcripts, sworn statements, or hearing testimony, if any (pasted or described). If none exists, state that explicitly.
+
+If the matter identification, case theory, witness profile, or at least a summary of the documentary record is not provided, stop and request the missing information. Do not begin the outline. Do not fabricate any of these inputs.
+
+## Do Not Use When
+
+- The user intends to take or defend the live deposition without attorney involvement — the skill produces a draft; attorney judgment governs execution.
+- The user needs to draft a witness statement in the witness's own voice. Some jurisdictions restrict how a trial witness statement may be prepared and prohibit drafting it in the witness's own voice — confirm the applicable rule `[verify jurisdiction]`; this skill never drafts a witness statement in the witness's voice.
+- A litigation chronology has not yet been built and the factual record is unsettled — use `litigation-chronology` first, then return to this skill.
+- The matter is in the pleading or pre-litigation stage and no deposition is imminent — use matter-intake or a case-assessment skill instead.
+- The user needs to evaluate or respond to deposition notices, subpoenas, or protective orders — those are separate workflow skills.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- The deposition outline must not be used as a final litigation strategy document or as a substitute for attorney preparation. The attorney drives every phase of the deposition.
+- **Record fidelity.** Every quotation from a document or prior testimony must be verbatim, exact, and pinpointed to the source (Bates number, transcript page and line, exhibit number). A paraphrase or summarized quotation must be flagged as `[VERIFY: paraphrase — confirm exact language and pinpoint citation]`. Never attribute language to a document or witness that has not been confirmed from the actual text.
+- Do not predict witness answers, invent testimony, or speculate about how the witness will respond. An outline anticipates topics, not answers.
+- Do not assert legal authority (statutes, rules, case law) without attorney direction. Flag any rule-based proposition as `[CONFIRM: attorney to verify rule and current authority in forum]`.
+- Do not compute, state, or imply any deadline. Use `[deadline verification required]` wherever a date or time limit is relevant.
+- Treat all deposition rules and procedural limits as `[verify jurisdiction]` until confirmed by the responsible attorney.
+- Flag every assumption — about posture, scope, document relevance, or legal standard — explicitly, rather than resolving it silently.
+- This skill never drafts a witness statement in the witness's own voice. If requested to do so, explain the prohibition and decline.
+- Preserve confidentiality and privilege. Keep client-sensitive facts and privileged communications out of any reusable copy of the template.
+- Separate facts (from documents and testimony), assumptions (flagged), legal propositions (flagged for attorney confirmation), and strategic judgments (labeled as attorney work product).
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the matter identification, case theory, witness profile (including posture), deposition forum rules, and documentary record have been provided. If any required input is missing, stop and request it. Do not proceed with fabricated or assumed inputs.
+
+2. **Identify the witness and posture.** Record the witness's name, role, and relationship to the key facts. Determine deposition posture:
+   - **Adverse** — use closed, leading questions to control the record and lock in damaging admissions.
+   - **Friendly or aligned** — use open questions to elicit narrative and build the record.
+   - **Neutral** — use a mixed approach: open to establish context, closed to lock specifics.
+   - **Organizational representative** — confirm the scope of designation `[CONFIRM: attorney to verify scope of notice or designee]`; treat as adverse on disputed topics unless otherwise directed.
+   Flag posture with `[CONFIRM: attorney to verify]` if it is uncertain or if the witness's alignment may shift.
+
+3. **Check deposition rules of the forum.** Identify stated limits on duration, scope, objection conventions, and any applicable restrictions on witness preparation. Treat all stated rules as `[verify jurisdiction]`. Flag any rule that may affect question strategy or timing, including limits on speaking objections, coaching, or breaks during testimony.
+
+4. **Flag the witness-statement restriction.** Note explicitly: some jurisdictions restrict how a trial witness statement may be prepared, including prohibiting drafting it in the witness's own voice. Confirm the applicable rule `[verify jurisdiction]`. This skill does not draft a witness statement in the witness's voice.
+
+5. **Organize the documentary record.** Review and organize every provided document chronologically. For each document, note: Bates number or identifier, date, author, recipient, a one-sentence description, and the deposition section where it is most relevant. Flag the documents most important to the case theory. Flag any document whose relevance or authenticity requires attorney confirmation with `[CONFIRM]`.
+
+6. **Review prior testimony.** If prior testimony is provided, identify statements that are favorable (to lock in), unfavorable (to confront or impeach), or inconsistent (to use for impeachment). Record exact transcript citations (page and line). Flag every quotation: if verbatim, mark as confirmed; if paraphrased, mark `[VERIFY: confirm exact language at p. ___, l. ___]`.
+
+7. **Identify the pivot-fact sequence.** Identify the two to four questions that are most directly case-turning — the sequence where, if the witness answers truthfully, the answer either builds or damages the opponent's position. This sequence is the structural spine of the outline. Draft it before building topic blocks.
+
+8. **Build topic blocks in the following arc:**
+   - **Background** — establish undisputed biographical and role facts; lock uncontroversial facts the witness cannot credibly walk back.
+   - **Lock in good facts** — open or closed questions (depending on posture) to lock favorable facts already documented.
+   - **Confront with bad facts** — closed, controlled questions (adverse) or open questions (friendly) to build the record on facts that damage the opponent's position.
+   - **Impeachment** — prior inconsistent statements, document contradictions, or prior testimony. Each impeachment point must carry its pinpoint citation.
+   - **Pivot-fact sequence** — the case-turning question chain from step 7.
+
+9. **Calibrate to 3–4 topic blocks.** A focused outline beats an exhaustive one. Lead with the strongest confrontation or the most case-dispositive topic. Trim or defer topics that are secondary. Mark deferred topics as `[DEFERRED — attorney to decide whether to include]`.
+
+10. **Flag open items and attorney verification points.** Compile all `[CONFIRM]`, `[VERIFY]`, `[verify jurisdiction]`, `[deadline verification required]`, and `[ATTORNEY TO CONFIRM]` items into the open-items section of the outline.
+
+11. **Assemble the draft outline** using `templates/deposition-outline.md`. Label the output: "DRAFT — Attorney Work Product — For Attorney Review and Use Only."
+
+## Output Format
+
+Deliver a complete draft deposition outline using `templates/deposition-outline.md`. The outline includes:
+- A header block (matter, witness, posture, forum rules, deposition goal, connection to the case theory)
+- Background section (locking undisputed facts)
+- Three to four topic blocks (good facts / bad facts / impeachment) each with stated goal, documents used, and draft questions
+- Pivot-fact sequence (the case-turning question chain)
+- Exhibit list table
+- Notes for the attorney (demeanor considerations, weak points, suggested areas to expand)
+- Open items for attorney verification
+
+Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` wherever information is unconfirmed or requires attorney judgment. Label the assembled draft as attorney work product for attorney review.
+
+## Attorney Verification Checklist
+
+- [ ] Case theory is accurately captured and confirmed by the responsible attorney.
+- [ ] Witness posture (adverse / friendly / neutral / organizational representative) is correct.
+- [ ] Deposition forum rules confirmed, including duration limits, scope limitations, and objection conventions `[verify jurisdiction]`.
+- [ ] Witness-statement restriction confirmed for the applicable jurisdiction `[verify jurisdiction]`.
+- [ ] Every document quotation is verbatim and pinpointed to the source; paraphrases have been verified.
+- [ ] Every quotation from prior testimony is verbatim with page and line citation confirmed.
+- [ ] No legal authority has been asserted without attorney verification.
+- [ ] No deadlines have been stated or computed; all date-sensitive items carry `[deadline verification required]`.
+- [ ] Deposition goal and topic block structure are strategically sound and approved by the responsible attorney.
+- [ ] Pivot-fact sequence reviewed and approved by the responsible attorney.
+- [ ] Exhibit list is complete, accurate, and cross-referenced to the correct topic sections.
+- [ ] All assumptions, deferred topics, and flagged items have been resolved before the outline is used.
+- [ ] Output is labeled attorney work product and held in the appropriate client file.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

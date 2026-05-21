@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protected Leave Review — AgentCounsel</title>
+<meta name="description" content="Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/employment.html">Employment</a> / <span>Protected Leave Review</span></nav>
+<h1>Protected Leave Review</h1>
+<p class="path">Canonical path: <code>skills/employment/protected-leave-review/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured, attorney-ready review of an employee's protected-leave situation. The skill organizes the known facts, identifies which leave frameworks may be implicated, surfaces the procedural obligations and entitlement questions that must be researched and confirmed through verified legal authority, identifies how multiple frameworks interact, and — critically — flags adverse-action exposure where a termination, demotion, denial of reinstatement, or discipline is contemplated.</p>
+<p>This skill provides decision support and workflow discipline. It does not compute entitlements, calculate deadlines, state rules from background knowledge, or conclude whether any action is lawful. Every entitlement, threshold, and deadline is flagged for verified research. This is draft legal work product for attorney review — not legal advice.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>An employer, HR professional, or attorney needs to organize the facts of an employee's leave and identify which protected-leave frameworks may apply.</li><li>A leave situation involves multiple frameworks that may run concurrently or interact (for example, medical leave and disability-accommodation leave arising from the same condition).</li><li>A question arises about what procedural obligations — notices, certifications, designation steps — have been met or remain outstanding.</li><li>An adverse action (termination, demotion, denial of reinstatement, or discipline) affecting an employee who is on, has recently taken, or has requested protected leave is being contemplated, and the employer needs to understand the exposure before proceeding.</li><li>A user asks: "Can we terminate this employee who is on leave?", "What do we owe someone returning from military leave?", "What happens if their leave runs out and they can't come back?", or similar questions about an employee's leave situation.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>The leave situation</strong>: the type or types of leave at issue (e.g., medical, family, military or service-member, disability-related, or a combination). If unclear, describe the underlying reason for the absence.</li><li><strong>The employee's work schedule and arrangement</strong>: full-time, part-time, or variable hours; whether leave is continuous or intermittent; and, if intermittent, how it has been taken or is anticipated to be taken.</li><li><strong>Key dates</strong>: the leave start date; the expected or actual return date; any dates on which notices, certifications, or designation decisions were or were not communicated. Flag all dates as <code>[deadline verification required]</code> — do not use them to compute deadlines.</li><li><strong>Procedural status</strong>: whether an eligibility notice has been issued; whether a designation notice has been issued; whether medical or other certification has been requested, received, or found insufficient; whether a cure opportunity has been provided.</li><li><strong>Jurisdiction(s)</strong>: the jurisdiction(s) in which the employee works. If unknown or in dispute, flag as <code>[CONFIRM: governing jurisdiction]</code>.</li><li><strong>Adverse action contemplated</strong>: whether any termination, demotion, denial of reinstatement, or disciplinary action is under consideration. If yes, describe it and its proposed timing.</li></ul>
+<p>If any required input is missing, stop and request it before proceeding. Do not infer jurisdiction from employer headquarters, fabricate leave dates, or assume procedural steps have been completed unless confirmed.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user wants leave entitlements, leave balances, or deadlines computed — this skill identifies what must be researched and confirmed; it does not calculate, and AgentCounsel never computes entitlements or deadlines.</li><li>The user wants to draft a designation notice, eligibility notice, or certification request — those are separate drafting tasks.</li><li>The user wants a general assessment of the legal risk of a proposed termination without a leave dimension — use <code>termination-risk</code>. Where both apply, use <code>termination-risk</code> alongside this skill to address the leave-specific exposure.</li><li>The question is a wage-and-hour question (overtime, exemption, pay rate) — use <code>wage-hour-qa</code>.</li><li>The leave at issue has no protected dimension — ordinary employer-granted paid time off, bereavement leave, or jury duty where no protected framework is implicated is outside the scope of this skill.</li><li>The question involves active litigation strategy or responding to a filed administrative charge — that work requires attorney direction from the outset.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review only. This is not legal advice.</li><li>Do not assert any entitlement amount, eligibility threshold, notice period, certification deadline, or measurement period from background knowledge. Every such rule must be confirmed through verified, current legal authority for the governing jurisdiction. Flag each with <code>[verify jurisdiction]</code> or <code>[deadline verification required]</code>.</li><li>Do not invent facts, procedural history, leave balances, or medical information not provided. Separate facts provided from assumptions and from items requiring attorney confirmation.</li><li>Treat leave exhaustion as a prompt to escalate, not as clearance to act. Do not treat the end of a protected-leave period as automatic permission to terminate or deny reinstatement. Where disability-accommodation frameworks may apply, an interactive process and undue-hardship analysis are required before acting; flag this explicitly.</li><li>Where any adverse action affecting an employee on or returning from protected leave is contemplated, flag interference and retaliation exposure prominently before any other analysis. Escalation to the responsible attorney is required before proceeding with such an action.</li><li>Identify all jurisdictions that may apply and flag multi-jurisdiction complexity for attorney resolution.</li><li>Use <code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[citation needed]</code>, <code>[verify jurisdiction]</code>, and <code>[deadline verification required]</code> throughout wherever any fact, legal rule, threshold, or procedural step is unverified.</li><li>Preserve confidentiality and privilege. Do not include identifying employee information in reusable template outputs.</li><li>Do not start the adverse-action analysis only after leave has been exhausted. Flag it at the outset if any adverse action is contemplated, and explicitly require attorney review before any such action is taken.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that the required inputs — leave type(s), work schedule and leave pattern, key dates, procedural status, jurisdiction(s), and whether any adverse action is contemplated — are all available. If any are missing, stop and request them before proceeding. Do not fabricate or infer missing information.</li></ol>
+<ol><li><strong>Identify potentially applicable leave frameworks.</strong> Based on the facts provided, identify which leave frameworks may be implicated. Consider at minimum: medical or family leave; military or service-member leave; disability-accommodation leave. Note that a single absence or condition may trigger more than one framework simultaneously. For each potentially applicable framework, mark it <code>[verify jurisdiction]</code> — do not assert whether it applies or what it requires. Flag any framework whose applicability is unclear as an open question for attorney review.</li></ol>
+<ol><li><strong>Surface procedural obligations for each framework.</strong> For each potentially applicable framework, identify the categories of procedural obligation that must be researched and confirmed through verified authority. These include, without limitation:<ul><li>Eligibility requirements and the method of their assessment <code>[verify jurisdiction]</code></li><li>The eligibility-notice obligation: when it must be issued and what it must contain <code>[deadline verification required]</code> <code>[verify jurisdiction]</code></li><li>The designation-notice obligation: when the employer must designate leave and what the notice must contain <code>[deadline verification required]</code> <code>[verify jurisdiction]</code></li><li>Certification: whether and what type of certification may be required; the timeframe for the employee to provide it; whether a cure or clarification opportunity must be offered before denial <code>[deadline verification required]</code> <code>[verify jurisdiction]</code></li><li>The entitlement amount and its measurement period <code>[verify jurisdiction]</code> — do not state a number of weeks, days, or hours from background knowledge</li><li>Rules governing intermittent or reduced-schedule leave, if applicable <code>[verify jurisdiction]</code></li><li>Reinstatement obligations: whether the employee is entitled to the same or equivalent position on return, and any exceptions <code>[verify jurisdiction]</code></li><li>Any applicable employer-size or coverage thresholds <code>[verify jurisdiction]</code></li></ul></li></ol>
+<p>Do not state any rule, deadline, or threshold from memory. Record only what must be confirmed, not what you believe the rule to be.</p>
+<ol><li><strong>Assess procedural status against the framework obligations.</strong> Using the procedural status provided, note which obligations appear to have been met, which appear to be outstanding, and which are unclear or unconfirmed. For each outstanding or unclear obligation, flag it with <code>[CONFIRM: ...]</code> and identify it as a verification item. Flag any procedural gap that could independently create exposure — for example, failure to provide a timely eligibility notice or failure to request certification properly.</li></ol>
+<ol><li><strong>Identify framework interactions.</strong> Where more than one framework may apply, assess how they interact:<ul><li>Do any frameworks run concurrently by default? <code>[verify jurisdiction]</code></li><li>Are any frameworks consecutive, and if so, what governs the sequence and total leave duration? <code>[verify jurisdiction]</code></li><li>Does the employer have an obligation to designate leave under one framework even if the employee did not invoke it by name? <code>[verify jurisdiction]</code></li><li>Where multiple frameworks apply, which employer-obligation set governs when they conflict? <code>[verify jurisdiction]</code> Flag all interaction questions for attorney analysis. Do not resolve framework-interaction questions from background knowledge.</li></ul></li></ol>
+<ol><li><strong>Adverse-action gate — flag prominently if any adverse action is contemplated.</strong> If the inputs identify that any termination, demotion, denial of reinstatement, or disciplinary action affecting the employee is under consideration, surface this analysis before moving to the output assembly. Address each of the following:</li></ol>
+<ul><li><strong>Interference exposure.</strong> Any adverse action taken against an employee because of the exercise or attempted exercise of a protected-leave right may constitute interference with that right. <code>[verify jurisdiction]</code> Flag the specific action, its proposed timing relative to the leave, and the potential interference theory for attorney analysis.</li><li><strong>Retaliation exposure.</strong> Adverse action that is causally connected to an employee's request for or use of protected leave, or to a complaint about leave rights, may constitute retaliation. Flag timing proximity — including whether the action is proposed while the employee is on leave, immediately on return, or shortly after a leave request. <code>[verify jurisdiction]</code></li><li><strong>Leave exhaustion is not clearance.</strong> Do not treat the expiration of a protected-leave period as automatic permission to terminate or otherwise act adversely. Where a disability-accommodation framework may apply — including where the underlying condition is a disability — flag that additional leave as a reasonable accommodation may be required before any adverse action, and that an interactive process must occur. <code>[ATTORNEY TO CONFIRM: whether interactive process has been conducted and documented]</code></li><li><strong>Undue-hardship analysis.</strong> Where denial of additional leave as an accommodation is contemplated, flag that an undue-hardship analysis is required. <code>[ATTORNEY TO CONFIRM: whether a documented undue-hardship analysis has been completed]</code></li><li><strong>Reinstatement rights.</strong> Flag whether the employee has reinstatement rights under any applicable framework and whether those rights have been extinguished under any exception. <code>[verify jurisdiction]</code></li><li><strong>Escalation requirement.</strong> Any adverse action affecting an employee on or returning from protected leave must be reviewed and approved by the responsible attorney before it is taken. Flag this as a hard stop.</li></ul>
+<p>If no adverse action is contemplated, note that and state that this analysis should be revisited if the situation changes.</p>
+<ol><li><strong>Compile open items and assumptions.</strong> List all facts that were assumed in the absence of confirmed information. List all legal questions that require verified research before the analysis can be relied upon. Distinguish factual open items from legal open items.</li></ol>
+<ol><li><strong>Assemble the output.</strong> Produce the full protected-leave review in the format below. Label the complete output as draft legal work product for attorney review.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following sections, clearly labeled:</p>
+<ol><li><strong>Situation Summary</strong> — anonymized summary of the key facts: leave type(s), work schedule, leave pattern (continuous or intermittent), key dates (flagged <code>[deadline verification required]</code>), jurisdiction (flagged <code>[verify jurisdiction]</code> if unconfirmed), and procedural status as described by the user.</li></ol>
+<ol><li><strong>Frameworks Potentially Implicated</strong> — for each framework: name it generically (e.g., "medical or family leave," "military or service-member leave," "disability-accommodation leave"); note the facts that suggest it may apply; mark it <code>[verify jurisdiction]</code>; and identify any threshold or coverage question that must be confirmed before applicability can be assessed.</li></ol>
+<ol><li><strong>Procedural Obligations to Confirm</strong> — organized by framework. For each obligation category (eligibility assessment, notice, designation, certification, entitlement amount and measurement period, intermittent-leave rules, reinstatement), state what must be researched and confirmed. Do not state the rule — state what must be verified. Flag each item <code>[deadline verification required]</code> or <code>[verify jurisdiction]</code> as applicable.</li></ol>
+<ol><li><strong>Framework Interactions</strong> — summary of how the potentially applicable frameworks may interact: concurrency or consecutiveness, total duration questions, designation obligations, and any conflict-of-obligations question. Flag all for attorney analysis.</li></ol>
+<ol><li><strong>Adverse-Action Exposure</strong> — present only if any adverse action is contemplated. Set out: the proposed action and its timing; interference exposure; retaliation exposure; whether leave exhaustion has occurred and why it is not clearance; the interactive-process and undue-hardship questions; reinstatement rights and their status; and the hard-stop escalation requirement. Label this section prominently.</li></ol>
+<ol><li><strong>Open Items for Attorney Verification</strong> — numbered list of all unresolved factual and legal questions that must be confirmed before the analysis can be relied upon.</li></ol>
+<ol><li><strong>Assumptions</strong> — explicit list of facts assumed in the absence of confirmed information.</li></ol>
+<p>Use <code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, <code>[verify jurisdiction]</code>, and <code>[deadline verification required]</code> throughout. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*</p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] All leave frameworks potentially applicable to this situation have been identified under the governing jurisdiction's law, including any state, local, or contractual leave rights that supplement federal or national frameworks.</li><li>[ ] Eligibility for each potentially applicable framework has been confirmed through verified, current legal authority — not background knowledge.</li><li>[ ] All entitlement amounts, measurement periods, and eligibility thresholds have been confirmed through verified authority. No number from this review has been treated as an established rule without confirmation.</li><li>[ ] The employer's eligibility-notice obligations, and whether they were timely met, have been confirmed for each applicable framework.</li><li>[ ] The employer's designation-notice obligations, and whether they were timely met, have been confirmed for each applicable framework.</li><li>[ ] Certification requirements — including what may be requested, the employee's timeframe to respond, and any required cure or clarification opportunity — have been confirmed for each applicable framework.</li><li>[ ] Intermittent-leave rules, if applicable, have been confirmed, including how unscheduled absences must be handled and what documentation the employer may require.</li><li>[ ] Reinstatement rights — including any same-position or equivalent-position entitlement and any applicable exceptions — have been confirmed for each framework.</li><li>[ ] All framework-interaction questions (concurrent vs. consecutive leave, total duration, designation obligations) have been resolved under the governing jurisdiction's law.</li><li>[ ] If any adverse action is contemplated: the interference and retaliation exposure analysis has been completed by the responsible attorney, not left to this draft.</li><li>[ ] If any adverse action is contemplated and a disability-accommodation framework may apply: a documented interactive process has been conducted and an undue-hardship analysis has been completed and documented before the action is taken.</li><li>[ ] Leave exhaustion has not been treated as automatic clearance to take any adverse action without the foregoing attorney review.</li><li>[ ] Jurisdiction has been confirmed, including whether multi-state or local leave laws apply in addition to any federal or national framework.</li><li>[ ] No legal conclusion in this document has been relied upon without attorney review and confirmation of the applicable authority.</li><li>[ ] All facts recorded as confirmed have been verified; all assumptions and open items have been resolved or explicitly preserved as open before this work product is acted upon.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Protected Leave Review
+description: Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.
+---
+
+# Protected Leave Review
+
+## Purpose
+
+Produce a structured, attorney-ready review of an employee's protected-leave situation. The skill organizes the known facts, identifies which leave frameworks may be implicated, surfaces the procedural obligations and entitlement questions that must be researched and confirmed through verified legal authority, identifies how multiple frameworks interact, and — critically — flags adverse-action exposure where a termination, demotion, denial of reinstatement, or discipline is contemplated.
+
+This skill provides decision support and workflow discipline. It does not compute entitlements, calculate deadlines, state rules from background knowledge, or conclude whether any action is lawful. Every entitlement, threshold, and deadline is flagged for verified research. This is draft legal work product for attorney review — not legal advice.
+
+## Use When
+
+- An employer, HR professional, or attorney needs to organize the facts of an employee's leave and identify which protected-leave frameworks may apply.
+- A leave situation involves multiple frameworks that may run concurrently or interact (for example, medical leave and disability-accommodation leave arising from the same condition).
+- A question arises about what procedural obligations — notices, certifications, designation steps — have been met or remain outstanding.
+- An adverse action (termination, demotion, denial of reinstatement, or discipline) affecting an employee who is on, has recently taken, or has requested protected leave is being contemplated, and the employer needs to understand the exposure before proceeding.
+- A user asks: "Can we terminate this employee who is on leave?", "What do we owe someone returning from military leave?", "What happens if their leave runs out and they can't come back?", or similar questions about an employee's leave situation.
+
+## Required Inputs
+
+- **The leave situation**: the type or types of leave at issue (e.g., medical, family, military or service-member, disability-related, or a combination). If unclear, describe the underlying reason for the absence.
+- **The employee's work schedule and arrangement**: full-time, part-time, or variable hours; whether leave is continuous or intermittent; and, if intermittent, how it has been taken or is anticipated to be taken.
+- **Key dates**: the leave start date; the expected or actual return date; any dates on which notices, certifications, or designation decisions were or were not communicated. Flag all dates as `[deadline verification required]` — do not use them to compute deadlines.
+- **Procedural status**: whether an eligibility notice has been issued; whether a designation notice has been issued; whether medical or other certification has been requested, received, or found insufficient; whether a cure opportunity has been provided.
+- **Jurisdiction(s)**: the jurisdiction(s) in which the employee works. If unknown or in dispute, flag as `[CONFIRM: governing jurisdiction]`.
+- **Adverse action contemplated**: whether any termination, demotion, denial of reinstatement, or disciplinary action is under consideration. If yes, describe it and its proposed timing.
+
+If any required input is missing, stop and request it before proceeding. Do not infer jurisdiction from employer headquarters, fabricate leave dates, or assume procedural steps have been completed unless confirmed.
+
+## Do Not Use When
+
+- The user wants leave entitlements, leave balances, or deadlines computed — this skill identifies what must be researched and confirmed; it does not calculate, and AgentCounsel never computes entitlements or deadlines.
+- The user wants to draft a designation notice, eligibility notice, or certification request — those are separate drafting tasks.
+- The user wants a general assessment of the legal risk of a proposed termination without a leave dimension — use `termination-risk`. Where both apply, use `termination-risk` alongside this skill to address the leave-specific exposure.
+- The question is a wage-and-hour question (overtime, exemption, pay rate) — use `wage-hour-qa`.
+- The leave at issue has no protected dimension — ordinary employer-granted paid time off, bereavement leave, or jury duty where no protected framework is implicated is outside the scope of this skill.
+- The question involves active litigation strategy or responding to a filed administrative charge — that work requires attorney direction from the outset.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review only. This is not legal advice.
+- Do not assert any entitlement amount, eligibility threshold, notice period, certification deadline, or measurement period from background knowledge. Every such rule must be confirmed through verified, current legal authority for the governing jurisdiction. Flag each with `[verify jurisdiction]` or `[deadline verification required]`.
+- Do not invent facts, procedural history, leave balances, or medical information not provided. Separate facts provided from assumptions and from items requiring attorney confirmation.
+- Treat leave exhaustion as a prompt to escalate, not as clearance to act. Do not treat the end of a protected-leave period as automatic permission to terminate or deny reinstatement. Where disability-accommodation frameworks may apply, an interactive process and undue-hardship analysis are required before acting; flag this explicitly.
+- Where any adverse action affecting an employee on or returning from protected leave is contemplated, flag interference and retaliation exposure prominently before any other analysis. Escalation to the responsible attorney is required before proceeding with such an action.
+- Identify all jurisdictions that may apply and flag multi-jurisdiction complexity for attorney resolution.
+- Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[citation needed]`, `[verify jurisdiction]`, and `[deadline verification required]` throughout wherever any fact, legal rule, threshold, or procedural step is unverified.
+- Preserve confidentiality and privilege. Do not include identifying employee information in reusable template outputs.
+- Do not start the adverse-action analysis only after leave has been exhausted. Flag it at the outset if any adverse action is contemplated, and explicitly require attorney review before any such action is taken.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the required inputs — leave type(s), work schedule and leave pattern, key dates, procedural status, jurisdiction(s), and whether any adverse action is contemplated — are all available. If any are missing, stop and request them before proceeding. Do not fabricate or infer missing information.
+
+2. **Identify potentially applicable leave frameworks.** Based on the facts provided, identify which leave frameworks may be implicated. Consider at minimum: medical or family leave; military or service-member leave; disability-accommodation leave. Note that a single absence or condition may trigger more than one framework simultaneously. For each potentially applicable framework, mark it `[verify jurisdiction]` — do not assert whether it applies or what it requires. Flag any framework whose applicability is unclear as an open question for attorney review.
+
+3. **Surface procedural obligations for each framework.** For each potentially applicable framework, identify the categories of procedural obligation that must be researched and confirmed through verified authority. These include, without limitation:
+   - Eligibility requirements and the method of their assessment `[verify jurisdiction]`
+   - The eligibility-notice obligation: when it must be issued and what it must contain `[deadline verification required]` `[verify jurisdiction]`
+   - The designation-notice obligation: when the employer must designate leave and what the notice must contain `[deadline verification required]` `[verify jurisdiction]`
+   - Certification: whether and what type of certification may be required; the timeframe for the employee to provide it; whether a cure or clarification opportunity must be offered before denial `[deadline verification required]` `[verify jurisdiction]`
+   - The entitlement amount and its measurement period `[verify jurisdiction]` — do not state a number of weeks, days, or hours from background knowledge
+   - Rules governing intermittent or reduced-schedule leave, if applicable `[verify jurisdiction]`
+   - Reinstatement obligations: whether the employee is entitled to the same or equivalent position on return, and any exceptions `[verify jurisdiction]`
+   - Any applicable employer-size or coverage thresholds `[verify jurisdiction]`
+
+   Do not state any rule, deadline, or threshold from memory. Record only what must be confirmed, not what you believe the rule to be.
+
+4. **Assess procedural status against the framework obligations.** Using the procedural status provided, note which obligations appear to have been met, which appear to be outstanding, and which are unclear or unconfirmed. For each outstanding or unclear obligation, flag it with `[CONFIRM: ...]` and identify it as a verification item. Flag any procedural gap that could independently create exposure — for example, failure to provide a timely eligibility notice or failure to request certification properly.
+
+5. **Identify framework interactions.** Where more than one framework may apply, assess how they interact:
+   - Do any frameworks run concurrently by default? `[verify jurisdiction]`
+   - Are any frameworks consecutive, and if so, what governs the sequence and total leave duration? `[verify jurisdiction]`
+   - Does the employer have an obligation to designate leave under one framework even if the employee did not invoke it by name? `[verify jurisdiction]`
+   - Where multiple frameworks apply, which employer-obligation set governs when they conflict? `[verify jurisdiction]`
+   Flag all interaction questions for attorney analysis. Do not resolve framework-interaction questions from background knowledge.
+
+6. **Adverse-action gate — flag prominently if any adverse action is contemplated.** If the inputs identify that any termination, demotion, denial of reinstatement, or disciplinary action affecting the employee is under consideration, surface this analysis before moving to the output assembly. Address each of the following:
+
+   - **Interference exposure.** Any adverse action taken against an employee because of the exercise or attempted exercise of a protected-leave right may constitute interference with that right. `[verify jurisdiction]` Flag the specific action, its proposed timing relative to the leave, and the potential interference theory for attorney analysis.
+   - **Retaliation exposure.** Adverse action that is causally connected to an employee's request for or use of protected leave, or to a complaint about leave rights, may constitute retaliation. Flag timing proximity — including whether the action is proposed while the employee is on leave, immediately on return, or shortly after a leave request. `[verify jurisdiction]`
+   - **Leave exhaustion is not clearance.** Do not treat the expiration of a protected-leave period as automatic permission to terminate or otherwise act adversely. Where a disability-accommodation framework may apply — including where the underlying condition is a disability — flag that additional leave as a reasonable accommodation may be required before any adverse action, and that an interactive process must occur. `[ATTORNEY TO CONFIRM: whether interactive process has been conducted and documented]`
+   - **Undue-hardship analysis.** Where denial of additional leave as an accommodation is contemplated, flag that an undue-hardship analysis is required. `[ATTORNEY TO CONFIRM: whether a documented undue-hardship analysis has been completed]`
+   - **Reinstatement rights.** Flag whether the employee has reinstatement rights under any applicable framework and whether those rights have been extinguished under any exception. `[verify jurisdiction]`
+   - **Escalation requirement.** Any adverse action affecting an employee on or returning from protected leave must be reviewed and approved by the responsible attorney before it is taken. Flag this as a hard stop.
+
+   If no adverse action is contemplated, note that and state that this analysis should be revisited if the situation changes.
+
+7. **Compile open items and assumptions.** List all facts that were assumed in the absence of confirmed information. List all legal questions that require verified research before the analysis can be relied upon. Distinguish factual open items from legal open items.
+
+8. **Assemble the output.** Produce the full protected-leave review in the format below. Label the complete output as draft legal work product for attorney review.
+
+## Output Format
+
+Deliver the following sections, clearly labeled:
+
+1. **Situation Summary** — anonymized summary of the key facts: leave type(s), work schedule, leave pattern (continuous or intermittent), key dates (flagged `[deadline verification required]`), jurisdiction (flagged `[verify jurisdiction]` if unconfirmed), and procedural status as described by the user.
+
+2. **Frameworks Potentially Implicated** — for each framework: name it generically (e.g., "medical or family leave," "military or service-member leave," "disability-accommodation leave"); note the facts that suggest it may apply; mark it `[verify jurisdiction]`; and identify any threshold or coverage question that must be confirmed before applicability can be assessed.
+
+3. **Procedural Obligations to Confirm** — organized by framework. For each obligation category (eligibility assessment, notice, designation, certification, entitlement amount and measurement period, intermittent-leave rules, reinstatement), state what must be researched and confirmed. Do not state the rule — state what must be verified. Flag each item `[deadline verification required]` or `[verify jurisdiction]` as applicable.
+
+4. **Framework Interactions** — summary of how the potentially applicable frameworks may interact: concurrency or consecutiveness, total duration questions, designation obligations, and any conflict-of-obligations question. Flag all for attorney analysis.
+
+5. **Adverse-Action Exposure** — present only if any adverse action is contemplated. Set out: the proposed action and its timing; interference exposure; retaliation exposure; whether leave exhaustion has occurred and why it is not clearance; the interactive-process and undue-hardship questions; reinstatement rights and their status; and the hard-stop escalation requirement. Label this section prominently.
+
+6. **Open Items for Attorney Verification** — numbered list of all unresolved factual and legal questions that must be confirmed before the analysis can be relied upon.
+
+7. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
+
+Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` throughout. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+## Attorney Verification Checklist
+
+- [ ] All leave frameworks potentially applicable to this situation have been identified under the governing jurisdiction's law, including any state, local, or contractual leave rights that supplement federal or national frameworks.
+- [ ] Eligibility for each potentially applicable framework has been confirmed through verified, current legal authority — not background knowledge.
+- [ ] All entitlement amounts, measurement periods, and eligibility thresholds have been confirmed through verified authority. No number from this review has been treated as an established rule without confirmation.
+- [ ] The employer's eligibility-notice obligations, and whether they were timely met, have been confirmed for each applicable framework.
+- [ ] The employer's designation-notice obligations, and whether they were timely met, have been confirmed for each applicable framework.
+- [ ] Certification requirements — including what may be requested, the employee's timeframe to respond, and any required cure or clarification opportunity — have been confirmed for each applicable framework.
+- [ ] Intermittent-leave rules, if applicable, have been confirmed, including how unscheduled absences must be handled and what documentation the employer may require.
+- [ ] Reinstatement rights — including any same-position or equivalent-position entitlement and any applicable exceptions — have been confirmed for each framework.
+- [ ] All framework-interaction questions (concurrent vs. consecutive leave, total duration, designation obligations) have been resolved under the governing jurisdiction's law.
+- [ ] If any adverse action is contemplated: the interference and retaliation exposure analysis has been completed by the responsible attorney, not left to this draft.
+- [ ] If any adverse action is contemplated and a disability-accommodation framework may apply: a documented interactive process has been conducted and an undue-hardship analysis has been completed and documented before the action is taken.
+- [ ] Leave exhaustion has not been treated as automatic clearance to take any adverse action without the foregoing attorney review.
+- [ ] Jurisdiction has been confirmed, including whether multi-state or local leave laws apply in addition to any federal or national framework.
+- [ ] No legal conclusion in this document has been relied upon without attorney review and confirmation of the applicable authority.
+- [ ] All facts recorded as confirmed have been verified; all assumptions and open items have been resolved or explicitly preserved as open before this work product is acted upon.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Protected Leave Review ===
+---
+name: Protected Leave Review
+description: Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.
+---
+
+# Protected Leave Review
+
+## Purpose
+
+Produce a structured, attorney-ready review of an employee's protected-leave situation. The skill organizes the known facts, identifies which leave frameworks may be implicated, surfaces the procedural obligations and entitlement questions that must be researched and confirmed through verified legal authority, identifies how multiple frameworks interact, and — critically — flags adverse-action exposure where a termination, demotion, denial of reinstatement, or discipline is contemplated.
+
+This skill provides decision support and workflow discipline. It does not compute entitlements, calculate deadlines, state rules from background knowledge, or conclude whether any action is lawful. Every entitlement, threshold, and deadline is flagged for verified research. This is draft legal work product for attorney review — not legal advice.
+
+## Use When
+
+- An employer, HR professional, or attorney needs to organize the facts of an employee's leave and identify which protected-leave frameworks may apply.
+- A leave situation involves multiple frameworks that may run concurrently or interact (for example, medical leave and disability-accommodation leave arising from the same condition).
+- A question arises about what procedural obligations — notices, certifications, designation steps — have been met or remain outstanding.
+- An adverse action (termination, demotion, denial of reinstatement, or discipline) affecting an employee who is on, has recently taken, or has requested protected leave is being contemplated, and the employer needs to understand the exposure before proceeding.
+- A user asks: "Can we terminate this employee who is on leave?", "What do we owe someone returning from military leave?", "What happens if their leave runs out and they can't come back?", or similar questions about an employee's leave situation.
+
+## Required Inputs
+
+- **The leave situation**: the type or types of leave at issue (e.g., medical, family, military or service-member, disability-related, or a combination). If unclear, describe the underlying reason for the absence.
+- **The employee's work schedule and arrangement**: full-time, part-time, or variable hours; whether leave is continuous or intermittent; and, if intermittent, how it has been taken or is anticipated to be taken.
+- **Key dates**: the leave start date; the expected or actual return date; any dates on which notices, certifications, or designation decisions were or were not communicated. Flag all dates as `[deadline verification required]` — do not use them to compute deadlines.
+- **Procedural status**: whether an eligibility notice has been issued; whether a designation notice has been issued; whether medical or other certification has been requested, received, or found insufficient; whether a cure opportunity has been provided.
+- **Jurisdiction(s)**: the jurisdiction(s) in which the employee works. If unknown or in dispute, flag as `[CONFIRM: governing jurisdiction]`.
+- **Adverse action contemplated**: whether any termination, demotion, denial of reinstatement, or disciplinary action is under consideration. If yes, describe it and its proposed timing.
+
+If any required input is missing, stop and request it before proceeding. Do not infer jurisdiction from employer headquarters, fabricate leave dates, or assume procedural steps have been completed unless confirmed.
+
+## Do Not Use When
+
+- The user wants leave entitlements, leave balances, or deadlines computed — this skill identifies what must be researched and confirmed; it does not calculate, and AgentCounsel never computes entitlements or deadlines.
+- The user wants to draft a designation notice, eligibility notice, or certification request — those are separate drafting tasks.
+- The user wants a general assessment of the legal risk of a proposed termination without a leave dimension — use `termination-risk`. Where both apply, use `termination-risk` alongside this skill to address the leave-specific exposure.
+- The question is a wage-and-hour question (overtime, exemption, pay rate) — use `wage-hour-qa`.
+- The leave at issue has no protected dimension — ordinary employer-granted paid time off, bereavement leave, or jury duty where no protected framework is implicated is outside the scope of this skill.
+- The question involves active litigation strategy or responding to a filed administrative charge — that work requires attorney direction from the outset.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review only. This is not legal advice.
+- Do not assert any entitlement amount, eligibility threshold, notice period, certification deadline, or measurement period from background knowledge. Every such rule must be confirmed through verified, current legal authority for the governing jurisdiction. Flag each with `[verify jurisdiction]` or `[deadline verification required]`.
+- Do not invent facts, procedural history, leave balances, or medical information not provided. Separate facts provided from assumptions and from items requiring attorney confirmation.
+- Treat leave exhaustion as a prompt to escalate, not as clearance to act. Do not treat the end of a protected-leave period as automatic permission to terminate or deny reinstatement. Where disability-accommodation frameworks may apply, an interactive process and undue-hardship analysis are required before acting; flag this explicitly.
+- Where any adverse action affecting an employee on or returning from protected leave is contemplated, flag interference and retaliation exposure prominently before any other analysis. Escalation to the responsible attorney is required before proceeding with such an action.
+- Identify all jurisdictions that may apply and flag multi-jurisdiction complexity for attorney resolution.
+- Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[citation needed]`, `[verify jurisdiction]`, and `[deadline verification required]` throughout wherever any fact, legal rule, threshold, or procedural step is unverified.
+- Preserve confidentiality and privilege. Do not include identifying employee information in reusable template outputs.
+- Do not start the adverse-action analysis only after leave has been exhausted. Flag it at the outset if any adverse action is contemplated, and explicitly require attorney review before any such action is taken.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the required inputs — leave type(s), work schedule and leave pattern, key dates, procedural status, jurisdiction(s), and whether any adverse action is contemplated — are all available. If any are missing, stop and request them before proceeding. Do not fabricate or infer missing information.
+
+2. **Identify potentially applicable leave frameworks.** Based on the facts provided, identify which leave frameworks may be implicated. Consider at minimum: medical or family leave; military or service-member leave; disability-accommodation leave. Note that a single absence or condition may trigger more than one framework simultaneously. For each potentially applicable framework, mark it `[verify jurisdiction]` — do not assert whether it applies or what it requires. Flag any framework whose applicability is unclear as an open question for attorney review.
+
+3. **Surface procedural obligations for each framework.** For each potentially applicable framework, identify the categories of procedural obligation that must be researched and confirmed through verified authority. These include, without limitation:
+   - Eligibility requirements and the method of their assessment `[verify jurisdiction]`
+   - The eligibility-notice obligation: when it must be issued and what it must contain `[deadline verification required]` `[verify jurisdiction]`
+   - The designation-notice obligation: when the employer must designate leave and what the notice must contain `[deadline verification required]` `[verify jurisdiction]`
+   - Certification: whether and what type of certification may be required; the timeframe for the employee to provide it; whether a cure or clarification opportunity must be offered before denial `[deadline verification required]` `[verify jurisdiction]`
+   - The entitlement amount and its measurement period `[verify jurisdiction]` — do not state a number of weeks, days, or hours from background knowledge
+   - Rules governing intermittent or reduced-schedule leave, if applicable `[verify jurisdiction]`
+   - Reinstatement obligations: whether the employee is entitled to the same or equivalent position on return, and any exceptions `[verify jurisdiction]`
+   - Any applicable employer-size or coverage thresholds `[verify jurisdiction]`
+
+   Do not state any rule, deadline, or threshold from memory. Record only what must be confirmed, not what you believe the rule to be.
+
+4. **Assess procedural status against the framework obligations.** Using the procedural status provided, note which obligations appear to have been met, which appear to be outstanding, and which are unclear or unconfirmed. For each outstanding or unclear obligation, flag it with `[CONFIRM: ...]` and identify it as a verification item. Flag any procedural gap that could independently create exposure — for example, failure to provide a timely eligibility notice or failure to request certification properly.
+
+5. **Identify framework interactions.** Where more than one framework may apply, assess how they interact:
+   - Do any frameworks run concurrently by default? `[verify jurisdiction]`
+   - Are any frameworks consecutive, and if so, what governs the sequence and total leave duration? `[verify jurisdiction]`
+   - Does the employer have an obligation to designate leave under one framework even if the employee did not invoke it by name? `[verify jurisdiction]`
+   - Where multiple frameworks apply, which employer-obligation set governs when they conflict? `[verify jurisdiction]`
+   Flag all interaction questions for attorney analysis. Do not resolve framework-interaction questions from background knowledge.
+
+6. **Adverse-action gate — flag prominently if any adverse action is contemplated.** If the inputs identify that any termination, demotion, denial of reinstatement, or disciplinary action affecting the employee is under consideration, surface this analysis before moving to the output assembly. Address each of the following:
+
+   - **Interference exposure.** Any adverse action taken against an employee because of the exercise or attempted exercise of a protected-leave right may constitute interference with that right. `[verify jurisdiction]` Flag the specific action, its proposed timing relative to the leave, and the potential interference theory for attorney analysis.
+   - **Retaliation exposure.** Adverse action that is causally connected to an employee's request for or use of protected leave, or to a complaint about leave rights, may constitute retaliation. Flag timing proximity — including whether the action is proposed while the employee is on leave, immediately on return, or shortly after a leave request. `[verify jurisdiction]`
+   - **Leave exhaustion is not clearance.** Do not treat the expiration of a protected-leave period as automatic permission to terminate or otherwise act adversely. Where a disability-accommodation framework may apply — including where the underlying condition is a disability — flag that additional leave as a reasonable accommodation may be required before any adverse action, and that an interactive process must occur. `[ATTORNEY TO CONFIRM: whether interactive process has been conducted and documented]`
+   - **Undue-hardship analysis.** Where denial of additional leave as an accommodation is contemplated, flag that an undue-hardship analysis is required. `[ATTORNEY TO CONFIRM: whether a documented undue-hardship analysis has been completed]`
+   - **Reinstatement rights.** Flag whether the employee has reinstatement rights under any applicable framework and whether those rights have been extinguished under any exception. `[verify jurisdiction]`
+   - **Escalation requirement.** Any adverse action affecting an employee on or returning from protected leave must be reviewed and approved by the responsible attorney before it is taken. Flag this as a hard stop.
+
+   If no adverse action is contemplated, note that and state that this analysis should be revisited if the situation changes.
+
+7. **Compile open items and assumptions.** List all facts that were assumed in the absence of confirmed information. List all legal questions that require verified research before the analysis can be relied upon. Distinguish factual open items from legal open items.
+
+8. **Assemble the output.** Produce the full protected-leave review in the format below. Label the complete output as draft legal work product for attorney review.
+
+## Output Format
+
+Deliver the following sections, clearly labeled:
+
+1. **Situation Summary** — anonymized summary of the key facts: leave type(s), work schedule, leave pattern (continuous or intermittent), key dates (flagged `[deadline verification required]`), jurisdiction (flagged `[verify jurisdiction]` if unconfirmed), and procedural status as described by the user.
+
+2. **Frameworks Potentially Implicated** — for each framework: name it generically (e.g., "medical or family leave," "military or service-member leave," "disability-accommodation leave"); note the facts that suggest it may apply; mark it `[verify jurisdiction]`; and identify any threshold or coverage question that must be confirmed before applicability can be assessed.
+
+3. **Procedural Obligations to Confirm** — organized by framework. For each obligation category (eligibility assessment, notice, designation, certification, entitlement amount and measurement period, intermittent-leave rules, reinstatement), state what must be researched and confirmed. Do not state the rule — state what must be verified. Flag each item `[deadline verification required]` or `[verify jurisdiction]` as applicable.
+
+4. **Framework Interactions** — summary of how the potentially applicable frameworks may interact: concurrency or consecutiveness, total duration questions, designation obligations, and any conflict-of-obligations question. Flag all for attorney analysis.
+
+5. **Adverse-Action Exposure** — present only if any adverse action is contemplated. Set out: the proposed action and its timing; interference exposure; retaliation exposure; whether leave exhaustion has occurred and why it is not clearance; the interactive-process and undue-hardship questions; reinstatement rights and their status; and the hard-stop escalation requirement. Label this section prominently.
+
+6. **Open Items for Attorney Verification** — numbered list of all unresolved factual and legal questions that must be confirmed before the analysis can be relied upon.
+
+7. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
+
+Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` throughout. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+## Attorney Verification Checklist
+
+- [ ] All leave frameworks potentially applicable to this situation have been identified under the governing jurisdiction's law, including any state, local, or contractual leave rights that supplement federal or national frameworks.
+- [ ] Eligibility for each potentially applicable framework has been confirmed through verified, current legal authority — not background knowledge.
+- [ ] All entitlement amounts, measurement periods, and eligibility thresholds have been confirmed through verified authority. No number from this review has been treated as an established rule without confirmation.
+- [ ] The employer's eligibility-notice obligations, and whether they were timely met, have been confirmed for each applicable framework.
+- [ ] The employer's designation-notice obligations, and whether they were timely met, have been confirmed for each applicable framework.
+- [ ] Certification requirements — including what may be requested, the employee's timeframe to respond, and any required cure or clarification opportunity — have been confirmed for each applicable framework.
+- [ ] Intermittent-leave rules, if applicable, have been confirmed, including how unscheduled absences must be handled and what documentation the employer may require.
+- [ ] Reinstatement rights — including any same-position or equivalent-position entitlement and any applicable exceptions — have been confirmed for each framework.
+- [ ] All framework-interaction questions (concurrent vs. consecutive leave, total duration, designation obligations) have been resolved under the governing jurisdiction's law.
+- [ ] If any adverse action is contemplated: the interference and retaliation exposure analysis has been completed by the responsible attorney, not left to this draft.
+- [ ] If any adverse action is contemplated and a disability-accommodation framework may apply: a documented interactive process has been conducted and an undue-hardship analysis has been completed and documented before the action is taken.
+- [ ] Leave exhaustion has not been treated as automatic clearance to take any adverse action without the foregoing attorney review.
+- [ ] Jurisdiction has been confirmed, including whether multi-state or local leave laws apply in addition to any federal or national framework.
+- [ ] No legal conclusion in this document has been relied upon without attorney review and confirmation of the applicable authority.
+- [ ] All facts recorded as confirmed have been verified; all assumptions and open items have been resolved or explicitly preserved as open before this work product is acted upon.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>
