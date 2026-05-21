@@ -1,6 +1,31 @@
 ---
 name: Sanctions Screening Review
-description: Use when reviewing sanctions, PEP, or adverse-media screening results for named parties to compare identifiers, classify each potential match by confidence, separate likely false positives from genuine hits, and recommend a disposition for compliance and attorney review.
+description: "Use when reviewing sanctions, PEP, or adverse-media screening results for named parties to compare identifiers, classify each potential match by confidence, separate likely false positives from genuine hits, and recommend a disposition for compliance and attorney review."
+practice_area: financial-crime
+task_type: review
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The screening results: the alert list or hit report with screened name, list source, matched entry, and match score"
+  - "Identifying data for the screened party (date of birth or formation date, nationality or jurisdiction, addresses, identifiers)"
+  - "The firm's screening or alert-disposition policy, including match thresholds and false-positive criteria"
+  - "The screening context: lists screened against, as-of date, and whether onboarding or ongoing monitoring"
+outputs:
+  - "Alert inventory and identifier-comparison match analysis"
+  - "Confidence classification of each potential match"
+  - "Recommended dispositions, escalations, and verification items"
+related_skills:
+  - skills/financial-crime/kyc-onboarding-review/SKILL.md
+  - skills/regulatory/compliance-gap-matrix/SKILL.md
+  - skills/regulatory/enforcement-risk-memo/SKILL.md
+tags:
+  - financial-crime
+  - sanctions
+  - screening
+  - pep
+  - adverse-media
+  - alert-adjudication
 ---
 
 # Sanctions Screening Review
@@ -35,6 +60,7 @@ If the screening results or the disposition policy is missing, stop and request 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft work product for review by the firm's compliance function and a supervising attorney. This is not legal advice and not an alert-clearing decision.
 - Review only the screening results actually provided. Never fabricate hits, list entries, match scores, or list sources.
 - Do not state that a party "is sanctioned," "is a PEP," or "is clear" as a conclusion. Classify match confidence and route the alert.

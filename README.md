@@ -1,55 +1,96 @@
-# AgentCounsel *Legal Skills*
+# AgentCounsel
 
-**An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
+**An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-59-success.svg)](SKILLS_INDEX.md)
-[![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#ways-to-use-agentcounsel)
-[![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
+[![Skills](https://img.shields.io/badge/skills-66-success.svg)](SKILLS_INDEX.md)
+[![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
+[![CI](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml)
+[![Derived from](https://img.shields.io/badge/derived%20from-agnostic--skills--for--legal-black.svg)](https://github.com/foolish-bandit/agnostic-skills-for-legal)
 
-AgentCounsel is a collection of standalone *legal skills*. Each skill is a structured workflow that helps an AI agent — or a lawyer — produce **draft legal work product for attorney review**. The skills supply discipline and structure: how to scope a task, what inputs to gather, how to organize the output, and what a supervising attorney must verify.
+AgentCounsel is a collection of standalone **legal skills**. Each skill is a structured workflow that helps an AI agent — or a lawyer — produce **draft legal work product for attorney review**. The skills supply discipline and structure: how to scope a task, what inputs to gather, how to organize the output, and what a supervising attorney must verify before anything is relied upon.
 
-> AgentCounsel does not provide legal advice. It produces draft work product intended for review and adoption by a qualified, licensed legal professional.
+> **AgentCounsel does not provide legal advice.** It produces draft work product intended for review and adoption by a qualified, licensed legal professional. Using it does not create an attorney–client relationship.
 
-## Why AgentCounsel
+New here? Start with **[QUICKSTART.md](QUICKSTART.md)** — it walks through your first skill run in about five minutes.
 
-Legal teams are increasingly using AI agents to draft, review, and triage. Most agent "instructions" for legal work are locked inside one vendor's product, hard to audit, and easy to misuse. AgentCounsel takes the opposite approach:
+## Who AgentCounsel is for
 
-- **Markdown-native.** Every skill is a plain Markdown file a lawyer can read, edit, and trust.
-- **Platform-agnostic.** No build system, no runtime, no lock-in. The skills work wherever an agent or person can read Markdown.
-- **Safety-first.** Every skill is built around the same core rules: draft only, attorney review required, never invent authority, preserve confidentiality.
-- **Composable.** Use one skill or the whole library. Copy a single file into any assistant, or bundle the set into an agent project.
+- **Practicing lawyers and in-house legal teams** who want AI assistance that is consistent, reviewable, and built around attorney oversight instead of around a vendor's product.
+- **Legal operations and knowledge-management teams** standardizing how their organization uses AI for routine legal work — intake, triage, first-pass review, and drafting.
+- **Law students and new lawyers** who want to see how experienced practitioners structure a contract review, a chronology, a research memo, or a risk assessment.
+- **AI builders and engineers** assembling legal agents or assistants who need well-scoped, safety-first workflow definitions they can drop into any model or framework.
 
-## What this is — and is not
+Whoever you are, the assumption is the same: a licensed attorney reviews the output before it is used.
+
+## What it is — and is not
 
 **It is:**
 
-- A library of legal *workflows* and *output structures*.
+- A library of legal **workflows** and **output structures**.
 - A way to make AI-assisted legal drafting more consistent, reviewable, and safe.
 - Useful piecemeal (one Markdown file) or as a whole.
+- Plain Markdown — no build system, no runtime, no account, no lock-in.
 
 **It is not:**
 
 - Legal advice, or a substitute for a licensed attorney.
-- A source of jurisdiction-specific legal rules. Skills give you process, not the law.
-- Built around any single AI product. It is not a "ChatGPT Project" — it is a portable library with adapters for many environments.
+- A source of jurisdiction-specific legal rules. Skills give you process and structure, not the law of any jurisdiction.
+- A finished-document generator. Every output is a **draft** that an attorney must review.
+- Built around any single AI product. It is a portable library with thin adapters for many environments.
+
+## Quick start
+
+1. Read the files in [`core/`](core/) — the operating rules every skill inherits.
+2. Open [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) and find the workflow that matches your task.
+3. Open that skill's `SKILL.md` and gather its **Required Inputs**.
+4. Follow the **Workflow**, and produce the **Output Format**.
+5. Complete the **Attorney Verification Checklist** before relying on anything.
+
+A worked, step-by-step version of this — with copy-paste prompts for each platform — is in **[QUICKSTART.md](QUICKSTART.md)**. Sample outputs are in **[`examples/`](examples/)**.
+
+## Practice areas
+
+AgentCounsel has **66 skills**: 57 across **12 practice areas**, plus 9 cross-cutting skills in two supporting groups.
+
+| Practice area | Skills | Covers |
+|---|--:|---|
+| Legal Research | 1 | Turning research questions into structured, verifiable memos. |
+| Litigation | 9 | Matter intake, chronologies, demand letters, subpoena triage, depositions, legal holds, privilege logs, claim charts, brief drafting. |
+| Contracts | 5 | NDAs, commercial contracts, redlines, statements of work, vendor agreement status. |
+| Corporate | 6 | Board minutes, written consents, closing checklists, diligence review, material-contract schedules, entity compliance. |
+| Employment | 8 | Terminations, worker classification, hiring, internal investigations, protected leave, severance, workplace policies. |
+| Privacy | 4 | Data processing agreements, impact assessments, data subject requests, policy gaps. |
+| Product Legal | 4 | Launch review, marketing claims, terms of service, AI features. |
+| Regulatory | 4 | Enforcement risk, rule-change summaries, compliance gaps, compliance-program tracking. |
+| AI Governance | 4 | AI use-case intake, vendor terms, model risk, AI policies. |
+| Intellectual Property | 7 | Trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, open-source licensing. |
+| Financial Crime / AML | 2 | KYC onboarding review, and sanctions / PEP / adverse-media screening review. |
+| Legal Operations | 3 | Templated legal responses, meeting briefings, signature routing. |
+
+Two **cross-cutting skill groups** support work in every practice area:
+
+- **Setup** (5 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
+- **Legal Methodology** (4 skills) — red-team verification, statutory interpretation, risk assessment, and source validation.
+
+See [`SKILLS_INDEX.md`](SKILLS_INDEX.md) for the full catalog and [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) to route from a task to a skill.
 
 ## How it is organized
 
 ```
 core/               Operating rules every skill inherits (read these first).
 skills/             The canonical skill library, grouped by practice area.
+examples/           Illustrative sample outputs, with fictional facts.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
 matter-workspaces/  Single-file scaffolds for organizing one specific matter.
 adapters/           Thin integration files for specific environments.
 metadata/           Generated machine-readable skill index (index.json).
+docs/               The metadata standard, the safety model, and the FAQ.
+scripts/            Standard-library Python helpers (validation, index, packs).
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
 COMMANDS.md         Slash-style command shorthands mapped to skills.
-CONTEXT.md          Vocabulary and mental model for AI agents working in the repo.
-AGENTS.md           Operating manual for AI agents working in this repo.
-CLAUDE.md           Claude Code's operating guide (imports AGENTS.md).
 ```
 
 The `skills/` directory is the **canonical source of truth.** Everything else points back to it.
@@ -64,186 +105,83 @@ skills/contracts/nda-review/
   templates/nda-risk-table.md  A copyable, attorney-review-ready template.
 ```
 
-Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, and an Attorney Verification Checklist. Each one also carries standardized, agent-readable YAML frontmatter so tools and agents can discover and route skills — see `docs/SKILL_METADATA_STANDARD.md`.
-
-## Practice areas
-
-| Practice area | Covers |
-|---|---|
-| Legal Research | Turning research questions into structured, verifiable memos. |
-| Litigation | Matter intake, chronologies, demand letters, subpoena triage, depositions, legal holds, privilege logs, claim charts, brief drafting. |
-| Contracts | NDAs, commercial contracts, redlines, statements of work. |
-| Corporate | Board minutes, written consents, closing checklists, due-diligence review, entity compliance. |
-| Employment | Terminations, worker classification, hiring, internal investigations, protected leave, severance, workplace policies. |
-| Privacy | Data processing agreements, impact assessments, data subject requests, policy gaps. |
-| Product Legal | Launch review, marketing claims, terms of service, AI features. |
-| Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
-| AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |
-| Intellectual Property | Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, open-source licensing. |
-| Financial Crime / AML | KYC onboarding review and sanctions / PEP / adverse-media screening review. |
-| Legal Operations | Templated legal responses, meeting briefings, and signature routing checks. |
-| Setup | Cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile. |
-| Legal Methodology | Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, source validation. |
-
-See `SKILLS_INDEX.md` for the full catalog.
-
-### Configuring AgentCounsel for a team
-
-Two optional layers let a legal team adapt the library without changing any skill:
-
-- **`practice-profiles/`** — one profile per practice area capturing the team's jurisdictions, escalation thresholds, standard positions, review requirements, and prohibited assumptions. An agent loads the relevant profile alongside `core/` and a skill. The **Setup** skills run a cold-start interview to fill a profile in.
-- **`matter-workspaces/`** — single-file scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, and an index of the draft work product produced by skills.
-
-Both are plain Markdown. They add no backend, runtime, or vendor dependency.
+Every `SKILL.md` follows the same structure — Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, and an Attorney Verification Checklist — and carries standardized, agent-readable YAML frontmatter so tools and agents can discover and route skills. See [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md).
 
 ## Ways to use AgentCounsel
 
-**1. Piecemeal — one Markdown file.** Open any `SKILL.md`, copy it into your AI assistant or paste it as context, and follow the workflow. See `adapters/generic-md/`.
+AgentCounsel is plain Markdown, so it works anywhere an agent or person can read a file. Here is how to use it on the most common surfaces.
 
-**2. As a local-folder playbook.** Keep the repo (or just `skills/` and `core/`) in a folder your assistant can read, and let it route to the right skill. See `adapters/claude-cowork/`.
+| Surface | How to use AgentCounsel | Where to look |
+|---|---|---|
+| **Generic Markdown** | Open any `SKILL.md`, paste it into your assistant as context, and follow the workflow. Works with any model. | [`adapters/generic-md/`](adapters/generic-md/) |
+| **ChatGPT** | Create a ChatGPT Project and add skills as project files. Run `python scripts/build_platform_packs.py` to generate `dist/chatgpt/` — one consolidated file per practice area plus global project instructions, sized for Project file limits. | [`adapters/generic-md/`](adapters/generic-md/) |
+| **Claude** | Use the Claude Code plugin-style bundle, or keep the repo in a folder Claude can read as a local playbook. Platform packs build `dist/claude/` ZIPs per practice area for Claude Projects. | [`adapters/claude-code-plugin/`](adapters/claude-code-plugin/), [`adapters/claude-cowork/`](adapters/claude-cowork/) |
+| **Gemini** | Install the repository as a Gemini CLI extension — `gemini-extension.json` and `GEMINI.md` load the operating model automatically. Platform packs also build Gemini notebook sources. | [`adapters/gemini/`](adapters/gemini/) |
+| **Codex / repo agents** | Point a repo-based coding or legal agent at the library through `AGENTS.md` so it selects the narrowest relevant skill. | [`adapters/codex/`](adapters/codex/), [`AGENTS.md`](AGENTS.md) |
+| **Cursor** | Add the library to a project and reference it from a `.cursorrules` file or `AGENTS.md`; `python scripts/build_platform_packs.py` generates a ready-made `.cursorrules` in `dist/repo-agents/`. | [`adapters/codex/`](adapters/codex/) |
+| **Your own agent** | Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions. | [`skills/`](skills/), [`core/`](core/) |
 
-**3. As a repo-agent instruction library.** Point a coding or repo agent at the library so it selects the narrowest relevant skill. See `adapters/codex/`.
+Adapters are intentionally **thin**: they tell an environment how to find and use the canonical library; they do not duplicate it. The one exception is the Claude Code plugin bundle, which carries generated copies of a curated set of skills — regenerate it with `python scripts/sync_plugin_skills.py` (see [`PLUGIN_SYNC.md`](PLUGIN_SYNC.md)).
 
-**4. As a Claude Code plugin-style bundle.** Use the curated starter bundle in `adapters/claude-code-plugin/`.
+### Installing or copying skills
 
-**5. As a Gemini CLI extension.** Install the repository as a Gemini CLI extension; `gemini-extension.json` and `GEMINI.md` load the operating model automatically. See `adapters/gemini/`.
+- **One skill:** copy a single `SKILL.md` (and its `templates/`, if any) into your assistant. Nothing else is required.
+- **A practice area:** copy that folder under `skills/`, or build a consolidated pack with `python scripts/build_platform_packs.py`.
+- **The whole library:** clone the repository, or vendor `skills/` and `core/` into your own project.
 
-**6. Bundled into your own agent project.** Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions.
+There is no installer, no package to publish, and no runtime dependency. A skill is just a file.
 
-## Quick start
+## Safety model
 
-1. Read the `core/` files — they are the operating rules for every skill.
-2. Open `WORKFLOW_ROUTER.md` and find the workflow that matches your task.
-3. Open that skill's `SKILL.md` and gather the Required Inputs.
-4. Follow the Workflow. Produce the Output Format.
-5. Complete the Attorney Verification Checklist before relying on anything.
+Every skill inherits the operating rules in [`core/`](core/):
 
-## Core safety model
-
-Every skill inherits the rules in `core/`:
-
-- **Draft legal work product only.** Attorney review is always required.
+- **Draft legal work product only.** Attorney review is always required before output is relied upon.
 - **Never invent legal authority, citations, quotations, facts, or deadlines.**
 - **Separate** facts, assumptions, law, analysis, strategy, and verification items.
 - **Identify** jurisdiction, governing law, posture, and the relevant date — or flag them as unknown.
 - **Preserve** confidentiality and privilege.
 - **Flag uncertainty** with visible placeholders instead of guessing.
 
-## Adapters
+The full safety model — the threat model, what AgentCounsel deliberately does *not* do, and how to use it safely with confidential material — is in **[docs/SAFETY_MODEL.md](docs/SAFETY_MODEL.md)**. Security reporting and guidance are in [`SECURITY.md`](SECURITY.md).
 
-Adapters are intentionally **thin**. They tell a particular environment how to find and use the canonical library; they do not re-document or duplicate it. The one exception is the Claude Code plugin bundle, which carries generated copies of a curated set of skills (and their templates) for packaging; run `python scripts/sync_plugin_skills.py` to regenerate it from `skills/`, and see `PLUGIN_SYNC.md`.
+## Configuring AgentCounsel for a team
 
-| Adapter | For | Path |
-|---|---|---|
-| Generic Markdown | Any AI assistant or agent | `adapters/generic-md/` |
-| Codex / repo agents | Repo-based coding and legal agents | `adapters/codex/` |
-| Claude Code plugin | Plugin-style packaging | `adapters/claude-code-plugin/` |
-| Claude / Cowork | Local-folder playbook use | `adapters/claude-cowork/` |
-| Gemini CLI | Gemini CLI extension | `adapters/gemini/` |
+Two optional layers let a legal team adapt the library without changing any skill:
 
-## Validation
+- **[`practice-profiles/`](practice-profiles/)** — one profile per practice area capturing the team's jurisdictions, escalation thresholds, standard positions, review requirements, and prohibited assumptions. The **Setup** cold-start interview skills fill a profile in.
+- **[`matter-workspaces/`](matter-workspaces/)** — single-file scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, and an index of the draft work product produced by skills.
 
-The repository includes a lightweight validation script that checks every skill has the required structure and frontmatter, that relative links and index paths resolve, and that the safety framing is consistent. It uses only the Python standard library.
+Both are plain Markdown and add no backend, runtime, or vendor dependency.
+
+## Examples
+
+The [`examples/`](examples/) directory contains illustrative sample outputs — a contract review, a litigation chronology, a DPA review, a product launch review, and a red-team verification. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter.
+
+## Validation and continuous integration
+
+The repository ships a lightweight validation script — Python standard library only, no dependencies — that checks every skill's structure, frontmatter, links, and safety framing:
 
 ```
 python scripts/validate_repo.py
 ```
 
-Run it before opening or updating a pull request. See `VALIDATION.md` for the full list of checks.
-
-The Claude Code plugin bundle under `adapters/claude-code-plugin/` is **generated** from `skills/`. Regenerate it with `python scripts/sync_plugin_skills.py`; validation reports any drift. See `PLUGIN_SYNC.md`.
-
-### Continuous integration
-
-GitHub Actions runs the same checks on every pull request and on pushes to `main`:
+GitHub Actions runs the same checks on every pull request and on pushes to `main` (see [`.github/workflows/validate.yml`](.github/workflows/validate.yml)):
 
 ```
 python scripts/sync_plugin_skills.py --check   # plugin bundle is in sync
 python scripts/validate_repo.py                # full repository validation
 ```
 
-The workflow is `.github/workflows/validate.yml`. It uses only Python and the standard library — no extra dependencies.
-
-## Skill metadata
-
-Every canonical skill carries standardized, agent-readable YAML frontmatter — `name`, `description`, `practice_area`, `task_type`, `jurisdictions`, `risk_level`, `requires_attorney_review`, `inputs`, `outputs`, `related_skills`, and `tags`. This metadata lets LLMs, browser agents, static-site generators, and package builders discover, filter, and route skills without parsing the Markdown body. The full standard — every field, its allowed values, and the formatting rules — is in `docs/SKILL_METADATA_STANDARD.md`.
-
-`scripts/build_skill_index.py` parses that frontmatter and writes `metadata/index.json`, a single machine-readable index of every skill with counts by practice area, task type, and risk level. Regenerate it whenever a skill's frontmatter changes:
-
-```
-python scripts/build_skill_index.py           # write metadata/index.json
-python scripts/build_skill_index.py --check    # report drift only
-```
-
-`scripts/validate_repo.py` enforces the standard: every skill must declare valid frontmatter, and `metadata/index.json` must stay in sync. The build uses only the Python standard library.
-
-## Browsable skill catalog
-
-A static, browser-readable catalog of every skill lives under `site/`. It is generated from the canonical `skills/` directory and includes a homepage, one page per practice area, one page per skill (each with **Copy Full Skill** and **Copy One-Off Prompt** buttons and the full raw `SKILL.md`), platform setup guides, and `llms.txt` / `llms-full.txt` for browser-based LLM agents.
-
-The generator is a zero-dependency Node script — nothing to install — so it keeps the repository's no-dependency, Markdown-first philosophy.
-
-```
-cd site
-npm run build      # generate the static site into site/public/
-npm run serve      # preview it at http://localhost:8080
-npm run dev        # build, then serve
-```
-
-The output in `site/public/` is plain HTML, one CSS file, and a small script. Deploy it by serving that directory with any static host (GitHub Pages, Netlify, Vercel, an object store, or a plain file server) — there is no backend, no login, and no build step beyond `npm run build`. Re-run the build after adding or editing a skill so the catalog stays in sync. See `site/README.md` for details.
-
-## Platform install packs
-
-`scripts/build_platform_packs.py` generates ready-to-install packs of the library for specific AI environments — all from the canonical `skills/` and `core/` directories, with nothing copied by hand. It uses the Python standard library only.
-
-```
-python scripts/build_platform_packs.py
-```
-
-The build writes everything to `dist/` (git-ignored — regenerate it when skills change):
-
-- `dist/chatgpt/` — one consolidated Markdown file per practice area, plus a global `project-instructions.md`. ChatGPT Projects limit file counts, so each pack consolidates a whole practice area into one file.
-- `dist/claude/` — one ZIP per practice area (`CLAUDE.md`, the practice profile, `commands.md`, `skills/`, `templates/`, `README.md`). Unzip into a Claude Project's knowledge.
-- `dist/gemini/` — one ZIP per practice area with four `source-*.md` files to add as Gemini notebook sources.
-- `dist/repo-agents/` — `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, and a generic install guide for repo-based agents.
-- `dist/index.json`, `dist/manifest.json`, `dist/SKILL_PACKS_INDEX.md` — machine- and human-readable indexes.
-
-The build fails if a skill is missing a required section, a generated pack is empty, a practice area has no index entry, or required safety language is missing from a pack. `dist/SKILL_PACKS_INDEX.md` explains how to install each pack type.
-
-## Improving skills
-
-`scripts/generate_skill_improvement_prompts.py` scans every canonical `SKILL.md` and writes two maintainer aids into `reports/`:
-
-- `reports/skill-improvement-prompts.md` — one copyable prompt per skill, ready to hand to an AI coding agent to revise that one skill. Each prompt names the skill path, skill name, and practice area, restates the skill's core purpose, and asks the agent to strengthen trigger clarity, required inputs, workflow steps, output format, and the attorney-review and source-discipline language — without changing what the skill is for or breaking the AgentCounsel skill structure.
-- `reports/skill-quality-checklist.md` — a reusable, skill-agnostic checklist for reviewing any skill by hand.
-
-```
-python scripts/generate_skill_improvement_prompts.py           # write the reports
-python scripts/generate_skill_improvement_prompts.py --check   # report staleness only
-```
-
-It uses only the Python standard library — no dependencies, nothing to install.
-
-### Using the prompts before a public release
-
-Before publishing a release, maintainers should:
-
-1. Regenerate the reports so they reflect the current skill set: `python scripts/generate_skill_improvement_prompts.py`.
-2. For each skill changed since the last release, copy its prompt from `reports/skill-improvement-prompts.md`, run it with an AI coding agent, review the diff with attorney-style scrutiny, and keep only the changes that genuinely tighten the skill.
-3. Spot-check every revised skill against `reports/skill-quality-checklist.md`.
-4. Run `python scripts/validate_repo.py` and `python scripts/sync_plugin_skills.py --check`.
-5. Regenerate the reports once more and commit them so the released library and its review aids stay in sync.
-
-The prompts never change a skill's core purpose — they only sharpen it. Treat every AI-suggested edit as draft work product for human review, exactly as the library treats its own output.
+Other standard-library helpers in `scripts/` build the machine-readable skill index (`build_skill_index.py`), the per-platform install packs (`build_platform_packs.py`), and the browsable static catalog under [`site/`](site/). See [`VALIDATION.md`](VALIDATION.md) for the full list of checks.
 
 ## Contributing
 
-New skills are welcome. AgentCounsel is Markdown-first and safety-first — see `CONTRIBUTING.md` for the rules, and `SECURITY.md` for security guidance.
+New skills and improvements are welcome. AgentCounsel is Markdown-first and safety-first — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules, [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md) for the frontmatter standard, and [`SECURITY.md`](SECURITY.md) for security guidance. Questions are answered in [`docs/FAQ.md`](docs/FAQ.md).
 
 ## License
 
-Apache License 2.0. See `LICENSE`. Attribution for content adapted from other open-source projects is recorded in `NOTICE`.
+Apache License 2.0 — see [`LICENSE`](LICENSE). Attribution for content adapted from other open-source projects is recorded in [`NOTICE`](NOTICE). AgentCounsel is an independent open-source project and is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.
 
 ## Disclaimer
 
-AgentCounsel is a workflow library — not a law firm and not a lawyer. Using it does not create an attorney-client relationship, and it does not provide legal advice. All output is draft work product that must be reviewed and adopted by a qualified, licensed legal professional before it is relied upon. You are responsible for the use of these materials and for compliance with the rules of professional conduct that apply to you.
+AgentCounsel is a workflow library — not a law firm and not a lawyer. Using it does not create an attorney–client relationship, and it does not provide legal advice. All output is draft work product that must be reviewed and adopted by a qualified, licensed legal professional before it is relied upon. You are responsible for the use of these materials and for compliance with the rules of professional conduct that apply to you.

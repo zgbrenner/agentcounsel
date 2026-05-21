@@ -4,8 +4,11 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-05-21
+
 ### Added
 
+- Public-release documentation set: a rewritten `README.md`, a `QUICKSTART.md` five-minute walkthrough, `docs/FAQ.md`, `docs/SAFETY_MODEL.md`, `RELEASE_NOTES.md`, and an `examples/` directory of five illustrative sample outputs — contract review, litigation chronology, DPA review, product launch review, and red-team verification — built with entirely fictional facts and no invented citations.
 - `AGENTS.md` and `CLAUDE.md` at the repository root: an operating manual for AI agents working in the repo. `AGENTS.md` is the universal, tool-agnostic guide — how to decide whether a task is *using a skill* or *editing the library*, how to route a task to the narrowest skill, the non-negotiable safety rules, the library-edit workflow with a "done means validation passes" gate, and a table mapping known LLM failure modes (hallucination, jagged intelligence, anterograde amnesia, sycophancy, prompt injection, weak self-knowledge) to the discipline that contains each one. `CLAUDE.md` imports `AGENTS.md` and adds Claude Code specifics (routing with the Explore subagent, Plan mode for multi-skill edits, the validation suite) plus a pre-handoff self-check.
 - `matter-workspaces/corporate-transaction-matter.md` and `matter-workspaces/employment-matter.md`: two new single-file matter scaffolds, bringing the matter-workspace set to six practice areas (litigation, contract review, privacy, regulatory, corporate transactions, and employment). The `matter-workspaces/README.md` template table is updated to match.
 - A new Setup skill, `create-matter-workspace`, that recommends the right matter-workspace template, interviews the user for core matter information, and produces a populated workspace draft with maintenance instructions. `WORKFLOW_ROUTER.md` now has a "Before you start" section encouraging users to create a matter workspace before complex or multi-step work, and `SKILLS_INDEX.md` and `COMMANDS.md` list the new skill.
@@ -36,6 +39,9 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Changed
 
+- Release-readiness pass for the public release: `README.md` rewritten with an explicit "who it is for" section, per-surface usage guidance (ChatGPT, Claude, Gemini, Codex, Cursor, generic Markdown), corrected badges, and a CI badge.
+- `docs/SKILL_METADATA_STANDARD.md`: the `practice_area` value list updated to include the `financial-crime` and `legal-ops` areas.
+- `CONTRIBUTING.md`: the skill-structure requirement updated to reference the full eleven-field metadata standard rather than only `name` and `description`.
 - Business-stakeholder summary mode: 25 commercial skills across contracts, product legal, privacy, regulatory, employment, and corporate now offer an optional **Business Stakeholder Summary** in their Output Format (Business Summary, Decision Needed, Recommended Ask, Fallback Position, Escalation Needed?). `SKILLS_INDEX.md` and `WORKFLOW_ROUTER.md` document the mode.
 
 - `red-team-verifier`: broadened into AgentCounsel's universal quality-control workflow for any legal output. Added explicit trigger phrases (checking a memo, contract review, demand letter, risk matrix, research summary, or draft filing; "is this good enough?"; weakness, missing-issue, and hallucination checks), a dedicated legal-reasoning audit (rule statement, element coverage, application, counterarguments, exceptions, ambiguity, weak analogies), a dedicated professional-responsibility audit (unauthorized-advice framing, attorney-review framing, confidentiality and privilege, recipient mismatch), and a missing-fact audit. Reconciled the output format to an Executive Risk Summary, Major Problems, Unsupported Claims Table, Missing Facts, Jurisdiction and Deadline Flags, Suggested Revisions, and Attorney Verification Checklist. `WORKFLOW_ROUTER.md` and `SKILLS_INDEX.md` now recommend it as a final pass after any high-stakes legal output.
@@ -51,15 +57,17 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Fixed
 
+- Completed the standardized eleven-field frontmatter on five skills that had been merged with incomplete metadata — `vendor-agreement-status`, `kyc-onboarding-review`, `sanctions-screening-review`, `legal-meeting-briefing`, and `signature-routing-checklist` — and added source/citation-discipline language where it was missing, so `scripts/validate_repo.py` passes.
+- README badges updated to the accurate release counts (66 skills, 12 practice areas) and the upstream-attribution badge repointed to the direct upstream project.
 - README badges corrected: the practice-area and skills badges linked to a `prompts/` directory that does not exist in this repository and used the source project's terminology and a stale count; they now reflect AgentCounsel's structure (10 practice areas, 50 skills) and link to `SKILLS_INDEX.md`. The "works with" badge anchor was repaired.
 - Refreshed the stale Litigation and Privacy rows of the README practice-area table.
 - `scripts/validate_repo.py` now also checks the link target of Markdown image and badge links (`[![alt](image)](target)`) — a case the link checker previously skipped.
 
-## [0.1.0] - 2026-05-20
+## [0.0.1] - 2026-05-20
 
 ### Added
 
-- Initial AgentCounsel scaffold: an open, Markdown-native legal skills library.
+- Initial AgentCounsel scaffold (internal pre-release): an open, Markdown-native legal skills library.
 - 29 skills across nine practice areas — legal research, litigation, contracts, employment, privacy, product legal, regulatory, AI governance, and intellectual property — each a standalone `SKILL.md` with a consistent structure.
 - Six core operating rules in `core/` and seven copyable templates.
 - Four adapters: generic Markdown, Codex / repo agents, a Claude Code plugin bundle, and Claude / Cowork local-folder use.

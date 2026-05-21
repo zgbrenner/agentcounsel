@@ -1,6 +1,30 @@
 ---
 name: Templated Legal Response
-description: Use when drafting a response to a routine, recurring legal inquiry from a configured template, with a built-in escalation gate that stops the templated path when the matter shows characteristics that require individualized counsel review.
+description: "Use when drafting a response to a routine, recurring legal inquiry from a configured template, with a built-in escalation gate that stops the templated path when the matter shows characteristics that require individualized counsel review."
+practice_area: legal-ops
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The recurring legal inquiry and its type"
+  - "The team's response template for that inquiry type, if one exists"
+  - "Customization facts: names, dates, reference numbers, jurisdiction, receipt date, deadline"
+  - "The audience and relationship, so tone can be set"
+outputs:
+  - "Escalation gate result (pass, or stop and route to counsel)"
+  - "Draft templated response for attorney review"
+  - "Deadlines and follow-up actions"
+related_skills:
+  - skills/legal-ops/signature-routing-checklist/SKILL.md
+  - skills/privacy/dsar-workflow/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - legal-ops
+  - templated-response
+  - escalation-gate
+  - in-house
+  - drafting
 ---
 
 # Templated Legal Response

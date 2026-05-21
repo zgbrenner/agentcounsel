@@ -1,0 +1,33 @@
+# Examples
+
+This directory contains **illustrative sample outputs** — what an AgentCounsel skill produces when it runs. They exist to show the shape, structure, and quality of a skill's deliverable before you run one yourself.
+
+> **Every fact in every example is fictional.** All parties, people, companies, dates, dollar figures, documents, and clauses were invented purely for illustration. The examples contain **no real or invented legal citations**. They are draft work product of the kind a supervising attorney would review — **not legal advice, not templates for a real matter, and not finished deliverables.**
+
+## How to read an example
+
+Each file has three parts:
+
+1. A **disclaimer** confirming the content is fictional and illustrative.
+2. A **Scenario** describing the fictional facts the skill was run against.
+3. An **Illustrative Output** that follows the corresponding skill's Output Format section by section.
+
+Notice the visible placeholders — `[CONFIRM: ...]`, `[verify jurisdiction]`, `[ATTORNEY TO CONFIRM: ...]`. They are not defects. They are how every skill marks what a person must verify, and a real deliverable would carry them too.
+
+## The examples
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`contract-review-example.md`](contract-review-example.md) | [Contract Risk Review](../skills/contracts/contract-risk-review/SKILL.md) — a risk matrix, negotiability table, and prioritized issue list for a commercial contract. |
+| [`litigation-chronology-example.md`](litigation-chronology-example.md) | [Litigation Chronology](../skills/litigation/litigation-chronology/SKILL.md) — a sourced factual timeline built from documents. |
+| [`dpa-review-example.md`](dpa-review-example.md) | [DPA Review](../skills/privacy/dpa-review/SKILL.md) — a risk review of a data processing agreement. |
+| [`product-launch-review-example.md`](product-launch-review-example.md) | [Launch Review](../skills/product-legal/launch-review/SKILL.md) — pre-launch legal issue-spotting for a product feature. |
+| [`red-team-verifier-example.md`](red-team-verifier-example.md) | [Red-Team Verifier](../skills/legal-methodology/red-team-verifier/SKILL.md) — a final quality-control pass on a draft. |
+
+## Using examples safely
+
+- Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.
+- Do **not** treat an example as a model answer for your jurisdiction or situation.
+- **Do** use an example to understand a skill's structure, then run the skill on your own inputs and have a qualified, licensed attorney review the result.
+
+See [`QUICKSTART.md`](../QUICKSTART.md) to run your first skill, and [`docs/SAFETY_MODEL.md`](../docs/SAFETY_MODEL.md) for the safety model.

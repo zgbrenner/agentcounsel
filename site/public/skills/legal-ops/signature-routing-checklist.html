@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signature Routing Checklist — AgentCounsel</title>
+<meta name="description" content="&quot;Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution.&quot;">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/legal-ops.html">legal-ops</a> / <span>Signature Routing Checklist</span></nav>
+<h1>Signature Routing Checklist</h1>
+<p class="path">Canonical path: <code>skills/legal-ops/signature-routing-checklist/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>"Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution."</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a draft pre-signature readiness review and signing-routing plan for a document that is believed to be in final form. The skill runs a completeness checklist, identifies the signers and the signing order, checks entity names for consistency, flags anything that must be resolved before the document is sent for execution, and assembles a routing plan.</p>
+<p>This skill provides workflow discipline and structure. It produces draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; the skill never sends, transmits, or executes a document.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A user says "is this ready to sign?", "set up signing for this contract," or "prepare this for signature."</li><li>A document is believed final and needs a pre-execution completeness check and a routing plan.</li><li>The user is verifying entity names, exhibits, and signature blocks before a document goes out for signature.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>The document to be signed</strong> — uploaded, pasted, or precisely described.</li><li><strong>The intended signers</strong> — names, titles, the entity each signer binds, and whether each signer is understood to be internally authorized.</li><li><strong>Required internal approvals</strong> — which approvals the document needs and whether they have been obtained.</li><li><strong>Signing preferences</strong> — sequential or parallel signing order, and any CC recipients for the executed copy.</li></ul>
+<p>If the document is not provided, stop and request it. If signer information is incomplete, ask before producing the routing plan.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The document is not in final form or has open redlines — resolve those first (use <code>redline-summary</code> or <code>contract-risk-review</code>).</li><li>The user wants the agent to actually send the document for e-signature — this skill produces a routing plan and a checklist, not an execution action.</li><li>Signing authority is genuinely in question — whether a person or entity can bind is a corporate-authority question; route it to <code>written-consent</code> or to counsel.</li><li>The task is to review the document's terms for risk — use <code>contract-risk-review</code> or the relevant contract-review skill.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; counsel sign-off remains required before a document is sent for signature.</li><li>Check only what is present in the document. Never invent entity names, signature blocks, exhibits, dates, or approvals.</li><li>Do not confirm that a signer is authorized to bind an entity — flag signing authority as a verification item.</li><li>Do not represent the document as "final"; only the responsible attorney or business owner confirms final form.</li><li>Flag every missing exhibit, mismatched entity name, and unobtained approval as a blocker, not as a minor note.</li><li>The skill never sends, transmits, executes, or routes the document to an external party — it produces a plan for a person to act on.</li><li>Distinguish: what the checklist confirms, the blockers it finds, the routing plan, and the verification items.</li><li>Use <code>[CONFIRM: ...]</code> placeholders for anything that cannot be resolved from the materials provided.</li><li>Preserve confidentiality.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Accept the document.</strong> Take the document in whatever form it is provided and confirm what it is — the document type and the parties.</li></ol>
+<ol><li><strong>Run the pre-signature checklist.</strong> Check each item and record the result:<ul><li>The document appears to be in final, agreed form with no open redlines.</li><li>All exhibits, schedules, and attachments referenced in the document are present.</li><li>The legal entity names on the signature blocks are correct and complete.</li><li>Dates are correct, or left blank for the execution date as intended.</li><li>The signature blocks match the intended authorized signers.</li><li>Any required internal approvals have been obtained.</li><li>The document has been reviewed by the appropriate counsel.</li></ul></li></ol>
+<ol><li><strong>Identify issues and blockers.</strong> From the checklist, list every item that did not pass. Mark as a blocker anything that must be resolved before the document can be sent: a missing exhibit, a mismatched or incomplete entity name, an unobtained approval, an unresolved redline.</li></ol>
+<ol><li><strong>Configure signing.</strong> Identify the signers, the signing order (sequential or parallel), any internal approval step that must precede counterparty signature, and the CC recipients for the executed copy.</li></ol>
+<ol><li><strong>Check entity-name consistency.</strong> Compare the entity names in the signature blocks against the names used in the document's preamble and defined terms. Flag any inconsistency — the most common signing error.</li></ol>
+<ol><li><strong>Produce the routing plan.</strong> Lay out the signing sequence step by step. If no e-signature tool is in use, produce manual signing instructions and the full signer contact list instead.</li></ol>
+<ol><li><strong>Determine overall readiness.</strong> State a verdict: <strong>READY TO ROUTE</strong> (the checklist passes and no blockers remain) or <strong>ISSUES TO RESOLVE FIRST</strong> (one or more blockers remain).</li></ol>
+<ol><li><strong>List next steps and verification items.</strong> Note what happens after routing, the expected turnaround, the follow-up point if the document is not signed, and the items an attorney must verify.</li></ol>
+<ol><li><strong>Assemble the output</strong> and label it a draft.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following sections in order:</p>
+<p><strong>DRAFT SIGNATURE READINESS REVIEW — FOR ATTORNEY REVIEW</strong></p>
+<ol><li><strong>Document Details</strong> — document type, parties, and length or scope.</li></ol>
+<ol><li><strong>Pre-Signature Checklist</strong> — each checklist item with its result (pass / issue), and an overall <strong>PASS</strong> or <strong>ISSUES FOUND</strong>.</li></ol>
+<ol><li><strong>Issues and Blockers</strong> — every item that did not pass, with each blocker marked as such.</li></ol>
+<ol><li><strong>Signing Configuration</strong> — table: order, signer, role and the entity bound, contact, internal-approval dependency.</li></ol>
+<ol><li><strong>Entity-Name Consistency Check</strong> — whether the signature-block entity names match the document's preamble and defined terms, with any inconsistency flagged.</li></ol>
+<ol><li><strong>Routing Plan</strong> — the step-by-step signing sequence, or manual signing instructions if no e-signature tool is in use.</li></ol>
+<ol><li><strong>Readiness Verdict</strong> — <strong>READY TO ROUTE</strong> or <strong>ISSUES TO RESOLVE FIRST</strong>, with a one-line rationale.</li></ol>
+<ol><li><strong>Next Steps</strong> — what to expect after routing, turnaround, and the follow-up point.</li></ol>
+<ol><li><strong>Attorney Verification Items</strong> — see the Attorney Verification Checklist below.</li></ol>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The document is confirmed to be in final, agreed form with no open redlines.</li><li>[ ] All exhibits, schedules, and attachments referenced in the document are present and correct.</li><li>[ ] The legal entity names on every signature block are correct, complete, and consistent with the document's preamble and defined terms.</li><li>[ ] Each signer is authorized to bind the entity for which they are signing.</li><li>[ ] All required internal approvals have been obtained and documented.</li><li>[ ] The document has had the appropriate counsel review before being sent for signature.</li><li>[ ] The signing order and any internal-approval dependency are correct for this transaction.</li><li>[ ] The CC list for the executed copy is correct and complete.</li><li>[ ] A <strong>READY TO ROUTE</strong> verdict has counsel sign-off before the document is sent for signature.</li><li>[ ] A plan to file the executed copy in the appropriate system after execution is in place.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Signature Routing Checklist
+description: "Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution."
+practice_area: legal-ops
+task_type: verification
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The document to be signed, uploaded, pasted, or precisely described"
+  - "The intended signers: names, titles, and the entity each signer binds"
+  - "The required internal approvals and whether they have been obtained"
+  - "The signing preferences: sequential or parallel order and any CC recipients"
+outputs:
+  - "Pre-signature completeness checklist with pass or issues result"
+  - "Issues-and-blockers list and entity-name consistency check"
+  - "Signing configuration, routing plan, and readiness verdict"
+related_skills:
+  - skills/legal-ops/legal-meeting-briefing/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - legal-ops
+  - signature
+  - execution-readiness
+  - routing
+  - pre-signature-checklist
+---
+
+# Signature Routing Checklist
+
+## Purpose
+
+Produce a draft pre-signature readiness review and signing-routing plan for a document that is believed to be in final form. The skill runs a completeness checklist, identifies the signers and the signing order, checks entity names for consistency, flags anything that must be resolved before the document is sent for execution, and assembles a routing plan.
+
+This skill provides workflow discipline and structure. It produces draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; the skill never sends, transmits, or executes a document.
+
+## Use When
+
+- A user says "is this ready to sign?", "set up signing for this contract," or "prepare this for signature."
+- A document is believed final and needs a pre-execution completeness check and a routing plan.
+- The user is verifying entity names, exhibits, and signature blocks before a document goes out for signature.
+
+## Required Inputs
+
+- **The document to be signed** — uploaded, pasted, or precisely described.
+- **The intended signers** — names, titles, the entity each signer binds, and whether each signer is understood to be internally authorized.
+- **Required internal approvals** — which approvals the document needs and whether they have been obtained.
+- **Signing preferences** — sequential or parallel signing order, and any CC recipients for the executed copy.
+
+If the document is not provided, stop and request it. If signer information is incomplete, ask before producing the routing plan.
+
+## Do Not Use When
+
+- The document is not in final form or has open redlines — resolve those first (use `redline-summary` or `contract-risk-review`).
+- The user wants the agent to actually send the document for e-signature — this skill produces a routing plan and a checklist, not an execution action.
+- Signing authority is genuinely in question — whether a person or entity can bind is a corporate-authority question; route it to `written-consent` or to counsel.
+- The task is to review the document's terms for risk — use `contract-risk-review` or the relevant contract-review skill.
+
+## Legal Safety Rules
+
+- Produce draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; counsel sign-off remains required before a document is sent for signature.
+- Check only what is present in the document. Never invent entity names, signature blocks, exhibits, dates, or approvals.
+- Do not confirm that a signer is authorized to bind an entity — flag signing authority as a verification item.
+- Do not represent the document as "final"; only the responsible attorney or business owner confirms final form.
+- Flag every missing exhibit, mismatched entity name, and unobtained approval as a blocker, not as a minor note.
+- The skill never sends, transmits, executes, or routes the document to an external party — it produces a plan for a person to act on.
+- Distinguish: what the checklist confirms, the blockers it finds, the routing plan, and the verification items.
+- Use `[CONFIRM: ...]` placeholders for anything that cannot be resolved from the materials provided.
+- Preserve confidentiality.
+
+## Workflow
+
+1. **Accept the document.** Take the document in whatever form it is provided and confirm what it is — the document type and the parties.
+
+2. **Run the pre-signature checklist.** Check each item and record the result:
+   - The document appears to be in final, agreed form with no open redlines.
+   - All exhibits, schedules, and attachments referenced in the document are present.
+   - The legal entity names on the signature blocks are correct and complete.
+   - Dates are correct, or left blank for the execution date as intended.
+   - The signature blocks match the intended authorized signers.
+   - Any required internal approvals have been obtained.
+   - The document has been reviewed by the appropriate counsel.
+
+3. **Identify issues and blockers.** From the checklist, list every item that did not pass. Mark as a blocker anything that must be resolved before the document can be sent: a missing exhibit, a mismatched or incomplete entity name, an unobtained approval, an unresolved redline.
+
+4. **Configure signing.** Identify the signers, the signing order (sequential or parallel), any internal approval step that must precede counterparty signature, and the CC recipients for the executed copy.
+
+5. **Check entity-name consistency.** Compare the entity names in the signature blocks against the names used in the document's preamble and defined terms. Flag any inconsistency — the most common signing error.
+
+6. **Produce the routing plan.** Lay out the signing sequence step by step. If no e-signature tool is in use, produce manual signing instructions and the full signer contact list instead.
+
+7. **Determine overall readiness.** State a verdict: **READY TO ROUTE** (the checklist passes and no blockers remain) or **ISSUES TO RESOLVE FIRST** (one or more blockers remain).
+
+8. **List next steps and verification items.** Note what happens after routing, the expected turnaround, the follow-up point if the document is not signed, and the items an attorney must verify.
+
+9. **Assemble the output** and label it a draft.
+
+## Output Format
+
+Deliver the following sections in order:
+
+**DRAFT SIGNATURE READINESS REVIEW — FOR ATTORNEY REVIEW**
+
+1. **Document Details** — document type, parties, and length or scope.
+
+2. **Pre-Signature Checklist** — each checklist item with its result (pass / issue), and an overall **PASS** or **ISSUES FOUND**.
+
+3. **Issues and Blockers** — every item that did not pass, with each blocker marked as such.
+
+4. **Signing Configuration** — table: order, signer, role and the entity bound, contact, internal-approval dependency.
+
+5. **Entity-Name Consistency Check** — whether the signature-block entity names match the document's preamble and defined terms, with any inconsistency flagged.
+
+6. **Routing Plan** — the step-by-step signing sequence, or manual signing instructions if no e-signature tool is in use.
+
+7. **Readiness Verdict** — **READY TO ROUTE** or **ISSUES TO RESOLVE FIRST**, with a one-line rationale.
+
+8. **Next Steps** — what to expect after routing, turnaround, and the follow-up point.
+
+9. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+
+## Attorney Verification Checklist
+
+- [ ] The document is confirmed to be in final, agreed form with no open redlines.
+- [ ] All exhibits, schedules, and attachments referenced in the document are present and correct.
+- [ ] The legal entity names on every signature block are correct, complete, and consistent with the document's preamble and defined terms.
+- [ ] Each signer is authorized to bind the entity for which they are signing.
+- [ ] All required internal approvals have been obtained and documented.
+- [ ] The document has had the appropriate counsel review before being sent for signature.
+- [ ] The signing order and any internal-approval dependency are correct for this transaction.
+- [ ] The CC list for the executed copy is correct and complete.
+- [ ] A **READY TO ROUTE** verdict has counsel sign-off before the document is sent for signature.
+- [ ] A plan to file the executed copy in the appropriate system after execution is in place.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Signature Routing Checklist ===
+---
+name: Signature Routing Checklist
+description: "Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution."
+practice_area: legal-ops
+task_type: verification
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The document to be signed, uploaded, pasted, or precisely described"
+  - "The intended signers: names, titles, and the entity each signer binds"
+  - "The required internal approvals and whether they have been obtained"
+  - "The signing preferences: sequential or parallel order and any CC recipients"
+outputs:
+  - "Pre-signature completeness checklist with pass or issues result"
+  - "Issues-and-blockers list and entity-name consistency check"
+  - "Signing configuration, routing plan, and readiness verdict"
+related_skills:
+  - skills/legal-ops/legal-meeting-briefing/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - legal-ops
+  - signature
+  - execution-readiness
+  - routing
+  - pre-signature-checklist
+---
+
+# Signature Routing Checklist
+
+## Purpose
+
+Produce a draft pre-signature readiness review and signing-routing plan for a document that is believed to be in final form. The skill runs a completeness checklist, identifies the signers and the signing order, checks entity names for consistency, flags anything that must be resolved before the document is sent for execution, and assembles a routing plan.
+
+This skill provides workflow discipline and structure. It produces draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; the skill never sends, transmits, or executes a document.
+
+## Use When
+
+- A user says "is this ready to sign?", "set up signing for this contract," or "prepare this for signature."
+- A document is believed final and needs a pre-execution completeness check and a routing plan.
+- The user is verifying entity names, exhibits, and signature blocks before a document goes out for signature.
+
+## Required Inputs
+
+- **The document to be signed** — uploaded, pasted, or precisely described.
+- **The intended signers** — names, titles, the entity each signer binds, and whether each signer is understood to be internally authorized.
+- **Required internal approvals** — which approvals the document needs and whether they have been obtained.
+- **Signing preferences** — sequential or parallel signing order, and any CC recipients for the executed copy.
+
+If the document is not provided, stop and request it. If signer information is incomplete, ask before producing the routing plan.
+
+## Do Not Use When
+
+- The document is not in final form or has open redlines — resolve those first (use `redline-summary` or `contract-risk-review`).
+- The user wants the agent to actually send the document for e-signature — this skill produces a routing plan and a checklist, not an execution action.
+- Signing authority is genuinely in question — whether a person or entity can bind is a corporate-authority question; route it to `written-consent` or to counsel.
+- The task is to review the document's terms for risk — use `contract-risk-review` or the relevant contract-review skill.
+
+## Legal Safety Rules
+
+- Produce draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; counsel sign-off remains required before a document is sent for signature.
+- Check only what is present in the document. Never invent entity names, signature blocks, exhibits, dates, or approvals.
+- Do not confirm that a signer is authorized to bind an entity — flag signing authority as a verification item.
+- Do not represent the document as "final"; only the responsible attorney or business owner confirms final form.
+- Flag every missing exhibit, mismatched entity name, and unobtained approval as a blocker, not as a minor note.
+- The skill never sends, transmits, executes, or routes the document to an external party — it produces a plan for a person to act on.
+- Distinguish: what the checklist confirms, the blockers it finds, the routing plan, and the verification items.
+- Use `[CONFIRM: ...]` placeholders for anything that cannot be resolved from the materials provided.
+- Preserve confidentiality.
+
+## Workflow
+
+1. **Accept the document.** Take the document in whatever form it is provided and confirm what it is — the document type and the parties.
+
+2. **Run the pre-signature checklist.** Check each item and record the result:
+   - The document appears to be in final, agreed form with no open redlines.
+   - All exhibits, schedules, and attachments referenced in the document are present.
+   - The legal entity names on the signature blocks are correct and complete.
+   - Dates are correct, or left blank for the execution date as intended.
+   - The signature blocks match the intended authorized signers.
+   - Any required internal approvals have been obtained.
+   - The document has been reviewed by the appropriate counsel.
+
+3. **Identify issues and blockers.** From the checklist, list every item that did not pass. Mark as a blocker anything that must be resolved before the document can be sent: a missing exhibit, a mismatched or incomplete entity name, an unobtained approval, an unresolved redline.
+
+4. **Configure signing.** Identify the signers, the signing order (sequential or parallel), any internal approval step that must precede counterparty signature, and the CC recipients for the executed copy.
+
+5. **Check entity-name consistency.** Compare the entity names in the signature blocks against the names used in the document's preamble and defined terms. Flag any inconsistency — the most common signing error.
+
+6. **Produce the routing plan.** Lay out the signing sequence step by step. If no e-signature tool is in use, produce manual signing instructions and the full signer contact list instead.
+
+7. **Determine overall readiness.** State a verdict: **READY TO ROUTE** (the checklist passes and no blockers remain) or **ISSUES TO RESOLVE FIRST** (one or more blockers remain).
+
+8. **List next steps and verification items.** Note what happens after routing, the expected turnaround, the follow-up point if the document is not signed, and the items an attorney must verify.
+
+9. **Assemble the output** and label it a draft.
+
+## Output Format
+
+Deliver the following sections in order:
+
+**DRAFT SIGNATURE READINESS REVIEW — FOR ATTORNEY REVIEW**
+
+1. **Document Details** — document type, parties, and length or scope.
+
+2. **Pre-Signature Checklist** — each checklist item with its result (pass / issue), and an overall **PASS** or **ISSUES FOUND**.
+
+3. **Issues and Blockers** — every item that did not pass, with each blocker marked as such.
+
+4. **Signing Configuration** — table: order, signer, role and the entity bound, contact, internal-approval dependency.
+
+5. **Entity-Name Consistency Check** — whether the signature-block entity names match the document's preamble and defined terms, with any inconsistency flagged.
+
+6. **Routing Plan** — the step-by-step signing sequence, or manual signing instructions if no e-signature tool is in use.
+
+7. **Readiness Verdict** — **READY TO ROUTE** or **ISSUES TO RESOLVE FIRST**, with a one-line rationale.
+
+8. **Next Steps** — what to expect after routing, turnaround, and the follow-up point.
+
+9. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+
+## Attorney Verification Checklist
+
+- [ ] The document is confirmed to be in final, agreed form with no open redlines.
+- [ ] All exhibits, schedules, and attachments referenced in the document are present and correct.
+- [ ] The legal entity names on every signature block are correct, complete, and consistent with the document's preamble and defined terms.
+- [ ] Each signer is authorized to bind the entity for which they are signing.
+- [ ] All required internal approvals have been obtained and documented.
+- [ ] The document has had the appropriate counsel review before being sent for signature.
+- [ ] The signing order and any internal-approval dependency are correct for this transaction.
+- [ ] The CC list for the executed copy is correct and complete.
+- [ ] A **READY TO ROUTE** verdict has counsel sign-off before the document is sent for signature.
+- [ ] A plan to file the executed copy in the appropriate system after execution is in place.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

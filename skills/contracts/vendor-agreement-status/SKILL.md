@@ -1,6 +1,31 @@
 ---
 name: Vendor Agreement Status
-description: Use when assembling a consolidated status report of the agreements in place with a given vendor — what is executed, current, expired, or missing — with a gap analysis, upcoming dates, and surviving obligations for attorney review.
+description: "Use when assembling a consolidated status report of the agreements in place with a given vendor — what is executed, current, expired, or missing — with a gap analysis, upcoming dates, and surviving obligations for attorney review."
+practice_area: contracts
+task_type: extraction
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The vendor's identity, including known name variations and parent or subsidiary relationships"
+  - "The executed agreements, amendments, statements of work, DPAs, NDAs, and related records the user provides"
+  - "The relationship context and whether the vendor handles personal data"
+  - "Optional: the agreement types the firm expects for a vendor of this type"
+outputs:
+  - "Vendor overview and records-reviewed summary"
+  - "Agreement inventory with apparent status and key dates"
+  - "Gap analysis, upcoming dates, and surviving obligations"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+  - skills/contracts/sow-review/SKILL.md
+  - skills/privacy/dpa-review/SKILL.md
+tags:
+  - contracts
+  - vendor-management
+  - agreement-inventory
+  - gap-analysis
+  - contract-lifecycle
 ---
 
 # Vendor Agreement Status
@@ -34,6 +59,7 @@ If no agreement records are provided, stop and request them.
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice; a status report is not a legal opinion on enforceability or coverage.
 - Report only on the documents actually provided. Never invent agreements, amendments, dates, parties, or terms.
 - State clearly which records were reviewed and which expected sources were not available, so the report's coverage is transparent.

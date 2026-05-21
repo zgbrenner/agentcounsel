@@ -18,7 +18,7 @@ AgentCounsel is **Markdown-first** and **safety-first**. Contributions are evalu
 A skill will not be merged unless it meets all of these.
 
 1. **Markdown-first.** A skill is a `SKILL.md` file plus optional Markdown templates and references. No scripts, no build steps, no runtime.
-2. **Follows the standard structure.** `SKILL.md` uses the required frontmatter (`name`, `description`) and these sections, in order: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
+2. **Follows the standard structure.** `SKILL.md` carries the standardized YAML frontmatter — all eleven fields defined in `docs/SKILL_METADATA_STANDARD.md` — and these sections, in order: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
 3. **Includes an Attorney Verification Checklist.** Every skill ends with a checklist of items a supervising attorney must confirm.
 4. **Preserves confidentiality.** The skill follows `core/confidentiality-and-privilege.md`. Templates and examples use fictional placeholders only — never real client facts, names, or data.
 5. **No fake citations.** No invented or unverifiable cases, statutes, regulations, citations, quotations, dates, or deadlines — anywhere, including examples. See `core/source-and-citation-discipline.md`.
@@ -41,7 +41,7 @@ A skill will not be merged unless it meets all of these.
 3. Add the skill to `SKILLS_INDEX.md` and, where relevant, `WORKFLOW_ROUTER.md`.
 4. Re-read the `core/` rules and self-check against the hard requirements above.
 5. If you changed a skill that is part of the Claude Code plugin bundle, run `python scripts/sync_plugin_skills.py`. See `PLUGIN_SYNC.md`.
-6. Run `python scripts/validate_repo.py` and resolve any errors it reports. See `VALIDATION.md`.
+6. Run `python scripts/build_skill_index.py` to regenerate `metadata/index.json`, then `python scripts/validate_repo.py` and resolve any errors it reports. See `VALIDATION.md` and `docs/SKILL_METADATA_STANDARD.md`.
 7. Note any user-facing change under "Unreleased" in `CHANGELOG.md`.
 8. Open a pull request and complete the checklist in the pull request template.
 

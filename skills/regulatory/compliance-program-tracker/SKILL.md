@@ -1,6 +1,31 @@
 ---
 name: Compliance Program Tracker
-description: Use when building an ongoing compliance-program tracker for a framework — mapping requirements to controls, owners, and evidence, building an audit calendar, and surfacing evidence gaps and remediation items for attorney review and audit readiness.
+description: "Use when building an ongoing compliance-program tracker for a framework — mapping requirements to controls, owners, and evidence, building an audit calendar, and surfacing evidence gaps and remediation items for attorney review and audit readiness."
+practice_area: regulatory
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The framework, regulation, or standard source text"
+  - "The organization's control inventory, with owners and evidence locations"
+  - "Audit context: known audit dates, audit period, assessor"
+  - "Organization context and regulatory status"
+  - "Optional: scope boundaries — entities, business lines, or systems in scope"
+outputs:
+  - "Control inventory and requirement map"
+  - "Evidence status, audit calendar, and remediation items"
+  - "Priority view for the next audit"
+related_skills:
+  - skills/regulatory/compliance-gap-matrix/SKILL.md
+  - skills/regulatory/rule-change-summary/SKILL.md
+  - skills/regulatory/enforcement-risk-memo/SKILL.md
+tags:
+  - regulatory
+  - compliance
+  - audit-readiness
+  - controls
+  - evidence-tracking
 ---
 
 # Compliance Program Tracker

@@ -1,6 +1,31 @@
 ---
 name: Signature Routing Checklist
-description: Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution.
+description: "Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution."
+practice_area: legal-ops
+task_type: verification
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The document to be signed, uploaded, pasted, or precisely described"
+  - "The intended signers: names, titles, and the entity each signer binds"
+  - "The required internal approvals and whether they have been obtained"
+  - "The signing preferences: sequential or parallel order and any CC recipients"
+outputs:
+  - "Pre-signature completeness checklist with pass or issues result"
+  - "Issues-and-blockers list and entity-name consistency check"
+  - "Signing configuration, routing plan, and readiness verdict"
+related_skills:
+  - skills/legal-ops/legal-meeting-briefing/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - legal-ops
+  - signature
+  - execution-readiness
+  - routing
+  - pre-signature-checklist
 ---
 
 # Signature Routing Checklist

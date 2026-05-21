@@ -1,6 +1,29 @@
 ---
 name: Legal Meeting Briefing
-description: Use when preparing a structured briefing for a meeting with legal relevance — assembling background, participants, agenda, key documents, open issues, legal considerations, talking points, and a follow-up action-item tracker from the materials provided.
+description: "Use when preparing a structured briefing for a meeting with legal relevance — assembling background, participants, agenda, key documents, open issues, legal considerations, talking points, and a follow-up action-item tracker from the materials provided."
+practice_area: legal-ops
+task_type: summarization
+jurisdictions: []
+risk_level: low
+requires_attorney_review: true
+inputs:
+  - "The meeting context: title and type, date and time, participants and roles, agenda, and the legal team member's role"
+  - "The background materials the user provides (correspondence, prior notes, agreements, matter records, deal documents)"
+  - "Optional: the negotiation parameters or red lines for a negotiation meeting"
+outputs:
+  - "Structured meeting briefing pack (details, participants, agenda, background, key documents)"
+  - "Open issues, legal considerations, talking points, questions, and decisions needed"
+  - "Action-item tracker and preparation-gap list"
+related_skills:
+  - skills/legal-ops/signature-routing-checklist/SKILL.md
+  - skills/corporate/board-minutes/SKILL.md
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - legal-ops
+  - meeting-preparation
+  - briefing
+  - action-items
+  - legal-operations
 ---
 
 # Legal Meeting Briefing
@@ -33,6 +56,7 @@ If the meeting context is missing, request it. If background materials are thin,
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft work product for review. This is not legal advice. A briefing organizes information; it does not resolve the legal questions in it.
 - Brief only from the materials the user provides. Never invent participants, prior communications, document contents, dates, deal terms, or facts.
 - In the legal-considerations section, frame points as issues to raise or verify — not as legal conclusions.
