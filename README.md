@@ -88,7 +88,9 @@ See `SKILLS_INDEX.md` for the full catalog.
 
 **4. As a Claude Code plugin-style bundle.** Use the curated starter bundle in `adapters/claude-code-plugin/`.
 
-**5. Bundled into your own agent project.** Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions.
+**5. As a Gemini CLI extension.** Install the repository as a Gemini CLI extension; `gemini-extension.json` and `GEMINI.md` load the operating model automatically. See `adapters/gemini/`.
+
+**6. Bundled into your own agent project.** Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions.
 
 ## Quick start
 
@@ -119,6 +121,7 @@ Adapters are intentionally **thin**. They tell a particular environment how to f
 | Codex / repo agents | Repo-based coding and legal agents | `adapters/codex/` |
 | Claude Code plugin | Plugin-style packaging | `adapters/claude-code-plugin/` |
 | Claude / Cowork | Local-folder playbook use | `adapters/claude-cowork/` |
+| Gemini CLI | Gemini CLI extension | `adapters/gemini/` |
 
 ## Validation
 
