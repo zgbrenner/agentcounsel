@@ -6,6 +6,8 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- `evals/`: a lightweight skill eval framework — `README.md`, a shared assertion catalogue (`evals/shared/assertions.md`), an eight-dimension `SKILL_QUALITY_RUBRIC.md`, and sample evals for eight skills (`contract-risk-review`, `nda-review`, `litigation-matter-intake`, `chronology-builder`, `privilege-log-review`, `dpa-review`, `product-launch-review`, `regulatory-gap-analysis`). The evals are quality checks, not legal validation, and the YAML format is shaped to adapt to promptfoo later.
+- `scripts/check_evals.py`: a non-LLM static check that validates the eval files exist and conform to the schema, with no API keys required. It runs in CI alongside `scripts/validate_repo.py`.
 - Plugin bundle sync tooling: `scripts/sync_plugin_skills.py` generates the Claude Code plugin bundle from canonical `/skills`, with a `--check` mode for CI. Documented in `PLUGIN_SYNC.md`.
 - Skill templates are now included in the Claude Code plugin bundle, so it is self-contained.
 - Plugin bundle drift detection in `scripts/validate_repo.py`.

@@ -26,3 +26,6 @@ jobs:
 
       - name: Validate repository
         run: python scripts/validate_repo.py
+
+      - name: Validate skill eval framework
+        run: python scripts/check_evals.py
