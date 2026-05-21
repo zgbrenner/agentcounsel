@@ -34,6 +34,16 @@ The [`real-estate/`](real-estate/) subdirectory holds fuller worked examples, ea
 | [`real-estate/acquisition-diligence/`](real-estate/acquisition-diligence/) | [Real Estate Diligence Checklist](../skills/real-estate/real-estate-diligence-checklist/SKILL.md) — a tailored diligence checklist for a property acquisition. |
 | [`real-estate/title-survey-objections/`](real-estate/title-survey-objections/) | [Title and Survey Objection Tracker](../skills/real-estate/title-survey-objection-tracker/SKILL.md) — a source-cited title and survey objection tracker. |
 
+## M&A worked examples
+
+The [`m-and-a/`](m-and-a/) subdirectory holds worked examples for the Mergers & Acquisitions practice area, each as a request-and-output pair.
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`m-and-a/loi-term-sheet-review/`](m-and-a/loi-term-sheet-review/) | [LOI and Term Sheet Review](../skills/m-and-a/loi-term-sheet-review/SKILL.md) — a binding/non-binding provision table and a deal-terms issue list. |
+| [`m-and-a/acquisition-diligence/`](m-and-a/acquisition-diligence/) | [Acquisition Diligence Request List](../skills/m-and-a/acquisition-diligence-request-list/SKILL.md) — a tailored diligence request list by workstream. |
+| [`m-and-a/purchase-agreement-review/`](m-and-a/purchase-agreement-review/) | [Purchase Agreement Issue List](../skills/m-and-a/purchase-agreement-issue-list/SKILL.md) — an issue list and risk matrix for an acquisition agreement. |
+
 ## Using examples safely
 
 - Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.

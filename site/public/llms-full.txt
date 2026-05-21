@@ -2,8 +2,8 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 75
-Practice areas: 15
+Total skills: 85
+Practice areas: 16
 
 ## Legal Research (1 skill)
 
@@ -717,6 +717,100 @@ Use when:
   - A transaction or leasing team needs an early read on whether an intended use
   - Provided diligence materials — zoning reports, CC&Rs, recorded restrictions,
   - An issue-spotting list is needed as an input to a broader diligence review.
+
+## Mergers & Acquisitions (10 skills)
+
+### Acquisition Diligence Request List
+Path: skills/m-and-a/acquisition-diligence-request-list/SKILL.md
+Catalog page: skills/m-and-a/acquisition-diligence-request-list.html
+Trigger: "Use when generating a tailored M&A due-diligence request list, organized by workstream, for a buyer or seller in an acquisition."
+Use when:
+  - A user asks to "build a diligence request list," "draft a due-diligence
+  - A buyer-side deal team needs a tailored diligence request list before or
+  - A seller-side or company-side team needs a request list to anticipate buyer
+
+### Data Room Index Review
+Path: skills/m-and-a/data-room-index-review/SKILL.md
+Catalog page: skills/m-and-a/data-room-index-review.html
+Trigger: "Use when reviewing an M&A data room index or file list to identify missing diligence categories, coverage gaps, and follow-up requests for attorney review."
+Use when:
+  - A user asks to "review our data room index," "check this file list for gaps,"
+  - A deal team needs a structured read of a data room index before diligence
+  - A seller-side team needs to check its own index for completeness, duplicates,
+
+### Indemnity and Escrow Risk Review
+Path: skills/m-and-a/indemnity-escrow-risk-review/SKILL.md
+Catalog page: skills/m-and-a/indemnity-escrow-risk-review.html
+Trigger: "Use when analyzing the indemnification and escrow architecture of an M&A purchase agreement — survival, caps, baskets, escrow, and recovery mechanics — for attorney review."
+Use when:
+  - A user asks to "review the indemnity in this purchase agreement," "check the
+  - A deal team needs a structured read of the indemnification, escrow, and
+  - The indemnity and escrow architecture of a stock purchase, asset purchase,
+  - A reviewer needs a recovery waterfall showing the order and limits in which
+
+### Integration Legal Issues Checklist
+Path: skills/m-and-a/integration-legal-issues-checklist/SKILL.md
+Catalog page: skills/m-and-a/integration-legal-issues-checklist.html
+Trigger: "Use when generating a legal integration checklist after signing or closing an M&A transaction, organized by workstream for legal and business owners."
+Use when:
+  - A user asks to "build an integration checklist," "list the legal issues for
+  - A deal team needs a workstream-organized view of the legal integration tasks
+  - A legal and business team needs a shared scaffold that assigns owners and
+
+### LOI and Term Sheet Review
+Path: skills/m-and-a/loi-term-sheet-review/SKILL.md
+Catalog page: skills/m-and-a/loi-term-sheet-review.html
+Trigger: "Use when reviewing a letter of intent, term sheet, or indication of interest for an M&A transaction to surface the deal terms, the binding-versus-non-binding provisions, and negotiation issues for attorney review."
+Use when:
+  - A user asks to "review this LOI," "review this term sheet," "what should we
+  - A deal team needs a structured read of an LOI before signing it or countering.
+  - An LOI or term sheet must be summarized as the front end of an acquisition,
+
+### M&A Closing Deliverables Tracker
+Path: skills/m-and-a/closing-deliverables-tracker/SKILL.md
+Catalog page: skills/m-and-a/closing-deliverables-tracker.html
+Trigger: "Use when building a closing checklist of deliverables for an M&A transaction, tracking responsible party, status, dependencies, and signature and delivery needs."
+Use when:
+  - A user asks to "build a closing checklist," "make a closing-deliverables
+  - A deal team needs a structured tracker to drive a merger, acquisition, asset
+  - A purchase agreement has been signed and the closing-conditions and
+
+### Post-Closing Obligations Tracker
+Path: skills/m-and-a/post-closing-obligations-tracker/SKILL.md
+Catalog page: skills/m-and-a/post-closing-obligations-tracker.html
+Trigger: "Use when extracting and organizing the post-closing covenants and obligations from an M&A acquisition agreement and its ancillary documents into a tracked, source-cited obligation list."
+Use when:
+  - A user asks to "build a post-closing tracker," "list the post-closing
+  - A deal team needs a structured, source-cited list of post-closing obligations
+  - The post-closing covenants of an acquisition, merger, asset purchase, stock
+
+### Purchase Agreement Issue List
+Path: skills/m-and-a/purchase-agreement-issue-list/SKILL.md
+Catalog page: skills/m-and-a/purchase-agreement-issue-list.html
+Trigger: "Use when reviewing an M&A purchase agreement — a merger, stock purchase, asset purchase, or membership-interest purchase agreement — from a buyer or seller perspective to produce an issue list and risk matrix for attorney review."
+Use when:
+  - A user asks to "review this purchase agreement," "review this merger
+  - A deal team needs a structured read of a definitive acquisition agreement
+  - A draft merger, stock purchase, asset purchase, or membership-interest
+
+### Reps and Warranties Disclosure Schedule Review
+Path: skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md
+Catalog page: skills/m-and-a/reps-warranties-disclosure-schedule-review.html
+Trigger: "Use when comparing the representations and warranties in an M&A purchase agreement against the disclosure schedules to surface gaps, mismatches, and unresolved items for attorney review."
+Use when:
+  - A user asks to "review the disclosure schedules," "compare the reps to the
+  - A deal team needs a structured cross-check of the representations-and-warranties
+  - A buyer- or seller-side reviewer needs to find missing schedule references,
+  - The disclosure schedules have been delivered or updated and the team needs a
+
+### Third-Party Consents and Assignment Review
+Path: skills/m-and-a/third-party-consents-assignment-review/SKILL.md
+Catalog page: skills/m-and-a/third-party-consents-assignment-review.html
+Trigger: "Use when identifying contractual consent, notice, change-of-control, and anti-assignment issues from M&A diligence contracts or summaries, organized into a consent tracker for attorney review."
+Use when:
+  - A user asks to "list the consents we need," "review these contracts for
+  - A deal team needs a structured read of diligence contracts to plan consent
+  - Contracts or diligence summaries must be triaged for anti-assignment,
 
 ## Legal Methodology (4 skills)
 

@@ -69,6 +69,21 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/real-estate:estoppel-snda` | `skills/real-estate/estoppel-snda-review/SKILL.md` | "review this estoppel or SNDA" | The estoppel or SNDA, perspective, lease if available | Issue list and lease discrepancy table | `/real-estate:lease-abstract` |
 | `/real-estate:zoning-issues` | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` | "spot zoning and use-restriction issues" | Intended use, provided materials, jurisdiction | Issue list and questions for local counsel | `/real-estate:diligence-checklist` |
 
+## Mergers & Acquisitions
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/m-and-a:loi-review` | `skills/m-and-a/loi-term-sheet-review/SKILL.md` | "review this LOI", "review this term sheet" | The LOI or term sheet, the side, the deal type | Binding/non-binding table and deal-terms issue list | `/m-and-a:purchase-agreement` |
+| `/m-and-a:diligence-request-list` | `skills/m-and-a/acquisition-diligence-request-list/SKILL.md` | "build an M&A diligence request list" | Deal type, industry, target profile, side | Diligence request list by workstream | `/m-and-a:data-room-review` |
+| `/m-and-a:data-room-review` | `skills/m-and-a/data-room-index-review/SKILL.md` | "review this data room index" | The data room index, deal type, side | Data-room gap matrix | `/m-and-a:diligence-request-list` |
+| `/m-and-a:purchase-agreement` | `skills/m-and-a/purchase-agreement-issue-list/SKILL.md` | "review this purchase agreement" | The purchase agreement, side, deal type | Issue list and risk matrix | `/m-and-a:reps-disclosure`, `/m-and-a:indemnity-escrow` |
+| `/m-and-a:reps-disclosure` | `skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md` | "compare reps against the disclosure schedules" | The reps article, the disclosure schedules, the side | Rep-by-rep review table | `/m-and-a:purchase-agreement` |
+| `/m-and-a:indemnity-escrow` | `skills/m-and-a/indemnity-escrow-risk-review/SKILL.md` | "review the indemnity and escrow terms" | The indemnity and escrow provisions, the side | Indemnity architecture and risk matrix | `/m-and-a:purchase-agreement` |
+| `/m-and-a:closing-tracker` | `skills/m-and-a/closing-deliverables-tracker/SKILL.md` | "build the M&A closing checklist" | Deal type, side, agreement and ancillary documents | Closing-deliverables tracker | `/m-and-a:consents` |
+| `/m-and-a:consents` | `skills/m-and-a/third-party-consents-assignment-review/SKILL.md` | "what consents does this deal need" | Contracts or diligence summaries, deal structure, side | Consent tracker | `/m-and-a:closing-tracker` |
+| `/m-and-a:post-closing` | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` | "track the post-closing obligations" | The acquisition agreement and ancillary documents, the side | Post-closing obligation tracker | `/m-and-a:integration` |
+| `/m-and-a:integration` | `skills/m-and-a/integration-legal-issues-checklist/SKILL.md` | "build a legal integration checklist" | Deal type, pre/post-close status, target profile, side | Legal integration checklist | `/m-and-a:post-closing` |
+
 ## Employment
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
