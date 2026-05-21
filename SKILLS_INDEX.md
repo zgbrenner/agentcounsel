@@ -130,3 +130,4 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `matter-workspaces/` — single-file scaffolds for organizing one specific matter.
 - `COMMANDS.md` — slash-style command shorthands mapped to these skills.
 - `skills/contracts/references/` — shared reference material for the contracts skills.
+- `skills/m-and-a/references/` — shared M&A output-pattern reference for the M&A skills.

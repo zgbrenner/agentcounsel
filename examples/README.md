@@ -43,6 +43,8 @@ The [`m-and-a/`](m-and-a/) subdirectory holds worked examples for the Mergers & 
 | [`m-and-a/loi-term-sheet-review/`](m-and-a/loi-term-sheet-review/) | [LOI and Term Sheet Review](../skills/m-and-a/loi-term-sheet-review/SKILL.md) — a binding/non-binding provision table and a deal-terms issue list. |
 | [`m-and-a/acquisition-diligence/`](m-and-a/acquisition-diligence/) | [Acquisition Diligence Request List](../skills/m-and-a/acquisition-diligence-request-list/SKILL.md) — a tailored diligence request list by workstream. |
 | [`m-and-a/purchase-agreement-review/`](m-and-a/purchase-agreement-review/) | [Purchase Agreement Issue List](../skills/m-and-a/purchase-agreement-issue-list/SKILL.md) — an issue list and risk matrix for an acquisition agreement. |
+| [`m-and-a/disclosure-schedule-review/`](m-and-a/disclosure-schedule-review/) | [Reps and Warranties Disclosure Schedule Review](../skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md) — a rep-by-rep review against the disclosure schedules. |
+| [`m-and-a/signing-to-closing/`](m-and-a/signing-to-closing/) | [M&A Closing Deliverables Tracker](../skills/m-and-a/closing-deliverables-tracker/SKILL.md) — a closing-deliverables tracker for a signed deal heading to closing. |
 
 ## Using examples safely
 

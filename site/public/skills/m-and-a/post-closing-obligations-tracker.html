@@ -43,7 +43,7 @@
 </section>
 <section class="skill-section" id="required-inputs">
 <h2>Required Inputs</h2>
-<ul><li><strong>The acquisition agreement text</strong> — uploaded or pasted. Do not extract from a description, a summary, or a partial excerpt.</li><li><strong>The ancillary documents</strong> — for example an escrow agreement, transition services agreement, employment or non-competition agreements, an earnout schedule, IP assignments, or disclosure schedules — uploaded or pasted if they exist. Note any that are referenced but not provided.</li><li><strong>The side</strong> the tracker is for — buyer-side or seller-side.</li><li><strong>The closing date and any other key dates</strong> — as stated by the user or in the documents, or flagged as unknown. Dates are never computed.</li><li><strong>Jurisdiction and governing law</strong> — as stated in the documents, or flagged as unknown.</li></ul>
+<ul><li><strong>The acquisition agreement text</strong> — uploaded or pasted. Do not extract from a description, a summary, or a partial excerpt.</li><li><strong>The ancillary documents</strong> — for example an escrow agreement, transition services agreement, employment or non-competition agreements, an earnout schedule, IP assignments, or disclosure schedules — uploaded or pasted if they exist. Note any that are referenced but not provided.</li><li><strong>The side</strong> the tracker is for — buyer-side or seller-side.</li><li><strong>The deal type</strong> — for example a stock purchase, asset purchase, merger, or membership-interest purchase.</li><li><strong>The closing date and any other key dates</strong> — as stated by the user or in the documents, or flagged as unknown. Dates are never computed.</li><li><strong>Jurisdiction and governing law</strong> — as stated in the documents, or flagged as unknown.</li></ul>
 <p>If the acquisition agreement text is not provided, stop and request it. Do not extract obligations from a document you have not been given.</p>
 </section>
 <section class="skill-section" id="do-not-use-when">
@@ -56,8 +56,8 @@
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
-<ol><li><strong>Confirm inputs.</strong> Verify you have the acquisition agreement, the ancillary documents (or a note of which are referenced but not provided), the side, the closing date and key dates (or a flag that they are unknown), and the governing law (or a flag that it is unknown). If the acquisition agreement is missing, stop and request it.</li></ol>
-<ol><li><strong>Orient.</strong> State the agreement type, the parties as named, the side the tracker is for, the closing date as stated (or <code>[CONFIRM: closing date]</code>), the governing law (or <code>[CONFIRM: governing law]</code>), and the list of ancillary documents — marking each as provided or referenced-but-not-provided.</li></ol>
+<ol><li><strong>Confirm inputs.</strong> Verify you have the acquisition agreement, the ancillary documents (or a note of which are referenced but not provided), the side, the deal type, the closing date and key dates (or a flag that they are unknown), and the governing law (or a flag that it is unknown). If the acquisition agreement is missing, stop and request it.</li></ol>
+<ol><li><strong>Orient.</strong> State the agreement type, the deal type, the parties as named, the side the tracker is for, the closing date as stated (or <code>[CONFIRM: closing date]</code>), the governing law (or <code>[CONFIRM: governing law]</code>), and the list of ancillary documents — marking each as provided or referenced-but-not-provided.</li></ol>
 <ol><li><strong>Extract post-closing obligations.</strong> Work through the acquisition agreement and each provided ancillary document. For each post-closing obligation, record the obligation, the owner, the trigger, the due date if the documents state one, the source (document and section, clause, or schedule), and any dependency. Cover at least the topics below; record <code>Not found</code> where the documents are silent on a topic:<ul><li>Purchase-price adjustment / true-up process (closing statement, dispute mechanism, payment of the final adjustment).</li><li>Earnout milestones and earnout payment obligations.</li><li>Transition services and their wind-down.</li><li>Employee matters (continued employment, benefits continuation, payroll and benefits transition).</li><li>Restrictive covenants (non-competition, non-solicitation, confidentiality) and their duration.</li><li>Tax cooperation, tax return filing, and tax-contest cooperation.</li><li>Books-and-records retention and access.</li><li>Indemnification-notice and claim-procedure obligations.</li><li>Escrow funding, escrow release, and holdback release.</li><li>IP transfer cleanup (assignment recordation, domain and registration transfers).</li><li>Regulatory filings or notices, if the documents provide for them.</li><li>Integration-related legal tasks the documents assign post-closing.</li></ul></li></ol>
 <ol><li><strong>Record triggers and dates as stated.</strong> For each obligation, capture whether it is triggered by the closing, by a fixed calendar date, by an elapsed period, by a milestone, or by another event — using the documents' own language. Where a date is stated, copy it verbatim and append <code>[deadline verification required]</code>. Never compute a date.</li></ol>
 <ol><li><strong>Map dependencies.</strong> Note where one obligation depends on another (for example, an escrow release that follows the resolution of an indemnity claim, or a true-up payment that follows the closing-statement dispute period).</li></ol>
@@ -67,7 +67,7 @@
 <section class="skill-section" id="output-format">
 <h2>Output Format</h2>
 <p>Deliver, in order:</p>
-<ol><li><strong>Deal Summary</strong> — agreement type, parties, the side the tracker is for, the closing date as stated, governing law, and a list of ancillary documents marked provided or referenced-but-not-provided.</li></ol>
+<ol><li><strong>Deal Summary</strong> — agreement type, deal type, parties, the side the tracker is for, the closing date as stated, governing law, and a list of ancillary documents marked provided or referenced-but-not-provided.</li></ol>
 <ol><li><strong>Post-Closing Obligation Tracker</strong> — a Markdown table:</li></ol>
 <table><thead><tr><th>#</th><th>Obligation</th><th>Owner</th><th>Trigger</th><th>Due date (as stated)</th><th>Source (document + section)</th><th>Dependency</th><th>Verification item</th></tr></thead><tbody><tr><td>1</td><td>[obligation as the documents state it]</td><td>[buyer / seller / escrow agent / Not found]</td><td>[closing / fixed date / elapsed period / milestone / Not found]</td><td>[date verbatim + <code>[deadline verification required]</code>, or <code>Not found</code>]</td><td>[document, section/clause]</td><td>[#, or <code>None</code>]</td><td>[what the attorney must confirm]</td></tr></tbody></table>
 <p>One row per obligation. Use <code>Not found</code>, <code>Unknown</code>, or <code>Ambiguous</code> in any    cell the documents do not support. Never compute a due date.</p>
@@ -78,7 +78,7 @@
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
-<ul><li>[ ] The documents tracked are the complete, executed acquisition agreement and all ancillary documents; every referenced-but-not-provided document has been obtained and reviewed.</li><li>[ ] The side and the closing date are correctly stated.</li><li>[ ] Every obligation in the tracker has been spot-checked against the cited document and section.</li><li>[ ] Every owner, trigger, and due date reflects the documents and no obligation, owner, trigger, or date was invented.</li><li>[ ] Every date is attorney-verified; no date was computed by the agent.</li><li>[ ] Whether each obligation has been satisfied, waived, or breached has been assessed by counsel; this tracker did not decide that question.</li><li>[ ] The legal consequences of any missed or late obligation have been assessed by counsel.</li><li>[ ] Every <code>Not found</code>, <code>Unknown</code>, and <code>Ambiguous</code> item has been resolved or consciously accepted.</li><li>[ ] Governing law has been confirmed and any jurisdiction-specific filing, tax, or regulatory obligation has been verified by counsel.</li><li>[ ] The tracker has been completed by a qualified attorney before it is relied upon or distributed.</li></ul>
+<ul><li>[ ] The documents tracked are the complete, executed acquisition agreement and all ancillary documents; every referenced-but-not-provided document has been obtained and reviewed.</li><li>[ ] The side, the deal type, and the closing date are correctly stated.</li><li>[ ] Every obligation in the tracker has been spot-checked against the cited document and section.</li><li>[ ] Every owner, trigger, and due date reflects the documents and no obligation, owner, trigger, or date was invented.</li><li>[ ] Every date is attorney-verified; no date was computed by the agent.</li><li>[ ] Whether each obligation has been satisfied, waived, or breached has been assessed by counsel; this tracker did not decide that question.</li><li>[ ] The legal consequences of any missed or late obligation have been assessed by counsel.</li><li>[ ] Every <code>Not found</code>, <code>Unknown</code>, and <code>Ambiguous</code> item has been resolved or consciously accepted.</li><li>[ ] Governing law has been confirmed and any jurisdiction-specific filing, tax, or regulatory obligation has been verified by counsel.</li><li>[ ] The tracker has been completed by a qualified attorney before it is relied upon or distributed.</li></ul>
 </section>
 <section class="skill-section" id="raw-skill">
 <h2>Full raw SKILL.md</h2>
@@ -162,6 +162,8 @@ flags the question.
   schedule, IP assignments, or disclosure schedules — uploaded or pasted if they
   exist. Note any that are referenced but not provided.
 - **The side** the tracker is for — buyer-side or seller-side.
+- **The deal type** — for example a stock purchase, asset purchase, merger, or
+  membership-interest purchase.
 - **The closing date and any other key dates** — as stated by the user or in the
   documents, or flagged as unknown. Dates are never computed.
 - **Jurisdiction and governing law** — as stated in the documents, or flagged as
@@ -216,12 +218,13 @@ extract obligations from a document you have not been given.
 
 1. **Confirm inputs.** Verify you have the acquisition agreement, the ancillary
    documents (or a note of which are referenced but not provided), the side, the
-   closing date and key dates (or a flag that they are unknown), and the
-   governing law (or a flag that it is unknown). If the acquisition agreement is
-   missing, stop and request it.
+   deal type, the closing date and key dates (or a flag that they are unknown),
+   and the governing law (or a flag that it is unknown). If the acquisition
+   agreement is missing, stop and request it.
 
-2. **Orient.** State the agreement type, the parties as named, the side the
-   tracker is for, the closing date as stated (or `[CONFIRM: closing date]`),
+2. **Orient.** State the agreement type, the deal type, the parties as named,
+   the side the tracker is for, the closing date as stated (or
+   `[CONFIRM: closing date]`),
    the governing law (or `[CONFIRM: governing law]`), and the list of ancillary
    documents — marking each as provided or referenced-but-not-provided.
 
@@ -269,9 +272,9 @@ extract obligations from a document you have not been given.
 
 Deliver, in order:
 
-1. **Deal Summary** — agreement type, parties, the side the tracker is for, the
-   closing date as stated, governing law, and a list of ancillary documents
-   marked provided or referenced-but-not-provided.
+1. **Deal Summary** — agreement type, deal type, parties, the side the tracker
+   is for, the closing date as stated, governing law, and a list of ancillary
+   documents marked provided or referenced-but-not-provided.
 
 2. **Post-Closing Obligation Tracker** — a Markdown table:
 
@@ -320,7 +323,7 @@ specific rule is supplied.
 - [ ] The documents tracked are the complete, executed acquisition agreement
       and all ancillary documents; every referenced-but-not-provided document
       has been obtained and reviewed.
-- [ ] The side and the closing date are correctly stated.
+- [ ] The side, the deal type, and the closing date are correctly stated.
 - [ ] Every obligation in the tracker has been spot-checked against the cited
       document and section.
 - [ ] Every owner, trigger, and due date reflects the documents and no
@@ -430,6 +433,8 @@ flags the question.
   schedule, IP assignments, or disclosure schedules — uploaded or pasted if they
   exist. Note any that are referenced but not provided.
 - **The side** the tracker is for — buyer-side or seller-side.
+- **The deal type** — for example a stock purchase, asset purchase, merger, or
+  membership-interest purchase.
 - **The closing date and any other key dates** — as stated by the user or in the
   documents, or flagged as unknown. Dates are never computed.
 - **Jurisdiction and governing law** — as stated in the documents, or flagged as
@@ -484,12 +489,13 @@ extract obligations from a document you have not been given.
 
 1. **Confirm inputs.** Verify you have the acquisition agreement, the ancillary
    documents (or a note of which are referenced but not provided), the side, the
-   closing date and key dates (or a flag that they are unknown), and the
-   governing law (or a flag that it is unknown). If the acquisition agreement is
-   missing, stop and request it.
+   deal type, the closing date and key dates (or a flag that they are unknown),
+   and the governing law (or a flag that it is unknown). If the acquisition
+   agreement is missing, stop and request it.
 
-2. **Orient.** State the agreement type, the parties as named, the side the
-   tracker is for, the closing date as stated (or `[CONFIRM: closing date]`),
+2. **Orient.** State the agreement type, the deal type, the parties as named,
+   the side the tracker is for, the closing date as stated (or
+   `[CONFIRM: closing date]`),
    the governing law (or `[CONFIRM: governing law]`), and the list of ancillary
    documents — marking each as provided or referenced-but-not-provided.
 
@@ -537,9 +543,9 @@ extract obligations from a document you have not been given.
 
 Deliver, in order:
 
-1. **Deal Summary** — agreement type, parties, the side the tracker is for, the
-   closing date as stated, governing law, and a list of ancillary documents
-   marked provided or referenced-but-not-provided.
+1. **Deal Summary** — agreement type, deal type, parties, the side the tracker
+   is for, the closing date as stated, governing law, and a list of ancillary
+   documents marked provided or referenced-but-not-provided.
 
 2. **Post-Closing Obligation Tracker** — a Markdown table:
 
@@ -588,7 +594,7 @@ specific rule is supplied.
 - [ ] The documents tracked are the complete, executed acquisition agreement
       and all ancillary documents; every referenced-but-not-provided document
       has been obtained and reviewed.
-- [ ] The side and the closing date are correctly stated.
+- [ ] The side, the deal type, and the closing date are correctly stated.
 - [ ] Every obligation in the tracker has been spot-checked against the cited
       document and section.
 - [ ] Every owner, trigger, and due date reflects the documents and no
