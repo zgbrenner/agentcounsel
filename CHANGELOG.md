@@ -18,6 +18,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - A new **Corporate** practice area (Phase C migration): six skills adapted from `agnostic-skills-for-legal` — `board-minutes`, `written-consent`, `closing-checklist`, `diligence-issue-extraction`, `material-contract-schedule`, and `entity-compliance`.
 - Phase D1: three further skills adapted from `agnostic-skills-for-legal` — `internal-investigation` and `protected-leave-review` (employment) and `infringement-triage` (intellectual property).
 - `CONTEXT.md`: a concise vocabulary and mental-model reference for AI agents and LLMs working in the repository.
+- Gemini CLI extension support: a `gemini-extension.json` manifest and a `GEMINI.md` context file at the repository root, plus a new `adapters/gemini/` adapter with a `using-agentcounsel.md` operating guide and a `references/` folder of per-runtime tool maps (`gemini-tools.md`, `copilot-tools.md`, `codex-tools.md`).
 
 ### Changed
 
