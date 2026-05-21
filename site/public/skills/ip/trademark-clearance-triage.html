@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trademark Clearance Triage — AgentCounsel</title>
+<meta name="description" content="Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/ip.html">Intellectual Property</a> / <span>Trademark Clearance Triage</span></nav>
+<h1>Trademark Clearance Triage</h1>
+<p class="path">Canonical path: <code>skills/ip/trademark-clearance-triage/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured preliminary triage of a proposed trademark — a brand name, product name, slogan, or logo — to identify obvious concerns and orient the client before engaging trademark counsel for a formal clearance search and opinion. This is draft legal work product for attorney review. It is NOT a clearance opinion, NOT a freedom-to-operate determination, and does NOT constitute a legal finding that any mark is available for use or registration.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A user asks to "check if a name is available" or "see if we can trademark this."</li><li>A user wants to know if a proposed brand name, product name, or slogan is likely to face trademark issues.</li><li>A client is in early brand development and wants a structured starting point before commissioning a full clearance search.</li><li>A user needs a triage summary to brief trademark counsel efficiently.</li><li>A user asks what a formal trademark clearance process involves and what inputs counsel will need.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>The proposed mark</strong>: exact name, slogan, or description of the logo/design element.</li><li><strong>Goods and/or services</strong>: a plain-language description of the products or services the mark will identify (e.g., "mobile app for personal finance," "organic coffee beans sold online").</li><li><strong>International Classification (Nice Classes)</strong>: if the user knows the relevant class(es), capture them; if unknown, note that class identification is an attorney task and provide a general description only.</li><li><strong>Geographic markets</strong>: primary and secondary markets (e.g., United States, EU, Canada).</li><li><strong>Intended use</strong>: whether use has already begun (use-in-commerce) or is planned (intent-to-use), and approximate timing.</li></ul>
+<p>If the proposed mark text is not provided, stop and request it before proceeding. If goods/services or geographic market are not provided, flag them as unknown and note that the triage will be incomplete without them.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user needs a formal trademark clearance opinion or freedom-to-use determination — refer to trademark counsel.</li><li>The user has received a cease-and-desist letter and needs to respond (use <code>cease-and-desist-response</code>); responding to an opposition or cancellation proceeding is separate, attorney-directed work.</li><li>The document to review is a license agreement, co-existence agreement, or assignment — use <code>contract-risk-review</code>.</li><li>The user needs a copyright analysis (use <code>dmca-takedown</code> for DMCA takedown matters) or a patent search — general copyright clearance and patent work are outside the scope of this triage.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>This triage is draft legal work product for attorney review. It is NOT a clearance opinion, NOT legal advice, and does NOT mean the mark is available for use or registration.</li><li>Do not invent trademark registration numbers, application serial numbers, owner names, filing dates, or opposition history. If the user has not provided registry data and no verified research tool has been used, state that no registry search has been conducted.</li><li>Do not assert that a mark is clear, available, or registrable. Use language such as "preliminary risk signal" and "factors for counsel to evaluate."</li><li>Do not invent case law, statutory text, or USPTO/EUIPO/UKIPO guidance. If citing a legal concept (e.g., likelihood-of-confusion factors), characterize it as a general framework and flag it for attorney verification.</li><li>Characterize the mark's distinctiveness as a preliminary, unverified assessment only. Distinctiveness characterization is always an attorney verification item.</li><li>Separate facts provided by the user from analytical observations and from items requiring attorney or registry verification.</li><li>Flag every uncertainty with <code>[CONFIRM: ...]</code> rather than resolving it silently.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that the proposed mark, goods/services description, and at least one target geographic market have been provided. If any are missing, stop and request them. Record the inputs exactly as provided; do not paraphrase the mark.</li></ol>
+<ol><li><strong>Characterize the mark on the distinctiveness spectrum.</strong> Assess — preliminarily and without asserting legal certainty — where the mark falls among: generic, descriptive, suggestive, arbitrary, or fanciful. Note that this characterization is for orientation only and must be confirmed by counsel. Flag any mark that appears generic or merely descriptive as carrying elevated registration risk.</li></ol>
+<ol><li><strong>Identify obvious concerns.</strong> Without conducting a registry search, note:<ul><li>Whether the mark is a common English word, phrase, or acronym that may be in wide use.</li><li>Whether the mark is geographically descriptive or primarily merely a surname.</li><li>Whether the user has mentioned any known prior users, existing marks, or industry context that raises conflict signals.</li><li>Whether the mark includes terms that may be refused (laudatory, deceptive, primarily merely descriptive, scandalous — as applicable and without asserting a legal ruling).</li></ul></li></ol>
+<ol><li><strong>Identify goods/services classification.</strong> Provide a general description of the likely Nice Class(es) based on the goods/services description, with the explicit caveat that class identification must be confirmed by counsel or a trademark professional. Do not assert a definitive class.</li></ol>
+<ol><li><strong>Outline the screening searches a formal clearance would cover.</strong> List the categories of search a professional clearance typically includes (e.g., USPTO TESS/TSDR, state trademark registries, common law use searches, domain name registries, relevant international registries). Do not represent that these searches have been conducted.</li></ol>
+<ol><li><strong>Identify what counsel will need.</strong> Summarize the inputs, decisions, and documents trademark counsel will require to conduct a proper clearance, file an application, or advise on registrability.</li></ol>
+<ol><li><strong>Generate a preliminary risk signal.</strong> Assign a preliminary signal — <strong>Elevated</strong>, <strong>Moderate</strong>, or <strong>Lower</strong> — based solely on the inputs and obvious factors identified, with an explicit note that this signal is not a legal opinion and may change materially after a proper search.</li></ol>
+<ol><li><strong>Assemble the output.</strong> Label it clearly as a preliminary triage draft for attorney review.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver the following sections in order:</p>
+<p><strong>1. Triage Summary</strong></p>
+<ul><li>Proposed mark (verbatim), goods/services, target markets, intended use, and date of triage.</li><li>Preliminary risk signal: Elevated / Moderate / Lower (with caveat that this is not a legal opinion).</li></ul>
+<p><strong>2. Distinctiveness Characterization (Preliminary)</strong></p>
+<ul><li>Where the mark appears to fall on the generic–fanciful spectrum, and why, as a preliminary assessment only.</li><li>Flags for descriptiveness, surname issues, geographic descriptiveness, or other registrability concerns.</li></ul>
+<p><strong>3. Obvious Concerns</strong></p>
+<ul><li>Bulleted list of concerns identifiable from the mark itself and the user-provided context, without registry search.</li><li>Each concern labeled <code>[CONFIRM: ...]</code> where attorney verification is required.</li></ul>
+<p><strong>4. Goods/Services and Classification Notes</strong></p>
+<ul><li>Plain-language description of the goods/services and likely Nice Class(es), with caveat.</li><li>Note any breadth or specificity issues in the description that counsel should address.</li></ul>
+<p><strong>5. Formal Clearance Scope (What a Proper Search Would Cover)</strong></p>
+<ul><li>Bulleted checklist of search categories a professional clearance typically covers.</li><li>Explicit statement that none of these searches have been conducted as part of this triage.</li></ul>
+<p><strong>6. What Counsel Will Need</strong></p>
+<ul><li>Bulleted list of inputs, decisions, and documents for the engaging attorney.</li></ul>
+<p><strong>7. Assumptions and Open Items</strong></p>
+<ul><li>All facts assumed or inferred, and all items flagged for resolution before the triage can be relied upon.</li></ul>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The proposed mark text, goods/services description, and target markets have been confirmed with the client.</li><li>[ ] A full professional clearance search (federal, state, common law, international as applicable) has been commissioned and reviewed.</li><li>[ ] The distinctiveness characterization has been evaluated by counsel; no registrability conclusion has been drawn from this triage alone.</li><li>[ ] No trademark registration numbers, application status data, or ownership information has been asserted without verified registry research.</li><li>[ ] The Nice Class(es) and identification of goods/services have been confirmed by a trademark professional.</li><li>[ ] No legal authority, statutory text, or case law has been asserted without verification.</li><li>[ ] Counsel has confirmed that use of the mark will not begin until clearance is complete.</li><li>[ ] All <code>[CONFIRM: ...]</code> placeholders have been resolved before the triage is relied upon for any business or legal decision.</li><li>[ ] Client has been advised that this triage is not a clearance opinion and does not establish that the mark is available for use or registration.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Trademark Clearance Triage
+description: Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search.
+---
+
+# Trademark Clearance Triage
+
+## Purpose
+
+Produce a structured preliminary triage of a proposed trademark — a brand name, product name, slogan, or logo — to identify obvious concerns and orient the client before engaging trademark counsel for a formal clearance search and opinion. This is draft legal work product for attorney review. It is NOT a clearance opinion, NOT a freedom-to-operate determination, and does NOT constitute a legal finding that any mark is available for use or registration.
+
+## Use When
+
+- A user asks to "check if a name is available" or "see if we can trademark this."
+- A user wants to know if a proposed brand name, product name, or slogan is likely to face trademark issues.
+- A client is in early brand development and wants a structured starting point before commissioning a full clearance search.
+- A user needs a triage summary to brief trademark counsel efficiently.
+- A user asks what a formal trademark clearance process involves and what inputs counsel will need.
+
+## Required Inputs
+
+- **The proposed mark**: exact name, slogan, or description of the logo/design element.
+- **Goods and/or services**: a plain-language description of the products or services the mark will identify (e.g., "mobile app for personal finance," "organic coffee beans sold online").
+- **International Classification (Nice Classes)**: if the user knows the relevant class(es), capture them; if unknown, note that class identification is an attorney task and provide a general description only.
+- **Geographic markets**: primary and secondary markets (e.g., United States, EU, Canada).
+- **Intended use**: whether use has already begun (use-in-commerce) or is planned (intent-to-use), and approximate timing.
+
+If the proposed mark text is not provided, stop and request it before proceeding. If goods/services or geographic market are not provided, flag them as unknown and note that the triage will be incomplete without them.
+
+## Do Not Use When
+
+- The user needs a formal trademark clearance opinion or freedom-to-use determination — refer to trademark counsel.
+- The user has received a cease-and-desist letter and needs to respond (use `cease-and-desist-response`); responding to an opposition or cancellation proceeding is separate, attorney-directed work.
+- The document to review is a license agreement, co-existence agreement, or assignment — use `contract-risk-review`.
+- The user needs a copyright analysis (use `dmca-takedown` for DMCA takedown matters) or a patent search — general copyright clearance and patent work are outside the scope of this triage.
+
+## Legal Safety Rules
+
+- This triage is draft legal work product for attorney review. It is NOT a clearance opinion, NOT legal advice, and does NOT mean the mark is available for use or registration.
+- Do not invent trademark registration numbers, application serial numbers, owner names, filing dates, or opposition history. If the user has not provided registry data and no verified research tool has been used, state that no registry search has been conducted.
+- Do not assert that a mark is clear, available, or registrable. Use language such as "preliminary risk signal" and "factors for counsel to evaluate."
+- Do not invent case law, statutory text, or USPTO/EUIPO/UKIPO guidance. If citing a legal concept (e.g., likelihood-of-confusion factors), characterize it as a general framework and flag it for attorney verification.
+- Characterize the mark's distinctiveness as a preliminary, unverified assessment only. Distinctiveness characterization is always an attorney verification item.
+- Separate facts provided by the user from analytical observations and from items requiring attorney or registry verification.
+- Flag every uncertainty with `[CONFIRM: ...]` rather than resolving it silently.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the proposed mark, goods/services description, and at least one target geographic market have been provided. If any are missing, stop and request them. Record the inputs exactly as provided; do not paraphrase the mark.
+
+2. **Characterize the mark on the distinctiveness spectrum.** Assess — preliminarily and without asserting legal certainty — where the mark falls among: generic, descriptive, suggestive, arbitrary, or fanciful. Note that this characterization is for orientation only and must be confirmed by counsel. Flag any mark that appears generic or merely descriptive as carrying elevated registration risk.
+
+3. **Identify obvious concerns.** Without conducting a registry search, note:
+   - Whether the mark is a common English word, phrase, or acronym that may be in wide use.
+   - Whether the mark is geographically descriptive or primarily merely a surname.
+   - Whether the user has mentioned any known prior users, existing marks, or industry context that raises conflict signals.
+   - Whether the mark includes terms that may be refused (laudatory, deceptive, primarily merely descriptive, scandalous — as applicable and without asserting a legal ruling).
+
+4. **Identify goods/services classification.** Provide a general description of the likely Nice Class(es) based on the goods/services description, with the explicit caveat that class identification must be confirmed by counsel or a trademark professional. Do not assert a definitive class.
+
+5. **Outline the screening searches a formal clearance would cover.** List the categories of search a professional clearance typically includes (e.g., USPTO TESS/TSDR, state trademark registries, common law use searches, domain name registries, relevant international registries). Do not represent that these searches have been conducted.
+
+6. **Identify what counsel will need.** Summarize the inputs, decisions, and documents trademark counsel will require to conduct a proper clearance, file an application, or advise on registrability.
+
+7. **Generate a preliminary risk signal.** Assign a preliminary signal — **Elevated**, **Moderate**, or **Lower** — based solely on the inputs and obvious factors identified, with an explicit note that this signal is not a legal opinion and may change materially after a proper search.
+
+8. **Assemble the output.** Label it clearly as a preliminary triage draft for attorney review.
+
+## Output Format
+
+Deliver the following sections in order:
+
+**1. Triage Summary**
+- Proposed mark (verbatim), goods/services, target markets, intended use, and date of triage.
+- Preliminary risk signal: Elevated / Moderate / Lower (with caveat that this is not a legal opinion).
+
+**2. Distinctiveness Characterization (Preliminary)**
+- Where the mark appears to fall on the generic–fanciful spectrum, and why, as a preliminary assessment only.
+- Flags for descriptiveness, surname issues, geographic descriptiveness, or other registrability concerns.
+
+**3. Obvious Concerns**
+- Bulleted list of concerns identifiable from the mark itself and the user-provided context, without registry search.
+- Each concern labeled `[CONFIRM: ...]` where attorney verification is required.
+
+**4. Goods/Services and Classification Notes**
+- Plain-language description of the goods/services and likely Nice Class(es), with caveat.
+- Note any breadth or specificity issues in the description that counsel should address.
+
+**5. Formal Clearance Scope (What a Proper Search Would Cover)**
+- Bulleted checklist of search categories a professional clearance typically covers.
+- Explicit statement that none of these searches have been conducted as part of this triage.
+
+**6. What Counsel Will Need**
+- Bulleted list of inputs, decisions, and documents for the engaging attorney.
+
+**7. Assumptions and Open Items**
+- All facts assumed or inferred, and all items flagged for resolution before the triage can be relied upon.
+
+## Attorney Verification Checklist
+
+- [ ] The proposed mark text, goods/services description, and target markets have been confirmed with the client.
+- [ ] A full professional clearance search (federal, state, common law, international as applicable) has been commissioned and reviewed.
+- [ ] The distinctiveness characterization has been evaluated by counsel; no registrability conclusion has been drawn from this triage alone.
+- [ ] No trademark registration numbers, application status data, or ownership information has been asserted without verified registry research.
+- [ ] The Nice Class(es) and identification of goods/services have been confirmed by a trademark professional.
+- [ ] No legal authority, statutory text, or case law has been asserted without verification.
+- [ ] Counsel has confirmed that use of the mark will not begin until clearance is complete.
+- [ ] All `[CONFIRM: ...]` placeholders have been resolved before the triage is relied upon for any business or legal decision.
+- [ ] Client has been advised that this triage is not a clearance opinion and does not establish that the mark is available for use or registration.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Trademark Clearance Triage ===
+---
+name: Trademark Clearance Triage
+description: Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search.
+---
+
+# Trademark Clearance Triage
+
+## Purpose
+
+Produce a structured preliminary triage of a proposed trademark — a brand name, product name, slogan, or logo — to identify obvious concerns and orient the client before engaging trademark counsel for a formal clearance search and opinion. This is draft legal work product for attorney review. It is NOT a clearance opinion, NOT a freedom-to-operate determination, and does NOT constitute a legal finding that any mark is available for use or registration.
+
+## Use When
+
+- A user asks to "check if a name is available" or "see if we can trademark this."
+- A user wants to know if a proposed brand name, product name, or slogan is likely to face trademark issues.
+- A client is in early brand development and wants a structured starting point before commissioning a full clearance search.
+- A user needs a triage summary to brief trademark counsel efficiently.
+- A user asks what a formal trademark clearance process involves and what inputs counsel will need.
+
+## Required Inputs
+
+- **The proposed mark**: exact name, slogan, or description of the logo/design element.
+- **Goods and/or services**: a plain-language description of the products or services the mark will identify (e.g., "mobile app for personal finance," "organic coffee beans sold online").
+- **International Classification (Nice Classes)**: if the user knows the relevant class(es), capture them; if unknown, note that class identification is an attorney task and provide a general description only.
+- **Geographic markets**: primary and secondary markets (e.g., United States, EU, Canada).
+- **Intended use**: whether use has already begun (use-in-commerce) or is planned (intent-to-use), and approximate timing.
+
+If the proposed mark text is not provided, stop and request it before proceeding. If goods/services or geographic market are not provided, flag them as unknown and note that the triage will be incomplete without them.
+
+## Do Not Use When
+
+- The user needs a formal trademark clearance opinion or freedom-to-use determination — refer to trademark counsel.
+- The user has received a cease-and-desist letter and needs to respond (use `cease-and-desist-response`); responding to an opposition or cancellation proceeding is separate, attorney-directed work.
+- The document to review is a license agreement, co-existence agreement, or assignment — use `contract-risk-review`.
+- The user needs a copyright analysis (use `dmca-takedown` for DMCA takedown matters) or a patent search — general copyright clearance and patent work are outside the scope of this triage.
+
+## Legal Safety Rules
+
+- This triage is draft legal work product for attorney review. It is NOT a clearance opinion, NOT legal advice, and does NOT mean the mark is available for use or registration.
+- Do not invent trademark registration numbers, application serial numbers, owner names, filing dates, or opposition history. If the user has not provided registry data and no verified research tool has been used, state that no registry search has been conducted.
+- Do not assert that a mark is clear, available, or registrable. Use language such as "preliminary risk signal" and "factors for counsel to evaluate."
+- Do not invent case law, statutory text, or USPTO/EUIPO/UKIPO guidance. If citing a legal concept (e.g., likelihood-of-confusion factors), characterize it as a general framework and flag it for attorney verification.
+- Characterize the mark's distinctiveness as a preliminary, unverified assessment only. Distinctiveness characterization is always an attorney verification item.
+- Separate facts provided by the user from analytical observations and from items requiring attorney or registry verification.
+- Flag every uncertainty with `[CONFIRM: ...]` rather than resolving it silently.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the proposed mark, goods/services description, and at least one target geographic market have been provided. If any are missing, stop and request them. Record the inputs exactly as provided; do not paraphrase the mark.
+
+2. **Characterize the mark on the distinctiveness spectrum.** Assess — preliminarily and without asserting legal certainty — where the mark falls among: generic, descriptive, suggestive, arbitrary, or fanciful. Note that this characterization is for orientation only and must be confirmed by counsel. Flag any mark that appears generic or merely descriptive as carrying elevated registration risk.
+
+3. **Identify obvious concerns.** Without conducting a registry search, note:
+   - Whether the mark is a common English word, phrase, or acronym that may be in wide use.
+   - Whether the mark is geographically descriptive or primarily merely a surname.
+   - Whether the user has mentioned any known prior users, existing marks, or industry context that raises conflict signals.
+   - Whether the mark includes terms that may be refused (laudatory, deceptive, primarily merely descriptive, scandalous — as applicable and without asserting a legal ruling).
+
+4. **Identify goods/services classification.** Provide a general description of the likely Nice Class(es) based on the goods/services description, with the explicit caveat that class identification must be confirmed by counsel or a trademark professional. Do not assert a definitive class.
+
+5. **Outline the screening searches a formal clearance would cover.** List the categories of search a professional clearance typically includes (e.g., USPTO TESS/TSDR, state trademark registries, common law use searches, domain name registries, relevant international registries). Do not represent that these searches have been conducted.
+
+6. **Identify what counsel will need.** Summarize the inputs, decisions, and documents trademark counsel will require to conduct a proper clearance, file an application, or advise on registrability.
+
+7. **Generate a preliminary risk signal.** Assign a preliminary signal — **Elevated**, **Moderate**, or **Lower** — based solely on the inputs and obvious factors identified, with an explicit note that this signal is not a legal opinion and may change materially after a proper search.
+
+8. **Assemble the output.** Label it clearly as a preliminary triage draft for attorney review.
+
+## Output Format
+
+Deliver the following sections in order:
+
+**1. Triage Summary**
+- Proposed mark (verbatim), goods/services, target markets, intended use, and date of triage.
+- Preliminary risk signal: Elevated / Moderate / Lower (with caveat that this is not a legal opinion).
+
+**2. Distinctiveness Characterization (Preliminary)**
+- Where the mark appears to fall on the generic–fanciful spectrum, and why, as a preliminary assessment only.
+- Flags for descriptiveness, surname issues, geographic descriptiveness, or other registrability concerns.
+
+**3. Obvious Concerns**
+- Bulleted list of concerns identifiable from the mark itself and the user-provided context, without registry search.
+- Each concern labeled `[CONFIRM: ...]` where attorney verification is required.
+
+**4. Goods/Services and Classification Notes**
+- Plain-language description of the goods/services and likely Nice Class(es), with caveat.
+- Note any breadth or specificity issues in the description that counsel should address.
+
+**5. Formal Clearance Scope (What a Proper Search Would Cover)**
+- Bulleted checklist of search categories a professional clearance typically covers.
+- Explicit statement that none of these searches have been conducted as part of this triage.
+
+**6. What Counsel Will Need**
+- Bulleted list of inputs, decisions, and documents for the engaging attorney.
+
+**7. Assumptions and Open Items**
+- All facts assumed or inferred, and all items flagged for resolution before the triage can be relied upon.
+
+## Attorney Verification Checklist
+
+- [ ] The proposed mark text, goods/services description, and target markets have been confirmed with the client.
+- [ ] A full professional clearance search (federal, state, common law, international as applicable) has been commissioned and reviewed.
+- [ ] The distinctiveness characterization has been evaluated by counsel; no registrability conclusion has been drawn from this triage alone.
+- [ ] No trademark registration numbers, application status data, or ownership information has been asserted without verified registry research.
+- [ ] The Nice Class(es) and identification of goods/services have been confirmed by a trademark professional.
+- [ ] No legal authority, statutory text, or case law has been asserted without verification.
+- [ ] Counsel has confirmed that use of the mark will not begin until clearance is complete.
+- [ ] All `[CONFIRM: ...]` placeholders have been resolved before the triage is relied upon for any business or legal decision.
+- [ ] Client has been advised that this triage is not a clearance opinion and does not establish that the mark is available for use or registration.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

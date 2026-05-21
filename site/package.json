@@ -1,0 +1,13 @@
+{
+  "name": "agentcounsel-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static browser-readable skill catalog generator for AgentCounsel. Reads the repository skills directory and emits a plain HTML site. No runtime dependencies.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node generate.mjs",
+    "serve": "node serve.mjs",
+    "dev": "node generate.mjs && node serve.mjs"
+  }
+}

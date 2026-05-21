@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contracts Cold-Start Interview — AgentCounsel</title>
+<meta name="description" content="Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/setup.html">Setup</a> / <span>Contracts Cold-Start Interview</span></nav>
+<h1>Contracts Cold-Start Interview</h1>
+<p class="path">Canonical path: <code>skills/setup/contracts-cold-start-interview/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Conduct a structured, staged interview with a contracts practice group — led by a supervising attorney or authorized designee — to gather the information required to populate <code>practice-profiles/contracts.md</code>. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A team is adopting AgentCounsel and needs to configure <code>practice-profiles/contracts.md</code> for the first time.</li><li>A contracts practice group is being onboarded to the library and no current profile exists.</li><li>The library is being stood up for the first time and the contracts area is included in scope.</li><li>A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li>A knowledgeable person from the contracts practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.</li><li>Any existing playbooks, clause libraries, contract templates, or standard-form documents the group already uses, so they can be referenced or cited in the profile.</li></ul>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The group is actively working a live contract matter. This skill configures the library; it does not support an open matter.</li><li>A <code>practice-profiles/contracts.md</code> already exists and is current. In that case this is a refresh, not a cold start — though the skill may still be used to rebuild the profile deliberately.</li><li>No authorized person is available to answer. Do not complete the interview with guessed or inferred answers; record all gaps as <code>[CONFIRM: ...]</code> placeholders.</li><li>The purpose is to review, redline, or negotiate a specific contract (use the appropriate matter-level skill for that task).</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Never guess or infer an answer to any interview question. If the interviewee cannot answer a question, record <code>[CONFIRM: answer required from practice group]</code> and move on.</li><li>The filled profile is a draft. It must be reviewed and explicitly approved by the supervising attorney or practice group before it governs any AgentCounsel work product.</li><li>Do not invent standard positions, clause preferences, signing-authority thresholds, or escalation rules. Record only what the interviewee provides.</li><li>Do not include client-specific facts, client names, matter identifiers, or privileged details in the profile. The profile is a reusable group-level configuration, not a matter record.</li><li>Do not state or imply that any threshold, position, or rule in the profile satisfies a legal requirement under any jurisdiction. Jurisdiction-specific legal obligations are for the attorney to verify.</li><li>Flag every item the interviewee defers or leaves open with a visible <code>[CONFIRM: ...]</code> placeholder so the reviewer can see exactly what is unresolved.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<p><strong>Stage 1 — Jurisdictions</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>In which countries, states, or provinces does the group primarily form and perform contracts?</li><li>Does the group work in any jurisdictions where it operates under significant constraints, local counsel requirements, or special approval rules?</li><li>What governing-law clause does the group default to, and are there jurisdictions where that default must be overridden?</li><li>Are there jurisdictions the group treats as out of scope entirely, requiring escalation or outside counsel?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: jurisdiction not yet specified]</code>.</p>
+<p><strong>Stage 2 — Client and Team Context</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>Who are the primary clients of the contracts group — internal business units, external clients, or both?</li><li>What types of contracts does the group handle most frequently (commercial agreements, vendor agreements, licensing, services agreements, master agreements, or other types)?</li><li>How large is the contracts team, and does it include non-attorney contract professionals whose work must be supervised?</li><li>Are there business units or counterparty categories that require special handling, separate workflows, or additional sign-off?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: client/team context not yet specified]</code>.</p>
+<p><strong>Stage 3 — Escalation Thresholds</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>What contract value threshold triggers mandatory attorney review before signature?</li><li>What categories of clause — for example, unlimited liability, IP ownership transfer, exclusivity, change-of-control, or multi-year auto-renewal — always require attorney escalation regardless of value?</li><li>Is there a counterparty category (such as a competitor, regulated entity, or government body) that triggers mandatory escalation?</li><li>Who is the designated escalation contact for contracts that exceed these thresholds, and what is the expected turnaround?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: escalation threshold not yet specified]</code>.</p>
+<p><strong>Stage 4 — Preferred Output Style</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>Should contract work product be delivered as a narrative memo, a structured risk table, a redline comment set, or another format?</li><li>What level of detail does the practice group expect — executive summary only, full clause-by-clause analysis, or both?</li><li>Are there house style rules for how risk levels, recommendations, or open items should be labeled or formatted?</li><li>Should drafts include a summary of assumptions and open items as a separate section, or integrated into the body?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: output style preference not yet specified]</code>.</p>
+<p><strong>Stage 5 — Source-of-Truth Documents</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>What documents constitute the group's authoritative source of truth for standard contract terms — for example, a master clause library, a playbook document, an approved template set, or an internal wiki?</li><li>Where are those documents stored, and how should an agent reference them in work product?</li><li>Are any of those documents currently under revision or not yet finalized? If so, which version governs until a new one is approved?</li><li>Is there a formal process for updating or approving changes to the source documents?</li></ul>
+<p>Record answers and document names. Mark any unanswered item <code>[CONFIRM: source document not yet identified]</code>.</p>
+<p><strong>Stage 6 — Standard Positions and Playbooks</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>What is the group's default position on limitation of liability — cap formula, carve-outs, and any "never accept" terms?</li><li>What is the group's default position on indemnification — unilateral vs. mutual, scope of covered losses, and any "never accept" terms?</li><li>What is the group's preferred or required governing law and dispute-resolution clause?</li><li>What is the group's position on auto-renewal clauses — acceptable, unacceptable, or acceptable only with specified notice and opt-out terms?</li><li>What signing and approval authority rules apply — who may sign at each contract-value tier, and does a matrix or delegation of authority document govern this?</li><li>Are there any other clause categories the group has a documented "always" or "never" position on?</li><li>Does the group maintain a formal playbook document that captures these positions? If so, what is it called and where is it stored?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: standard position not yet specified]</code>.</p>
+<p><strong>Stage 7 — Attorney Review Requirements</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>At what stage of the contracting process is attorney review required — initial draft, before sending to counterparty, before signing, or at multiple stages?</li><li>Are there contract types or counterparty categories for which attorney review is always required, regardless of value?</li><li>What is the designated reviewer's role — reviewing attorney, practice group lead, general counsel, or another role?</li><li>What is the expected turnaround time for attorney review, and how are urgent reviews handled?</li><li>Is there a formal sign-off step — for example, a required signature, approval stamp, or logged confirmation — before a contract is executed?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: review requirement not yet specified]</code>.</p>
+<p><strong>Stage 8 — Prohibited Assumptions</strong></p>
+<p>Ask the interviewee:</p>
+<ul><li>Are there facts, terms, or positions that agents must never assume or infer without explicit confirmation — for example, that a counterparty is an affiliate, that a prior course of dealing governs, or that a template is current?</li><li>Are there clause types where a silence or absence should never be treated as agreement?</li><li>Are there business or legal risks that the group has identified as areas where agents must stop and escalate rather than reason through independently?</li><li>Are there prior incidents or lessons learned that should be encoded as explicit prohibitions for agents working on contracts matters?</li></ul>
+<p>Record answers. Mark any unanswered item <code>[CONFIRM: prohibited assumption not yet specified]</code>.</p>
+<p><strong>Stage 9 — Assemble the Draft Profile</strong></p>
+<p>Compile all answers into a filled draft of <code>practice-profiles/contracts.md</code>, populating each of the eight profile sections. For every item that was not answered, insert a visible <code>[CONFIRM: ...]</code> placeholder with enough context for the reviewer to understand what needs to be supplied. Append a list of all open placeholders so the reviewing attorney can see at a glance what remains unresolved.</p>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver:</p>
+<ol><li><strong>Filled draft of <code>practice-profiles/contracts.md</code></strong> — all eight sections populated with answers from the interview. Every unanswered item is a visible <code>[CONFIRM: ...]</code> placeholder.</li><li><strong>Open-items list</strong> — an explicit enumeration of every placeholder inserted, with the stage and question it corresponds to, so the reviewing attorney can resolve them efficiently.</li></ol>
+<p>Label the entire output: <strong>Draft legal work product for attorney review. Not legal advice. This profile draft must be reviewed and approved by the supervising attorney or practice group before it is relied upon.</strong></p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] All eight profile sections have been reviewed by a supervising attorney or authorized practice-group representative.</li><li>[ ] Jurisdictions listed are accurate and complete for the group's current practice.</li><li>[ ] Escalation thresholds — value-based, clause-based, and counterparty-based — have been confirmed and are consistent with the group's current authority matrix.</li><li>[ ] Standard positions and playbook references reflect current, approved group positions, not outdated or superseded ones.</li><li>[ ] Source-of-truth documents listed are finalized and in effect; any documents under revision are flagged.</li><li>[ ] Attorney review requirements match the group's current engagement and supervision model.</li><li>[ ] Prohibited assumptions are accurate and do not inadvertently exclude items that should be permitted.</li><li>[ ] No client-specific facts, matter identifiers, or privileged details appear in the profile.</li><li>[ ] All <code>[CONFIRM: ...]</code> placeholders have been resolved or explicitly accepted as pending.</li><li>[ ] The approved profile has been saved to <code>practice-profiles/contracts.md</code> and its effective date recorded.</li><li>[ ] A process for periodic profile review and update has been identified.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Contracts Cold-Start Interview
+description: Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+---
+
+# Contracts Cold-Start Interview
+
+## Purpose
+
+Conduct a structured, staged interview with a contracts practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/contracts.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
+
+## Use When
+
+- A team is adopting AgentCounsel and needs to configure `practice-profiles/contracts.md` for the first time.
+- A contracts practice group is being onboarded to the library and no current profile exists.
+- The library is being stood up for the first time and the contracts area is included in scope.
+- A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+## Required Inputs
+
+- A knowledgeable person from the contracts practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.
+- Any existing playbooks, clause libraries, contract templates, or standard-form documents the group already uses, so they can be referenced or cited in the profile.
+
+## Do Not Use When
+
+- The group is actively working a live contract matter. This skill configures the library; it does not support an open matter.
+- A `practice-profiles/contracts.md` already exists and is current. In that case this is a refresh, not a cold start — though the skill may still be used to rebuild the profile deliberately.
+- No authorized person is available to answer. Do not complete the interview with guessed or inferred answers; record all gaps as `[CONFIRM: ...]` placeholders.
+- The purpose is to review, redline, or negotiate a specific contract (use the appropriate matter-level skill for that task).
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Never guess or infer an answer to any interview question. If the interviewee cannot answer a question, record `[CONFIRM: answer required from practice group]` and move on.
+- The filled profile is a draft. It must be reviewed and explicitly approved by the supervising attorney or practice group before it governs any AgentCounsel work product.
+- Do not invent standard positions, clause preferences, signing-authority thresholds, or escalation rules. Record only what the interviewee provides.
+- Do not include client-specific facts, client names, matter identifiers, or privileged details in the profile. The profile is a reusable group-level configuration, not a matter record.
+- Do not state or imply that any threshold, position, or rule in the profile satisfies a legal requirement under any jurisdiction. Jurisdiction-specific legal obligations are for the attorney to verify.
+- Flag every item the interviewee defers or leaves open with a visible `[CONFIRM: ...]` placeholder so the reviewer can see exactly what is unresolved.
+
+## Workflow
+
+**Stage 1 — Jurisdictions**
+
+Ask the interviewee:
+- In which countries, states, or provinces does the group primarily form and perform contracts?
+- Does the group work in any jurisdictions where it operates under significant constraints, local counsel requirements, or special approval rules?
+- What governing-law clause does the group default to, and are there jurisdictions where that default must be overridden?
+- Are there jurisdictions the group treats as out of scope entirely, requiring escalation or outside counsel?
+
+Record answers. Mark any unanswered item `[CONFIRM: jurisdiction not yet specified]`.
+
+**Stage 2 — Client and Team Context**
+
+Ask the interviewee:
+- Who are the primary clients of the contracts group — internal business units, external clients, or both?
+- What types of contracts does the group handle most frequently (commercial agreements, vendor agreements, licensing, services agreements, master agreements, or other types)?
+- How large is the contracts team, and does it include non-attorney contract professionals whose work must be supervised?
+- Are there business units or counterparty categories that require special handling, separate workflows, or additional sign-off?
+
+Record answers. Mark any unanswered item `[CONFIRM: client/team context not yet specified]`.
+
+**Stage 3 — Escalation Thresholds**
+
+Ask the interviewee:
+- What contract value threshold triggers mandatory attorney review before signature?
+- What categories of clause — for example, unlimited liability, IP ownership transfer, exclusivity, change-of-control, or multi-year auto-renewal — always require attorney escalation regardless of value?
+- Is there a counterparty category (such as a competitor, regulated entity, or government body) that triggers mandatory escalation?
+- Who is the designated escalation contact for contracts that exceed these thresholds, and what is the expected turnaround?
+
+Record answers. Mark any unanswered item `[CONFIRM: escalation threshold not yet specified]`.
+
+**Stage 4 — Preferred Output Style**
+
+Ask the interviewee:
+- Should contract work product be delivered as a narrative memo, a structured risk table, a redline comment set, or another format?
+- What level of detail does the practice group expect — executive summary only, full clause-by-clause analysis, or both?
+- Are there house style rules for how risk levels, recommendations, or open items should be labeled or formatted?
+- Should drafts include a summary of assumptions and open items as a separate section, or integrated into the body?
+
+Record answers. Mark any unanswered item `[CONFIRM: output style preference not yet specified]`.
+
+**Stage 5 — Source-of-Truth Documents**
+
+Ask the interviewee:
+- What documents constitute the group's authoritative source of truth for standard contract terms — for example, a master clause library, a playbook document, an approved template set, or an internal wiki?
+- Where are those documents stored, and how should an agent reference them in work product?
+- Are any of those documents currently under revision or not yet finalized? If so, which version governs until a new one is approved?
+- Is there a formal process for updating or approving changes to the source documents?
+
+Record answers and document names. Mark any unanswered item `[CONFIRM: source document not yet identified]`.
+
+**Stage 6 — Standard Positions and Playbooks**
+
+Ask the interviewee:
+- What is the group's default position on limitation of liability — cap formula, carve-outs, and any "never accept" terms?
+- What is the group's default position on indemnification — unilateral vs. mutual, scope of covered losses, and any "never accept" terms?
+- What is the group's preferred or required governing law and dispute-resolution clause?
+- What is the group's position on auto-renewal clauses — acceptable, unacceptable, or acceptable only with specified notice and opt-out terms?
+- What signing and approval authority rules apply — who may sign at each contract-value tier, and does a matrix or delegation of authority document govern this?
+- Are there any other clause categories the group has a documented "always" or "never" position on?
+- Does the group maintain a formal playbook document that captures these positions? If so, what is it called and where is it stored?
+
+Record answers. Mark any unanswered item `[CONFIRM: standard position not yet specified]`.
+
+**Stage 7 — Attorney Review Requirements**
+
+Ask the interviewee:
+- At what stage of the contracting process is attorney review required — initial draft, before sending to counterparty, before signing, or at multiple stages?
+- Are there contract types or counterparty categories for which attorney review is always required, regardless of value?
+- What is the designated reviewer's role — reviewing attorney, practice group lead, general counsel, or another role?
+- What is the expected turnaround time for attorney review, and how are urgent reviews handled?
+- Is there a formal sign-off step — for example, a required signature, approval stamp, or logged confirmation — before a contract is executed?
+
+Record answers. Mark any unanswered item `[CONFIRM: review requirement not yet specified]`.
+
+**Stage 8 — Prohibited Assumptions**
+
+Ask the interviewee:
+- Are there facts, terms, or positions that agents must never assume or infer without explicit confirmation — for example, that a counterparty is an affiliate, that a prior course of dealing governs, or that a template is current?
+- Are there clause types where a silence or absence should never be treated as agreement?
+- Are there business or legal risks that the group has identified as areas where agents must stop and escalate rather than reason through independently?
+- Are there prior incidents or lessons learned that should be encoded as explicit prohibitions for agents working on contracts matters?
+
+Record answers. Mark any unanswered item `[CONFIRM: prohibited assumption not yet specified]`.
+
+**Stage 9 — Assemble the Draft Profile**
+
+Compile all answers into a filled draft of `practice-profiles/contracts.md`, populating each of the eight profile sections. For every item that was not answered, insert a visible `[CONFIRM: ...]` placeholder with enough context for the reviewer to understand what needs to be supplied. Append a list of all open placeholders so the reviewing attorney can see at a glance what remains unresolved.
+
+## Output Format
+
+Deliver:
+
+1. **Filled draft of `practice-profiles/contracts.md`** — all eight sections populated with answers from the interview. Every unanswered item is a visible `[CONFIRM: ...]` placeholder.
+2. **Open-items list** — an explicit enumeration of every placeholder inserted, with the stage and question it corresponds to, so the reviewing attorney can resolve them efficiently.
+
+Label the entire output: **Draft legal work product for attorney review. Not legal advice. This profile draft must be reviewed and approved by the supervising attorney or practice group before it is relied upon.**
+
+## Attorney Verification Checklist
+
+- [ ] All eight profile sections have been reviewed by a supervising attorney or authorized practice-group representative.
+- [ ] Jurisdictions listed are accurate and complete for the group's current practice.
+- [ ] Escalation thresholds — value-based, clause-based, and counterparty-based — have been confirmed and are consistent with the group's current authority matrix.
+- [ ] Standard positions and playbook references reflect current, approved group positions, not outdated or superseded ones.
+- [ ] Source-of-truth documents listed are finalized and in effect; any documents under revision are flagged.
+- [ ] Attorney review requirements match the group's current engagement and supervision model.
+- [ ] Prohibited assumptions are accurate and do not inadvertently exclude items that should be permitted.
+- [ ] No client-specific facts, matter identifiers, or privileged details appear in the profile.
+- [ ] All `[CONFIRM: ...]` placeholders have been resolved or explicitly accepted as pending.
+- [ ] The approved profile has been saved to `practice-profiles/contracts.md` and its effective date recorded.
+- [ ] A process for periodic profile review and update has been identified.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Contracts Cold-Start Interview ===
+---
+name: Contracts Cold-Start Interview
+description: Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+---
+
+# Contracts Cold-Start Interview
+
+## Purpose
+
+Conduct a structured, staged interview with a contracts practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/contracts.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
+
+## Use When
+
+- A team is adopting AgentCounsel and needs to configure `practice-profiles/contracts.md` for the first time.
+- A contracts practice group is being onboarded to the library and no current profile exists.
+- The library is being stood up for the first time and the contracts area is included in scope.
+- A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+## Required Inputs
+
+- A knowledgeable person from the contracts practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.
+- Any existing playbooks, clause libraries, contract templates, or standard-form documents the group already uses, so they can be referenced or cited in the profile.
+
+## Do Not Use When
+
+- The group is actively working a live contract matter. This skill configures the library; it does not support an open matter.
+- A `practice-profiles/contracts.md` already exists and is current. In that case this is a refresh, not a cold start — though the skill may still be used to rebuild the profile deliberately.
+- No authorized person is available to answer. Do not complete the interview with guessed or inferred answers; record all gaps as `[CONFIRM: ...]` placeholders.
+- The purpose is to review, redline, or negotiate a specific contract (use the appropriate matter-level skill for that task).
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Never guess or infer an answer to any interview question. If the interviewee cannot answer a question, record `[CONFIRM: answer required from practice group]` and move on.
+- The filled profile is a draft. It must be reviewed and explicitly approved by the supervising attorney or practice group before it governs any AgentCounsel work product.
+- Do not invent standard positions, clause preferences, signing-authority thresholds, or escalation rules. Record only what the interviewee provides.
+- Do not include client-specific facts, client names, matter identifiers, or privileged details in the profile. The profile is a reusable group-level configuration, not a matter record.
+- Do not state or imply that any threshold, position, or rule in the profile satisfies a legal requirement under any jurisdiction. Jurisdiction-specific legal obligations are for the attorney to verify.
+- Flag every item the interviewee defers or leaves open with a visible `[CONFIRM: ...]` placeholder so the reviewer can see exactly what is unresolved.
+
+## Workflow
+
+**Stage 1 — Jurisdictions**
+
+Ask the interviewee:
+- In which countries, states, or provinces does the group primarily form and perform contracts?
+- Does the group work in any jurisdictions where it operates under significant constraints, local counsel requirements, or special approval rules?
+- What governing-law clause does the group default to, and are there jurisdictions where that default must be overridden?
+- Are there jurisdictions the group treats as out of scope entirely, requiring escalation or outside counsel?
+
+Record answers. Mark any unanswered item `[CONFIRM: jurisdiction not yet specified]`.
+
+**Stage 2 — Client and Team Context**
+
+Ask the interviewee:
+- Who are the primary clients of the contracts group — internal business units, external clients, or both?
+- What types of contracts does the group handle most frequently (commercial agreements, vendor agreements, licensing, services agreements, master agreements, or other types)?
+- How large is the contracts team, and does it include non-attorney contract professionals whose work must be supervised?
+- Are there business units or counterparty categories that require special handling, separate workflows, or additional sign-off?
+
+Record answers. Mark any unanswered item `[CONFIRM: client/team context not yet specified]`.
+
+**Stage 3 — Escalation Thresholds**
+
+Ask the interviewee:
+- What contract value threshold triggers mandatory attorney review before signature?
+- What categories of clause — for example, unlimited liability, IP ownership transfer, exclusivity, change-of-control, or multi-year auto-renewal — always require attorney escalation regardless of value?
+- Is there a counterparty category (such as a competitor, regulated entity, or government body) that triggers mandatory escalation?
+- Who is the designated escalation contact for contracts that exceed these thresholds, and what is the expected turnaround?
+
+Record answers. Mark any unanswered item `[CONFIRM: escalation threshold not yet specified]`.
+
+**Stage 4 — Preferred Output Style**
+
+Ask the interviewee:
+- Should contract work product be delivered as a narrative memo, a structured risk table, a redline comment set, or another format?
+- What level of detail does the practice group expect — executive summary only, full clause-by-clause analysis, or both?
+- Are there house style rules for how risk levels, recommendations, or open items should be labeled or formatted?
+- Should drafts include a summary of assumptions and open items as a separate section, or integrated into the body?
+
+Record answers. Mark any unanswered item `[CONFIRM: output style preference not yet specified]`.
+
+**Stage 5 — Source-of-Truth Documents**
+
+Ask the interviewee:
+- What documents constitute the group's authoritative source of truth for standard contract terms — for example, a master clause library, a playbook document, an approved template set, or an internal wiki?
+- Where are those documents stored, and how should an agent reference them in work product?
+- Are any of those documents currently under revision or not yet finalized? If so, which version governs until a new one is approved?
+- Is there a formal process for updating or approving changes to the source documents?
+
+Record answers and document names. Mark any unanswered item `[CONFIRM: source document not yet identified]`.
+
+**Stage 6 — Standard Positions and Playbooks**
+
+Ask the interviewee:
+- What is the group's default position on limitation of liability — cap formula, carve-outs, and any "never accept" terms?
+- What is the group's default position on indemnification — unilateral vs. mutual, scope of covered losses, and any "never accept" terms?
+- What is the group's preferred or required governing law and dispute-resolution clause?
+- What is the group's position on auto-renewal clauses — acceptable, unacceptable, or acceptable only with specified notice and opt-out terms?
+- What signing and approval authority rules apply — who may sign at each contract-value tier, and does a matrix or delegation of authority document govern this?
+- Are there any other clause categories the group has a documented "always" or "never" position on?
+- Does the group maintain a formal playbook document that captures these positions? If so, what is it called and where is it stored?
+
+Record answers. Mark any unanswered item `[CONFIRM: standard position not yet specified]`.
+
+**Stage 7 — Attorney Review Requirements**
+
+Ask the interviewee:
+- At what stage of the contracting process is attorney review required — initial draft, before sending to counterparty, before signing, or at multiple stages?
+- Are there contract types or counterparty categories for which attorney review is always required, regardless of value?
+- What is the designated reviewer's role — reviewing attorney, practice group lead, general counsel, or another role?
+- What is the expected turnaround time for attorney review, and how are urgent reviews handled?
+- Is there a formal sign-off step — for example, a required signature, approval stamp, or logged confirmation — before a contract is executed?
+
+Record answers. Mark any unanswered item `[CONFIRM: review requirement not yet specified]`.
+
+**Stage 8 — Prohibited Assumptions**
+
+Ask the interviewee:
+- Are there facts, terms, or positions that agents must never assume or infer without explicit confirmation — for example, that a counterparty is an affiliate, that a prior course of dealing governs, or that a template is current?
+- Are there clause types where a silence or absence should never be treated as agreement?
+- Are there business or legal risks that the group has identified as areas where agents must stop and escalate rather than reason through independently?
+- Are there prior incidents or lessons learned that should be encoded as explicit prohibitions for agents working on contracts matters?
+
+Record answers. Mark any unanswered item `[CONFIRM: prohibited assumption not yet specified]`.
+
+**Stage 9 — Assemble the Draft Profile**
+
+Compile all answers into a filled draft of `practice-profiles/contracts.md`, populating each of the eight profile sections. For every item that was not answered, insert a visible `[CONFIRM: ...]` placeholder with enough context for the reviewer to understand what needs to be supplied. Append a list of all open placeholders so the reviewing attorney can see at a glance what remains unresolved.
+
+## Output Format
+
+Deliver:
+
+1. **Filled draft of `practice-profiles/contracts.md`** — all eight sections populated with answers from the interview. Every unanswered item is a visible `[CONFIRM: ...]` placeholder.
+2. **Open-items list** — an explicit enumeration of every placeholder inserted, with the stage and question it corresponds to, so the reviewing attorney can resolve them efficiently.
+
+Label the entire output: **Draft legal work product for attorney review. Not legal advice. This profile draft must be reviewed and approved by the supervising attorney or practice group before it is relied upon.**
+
+## Attorney Verification Checklist
+
+- [ ] All eight profile sections have been reviewed by a supervising attorney or authorized practice-group representative.
+- [ ] Jurisdictions listed are accurate and complete for the group's current practice.
+- [ ] Escalation thresholds — value-based, clause-based, and counterparty-based — have been confirmed and are consistent with the group's current authority matrix.
+- [ ] Standard positions and playbook references reflect current, approved group positions, not outdated or superseded ones.
+- [ ] Source-of-truth documents listed are finalized and in effect; any documents under revision are flagged.
+- [ ] Attorney review requirements match the group's current engagement and supervision model.
+- [ ] Prohibited assumptions are accurate and do not inadvertently exclude items that should be permitted.
+- [ ] No client-specific facts, matter identifiers, or privileged details appear in the profile.
+- [ ] All `[CONFIRM: ...]` placeholders have been resolved or explicitly accepted as pending.
+- [ ] The approved profile has been saved to `practice-profiles/contracts.md` and its effective date recorded.
+- [ ] A process for periodic profile review and update has been identified.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

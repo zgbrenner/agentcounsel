@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statutory Interpretation — AgentCounsel</title>
+<meta name="description" content="Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/legal-methodology.html">Legal Methodology</a> / <span>Statutory Interpretation</span></nav>
+<h1>Statutory Interpretation</h1>
+<p class="path">Canonical path: <code>skills/legal-methodology/statutory-interpretation/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Apply a disciplined, jurisdiction-agnostic analytical method for working through a statutory, regulatory, or contractual provision. The skill guides systematic parsing of operative text, mapping of structure and defined terms, framing of the precise interpretive question, identification of ambiguities and competing candidate readings, and flagging of every jurisdiction-specific interpretive question for attorney verification. It produces draft legal work product for attorney review — not legal advice and not an authoritative interpretation.</p>
+<p>This skill teaches and applies the analytical method only. It does not and must not assert how any particular jurisdiction's courts interpret text, must not cite or invoke jurisdiction-specific interpretive canons as if they were settled authority, and must flag every jurisdiction-bound interpretive point with <code>[verify jurisdiction]</code>. What interpretive tools apply, what weight they carry, and what result they yield in a given jurisdiction are attorney-verification items without exception.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A user needs to analyze what a provision means or whether it applies to a given set of facts.</li><li>The scope, reach, or limits of a statutory, regulatory, or contractual obligation are disputed or unclear.</li><li>A user asks to "parse this provision," "interpret this clause," "what does this section mean," or "does this apply to my situation."</li><li>Competing readings of the same text need to be identified, compared, and evaluated for purposes of drafting a memo, brief section, or negotiation position.</li><li>A provision contains ambiguity, a defined term with contested scope, or a structure question (such as whether a modifier applies to one element or all of them) that requires systematic analysis before attorney resolution.</li><li>A gap or conflict between two provisions needs to be framed before attorney analysis.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li>The exact text of the provision to be interpreted. Do not analyze from paraphrase or description alone; the operative language must be present.</li><li>The document or instrument in which the provision appears (statute, regulation, contract, ordinance, rule, or other), and the section or clause reference if known.</li><li>The interpretive question: what specific question is the analysis trying to answer? If the user has not stated a specific question, stop and ask — do not assume scope.</li><li>The factual context in which the provision is being applied: the facts or circumstances that trigger or potentially trigger the provision.</li><li>Optional but recommended: the jurisdiction and governing law, so that jurisdiction-specific verification items can be targeted. If not provided, flag all jurisdiction-bound points with <code>[verify jurisdiction]</code>.</li><li>Optional: related provisions, definitions sections, or other parts of the same instrument that affect the provision's meaning.</li></ul>
+<p>If the provision text or the interpretive question is not provided, stop and request it. Do not reconstruct legislative text or contractual language from memory.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user needs a legal research memo on a broad area of law rather than interpretation of a specific provision (use <code>legal-research-memo</code>).</li><li>The user needs a contract redline or risk review rather than interpretive analysis (use <code>nda-review</code> or <code>contract-risk-review</code>).</li><li>The provision has already been definitively construed for the applicable jurisdiction by controlling authority and the question is simply applying that settled construction to new facts — interpretive analysis is unnecessary; apply the settled construction and flag it for attorney confirmation.</li><li>The interpretive question is purely a strategic choice about which reading to advocate — that is an attorney judgment that goes beyond the method this skill supplies.</li><li>The user is asking for legal advice about how a court will rule — this skill frames the question and the competing readings; it does not predict outcomes.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>Do not assert how any jurisdiction's courts interpret text. Do not name or invoke jurisdiction-specific interpretive canons as authority. Mark every jurisdiction-bound interpretive point <code>[verify jurisdiction]</code>.</li><li>Use only the text provided. Do not reconstruct, paraphrase, or substitute for the operative language. Quote the provision accurately where quotation is needed.</li><li>Do not invent definitions, legislative history, drafting history, or extrinsic materials. If such materials would be relevant to the analysis, note that they should be researched and mark the point as a verification item.</li><li>Do not state which candidate reading is legally correct. Frame and evaluate readings; leave selection to the attorney.</li><li>Do not assert that a provision is ambiguous or unambiguous as a legal conclusion. Identify textual features that support each characterization and flag the ultimate determination as <code>[ATTORNEY TO CONFIRM: ambiguity determination]</code>.</li><li>Do not compute, assert, or rely on effective dates, applicability dates, or any deadline. Mark any relevant date as <code>[deadline verification required]</code>.</li><li>Do not carry analysis from one matter or provision into another. Each interpretive worksheet is matter-specific.</li><li>Flag every place where the analysis depends on how a jurisdiction-specific interpretive rule would apply, using <code>[verify jurisdiction]</code>.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that you have the exact provision text, the instrument it appears in, and a stated interpretive question. If the question is vague or overbroad, ask the user to narrow it before proceeding. If the provision text is missing, stop and request it.</li></ol>
+<ol><li><strong>Transcribe and map the provision.</strong> Reproduce the operative text exactly. Identify its structural components:<ul><li>Subject (who or what the provision addresses).</li><li>Operative verb or obligation (what is required, prohibited, permitted, or defined).</li><li>Object (what the operative verb acts on).</li><li>Conditions, qualifications, and exceptions (when the provision applies or does not apply).</li><li>Any modifier or limiting phrase, and what it modifies.</li><li>Conjunctions and their role (does "and" mean conjunctive or disjunctive? does "or" mean inclusive or exclusive?) <code>[verify jurisdiction]</code>.</li><li>Lists and their structure (is the list exhaustive or illustrative? does a final modifier apply to all list items or only the last?) <code>[verify jurisdiction]</code>.</li></ul></li></ol>
+<ol><li><strong>Identify and map defined terms.</strong> For every capitalized, quoted, or otherwise signaled defined term in the provision:<ul><li>Locate the definition in the instrument if it exists, and transcribe it.</li><li>Note where the definition is absent, ambiguous, circular, or contested.</li><li>Note where a term is used in the provision without being defined in the instrument — flag as <code>[CONFIRM: definition source]</code>.</li><li>Substitute the definition into the provision text to test how the language reads with the definition applied.</li></ul></li></ol>
+<ol><li><strong>Frame the precise interpretive question.</strong> Restate the question presented in a single, specific sentence: what word, phrase, structural feature, or interaction between provisions is at issue, and what does it mean to resolve it? If the user's original question is actually several distinct interpretive questions, break them apart and address each separately.</li></ol>
+<ol><li><strong>Identify candidate readings.</strong> For each interpretive question, articulate the plausible competing readings of the text:<ul><li>State each reading in plain language.</li><li>Identify what textual feature, structural choice, or definitional decision each reading turns on.</li><li>Note which reading appears to be the plain-text reading and which requires a departure from the ordinary meaning of the language.</li><li>Note if a reading produces an anomalous, absurd, or internally inconsistent result — this is a textual signal that may be relevant to the analysis <code>[verify jurisdiction]</code>.</li></ul></li></ol>
+<ol><li><strong>Assess the textual support for each reading.</strong> For each candidate reading, evaluate:<ul><li>Ordinary meaning of the relevant words (without asserting dictionary authority; note that dictionary evidence may be relevant) <code>[verify jurisdiction]</code>.</li><li>Internal consistency: does the reading conflict with another provision in the same instrument?</li><li>Structural signals: headings, section numbering, organizational features <code>[verify jurisdiction]</code>.</li><li>Punctuation and grammatical structure.</li><li>Whether the same word or phrase is used elsewhere in the instrument and, if so, whether a consistent meaning is supported. Do not assert that any of these tools resolves the question; present them as factors for attorney analysis.</li></ul></li></ol>
+<ol><li><strong>Identify ambiguities and gaps.</strong> Note every place where:<ul><li>The text is susceptible to more than one reasonable reading.</li><li>A defined term is absent, incomplete, or does not clearly cover the situation.</li><li>The provision does not address a factual scenario it might have been expected to address.</li><li>Two provisions in the same instrument appear to conflict or overlap. Mark each ambiguity or gap with <code>[CONFIRM: ambiguity — attorney to assess]</code> or <code>[VERIFY: gap — see related provision]</code>.</li></ul></li></ol>
+<ol><li><strong>Flag jurisdiction-specific interpretive questions.</strong> Identify every point in the analysis where the outcome depends on a jurisdiction-specific interpretive rule, canon, or body of case law — for example, how extrinsic evidence is treated, how ambiguities are resolved against a particular party, how administrative deference doctrines apply, or what the statutory-construction rules of the enacting jurisdiction require. Mark each such point <code>[verify jurisdiction]</code> and list it as an attorney verification item. Do not assert what any jurisdiction's rule is.</li></ol>
+<ol><li><strong>Identify extrinsic materials that may be relevant.</strong> Note — without asserting their availability, admissibility, or content — categories of extrinsic materials that an attorney may wish to research: legislative history, regulatory preambles, drafting history, prior versions of the text, agency guidance, or contemporaneous interpretive materials. Mark each as a research item, not a finding.</li></ol>
+<ol><li><strong>Assemble the interpretation worksheet</strong> using the output format below. Label it as a draft for attorney review.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver a Statutory Interpretation Worksheet with the following sections:</p>
+<ol><li><strong>Worksheet Header</strong> — Provision reference (document, section, date); interpretive question(s) stated precisely; jurisdiction (or <code>[verify jurisdiction]</code> if unknown); date of analysis.</li><li><strong>Provision Text</strong> — The operative text reproduced exactly, with structural components labeled (subject, operative verb, object, conditions, modifiers, lists).</li><li><strong>Defined Terms Map</strong> — Table: Term | Definition in instrument | Location | Notes (absent / ambiguous / contested).</li><li><strong>Interpretive Question(s)</strong> — Each question stated as a single, specific sentence. If multiple, numbered separately.</li><li><strong>Candidate Readings</strong> — For each question: a numbered list of candidate readings, each with a plain-language statement and an identification of what it turns on.</li><li><strong>Textual Analysis</strong> — For each candidate reading: a structured assessment of the textual support, organized by analytical factor (ordinary meaning, internal consistency, structural signals, etc.). Presented as factors for attorney analysis, not conclusions.</li><li><strong>Ambiguities and Gaps</strong> — A list of identified ambiguities and gaps, each with a <code>[CONFIRM: ...]</code> or <code>[VERIFY: ...]</code> marker.</li><li><strong>Jurisdiction-Specific Verification Items</strong> — A list of every interpretive point that depends on a jurisdiction-specific rule, each marked <code>[verify jurisdiction]</code>, for attorney research and confirmation.</li><li><strong>Extrinsic Materials Research Items</strong> — A list of categories of extrinsic materials that may be relevant, for attorney research — not findings.</li><li><strong>Assumptions</strong> — Every assumption made in the analysis, explicitly listed.</li><li><strong>Open Items for Attorney Determination</strong> — A checklist of all unresolved questions and points requiring attorney judgment.</li></ol>
+<p>Use <code>[CONFIRM: ...]</code> for every gap. Use <code>[verify jurisdiction]</code> at every jurisdiction-dependent point. Do not state conclusions on contested interpretive questions.</p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The provision text reproduced in the worksheet is accurate and complete, and matches the operative version applicable to the matter.</li><li>[ ] The version and effective date of the instrument are confirmed <code>[deadline verification required]</code>.</li><li>[ ] Every defined term is correctly identified, and the applicable definition is the one in force at the relevant time.</li><li>[ ] The interpretive question is correctly framed for the legal issue the matter presents.</li><li>[ ] All candidate readings are plausible readings of the text; none is a strawman.</li><li>[ ] The textual analysis accurately identifies the features that bear on the question without importing jurisdiction-specific rules that have not been verified.</li><li>[ ] Every <code>[verify jurisdiction]</code> flag has been resolved: the applicable interpretive rules for this jurisdiction have been confirmed by the attorney and applied.</li><li>[ ] Extrinsic materials identified as potentially relevant have been researched and their significance assessed.</li><li>[ ] Any ambiguity determination (ambiguous vs. unambiguous) has been made by the attorney, not the analysis.</li><li>[ ] No legal conclusion about which reading prevails has been stated as settled; selection of the correct reading is an attorney judgment.</li><li>[ ] All assumptions are confirmed or corrected.</li><li>[ ] No deadline or effective date has been computed or assumed; all dates are attorney-verified.</li><li>[ ] The worksheet does not constitute legal advice and is appropriately labeled.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Statutory Interpretation
+description: Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.
+---
+
+# Statutory Interpretation
+
+## Purpose
+
+Apply a disciplined, jurisdiction-agnostic analytical method for working through a statutory, regulatory, or contractual provision. The skill guides systematic parsing of operative text, mapping of structure and defined terms, framing of the precise interpretive question, identification of ambiguities and competing candidate readings, and flagging of every jurisdiction-specific interpretive question for attorney verification. It produces draft legal work product for attorney review — not legal advice and not an authoritative interpretation.
+
+This skill teaches and applies the analytical method only. It does not and must not assert how any particular jurisdiction's courts interpret text, must not cite or invoke jurisdiction-specific interpretive canons as if they were settled authority, and must flag every jurisdiction-bound interpretive point with `[verify jurisdiction]`. What interpretive tools apply, what weight they carry, and what result they yield in a given jurisdiction are attorney-verification items without exception.
+
+## Use When
+
+- A user needs to analyze what a provision means or whether it applies to a given set of facts.
+- The scope, reach, or limits of a statutory, regulatory, or contractual obligation are disputed or unclear.
+- A user asks to "parse this provision," "interpret this clause," "what does this section mean," or "does this apply to my situation."
+- Competing readings of the same text need to be identified, compared, and evaluated for purposes of drafting a memo, brief section, or negotiation position.
+- A provision contains ambiguity, a defined term with contested scope, or a structure question (such as whether a modifier applies to one element or all of them) that requires systematic analysis before attorney resolution.
+- A gap or conflict between two provisions needs to be framed before attorney analysis.
+
+## Required Inputs
+
+- The exact text of the provision to be interpreted. Do not analyze from paraphrase or description alone; the operative language must be present.
+- The document or instrument in which the provision appears (statute, regulation, contract, ordinance, rule, or other), and the section or clause reference if known.
+- The interpretive question: what specific question is the analysis trying to answer? If the user has not stated a specific question, stop and ask — do not assume scope.
+- The factual context in which the provision is being applied: the facts or circumstances that trigger or potentially trigger the provision.
+- Optional but recommended: the jurisdiction and governing law, so that jurisdiction-specific verification items can be targeted. If not provided, flag all jurisdiction-bound points with `[verify jurisdiction]`.
+- Optional: related provisions, definitions sections, or other parts of the same instrument that affect the provision's meaning.
+
+If the provision text or the interpretive question is not provided, stop and request it. Do not reconstruct legislative text or contractual language from memory.
+
+## Do Not Use When
+
+- The user needs a legal research memo on a broad area of law rather than interpretation of a specific provision (use `legal-research-memo`).
+- The user needs a contract redline or risk review rather than interpretive analysis (use `nda-review` or `contract-risk-review`).
+- The provision has already been definitively construed for the applicable jurisdiction by controlling authority and the question is simply applying that settled construction to new facts — interpretive analysis is unnecessary; apply the settled construction and flag it for attorney confirmation.
+- The interpretive question is purely a strategic choice about which reading to advocate — that is an attorney judgment that goes beyond the method this skill supplies.
+- The user is asking for legal advice about how a court will rule — this skill frames the question and the competing readings; it does not predict outcomes.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not assert how any jurisdiction's courts interpret text. Do not name or invoke jurisdiction-specific interpretive canons as authority. Mark every jurisdiction-bound interpretive point `[verify jurisdiction]`.
+- Use only the text provided. Do not reconstruct, paraphrase, or substitute for the operative language. Quote the provision accurately where quotation is needed.
+- Do not invent definitions, legislative history, drafting history, or extrinsic materials. If such materials would be relevant to the analysis, note that they should be researched and mark the point as a verification item.
+- Do not state which candidate reading is legally correct. Frame and evaluate readings; leave selection to the attorney.
+- Do not assert that a provision is ambiguous or unambiguous as a legal conclusion. Identify textual features that support each characterization and flag the ultimate determination as `[ATTORNEY TO CONFIRM: ambiguity determination]`.
+- Do not compute, assert, or rely on effective dates, applicability dates, or any deadline. Mark any relevant date as `[deadline verification required]`.
+- Do not carry analysis from one matter or provision into another. Each interpretive worksheet is matter-specific.
+- Flag every place where the analysis depends on how a jurisdiction-specific interpretive rule would apply, using `[verify jurisdiction]`.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that you have the exact provision text, the instrument it appears in, and a stated interpretive question. If the question is vague or overbroad, ask the user to narrow it before proceeding. If the provision text is missing, stop and request it.
+
+2. **Transcribe and map the provision.** Reproduce the operative text exactly. Identify its structural components:
+   - Subject (who or what the provision addresses).
+   - Operative verb or obligation (what is required, prohibited, permitted, or defined).
+   - Object (what the operative verb acts on).
+   - Conditions, qualifications, and exceptions (when the provision applies or does not apply).
+   - Any modifier or limiting phrase, and what it modifies.
+   - Conjunctions and their role (does "and" mean conjunctive or disjunctive? does "or" mean inclusive or exclusive?) `[verify jurisdiction]`.
+   - Lists and their structure (is the list exhaustive or illustrative? does a final modifier apply to all list items or only the last?) `[verify jurisdiction]`.
+
+3. **Identify and map defined terms.** For every capitalized, quoted, or otherwise signaled defined term in the provision:
+   - Locate the definition in the instrument if it exists, and transcribe it.
+   - Note where the definition is absent, ambiguous, circular, or contested.
+   - Note where a term is used in the provision without being defined in the instrument — flag as `[CONFIRM: definition source]`.
+   - Substitute the definition into the provision text to test how the language reads with the definition applied.
+
+4. **Frame the precise interpretive question.** Restate the question presented in a single, specific sentence: what word, phrase, structural feature, or interaction between provisions is at issue, and what does it mean to resolve it? If the user's original question is actually several distinct interpretive questions, break them apart and address each separately.
+
+5. **Identify candidate readings.** For each interpretive question, articulate the plausible competing readings of the text:
+   - State each reading in plain language.
+   - Identify what textual feature, structural choice, or definitional decision each reading turns on.
+   - Note which reading appears to be the plain-text reading and which requires a departure from the ordinary meaning of the language.
+   - Note if a reading produces an anomalous, absurd, or internally inconsistent result — this is a textual signal that may be relevant to the analysis `[verify jurisdiction]`.
+
+6. **Assess the textual support for each reading.** For each candidate reading, evaluate:
+   - Ordinary meaning of the relevant words (without asserting dictionary authority; note that dictionary evidence may be relevant) `[verify jurisdiction]`.
+   - Internal consistency: does the reading conflict with another provision in the same instrument?
+   - Structural signals: headings, section numbering, organizational features `[verify jurisdiction]`.
+   - Punctuation and grammatical structure.
+   - Whether the same word or phrase is used elsewhere in the instrument and, if so, whether a consistent meaning is supported.
+   Do not assert that any of these tools resolves the question; present them as factors for attorney analysis.
+
+7. **Identify ambiguities and gaps.** Note every place where:
+   - The text is susceptible to more than one reasonable reading.
+   - A defined term is absent, incomplete, or does not clearly cover the situation.
+   - The provision does not address a factual scenario it might have been expected to address.
+   - Two provisions in the same instrument appear to conflict or overlap.
+   Mark each ambiguity or gap with `[CONFIRM: ambiguity — attorney to assess]` or `[VERIFY: gap — see related provision]`.
+
+8. **Flag jurisdiction-specific interpretive questions.** Identify every point in the analysis where the outcome depends on a jurisdiction-specific interpretive rule, canon, or body of case law — for example, how extrinsic evidence is treated, how ambiguities are resolved against a particular party, how administrative deference doctrines apply, or what the statutory-construction rules of the enacting jurisdiction require. Mark each such point `[verify jurisdiction]` and list it as an attorney verification item. Do not assert what any jurisdiction's rule is.
+
+9. **Identify extrinsic materials that may be relevant.** Note — without asserting their availability, admissibility, or content — categories of extrinsic materials that an attorney may wish to research: legislative history, regulatory preambles, drafting history, prior versions of the text, agency guidance, or contemporaneous interpretive materials. Mark each as a research item, not a finding.
+
+10. **Assemble the interpretation worksheet** using the output format below. Label it as a draft for attorney review.
+
+## Output Format
+
+Deliver a Statutory Interpretation Worksheet with the following sections:
+
+1. **Worksheet Header** — Provision reference (document, section, date); interpretive question(s) stated precisely; jurisdiction (or `[verify jurisdiction]` if unknown); date of analysis.
+2. **Provision Text** — The operative text reproduced exactly, with structural components labeled (subject, operative verb, object, conditions, modifiers, lists).
+3. **Defined Terms Map** — Table: Term | Definition in instrument | Location | Notes (absent / ambiguous / contested).
+4. **Interpretive Question(s)** — Each question stated as a single, specific sentence. If multiple, numbered separately.
+5. **Candidate Readings** — For each question: a numbered list of candidate readings, each with a plain-language statement and an identification of what it turns on.
+6. **Textual Analysis** — For each candidate reading: a structured assessment of the textual support, organized by analytical factor (ordinary meaning, internal consistency, structural signals, etc.). Presented as factors for attorney analysis, not conclusions.
+7. **Ambiguities and Gaps** — A list of identified ambiguities and gaps, each with a `[CONFIRM: ...]` or `[VERIFY: ...]` marker.
+8. **Jurisdiction-Specific Verification Items** — A list of every interpretive point that depends on a jurisdiction-specific rule, each marked `[verify jurisdiction]`, for attorney research and confirmation.
+9. **Extrinsic Materials Research Items** — A list of categories of extrinsic materials that may be relevant, for attorney research — not findings.
+10. **Assumptions** — Every assumption made in the analysis, explicitly listed.
+11. **Open Items for Attorney Determination** — A checklist of all unresolved questions and points requiring attorney judgment.
+
+Use `[CONFIRM: ...]` for every gap. Use `[verify jurisdiction]` at every jurisdiction-dependent point. Do not state conclusions on contested interpretive questions.
+
+## Attorney Verification Checklist
+
+- [ ] The provision text reproduced in the worksheet is accurate and complete, and matches the operative version applicable to the matter.
+- [ ] The version and effective date of the instrument are confirmed `[deadline verification required]`.
+- [ ] Every defined term is correctly identified, and the applicable definition is the one in force at the relevant time.
+- [ ] The interpretive question is correctly framed for the legal issue the matter presents.
+- [ ] All candidate readings are plausible readings of the text; none is a strawman.
+- [ ] The textual analysis accurately identifies the features that bear on the question without importing jurisdiction-specific rules that have not been verified.
+- [ ] Every `[verify jurisdiction]` flag has been resolved: the applicable interpretive rules for this jurisdiction have been confirmed by the attorney and applied.
+- [ ] Extrinsic materials identified as potentially relevant have been researched and their significance assessed.
+- [ ] Any ambiguity determination (ambiguous vs. unambiguous) has been made by the attorney, not the analysis.
+- [ ] No legal conclusion about which reading prevails has been stated as settled; selection of the correct reading is an attorney judgment.
+- [ ] All assumptions are confirmed or corrected.
+- [ ] No deadline or effective date has been computed or assumed; all dates are attorney-verified.
+- [ ] The worksheet does not constitute legal advice and is appropriately labeled.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Statutory Interpretation ===
+---
+name: Statutory Interpretation
+description: Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.
+---
+
+# Statutory Interpretation
+
+## Purpose
+
+Apply a disciplined, jurisdiction-agnostic analytical method for working through a statutory, regulatory, or contractual provision. The skill guides systematic parsing of operative text, mapping of structure and defined terms, framing of the precise interpretive question, identification of ambiguities and competing candidate readings, and flagging of every jurisdiction-specific interpretive question for attorney verification. It produces draft legal work product for attorney review — not legal advice and not an authoritative interpretation.
+
+This skill teaches and applies the analytical method only. It does not and must not assert how any particular jurisdiction's courts interpret text, must not cite or invoke jurisdiction-specific interpretive canons as if they were settled authority, and must flag every jurisdiction-bound interpretive point with `[verify jurisdiction]`. What interpretive tools apply, what weight they carry, and what result they yield in a given jurisdiction are attorney-verification items without exception.
+
+## Use When
+
+- A user needs to analyze what a provision means or whether it applies to a given set of facts.
+- The scope, reach, or limits of a statutory, regulatory, or contractual obligation are disputed or unclear.
+- A user asks to "parse this provision," "interpret this clause," "what does this section mean," or "does this apply to my situation."
+- Competing readings of the same text need to be identified, compared, and evaluated for purposes of drafting a memo, brief section, or negotiation position.
+- A provision contains ambiguity, a defined term with contested scope, or a structure question (such as whether a modifier applies to one element or all of them) that requires systematic analysis before attorney resolution.
+- A gap or conflict between two provisions needs to be framed before attorney analysis.
+
+## Required Inputs
+
+- The exact text of the provision to be interpreted. Do not analyze from paraphrase or description alone; the operative language must be present.
+- The document or instrument in which the provision appears (statute, regulation, contract, ordinance, rule, or other), and the section or clause reference if known.
+- The interpretive question: what specific question is the analysis trying to answer? If the user has not stated a specific question, stop and ask — do not assume scope.
+- The factual context in which the provision is being applied: the facts or circumstances that trigger or potentially trigger the provision.
+- Optional but recommended: the jurisdiction and governing law, so that jurisdiction-specific verification items can be targeted. If not provided, flag all jurisdiction-bound points with `[verify jurisdiction]`.
+- Optional: related provisions, definitions sections, or other parts of the same instrument that affect the provision's meaning.
+
+If the provision text or the interpretive question is not provided, stop and request it. Do not reconstruct legislative text or contractual language from memory.
+
+## Do Not Use When
+
+- The user needs a legal research memo on a broad area of law rather than interpretation of a specific provision (use `legal-research-memo`).
+- The user needs a contract redline or risk review rather than interpretive analysis (use `nda-review` or `contract-risk-review`).
+- The provision has already been definitively construed for the applicable jurisdiction by controlling authority and the question is simply applying that settled construction to new facts — interpretive analysis is unnecessary; apply the settled construction and flag it for attorney confirmation.
+- The interpretive question is purely a strategic choice about which reading to advocate — that is an attorney judgment that goes beyond the method this skill supplies.
+- The user is asking for legal advice about how a court will rule — this skill frames the question and the competing readings; it does not predict outcomes.
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- Do not assert how any jurisdiction's courts interpret text. Do not name or invoke jurisdiction-specific interpretive canons as authority. Mark every jurisdiction-bound interpretive point `[verify jurisdiction]`.
+- Use only the text provided. Do not reconstruct, paraphrase, or substitute for the operative language. Quote the provision accurately where quotation is needed.
+- Do not invent definitions, legislative history, drafting history, or extrinsic materials. If such materials would be relevant to the analysis, note that they should be researched and mark the point as a verification item.
+- Do not state which candidate reading is legally correct. Frame and evaluate readings; leave selection to the attorney.
+- Do not assert that a provision is ambiguous or unambiguous as a legal conclusion. Identify textual features that support each characterization and flag the ultimate determination as `[ATTORNEY TO CONFIRM: ambiguity determination]`.
+- Do not compute, assert, or rely on effective dates, applicability dates, or any deadline. Mark any relevant date as `[deadline verification required]`.
+- Do not carry analysis from one matter or provision into another. Each interpretive worksheet is matter-specific.
+- Flag every place where the analysis depends on how a jurisdiction-specific interpretive rule would apply, using `[verify jurisdiction]`.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that you have the exact provision text, the instrument it appears in, and a stated interpretive question. If the question is vague or overbroad, ask the user to narrow it before proceeding. If the provision text is missing, stop and request it.
+
+2. **Transcribe and map the provision.** Reproduce the operative text exactly. Identify its structural components:
+   - Subject (who or what the provision addresses).
+   - Operative verb or obligation (what is required, prohibited, permitted, or defined).
+   - Object (what the operative verb acts on).
+   - Conditions, qualifications, and exceptions (when the provision applies or does not apply).
+   - Any modifier or limiting phrase, and what it modifies.
+   - Conjunctions and their role (does "and" mean conjunctive or disjunctive? does "or" mean inclusive or exclusive?) `[verify jurisdiction]`.
+   - Lists and their structure (is the list exhaustive or illustrative? does a final modifier apply to all list items or only the last?) `[verify jurisdiction]`.
+
+3. **Identify and map defined terms.** For every capitalized, quoted, or otherwise signaled defined term in the provision:
+   - Locate the definition in the instrument if it exists, and transcribe it.
+   - Note where the definition is absent, ambiguous, circular, or contested.
+   - Note where a term is used in the provision without being defined in the instrument — flag as `[CONFIRM: definition source]`.
+   - Substitute the definition into the provision text to test how the language reads with the definition applied.
+
+4. **Frame the precise interpretive question.** Restate the question presented in a single, specific sentence: what word, phrase, structural feature, or interaction between provisions is at issue, and what does it mean to resolve it? If the user's original question is actually several distinct interpretive questions, break them apart and address each separately.
+
+5. **Identify candidate readings.** For each interpretive question, articulate the plausible competing readings of the text:
+   - State each reading in plain language.
+   - Identify what textual feature, structural choice, or definitional decision each reading turns on.
+   - Note which reading appears to be the plain-text reading and which requires a departure from the ordinary meaning of the language.
+   - Note if a reading produces an anomalous, absurd, or internally inconsistent result — this is a textual signal that may be relevant to the analysis `[verify jurisdiction]`.
+
+6. **Assess the textual support for each reading.** For each candidate reading, evaluate:
+   - Ordinary meaning of the relevant words (without asserting dictionary authority; note that dictionary evidence may be relevant) `[verify jurisdiction]`.
+   - Internal consistency: does the reading conflict with another provision in the same instrument?
+   - Structural signals: headings, section numbering, organizational features `[verify jurisdiction]`.
+   - Punctuation and grammatical structure.
+   - Whether the same word or phrase is used elsewhere in the instrument and, if so, whether a consistent meaning is supported.
+   Do not assert that any of these tools resolves the question; present them as factors for attorney analysis.
+
+7. **Identify ambiguities and gaps.** Note every place where:
+   - The text is susceptible to more than one reasonable reading.
+   - A defined term is absent, incomplete, or does not clearly cover the situation.
+   - The provision does not address a factual scenario it might have been expected to address.
+   - Two provisions in the same instrument appear to conflict or overlap.
+   Mark each ambiguity or gap with `[CONFIRM: ambiguity — attorney to assess]` or `[VERIFY: gap — see related provision]`.
+
+8. **Flag jurisdiction-specific interpretive questions.** Identify every point in the analysis where the outcome depends on a jurisdiction-specific interpretive rule, canon, or body of case law — for example, how extrinsic evidence is treated, how ambiguities are resolved against a particular party, how administrative deference doctrines apply, or what the statutory-construction rules of the enacting jurisdiction require. Mark each such point `[verify jurisdiction]` and list it as an attorney verification item. Do not assert what any jurisdiction's rule is.
+
+9. **Identify extrinsic materials that may be relevant.** Note — without asserting their availability, admissibility, or content — categories of extrinsic materials that an attorney may wish to research: legislative history, regulatory preambles, drafting history, prior versions of the text, agency guidance, or contemporaneous interpretive materials. Mark each as a research item, not a finding.
+
+10. **Assemble the interpretation worksheet** using the output format below. Label it as a draft for attorney review.
+
+## Output Format
+
+Deliver a Statutory Interpretation Worksheet with the following sections:
+
+1. **Worksheet Header** — Provision reference (document, section, date); interpretive question(s) stated precisely; jurisdiction (or `[verify jurisdiction]` if unknown); date of analysis.
+2. **Provision Text** — The operative text reproduced exactly, with structural components labeled (subject, operative verb, object, conditions, modifiers, lists).
+3. **Defined Terms Map** — Table: Term | Definition in instrument | Location | Notes (absent / ambiguous / contested).
+4. **Interpretive Question(s)** — Each question stated as a single, specific sentence. If multiple, numbered separately.
+5. **Candidate Readings** — For each question: a numbered list of candidate readings, each with a plain-language statement and an identification of what it turns on.
+6. **Textual Analysis** — For each candidate reading: a structured assessment of the textual support, organized by analytical factor (ordinary meaning, internal consistency, structural signals, etc.). Presented as factors for attorney analysis, not conclusions.
+7. **Ambiguities and Gaps** — A list of identified ambiguities and gaps, each with a `[CONFIRM: ...]` or `[VERIFY: ...]` marker.
+8. **Jurisdiction-Specific Verification Items** — A list of every interpretive point that depends on a jurisdiction-specific rule, each marked `[verify jurisdiction]`, for attorney research and confirmation.
+9. **Extrinsic Materials Research Items** — A list of categories of extrinsic materials that may be relevant, for attorney research — not findings.
+10. **Assumptions** — Every assumption made in the analysis, explicitly listed.
+11. **Open Items for Attorney Determination** — A checklist of all unresolved questions and points requiring attorney judgment.
+
+Use `[CONFIRM: ...]` for every gap. Use `[verify jurisdiction]` at every jurisdiction-dependent point. Do not state conclusions on contested interpretive questions.
+
+## Attorney Verification Checklist
+
+- [ ] The provision text reproduced in the worksheet is accurate and complete, and matches the operative version applicable to the matter.
+- [ ] The version and effective date of the instrument are confirmed `[deadline verification required]`.
+- [ ] Every defined term is correctly identified, and the applicable definition is the one in force at the relevant time.
+- [ ] The interpretive question is correctly framed for the legal issue the matter presents.
+- [ ] All candidate readings are plausible readings of the text; none is a strawman.
+- [ ] The textual analysis accurately identifies the features that bear on the question without importing jurisdiction-specific rules that have not been verified.
+- [ ] Every `[verify jurisdiction]` flag has been resolved: the applicable interpretive rules for this jurisdiction have been confirmed by the attorney and applied.
+- [ ] Extrinsic materials identified as potentially relevant have been researched and their significance assessed.
+- [ ] Any ambiguity determination (ambiguous vs. unambiguous) has been made by the attorney, not the analysis.
+- [ ] No legal conclusion about which reading prevails has been stated as settled; selection of the correct reading is an attorney judgment.
+- [ ] All assumptions are confirmed or corrected.
+- [ ] No deadline or effective date has been computed or assumed; all dates are attorney-verified.
+- [ ] The worksheet does not constitute legal advice and is appropriately labeled.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

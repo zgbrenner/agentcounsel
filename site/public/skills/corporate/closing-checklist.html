@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Closing Checklist — AgentCounsel</title>
+<meta name="description" content="Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/corporate.html">Corporate</a> / <span>Closing Checklist</span></nav>
+<h1>Closing Checklist</h1>
+<p class="path">Canonical path: <code>skills/corporate/closing-checklist/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Build and maintain a structured transaction closing checklist that captures every condition precedent, closing deliverable, and pre-closing covenant drawn from the transaction agreement. The skill can initialize a checklist from the agreement, fold in items surfaced by diligence, update item status, and produce a blocking and critical-path summary. It produces draft legal work product for attorney review — not legal advice and not a closing certification.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A deal team needs to initialize a closing checklist from a purchase agreement, merger agreement, or financing document.</li><li>Diligence findings have surfaced pre-closing action items — consents, regulatory filings, board or shareholder approvals, releases, or escrow mechanics — that must be tracked to closing.</li><li>The team needs to update the status of existing checklist items and surface what remains open.</li><li>A deal is approaching signing or closing and the team wants a consolidated view of open conditions and deliverables for attorney review.</li><li>The user asks for a "closing checklist," "conditions checklist," "pre-closing action list," or equivalent.</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li><strong>The transaction agreement</strong> (purchase agreement, merger agreement, financing document, or equivalent) — required to initialize the checklist or verify item sourcing. Do not reconstruct or paraphrase conditions from memory or a description alone.</li><li><strong>Deal context</strong> — deal name, transaction structure (e.g., stock purchase, asset purchase, merger, or financing [CONFIRM: structure]), and parties. If any of these are missing, ask for them before proceeding.</li><li><strong>Operating mode</strong> — one of: <strong>initialize</strong> (build from the agreement), <strong>add</strong> (fold in diligence items), <strong>update</strong> (revise item status), or <strong>status report</strong> (surface blocking items and critical path).</li><li><strong>Diligence findings</strong> — required only for <strong>add</strong> mode; a list or memo of findings that carry pre-closing action items.</li><li><strong>Existing checklist</strong> — required for <strong>update</strong> and <strong>status report</strong> modes; provide the current checklist to be updated.</li></ul>
+<p>If the transaction agreement is not provided and the mode is <strong>initialize</strong>, stop and request it. Do not construct a checklist from deal-type assumptions alone. If the existing checklist is not provided for <strong>update</strong> or <strong>status report</strong> modes, stop and request it.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user wants transaction documents drafted (a purchase agreement, merger agreement, ancillary documents, or similar) — route to the appropriate drafting skill.</li><li>The user wants a diligence issues list or red-flag report — use <code>diligence-issue-extraction</code>.</li><li>The user wants a material-contracts disclosure schedule built — use <code>material-contract-schedule</code>.</li><li>The user wants a certification that closing conditions have been satisfied and the deal is ready to close — that is a legal conclusion requiring attorney review and sign-off; this skill does not produce it.</li><li>The document provided is not a transaction agreement (use <code>contract-risk-review</code> for general commercial agreements).</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>A "closing-ready" determination — concluding that all conditions precedent have been satisfied and the deal may close — is a legal judgment. This skill produces a checklist and a blocking analysis to support that judgment; it does not make it. Attorney review and sign-off are required before a closing proceeds.</li><li>Extract closing conditions and deliverables only from the language actually present in the provided agreement. Do not supplement from model background knowledge about what conditions are typical for a given deal type.</li><li>Do not invent, compute, or assert any deadline. Every date field in the checklist is <code>[deadline verification required]</code> unless a date is expressly stated in the agreement or provided by the user as a confirmed fact.</li><li>Do not state or imply jurisdiction-specific regulatory mechanics, filing requirements, waiting periods, or statutory timing. All such items are <code>[verify jurisdiction]</code> until an attorney confirms them.</li><li>Do not invent responsible parties, consent counterparties, or regulatory bodies. If a condition references a party or authority not named in the agreement, flag it rather than guess.</li><li>Distinguish what the agreement says from what you assume and from what the attorney must confirm. Separate facts, assumptions, analysis, and open verification items.</li><li>A condition marked "Blocking: Yes" reflects that the agreement makes closing contingent on it, or that the user has designated it as blocking — not an independent legal conclusion about materiality or waivability.</li><li>Preserve confidentiality and privilege. Do not include client-sensitive facts in reusable copies of this template.</li><li>Flag every point of uncertainty with a placeholder rather than resolving it silently.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<h5>Step 1 — Confirm inputs and mode</h5>
+<p>Identify the operating mode: <strong>initialize</strong>, <strong>add</strong>, <strong>update</strong>, or <strong>status report</strong>. Verify that all required inputs for the selected mode are present. If anything is missing, request it before proceeding.</p>
+<p>Note the deal name, structure, and parties. Flag as <code>[CONFIRM: structure]</code> if the transaction structure is ambiguous.</p>
+<h5>Step 2 — Initialize (from the transaction agreement)</h5>
+<p>*Skip to Step 3 if the mode is <strong>add</strong>, <strong>update</strong>, or <strong>status report</strong>.*</p>
+<p>Read the transaction agreement carefully. Extract every:</p>
+<ul><li><strong>Condition precedent</strong> to each party's obligation to close (typically in the "Conditions to Closing" or "Conditions Precedent" article), including mutual conditions, conditions to the buyer's obligations, and conditions to the seller's obligations.</li><li><strong>Closing deliverable</strong> — documents, certificates, officer's certificates, consents, payoff letters, and instruments to be delivered at or before closing.</li><li><strong>Pre-closing covenant</strong> — affirmative or negative covenants that must be performed between signing and closing (e.g., conduct of business in the ordinary course, required filings, required consents, no-shop obligations).</li></ul>
+<p>For each extracted item:</p>
+<ul><li>Assign a sequential ID (e.g., CP-001, CD-001, PC-001 by category).</li><li>Record the source (agreement article or section number as written).</li><li>Mark Blocking as <strong>Yes</strong> if the agreement conditions closing on it, <strong>No</strong> if it is a deliverable that can be waived, or <strong>[CONFIRM: blocking status]</strong> if ambiguous.</li><li>Leave Status as <strong>Open</strong> unless otherwise confirmed.</li><li>Leave Due as <code>[deadline verification required]</code> unless a specific date appears in the agreement.</li><li>Leave Responsible as <code>[CONFIRM: responsible party]</code> unless the agreement designates one.</li></ul>
+<p>Do not assume that regulatory mechanics, governmental approvals, or statutory waiting periods apply based on the deal type alone. Where the agreement references a regulatory approval, filing, or governmental consent without specifying mechanics, flag the item as <code>[verify jurisdiction]</code>.</p>
+<h5>Step 3 — Add diligence items</h5>
+<p>*Skip to Step 4 if the mode is <strong>initialize</strong>, <strong>update</strong>, or <strong>status report</strong>.*</p>
+<p>Review the diligence findings provided. Identify every finding that carries a pre-closing action item, including:</p>
+<ul><li>Required third-party consents (contractual change-of-control, assignment, or consent provisions).</li><li>Board or shareholder authorizations and approvals.</li><li>Regulatory filings or clearances identified through diligence.</li><li>Releases, terminations, or payoffs needed before closing.</li><li>Escrow establishment or funding mechanics.</li><li>Any other item that must be completed before closing can occur.</li></ul>
+<p>For each new item:</p>
+<ul><li>Assign an ID in sequence (continuing from the initialized checklist, or beginning a new series for diligence-derived items, e.g., DI-001).</li><li>Record the source as the diligence finding (document title and finding reference, if available).</li><li>De-duplicate carefully: a third-party consent and a release involving the same counterparty are distinct items even if the counterparty is the same. A filing obligation identified in diligence that duplicates a condition in the agreement should be merged, not duplicated; note both sources.</li></ul>
+<p>Apply the same placeholder discipline as in Step 2: no computed deadlines, no assumed regulatory mechanics.</p>
+<h5>Step 4 — Update item status</h5>
+<p>*Skip to Step 5 if the mode is <strong>initialize</strong> or <strong>add</strong>.*</p>
+<p>For each item being updated, record the new status. Use consistent status values such as: <strong>Open</strong>, <strong>In Progress</strong>, <strong>Pending Counterparty</strong>, <strong>Received / Complete</strong>, or <strong>Waived</strong> — or the team's own conventions if provided. Note any change to the responsible party or due date only if confirmed by the user; do not infer these from context.</p>
+<p>If an item is marked <strong>Waived</strong>, flag it for attorney confirmation: <code>[ATTORNEY TO CONFIRM: waiver of this condition]</code>.</p>
+<h5>Step 5 — Status report and blocking analysis</h5>
+<p>Identify every item with:</p>
+<ul><li><strong>Blocking: Yes</strong> and <strong>Status: Open</strong> or <strong>In Progress</strong> — these are the items currently standing between the deal and closing.</li><li><strong>Blocking: Yes</strong> and <strong>Status: Pending Counterparty</strong> — items in flight but not yet complete.</li><li>Any item carrying <code>[verify jurisdiction]</code> or <code>[CONFIRM]</code> that has not yet been resolved.</li></ul>
+<p>Summarize the critical path: which open blocking items are on the longest path to closing, and what dependencies exist among them (e.g., a regulatory filing must be completed before a clearance can be obtained). Do not assert that any item is legally satisfied — describe status as reported and flag what remains to be confirmed.</p>
+<h5>Step 6 — Assemble the output</h5>
+<p>Produce the closing checklist using <code>templates/closing-checklist.md</code>. Follow the Output Format below. Label the entire output as a draft for attorney review.</p>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver:</p>
+<ol><li><strong>Closing Checklist</strong> — the completed checklist table from <code>templates/closing-checklist.md</code>, grouped by category (Conditions Precedent / Closing Deliverables / Pre-Closing Covenants / Third-Party Consents / Regulatory Filings / Corporate Approvals). Use placeholders throughout; do not fill gaps with invented content.</li><li><strong>Blocking and Critical-Path Summary</strong> — a concise narrative identifying every open blocking item, items pending counterparty action, and any unresolved <code>[verify jurisdiction]</code> or <code>[CONFIRM]</code> items, with a plain-language description of the critical path to closing.</li><li><strong>Assumptions</strong> — every assumption made in constructing or updating the checklist, listed explicitly. Include the deal structure assumed, any items treated as blocking by default, and any source material not provided.</li><li><strong>Attorney Verification Items</strong> — open questions and items requiring legal judgment, including all <code>[ATTORNEY TO CONFIRM]</code> flags, all <code>[verify jurisdiction]</code> items, and any condition whose satisfaction is a legal conclusion rather than a factual status.</li></ol>
+<p>Use <code>[CONFIRM: ...]</code>, <code>[VERIFY: ...]</code>, <code>[ATTORNEY TO CONFIRM: ...]</code>, and <code>[deadline verification required]</code> throughout. Do not fill gaps with invented content.</p>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] The transaction agreement reviewed is fully executed and final (or, for pre-signing use, is confirmed to be the agreed form).</li><li>[ ] All conditions precedent, closing deliverables, and pre-closing covenants have been identified from the agreement; no material conditions have been omitted.</li><li>[ ] The transaction structure is correctly identified; if the structure is ambiguous, it has been confirmed with deal counsel.</li><li>[ ] Every item marked "Blocking: Yes" is confirmed to be a condition or covenant on which closing is contractually contingent, and any waivability has been assessed.</li><li>[ ] No waiver of a closing condition has been treated as final without attorney confirmation.</li><li>[ ] All <code>[verify jurisdiction]</code> items — regulatory mechanics, filing requirements, waiting periods, and governmental approvals — have been reviewed and confirmed with counsel having relevant jurisdiction and subject-matter expertise.</li><li>[ ] Deadlines and due dates have been confirmed against the agreement and applicable legal requirements; no deadline has been computed from model background knowledge.</li><li>[ ] Responsible parties have been confirmed with the deal team; no responsible party has been assumed from context.</li><li>[ ] Diligence-derived items have been cross-referenced against the agreement to ensure de-duplication is accurate and no consent or filing obligation has been missed.</li><li>[ ] All <code>[ATTORNEY TO CONFIRM]</code> flags in the checklist have been reviewed and resolved.</li><li>[ ] No legal authority, statute, regulation, or case law has been asserted without verification.</li><li>[ ] The checklist and blocking analysis have been reviewed by deal counsel before being relied upon to determine closing readiness.</li><li>[ ] All assumptions and open items are resolved before the checklist is used to support a closing determination.</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Closing Checklist
+description: Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.
+---
+
+# Closing Checklist
+
+## Purpose
+
+Build and maintain a structured transaction closing checklist that captures every condition precedent, closing deliverable, and pre-closing covenant drawn from the transaction agreement. The skill can initialize a checklist from the agreement, fold in items surfaced by diligence, update item status, and produce a blocking and critical-path summary. It produces draft legal work product for attorney review — not legal advice and not a closing certification.
+
+## Use When
+
+- A deal team needs to initialize a closing checklist from a purchase agreement, merger agreement, or financing document.
+- Diligence findings have surfaced pre-closing action items — consents, regulatory filings, board or shareholder approvals, releases, or escrow mechanics — that must be tracked to closing.
+- The team needs to update the status of existing checklist items and surface what remains open.
+- A deal is approaching signing or closing and the team wants a consolidated view of open conditions and deliverables for attorney review.
+- The user asks for a "closing checklist," "conditions checklist," "pre-closing action list," or equivalent.
+
+## Required Inputs
+
+- **The transaction agreement** (purchase agreement, merger agreement, financing document, or equivalent) — required to initialize the checklist or verify item sourcing. Do not reconstruct or paraphrase conditions from memory or a description alone.
+- **Deal context** — deal name, transaction structure (e.g., stock purchase, asset purchase, merger, or financing [CONFIRM: structure]), and parties. If any of these are missing, ask for them before proceeding.
+- **Operating mode** — one of: **initialize** (build from the agreement), **add** (fold in diligence items), **update** (revise item status), or **status report** (surface blocking items and critical path).
+- **Diligence findings** — required only for **add** mode; a list or memo of findings that carry pre-closing action items.
+- **Existing checklist** — required for **update** and **status report** modes; provide the current checklist to be updated.
+
+If the transaction agreement is not provided and the mode is **initialize**, stop and request it. Do not construct a checklist from deal-type assumptions alone. If the existing checklist is not provided for **update** or **status report** modes, stop and request it.
+
+## Do Not Use When
+
+- The user wants transaction documents drafted (a purchase agreement, merger agreement, ancillary documents, or similar) — route to the appropriate drafting skill.
+- The user wants a diligence issues list or red-flag report — use `diligence-issue-extraction`.
+- The user wants a material-contracts disclosure schedule built — use `material-contract-schedule`.
+- The user wants a certification that closing conditions have been satisfied and the deal is ready to close — that is a legal conclusion requiring attorney review and sign-off; this skill does not produce it.
+- The document provided is not a transaction agreement (use `contract-risk-review` for general commercial agreements).
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- A "closing-ready" determination — concluding that all conditions precedent have been satisfied and the deal may close — is a legal judgment. This skill produces a checklist and a blocking analysis to support that judgment; it does not make it. Attorney review and sign-off are required before a closing proceeds.
+- Extract closing conditions and deliverables only from the language actually present in the provided agreement. Do not supplement from model background knowledge about what conditions are typical for a given deal type.
+- Do not invent, compute, or assert any deadline. Every date field in the checklist is `[deadline verification required]` unless a date is expressly stated in the agreement or provided by the user as a confirmed fact.
+- Do not state or imply jurisdiction-specific regulatory mechanics, filing requirements, waiting periods, or statutory timing. All such items are `[verify jurisdiction]` until an attorney confirms them.
+- Do not invent responsible parties, consent counterparties, or regulatory bodies. If a condition references a party or authority not named in the agreement, flag it rather than guess.
+- Distinguish what the agreement says from what you assume and from what the attorney must confirm. Separate facts, assumptions, analysis, and open verification items.
+- A condition marked "Blocking: Yes" reflects that the agreement makes closing contingent on it, or that the user has designated it as blocking — not an independent legal conclusion about materiality or waivability.
+- Preserve confidentiality and privilege. Do not include client-sensitive facts in reusable copies of this template.
+- Flag every point of uncertainty with a placeholder rather than resolving it silently.
+
+## Workflow
+
+### Step 1 — Confirm inputs and mode
+
+Identify the operating mode: **initialize**, **add**, **update**, or **status report**. Verify that all required inputs for the selected mode are present. If anything is missing, request it before proceeding.
+
+Note the deal name, structure, and parties. Flag as `[CONFIRM: structure]` if the transaction structure is ambiguous.
+
+### Step 2 — Initialize (from the transaction agreement)
+
+*Skip to Step 3 if the mode is **add**, **update**, or **status report**.*
+
+Read the transaction agreement carefully. Extract every:
+
+- **Condition precedent** to each party's obligation to close (typically in the "Conditions to Closing" or "Conditions Precedent" article), including mutual conditions, conditions to the buyer's obligations, and conditions to the seller's obligations.
+- **Closing deliverable** — documents, certificates, officer's certificates, consents, payoff letters, and instruments to be delivered at or before closing.
+- **Pre-closing covenant** — affirmative or negative covenants that must be performed between signing and closing (e.g., conduct of business in the ordinary course, required filings, required consents, no-shop obligations).
+
+For each extracted item:
+
+- Assign a sequential ID (e.g., CP-001, CD-001, PC-001 by category).
+- Record the source (agreement article or section number as written).
+- Mark Blocking as **Yes** if the agreement conditions closing on it, **No** if it is a deliverable that can be waived, or **[CONFIRM: blocking status]** if ambiguous.
+- Leave Status as **Open** unless otherwise confirmed.
+- Leave Due as `[deadline verification required]` unless a specific date appears in the agreement.
+- Leave Responsible as `[CONFIRM: responsible party]` unless the agreement designates one.
+
+Do not assume that regulatory mechanics, governmental approvals, or statutory waiting periods apply based on the deal type alone. Where the agreement references a regulatory approval, filing, or governmental consent without specifying mechanics, flag the item as `[verify jurisdiction]`.
+
+### Step 3 — Add diligence items
+
+*Skip to Step 4 if the mode is **initialize**, **update**, or **status report**.*
+
+Review the diligence findings provided. Identify every finding that carries a pre-closing action item, including:
+
+- Required third-party consents (contractual change-of-control, assignment, or consent provisions).
+- Board or shareholder authorizations and approvals.
+- Regulatory filings or clearances identified through diligence.
+- Releases, terminations, or payoffs needed before closing.
+- Escrow establishment or funding mechanics.
+- Any other item that must be completed before closing can occur.
+
+For each new item:
+
+- Assign an ID in sequence (continuing from the initialized checklist, or beginning a new series for diligence-derived items, e.g., DI-001).
+- Record the source as the diligence finding (document title and finding reference, if available).
+- De-duplicate carefully: a third-party consent and a release involving the same counterparty are distinct items even if the counterparty is the same. A filing obligation identified in diligence that duplicates a condition in the agreement should be merged, not duplicated; note both sources.
+
+Apply the same placeholder discipline as in Step 2: no computed deadlines, no assumed regulatory mechanics.
+
+### Step 4 — Update item status
+
+*Skip to Step 5 if the mode is **initialize** or **add**.*
+
+For each item being updated, record the new status. Use consistent status values such as: **Open**, **In Progress**, **Pending Counterparty**, **Received / Complete**, or **Waived** — or the team's own conventions if provided. Note any change to the responsible party or due date only if confirmed by the user; do not infer these from context.
+
+If an item is marked **Waived**, flag it for attorney confirmation: `[ATTORNEY TO CONFIRM: waiver of this condition]`.
+
+### Step 5 — Status report and blocking analysis
+
+Identify every item with:
+
+- **Blocking: Yes** and **Status: Open** or **In Progress** — these are the items currently standing between the deal and closing.
+- **Blocking: Yes** and **Status: Pending Counterparty** — items in flight but not yet complete.
+- Any item carrying `[verify jurisdiction]` or `[CONFIRM]` that has not yet been resolved.
+
+Summarize the critical path: which open blocking items are on the longest path to closing, and what dependencies exist among them (e.g., a regulatory filing must be completed before a clearance can be obtained). Do not assert that any item is legally satisfied — describe status as reported and flag what remains to be confirmed.
+
+### Step 6 — Assemble the output
+
+Produce the closing checklist using `templates/closing-checklist.md`. Follow the Output Format below. Label the entire output as a draft for attorney review.
+
+## Output Format
+
+Deliver:
+
+1. **Closing Checklist** — the completed checklist table from `templates/closing-checklist.md`, grouped by category (Conditions Precedent / Closing Deliverables / Pre-Closing Covenants / Third-Party Consents / Regulatory Filings / Corporate Approvals). Use placeholders throughout; do not fill gaps with invented content.
+2. **Blocking and Critical-Path Summary** — a concise narrative identifying every open blocking item, items pending counterparty action, and any unresolved `[verify jurisdiction]` or `[CONFIRM]` items, with a plain-language description of the critical path to closing.
+3. **Assumptions** — every assumption made in constructing or updating the checklist, listed explicitly. Include the deal structure assumed, any items treated as blocking by default, and any source material not provided.
+4. **Attorney Verification Items** — open questions and items requiring legal judgment, including all `[ATTORNEY TO CONFIRM]` flags, all `[verify jurisdiction]` items, and any condition whose satisfaction is a legal conclusion rather than a factual status.
+
+Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, and `[deadline verification required]` throughout. Do not fill gaps with invented content.
+
+## Attorney Verification Checklist
+
+- [ ] The transaction agreement reviewed is fully executed and final (or, for pre-signing use, is confirmed to be the agreed form).
+- [ ] All conditions precedent, closing deliverables, and pre-closing covenants have been identified from the agreement; no material conditions have been omitted.
+- [ ] The transaction structure is correctly identified; if the structure is ambiguous, it has been confirmed with deal counsel.
+- [ ] Every item marked "Blocking: Yes" is confirmed to be a condition or covenant on which closing is contractually contingent, and any waivability has been assessed.
+- [ ] No waiver of a closing condition has been treated as final without attorney confirmation.
+- [ ] All `[verify jurisdiction]` items — regulatory mechanics, filing requirements, waiting periods, and governmental approvals — have been reviewed and confirmed with counsel having relevant jurisdiction and subject-matter expertise.
+- [ ] Deadlines and due dates have been confirmed against the agreement and applicable legal requirements; no deadline has been computed from model background knowledge.
+- [ ] Responsible parties have been confirmed with the deal team; no responsible party has been assumed from context.
+- [ ] Diligence-derived items have been cross-referenced against the agreement to ensure de-duplication is accurate and no consent or filing obligation has been missed.
+- [ ] All `[ATTORNEY TO CONFIRM]` flags in the checklist have been reviewed and resolved.
+- [ ] No legal authority, statute, regulation, or case law has been asserted without verification.
+- [ ] The checklist and blocking analysis have been reviewed by deal counsel before being relied upon to determine closing readiness.
+- [ ] All assumptions and open items are resolved before the checklist is used to support a closing determination.
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Closing Checklist ===
+---
+name: Closing Checklist
+description: Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.
+---
+
+# Closing Checklist
+
+## Purpose
+
+Build and maintain a structured transaction closing checklist that captures every condition precedent, closing deliverable, and pre-closing covenant drawn from the transaction agreement. The skill can initialize a checklist from the agreement, fold in items surfaced by diligence, update item status, and produce a blocking and critical-path summary. It produces draft legal work product for attorney review — not legal advice and not a closing certification.
+
+## Use When
+
+- A deal team needs to initialize a closing checklist from a purchase agreement, merger agreement, or financing document.
+- Diligence findings have surfaced pre-closing action items — consents, regulatory filings, board or shareholder approvals, releases, or escrow mechanics — that must be tracked to closing.
+- The team needs to update the status of existing checklist items and surface what remains open.
+- A deal is approaching signing or closing and the team wants a consolidated view of open conditions and deliverables for attorney review.
+- The user asks for a "closing checklist," "conditions checklist," "pre-closing action list," or equivalent.
+
+## Required Inputs
+
+- **The transaction agreement** (purchase agreement, merger agreement, financing document, or equivalent) — required to initialize the checklist or verify item sourcing. Do not reconstruct or paraphrase conditions from memory or a description alone.
+- **Deal context** — deal name, transaction structure (e.g., stock purchase, asset purchase, merger, or financing [CONFIRM: structure]), and parties. If any of these are missing, ask for them before proceeding.
+- **Operating mode** — one of: **initialize** (build from the agreement), **add** (fold in diligence items), **update** (revise item status), or **status report** (surface blocking items and critical path).
+- **Diligence findings** — required only for **add** mode; a list or memo of findings that carry pre-closing action items.
+- **Existing checklist** — required for **update** and **status report** modes; provide the current checklist to be updated.
+
+If the transaction agreement is not provided and the mode is **initialize**, stop and request it. Do not construct a checklist from deal-type assumptions alone. If the existing checklist is not provided for **update** or **status report** modes, stop and request it.
+
+## Do Not Use When
+
+- The user wants transaction documents drafted (a purchase agreement, merger agreement, ancillary documents, or similar) — route to the appropriate drafting skill.
+- The user wants a diligence issues list or red-flag report — use `diligence-issue-extraction`.
+- The user wants a material-contracts disclosure schedule built — use `material-contract-schedule`.
+- The user wants a certification that closing conditions have been satisfied and the deal is ready to close — that is a legal conclusion requiring attorney review and sign-off; this skill does not produce it.
+- The document provided is not a transaction agreement (use `contract-risk-review` for general commercial agreements).
+
+## Legal Safety Rules
+
+- Produce draft legal work product for attorney review. This is not legal advice.
+- A "closing-ready" determination — concluding that all conditions precedent have been satisfied and the deal may close — is a legal judgment. This skill produces a checklist and a blocking analysis to support that judgment; it does not make it. Attorney review and sign-off are required before a closing proceeds.
+- Extract closing conditions and deliverables only from the language actually present in the provided agreement. Do not supplement from model background knowledge about what conditions are typical for a given deal type.
+- Do not invent, compute, or assert any deadline. Every date field in the checklist is `[deadline verification required]` unless a date is expressly stated in the agreement or provided by the user as a confirmed fact.
+- Do not state or imply jurisdiction-specific regulatory mechanics, filing requirements, waiting periods, or statutory timing. All such items are `[verify jurisdiction]` until an attorney confirms them.
+- Do not invent responsible parties, consent counterparties, or regulatory bodies. If a condition references a party or authority not named in the agreement, flag it rather than guess.
+- Distinguish what the agreement says from what you assume and from what the attorney must confirm. Separate facts, assumptions, analysis, and open verification items.
+- A condition marked "Blocking: Yes" reflects that the agreement makes closing contingent on it, or that the user has designated it as blocking — not an independent legal conclusion about materiality or waivability.
+- Preserve confidentiality and privilege. Do not include client-sensitive facts in reusable copies of this template.
+- Flag every point of uncertainty with a placeholder rather than resolving it silently.
+
+## Workflow
+
+### Step 1 — Confirm inputs and mode
+
+Identify the operating mode: **initialize**, **add**, **update**, or **status report**. Verify that all required inputs for the selected mode are present. If anything is missing, request it before proceeding.
+
+Note the deal name, structure, and parties. Flag as `[CONFIRM: structure]` if the transaction structure is ambiguous.
+
+### Step 2 — Initialize (from the transaction agreement)
+
+*Skip to Step 3 if the mode is **add**, **update**, or **status report**.*
+
+Read the transaction agreement carefully. Extract every:
+
+- **Condition precedent** to each party's obligation to close (typically in the "Conditions to Closing" or "Conditions Precedent" article), including mutual conditions, conditions to the buyer's obligations, and conditions to the seller's obligations.
+- **Closing deliverable** — documents, certificates, officer's certificates, consents, payoff letters, and instruments to be delivered at or before closing.
+- **Pre-closing covenant** — affirmative or negative covenants that must be performed between signing and closing (e.g., conduct of business in the ordinary course, required filings, required consents, no-shop obligations).
+
+For each extracted item:
+
+- Assign a sequential ID (e.g., CP-001, CD-001, PC-001 by category).
+- Record the source (agreement article or section number as written).
+- Mark Blocking as **Yes** if the agreement conditions closing on it, **No** if it is a deliverable that can be waived, or **[CONFIRM: blocking status]** if ambiguous.
+- Leave Status as **Open** unless otherwise confirmed.
+- Leave Due as `[deadline verification required]` unless a specific date appears in the agreement.
+- Leave Responsible as `[CONFIRM: responsible party]` unless the agreement designates one.
+
+Do not assume that regulatory mechanics, governmental approvals, or statutory waiting periods apply based on the deal type alone. Where the agreement references a regulatory approval, filing, or governmental consent without specifying mechanics, flag the item as `[verify jurisdiction]`.
+
+### Step 3 — Add diligence items
+
+*Skip to Step 4 if the mode is **initialize**, **update**, or **status report**.*
+
+Review the diligence findings provided. Identify every finding that carries a pre-closing action item, including:
+
+- Required third-party consents (contractual change-of-control, assignment, or consent provisions).
+- Board or shareholder authorizations and approvals.
+- Regulatory filings or clearances identified through diligence.
+- Releases, terminations, or payoffs needed before closing.
+- Escrow establishment or funding mechanics.
+- Any other item that must be completed before closing can occur.
+
+For each new item:
+
+- Assign an ID in sequence (continuing from the initialized checklist, or beginning a new series for diligence-derived items, e.g., DI-001).
+- Record the source as the diligence finding (document title and finding reference, if available).
+- De-duplicate carefully: a third-party consent and a release involving the same counterparty are distinct items even if the counterparty is the same. A filing obligation identified in diligence that duplicates a condition in the agreement should be merged, not duplicated; note both sources.
+
+Apply the same placeholder discipline as in Step 2: no computed deadlines, no assumed regulatory mechanics.
+
+### Step 4 — Update item status
+
+*Skip to Step 5 if the mode is **initialize** or **add**.*
+
+For each item being updated, record the new status. Use consistent status values such as: **Open**, **In Progress**, **Pending Counterparty**, **Received / Complete**, or **Waived** — or the team's own conventions if provided. Note any change to the responsible party or due date only if confirmed by the user; do not infer these from context.
+
+If an item is marked **Waived**, flag it for attorney confirmation: `[ATTORNEY TO CONFIRM: waiver of this condition]`.
+
+### Step 5 — Status report and blocking analysis
+
+Identify every item with:
+
+- **Blocking: Yes** and **Status: Open** or **In Progress** — these are the items currently standing between the deal and closing.
+- **Blocking: Yes** and **Status: Pending Counterparty** — items in flight but not yet complete.
+- Any item carrying `[verify jurisdiction]` or `[CONFIRM]` that has not yet been resolved.
+
+Summarize the critical path: which open blocking items are on the longest path to closing, and what dependencies exist among them (e.g., a regulatory filing must be completed before a clearance can be obtained). Do not assert that any item is legally satisfied — describe status as reported and flag what remains to be confirmed.
+
+### Step 6 — Assemble the output
+
+Produce the closing checklist using `templates/closing-checklist.md`. Follow the Output Format below. Label the entire output as a draft for attorney review.
+
+## Output Format
+
+Deliver:
+
+1. **Closing Checklist** — the completed checklist table from `templates/closing-checklist.md`, grouped by category (Conditions Precedent / Closing Deliverables / Pre-Closing Covenants / Third-Party Consents / Regulatory Filings / Corporate Approvals). Use placeholders throughout; do not fill gaps with invented content.
+2. **Blocking and Critical-Path Summary** — a concise narrative identifying every open blocking item, items pending counterparty action, and any unresolved `[verify jurisdiction]` or `[CONFIRM]` items, with a plain-language description of the critical path to closing.
+3. **Assumptions** — every assumption made in constructing or updating the checklist, listed explicitly. Include the deal structure assumed, any items treated as blocking by default, and any source material not provided.
+4. **Attorney Verification Items** — open questions and items requiring legal judgment, including all `[ATTORNEY TO CONFIRM]` flags, all `[verify jurisdiction]` items, and any condition whose satisfaction is a legal conclusion rather than a factual status.
+
+Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, and `[deadline verification required]` throughout. Do not fill gaps with invented content.
+
+## Attorney Verification Checklist
+
+- [ ] The transaction agreement reviewed is fully executed and final (or, for pre-signing use, is confirmed to be the agreed form).
+- [ ] All conditions precedent, closing deliverables, and pre-closing covenants have been identified from the agreement; no material conditions have been omitted.
+- [ ] The transaction structure is correctly identified; if the structure is ambiguous, it has been confirmed with deal counsel.
+- [ ] Every item marked "Blocking: Yes" is confirmed to be a condition or covenant on which closing is contractually contingent, and any waivability has been assessed.
+- [ ] No waiver of a closing condition has been treated as final without attorney confirmation.
+- [ ] All `[verify jurisdiction]` items — regulatory mechanics, filing requirements, waiting periods, and governmental approvals — have been reviewed and confirmed with counsel having relevant jurisdiction and subject-matter expertise.
+- [ ] Deadlines and due dates have been confirmed against the agreement and applicable legal requirements; no deadline has been computed from model background knowledge.
+- [ ] Responsible parties have been confirmed with the deal team; no responsible party has been assumed from context.
+- [ ] Diligence-derived items have been cross-referenced against the agreement to ensure de-duplication is accurate and no consent or filing obligation has been missed.
+- [ ] All `[ATTORNEY TO CONFIRM]` flags in the checklist have been reviewed and resolved.
+- [ ] No legal authority, statute, regulation, or case law has been asserted without verification.
+- [ ] The checklist and blocking analysis have been reviewed by deal counsel before being relied upon to determine closing readiness.
+- [ ] All assumptions and open items are resolved before the checklist is used to support a closing determination.
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

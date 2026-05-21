@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini Notebooks — AgentCounsel</title>
+<meta name="description" content="Use AgentCounsel with Gemini by adding the skill files as notebook sources, so the model can read and follow them.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../skill-index.html">Skill index</a>
+    <a href="../index.html#practice-areas">Practice areas</a>
+    <a href="../platforms/index.html">Platform setup</a>
+    <a href="../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Platform setup</a> / <span>Gemini Notebooks</span></nav>
+<h1>Gemini Notebooks</h1>
+<p class="lead">Use AgentCounsel with Gemini by adding the skill files as notebook sources, so the model can read and follow them.</p>
+
+<section>
+<h2>Setup</h2>
+<ol>
+<li>Create a notebook or workspace in your Gemini environment.</li>
+<li>Add AgentCounsel’s operating rules as sources: the six files from the repository’s <code>core/</code> directory.</li>
+<li>Add the <code>SKILL.md</code> for the skill you need as another source — copy it with the <strong>Copy Full Skill</strong> button from its catalog page.</li>
+<li>Ask Gemini to follow the skill’s Workflow and Output Format, and provide the Required Inputs.</li>
+<li>Review the output against the skill’s Attorney Verification Checklist.</li>
+</ol>
+</section>
+
+<section>
+<h2>Tips</h2>
+<ul>
+<li>AgentCounsel also ships a Gemini CLI extension at <code>adapters/gemini/</code>. Installing the repository as an extension loads the operating model automatically.</li>
+<li>Add only the skills you need as sources; the library is large.</li>
+</ul>
+</section>
+
+<div class="notice">
+<strong>Every output is draft legal work product for review by a licensed attorney.</strong>
+AgentCounsel does not provide legal advice and is not a substitute for a qualified lawyer.
+A licensed legal professional must review and adopt every output before it is relied upon.
+</div>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>
