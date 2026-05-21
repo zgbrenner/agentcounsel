@@ -78,6 +78,8 @@ flags the question.
   schedule, IP assignments, or disclosure schedules — uploaded or pasted if they
   exist. Note any that are referenced but not provided.
 - **The side** the tracker is for — buyer-side or seller-side.
+- **The deal type** — for example a stock purchase, asset purchase, merger, or
+  membership-interest purchase.
 - **The closing date and any other key dates** — as stated by the user or in the
   documents, or flagged as unknown. Dates are never computed.
 - **Jurisdiction and governing law** — as stated in the documents, or flagged as
@@ -132,12 +134,13 @@ extract obligations from a document you have not been given.
 
 1. **Confirm inputs.** Verify you have the acquisition agreement, the ancillary
    documents (or a note of which are referenced but not provided), the side, the
-   closing date and key dates (or a flag that they are unknown), and the
-   governing law (or a flag that it is unknown). If the acquisition agreement is
-   missing, stop and request it.
+   deal type, the closing date and key dates (or a flag that they are unknown),
+   and the governing law (or a flag that it is unknown). If the acquisition
+   agreement is missing, stop and request it.
 
-2. **Orient.** State the agreement type, the parties as named, the side the
-   tracker is for, the closing date as stated (or `[CONFIRM: closing date]`),
+2. **Orient.** State the agreement type, the deal type, the parties as named,
+   the side the tracker is for, the closing date as stated (or
+   `[CONFIRM: closing date]`),
    the governing law (or `[CONFIRM: governing law]`), and the list of ancillary
    documents — marking each as provided or referenced-but-not-provided.
 
@@ -185,9 +188,9 @@ extract obligations from a document you have not been given.
 
 Deliver, in order:
 
-1. **Deal Summary** — agreement type, parties, the side the tracker is for, the
-   closing date as stated, governing law, and a list of ancillary documents
-   marked provided or referenced-but-not-provided.
+1. **Deal Summary** — agreement type, deal type, parties, the side the tracker
+   is for, the closing date as stated, governing law, and a list of ancillary
+   documents marked provided or referenced-but-not-provided.
 
 2. **Post-Closing Obligation Tracker** — a Markdown table:
 
@@ -236,7 +239,7 @@ specific rule is supplied.
 - [ ] The documents tracked are the complete, executed acquisition agreement
       and all ancillary documents; every referenced-but-not-provided document
       has been obtained and reviewed.
-- [ ] The side and the closing date are correctly stated.
+- [ ] The side, the deal type, and the closing date are correctly stated.
 - [ ] Every obligation in the tracker has been spot-checked against the cited
       document and section.
 - [ ] Every owner, trigger, and due date reflects the documents and no

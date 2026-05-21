@@ -72,6 +72,9 @@ the questions.
   membership-interest purchase, or strategic investment.
 - **The side** the tracker is built for — buyer-side, seller-side,
   company-side, or joint deal-team use.
+- **The transaction stage** — for example pre-signing, signed and
+  pending closing, or at the closing — since the stage shapes which
+  deliverables are still open.
 - **The parties involved** — buyer, seller, the target or company, the escrow
   agent, and any lender or other financing source.
 - **The purchase agreement and any ancillary documents** — uploaded or pasted,
@@ -125,11 +128,11 @@ not derived from the actual agreement.
 
 ## Workflow
 
-1. **Confirm inputs.** Verify you have the deal type, the side, and the
-   parties, and confirm whether the purchase agreement and ancillary documents
-   are provided. Record the governing law, or flag it `[CONFIRM: governing
-   law]`. If the deal type, side, or parties are missing, stop and request
-   them.
+1. **Confirm inputs.** Verify you have the deal type, the side, the
+   transaction stage, and the parties, and confirm whether the purchase
+   agreement and ancillary documents are provided. Record the governing law, or
+   flag it `[CONFIRM: governing law]`. If the deal type, side, transaction
+   stage, or parties are missing, stop and request them.
 
 2. **Set the scope and basis.** State whether the tracker is derived from a
    provided purchase agreement or built as a general scaffold. If the purchase
@@ -233,7 +236,8 @@ is invented, and the deal is not declared ready to close.
 
 ## Attorney Verification Checklist
 
-- [ ] The deal type, the side, and all parties are correctly identified.
+- [ ] The deal type, the side, the transaction stage, and all parties are
+      correctly identified.
 - [ ] The tracker has been reconciled against the purchase agreement's actual
       closing-conditions and closing-deliverables provisions.
 - [ ] Every deliverable's source citation has been spot-checked against the

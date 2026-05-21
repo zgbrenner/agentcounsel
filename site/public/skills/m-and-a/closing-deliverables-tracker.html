@@ -43,7 +43,7 @@
 </section>
 <section class="skill-section" id="required-inputs">
 <h2>Required Inputs</h2>
-<ul><li><strong>The deal type</strong> — for example a stock purchase, asset purchase, merger, membership-interest purchase, or strategic investment.</li><li><strong>The side</strong> the tracker is built for — buyer-side, seller-side, company-side, or joint deal-team use.</li><li><strong>The parties involved</strong> — buyer, seller, the target or company, the escrow agent, and any lender or other financing source.</li><li><strong>The purchase agreement and any ancillary documents</strong> — uploaded or pasted, if they exist. The closing-conditions and closing-deliverables sections drive the most accurate tracker.</li><li><strong>Jurisdiction and governing law</strong> — as stated in the agreement, or flagged as unknown.</li><li><strong>Any user-supplied dates</strong> — a target closing date or a known filing window — recorded as supplied and flagged for verification.</li></ul>
+<ul><li><strong>The deal type</strong> — for example a stock purchase, asset purchase, merger, membership-interest purchase, or strategic investment.</li><li><strong>The side</strong> the tracker is built for — buyer-side, seller-side, company-side, or joint deal-team use.</li><li><strong>The transaction stage</strong> — for example pre-signing, signed and pending closing, or at the closing — since the stage shapes which deliverables are still open.</li><li><strong>The parties involved</strong> — buyer, seller, the target or company, the escrow agent, and any lender or other financing source.</li><li><strong>The purchase agreement and any ancillary documents</strong> — uploaded or pasted, if they exist. The closing-conditions and closing-deliverables sections drive the most accurate tracker.</li><li><strong>Jurisdiction and governing law</strong> — as stated in the agreement, or flagged as unknown.</li><li><strong>Any user-supplied dates</strong> — a target closing date or a known filing window — recorded as supplied and flagged for verification.</li></ul>
 <p>If the purchase agreement is not provided, the skill still produces a general closing-deliverables structure but flags clearly that the list is a scaffold, not derived from the actual agreement.</p>
 </section>
 <section class="skill-section" id="do-not-use-when">
@@ -56,7 +56,7 @@
 </section>
 <section class="skill-section" id="workflow">
 <h2>Workflow</h2>
-<ol><li><strong>Confirm inputs.</strong> Verify you have the deal type, the side, and the parties, and confirm whether the purchase agreement and ancillary documents are provided. Record the governing law, or flag it <code>[CONFIRM: governing law]</code>. If the deal type, side, or parties are missing, stop and request them.</li></ol>
+<ol><li><strong>Confirm inputs.</strong> Verify you have the deal type, the side, the transaction stage, and the parties, and confirm whether the purchase agreement and ancillary documents are provided. Record the governing law, or flag it <code>[CONFIRM: governing law]</code>. If the deal type, side, transaction stage, or parties are missing, stop and request them.</li></ol>
 <ol><li><strong>Set the scope and basis.</strong> State whether the tracker is derived from a provided purchase agreement or built as a general scaffold. If the purchase agreement is not provided, proceed with a general structure but flag clearly that the deliverables list is not derived from the actual agreement and that the agreement's own closing-conditions and deliverables sections must be reconciled against it.</li></ol>
 <ol><li><strong>Extract or scaffold the deliverables.</strong> Work through the closing items below. Where the purchase agreement is provided, derive each deliverable from its closing-conditions and closing-deliverables provisions and cite the section. Where it is not provided, list the item as a general scaffold entry.<ul><li>Corporate approvals and authorization.</li><li>Board, shareholder, and member approvals and written consents.</li><li>Officer certificates and bring-down certificates.</li><li>Good-standing (and, where stated, tax good-standing) certificates.</li><li>Secretary's certificates with organizational documents and resolutions.</li><li>Third-party and governmental consents and notices.</li><li>Payoff letters and lender releases.</li><li>Lien releases and UCC termination statements.</li><li>Employment agreements, offer letters, and non-compete or restrictive covenant agreements.</li><li>Intellectual-property assignments.</li><li>Escrow agreements and escrow-funding instructions.</li><li>Transition services agreements.</li><li>Other ancillary agreements (bills of sale, assignment-and-assumption agreements, leases, supply agreements).</li><li>Tax forms and certificates as stated in the agreement (for example, a non-foreign-status certificate if the agreement calls for one) — listed as stated, never invented.</li><li>Funds flow memorandum and wire instructions.</li><li>Signature packets and execution logistics.</li><li>Post-closing filings, where the provided documents identify them.</li></ul></li></ol>
 <ol><li><strong>Record the tracking detail.</strong> For each deliverable, capture: the deliverable, the responsible party, the status, the dependencies, the source (the agreement section where derived from it, or "General scaffold"), the signer, any notary, original, or certified-copy need if stated, and open issues. Where a field is unknown, record <code>[CONFIRM: ...]</code>.</li></ol>
@@ -78,7 +78,7 @@
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
-<ul><li>[ ] The deal type, the side, and all parties are correctly identified.</li><li>[ ] The tracker has been reconciled against the purchase agreement's actual closing-conditions and closing-deliverables provisions.</li><li>[ ] Every deliverable's source citation has been spot-checked against the cited agreement section.</li><li>[ ] Items listed as "General scaffold" have been confirmed as required, or removed, by counsel and the deal team.</li><li>[ ] The responsible party and signer for each deliverable have been confirmed.</li><li>[ ] Any notary, original, certified-copy, or apostille need has been confirmed against the applicable requirements.</li><li>[ ] Required corporate approvals, consents, and any governmental filings have been identified by counsel; this tracker did not determine what the law or a lender requires.</li><li>[ ] Every date is attorney-verified; no closing or filing deadline was computed by the agent.</li><li>[ ] Every <code>[CONFIRM: ...]</code> and open issue has been resolved or consciously accepted.</li><li>[ ] The tracker has been reviewed by a qualified attorney before it is relied upon to close the transaction.</li></ul>
+<ul><li>[ ] The deal type, the side, the transaction stage, and all parties are correctly identified.</li><li>[ ] The tracker has been reconciled against the purchase agreement's actual closing-conditions and closing-deliverables provisions.</li><li>[ ] Every deliverable's source citation has been spot-checked against the cited agreement section.</li><li>[ ] Items listed as "General scaffold" have been confirmed as required, or removed, by counsel and the deal team.</li><li>[ ] The responsible party and signer for each deliverable have been confirmed.</li><li>[ ] Any notary, original, certified-copy, or apostille need has been confirmed against the applicable requirements.</li><li>[ ] Required corporate approvals, consents, and any governmental filings have been identified by counsel; this tracker did not determine what the law or a lender requires.</li><li>[ ] Every date is attorney-verified; no closing or filing deadline was computed by the agent.</li><li>[ ] Every <code>[CONFIRM: ...]</code> and open issue has been resolved or consciously accepted.</li><li>[ ] The tracker has been reviewed by a qualified attorney before it is relied upon to close the transaction.</li></ul>
 </section>
 <section class="skill-section" id="raw-skill">
 <h2>Full raw SKILL.md</h2>
@@ -156,6 +156,9 @@ the questions.
   membership-interest purchase, or strategic investment.
 - **The side** the tracker is built for — buyer-side, seller-side,
   company-side, or joint deal-team use.
+- **The transaction stage** — for example pre-signing, signed and
+  pending closing, or at the closing — since the stage shapes which
+  deliverables are still open.
 - **The parties involved** — buyer, seller, the target or company, the escrow
   agent, and any lender or other financing source.
 - **The purchase agreement and any ancillary documents** — uploaded or pasted,
@@ -209,11 +212,11 @@ not derived from the actual agreement.
 
 ## Workflow
 
-1. **Confirm inputs.** Verify you have the deal type, the side, and the
-   parties, and confirm whether the purchase agreement and ancillary documents
-   are provided. Record the governing law, or flag it `[CONFIRM: governing
-   law]`. If the deal type, side, or parties are missing, stop and request
-   them.
+1. **Confirm inputs.** Verify you have the deal type, the side, the
+   transaction stage, and the parties, and confirm whether the purchase
+   agreement and ancillary documents are provided. Record the governing law, or
+   flag it `[CONFIRM: governing law]`. If the deal type, side, transaction
+   stage, or parties are missing, stop and request them.
 
 2. **Set the scope and basis.** State whether the tracker is derived from a
    provided purchase agreement or built as a general scaffold. If the purchase
@@ -317,7 +320,8 @@ is invented, and the deal is not declared ready to close.
 
 ## Attorney Verification Checklist
 
-- [ ] The deal type, the side, and all parties are correctly identified.
+- [ ] The deal type, the side, the transaction stage, and all parties are
+      correctly identified.
 - [ ] The tracker has been reconciled against the purchase agreement's actual
       closing-conditions and closing-deliverables provisions.
 - [ ] Every deliverable's source citation has been spot-checked against the
@@ -425,6 +429,9 @@ the questions.
   membership-interest purchase, or strategic investment.
 - **The side** the tracker is built for — buyer-side, seller-side,
   company-side, or joint deal-team use.
+- **The transaction stage** — for example pre-signing, signed and
+  pending closing, or at the closing — since the stage shapes which
+  deliverables are still open.
 - **The parties involved** — buyer, seller, the target or company, the escrow
   agent, and any lender or other financing source.
 - **The purchase agreement and any ancillary documents** — uploaded or pasted,
@@ -478,11 +485,11 @@ not derived from the actual agreement.
 
 ## Workflow
 
-1. **Confirm inputs.** Verify you have the deal type, the side, and the
-   parties, and confirm whether the purchase agreement and ancillary documents
-   are provided. Record the governing law, or flag it `[CONFIRM: governing
-   law]`. If the deal type, side, or parties are missing, stop and request
-   them.
+1. **Confirm inputs.** Verify you have the deal type, the side, the
+   transaction stage, and the parties, and confirm whether the purchase
+   agreement and ancillary documents are provided. Record the governing law, or
+   flag it `[CONFIRM: governing law]`. If the deal type, side, transaction
+   stage, or parties are missing, stop and request them.
 
 2. **Set the scope and basis.** State whether the tracker is derived from a
    provided purchase agreement or built as a general scaffold. If the purchase
@@ -586,7 +593,8 @@ is invented, and the deal is not declared ready to close.
 
 ## Attorney Verification Checklist
 
-- [ ] The deal type, the side, and all parties are correctly identified.
+- [ ] The deal type, the side, the transaction stage, and all parties are
+      correctly identified.
 - [ ] The tracker has been reconciled against the purchase agreement's actual
       closing-conditions and closing-deliverables provisions.
 - [ ] Every deliverable's source citation has been spot-checked against the
