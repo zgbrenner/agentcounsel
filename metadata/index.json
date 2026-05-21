@@ -20,7 +20,8 @@
     "real-estate": 9,
     "regulatory": 4,
     "securities-capital-markets": 12,
-    "setup": 5
+    "setup": 5,
+    "tax": 10
   },
   "task_types": {
     "analysis": 16,
@@ -3252,6 +3253,346 @@
         "practice-profile",
         "configuration",
         "privacy"
+      ]
+    },
+    {
+      "path": "skills/tax/crypto-digital-asset-tax-intake/SKILL.md",
+      "name": "Crypto Digital Asset Tax Intake",
+      "description": "Use when intake crypto and digital-asset facts and records for tax professional review.",
+      "practice_area": "tax",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/employment-tax-worker-classification-intake/SKILL.md",
+      "name": "Employment Tax Worker Classification Intake",
+      "description": "Use when intake worker and payroll facts for employment-tax classification review by qualified counsel.",
+      "practice_area": "tax",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/entity-tax-classification-checklist/SKILL.md",
+      "name": "Entity Tax Classification Checklist",
+      "description": "Use when organize entity facts and records for tax classification review by qualified tax counsel.",
+      "practice_area": "tax",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/international-tax-issue-spotter/SKILL.md",
+      "name": "International Tax Issue Spotter",
+      "description": "Use when issue-spot cross-border tax topics and missing facts without concluding legal treatment.",
+      "practice_area": "tax",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/sales-use-tax-nexus-triage/SKILL.md",
+      "name": "Sales Use Tax Nexus Triage",
+      "description": "Use when issue-spot sales and use tax nexus facts and organize open questions for tax professional review.",
+      "practice_area": "tax",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/tax-covenants-indemnities-review/SKILL.md",
+      "name": "Tax Covenants Indemnities Review",
+      "description": "Use when review tax covenants and indemnities and map negotiation issues for tax counsel verification.",
+      "practice_area": "tax",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/tax-document-organizer/SKILL.md",
+      "name": "Tax Document Organizer",
+      "description": "Use when organize tax-related document sets into a source-cited inventory for supervised legal review.",
+      "practice_area": "tax",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/tax-issue-intake/SKILL.md",
+      "name": "Tax Issue Intake",
+      "description": "Use when capture and structure facts for potential tax issues or tax-sensitive transactions for tax professional review.",
+      "practice_area": "tax",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/tax-provision-review-checklist/SKILL.md",
+      "name": "Tax Provision Review Checklist",
+      "description": "Use when review contract tax provisions and produce a source-cited issue checklist for attorney review.",
+      "practice_area": "tax",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
+      "name": "Transaction Tax Diligence Request List",
+      "description": "Use when generate a transaction tax diligence request list and follow-up tracker for attorney-supervised diligence.",
+      "practice_area": "tax",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction(s) implicated by the matter",
+        "Taxpayer or entity type and role in the matter",
+        "Tax year or period under review",
+        "Transaction/activity context and review purpose",
+        "Available source documents with citations to sections/pages"
+      ],
+      "outputs": [
+        "Draft tax working paper for qualified tax professional review",
+        "Missing-information and verification-question list",
+        "Source-cited fact map and issue-spotting summary"
+      ],
+      "related_skills": [
+        "skills/corporate/diligence-issue-extraction/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "tax",
+        "attorney-review",
+        "issue-spotting",
+        "intake",
+        "draft-work-product"
       ]
     }
   ]

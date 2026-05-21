@@ -206,17 +206,17 @@ Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. 
 | `/securities:reporting-intake` | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` | "reporting calendar intake" | Filer profile and reporting workflow facts | Intake checklist + matrix | `/securities:filing-consistency` |
 
 
-## Antitrust / Competition
+## Tax
 
-| Command | Skill | Use when... | Needs | Returns | Next command |
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
-| `/antitrust:intake` | `skills/antitrust-competition/antitrust-risk-intake/SKILL.md` | "antitrust intake" | Parties, market, conduct, docs | Intake summary + risk themes | `/antitrust:collaboration` |
-| `/antitrust:collaboration` | `skills/antitrust-competition/competitor-collaboration-review/SKILL.md` | "review collaboration" | Collaboration docs | Issue list + risk matrix | `/antitrust:clean-team` |
-| `/antitrust:clean-team` | `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md` | "review info sharing" | Data-sharing docs/protocols | Inventory + gap table | `/antitrust:policy` |
-| `/antitrust:pricing-algo` | `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md` | "pricing algorithm risk" | Tool/vendor/data facts | Triage matrix + safeguards | `/antitrust:clean-team` |
-| `/antitrust:distribution` | `skills/antitrust-competition/distribution-restraints-review/SKILL.md` | "distribution restraints" | Distribution/reseller docs | Key restraints table | `/antitrust:exclusivity-mfn` |
-| `/antitrust:exclusivity-mfn` | `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md` | "exclusivity/MFN/pricing review" | Clause set + context | Clause matrix + negotiation points | `/antitrust:intake` |
-| `/antitrust:merger-spotter` | `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md` | "M&A antitrust issue spotting" | Deal overview + diligence | Issue list + counsel questions | `/antitrust:gun-jumping` |
-| `/antitrust:gun-jumping` | `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md` | "pre-closing checklist" | Pre-closing covenants + comms plan | Checklist + guardrails | `/antitrust:policy` |
-| `/antitrust:trade-association` | `skills/antitrust-competition/trade-association-meeting-review/SKILL.md` | "review trade association meeting" | Agendas/minutes/talking points | Red-flag topics + edits | `/antitrust:clean-team` |
-| `/antitrust:policy` | `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md` | "review compliance policy" | Policy/training materials | Gap matrix + escalation workflow | `/antitrust:intake` |
+| `/tax:intake` | `skills/tax/tax-issue-intake/SKILL.md` | "tax issue intake", "organize tax facts" | Jurisdictions, taxpayer/entity type, tax period, source docs | Intake summary + issue map | `/tax:docs`, `/tax:provision-review` |
+| `/tax:entity-classification` | `skills/tax/entity-tax-classification-checklist/SKILL.md` | "entity tax classification" | Entity docs, ownership changes, filings | Classification facts table | `/tax:intake` |
+| `/tax:diligence` | `skills/tax/transaction-tax-diligence-request-list/SKILL.md` | "transaction tax diligence" | Deal context, source docs | Request list by workstream | `/tax:provision-review`, `/tax:covenants` |
+| `/tax:nexus-triage` | `skills/tax/sales-use-tax-nexus-triage/SKILL.md` | "sales tax nexus", "use tax nexus" | Jurisdictions, product/service facts, filings | Nexus fact map + missing facts | `/tax:intake` |
+| `/tax:worker-intake` | `skills/tax/employment-tax-worker-classification-intake/SKILL.md` | "employment tax classification" | Worker facts, contracts, payroll records | Facts-to-verify table | `/tax:intake` |
+| `/tax:provision-review` | `skills/tax/tax-provision-review-checklist/SKILL.md` | "tax provision review" | Contract text and tax sections | Risk matrix + negotiation points | `/tax:covenants` |
+| `/tax:docs` | `skills/tax/tax-document-organizer/SKILL.md` | "organize tax documents" | Tax document set | Inventory + missing document list | `/tax:intake` |
+| `/tax:covenants` | `skills/tax/tax-covenants-indemnities-review/SKILL.md` | "tax indemnity review" | Agreement provisions | Covenant/indemnity architecture | `/tax:provision-review` |
+| `/tax:international` | `skills/tax/international-tax-issue-spotter/SKILL.md` | "cross-border tax issue" | Cross-border facts and source docs | Issue map + follow-ups | `/tax:intake` |
+| `/tax:crypto-intake` | `skills/tax/crypto-digital-asset-tax-intake/SKILL.md` | "crypto tax intake" | Wallet/exchange records, activity data | Transaction category map | `/tax:docs`, `/tax:intake` |

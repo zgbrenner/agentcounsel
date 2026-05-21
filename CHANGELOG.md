@@ -17,6 +17,8 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Changed
 
+- Added a new **Tax** practice area with ten tax workflow skills, tax practice profile, tax matter packs, tax examples, and eval coverage for all tax skills. Added router and command entries for tax workflows.
+
 - `site/generate.mjs`: the static-site generator now builds practice-area pages, homepage cards, and `llms.txt` entries for `financial-crime`, `legal-ops`, and `real-estate` — areas that previously had per-skill pages but no area page because the generator's area list was not updated when they were added.
 - `skills/real-estate/zoning-use-restriction-issue-spotter`: added an explicit deadline-discipline rule to its Legal Safety Rules and a `[deadline verification required]` flag instruction for permit and certificate dates in its Workflow, bringing it in line with the other eight Real Estate skills (Real Estate stabilization audit).
 - `README.md`, `VALIDATION.md`: classified `legal-ops` as a Tier-4 cross-cutting support group rather than a practice area, per the expansion plan. The library now describes **11 practice areas plus 3 cross-cutting skill groups** (66 skills, unchanged); the practice-area badge and counts are updated to match.
@@ -55,6 +57,8 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `core/business-stakeholder-communication.md`: a seventh core operating rule defining an optional business-stakeholder summary mode — a plain-language layer (Business Summary, Decision Needed, Recommended Ask, Fallback Position, Escalation Needed?) for briefing non-lawyer decision-makers, with attorney review still required.
 
 ### Changed
+
+- Added a new **Tax** practice area with ten tax workflow skills, tax practice profile, tax matter packs, tax examples, and eval coverage for all tax skills. Added router and command entries for tax workflows.
 
 - Release-readiness pass for the public release: `README.md` rewritten with an explicit "who it is for" section, per-surface usage guidance (ChatGPT, Claude, Gemini, Codex, Cursor, generic Markdown), corrected badges, and a CI badge.
 - `docs/SKILL_METADATA_STANDARD.md`: the `practice_area` value list updated to include the `financial-crime` and `legal-ops` areas.
