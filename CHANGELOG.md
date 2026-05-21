@@ -6,6 +6,8 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- `matter-workspaces/corporate-transaction-matter.md` and `matter-workspaces/employment-matter.md`: two new single-file matter scaffolds, bringing the matter-workspace set to six practice areas (litigation, contract review, privacy, regulatory, corporate transactions, and employment). The `matter-workspaces/README.md` template table is updated to match.
+- A new Setup skill, `create-matter-workspace`, that recommends the right matter-workspace template, interviews the user for core matter information, and produces a populated workspace draft with maintenance instructions. `WORKFLOW_ROUTER.md` now has a "Before you start" section encouraging users to create a matter workspace before complex or multi-step work, and `SKILLS_INDEX.md` lists the new skill.
 - `evals/`: a lightweight skill eval framework — `README.md`, a shared assertion catalogue (`evals/shared/assertions.md`), an eight-dimension `SKILL_QUALITY_RUBRIC.md`, and sample evals for eight skills (`contract-risk-review`, `nda-review`, `litigation-matter-intake`, `chronology-builder`, `privilege-log-review`, `dpa-review`, `product-launch-review`, `regulatory-gap-analysis`). The evals are quality checks, not legal validation, and the YAML format is shaped to adapt to promptfoo later.
 - `scripts/check_evals.py`: a non-LLM static check that validates the eval files exist and conform to the schema, with no API keys required. It runs in CI alongside `scripts/validate_repo.py`.
 - Plugin bundle sync tooling: `scripts/sync_plugin_skills.py` generates the Claude Code plugin bundle from canonical `/skills`, with a `--check` mode for CI. Documented in `PLUGIN_SYNC.md`.
