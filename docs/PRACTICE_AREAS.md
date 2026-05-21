@@ -31,8 +31,8 @@ Every area and group is classified into exactly one tier.
 - **`experimental`** — present and passing validation, but not yet fully
   resourced (profile, evals, cold-start, subject-matter-expert review).
 
-The 14 areas and groups below shipped in the v0.1.0 public release and are the
-**released baseline**, marked `stable`. Their coverage columns show, honestly,
+The areas and groups marked `stable` below shipped in the v0.1.0 public release
+and are the **released baseline**. Their coverage columns show, honestly,
 where practice profiles, cold-start interviews, and evals are still being
 filled in. New practice areas added under the expansion plan start
 `experimental` and are promoted to `stable` only when the definition of done is
@@ -53,6 +53,7 @@ met.
 | `regulatory` | 2 — Advanced / specialized | stable | Yes | No | 1 of 4 skills |
 | `ai-governance` | 2 — Advanced / specialized | stable | Yes | No | 0 of 4 skills |
 | `financial-crime` | 2 — Advanced / specialized | stable | No | No | 0 of 2 skills |
+| `real-estate` | 2 — Advanced / specialized | experimental | Yes | No | 9 of 9 skills |
 
 ## Cross-cutting support groups — Tier 4
 
@@ -81,7 +82,7 @@ The columns above record real gaps, carried forward from v0.1.0:
 - **Practice profiles** are missing for `legal-research` and `financial-crime`.
 - **Cold-start interviews** exist for only four areas (`contracts`,
   `corporate`, `litigation`, `privacy`).
-- **Evals** cover only 8 of 66 skills.
+- **Evals** cover all 9 `real-estate` skills but only 8 of the 66 v0.1.0 baseline skills.
 
 These gaps do not block use of the released areas, but closing them is part of
 bringing each area to the standard the expansion plan sets for new areas.

@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 66,
+  "skill_count": 75,
   "practice_areas": {
     "ai-governance": 4,
     "contracts": 5,
@@ -15,24 +15,25 @@
     "litigation": 9,
     "privacy": 4,
     "product-legal": 4,
+    "real-estate": 9,
     "regulatory": 4,
     "setup": 5
   },
   "task_types": {
-    "analysis": 11,
-    "drafting": 10,
-    "extraction": 4,
+    "analysis": 12,
+    "drafting": 12,
+    "extraction": 6,
     "intake": 4,
     "interview": 4,
     "research": 1,
-    "review": 19,
+    "review": 23,
     "summarization": 3,
     "triage": 7,
     "verification": 3
   },
   "risk_levels": {
     "low": 6,
-    "medium": 40,
+    "medium": 49,
     "high": 18,
     "critical": 2
   },
@@ -1766,6 +1767,291 @@
         "contract-review",
         "consumer-terms",
         "risk-summary"
+      ]
+    },
+    {
+      "path": "skills/real-estate/closing-deliverables-tracker/SKILL.md",
+      "name": "Closing Deliverables Tracker",
+      "description": "Use when building a closing checklist of deliverables for a real estate transaction, tracking responsible party, status, and dependencies.",
+      "practice_area": "real-estate",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The transaction type and the party role the tracker is prepared for",
+        "The transaction agreement (purchase and sale agreement or loan agreement), if available",
+        "The parties involved — buyer, seller, lender, escrow, and title company"
+      ],
+      "outputs": [
+        "A closing-deliverables tracker organized by responsible party",
+        "An open-issues and dependencies list"
+      ],
+      "related_skills": [
+        "skills/real-estate/psa-review/SKILL.md",
+        "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
+        "skills/corporate/closing-checklist/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "closing",
+        "deliverables",
+        "tracker",
+        "transaction"
+      ]
+    },
+    {
+      "path": "skills/real-estate/commercial-lease-review/SKILL.md",
+      "name": "Commercial Lease Review",
+      "description": "Use when reviewing a commercial lease from a specified party's perspective to spot business and legal issues and produce a risk matrix for attorney review.",
+      "practice_area": "real-estate",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full commercial lease, and any amendments, uploaded or pasted",
+        "The party perspective for the review (landlord, tenant, guarantor, lender, buyer, seller, or asset manager)",
+        "The property type and the transaction posture"
+      ],
+      "outputs": [
+        "A clause-by-clause issue list from the specified perspective",
+        "A risk matrix across the key lease risk categories",
+        "A prioritized issues list for attorney review"
+      ],
+      "related_skills": [
+        "skills/real-estate/lease-abstract/SKILL.md",
+        "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "commercial-lease",
+        "lease-review",
+        "risk-matrix",
+        "issue-spotting"
+      ]
+    },
+    {
+      "path": "skills/real-estate/estoppel-snda-review/SKILL.md",
+      "name": "Estoppel and SNDA Review",
+      "description": "Use when reviewing tenant or landlord estoppel certificates, SNDAs, and recognition agreements, and comparing them against the lease where provided.",
+      "practice_area": "real-estate",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The estoppel certificate, SNDA, or recognition agreement, uploaded or pasted",
+        "The review perspective (lender, tenant, or landlord)",
+        "Optional: the underlying lease and its amendments, for comparison"
+      ],
+      "outputs": [
+        "An issue list from the specified perspective",
+        "A lease-versus-estoppel discrepancy table where the lease is provided",
+        "A list of open items and missing documents"
+      ],
+      "related_skills": [
+        "skills/real-estate/lease-abstract/SKILL.md",
+        "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+        "skills/real-estate/commercial-lease-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "estoppel",
+        "snda",
+        "lease",
+        "review"
+      ]
+    },
+    {
+      "path": "skills/real-estate/lease-abstract/SKILL.md",
+      "name": "Lease Abstract",
+      "description": "Use when extracting the key business and legal terms of a commercial lease into a structured, source-cited abstract for attorney review.",
+      "practice_area": "real-estate",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full commercial lease document, uploaded or pasted",
+        "The property type and the party role the abstract is prepared for",
+        "Optional: amendments, side letters, exhibits, and guaranties to the lease"
+      ],
+      "outputs": [
+        "A structured lease abstract with a source citation for every field",
+        "A critical-dates table flagged for attorney verification",
+        "A list of missing, not-found, or ambiguous items"
+      ],
+      "related_skills": [
+        "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+        "skills/real-estate/commercial-lease-review/SKILL.md",
+        "skills/real-estate/estoppel-snda-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "commercial-lease",
+        "lease-abstract",
+        "extraction",
+        "source-cited"
+      ]
+    },
+    {
+      "path": "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+      "name": "Lease Amendment Reconciliation",
+      "description": "Use when reconciling a base lease against its amendments, side letters, assignments, and related documents to determine the current controlling terms.",
+      "practice_area": "real-estate",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The base lease, uploaded or pasted",
+        "All amendments, side letters, assignments, guaranties, and estoppels",
+        "The party role the reconciliation is prepared for"
+      ],
+      "outputs": [
+        "A current-controlling-term table with source references",
+        "A change history tracing each amended term across versions",
+        "A list of conflicts, superseded provisions, missing amendments, and ambiguities"
+      ],
+      "related_skills": [
+        "skills/real-estate/lease-abstract/SKILL.md",
+        "skills/real-estate/commercial-lease-review/SKILL.md",
+        "skills/real-estate/estoppel-snda-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "commercial-lease",
+        "amendments",
+        "reconciliation",
+        "source-cited"
+      ]
+    },
+    {
+      "path": "skills/real-estate/psa-review/SKILL.md",
+      "name": "Purchase and Sale Agreement Review",
+      "description": "Use when reviewing a real estate purchase and sale agreement from a specified party's perspective to spot issues and produce a risk matrix for attorney review.",
+      "practice_area": "real-estate",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full real estate purchase and sale agreement, uploaded or pasted",
+        "The party perspective for the review (buyer, seller, or lender)",
+        "The property type and the transaction posture"
+      ],
+      "outputs": [
+        "A clause-by-clause issue list from the specified perspective",
+        "A risk matrix across the key PSA risk categories",
+        "A prioritized issues list and a key-dates table flagged for verification"
+      ],
+      "related_skills": [
+        "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
+        "skills/real-estate/closing-deliverables-tracker/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "purchase-and-sale",
+        "psa",
+        "contract-review",
+        "risk-matrix"
+      ]
+    },
+    {
+      "path": "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
+      "name": "Real Estate Diligence Checklist",
+      "description": "Use when generating a tailored real estate due-diligence checklist based on the transaction type, property type, jurisdiction, party role, and document set.",
+      "practice_area": "real-estate",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The transaction type and the property type",
+        "The jurisdiction and the party role the checklist is prepared for",
+        "The document set available so far, and what is still outstanding"
+      ],
+      "outputs": [
+        "A tailored due-diligence checklist organized by category",
+        "A missing-document request list naming what has not yet been provided"
+      ],
+      "related_skills": [
+        "skills/real-estate/title-survey-objection-tracker/SKILL.md",
+        "skills/real-estate/closing-deliverables-tracker/SKILL.md",
+        "skills/real-estate/psa-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "due-diligence",
+        "checklist",
+        "transaction",
+        "diligence"
+      ]
+    },
+    {
+      "path": "skills/real-estate/title-survey-objection-tracker/SKILL.md",
+      "name": "Title and Survey Objection Tracker",
+      "description": "Use when organizing title commitment exceptions and survey matters into a tracked, source-cited objection list for attorney review.",
+      "practice_area": "real-estate",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The title commitment or report, and the underlying exception documents if available",
+        "The survey, if available",
+        "The party role and the parcel(s) at issue"
+      ],
+      "outputs": [
+        "A title and survey objection tracker, with a source citation per item",
+        "A list of exception documents referenced but not provided",
+        "A list of open or unresolved title and survey issues"
+      ],
+      "related_skills": [
+        "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
+        "skills/real-estate/psa-review/SKILL.md",
+        "skills/real-estate/closing-deliverables-tracker/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "title",
+        "survey",
+        "objections",
+        "diligence"
+      ]
+    },
+    {
+      "path": "skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md",
+      "name": "Zoning and Use Restriction Issue Spotter",
+      "description": "Use when issue-spotting zoning, permitted-use, recorded-restriction, and use-clause concerns from provided materials and producing questions for local counsel.",
+      "practice_area": "real-estate",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The intended use and operations for the property",
+        "The provided materials: zoning materials, recorded restrictions, CC&Rs, lease use clause, and any permits or certificates",
+        "The jurisdiction and the property type"
+      ],
+      "outputs": [
+        "An issue-spotting list of zoning, use, and restriction concerns, each tied to a provided source",
+        "A questions-for-local-counsel / zoning-consultant list"
+      ],
+      "related_skills": [
+        "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
+        "skills/real-estate/commercial-lease-review/SKILL.md",
+        "skills/real-estate/title-survey-objection-tracker/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "zoning",
+        "land-use",
+        "restrictions",
+        "issue-spotting"
       ]
     },
     {

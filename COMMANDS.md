@@ -55,6 +55,20 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/corporate:material-contracts` | `skills/corporate/material-contract-schedule/SKILL.md` | "build the material contracts schedule" | "Material Contract" definition, contract data | Material contract schedule | `/corporate:diligence` |
 | `/corporate:entity-compliance` | `skills/corporate/entity-compliance/SKILL.md` | "review our entities' good-standing status" | Entity list, filing obligations | Entity compliance review | `/regulatory:gap-matrix` |
 
+## Real Estate
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/real-estate:lease-abstract` | `skills/real-estate/lease-abstract/SKILL.md` | "abstract this lease", "pull the key lease terms" | The lease document, property type, party role | Source-cited lease abstract and critical-dates table | `/real-estate:amendment-reconciliation`, `/real-estate:lease-review` |
+| `/real-estate:amendment-reconciliation` | `skills/real-estate/lease-amendment-reconciliation/SKILL.md` | "reconcile the lease and amendments", "current controlling terms" | Base lease, all amendments and side letters, party role | Current-controlling-term table with source references | `/real-estate:lease-abstract` |
+| `/real-estate:lease-review` | `skills/real-estate/commercial-lease-review/SKILL.md` | "review this commercial lease" | The lease, party perspective, property type | Risk matrix and prioritized issue list | `/real-estate:lease-abstract`, `/contracts:review` |
+| `/real-estate:psa-review` | `skills/real-estate/psa-review/SKILL.md` | "review this purchase and sale agreement", "review this PSA" | The PSA, party perspective, property type | Risk matrix and prioritized issue list | `/real-estate:diligence-checklist`, `/real-estate:closing-tracker` |
+| `/real-estate:title-survey-tracker` | `skills/real-estate/title-survey-objection-tracker/SKILL.md` | "track the title and survey objections" | Title commitment, survey, parcel(s) | Title and survey objection tracker | `/real-estate:diligence-checklist` |
+| `/real-estate:diligence-checklist` | `skills/real-estate/real-estate-diligence-checklist/SKILL.md` | "build a real estate diligence checklist" | Transaction type, property type, jurisdiction, party role | Tailored diligence checklist and request list | `/real-estate:title-survey-tracker`, `/real-estate:closing-tracker` |
+| `/real-estate:closing-tracker` | `skills/real-estate/closing-deliverables-tracker/SKILL.md` | "build a closing checklist for this real estate deal" | Transaction type, party role, transaction agreement | Closing-deliverables tracker | `/real-estate:psa-review` |
+| `/real-estate:estoppel-snda` | `skills/real-estate/estoppel-snda-review/SKILL.md` | "review this estoppel or SNDA" | The estoppel or SNDA, perspective, lease if available | Issue list and lease discrepancy table | `/real-estate:lease-abstract` |
+| `/real-estate:zoning-issues` | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` | "spot zoning and use-restriction issues" | Intended use, provided materials, jurisdiction | Issue list and questions for local counsel | `/real-estate:diligence-checklist` |
+
 ## Employment
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |

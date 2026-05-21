@@ -2,7 +2,7 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 66
+Total skills: 75
 Practice areas: 12
 
 ## Legal Research (1 skill)

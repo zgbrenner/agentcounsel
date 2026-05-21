@@ -3,8 +3,8 @@
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-11-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-66-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-75-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml)
 [![Derived from](https://img.shields.io/badge/derived%20from-agnostic--skills--for--legal-black.svg)](https://github.com/foolish-bandit/agnostic-skills-for-legal)
@@ -52,7 +52,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **66 skills**: 54 across **11 practice areas**, plus 12 cross-cutting skills in three supporting groups.
+AgentCounsel has **75 skills**: 63 across **12 practice areas**, plus 12 cross-cutting skills in three supporting groups.
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -67,6 +67,7 @@ AgentCounsel has **66 skills**: 54 across **11 practice areas**, plus 12 cross-c
 | AI Governance | 4 | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | 7 | Trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, open-source licensing. |
 | Financial Crime / AML | 2 | KYC onboarding review, and sanctions / PEP / adverse-media screening review. |
+| Real Estate | 9 | Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objection tracking, diligence and closing checklists, estoppel and SNDA review, zoning issue-spotting. |
 
 Three **cross-cutting skill groups** support work in every practice area:
 
