@@ -1,6 +1,27 @@
 ---
 name: Litigation Chronology
-description: Use when building a factual timeline for litigation from provided source documents, producing a structured chronology table with citations, disputed/undisputed flags, and gap analysis for attorney review.
+description: "Use when building a factual timeline for litigation from provided source documents, producing a structured chronology table with citations, disputed/undisputed flags, and gap analysis for attorney review."
+practice_area: litigation
+task_type: extraction
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The source documents, records, and correspondence"
+  - "The matter context"
+  - "The date range and events of interest"
+outputs:
+  - "Structured chronology table with citations, disputed/undisputed flags, and gap analysis"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+tags:
+  - litigation
+  - chronology
+  - timeline
+  - fact-development
+  - ediscovery
 ---
 
 # Litigation Chronology
@@ -38,6 +59,7 @@ If no source documents are provided, stop and request them. Do not populate the 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Every event entered in the chronology must be supported by a specific source document. Record the document name and Bates number or page reference for each event.
 - Do not infer, extrapolate, or assert events that are not explicitly supported by a provided document.

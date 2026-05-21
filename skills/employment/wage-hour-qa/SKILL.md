@@ -1,6 +1,26 @@
 ---
 name: Wage and Hour Question Triage
-description: Use when a specific wage-and-hour or related employment question — such as overtime eligibility, exemption status, break entitlements, final-pay timing, paid-time-off payout, or leave eligibility — needs to be structured and analyzed against verified, jurisdiction-specific rules, producing a draft analysis for attorney review.
+description: "Use when a specific wage-and-hour or related employment question — such as overtime eligibility, exemption status, break entitlements, final-pay timing, paid-time-off payout, or leave eligibility — needs to be structured and analyzed against verified, jurisdiction-specific rules, producing a draft analysis for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The specific wage-and-hour question"
+  - "The applicable jurisdiction"
+  - "The operative facts and the worker's role and pay structure"
+outputs:
+  - "Structured wage-and-hour analysis routed to verified research for attorney review"
+related_skills:
+  - skills/employment/worker-classification/SKILL.md
+  - skills/legal-research/legal-research-memo/SKILL.md
+tags:
+  - employment
+  - wage-and-hour
+  - overtime
+  - exemption
+  - compliance
 ---
 
 # Wage and Hour Question Triage
@@ -37,6 +57,7 @@ If any required input is missing, stop and request it. Do not infer jurisdiction
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice and does not constitute a legal conclusion.
 - **Do not state any wage-and-hour rule, threshold, multiplier, exemption criterion, lookback period, penalty rule, or computation formula from memory.** Treat all background knowledge about wage-and-hour standards as unverified until confirmed by current, jurisdiction-specific research. A confident wrong number is the worst-case output this skill can produce.
 - Do not assert, quote, or paraphrase any statute, regulation, agency guidance, or case law from memory. Use `[citation needed]` wherever legal authority would be referenced and flag it for verified research.
@@ -95,6 +116,16 @@ Deliver the output as a labeled draft, headed **DRAFT — ATTORNEY REVIEW REQUIR
 7. **Assessment** — state whether the answer is Clear, Borderline, or In Flux, with a brief explanation. For borderline answers, identify the more conservative course of action. For in-flux rules, flag `[VERIFY: rule may have changed — confirm effective date and current status]`.
 8. **Computation Components** (if applicable) — if the question involves a wage or back-pay calculation, list each component that must be researched and verified before any number is calculated; flag each `[VERIFY]`. Do not compute any figure.
 9. **Attorney Verification Items** — every open item requiring attorney or verified-research confirmation before this analysis can be relied upon.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

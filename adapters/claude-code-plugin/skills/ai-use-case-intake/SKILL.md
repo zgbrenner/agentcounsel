@@ -1,6 +1,30 @@
 ---
 name: AI Use Case Intake
-description: Use when a new or modified AI/ML use case needs to be documented and triaged so legal, compliance, and governance teams can assess risk and route it to the right specialists.
+description: "Use when a new or modified AI/ML use case needs to be documented and triaged so legal, compliance, and governance teams can assess risk and route it to the right specialists."
+practice_area: ai-governance
+task_type: intake
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "Description of the proposed or modified AI/ML use case"
+  - "The model or system involved and its provider"
+  - "The data the use case will use, including any personal data"
+  - "Intended users and the decisions the use case affects"
+outputs:
+  - "Structured AI use-case intake record"
+  - "Preliminary risk signal"
+  - "Routing recommendations to specialist reviewers"
+related_skills:
+  - skills/ai-governance/ai-vendor-terms-review/SKILL.md
+  - skills/ai-governance/model-risk-triage/SKILL.md
+  - skills/ai-governance/employee-ai-policy/SKILL.md
+tags:
+  - ai-governance
+  - ai
+  - intake
+  - risk-triage
+  - routing
 ---
 
 # AI Use Case Intake

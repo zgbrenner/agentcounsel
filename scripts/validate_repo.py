@@ -118,7 +118,9 @@ def iter_text_files():
     for path in sorted(REPO_ROOT.rglob("*")):
         if not path.is_file():
             continue
-        if ".git" in path.parts:
+        # Skip VCS internals and generated build output (dist/ is produced by
+        # scripts/build_platform_packs.py; node_modules by the site tooling).
+        if {".git", "dist", "node_modules"} & set(path.parts):
             continue
         if path.suffix.lower() in TEXT_SUFFIXES:
             yield path
@@ -300,6 +302,48 @@ def check_plugin_manifest() -> None:
             err(f"adapters/claude-code-plugin/plugin.json: missing '{field}'")
 
 
+# --- Check: standardized skill frontmatter --------------------------------
+
+def check_skill_frontmatter(skill_dirs: list[Path]) -> None:
+    """Every canonical skill must declare valid standardized frontmatter.
+
+    The metadata standard and its validation rules live in
+    scripts/build_skill_index.py; see docs/SKILL_METADATA_STANDARD.md.
+    """
+    try:
+        import build_skill_index as index
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run skill frontmatter checks (import failed: {exc})")
+        return
+    for skill_dir in skill_dirs:
+        for msg in index.validate_skill_metadata(skill_dir):
+            err(msg)
+
+
+# --- Check: skill metadata index is in sync -------------------------------
+
+def check_skill_index() -> None:
+    """The generated metadata/index.json must match canonical /skills."""
+    try:
+        import build_skill_index as index
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run skill index checks (import failed: {exc})")
+        return
+    index_path = REPO_ROOT / "metadata" / "index.json"
+    if not index_path.is_file():
+        err("metadata/index.json is missing — run: "
+            "python scripts/build_skill_index.py")
+        return
+    # Drift is only meaningful once frontmatter is valid; any frontmatter
+    # errors are already reported by check_skill_frontmatter.
+    if any(index.validate_skill_metadata(d)
+           for d in index.canonical_skill_dirs()):
+        return
+    if index_path.read_text(encoding="utf-8") != index.render_index():
+        err("metadata/index.json is out of date — run: "
+            "python scripts/build_skill_index.py")
+
+
 # --- Check: every canonical skill is catalogued ---------------------------
 
 def check_index_coverage(skill_dirs: list[Path]) -> None:
@@ -352,6 +396,32 @@ def check_plugin_bundle() -> None:
                 f"skills/ [{detail}] — run: python scripts/sync_plugin_skills.py")
 
 
+# --- Check: source and citation discipline --------------------------------
+
+_CITATION_REF = "source-and-citation-discipline"
+_CITATION_LANGUAGE = re.compile(r"\b(do not|never|don't)\s+invent\b", re.I)
+_CITATION_TOPIC = re.compile(
+    r"authorit|citation|statute|case law|\bcases\b|regulation|quotation",
+    re.I)
+
+
+def check_citation_discipline(skill_dirs: list[Path]) -> None:
+    """Every canonical skill must reference the source/citation discipline
+    core rule, or carry equivalent discipline language of its own."""
+    for skill_dir in skill_dirs:
+        md = skill_dir / "SKILL.md"
+        if not md.is_file():
+            continue
+        text = md.read_text(encoding="utf-8")
+        if _CITATION_REF in text:
+            continue
+        if _CITATION_LANGUAGE.search(text) and _CITATION_TOPIC.search(text):
+            continue
+        err(f"{rel(md)}: missing source/citation discipline — reference "
+            f"core/source-and-citation-discipline.md, or include explicit "
+            f"language against inventing legal authority or citations")
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -369,6 +439,7 @@ def main() -> int:
         check_skill(skill_dir, require_sections=False)
 
     check_repo_layout()
+    check_citation_discipline(canonical)
     check_content_scans()
     check_links()
     check_index_paths("SKILLS_INDEX.md")
@@ -377,6 +448,8 @@ def main() -> int:
     check_adapters()
     check_plugin_manifest()
     check_plugin_bundle()
+    check_skill_frontmatter(canonical)
+    check_skill_index()
     check_index_coverage(canonical)
 
     if warnings:

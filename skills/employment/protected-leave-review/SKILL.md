@@ -1,6 +1,26 @@
 ---
 name: Protected Leave Review
-description: Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.
+description: "Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The protected-leave situation and its facts"
+  - "The procedural status and any contemplated action"
+  - "The applicable jurisdiction"
+outputs:
+  - "Protected-leave review identifying applicable frameworks and adverse-action exposure for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/employment/wage-hour-qa/SKILL.md
+tags:
+  - employment
+  - protected-leave
+  - fmla
+  - leave
+  - retaliation-risk
 ---
 
 # Protected Leave Review
@@ -41,6 +61,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Do not assert any entitlement amount, eligibility threshold, notice period, certification deadline, or measurement period from background knowledge. Every such rule must be confirmed through verified, current legal authority for the governing jurisdiction. Flag each with `[verify jurisdiction]` or `[deadline verification required]`.
 - Do not invent facts, procedural history, leave balances, or medical information not provided. Separate facts provided from assumptions and from items requiring attorney confirmation.
@@ -112,6 +133,16 @@ Deliver the following sections, clearly labeled:
 7. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` throughout. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

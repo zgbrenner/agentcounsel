@@ -1,6 +1,27 @@
 ---
 name: Patent Freedom-to-Operate Triage
-description: Use when a user needs a structured first-pass review of potential patent blocking issues for a product, process, or feature against a set of identified patents, to flag risk areas and route findings to patent counsel for a formal freedom-to-operate opinion.
+description: "Use when a user needs a structured first-pass review of potential patent blocking issues for a product, process, or feature against a set of identified patents, to flag risk areas and route findings to patent counsel for a formal freedom-to-operate opinion."
+practice_area: ip
+task_type: triage
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The product, process, or feature description"
+  - "The relevant jurisdictions"
+  - "The set of identified patents to assess"
+outputs:
+  - "Freedom-to-operate triage memo flagging risk areas for patent counsel"
+related_skills:
+  - skills/litigation/claim-chart/SKILL.md
+  - skills/ip/invention-intake/SKILL.md
+  - skills/ip/infringement-triage/SKILL.md
+tags:
+  - ip
+  - patent
+  - freedom-to-operate
+  - triage
+  - infringement-risk
 ---
 
 # Patent Freedom-to-Operate Triage

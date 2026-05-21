@@ -1,6 +1,28 @@
 ---
 name: Legal Research Memo
-description: Use when producing a structured legal research memo in response to a specific legal question, organizing analysis using IRAC discipline (Question Presented, Brief Answer, Facts, Assumptions, Discussion/Analysis, Conclusion) with explicit sourcing requirements and attorney verification checkpoints.
+description: "Use when producing a structured legal research memo in response to a specific legal question, organizing analysis using IRAC discipline (Question Presented, Brief Answer, Facts, Assumptions, Discussion/Analysis, Conclusion) with explicit sourcing requirements and attorney verification checkpoints."
+practice_area: legal-research
+task_type: research
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The specific legal question presented"
+  - "The known facts"
+  - "The applicable jurisdiction"
+  - "Any authority already provided"
+outputs:
+  - "Structured legal research memo using IRAC discipline for attorney review"
+related_skills:
+  - skills/litigation/brief-section-drafter/SKILL.md
+  - skills/legal-methodology/statutory-interpretation/SKILL.md
+  - skills/legal-methodology/source-validation/SKILL.md
+tags:
+  - legal-research
+  - research-memo
+  - irac
+  - legal-analysis
+  - citations
 ---
 
 # Legal Research Memo

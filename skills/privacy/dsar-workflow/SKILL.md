@@ -1,6 +1,26 @@
 ---
 name: DSAR Workflow
-description: Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.
+description: "Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review."
+practice_area: privacy
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The data subject rights request"
+  - "The requester's details and identity information"
+  - "The organization's processing and systems context"
+outputs:
+  - "Structured triage, handling record, and response plan for attorney review"
+related_skills:
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/privacy/dpa-review/SKILL.md
+tags:
+  - privacy
+  - dsar
+  - data-subject-rights
+  - triage
+  - request-handling
 ---
 
 # DSAR Workflow
@@ -45,6 +65,7 @@ If the request text and date received are not provided, stop and request them. D
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not compute, state, or assume any response deadline. Deadlines for data subject requests vary by jurisdiction, regulatory framework, request type, and sometimes the size or nature of the organization. Mark all deadline references as `[CONFIRM: verify response deadline under applicable law with counsel]`.
 - Do not determine which privacy law or regulatory framework applies to the requester or the organization. The applicable law is always an attorney-verification item.
@@ -124,6 +145,16 @@ Deliver the following, in order:
 9. **Escalation Items** — any factors requiring immediate attorney consultation.
 10. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 11. **Assumptions** — explicit list of every assumption made in the handling record.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

@@ -1,6 +1,26 @@
 ---
 name: Subpoena Triage
-description: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+description: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
+practice_area: litigation
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received subpoena"
+  - "The recipient's role and relationship to the matter"
+  - "Any related preservation or notification context"
+outputs:
+  - "Structured subpoena triage summary identifying deadlines, scope, objections, and privilege issues for immediate attorney review"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - subpoena
+  - triage
+  - discovery
+  - deadlines
 ---
 
 # Subpoena Triage
@@ -40,6 +60,7 @@ If the subpoena text is not provided, stop and request it. Do not complete a tri
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - **The compliance deadline is time-critical. Never compute, assert, or represent the compliance deadline as established. Mark it as `[CRITICAL — CONFIRM IMMEDIATELY: attorney must verify the deadline and any available extensions before any other step is taken]`.**
 - Do not assert that any objection is valid or will be sustained — identify potential objections for attorney evaluation only.

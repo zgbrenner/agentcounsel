@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demand Letter — AgentCounsel</title>
+<meta name="description" content="&quot;Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending.&quot;">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../../skill-index.html">Skill index</a>
+    <a href="../../index.html#practice-areas">Practice areas</a>
+    <a href="../../platforms/index.html">Platform setup</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/litigation.html">Litigation</a> / <span>Demand Letter</span></nav>
+<h1>Demand Letter</h1>
+<p class="path">Canonical path: <code>skills/litigation/demand-letter/SKILL.md</code></p>
+
+<div class="toolbar">
+<button class="btn" type="button" data-copy="raw">Copy Full Skill</button>
+<button class="btn" type="button" data-copy="oneoff">Copy One-Off Prompt</button>
+</div>
+
+<div class="trigger">
+<h2>Agent Trigger Description</h2>
+<p>"Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending."</p>
+</div>
+
+<section class="skill-section" id="purpose">
+<h2>Purpose</h2>
+<p>Produce a structured draft demand letter for attorney review, revision, and sending. The skill works in three stages — intake, a pre-draft risk gate, and drafting — so that strategic and privilege questions are settled before any letter text is written. It organizes the factual narrative, identifies the claimed basis for relief, articulates a specific demand, and flags every legal conclusion, damages figure, response deadline, and consequence of non-response as an item requiring attorney confirmation. The draft is not a final negotiating position and must not be sent without attorney review and approval.</p>
+</section>
+<section class="skill-section" id="use-when">
+<h2>Use When</h2>
+<ul><li>A user asks to "draft a demand letter," "write a demand," or "send a letter before filing suit."</li><li>Counsel wants a structured first draft before editing and sending a pre-litigation demand.</li><li>A client has suffered a harm and counsel needs to frame and communicate a pre-suit demand.</li><li>A breach of contract, tort claim, employment dispute, property damage, or similar matter requires a formal written demand as a precursor to litigation or negotiation.</li><li>A statutory or contractual pre-suit notice requirement must be met (attorney must confirm applicability and form).</li></ul>
+</section>
+<section class="skill-section" id="required-inputs">
+<h2>Required Inputs</h2>
+<ul><li>The client's identity and role (the party making the demand).</li><li>The recipient's identity and, if known, address and counsel information.</li><li>A description of the dispute, the alleged harm, and the factual background (from documents or a client summary).</li><li>The nature of the claim or legal theory to be asserted (e.g., breach of contract, negligence, fraud) — attorney will confirm.</li><li>The relief or remedy being demanded (e.g., payment of a specific amount, return of property, specific performance).</li><li>Any prior correspondence on the matter, and the underlying contract or authority (pasted in full where possible, not summarized).</li><li>The desired posture: tone (measured / firm / aggressive), the response window, how the letter will be sent, and who will sign it.</li></ul>
+<p>If the client identity, recipient identity, or nature of the demand is not provided, stop and request it. Do not draft a demand letter without knowing who is demanding what from whom.</p>
+</section>
+<section class="skill-section" id="do-not-use-when">
+<h2>Do Not Use When</h2>
+<ul><li>The user wants to file a complaint or pleading rather than a pre-litigation demand (use a pleading drafting skill instead).</li><li>The matter requires a statutory notice of claim with specific form requirements (attorney must confirm applicability; this skill produces a general demand draft only).</li><li>A settlement agreement is needed rather than a demand (use a settlement drafting skill).</li><li>The user needs a chronology of events to support the demand (use <code>litigation-chronology</code> first, then return to this skill).</li><li>The user needs to respond to, or triage, a demand letter received from an opposing party — that is a separate inbound-demand workflow.</li></ul>
+</section>
+<section class="skill-section" id="legal-safety-rules">
+<h2>Legal Safety Rules</h2>
+<ul><li><strong>Source and citation discipline.</strong> Follow <code>core/source-and-citation-discipline.md</code>. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as <code>[Attorney to insert authority]</code> when no source is available.</li><li>Produce draft legal work product for attorney review. This is not legal advice.</li><li>The draft demand letter must not be sent to any party without attorney review, revision, and authorization.</li><li>Run the pre-draft gate (see Workflow) before drafting. Do not write letter text until the privilege, admission-risk, settlement-posture, and factual-accuracy questions have been addressed on the record.</li><li>Internal work product — the pre-draft gate notes, drafting notes, and verification checklist — is labeled "Privileged &amp; Confidential — Attorney Work Product." The demand letter itself is an external document: the version that will be sent must not carry any work-product or privilege header.</li><li>Do not assert legal conclusions as established facts (e.g., do not state "you breached the contract" as a fact — state "we contend" or "it is our position that" and flag for attorney to confirm the framing).</li><li>Record fidelity: quote documents exactly. A quotation must be verbatim; flag every paraphrase as <code>[VERIFY: exact quote — source pending]</code>.</li><li>Flag weak points in the claim candidly for the attorney rather than overstating them.</li><li>Do not invent, fabricate, or assume damages figures. Use only client-supplied or document-supported figures. Mark all damages as <code>[CONFIRM: attorney to verify calculation and supporting evidence]</code>.</li><li>Do not assert a response deadline. Use <code>[deadline verification required]</code> — never compute or assert a deadline independently.</li><li>Do not assert legal authority (statutes, regulations, case law) without attorney direction. If legal authority is included, mark it as <code>[CONFIRM: attorney to verify citation and current law]</code>.</li><li>Do not assert consequences of non-response (e.g., "we will file suit") without attorney authorization — use <code>[CONFIRM: attorney to confirm and authorize]</code>.</li><li>Where a statutory pre-suit notice requirement may apply, flag it explicitly as <code>[ACTION: attorney must confirm whether statutory notice requirements apply and whether this letter satisfies them]</code>.</li><li>Clearly distinguish facts (from documents or client) from contentions and from attorney judgment calls.</li></ul>
+</section>
+<section class="skill-section" id="workflow">
+<h2>Workflow</h2>
+<ol><li><strong>Confirm inputs.</strong> Verify that the client identity, recipient identity, nature of the claim, and the relief sought have been provided. If any of these are missing, stop and request them before proceeding.</li></ol>
+<ol><li><strong>Intake.</strong> Before drafting, capture and record:<ul><li><strong>Posture</strong> — tone, the response window, how the letter will be sent, and who signs it.</li><li><strong>Parties and relationship</strong> — sender, recipient, the intended audience, and any relationship between them.</li><li><strong>Triggering facts</strong> — the events giving rise to the claim, with dates and a note of which evidence is available.</li><li><strong>Claimed basis</strong> — the legal theory, with <code>[CONFIRM]</code> placeholders for any unverified authority.</li><li><strong>Desired outcomes</strong> — in priority order.</li><li><strong>Deadlines</strong> — any external deadline (such as a limitations period) and the response window. Never compute a deadline.</li><li><strong>Communication history</strong> — prior outreach and why escalation is appropriate now. For a material matter (a large demand, a sophisticated counterparty, or on request), also capture strategic context: leverage, the client's alternatives, the downside of sending, and any admission or privilege sensitivities.</li></ul></li></ol>
+<ol><li><strong>Pre-draft gate.</strong> Address each of the following on the record before writing any letter text. Each is a point where an unrun check has damaged a sender's position.<ul><li><strong>Privilege filter</strong> — what legal analysis or work product must not appear in the letter.</li><li><strong>Admission risk</strong> — what phrasings could later be quoted back as admissions.</li><li><strong>Accord and satisfaction</strong> — whether the letter could inadvertently compromise or release a separate claim.</li><li><strong>Settlement-communication posture</strong> — whether settlement-communication protections (for example, Federal Rule of Evidence 408 or a state equivalent) should attach, and how that affects content. Flag as <code>[ACTION: attorney to confirm whether to include a settlement-communication designation and whether it is appropriate in this jurisdiction]</code>.</li><li><strong>Privilege-waiver scan</strong> — any sentence that would reveal the substance of legal analysis.</li><li><strong>Tone posture</strong> — measured / firm / aggressive, and how that drives word choice and the consequences stated.</li><li><strong>Factual accuracy</strong> — every fact verified against a source, not assumed. Do not proceed to drafting until each item has been addressed.</li></ul></li></ol>
+<ol><li><strong>Identify the parties.</strong> Record the sending party (client) with full legal name and entity type. Record the recipient with full legal name, address, and counsel if known. Note any aliases or related entities.</li></ol>
+<ol><li><strong>Identify the legal theory.</strong> State the claim(s) asserted, label them "claimed basis," and mark them for attorney confirmation. Note any contractual or statutory provision relied on, if provided.</li></ol>
+<ol><li><strong>Organize the factual background.</strong> Using provided documents or the client summary, set out the relevant facts in chronological order: the relationship of the parties, the relevant agreement or obligation, the events giving rise to the claim, and the harm suffered. Label the background as "based on information provided" and identify the sources.</li></ol>
+<ol><li><strong>Identify and quantify the harm.</strong> List the specific harms or damages claimed. Use only client-supplied or document-supported figures, each marked <code>[CONFIRM: attorney to verify]</code>. If damages are not yet quantifiable, say so.</li></ol>
+<ol><li><strong>Identify the specific demand.</strong> State the specific relief demanded — payment of a sum certain <code>[CONFIRM]</code>, return of property, specific performance, cessation of conduct, or other. The demand must be specific.</li></ol>
+<ol><li><strong>Identify the response deadline.</strong> Do not compute or assert a deadline. Insert <code>[deadline verification required]</code> and <code>[CONFIRM: attorney to specify the response deadline and confirm it is reasonable and consistent with any applicable rule or agreement]</code>.</li></ol>
+<ol><li><strong>Identify consequences of non-response.</strong> Draft a placeholder for consequences and mark it <code>[CONFIRM: attorney to authorize specific language regarding consequences]</code>. Do not threaten specific legal action without attorney direction.</li></ol>
+<ol><li><strong>Draft the letter.</strong> Populate <code>templates/demand-letter-outline.md</code>. Retain every <code>[CONFIRM]</code> and <code>[ACTION]</code> placeholder. Apply record fidelity (exact quotations; paraphrases flagged) and echo prior correspondence rather than copying it.</li></ol>
+<ol><li><strong>Compile the attorney verification checklist</strong> of every item requiring attorney confirmation before the letter is sent.</li></ol>
+<ol><li><strong>Label the work product.</strong> Mark the internal materials "Privileged &amp; Confidential — Attorney Work Product." Ensure the demand letter itself — the version to be sent — carries no work-product or privilege header, and that the draft is clearly marked as a draft requiring attorney authorization before sending.</li></ol>
+</section>
+<section class="skill-section" id="output-format">
+<h2>Output Format</h2>
+<p>Deliver:</p>
+<ol><li><strong>Pre-Draft Gate Notes</strong> — internal work product: each of the seven pre-draft checks and how it was addressed. Label "Privileged &amp; Confidential — Attorney Work Product."</li><li><strong>Draft Demand Letter</strong> — the letter, populated from <code>templates/demand-letter-outline.md</code>, with all <code>[CONFIRM]</code> and <code>[ACTION]</code> placeholders retained. This is the document that, once finalized and authorized, will be sent; it must not carry a work-product or privilege header.</li><li><strong>Drafting Notes</strong> — internal work product: the choices made, areas of uncertainty, weak points flagged candidly, and alternative formulations for attorney consideration.</li><li><strong>Attorney Verification Checklist</strong> — every item requiring attorney review before the letter is finalized and sent.</li></ol>
+</section>
+<section class="skill-section" id="attorney-verification-checklist">
+<h2>Attorney Verification Checklist</h2>
+<ul><li>[ ] Client identity, authority to make the demand, and engagement scope confirmed.</li><li>[ ] Recipient identity and address verified; the letter will reach the correct party.</li><li>[ ] The pre-draft gate was run and each of the seven checks addressed.</li><li>[ ] Legal theory and claimed basis reviewed and confirmed by attorney.</li><li>[ ] All factual statements verified against the documentary record; no misstatements of fact.</li><li>[ ] All quotations from documents are verbatim and accurate; paraphrases are flagged.</li><li>[ ] Weak points in the claim were flagged candidly, not overstated.</li><li>[ ] Damages figures verified and supported by evidence; calculation confirmed.</li><li>[ ] Response deadline confirmed as reasonable and consistent with any applicable rule, contract, or statute.</li><li>[ ] Whether a statutory pre-suit notice requirement applies — and whether this letter satisfies it — confirmed by attorney.</li><li>[ ] Consequences of non-response language reviewed and authorized by attorney.</li><li>[ ] Settlement-communication designation decision made by attorney.</li><li>[ ] The outgoing letter carries no attorney-work-product or privilege header.</li><li>[ ] Tone and framing reviewed: no misstatements of fact or law presented as established conclusions.</li><li>[ ] Letter authorized for sending by the responsible attorney of record.</li><li>[ ] Proof of delivery method confirmed (certified mail, email with read receipt, hand delivery, etc.).</li></ul>
+</section>
+<section class="skill-section" id="raw-skill">
+<h2>Full raw SKILL.md</h2>
+<pre id="raw" class="raw">---
+name: Demand Letter
+description: "Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The underlying facts"
+  - "The client's position and the relief sought"
+  - "Any deadlines and the recipient's identity"
+outputs:
+  - "Draft demand letter with legal conclusions, damages figures, and deadlines flagged for attorney confirmation"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/ip/cease-and-desist-response/SKILL.md
+tags:
+  - litigation
+  - demand-letter
+  - pre-litigation
+  - drafting
+  - damages
+---
+
+# Demand Letter
+
+## Purpose
+
+Produce a structured draft demand letter for attorney review, revision, and sending. The skill works in three stages — intake, a pre-draft risk gate, and drafting — so that strategic and privilege questions are settled before any letter text is written. It organizes the factual narrative, identifies the claimed basis for relief, articulates a specific demand, and flags every legal conclusion, damages figure, response deadline, and consequence of non-response as an item requiring attorney confirmation. The draft is not a final negotiating position and must not be sent without attorney review and approval.
+
+## Use When
+
+- A user asks to "draft a demand letter," "write a demand," or "send a letter before filing suit."
+- Counsel wants a structured first draft before editing and sending a pre-litigation demand.
+- A client has suffered a harm and counsel needs to frame and communicate a pre-suit demand.
+- A breach of contract, tort claim, employment dispute, property damage, or similar matter requires a formal written demand as a precursor to litigation or negotiation.
+- A statutory or contractual pre-suit notice requirement must be met (attorney must confirm applicability and form).
+
+## Required Inputs
+
+- The client's identity and role (the party making the demand).
+- The recipient's identity and, if known, address and counsel information.
+- A description of the dispute, the alleged harm, and the factual background (from documents or a client summary).
+- The nature of the claim or legal theory to be asserted (e.g., breach of contract, negligence, fraud) — attorney will confirm.
+- The relief or remedy being demanded (e.g., payment of a specific amount, return of property, specific performance).
+- Any prior correspondence on the matter, and the underlying contract or authority (pasted in full where possible, not summarized).
+- The desired posture: tone (measured / firm / aggressive), the response window, how the letter will be sent, and who will sign it.
+
+If the client identity, recipient identity, or nature of the demand is not provided, stop and request it. Do not draft a demand letter without knowing who is demanding what from whom.
+
+## Do Not Use When
+
+- The user wants to file a complaint or pleading rather than a pre-litigation demand (use a pleading drafting skill instead).
+- The matter requires a statutory notice of claim with specific form requirements (attorney must confirm applicability; this skill produces a general demand draft only).
+- A settlement agreement is needed rather than a demand (use a settlement drafting skill).
+- The user needs a chronology of events to support the demand (use `litigation-chronology` first, then return to this skill).
+- The user needs to respond to, or triage, a demand letter received from an opposing party — that is a separate inbound-demand workflow.
+
+## Legal Safety Rules
+
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
+- Produce draft legal work product for attorney review. This is not legal advice.
+- The draft demand letter must not be sent to any party without attorney review, revision, and authorization.
+- Run the pre-draft gate (see Workflow) before drafting. Do not write letter text until the privilege, admission-risk, settlement-posture, and factual-accuracy questions have been addressed on the record.
+- Internal work product — the pre-draft gate notes, drafting notes, and verification checklist — is labeled "Privileged &amp; Confidential — Attorney Work Product." The demand letter itself is an external document: the version that will be sent must not carry any work-product or privilege header.
+- Do not assert legal conclusions as established facts (e.g., do not state "you breached the contract" as a fact — state "we contend" or "it is our position that" and flag for attorney to confirm the framing).
+- Record fidelity: quote documents exactly. A quotation must be verbatim; flag every paraphrase as `[VERIFY: exact quote — source pending]`.
+- Flag weak points in the claim candidly for the attorney rather than overstating them.
+- Do not invent, fabricate, or assume damages figures. Use only client-supplied or document-supported figures. Mark all damages as `[CONFIRM: attorney to verify calculation and supporting evidence]`.
+- Do not assert a response deadline. Use `[deadline verification required]` — never compute or assert a deadline independently.
+- Do not assert legal authority (statutes, regulations, case law) without attorney direction. If legal authority is included, mark it as `[CONFIRM: attorney to verify citation and current law]`.
+- Do not assert consequences of non-response (e.g., "we will file suit") without attorney authorization — use `[CONFIRM: attorney to confirm and authorize]`.
+- Where a statutory pre-suit notice requirement may apply, flag it explicitly as `[ACTION: attorney must confirm whether statutory notice requirements apply and whether this letter satisfies them]`.
+- Clearly distinguish facts (from documents or client) from contentions and from attorney judgment calls.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the client identity, recipient identity, nature of the claim, and the relief sought have been provided. If any of these are missing, stop and request them before proceeding.
+
+2. **Intake.** Before drafting, capture and record:
+   - **Posture** — tone, the response window, how the letter will be sent, and who signs it.
+   - **Parties and relationship** — sender, recipient, the intended audience, and any relationship between them.
+   - **Triggering facts** — the events giving rise to the claim, with dates and a note of which evidence is available.
+   - **Claimed basis** — the legal theory, with `[CONFIRM]` placeholders for any unverified authority.
+   - **Desired outcomes** — in priority order.
+   - **Deadlines** — any external deadline (such as a limitations period) and the response window. Never compute a deadline.
+   - **Communication history** — prior outreach and why escalation is appropriate now.
+   For a material matter (a large demand, a sophisticated counterparty, or on request), also capture strategic context: leverage, the client's alternatives, the downside of sending, and any admission or privilege sensitivities.
+
+3. **Pre-draft gate.** Address each of the following on the record before writing any letter text. Each is a point where an unrun check has damaged a sender's position.
+   - **Privilege filter** — what legal analysis or work product must not appear in the letter.
+   - **Admission risk** — what phrasings could later be quoted back as admissions.
+   - **Accord and satisfaction** — whether the letter could inadvertently compromise or release a separate claim.
+   - **Settlement-communication posture** — whether settlement-communication protections (for example, Federal Rule of Evidence 408 or a state equivalent) should attach, and how that affects content. Flag as `[ACTION: attorney to confirm whether to include a settlement-communication designation and whether it is appropriate in this jurisdiction]`.
+   - **Privilege-waiver scan** — any sentence that would reveal the substance of legal analysis.
+   - **Tone posture** — measured / firm / aggressive, and how that drives word choice and the consequences stated.
+   - **Factual accuracy** — every fact verified against a source, not assumed.
+   Do not proceed to drafting until each item has been addressed.
+
+4. **Identify the parties.** Record the sending party (client) with full legal name and entity type. Record the recipient with full legal name, address, and counsel if known. Note any aliases or related entities.
+
+5. **Identify the legal theory.** State the claim(s) asserted, label them "claimed basis," and mark them for attorney confirmation. Note any contractual or statutory provision relied on, if provided.
+
+6. **Organize the factual background.** Using provided documents or the client summary, set out the relevant facts in chronological order: the relationship of the parties, the relevant agreement or obligation, the events giving rise to the claim, and the harm suffered. Label the background as "based on information provided" and identify the sources.
+
+7. **Identify and quantify the harm.** List the specific harms or damages claimed. Use only client-supplied or document-supported figures, each marked `[CONFIRM: attorney to verify]`. If damages are not yet quantifiable, say so.
+
+8. **Identify the specific demand.** State the specific relief demanded — payment of a sum certain `[CONFIRM]`, return of property, specific performance, cessation of conduct, or other. The demand must be specific.
+
+9. **Identify the response deadline.** Do not compute or assert a deadline. Insert `[deadline verification required]` and `[CONFIRM: attorney to specify the response deadline and confirm it is reasonable and consistent with any applicable rule or agreement]`.
+
+10. **Identify consequences of non-response.** Draft a placeholder for consequences and mark it `[CONFIRM: attorney to authorize specific language regarding consequences]`. Do not threaten specific legal action without attorney direction.
+
+11. **Draft the letter.** Populate `templates/demand-letter-outline.md`. Retain every `[CONFIRM]` and `[ACTION]` placeholder. Apply record fidelity (exact quotations; paraphrases flagged) and echo prior correspondence rather than copying it.
+
+12. **Compile the attorney verification checklist** of every item requiring attorney confirmation before the letter is sent.
+
+13. **Label the work product.** Mark the internal materials "Privileged &amp; Confidential — Attorney Work Product." Ensure the demand letter itself — the version to be sent — carries no work-product or privilege header, and that the draft is clearly marked as a draft requiring attorney authorization before sending.
+
+## Output Format
+
+Deliver:
+
+1. **Pre-Draft Gate Notes** — internal work product: each of the seven pre-draft checks and how it was addressed. Label "Privileged &amp; Confidential — Attorney Work Product."
+2. **Draft Demand Letter** — the letter, populated from `templates/demand-letter-outline.md`, with all `[CONFIRM]` and `[ACTION]` placeholders retained. This is the document that, once finalized and authorized, will be sent; it must not carry a work-product or privilege header.
+3. **Drafting Notes** — internal work product: the choices made, areas of uncertainty, weak points flagged candidly, and alternative formulations for attorney consideration.
+4. **Attorney Verification Checklist** — every item requiring attorney review before the letter is finalized and sent.
+
+## Attorney Verification Checklist
+
+- [ ] Client identity, authority to make the demand, and engagement scope confirmed.
+- [ ] Recipient identity and address verified; the letter will reach the correct party.
+- [ ] The pre-draft gate was run and each of the seven checks addressed.
+- [ ] Legal theory and claimed basis reviewed and confirmed by attorney.
+- [ ] All factual statements verified against the documentary record; no misstatements of fact.
+- [ ] All quotations from documents are verbatim and accurate; paraphrases are flagged.
+- [ ] Weak points in the claim were flagged candidly, not overstated.
+- [ ] Damages figures verified and supported by evidence; calculation confirmed.
+- [ ] Response deadline confirmed as reasonable and consistent with any applicable rule, contract, or statute.
+- [ ] Whether a statutory pre-suit notice requirement applies — and whether this letter satisfies it — confirmed by attorney.
+- [ ] Consequences of non-response language reviewed and authorized by attorney.
+- [ ] Settlement-communication designation decision made by attorney.
+- [ ] The outgoing letter carries no attorney-work-product or privilege header.
+- [ ] Tone and framing reviewed: no misstatements of fact or law presented as established conclusions.
+- [ ] Letter authorized for sending by the responsible attorney of record.
+- [ ] Proof of delivery method confirmed (certified mail, email with read receipt, hand delivery, etc.).
+</pre>
+</section>
+
+<pre id="oneoff" hidden>You are assisting with a legal task using AgentCounsel, a platform-agnostic legal skills library. Use the skill provided below and follow it exactly.
+
+Operating rules (these always apply):
+- Produce draft legal work product for review by a licensed attorney. This is not legal advice and not a final answer.
+- Never invent legal authority, citations, quotations, facts, or deadlines. Mark every gap with a visible placeholder such as [CONFIRM: ...] or [VERIFY: ...].
+- Identify jurisdiction, governing law, posture, and the relevant date — or flag them as unknown. Never compute a deadline.
+- Keep facts, assumptions, analysis, strategy, and verification items visibly separate.
+- Follow the skill's Workflow and Output Format. Complete its Attorney Verification Checklist.
+- If a Required Input is missing, stop and ask for it. Do not guess.
+
+=== BEGIN SKILL: Demand Letter ===
+---
+name: Demand Letter
+description: "Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The underlying facts"
+  - "The client's position and the relief sought"
+  - "Any deadlines and the recipient's identity"
+outputs:
+  - "Draft demand letter with legal conclusions, damages figures, and deadlines flagged for attorney confirmation"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/ip/cease-and-desist-response/SKILL.md
+tags:
+  - litigation
+  - demand-letter
+  - pre-litigation
+  - drafting
+  - damages
+---
+
+# Demand Letter
+
+## Purpose
+
+Produce a structured draft demand letter for attorney review, revision, and sending. The skill works in three stages — intake, a pre-draft risk gate, and drafting — so that strategic and privilege questions are settled before any letter text is written. It organizes the factual narrative, identifies the claimed basis for relief, articulates a specific demand, and flags every legal conclusion, damages figure, response deadline, and consequence of non-response as an item requiring attorney confirmation. The draft is not a final negotiating position and must not be sent without attorney review and approval.
+
+## Use When
+
+- A user asks to "draft a demand letter," "write a demand," or "send a letter before filing suit."
+- Counsel wants a structured first draft before editing and sending a pre-litigation demand.
+- A client has suffered a harm and counsel needs to frame and communicate a pre-suit demand.
+- A breach of contract, tort claim, employment dispute, property damage, or similar matter requires a formal written demand as a precursor to litigation or negotiation.
+- A statutory or contractual pre-suit notice requirement must be met (attorney must confirm applicability and form).
+
+## Required Inputs
+
+- The client's identity and role (the party making the demand).
+- The recipient's identity and, if known, address and counsel information.
+- A description of the dispute, the alleged harm, and the factual background (from documents or a client summary).
+- The nature of the claim or legal theory to be asserted (e.g., breach of contract, negligence, fraud) — attorney will confirm.
+- The relief or remedy being demanded (e.g., payment of a specific amount, return of property, specific performance).
+- Any prior correspondence on the matter, and the underlying contract or authority (pasted in full where possible, not summarized).
+- The desired posture: tone (measured / firm / aggressive), the response window, how the letter will be sent, and who will sign it.
+
+If the client identity, recipient identity, or nature of the demand is not provided, stop and request it. Do not draft a demand letter without knowing who is demanding what from whom.
+
+## Do Not Use When
+
+- The user wants to file a complaint or pleading rather than a pre-litigation demand (use a pleading drafting skill instead).
+- The matter requires a statutory notice of claim with specific form requirements (attorney must confirm applicability; this skill produces a general demand draft only).
+- A settlement agreement is needed rather than a demand (use a settlement drafting skill).
+- The user needs a chronology of events to support the demand (use `litigation-chronology` first, then return to this skill).
+- The user needs to respond to, or triage, a demand letter received from an opposing party — that is a separate inbound-demand workflow.
+
+## Legal Safety Rules
+
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
+- Produce draft legal work product for attorney review. This is not legal advice.
+- The draft demand letter must not be sent to any party without attorney review, revision, and authorization.
+- Run the pre-draft gate (see Workflow) before drafting. Do not write letter text until the privilege, admission-risk, settlement-posture, and factual-accuracy questions have been addressed on the record.
+- Internal work product — the pre-draft gate notes, drafting notes, and verification checklist — is labeled "Privileged &amp; Confidential — Attorney Work Product." The demand letter itself is an external document: the version that will be sent must not carry any work-product or privilege header.
+- Do not assert legal conclusions as established facts (e.g., do not state "you breached the contract" as a fact — state "we contend" or "it is our position that" and flag for attorney to confirm the framing).
+- Record fidelity: quote documents exactly. A quotation must be verbatim; flag every paraphrase as `[VERIFY: exact quote — source pending]`.
+- Flag weak points in the claim candidly for the attorney rather than overstating them.
+- Do not invent, fabricate, or assume damages figures. Use only client-supplied or document-supported figures. Mark all damages as `[CONFIRM: attorney to verify calculation and supporting evidence]`.
+- Do not assert a response deadline. Use `[deadline verification required]` — never compute or assert a deadline independently.
+- Do not assert legal authority (statutes, regulations, case law) without attorney direction. If legal authority is included, mark it as `[CONFIRM: attorney to verify citation and current law]`.
+- Do not assert consequences of non-response (e.g., "we will file suit") without attorney authorization — use `[CONFIRM: attorney to confirm and authorize]`.
+- Where a statutory pre-suit notice requirement may apply, flag it explicitly as `[ACTION: attorney must confirm whether statutory notice requirements apply and whether this letter satisfies them]`.
+- Clearly distinguish facts (from documents or client) from contentions and from attorney judgment calls.
+
+## Workflow
+
+1. **Confirm inputs.** Verify that the client identity, recipient identity, nature of the claim, and the relief sought have been provided. If any of these are missing, stop and request them before proceeding.
+
+2. **Intake.** Before drafting, capture and record:
+   - **Posture** — tone, the response window, how the letter will be sent, and who signs it.
+   - **Parties and relationship** — sender, recipient, the intended audience, and any relationship between them.
+   - **Triggering facts** — the events giving rise to the claim, with dates and a note of which evidence is available.
+   - **Claimed basis** — the legal theory, with `[CONFIRM]` placeholders for any unverified authority.
+   - **Desired outcomes** — in priority order.
+   - **Deadlines** — any external deadline (such as a limitations period) and the response window. Never compute a deadline.
+   - **Communication history** — prior outreach and why escalation is appropriate now.
+   For a material matter (a large demand, a sophisticated counterparty, or on request), also capture strategic context: leverage, the client's alternatives, the downside of sending, and any admission or privilege sensitivities.
+
+3. **Pre-draft gate.** Address each of the following on the record before writing any letter text. Each is a point where an unrun check has damaged a sender's position.
+   - **Privilege filter** — what legal analysis or work product must not appear in the letter.
+   - **Admission risk** — what phrasings could later be quoted back as admissions.
+   - **Accord and satisfaction** — whether the letter could inadvertently compromise or release a separate claim.
+   - **Settlement-communication posture** — whether settlement-communication protections (for example, Federal Rule of Evidence 408 or a state equivalent) should attach, and how that affects content. Flag as `[ACTION: attorney to confirm whether to include a settlement-communication designation and whether it is appropriate in this jurisdiction]`.
+   - **Privilege-waiver scan** — any sentence that would reveal the substance of legal analysis.
+   - **Tone posture** — measured / firm / aggressive, and how that drives word choice and the consequences stated.
+   - **Factual accuracy** — every fact verified against a source, not assumed.
+   Do not proceed to drafting until each item has been addressed.
+
+4. **Identify the parties.** Record the sending party (client) with full legal name and entity type. Record the recipient with full legal name, address, and counsel if known. Note any aliases or related entities.
+
+5. **Identify the legal theory.** State the claim(s) asserted, label them "claimed basis," and mark them for attorney confirmation. Note any contractual or statutory provision relied on, if provided.
+
+6. **Organize the factual background.** Using provided documents or the client summary, set out the relevant facts in chronological order: the relationship of the parties, the relevant agreement or obligation, the events giving rise to the claim, and the harm suffered. Label the background as "based on information provided" and identify the sources.
+
+7. **Identify and quantify the harm.** List the specific harms or damages claimed. Use only client-supplied or document-supported figures, each marked `[CONFIRM: attorney to verify]`. If damages are not yet quantifiable, say so.
+
+8. **Identify the specific demand.** State the specific relief demanded — payment of a sum certain `[CONFIRM]`, return of property, specific performance, cessation of conduct, or other. The demand must be specific.
+
+9. **Identify the response deadline.** Do not compute or assert a deadline. Insert `[deadline verification required]` and `[CONFIRM: attorney to specify the response deadline and confirm it is reasonable and consistent with any applicable rule or agreement]`.
+
+10. **Identify consequences of non-response.** Draft a placeholder for consequences and mark it `[CONFIRM: attorney to authorize specific language regarding consequences]`. Do not threaten specific legal action without attorney direction.
+
+11. **Draft the letter.** Populate `templates/demand-letter-outline.md`. Retain every `[CONFIRM]` and `[ACTION]` placeholder. Apply record fidelity (exact quotations; paraphrases flagged) and echo prior correspondence rather than copying it.
+
+12. **Compile the attorney verification checklist** of every item requiring attorney confirmation before the letter is sent.
+
+13. **Label the work product.** Mark the internal materials "Privileged &amp; Confidential — Attorney Work Product." Ensure the demand letter itself — the version to be sent — carries no work-product or privilege header, and that the draft is clearly marked as a draft requiring attorney authorization before sending.
+
+## Output Format
+
+Deliver:
+
+1. **Pre-Draft Gate Notes** — internal work product: each of the seven pre-draft checks and how it was addressed. Label "Privileged &amp; Confidential — Attorney Work Product."
+2. **Draft Demand Letter** — the letter, populated from `templates/demand-letter-outline.md`, with all `[CONFIRM]` and `[ACTION]` placeholders retained. This is the document that, once finalized and authorized, will be sent; it must not carry a work-product or privilege header.
+3. **Drafting Notes** — internal work product: the choices made, areas of uncertainty, weak points flagged candidly, and alternative formulations for attorney consideration.
+4. **Attorney Verification Checklist** — every item requiring attorney review before the letter is finalized and sent.
+
+## Attorney Verification Checklist
+
+- [ ] Client identity, authority to make the demand, and engagement scope confirmed.
+- [ ] Recipient identity and address verified; the letter will reach the correct party.
+- [ ] The pre-draft gate was run and each of the seven checks addressed.
+- [ ] Legal theory and claimed basis reviewed and confirmed by attorney.
+- [ ] All factual statements verified against the documentary record; no misstatements of fact.
+- [ ] All quotations from documents are verbatim and accurate; paraphrases are flagged.
+- [ ] Weak points in the claim were flagged candidly, not overstated.
+- [ ] Damages figures verified and supported by evidence; calculation confirmed.
+- [ ] Response deadline confirmed as reasonable and consistent with any applicable rule, contract, or statute.
+- [ ] Whether a statutory pre-suit notice requirement applies — and whether this letter satisfies it — confirmed by attorney.
+- [ ] Consequences of non-response language reviewed and authorized by attorney.
+- [ ] Settlement-communication designation decision made by attorney.
+- [ ] The outgoing letter carries no attorney-work-product or privilege header.
+- [ ] Tone and framing reviewed: no misstatements of fact or law presented as established conclusions.
+- [ ] Letter authorized for sending by the responsible attorney of record.
+- [ ] Proof of delivery method confirmed (certified mail, email with read receipt, hand delivery, etc.).
+
+=== END SKILL ===
+
+First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.</pre>
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

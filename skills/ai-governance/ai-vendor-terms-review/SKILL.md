@@ -1,6 +1,30 @@
 ---
 name: AI Vendor Terms Review
-description: Use when reviewing the terms of service, API agreement, or usage policies of an AI vendor or AI-enabled service to produce a structured risk summary and prioritized redline points for attorney review.
+description: "Use when reviewing the terms of service, API agreement, or usage policies of an AI vendor or AI-enabled service to produce a structured risk summary and prioritized redline points for attorney review."
+practice_area: ai-governance
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The AI vendor's terms of service, API agreement, or usage policy text"
+  - "The client's role and intended use of the service"
+  - "The data the client will send to the service"
+outputs:
+  - "Structured risk summary"
+  - "Issues table"
+  - "Prioritized redline points for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/privacy/dpa-review/SKILL.md
+  - skills/ai-governance/ai-use-case-intake/SKILL.md
+  - skills/ai-governance/employee-ai-policy/SKILL.md
+tags:
+  - ai-governance
+  - ai
+  - vendor-terms
+  - contract-review
+  - redline
 ---
 
 # AI Vendor Terms Review
@@ -37,6 +61,7 @@ If the vendor agreement text is not provided, stop and request it. Do not fabric
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the contract text actually provided; do not infer, assume, or reconstruct missing provisions.
 - Do not assert what any law or regulation requires of AI vendor contracts; flag potential regulatory considerations for attorney verification.

@@ -1,6 +1,27 @@
 ---
 name: Internal Investigation
-description: Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.
+description: "Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The allegation or complaint under investigation"
+  - "Confirmation that the investigation is attorney-directed"
+  - "Documents, evidence, and interview notes"
+outputs:
+  - "Privileged investigation memorandum"
+  - "Audience-specific summaries for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - employment
+  - internal-investigation
+  - privileged
+  - workplace-complaint
+  - evidence
 ---
 
 # Internal Investigation
@@ -38,6 +59,7 @@ If the allegation summary is not provided, stop and request it before proceeding
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - All output is draft legal work product for attorney review and sign-off. This is not legal advice.
 - Do not assert privilege. Privilege depends on how the investigation is structured, who directed it, for what purpose, and applicable jurisdiction-specific doctrine — not on labeling. The skill surfaces the privilege-formation question and flags it; it does not guarantee or confirm privilege.
 - Do not invent facts, dates, quotations, witness statements, policy language, citations, or legal authority. If something is not in the provided materials, say so and flag it as a gap.

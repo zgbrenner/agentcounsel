@@ -1,6 +1,27 @@
 ---
 name: DMCA Takedown
-description: Use when preparing a takedown notice for infringing content or evaluating a takedown notice received against the user's content, including whether a counter-notice may be appropriate.
+description: "Use when preparing a takedown notice for infringing content or evaluating a takedown notice received against the user's content, including whether a counter-notice may be appropriate."
+practice_area: ip
+task_type: drafting
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The copyrighted work at issue"
+  - "The allegedly infringing material and its location"
+  - "Whether the task is an outbound notice or a response to a received notice"
+outputs:
+  - "Draft DMCA takedown notice or counter-notice for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/ip/cease-and-desist-response/SKILL.md
+  - skills/ip/infringement-triage/SKILL.md
+tags:
+  - ip
+  - dmca
+  - copyright
+  - takedown
+  - counter-notice
 ---
 
 # DMCA Takedown

@@ -1,6 +1,26 @@
 ---
 name: Termination Risk
-description: Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs.
+description: "Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The facts surrounding the proposed termination"
+  - "The stated reason for the termination"
+  - "The employee's history, including performance and protected activity"
+outputs:
+  - "Risk checklist and factor analysis for attorney review before the termination"
+related_skills:
+  - skills/employment/worker-classification/SKILL.md
+  - skills/employment/protected-leave-review/SKILL.md
+  - skills/employment/severance-review/SKILL.md
+tags:
+  - employment
+  - termination
+  - wrongful-termination
+  - risk-assessment
 ---
 
 # Termination Risk
@@ -38,6 +58,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Do not assert what is or is not lawful in any jurisdiction. Employment law is highly jurisdiction-specific and fact-specific.
 - Do not invent facts, documentation, statutory deadlines, notice requirements, final-pay rules, or protected-class definitions.
@@ -87,6 +108,16 @@ Deliver the following sections, clearly labeled:
 5. **Assumptions** — explicit list of any facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]` throughout wherever any fact, legal requirement, or procedural step is unverified. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

@@ -133,7 +133,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 ## Setup
 
-Commands for configuring AgentCounsel for a practice group. Each runs a cold-start interview and produces a filled-in practice profile under `practice-profiles/`.
+Commands for configuring AgentCounsel and opening a matter. The cold-start interviews configure a practice group and produce a filled-in practice profile under `practice-profiles/`; `create-matter-workspace` sets up a single matter file under `matter-workspaces/`.
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -141,6 +141,7 @@ Commands for configuring AgentCounsel for a practice group. Each runs a cold-sta
 | `/setup:litigation` | `skills/setup/litigation-cold-start-interview/SKILL.md` | "configure the litigation practice" | A knowledgeable litigation attorney or designee | Filled `practice-profiles/litigation.md` draft | `/litigation:intake` |
 | `/setup:privacy` | `skills/setup/privacy-cold-start-interview/SKILL.md` | "configure the privacy practice" | A knowledgeable privacy attorney or designee | Filled `practice-profiles/privacy.md` draft | `/privacy:dpa` |
 | `/setup:corporate` | `skills/setup/corporate-cold-start-interview/SKILL.md` | "configure the corporate practice" | A knowledgeable corporate attorney or designee | Filled `practice-profiles/corporate.md` draft | `/corporate:closing-checklist` |
+| `/setup:matter-workspace` | `skills/setup/create-matter-workspace/SKILL.md` | "set up a matter", "create a workspace", "organize this matter" | Matter type, client, responsible attorney, known parties / dates / documents | Populated matter workspace draft | `/litigation:intake` |
 
 ## Legal Methodology
 

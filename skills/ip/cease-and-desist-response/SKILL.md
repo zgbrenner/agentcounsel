@@ -1,6 +1,28 @@
 ---
 name: Cease and Desist Response
-description: Use when a client has received a cease-and-desist letter or similar IP demand and needs a structured triage memo — covering the assertion, exposure, response options, and immediate actions — for attorney review before responding.
+description: "Use when a client has received a cease-and-desist letter or similar IP demand and needs a structured triage memo — covering the assertion, exposure, response options, and immediate actions — for attorney review before responding."
+practice_area: ip
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received cease-and-desist letter or IP demand"
+  - "The client's factual assessment of the assertion"
+  - "Any deadlines stated in the letter"
+outputs:
+  - "Structured response triage memo covering exposure, options, and immediate actions for attorney review"
+related_skills:
+  - skills/litigation/demand-letter/SKILL.md
+  - skills/ip/dmca-takedown/SKILL.md
+  - skills/ip/trademark-clearance-triage/SKILL.md
+  - skills/ip/infringement-triage/SKILL.md
+tags:
+  - ip
+  - cease-and-desist
+  - ip-demand
+  - triage
+  - inbound-demand
 ---
 
 # Cease and Desist Response

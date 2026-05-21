@@ -1,6 +1,25 @@
 ---
 name: Invention Disclosure Intake
-description: Use when a user wants a structured first-pass screen of a proposed invention to assess whether it warrants patent-counsel attention, with filing-deadline urgency flagging.
+description: "Use when a user wants a structured first-pass screen of a proposed invention to assess whether it warrants patent-counsel attention, with filing-deadline urgency flagging."
+practice_area: ip
+task_type: intake
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The proposed invention disclosure"
+  - "The disclosure and publication history"
+  - "Any known commercialization or filing timeline"
+outputs:
+  - "Invention screen with a verdict and a filing-deadline urgency flag for patent counsel"
+related_skills:
+  - skills/ip/fto-triage/SKILL.md
+tags:
+  - ip
+  - patent
+  - invention-disclosure
+  - intake
+  - filing-deadline
 ---
 
 # Invention Disclosure Intake

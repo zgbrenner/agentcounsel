@@ -1,6 +1,26 @@
 ---
 name: Statutory Interpretation
-description: Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.
+description: "Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review."
+practice_area: legal-methodology
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The statutory, regulatory, or contractual provision text"
+  - "The interpretive question to be resolved"
+  - "Relevant context such as definitions and related provisions"
+outputs:
+  - "Structured interpretation worksheet mapping competing readings for attorney review"
+related_skills:
+  - skills/legal-research/legal-research-memo/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/legal-methodology/risk-assessment/SKILL.md
+tags:
+  - legal-methodology
+  - statutory-interpretation
+  - construction
+  - provision-analysis
 ---
 
 # Statutory Interpretation
@@ -41,6 +61,7 @@ If the provision text or the interpretive question is not provided, stop and req
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert how any jurisdiction's courts interpret text. Do not name or invoke jurisdiction-specific interpretive canons as authority. Mark every jurisdiction-bound interpretive point `[verify jurisdiction]`.
 - Use only the text provided. Do not reconstruct, paraphrase, or substitute for the operative language. Quote the provision accurately where quotation is needed.

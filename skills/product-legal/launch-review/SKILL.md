@@ -1,6 +1,29 @@
 ---
 name: Launch Review
-description: Use when conducting a pre-launch legal issue-spotting review for a new product or feature to produce a structured issues register and a draft go/hold/conditions recommendation for attorney sign-off.
+description: "Use when conducting a pre-launch legal issue-spotting review for a new product or feature to produce a structured issues register and a draft go/hold/conditions recommendation for attorney sign-off."
+practice_area: product-legal
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "A description of the product or feature to launch"
+  - "The data, claims, and integrations involved"
+  - "The launch timeline and markets"
+outputs:
+  - "Structured issues register"
+  - "Draft go / hold / conditions recommendation for attorney sign-off"
+related_skills:
+  - skills/product-legal/marketing-claims-review/SKILL.md
+  - skills/product-legal/ai-feature-review/SKILL.md
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - product-legal
+  - launch-review
+  - issue-spotting
+  - product-counsel
+  - go-no-go
 ---
 
 # Launch Review
@@ -92,6 +115,16 @@ Deliver the following sections, in order, labeled as **DRAFT — FOR ATTORNEY RE
 5. **Assumptions and Open Items**: numbered list of every assumption and `[CONFIRM: ...]` item.
 
 6. **Attorney Verification Checklist**: checkbox items (see below).
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 

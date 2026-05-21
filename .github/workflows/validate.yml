@@ -21,8 +21,28 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Check plugin bundle is in sync with canonical skills
         run: python scripts/sync_plugin_skills.py --check
 
       - name: Validate repository
         run: python scripts/validate_repo.py
+
+      - name: Validate skill eval framework
+        run: python scripts/check_evals.py
+
+      - name: Check skill-improvement reports are up to date
+        run: python scripts/generate_skill_improvement_prompts.py --check
+
+      - name: Check the static site is in sync with canonical skills
+        run: |
+          node site/generate.mjs
+          if [ -n "$(git status --porcelain site/public/)" ]; then
+            echo "::error::site/public/ is out of date — run 'npm run build' in site/ and commit the result."
+            git status --porcelain site/public/
+            exit 1
+          fi

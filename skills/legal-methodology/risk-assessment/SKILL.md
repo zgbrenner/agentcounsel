@@ -1,6 +1,26 @@
 ---
 name: Risk Assessment
-description: Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review.
+description: "Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review."
+practice_area: legal-methodology
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The situation to be assessed"
+  - "The known facts"
+  - "The client's posture and objectives"
+outputs:
+  - "Prioritized risk register with severity bands and a summary for attorney review"
+related_skills:
+  - skills/legal-research/legal-research-memo/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+  - skills/legal-methodology/statutory-interpretation/SKILL.md
+tags:
+  - legal-methodology
+  - risk-assessment
+  - risk-register
+  - prioritization
 ---
 
 # Risk Assessment
@@ -41,6 +61,7 @@ If the client's role and a description of the situation are not provided, stop a
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - All risk ratings — likelihood, impact, and severity bands — are preliminary triage signals for attorney judgment. They are not predictions of outcome, not legal conclusions, and not assessments of enforceability. Label every rating explicitly with `[ATTORNEY TO CONFIRM: preliminary triage signal — not a legal conclusion]`.
 - Do not assert the existence or content of any statute, regulation, case, or named legal doctrine. If a legal basis for a risk is relevant, describe the risk in functional terms and mark the legal underpinning as a research and verification item.

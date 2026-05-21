@@ -1,6 +1,26 @@
 ---
 name: Privacy Cold-Start Interview
-description: Use when a privacy practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+description: "Use when a privacy practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+practice_area: setup
+task_type: interview
+jurisdictions: []
+risk_level: low
+requires_attorney_review: true
+inputs:
+  - "Access to a privacy attorney or authorized designee"
+  - "The practice group's jurisdictions and client context"
+  - "Standard positions, escalation thresholds, and review requirements"
+outputs:
+  - "Filled privacy practice profile draft for attorney review"
+related_skills:
+  - skills/privacy/dpa-review/SKILL.md
+  - skills/privacy/dsar-workflow/SKILL.md
+tags:
+  - setup
+  - cold-start
+  - practice-profile
+  - configuration
+  - privacy
 ---
 
 # Privacy Cold-Start Interview

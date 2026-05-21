@@ -28,7 +28,7 @@ Before you produce any legal work product, route the task to a skill and read
 it. If a request even partly matches a skill in `skills/`, use that skill — do
 not improvise a legal workflow from memory.
 
-1. **Read `core/` first.** All six files in `core/` are the operating rules
+1. **Read `core/` first.** All seven files in `core/` are the operating rules
    every skill inherits. They always apply.
 2. **Route the task.** Use `WORKFLOW_ROUTER.md` to map the request ("review
    this NDA," "build a chronology") to a skill. Browse with `SKILLS_INDEX.md`.

@@ -74,10 +74,17 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Setup | Litigation Cold-Start Interview | `skills/setup/litigation-cold-start-interview/SKILL.md` | Interviewing a litigation practice group to fill its practice profile | Access to a litigation attorney or designee | Filled practice profile draft |
 | Setup | Privacy Cold-Start Interview | `skills/setup/privacy-cold-start-interview/SKILL.md` | Interviewing a privacy practice group to fill its practice profile | Access to a privacy attorney or designee | Filled practice profile draft |
 | Setup | Corporate Cold-Start Interview | `skills/setup/corporate-cold-start-interview/SKILL.md` | Interviewing a corporate practice group to fill its practice profile | Access to a corporate attorney or designee | Filled practice profile draft |
-| Legal Methodology | Red-Team Verifier | `skills/legal-methodology/red-team-verifier/SKILL.md` | Adversarially stress-testing a draft before attorney review | A draft legal work product to review | Verification findings report |
+| Setup | Create Matter Workspace | `skills/setup/create-matter-workspace/SKILL.md` | Selecting a matter template and producing a populated workspace draft for a new matter | Matter type, client, responsible attorney, known parties / dates / documents | Populated matter workspace draft |
+| Legal Methodology | Red-Team Verifier | `skills/legal-methodology/red-team-verifier/SKILL.md` | A final quality-control pass on any legal output before it is relied upon | Any legal draft or AI output — memo, review, letter, filing, analysis | Verification findings report |
 | Legal Methodology | Statutory Interpretation | `skills/legal-methodology/statutory-interpretation/SKILL.md` | Working through a statutory, regulatory, or contractual provision | Provision text, the interpretive question | Interpretation worksheet |
 | Legal Methodology | Risk Assessment | `skills/legal-methodology/risk-assessment/SKILL.md` | Identifying, rating, and prioritizing legal risk | The situation, known facts, client posture | Prioritized risk register |
 | Legal Methodology | Source Validation | `skills/legal-methodology/source-validation/SKILL.md` | Checking that cited sources and claims exist and are accurate | A draft and the sources it cites | Source validation table |
+
+> **Before relying on any high-stakes legal output**, run `red-team-verifier` (`skills/legal-methodology/red-team-verifier/SKILL.md`) as a final quality-control pass. It adversarially stress-tests any memo, review, letter, filing, risk matrix, or analysis — the output of any skill in this index, or of another tool — for invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues. A PASS verdict does not replace attorney review.
+
+## Business-stakeholder summary mode
+
+Many commercial skills — across **contracts**, **product legal**, **privacy**, **regulatory**, **employment**, and **corporate** — offer an **optional Business Stakeholder Summary** in their Output Format. It is a plain-language layer for briefing non-lawyer decision-makers (product owners, deal leads, managers, founders, executives): a **Business Summary**, the **Decision Needed**, a **Recommended Ask**, a **Fallback Position**, and an **Escalation Needed?** call. Ask for it when the output is going to the business rather than to the supervising attorney. It is an addition to the skill's normal deliverable, never a replacement, and it does not change the attorney-review requirement. See `core/business-stakeholder-communication.md`.
 
 ## Practice areas at a glance
 

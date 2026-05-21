@@ -1,6 +1,28 @@
 ---
 name: Closing Checklist
-description: Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.
+description: "Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review."
+practice_area: corporate
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The transaction agreement"
+  - "Deal context and structure"
+  - "Diligence findings and current deal status"
+outputs:
+  - "Transaction closing checklist"
+  - "Blocking-item analysis for attorney review"
+related_skills:
+  - skills/corporate/diligence-issue-extraction/SKILL.md
+  - skills/corporate/material-contract-schedule/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - corporate
+  - m-and-a
+  - closing-checklist
+  - transaction
+  - deal-management
 ---
 
 # Closing Checklist
@@ -37,6 +59,7 @@ If the transaction agreement is not provided and the mode is **initialize**, sto
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - A "closing-ready" determination — concluding that all conditions precedent have been satisfied and the deal may close — is a legal judgment. This skill produces a checklist and a blocking analysis to support that judgment; it does not make it. Attorney review and sign-off are required before a closing proceeds.
 - Extract closing conditions and deliverables only from the language actually present in the provided agreement. Do not supplement from model background knowledge about what conditions are typical for a given deal type.
@@ -130,6 +153,16 @@ Deliver:
 4. **Attorney Verification Items** — open questions and items requiring legal judgment, including all `[ATTORNEY TO CONFIRM]` flags, all `[verify jurisdiction]` items, and any condition whose satisfaction is a legal conclusion rather than a factual status.
 
 Use `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, and `[deadline verification required]` throughout. Do not fill gaps with invented content.
+
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
 
 ## Attorney Verification Checklist
 
