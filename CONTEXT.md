@@ -7,7 +7,7 @@ A vocabulary and mental-model reference for AI agents and LLMs working in the Ag
 - **Skill** — a single, standalone legal workflow. Each skill is one folder at `skills/<practice-area>/<skill-name>/` containing a `SKILL.md` and an optional `templates/` directory. _Avoid_ calling a skill a "prompt," a "command," an "agent," or a "tool."
 - **`SKILL.md`** — the file that defines a skill: YAML frontmatter (`name`, `description`) followed by eight H2 sections in a fixed order — Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist. Every skill is exactly one `SKILL.md`.
 - **Practice area** — the top-level grouping of skills under `skills/` (for example `litigation`, `contracts`, `corporate`). _Avoid_ "category," "module," or "package."
-- **Core rules** — the six files in `core/`. They are the operating rules every skill inherits; they are not configuration. Read them before reasoning about any skill.
+- **Core rules** — the seven files in `core/`. They are the operating rules every skill inherits; they are not configuration. Read them before reasoning about any skill.
 - **Template** — a copyable, attorney-review-ready Markdown file under a skill's `templates/`. A template is a deliverable scaffold, not a skill.
 - **Adapter** — a thin integration file under `adapters/`. An adapter tells one environment how to use the library; it does not contain the library.
 - **Canonical** — `skills/` and `core/` are the single source of truth. _Avoid_ treating any copy as authoritative.

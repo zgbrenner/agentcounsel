@@ -32,9 +32,9 @@ accident.
 
 ## Job 1 — Using a skill
 
-1. **Read `core/` first.** The six files in `core/` are the operating rules
-   every skill inherits. They always apply. Read them before reasoning about
-   any skill.
+1. **Read `core/` first.** The files in `core/` are the operating rules every
+   skill inherits. They always apply. Read them before reasoning about any
+   skill.
 2. **Route the task.** Use `WORKFLOW_ROUTER.md` to map "I need to do X" to a
    skill; browse `SKILLS_INDEX.md`; `COMMANDS.md` lists slash-style shorthands.
    `CONTEXT.md` defines the repository's vocabulary — use terms like "skill,"

@@ -12,7 +12,7 @@ is specific to Claude Code.
 - **Decide your job:** *using a skill* or *editing the library* (see
   `AGENTS.md`). Never edit files under `skills/`, `core/`, or `adapters/`
   unless the task is explicitly to change the library.
-- **Reload `core/` every session.** For any legal task, read all six files in
+- **Reload `core/` every session.** For any legal task, read every file in
   `core/` before reasoning about a skill. Claude does not retain them between
   sessions — treat each session as a fresh start and load the rules again.
 
