@@ -25,6 +25,7 @@ If the task is more than a single, self-contained skill run — it spans several
 | "Summarize the risks in this vendor agreement / MSA / services contract" | `skills/contracts/contract-risk-review/SKILL.md` |
 | "What changed between these two contract drafts?" / "summarize this redline" | `skills/contracts/redline-summary/SKILL.md` |
 | "Review this statement of work" / "does this SOW match the MSA?" | `skills/contracts/sow-review/SKILL.md` |
+| "What agreements do we have with this vendor?" / "vendor agreement status" | `skills/contracts/vendor-agreement-status/SKILL.md` |
 | "Review this data processing agreement / DPA" | `skills/privacy/dpa-review/SKILL.md` |
 | "Review this AI vendor's terms" | `skills/ai-governance/ai-vendor-terms-review/SKILL.md` |
 | "Review these terms of service" | `skills/product-legal/terms-of-service-review/SKILL.md` |
@@ -95,6 +96,7 @@ If the task is more than a single, self-contained skill run — it spans several
 | "Assess our enforcement exposure on this" | `skills/regulatory/enforcement-risk-memo/SKILL.md` |
 | "Summarize this new rule / regulation and its impact" | `skills/regulatory/rule-change-summary/SKILL.md` |
 | "Map these requirements against our controls" | `skills/regulatory/compliance-gap-matrix/SKILL.md` |
+| "Track our compliance with this framework over time" / "audit prep" | `skills/regulatory/compliance-program-tracker/SKILL.md` |
 
 ### Intellectual property
 
@@ -107,6 +109,21 @@ If the task is more than a single, self-contained skill run — it spans several
 | "Is this infringing?" / "triage a possible IP infringement" | `skills/ip/infringement-triage/SKILL.md` |
 | "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
 | "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
+
+### Financial crime and AML
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Run KYC on this new client" / "review this onboarding packet" | `skills/financial-crime/kyc-onboarding-review/SKILL.md` |
+| "Review these screening hits" / "adjudicate these sanctions or PEP matches" | `skills/financial-crime/sanctions-screening-review/SKILL.md` |
+
+### Legal operations
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Draft a response to this data subject request / litigation hold / vendor question" | `skills/legal-ops/templated-legal-response/SKILL.md` |
+| "Prepare me for this meeting" / "build a meeting briefing" | `skills/legal-ops/legal-meeting-briefing/SKILL.md` |
+| "Is this ready to sign?" / "set up signing for this document" | `skills/legal-ops/signature-routing-checklist/SKILL.md` |
 
 ### Setting up and configuring AgentCounsel
 
@@ -147,6 +164,8 @@ When a skill's output needs to go to a non-lawyer decision-maker — a product o
 - **A new AI use case** -> start with `ai-use-case-intake`, which triages and routes onward.
 - **A received cease-and-desist letter** -> `cease-and-desist-response`; **drafting an outbound cease-and-desist or demand** -> `demand-letter`.
 - **A possible IP infringement** -> `infringement-triage` for a first-pass factor triage; `fto-triage` for patent freedom-to-operate against specific patents; `trademark-clearance-triage` for clearing a proposed new mark.
+- **Compliance work** -> `compliance-gap-matrix` for a one-time, point-in-time requirement-to-control gap analysis; `compliance-program-tracker` for ongoing tracking with an audit calendar and evidence management.
+- **A vendor** -> `vendor-agreement-status` to inventory all agreements in place with the vendor; `contract-risk-review` (or `nda-review` / `sow-review` / `dpa-review`) to review one of those agreements for risk.
 
 ## When nothing matches
 

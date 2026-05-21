@@ -27,6 +27,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Contracts | Contract Risk Review | `skills/contracts/contract-risk-review/SKILL.md` | Risk-reviewing a general commercial contract | Contract text, client role | Risk matrix + review |
 | Contracts | Redline Summary | `skills/contracts/redline-summary/SKILL.md` | Summarizing changes between contract drafts | Two contract versions or tracked changes | Change summary table |
 | Contracts | SOW Review | `skills/contracts/sow-review/SKILL.md` | Reviewing a statement of work against its MSA | SOW text, governing MSA | SOW review + issues table |
+| Contracts | Vendor Agreement Status | `skills/contracts/vendor-agreement-status/SKILL.md` | Consolidating the agreements in place with a vendor into a status report | Vendor identity, agreement records, relationship context | Vendor agreement status report |
 | Corporate | Board Minutes | `skills/corporate/board-minutes/SKILL.md` | Drafting minutes of a board or committee meeting | Meeting details, attendance, materials | Draft minutes |
 | Corporate | Written Consent | `skills/corporate/written-consent/SKILL.md` | Drafting a board action by written consent | The action, signatories, effective date | Draft written consent |
 | Corporate | Closing Checklist | `skills/corporate/closing-checklist/SKILL.md` | Building a transaction closing checklist and blocking analysis | Transaction agreement, deal context, diligence findings | Closing checklist |
@@ -52,6 +53,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Regulatory | Enforcement Risk Memo | `skills/regulatory/enforcement-risk-memo/SKILL.md` | Structuring an enforcement-exposure assessment | Conduct at issue, relevant rules, facts | Risk memo draft |
 | Regulatory | Rule Change Summary | `skills/regulatory/rule-change-summary/SKILL.md` | Summarizing a rule change and its impact | Rule text or official document | Summary + impact table |
 | Regulatory | Compliance Gap Matrix | `skills/regulatory/compliance-gap-matrix/SKILL.md` | Mapping requirements to controls and gaps | Requirement source, current controls | Gap matrix |
+| Regulatory | Compliance Program Tracker | `skills/regulatory/compliance-program-tracker/SKILL.md` | Tracking framework requirements, controls, evidence, and audit dates over time | Framework source, control inventory, audit context | Compliance program tracker |
 | AI Governance | AI Use Case Intake | `skills/ai-governance/ai-use-case-intake/SKILL.md` | Intaking and triaging a proposed AI use case | Use case description, model, data | Intake record + routing |
 | AI Governance | AI Vendor Terms Review | `skills/ai-governance/ai-vendor-terms-review/SKILL.md` | Reviewing AI vendor or AI-service terms | Vendor terms text | Risk table + redline points |
 | AI Governance | Model Risk Triage | `skills/ai-governance/model-risk-triage/SKILL.md` | Triaging the risk of an AI model or system | Model/system description, use, data | Risk register + tier |
@@ -63,6 +65,11 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Intellectual Property | Patent Freedom-to-Operate Triage | `skills/ip/fto-triage/SKILL.md` | First-pass triage of patent blocking risk for a product or feature | Product/feature description, jurisdictions, known patents | FTO triage memo |
 | Intellectual Property | Invention Disclosure Intake | `skills/ip/invention-intake/SKILL.md` | Screening a proposed invention and flagging filing-deadline urgency | Invention disclosure, disclosure history | Invention screen + verdict |
 | Intellectual Property | Infringement Triage | `skills/ip/infringement-triage/SKILL.md` | First-pass triage of a potential IP-infringement issue | IP right(s), party posture, evidence | Infringement triage memo |
+| Financial Crime / AML | KYC Onboarding Review | `skills/financial-crime/kyc-onboarding-review/SKILL.md` | Reviewing a client or investor onboarding packet against the firm's KYC/AML rules | Onboarding packet, KYC/AML rules grid, screening results | KYC onboarding review |
+| Financial Crime / AML | Sanctions Screening Review | `skills/financial-crime/sanctions-screening-review/SKILL.md` | Adjudicating sanctions, PEP, and adverse-media screening hits by confidence | Screening results, party identifiers, disposition policy | Screening review |
+| Legal Operations | Templated Legal Response | `skills/legal-ops/templated-legal-response/SKILL.md` | Drafting a templated response to a recurring legal inquiry with an escalation gate | The inquiry, response template, customization facts | Draft response + escalation check |
+| Legal Operations | Legal Meeting Briefing | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | Preparing a structured briefing for a meeting with legal relevance | Meeting context, background materials | Meeting briefing + action tracker |
+| Legal Operations | Signature Routing Checklist | `skills/legal-ops/signature-routing-checklist/SKILL.md` | Running a pre-signature readiness check and routing plan for a final document | The document, intended signers, approvals | Signature readiness review |
 | Setup | Contracts Cold-Start Interview | `skills/setup/contracts-cold-start-interview/SKILL.md` | Interviewing a contracts practice group to fill its practice profile | Access to a contracts attorney or designee | Filled practice profile draft |
 | Setup | Litigation Cold-Start Interview | `skills/setup/litigation-cold-start-interview/SKILL.md` | Interviewing a litigation practice group to fill its practice profile | Access to a litigation attorney or designee | Filled practice profile draft |
 | Setup | Privacy Cold-Start Interview | `skills/setup/privacy-cold-start-interview/SKILL.md` | Interviewing a privacy practice group to fill its practice profile | Access to a privacy attorney or designee | Filled practice profile draft |
@@ -91,7 +98,9 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - **Regulatory** — enforcement risk, rule changes, and compliance gaps.
 - **AI Governance** — AI use-case intake, vendor terms, model risk, and AI policies.
 - **Intellectual Property** — trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, and open-source licensing.
-- **Setup** — cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile, plus a matter-workspace builder that sets up a single matter file.
+- **Financial Crime / AML** — KYC onboarding review and sanctions / PEP / adverse-media screening review.
+- **Legal Operations** — templated legal responses, meeting briefings, and signature routing.
+- **Setup** — cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile.
 - **Legal Methodology** — cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.
 
 ## Related references

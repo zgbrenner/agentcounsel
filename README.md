@@ -81,6 +81,8 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
 | AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, open-source licensing. |
+| Financial Crime / AML | KYC onboarding review and sanctions / PEP / adverse-media screening review. |
+| Legal Operations | Templated legal responses, meeting briefings, and signature routing checks. |
 | Setup | Cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile. |
 | Legal Methodology | Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, source validation. |
 
