@@ -1,4 +1,4 @@
-# AgentCounsel Skills
+# AgentCounsel *Legal Skills*
 
 **An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
 
