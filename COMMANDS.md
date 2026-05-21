@@ -204,3 +204,19 @@ Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. 
 | `/securities:closing-checklist` | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` | "capital markets closing checklist" | Transaction docs and responsibilities | Closing deliverables tracker | `/securities:comfort-backup` |
 | `/securities:comfort-backup` | `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md` | "comfort backup tracker" | Disclosure statements and source docs | Numbered backup requests tracker | `/securities:closing-checklist` |
 | `/securities:reporting-intake` | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` | "reporting calendar intake" | Filer profile and reporting workflow facts | Intake checklist + matrix | `/securities:filing-consistency` |
+
+
+## Tax
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/tax:intake` | `skills/tax/tax-issue-intake/SKILL.md` | "tax issue intake", "organize tax facts" | Jurisdictions, taxpayer/entity type, tax period, source docs | Intake summary + issue map | `/tax:docs`, `/tax:provision-review` |
+| `/tax:entity-classification` | `skills/tax/entity-tax-classification-checklist/SKILL.md` | "entity tax classification" | Entity docs, ownership changes, filings | Classification facts table | `/tax:intake` |
+| `/tax:diligence` | `skills/tax/transaction-tax-diligence-request-list/SKILL.md` | "transaction tax diligence" | Deal context, source docs | Request list by workstream | `/tax:provision-review`, `/tax:covenants` |
+| `/tax:nexus-triage` | `skills/tax/sales-use-tax-nexus-triage/SKILL.md` | "sales tax nexus", "use tax nexus" | Jurisdictions, product/service facts, filings | Nexus fact map + missing facts | `/tax:intake` |
+| `/tax:worker-intake` | `skills/tax/employment-tax-worker-classification-intake/SKILL.md` | "employment tax classification" | Worker facts, contracts, payroll records | Facts-to-verify table | `/tax:intake` |
+| `/tax:provision-review` | `skills/tax/tax-provision-review-checklist/SKILL.md` | "tax provision review" | Contract text and tax sections | Risk matrix + negotiation points | `/tax:covenants` |
+| `/tax:docs` | `skills/tax/tax-document-organizer/SKILL.md` | "organize tax documents" | Tax document set | Inventory + missing document list | `/tax:intake` |
+| `/tax:covenants` | `skills/tax/tax-covenants-indemnities-review/SKILL.md` | "tax indemnity review" | Agreement provisions | Covenant/indemnity architecture | `/tax:provision-review` |
+| `/tax:international` | `skills/tax/international-tax-issue-spotter/SKILL.md` | "cross-border tax issue" | Cross-border facts and source docs | Issue map + follow-ups | `/tax:intake` |
+| `/tax:crypto-intake` | `skills/tax/crypto-digital-asset-tax-intake/SKILL.md` | "crypto tax intake" | Wallet/exchange records, activity data | Transaction category map | `/tax:docs`, `/tax:intake` |

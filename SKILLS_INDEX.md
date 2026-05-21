@@ -112,6 +112,18 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Legal Methodology | Risk Assessment | `skills/legal-methodology/risk-assessment/SKILL.md` | Identifying, rating, and prioritizing legal risk | The situation, known facts, client posture | Prioritized risk register |
 | Legal Methodology | Source Validation | `skills/legal-methodology/source-validation/SKILL.md` | Checking that cited sources and claims exist and are accurate | A draft and the sources it cites | Source validation table |
 
+
+| Tax | Tax Issue Intake | `skills/tax/tax-issue-intake/SKILL.md` | Intake facts for tax-sensitive matters and issue spotting for professional review | Jurisdictions, entity/taxpayer type, tax period, transaction facts, source docs | Intake summary + issue map |
+| Tax | Entity Tax Classification Checklist | `skills/tax/entity-tax-classification-checklist/SKILL.md` | Organizing entity facts and records for classification review | Entity formation facts, ownership, filings, elections provided | Classification facts table + open questions |
+| Tax | Transaction Tax Diligence Request List | `skills/tax/transaction-tax-diligence-request-list/SKILL.md` | Building transaction tax diligence request lists by workstream | Deal type, tax workstreams, available documents | Request list + follow-up tracker |
+| Tax | Sales Use Tax Nexus Triage | `skills/tax/sales-use-tax-nexus-triage/SKILL.md` | Issue-spotting sales/use tax nexus facts and document gaps | Jurisdictions, product/service facts, workforce and footprint, filings | Nexus fact map + jurisdiction tracker |
+| Tax | Employment Tax Worker Classification Intake | `skills/tax/employment-tax-worker-classification-intake/SKILL.md` | Intaking worker facts for employment-tax and classification review | Worker roles, controls, contracts, payroll records | Facts-to-verify table + risk themes |
+| Tax | Tax Provision Review Checklist | `skills/tax/tax-provision-review-checklist/SKILL.md` | Reviewing tax provisions in agreements and flagging negotiation points | Agreement text, role perspective, tax section references | Key terms table + risk matrix |
+| Tax | Tax Document Organizer | `skills/tax/tax-document-organizer/SKILL.md` | Organizing tax-related records into a source-cited inventory | Tax returns/notices and supporting records | Document inventory + missing docs list |
+| Tax | Tax Covenants Indemnities Review | `skills/tax/tax-covenants-indemnities-review/SKILL.md` | Reviewing tax covenants and indemnity architecture for counsel | Agreement provisions, deal context, party role | Covenant/indemnity issue list |
+| Tax | International Tax Issue Spotter | `skills/tax/international-tax-issue-spotter/SKILL.md` | Spotting cross-border tax questions and missing facts | Cross-border entities/transactions and source docs | Jurisdiction issue map + follow-up requests |
+| Tax | Crypto Digital Asset Tax Intake | `skills/tax/crypto-digital-asset-tax-intake/SKILL.md` | Intaking digital-asset activity records for tax professional review | Wallet/exchange records, transaction types, tax period | Transaction-category map + missing records |
+
 > **Before relying on any high-stakes legal output**, run `red-team-verifier` (`skills/legal-methodology/red-team-verifier/SKILL.md`) as a final quality-control pass. It adversarially stress-tests any memo, review, letter, filing, risk matrix, or analysis — the output of any skill in this index, or of another tool — for invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues. A PASS verdict does not replace attorney review.
 
 ## Business-stakeholder summary mode
