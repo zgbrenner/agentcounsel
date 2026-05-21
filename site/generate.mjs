@@ -36,14 +36,17 @@ const AREA_META = {
   'regulatory': { name: 'Regulatory', blurb: 'Enforcement risk, rule-change summaries, and compliance gaps.' },
   'ai-governance': { name: 'AI Governance', blurb: 'AI use-case intake, vendor terms, model risk, and AI policies.' },
   'ip': { name: 'Intellectual Property', blurb: 'Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, and open-source licensing.' },
+  'financial-crime': { name: 'Financial Crime / AML', blurb: 'KYC onboarding review and sanctions / PEP / adverse-media screening review.' },
+  'real-estate': { name: 'Real Estate', blurb: 'Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objections, diligence and closing checklists, estoppel and SNDA review, and zoning issue-spotting.' },
   'legal-methodology': { name: 'Legal Methodology', blurb: 'Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.' },
+  'legal-ops': { name: 'Legal Operations', blurb: 'Templated legal responses, meeting briefings, and signature-routing checks.' },
   'setup': { name: 'Setup', blurb: 'Cold-start interviews that configure AgentCounsel for a practice group.' },
 };
 
 const AREA_ORDER = [
   'legal-research', 'litigation', 'contracts', 'corporate', 'employment',
   'privacy', 'product-legal', 'regulatory', 'ai-governance', 'ip',
-  'legal-methodology', 'setup',
+  'financial-crime', 'real-estate', 'legal-methodology', 'legal-ops', 'setup',
 ];
 
 // --- small helpers ---------------------------------------------------------

@@ -3,7 +3,7 @@
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
 Total skills: 75
-Practice areas: 12
+Practice areas: 15
 
 ## Legal Research (1 skill)
 
@@ -603,6 +603,121 @@ Use when:
   - A user needs a triage summary to brief trademark counsel efficiently.
   - A user asks what a formal trademark clearance process involves and what inputs counsel will need.
 
+## Financial Crime / AML (2 skills)
+
+### KYC Onboarding Review
+Path: skills/financial-crime/kyc-onboarding-review/SKILL.md
+Catalog page: skills/financial-crime/kyc-onboarding-review.html
+Trigger: "Use when reviewing a client or investor onboarding packet to inventory documents, extract KYC fields, apply the firm's KYC/AML rules grid, propose a customer risk rating, and assemble an escalation packet for compliance and attorney review."
+Use when:
+  - A user says "run KYC on this new client," "review this onboarding packet," or "screen this investor for onboarding."
+  - A new client or investor is being onboarded, or a periodic KYC refresh is due.
+  - A firm needs a structured first-pass file before a compliance officer makes a customer-acceptance or risk-rating decision.
+  - An onboarding analyst needs to organize identity, ownership, control, and source-of-funds information against the firm's rules grid.
+
+### Sanctions Screening Review
+Path: skills/financial-crime/sanctions-screening-review/SKILL.md
+Catalog page: skills/financial-crime/sanctions-screening-review.html
+Trigger: "Use when reviewing sanctions, PEP, or adverse-media screening results for named parties to compare identifiers, classify each potential match by confidence, separate likely false positives from genuine hits, and recommend a disposition for compliance and attorney review."
+Use when:
+  - A user says "review these screening hits," "adjudicate these PEP matches," or "help me work through these sanctions alerts."
+  - A screening run — at onboarding or as part of ongoing monitoring — has generated potential matches that need first-pass review.
+  - A firm needs a structured comparison and confidence classification before a compliance officer dispositions alerts.
+
+## Real Estate (9 skills)
+
+### Closing Deliverables Tracker
+Path: skills/real-estate/closing-deliverables-tracker/SKILL.md
+Catalog page: skills/real-estate/closing-deliverables-tracker.html
+Trigger: "Use when building a closing checklist of deliverables for a real estate transaction, tracking responsible party, status, and dependencies."
+Use when:
+  - A user asks to "build a closing checklist," "track closing deliverables," or
+  - A transaction team needs a structured reference for managing the documents
+  - A closing is approaching and the parties need to see who owes what, in what
+  - A deliverables tracker is needed as an input to closing coordination after a
+
+### Commercial Lease Review
+Path: skills/real-estate/commercial-lease-review/SKILL.md
+Catalog page: skills/real-estate/commercial-lease-review.html
+Trigger: "Use when reviewing a commercial lease from a specified party's perspective to spot business and legal issues and produce a risk matrix for attorney review."
+Use when:
+  - A user asks to "review this lease," "flag the issues in this lease," "what
+  - A landlord, tenant, guarantor, lender, buyer, seller, or asset manager needs
+  - A lease is being negotiated and the user wants a structured starting point
+  - A lease must be assessed as part of acquisition, financing, or
+  - An in-house team or business owner needs a risk summary before escalating to
+
+### Estoppel and SNDA Review
+Path: skills/real-estate/estoppel-snda-review/SKILL.md
+Catalog page: skills/real-estate/estoppel-snda-review.html
+Trigger: "Use when reviewing tenant or landlord estoppel certificates, SNDAs, and recognition agreements, and comparing them against the lease where provided."
+Use when:
+  - A user asks to "review this estoppel," "check this tenant estoppel against
+  - A lender or its counsel needs an estoppel and SNDA reviewed as part of
+  - A tenant has received an estoppel certificate or an SNDA to sign and needs a
+  - A landlord needs to confirm that an estoppel a tenant has returned, or one
+  - An estoppel or SNDA must be reconciled against the lease before it is
+
+### Lease Abstract
+Path: skills/real-estate/lease-abstract/SKILL.md
+Catalog page: skills/real-estate/lease-abstract.html
+Trigger: "Use when extracting the key business and legal terms of a commercial lease into a structured, source-cited abstract for attorney review."
+Use when:
+  - A user asks to "abstract this lease," "pull the key terms out of this lease,"
+  - A transaction or asset-management team needs a structured reference for a
+  - A lease must be summarized as part of acquisition or financing diligence.
+  - A lease abstract is needed as an input to a lease review, an estoppel, or an
+
+### Lease Amendment Reconciliation
+Path: skills/real-estate/lease-amendment-reconciliation/SKILL.md
+Catalog page: skills/real-estate/lease-amendment-reconciliation.html
+Trigger: "Use when reconciling a base lease against its amendments, side letters, assignments, and related documents to determine the current controlling terms."
+Use when:
+  - A user asks to "reconcile this lease and its amendments," "figure out the
+  - A lease has one or more amendments, side letters, or assignments and a team
+  - A reconciliation is needed before drafting or reviewing an estoppel, an
+  - An asset-management or transaction team needs a current-terms reference for a
+
+### Purchase and Sale Agreement Review
+Path: skills/real-estate/psa-review/SKILL.md
+Catalog page: skills/real-estate/psa-review.html
+Trigger: "Use when reviewing a real estate purchase and sale agreement from a specified party's perspective to spot issues and produce a risk matrix for attorney review."
+Use when:
+  - A user asks to "review this PSA," "review this purchase agreement," "flag the
+  - A buyer, seller, or lender needs a first-pass issue-spotting review of a PSA
+  - The user is preparing to redline a PSA and needs a structured, prioritized
+  - A PSA is being amended or assigned and the user wants to understand baseline
+
+### Real Estate Diligence Checklist
+Path: skills/real-estate/real-estate-diligence-checklist/SKILL.md
+Catalog page: skills/real-estate/real-estate-diligence-checklist.html
+Trigger: "Use when generating a tailored real estate due-diligence checklist based on the transaction type, property type, jurisdiction, party role, and document set."
+Use when:
+  - A user asks to "build a diligence checklist," "put together a due-diligence
+  - A transaction team is opening the diligence period on an acquisition,
+  - A checklist is needed to track what has been received and what is still
+  - A diligence scope must be tailored to a specific property type and party
+
+### Title and Survey Objection Tracker
+Path: skills/real-estate/title-survey-objection-tracker/SKILL.md
+Catalog page: skills/real-estate/title-survey-objection-tracker.html
+Trigger: "Use when organizing title commitment exceptions and survey matters into a tracked, source-cited objection list for attorney review."
+Use when:
+  - A user asks to "track the title objections," "organize the Schedule B
+  - A transaction team needs a structured reference for the exceptions and survey
+  - Title and survey items must be organized as part of acquisition, financing,
+  - An objection tracker is needed as an input to a purchase and sale agreement
+
+### Zoning and Use Restriction Issue Spotter
+Path: skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md
+Catalog page: skills/real-estate/zoning-use-restriction-issue-spotter.html
+Trigger: "Use when issue-spotting zoning, permitted-use, recorded-restriction, and use-clause concerns from provided materials and producing questions for local counsel."
+Use when:
+  - A user asks to "spot the zoning issues," "flag use-restriction concerns," or
+  - A transaction or leasing team needs an early read on whether an intended use
+  - Provided diligence materials — zoning reports, CC&Rs, recorded restrictions,
+  - An issue-spotting list is needed as an input to a broader diligence review.
+
 ## Legal Methodology (4 skills)
 
 ### Red-Team Verifier
@@ -654,6 +769,35 @@ Use when:
   - Competing readings of the same text need to be identified, compared, and evaluated for purposes of drafting a memo, brief section, or negotiation position.
   - A provision contains ambiguity, a defined term with contested scope, or a structure question (such as whether a modifier applies to one element or all of them) that requires systematic analysis before attorney resolution.
   - A gap or conflict between two provisions needs to be framed before attorney analysis.
+
+## Legal Operations (3 skills)
+
+### Legal Meeting Briefing
+Path: skills/legal-ops/legal-meeting-briefing/SKILL.md
+Catalog page: skills/legal-ops/legal-meeting-briefing.html
+Trigger: "Use when preparing a structured briefing for a meeting with legal relevance — assembling background, participants, agenda, key documents, open issues, legal considerations, talking points, and a follow-up action-item tracker from the materials provided."
+Use when:
+  - A user says "prepare me for this meeting," "build a briefing for this board meeting," or "get me ready for this negotiation."
+  - A legal team member needs a structured briefing pack before a meeting with legal relevance.
+  - The user needs a way to capture and track the action items that come out of a meeting.
+
+### Signature Routing Checklist
+Path: skills/legal-ops/signature-routing-checklist/SKILL.md
+Catalog page: skills/legal-ops/signature-routing-checklist.html
+Trigger: "Use when a document is believed final and ready to sign — to run a pre-signature completeness checklist, identify signers and signing order, flag blockers, and produce a routing plan for attorney review before the document is sent for execution."
+Use when:
+  - A user says "is this ready to sign?", "set up signing for this contract," or "prepare this for signature."
+  - A document is believed final and needs a pre-execution completeness check and a routing plan.
+  - The user is verifying entity names, exhibits, and signature blocks before a document goes out for signature.
+
+### Templated Legal Response
+Path: skills/legal-ops/templated-legal-response/SKILL.md
+Catalog page: skills/legal-ops/templated-legal-response.html
+Trigger: "Use when drafting a response to a routine, recurring legal inquiry from a configured template, with a built-in escalation gate that stops the templated path when the matter shows characteristics that require individualized counsel review."
+Use when:
+  - A user says "draft a response to this data subject request," "respond to this vendor legal question," "send a litigation hold notice," or names another recurring inquiry type.
+  - A recurring inquiry arrives that the legal team normally handles with a standard template.
+  - The team needs a consistent first draft together with a check on whether the matter is routine enough to be templated at all.
 
 ## Setup (5 skills)
 
