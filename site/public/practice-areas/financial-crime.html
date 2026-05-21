@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Crime / AML — AgentCounsel</title>
+<meta name="description" content="KYC onboarding review and sanctions / PEP / adverse-media screening review.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">AgentCounsel</a>
+  <nav class="site-nav">
+    <a href="../skill-index.html">Skill index</a>
+    <a href="../index.html#practice-areas">Practice areas</a>
+    <a href="../platforms/index.html">Platform setup</a>
+    <a href="../llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main>
+<nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="../skill-index.html">Skill index</a> / <span>Financial Crime / AML</span></nav>
+<h1>Financial Crime / AML</h1>
+<p class="lead">KYC onboarding review and sanctions / PEP / adverse-media screening review.</p>
+<p class="muted">2 skills in this practice area. Every skill produces draft legal work product for review by a licensed attorney.</p>
+<article class="skill-card">
+<h2><a href="../skills/financial-crime/kyc-onboarding-review.html">KYC Onboarding Review</a></h2>
+<p class="desc">"Use when reviewing a client or investor onboarding packet to inventory documents, extract KYC fields, apply the firm's KYC/AML rules grid, propose a customer risk rating, and assemble an escalation packet for compliance and attorney review."</p>
+<details><summary>When to use</summary><ul><li>A user says "run KYC on this new client," "review this onboarding packet," or "screen this investor for onboarding."</li><li>A new client or investor is being onboarded, or a periodic KYC refresh is due.</li><li>A firm needs a structured first-pass file before a compliance officer makes a customer-acceptance or risk-rating decision.</li><li>An onboarding analyst needs to organize identity, ownership, control, and source-of-funds information against the firm's rules grid.</li></ul></details>
+<details><summary>Required inputs</summary><ul><li><strong>Onboarding document packet</strong>: the actual documents — uploaded or pasted. This typically includes identity documents, entity formation documents, ownership and control documents (UBO declarations, org charts, registers, resolutions), address proof, source-of-funds or source-of-wealth evidence, and tax forms. If no packet is provided, stop and request it.</li><li><strong>The firm's KYC/AML rules grid or CDD policy</strong>: the actual firm document setting out the due diligence rules, required documents by customer type and risk level, and the risk-rating methodology. If not provided, stop and request it. Do not construct rules or document requirements from model background knowledge.</li><li><strong>High-risk jurisdiction list and risk-rating methodology</strong> (if maintained separately from the rules grid).</li><li><strong>Screening results</strong> (optional): sanctions, PEP, and adverse-media results for each named party, if a screening run has been completed. The skill does not perform live screening; it organizes and reviews results that are provided. If no screening has been run, note that screening is pending.</li><li><strong>Customer context</strong>: applicant type (individual, entity, trust) and the nature of the intended business relationship.</li></ul>
+<p>If the packet or the rules grid is missing, stop and request it. If documents are too incomplete to enable meaningful extraction, ask targeted follow-up questions.</p></details>
+<p class="more"><a href="../skills/financial-crime/kyc-onboarding-review.html">Open full skill &rarr;</a></p>
+</article>
+<article class="skill-card">
+<h2><a href="../skills/financial-crime/sanctions-screening-review.html">Sanctions Screening Review</a></h2>
+<p class="desc">"Use when reviewing sanctions, PEP, or adverse-media screening results for named parties to compare identifiers, classify each potential match by confidence, separate likely false positives from genuine hits, and recommend a disposition for compliance and attorney review."</p>
+<details><summary>When to use</summary><ul><li>A user says "review these screening hits," "adjudicate these PEP matches," or "help me work through these sanctions alerts."</li><li>A screening run — at onboarding or as part of ongoing monitoring — has generated potential matches that need first-pass review.</li><li>A firm needs a structured comparison and confidence classification before a compliance officer dispositions alerts.</li></ul></details>
+<details><summary>Required inputs</summary><ul><li><strong>The screening results</strong>: the actual alert list or hit report — the screened name, the list source for each hit, the matched list entry, and the match score where one is given. If no screening results are provided, stop and request them.</li><li><strong>Identifying data for the screened party</strong>: date of birth or formation date, nationality or jurisdiction, addresses, and any identifiers — so the screened party can be compared against the matched entry.</li><li><strong>The firm's screening or alert-disposition policy</strong>: the firm document setting out match thresholds, false-positive criteria, and escalation rules. If not provided, stop and request it. Do not apply thresholds from model background knowledge.</li><li><strong>Screening context</strong>: the lists screened against, the as-of date of the screening run, and whether this is onboarding or ongoing monitoring.</li></ul>
+<p>If the screening results or the disposition policy is missing, stop and request it.</p></details>
+<p class="more"><a href="../skills/financial-crime/sanctions-screening-review.html">Open full skill &rarr;</a></p>
+</article>
+
+</main>
+<footer class="site-footer">
+<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
+repository's <code>skills/</code> directory.</p>
+</footer>
+<script src="../app.js"></script>
+</body>
+</html>

@@ -15,6 +15,8 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 
 If the task is more than a single, self-contained skill run — it spans several skills, multiple documents, more than one deadline, or more than one team member — create a **matter workspace** first. Run `skills/setup/create-matter-workspace/SKILL.md`: it recommends the right template from `matter-workspaces/` and produces a populated workspace draft. The workspace is the single file that carries the matter's parties, facts, jurisdiction, deadlines, and the draft work product produced by every skill you run, so context is not lost between steps. For a one-off task, skip this and go straight to the skill.
 
+For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended sequence of skills to run end to end — see `matter-packs/real-estate.md` for the Real Estate workflow bundles.
+
 ## Task -> Skill
 
 ### Contracts and agreements

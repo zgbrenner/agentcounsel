@@ -24,6 +24,16 @@ Notice the visible placeholders — `[CONFIRM: ...]`, `[verify jurisdiction]`, `
 | [`product-launch-review-example.md`](product-launch-review-example.md) | [Launch Review](../skills/product-legal/launch-review/SKILL.md) — pre-launch legal issue-spotting for a product feature. |
 | [`red-team-verifier-example.md`](red-team-verifier-example.md) | [Red-Team Verifier](../skills/legal-methodology/red-team-verifier/SKILL.md) — a final quality-control pass on a draft. |
 
+## Real Estate worked examples
+
+The [`real-estate/`](real-estate/) subdirectory holds fuller worked examples, each as a **request-and-output pair** — a `sample-request.md` (the fictional request and the materials provided with it) and a `sample-output.md` (the deliverable the skill produces from that request). The disclaimer is carried at the top of each `sample-output.md`.
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`real-estate/commercial-lease-review/`](real-estate/commercial-lease-review/) | [Commercial Lease Review](../skills/real-estate/commercial-lease-review/SKILL.md) — a perspective-based risk matrix and issue list for a commercial lease. |
+| [`real-estate/acquisition-diligence/`](real-estate/acquisition-diligence/) | [Real Estate Diligence Checklist](../skills/real-estate/real-estate-diligence-checklist/SKILL.md) — a tailored diligence checklist for a property acquisition. |
+| [`real-estate/title-survey-objections/`](real-estate/title-survey-objections/) | [Title and Survey Objection Tracker](../skills/real-estate/title-survey-objection-tracker/SKILL.md) — a source-cited title and survey objection tracker. |
+
 ## Using examples safely
 
 - Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.

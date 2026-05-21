@@ -114,6 +114,10 @@ description alone, and do not proceed without knowing the jurisdiction.
   lists, parking or signage requirements, certificate-of-occupancy
   requirements, deadlines, or local forms. If the materials do not state it,
   treat it as unknown.
+- Do not compute, confirm, or assume any date or deadline, including permit,
+  certificate, variance, application, appeal, or hearing dates. Record dates
+  only as the materials state them and flag every date `[deadline verification
+  required]`. Deadline calculation is always an attorney task.
 - Issue-spot only from the materials the user provided, and cite the specific
   source for each concern. A concern with no source is not complete.
 - If the user provides controlling authority and explicitly asks for a draft
@@ -164,6 +168,8 @@ description alone, and do not proceed without knowing the jurisdiction.
      the materials.
    - **Licenses and permits** — permits, approvals, conditions, or expirations
      referenced in the materials, and approvals the intended use may implicate.
+     Record any expiration or other date only as the materials state it and
+     flag it `[deadline verification required]`; do not compute any date.
    - **Certificate of occupancy** — any certificate of occupancy provided, the
      use it reflects, and whether the intended use appears to differ from it.
 

@@ -87,6 +87,7 @@ skills/             The canonical skill library, grouped by practice area.
 examples/           Illustrative sample outputs, with fictional facts.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
 matter-workspaces/  Single-file scaffolds for organizing one specific matter.
+matter-packs/       Workflow bundles — recommended skill sequences per matter type.
 overlays/           Industry and sector overlays that tune skills for a context.
 adapters/           Thin integration files for specific environments.
 metadata/           Generated machine-readable skill index (index.json).
