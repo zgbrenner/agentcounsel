@@ -33,6 +33,7 @@ For a single task you typically need:
 - `core/jurisdiction-and-deadline-gates.md`
 - `core/output-format-rules.md`
 - `core/attorney-review-checklist.md`
+- `core/business-stakeholder-communication.md` (when briefing a non-lawyer stakeholder)
 - the chosen `skills/.../SKILL.md`
 - any template in that skill's `templates/` folder
 

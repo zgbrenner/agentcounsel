@@ -18,7 +18,7 @@ operating model in `GEMINI.md` and `using-agentcounsel.md`.
 ## Routing a task
 
 1. `read_file` on `WORKFLOW_ROUTER.md` to map the request to a skill.
-2. `read_file` (or `read_many_files`) on the six `core/` files.
+2. `read_file` (or `read_many_files`) on the seven `core/` files.
 3. `read_file` on the chosen `skills/.../SKILL.md` and any file in its
    `templates/` folder.
 
