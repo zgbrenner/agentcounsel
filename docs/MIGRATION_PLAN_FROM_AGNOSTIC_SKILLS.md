@@ -17,7 +17,7 @@ _Last updated 2026-05-20._
 | C | Corporate / M&A practice area | **Done** — six skills added as a new `corporate/` practice area (PR #9), quality-checked (PR #10). |
 | D | Newly identified gaps | **Done** — D1 added three new skills; D2 ran the nine Phase A improvement passes. |
 
-AgentCounsel now has 59 canonical skills across 12 practice areas, and a `NOTICE` file records the Apache-2.0 attribution chain.
+AgentCounsel now has 66 canonical skills across 12 practice areas plus two cross-cutting skill groups, and a `NOTICE` file records the Apache-2.0 attribution chain.
 
 A completeness re-check on 2026-05-20 found that `agnostic-skills-for-legal` has **grown** since this plan was first written — it added five `prompts/` files not covered in the analysis below. Those, together with the unrun Phase A passes, are collected in Phase D.
 

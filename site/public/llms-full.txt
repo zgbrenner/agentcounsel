@@ -2,7 +2,7 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 59
+Total skills: 66
 Practice areas: 12
 
 ## Legal Research (1 skill)
@@ -118,7 +118,7 @@ Use when:
   - An organization needs a structured process for handling subpoenas received in connection with third-party litigation.
   - A non-party has been served and needs to evaluate its obligations before a compliance deadline runs.
 
-## Contracts (4 skills)
+## Contracts (5 skills)
 
 ### Contract Risk Review
 Path: skills/contracts/contract-risk-review/SKILL.md
@@ -168,6 +168,15 @@ Use when:
   - An in-house team or project owner needs to confirm that a SOW is consistent with the governing MSA before execution.
   - A SOW has been executed and a dispute has arisen about scope, deliverables, or payment — the user needs a structured analysis of what the SOW says.
   - The user is reviewing a form SOW template for future use and needs a gap analysis.
+
+### Vendor Agreement Status
+Path: skills/contracts/vendor-agreement-status/SKILL.md
+Catalog page: skills/contracts/vendor-agreement-status.html
+Trigger: "Use when assembling a consolidated status report of the agreements in place with a given vendor — what is executed, current, expired, or missing — with a gap analysis, upcoming dates, and surviving obligations for attorney review."
+Use when:
+  - A user says "what agreements do we have with this vendor?", "pull the vendor agreement status," or "consolidate everything we have with this supplier."
+  - A renewal, a new engagement, or a vendor risk review is approaching and the team needs a consolidated view.
+  - The user needs a gap analysis showing which expected agreements with a vendor are missing.
 
 ## Corporate (6 skills)
 
@@ -427,7 +436,7 @@ Use when:
   - Legal counsel needs a structured first-pass triage of a lengthy ToS before conducting a detailed substantive review.
   - A launch review (see launch-review) has flagged the ToS as requiring deeper analysis.
 
-## Regulatory (3 skills)
+## Regulatory (4 skills)
 
 ### Compliance Gap Matrix
 Path: skills/regulatory/compliance-gap-matrix/SKILL.md
@@ -439,6 +448,15 @@ Use when:
   - An organization has received a new regulation or framework (see rule-change-summary) and now needs to assess readiness.
   - Counsel needs to organize factual information about current controls against a requirement set before advising on remediation priorities.
   - A user provides a specific regulation, framework standard, or internal policy and a description of existing controls, and asks for a comparison.
+
+### Compliance Program Tracker
+Path: skills/regulatory/compliance-program-tracker/SKILL.md
+Catalog page: skills/regulatory/compliance-program-tracker.html
+Trigger: "Use when building an ongoing compliance-program tracker for a framework — mapping requirements to controls, owners, and evidence, building an audit calendar, and surfacing evidence gaps and remediation items for attorney review and audit readiness."
+Use when:
+  - A user says "track our compliance with this framework," "help us prepare for our SOC 2 audit," or "build a compliance dashboard and evidence plan."
+  - An organization needs an ongoing tracker — a control inventory, an audit calendar, and evidence management — rather than a one-time gap analysis.
+  - A team is preparing for an audit or examination and needs an evidence-collection plan and a priority view.
 
 ### Enforcement Risk Memo
 Path: skills/regulatory/enforcement-risk-memo/SKILL.md
@@ -590,7 +608,7 @@ Use when:
 ### Red-Team Verifier
 Path: skills/legal-methodology/red-team-verifier/SKILL.md
 Catalog page: skills/legal-methodology/red-team-verifier.html
-Trigger: Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues.
+Trigger: "Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues."
 Use when:
   - The user asks to check, sanity-check, or quality-control a legal memo, a contract or document review, a demand letter, a legal analysis, a risk matrix, a client email, a research summary, or a draft filing.
   - The user asks "is this good enough?", "is this ready to send?", or "can I rely on this?"
@@ -662,7 +680,7 @@ Use when:
 ### Create Matter Workspace
 Path: skills/setup/create-matter-workspace/SKILL.md
 Catalog page: skills/setup/create-matter-workspace.html
-Trigger: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
+Trigger: "Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review."
 Use when:
   - A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.
   - The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."
