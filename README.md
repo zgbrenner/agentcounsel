@@ -3,8 +3,8 @@
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-75-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-13-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-85-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/foolish-bandit/agentcounsel/actions/workflows/validate.yml)
 [![Derived from](https://img.shields.io/badge/derived%20from-agnostic--skills--for--legal-black.svg)](https://github.com/foolish-bandit/agnostic-skills-for-legal)
@@ -52,7 +52,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **75 skills**: 63 across **12 practice areas**, plus 12 cross-cutting skills in three supporting groups.
+AgentCounsel has **85 skills**: 73 across **13 practice areas**, plus 12 cross-cutting skills in three supporting groups.
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -68,6 +68,7 @@ AgentCounsel has **75 skills**: 63 across **12 practice areas**, plus 12 cross-c
 | Intellectual Property | 7 | Trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, open-source licensing. |
 | Financial Crime / AML | 2 | KYC onboarding review, and sanctions / PEP / adverse-media screening review. |
 | Real Estate | 9 | Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objection tracking, diligence and closing checklists, estoppel and SNDA review, zoning issue-spotting. |
+| Mergers & Acquisitions | 10 | LOI and term-sheet review, acquisition diligence and data-room review, purchase-agreement and disclosure-schedule review, indemnity and escrow analysis, third-party consents, and closing, post-closing, and integration tracking. |
 
 Three **cross-cutting skill groups** support work in every practice area:
 

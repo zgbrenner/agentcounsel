@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 75,
+  "skill_count": 85,
   "practice_areas": {
     "ai-governance": 4,
     "contracts": 5,
@@ -13,6 +13,7 @@
     "legal-ops": 3,
     "legal-research": 1,
     "litigation": 9,
+    "m-and-a": 10,
     "privacy": 4,
     "product-legal": 4,
     "real-estate": 9,
@@ -21,19 +22,19 @@
   },
   "task_types": {
     "analysis": 12,
-    "drafting": 12,
-    "extraction": 6,
+    "drafting": 15,
+    "extraction": 7,
     "intake": 4,
     "interview": 4,
     "research": 1,
-    "review": 23,
+    "review": 29,
     "summarization": 3,
     "triage": 7,
     "verification": 3
   },
   "risk_levels": {
     "low": 6,
-    "medium": 49,
+    "medium": 59,
     "high": 18,
     "critical": 2
   },
@@ -1521,6 +1522,318 @@
         "triage",
         "discovery",
         "deadlines"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
+      "name": "Acquisition Diligence Request List",
+      "description": "Use when generating a tailored M&A due-diligence request list, organized by workstream, for a buyer or seller in an acquisition.",
+      "practice_area": "m-and-a",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The deal type, the industry, and the target profile",
+        "The side the list is for (buyer or seller) and the transaction stage",
+        "Known risks or focus areas, and the jurisdiction"
+      ],
+      "outputs": [
+        "A due-diligence request list organized by workstream, with priority and rationale",
+        "Follow-up questions and a responsible-party column"
+      ],
+      "related_skills": [
+        "skills/m-and-a/data-room-index-review/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/loi-term-sheet-review/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "due-diligence",
+        "request-list",
+        "acquisition",
+        "workstreams"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
+      "name": "M&A Closing Deliverables Tracker",
+      "description": "Use when building a closing checklist of deliverables for an M&A transaction, tracking responsible party, status, dependencies, and signature and delivery needs.",
+      "practice_area": "m-and-a",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The deal type and the side the tracker is built for",
+        "The purchase agreement and any ancillary documents, if available",
+        "The parties involved — buyer, seller, escrow agent, and any lender"
+      ],
+      "outputs": [
+        "A closing-deliverables tracker organized by responsible party",
+        "An open-issues and dependencies list"
+      ],
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
+        "skills/m-and-a/post-closing-obligations-tracker/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "closing",
+        "deliverables",
+        "tracker",
+        "transaction"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/data-room-index-review/SKILL.md",
+      "name": "Data Room Index Review",
+      "description": "Use when reviewing an M&A data room index or file list to identify missing diligence categories, coverage gaps, and follow-up requests for attorney review.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The data room index or file list, uploaded or pasted",
+        "The deal type and the side the review is for (buyer or seller)",
+        "The expected diligence scope and any known focus areas"
+      ],
+      "outputs": [
+        "A data-room gap matrix organized by diligence category",
+        "A recommended follow-up request list"
+      ],
+      "related_skills": [
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "data-room",
+        "diligence",
+        "gap-analysis",
+        "review"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
+      "name": "Indemnity and Escrow Risk Review",
+      "description": "Use when analyzing the indemnification and escrow architecture of an M&A purchase agreement — survival, caps, baskets, escrow, and recovery mechanics — for attorney review.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The purchase agreement's indemnification, escrow, and survival provisions, uploaded or pasted",
+        "The side the review is for — buyer or seller",
+        "Whether representation and warranty insurance is in play, and the deal type"
+      ],
+      "outputs": [
+        "An indemnity architecture summary and a recovery waterfall, as the agreement states them",
+        "A buyer/seller risk matrix, an ambiguity list, and a negotiation checklist"
+      ],
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+        "skills/m-and-a/loi-term-sheet-review/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "indemnification",
+        "escrow",
+        "risk-allocation",
+        "review"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/integration-legal-issues-checklist/SKILL.md",
+      "name": "Integration Legal Issues Checklist",
+      "description": "Use when generating a legal integration checklist after signing or closing an M&A transaction, organized by workstream for legal and business owners.",
+      "practice_area": "m-and-a",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The deal type and structure, and whether the matter is pre-close or post-close",
+        "The target profile and the side the checklist is prepared for",
+        "The document set available for the matter, if any"
+      ],
+      "outputs": [
+        "A legal integration checklist organized by workstream, with legal and business owners",
+        "A consolidated list of open questions and escalation items"
+      ],
+      "related_skills": [
+        "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
+        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
+        "skills/m-and-a/closing-deliverables-tracker/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "integration",
+        "post-closing",
+        "checklist",
+        "workstreams"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/loi-term-sheet-review/SKILL.md",
+      "name": "LOI and Term Sheet Review",
+      "description": "Use when reviewing a letter of intent, term sheet, or indication of interest for an M&A transaction to surface the deal terms, the binding-versus-non-binding provisions, and negotiation issues for attorney review.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The letter of intent, term sheet, or indication of interest, uploaded or pasted",
+        "The deal type and the side the review is for (buyer, seller, company, investor, or target)",
+        "The transaction stage and, if relevant, related documents such as a prior draft or an NDA"
+      ],
+      "outputs": [
+        "A binding-versus-non-binding provision table, as the document characterizes each provision",
+        "A deal-terms issue list and a negotiation checklist from the stated side",
+        "A list of missing, not-found, or ambiguous terms"
+      ],
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "letter-of-intent",
+        "term-sheet",
+        "deal-terms",
+        "review"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
+      "name": "Post-Closing Obligations Tracker",
+      "description": "Use when extracting and organizing the post-closing covenants and obligations from an M&A acquisition agreement and its ancillary documents into a tracked, source-cited obligation list.",
+      "practice_area": "m-and-a",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The acquisition agreement and ancillary documents, uploaded or pasted",
+        "The side the tracker is for (buyer or seller)",
+        "The closing date and any other key dates, if known"
+      ],
+      "outputs": [
+        "A post-closing obligation tracker, with a source citation per obligation",
+        "A list of obligations whose owner, trigger, or date is unstated or unclear"
+      ],
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
+        "skills/m-and-a/integration-legal-issues-checklist/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "post-closing",
+        "obligations",
+        "tracker",
+        "source-cited"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+      "name": "Purchase Agreement Issue List",
+      "description": "Use when reviewing an M&A purchase agreement — a merger, stock purchase, asset purchase, or membership-interest purchase agreement — from a buyer or seller perspective to produce an issue list and risk matrix for attorney review.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full purchase agreement, uploaded or pasted",
+        "The side the review is for (buyer or seller) and the deal type",
+        "The transaction stage and the governing agreement and document set"
+      ],
+      "outputs": [
+        "An issue list and a risk matrix from the stated perspective",
+        "A key-terms table, negotiation points, and a missing-provisions list",
+        "An internal-inconsistency check across the agreement"
+      ],
+      "related_skills": [
+        "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
+        "skills/m-and-a/loi-term-sheet-review/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "purchase-agreement",
+        "contract-review",
+        "risk-matrix",
+        "deal-terms"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+      "name": "Reps and Warranties Disclosure Schedule Review",
+      "description": "Use when comparing the representations and warranties in an M&A purchase agreement against the disclosure schedules to surface gaps, mismatches, and unresolved items for attorney review.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The purchase agreement's representations-and-warranties article, uploaded or pasted",
+        "The disclosure schedules, if available",
+        "The side the review is for (buyer or seller) and any known diligence facts"
+      ],
+      "outputs": [
+        "A rep-by-rep table mapping each representation to its disclosure schedule",
+        "A schedule-completeness and unresolved-items list"
+      ],
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
+        "skills/m-and-a/data-room-index-review/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "reps-and-warranties",
+        "disclosure-schedules",
+        "review",
+        "source-cited"
+      ]
+    },
+    {
+      "path": "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
+      "name": "Third-Party Consents and Assignment Review",
+      "description": "Use when identifying contractual consent, notice, change-of-control, and anti-assignment issues from M&A diligence contracts or summaries, organized into a consent tracker for attorney review.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The contracts or diligence summaries to review, uploaded or pasted",
+        "The deal type and structure (stock, asset, or merger) and the side",
+        "The transaction stage"
+      ],
+      "outputs": [
+        "A consent tracker with contract source, trigger, required action, and owner",
+        "A list of contracts referenced but not provided, and follow-up items"
+      ],
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "consents",
+        "change-of-control",
+        "assignment",
+        "review"
       ]
     },
     {

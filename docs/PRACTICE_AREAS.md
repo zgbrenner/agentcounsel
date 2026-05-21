@@ -54,6 +54,7 @@ met.
 | `ai-governance` | 2 — Advanced / specialized | stable | Yes | No | 0 of 4 skills |
 | `financial-crime` | 2 — Advanced / specialized | stable | No | No | 0 of 2 skills |
 | `real-estate` | 2 — Advanced / specialized | experimental | Yes | No | 9 of 9 skills |
+| `m-and-a` | 2 — Advanced / specialized | experimental | Yes | No | 10 of 10 skills |
 
 ## Cross-cutting support groups — Tier 4
 
@@ -82,7 +83,7 @@ The columns above record real gaps, carried forward from v0.1.0:
 - **Practice profiles** are missing for `legal-research` and `financial-crime`.
 - **Cold-start interviews** exist for only four areas (`contracts`,
   `corporate`, `litigation`, `privacy`).
-- **Evals** cover all 9 `real-estate` skills but only 8 of the 66 v0.1.0 baseline skills.
+- **Evals** cover all 9 `real-estate` skills and all 10 `m-and-a` skills, but only 8 of the 66 v0.1.0 baseline skills.
 
 These gaps do not block use of the released areas, but closing them is part of
 bringing each area to the standard the expansion plan sets for new areas.

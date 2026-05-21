@@ -66,6 +66,16 @@ evals/
     closing-deliverables-tracker.eval.yaml
     estoppel-snda-review.eval.yaml
     zoning-use-restriction-issue-spotter.eval.yaml
+    loi-term-sheet-review.eval.yaml
+    acquisition-diligence-request-list.eval.yaml
+    data-room-index-review.eval.yaml
+    purchase-agreement-issue-list.eval.yaml
+    reps-warranties-disclosure-schedule-review.eval.yaml
+    indemnity-escrow-risk-review.eval.yaml
+    m-and-a-closing-deliverables-tracker.eval.yaml
+    third-party-consents-assignment-review.eval.yaml
+    post-closing-obligations-tracker.eval.yaml
+    integration-legal-issues-checklist.eval.yaml
 ```
 
 The schema validator lives at `../scripts/check_evals.py`.

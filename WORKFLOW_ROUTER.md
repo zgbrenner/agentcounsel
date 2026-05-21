@@ -57,6 +57,21 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Review this estoppel certificate or SNDA" | `skills/real-estate/estoppel-snda-review/SKILL.md` |
 | "Spot the zoning and use-restriction issues" | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` |
 
+### Mergers and acquisitions
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Review this LOI" / "review this term sheet" | `skills/m-and-a/loi-term-sheet-review/SKILL.md` |
+| "Build an M&A diligence request list" | `skills/m-and-a/acquisition-diligence-request-list/SKILL.md` |
+| "Review this data room index" / "what is missing from the data room" | `skills/m-and-a/data-room-index-review/SKILL.md` |
+| "Review this purchase agreement" / "issues in this merger, stock, or asset purchase agreement" | `skills/m-and-a/purchase-agreement-issue-list/SKILL.md` |
+| "Compare the reps against the disclosure schedules" | `skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md` |
+| "Review the indemnity and escrow terms" | `skills/m-and-a/indemnity-escrow-risk-review/SKILL.md` |
+| "Build the M&A closing checklist" | `skills/m-and-a/closing-deliverables-tracker/SKILL.md` |
+| "What third-party consents does this deal need?" | `skills/m-and-a/third-party-consents-assignment-review/SKILL.md` |
+| "Track the post-closing obligations" | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` |
+| "Build a legal integration checklist" | `skills/m-and-a/integration-legal-issues-checklist/SKILL.md` |
+
 ### Litigation and disputes
 
 | The task sounds like... | Use this skill |
