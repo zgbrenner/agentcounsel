@@ -41,6 +41,7 @@ If the client's role and a description of the situation are not provided, stop a
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - All risk ratings — likelihood, impact, and severity bands — are preliminary triage signals for attorney judgment. They are not predictions of outcome, not legal conclusions, and not assessments of enforceability. Label every rating explicitly with `[ATTORNEY TO CONFIRM: preliminary triage signal — not a legal conclusion]`.
 - Do not assert the existence or content of any statute, regulation, case, or named legal doctrine. If a legal basis for a risk is relevant, describe the risk in functional terms and mark the legal underpinning as a research and verification item.

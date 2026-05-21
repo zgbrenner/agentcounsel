@@ -354,6 +354,32 @@ def check_plugin_bundle() -> None:
                 f"skills/ [{detail}] — run: python scripts/sync_plugin_skills.py")
 
 
+# --- Check: source and citation discipline --------------------------------
+
+_CITATION_REF = "source-and-citation-discipline"
+_CITATION_LANGUAGE = re.compile(r"\b(do not|never|don't)\s+invent\b", re.I)
+_CITATION_TOPIC = re.compile(
+    r"authorit|citation|statute|case law|\bcases\b|regulation|quotation",
+    re.I)
+
+
+def check_citation_discipline(skill_dirs: list[Path]) -> None:
+    """Every canonical skill must reference the source/citation discipline
+    core rule, or carry equivalent discipline language of its own."""
+    for skill_dir in skill_dirs:
+        md = skill_dir / "SKILL.md"
+        if not md.is_file():
+            continue
+        text = md.read_text(encoding="utf-8")
+        if _CITATION_REF in text:
+            continue
+        if _CITATION_LANGUAGE.search(text) and _CITATION_TOPIC.search(text):
+            continue
+        err(f"{rel(md)}: missing source/citation discipline — reference "
+            f"core/source-and-citation-discipline.md, or include explicit "
+            f"language against inventing legal authority or citations")
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -371,6 +397,7 @@ def main() -> int:
         check_skill(skill_dir, require_sections=False)
 
     check_repo_layout()
+    check_citation_discipline(canonical)
     check_content_scans()
     check_links()
     check_index_paths("SKILLS_INDEX.md")

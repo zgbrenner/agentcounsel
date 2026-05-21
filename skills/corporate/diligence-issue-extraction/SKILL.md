@@ -39,6 +39,7 @@ If the materiality threshold is not stated, request it before extracting issues.
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Work only from documents provided. Do not supplement findings with background knowledge of statutes, regulations, case law, or industry standards. A confident but incorrect legal characterization drawn from memory is worse than flagging the point for attorney confirmation.
 - Do not invent document terms, section numbers, quotations, or Bates references. Quote accurately from the provided materials and cite the source.

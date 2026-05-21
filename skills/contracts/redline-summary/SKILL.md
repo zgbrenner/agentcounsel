@@ -43,6 +43,7 @@ If only one version is provided (and no amendment chain), stop and request the o
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Summarize only edits that are actually present in the provided documents. Do not invent, assume, or interpolate changes.
 - Quote the before and after language accurately. Do not paraphrase beyond what the text supports.

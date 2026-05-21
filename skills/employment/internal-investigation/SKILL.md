@@ -38,6 +38,7 @@ If the allegation summary is not provided, stop and request it before proceeding
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - All output is draft legal work product for attorney review and sign-off. This is not legal advice.
 - Do not assert privilege. Privilege depends on how the investigation is structured, who directed it, for what purpose, and applicable jurisdiction-specific doctrine — not on labeling. The skill surfaces the privilege-formation question and flags it; it does not guarantee or confirm privilege.
 - Do not invent facts, dates, quotations, witness statements, policy language, citations, or legal authority. If something is not in the provided materials, say so and flag it as a gap.
