@@ -39,6 +39,7 @@ The skill can proceed with partial information; anything not provided is recorde
 
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not invent matter facts, party names, jurisdictions, or dates. Record every unknown as a `[CONFIRM: ...]` placeholder.
+- This skill organizes a matter; it does not supply law. Do not invent or assert statutes, regulations, case law, citations, or other legal authority — follow `core/source-and-citation-discipline.md`.
 - Do not compute, calculate, or assert any deadline. Every date entered in the workspace carries a `[deadline verification required]` flag and must be independently verified by the responsible attorney.
 - Do not resolve the conflicts-check gate or the jurisdiction and deadline gates. Carry them into the workspace as gates for the attorney to clear.
 - Separate confirmed facts from client representations and from assumptions, using the workspace's distinct Facts and Assumptions sections. Never blend an assumption into the factual record.
