@@ -4,7 +4,7 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-58-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-59-success.svg)](SKILLS_INDEX.md)
 [![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
 [![Unofficial](https://img.shields.io/badge/unofficial-not%20affiliated%20with%20Anthropic-red.svg)](NOTICE)

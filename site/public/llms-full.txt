@@ -2,7 +2,7 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 58
+Total skills: 59
 Practice areas: 12
 
 ## Legal Research (1 skill)
@@ -590,13 +590,16 @@ Use when:
 ### Red-Team Verifier
 Path: skills/legal-methodology/red-team-verifier/SKILL.md
 Catalog page: skills/legal-methodology/red-team-verifier.html
-Trigger: Use when adversarially stress-testing a draft legal work product before attorney review to surface invented authority, unsupported claims, hidden assumptions, confidence overstatement, and structural defects.
+Trigger: Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues.
 Use when:
-  - Any AgentCounsel draft is complete and is about to be finalized or passed to attorney review.
-  - An AI-generated legal draft of any type has been produced and a defect check is warranted before reliance.
-  - The user wants to confirm that a draft contains no fabricated authority, no silently-resolved gaps, and no confidence overstatement before it is used.
+  - The user asks to check, sanity-check, or quality-control a legal memo, a contract or document review, a demand letter, a legal analysis, a risk matrix, a client email, a research summary, or a draft filing.
+  - The user asks "is this good enough?", "is this ready to send?", or "can I rely on this?"
+  - The user asks for the weaknesses, blind spots, or missing issues in a legal draft.
+  - The user asks for a hallucination check, a citation check, or a check for invented authority.
+  - The user asks whether a draft is ready for — or has been adequately prepared for — attorney review.
+  - Any AgentCounsel skill has produced a draft and a defect check is warranted before it is finalized or relied upon.
+  - A high-stakes legal output is about to be sent, filed, or acted on and a final adversarial pass is wanted.
   - A draft has been revised and a targeted re-check of the changed sections is needed.
-  - Quality-control review is required before a deliverable is circulated within a legal team.
 
 ### Risk Assessment
 Path: skills/legal-methodology/risk-assessment/SKILL.md
@@ -634,7 +637,7 @@ Use when:
   - A provision contains ambiguity, a defined term with contested scope, or a structure question (such as whether a modifier applies to one element or all of them) that requires systematic analysis before attorney resolution.
   - A gap or conflict between two provisions needs to be framed before attorney analysis.
 
-## Setup (4 skills)
+## Setup (5 skills)
 
 ### Contracts Cold-Start Interview
 Path: skills/setup/contracts-cold-start-interview/SKILL.md
@@ -655,6 +658,17 @@ Use when:
   - A corporate practice group is being onboarded to the library and no current profile exists.
   - The library is being stood up for the first time and the corporate area is included in scope.
   - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Create Matter Workspace
+Path: skills/setup/create-matter-workspace/SKILL.md
+Catalog page: skills/setup/create-matter-workspace.html
+Trigger: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
+Use when:
+  - A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.
+  - The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."
+  - Complex or multi-step legal work is about to begin and needs a single organizing file before the first substantive skill is run.
+  - An existing matter has accumulated drafts, dates, and open items across several conversations and now needs a consolidated workspace.
+  - The user is unsure which matter-workspace template fits the matter and wants a recommendation.
 
 ### Litigation Cold-Start Interview
 Path: skills/setup/litigation-cold-start-interview/SKILL.md
