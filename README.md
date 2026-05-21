@@ -3,9 +3,9 @@
 **An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Volumes](https://img.shields.io/badge/volumes-I%20Litigation%20%C2%B7%20II%20Commercial%20%C2%B7%20III%20Privacy%20%C2%B7%20IV%20Employment%20%C2%B7%20V%20IP-purple.svg)](prompts/)
-[![Prompts](https://img.shields.io/badge/prompts-47-success.svg)](prompts/)
-[![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#how-to-use)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-10-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-50-success.svg)](SKILLS_INDEX.md)
+[![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
 [![Unofficial](https://img.shields.io/badge/unofficial-not%20affiliated%20with%20Anthropic-red.svg)](NOTICE)
 
@@ -65,11 +65,11 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Practice area | Covers |
 |---|---|
 | Legal Research | Turning research questions into structured, verifiable memos. |
-| Litigation | Matter intake, chronologies, demand letters, subpoena triage. |
+| Litigation | Matter intake, chronologies, demand letters, subpoena triage, depositions, legal holds, privilege logs, claim charts, brief drafting. |
 | Contracts | NDAs, commercial contracts, redlines, statements of work. |
 | Corporate | Board minutes, written consents, closing checklists, due-diligence review, entity compliance. |
 | Employment | Terminations, worker classification, hiring, internal investigations, protected leave, severance, workplace policies. |
-| Privacy | Data processing agreements, data subject requests, policy gaps. |
+| Privacy | Data processing agreements, impact assessments, data subject requests, policy gaps. |
 | Product Legal | Launch review, marketing claims, terms of service, AI features. |
 | Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
 | AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |

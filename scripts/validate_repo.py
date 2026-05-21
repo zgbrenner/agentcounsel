@@ -68,8 +68,12 @@ def parse_frontmatter(text: str):
     return None, None
 
 
-def strip_code_fences(text: str) -> str:
-    return re.sub(r"```.*?```", "", text, flags=re.S)
+def strip_code(text: str) -> str:
+    """Remove fenced and inline code spans, so example link or badge
+    syntax shown inside code is not mistaken for a real link."""
+    text = re.sub(r"```.*?```", "", text, flags=re.S)
+    text = re.sub(r"`[^`\n]+`", "", text)
+    return text
 
 
 def canonical_skill_dirs() -> list[Path]:
@@ -183,15 +187,19 @@ def check_content_scans() -> None:
 # --- Check: relative links resolve ----------------------------------------
 
 LINK_PAT = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+IMAGE_LINK_PAT = re.compile(r"\[!\[[^\]]*\]\([^)]+\)\]\(([^)]+)\)")
 
 
 def check_links() -> None:
     for path in iter_text_files():
         if path.suffix.lower() != ".md":
             continue
-        text = strip_code_fences(path.read_text(encoding="utf-8"))
-        for match in LINK_PAT.finditer(text):
-            target = match.group(1).strip()
+        text = strip_code(path.read_text(encoding="utf-8"))
+        targets = [m.group(1) for m in LINK_PAT.finditer(text)]
+        # Also the outer target of a linked image/badge: [![alt](img)](target).
+        targets += [m.group(1) for m in IMAGE_LINK_PAT.finditer(text)]
+        for raw in targets:
+            target = raw.strip()
             if target.startswith(("http://", "https://", "mailto:", "#")):
                 continue
             target = target.split("#", 1)[0].strip()
