@@ -3,8 +3,8 @@
 **An open, Markdown-native legal skills library for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-12-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-58-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-14-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-65-success.svg)](SKILLS_INDEX.md)
 [![Surfaces](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![Upstream](https://img.shields.io/badge/derived%20from-claude--for--legal-black.svg)](https://github.com/anthropics/claude-for-legal)
 [![Unofficial](https://img.shields.io/badge/unofficial-not%20affiliated%20with%20Anthropic-red.svg)](NOTICE)
@@ -78,6 +78,8 @@ Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs,
 | Regulatory | Enforcement risk, rule-change summaries, compliance gaps. |
 | AI Governance | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | Trademark triage, infringement triage, cease-and-desist response, patent and invention triage, DMCA, open-source licensing. |
+| Financial Crime / AML | KYC onboarding review and sanctions / PEP / adverse-media screening review. |
+| Legal Operations | Templated legal responses, meeting briefings, and signature routing checks. |
 | Setup | Cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile. |
 | Legal Methodology | Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, source validation. |
 

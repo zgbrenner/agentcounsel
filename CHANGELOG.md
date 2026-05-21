@@ -25,6 +25,9 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `COMMANDS.md`: a command router mapping slash-style command shorthands to every skill, with trigger phrases, required inputs, expected output, and related commands.
 - `skills/contracts/references/`: five shared contract-review reference files — `red-flags.md`, `negotiability-ratings.md`, `market-benchmark-framework.md`, `document-type-checklists.md`, and `redline-output-guidance.md`.
 - `matter-workspaces/`: four single-file matter scaffolds — litigation, contract review, privacy, and regulatory.
+- Two new practice areas adapted from Anthropic open-source agent and knowledge-work plugins. **Financial Crime / AML**: `kyc-onboarding-review` and `sanctions-screening-review`, adapted from the `kyc-screener` agent plugin in `anthropics/financial-services`. **Legal Operations**: `templated-legal-response`, `legal-meeting-briefing`, and `signature-routing-checklist`, adapted from the legal skills in `anthropics/knowledge-work-plugins`.
+- Two skills added to existing practice areas, adapted from the same sources: `vendor-agreement-status` (contracts) and `compliance-program-tracker` (regulatory). The README practice-area and skills badges now read 14 practice areas and 65 skills.
+- `NOTICE`: Apache-2.0 attribution for `anthropics/financial-services` and `anthropics/knowledge-work-plugins`, the source projects for the new Financial Crime / AML and Legal Operations skills.
 
 ### Changed
 
