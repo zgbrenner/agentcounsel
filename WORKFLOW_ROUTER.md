@@ -41,6 +41,20 @@ If the task is more than a single, self-contained skill run — it spans several
 | "Build the material contracts schedule" | `skills/corporate/material-contract-schedule/SKILL.md` |
 | "Review our entities' annual-report / good-standing status" | `skills/corporate/entity-compliance/SKILL.md` |
 
+### Real estate
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Abstract this lease" / "pull the key terms from this commercial lease" | `skills/real-estate/lease-abstract/SKILL.md` |
+| "Reconcile the lease and its amendments" / "what are the current controlling lease terms" | `skills/real-estate/lease-amendment-reconciliation/SKILL.md` |
+| "Review this commercial lease" / "flag the lease issues from our side" | `skills/real-estate/commercial-lease-review/SKILL.md` |
+| "Review this purchase and sale agreement" / "review this real estate PSA" | `skills/real-estate/psa-review/SKILL.md` |
+| "Organize the title and survey objections" / "track the title exceptions" | `skills/real-estate/title-survey-objection-tracker/SKILL.md` |
+| "Build a real estate due-diligence checklist" | `skills/real-estate/real-estate-diligence-checklist/SKILL.md` |
+| "Build a closing checklist for this real estate deal" | `skills/real-estate/closing-deliverables-tracker/SKILL.md` |
+| "Review this estoppel certificate or SNDA" | `skills/real-estate/estoppel-snda-review/SKILL.md` |
+| "Spot the zoning and use-restriction issues" | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` |
+
 ### Litigation and disputes
 
 | The task sounds like... | Use this skill |

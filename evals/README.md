@@ -57,6 +57,15 @@ evals/
     dpa-review.eval.yaml
     launch-review.eval.yaml
     compliance-gap-matrix.eval.yaml
+    lease-abstract.eval.yaml
+    lease-amendment-reconciliation.eval.yaml
+    commercial-lease-review.eval.yaml
+    psa-review.eval.yaml
+    title-survey-objection-tracker.eval.yaml
+    real-estate-diligence-checklist.eval.yaml
+    closing-deliverables-tracker.eval.yaml
+    estoppel-snda-review.eval.yaml
+    zoning-use-restriction-issue-spotter.eval.yaml
 ```
 
 The schema validator lives at `../scripts/check_evals.py`.
