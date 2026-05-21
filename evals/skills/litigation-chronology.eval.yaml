@@ -1,6 +1,6 @@
 # AgentCounsel skill eval — Litigation Chronology
 # Schema: see evals/README.md. Validated by scripts/check_evals.py (no API keys).
-skill: chronology-builder
+skill: litigation-chronology
 skill_path: skills/litigation/litigation-chronology/SKILL.md
 description: Eval cases for the Litigation Chronology skill, checking that every event is tied to a source document, factual disputes are flagged rather than resolved, and the chronology is not built without source documents.
 shared_assertions:

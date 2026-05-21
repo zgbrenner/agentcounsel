@@ -590,7 +590,7 @@ Use when:
 ### Red-Team Verifier
 Path: skills/legal-methodology/red-team-verifier/SKILL.md
 Catalog page: skills/legal-methodology/red-team-verifier.html
-Trigger: "Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues."
+Trigger: Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues.
 Use when:
   - The user asks to check, sanity-check, or quality-control a legal memo, a contract or document review, a demand letter, a legal analysis, a risk matrix, a client email, a research summary, or a draft filing.
   - The user asks "is this good enough?", "is this ready to send?", or "can I rely on this?"
@@ -662,7 +662,7 @@ Use when:
 ### Create Matter Workspace
 Path: skills/setup/create-matter-workspace/SKILL.md
 Catalog page: skills/setup/create-matter-workspace.html
-Trigger: "Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review."
+Trigger: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
 Use when:
   - A new legal matter is being opened that will involve more than one skill, document, deadline, or team member.
   - The user asks to "set up a matter," "create a workspace," "start a new matter file," or "organize this matter."
