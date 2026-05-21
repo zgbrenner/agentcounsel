@@ -56,6 +56,23 @@ REQUIRED_SECTIONS = [
 # Content-scan file types.
 TEXT_SUFFIXES = {".md", ".json", ".py", ".txt"}
 
+# Directory names under skills/<area>/ that hold shared reference material,
+# not a skill. They have no SKILL.md and are not catalogued as skills.
+NON_SKILL_DIRS = {"references"}
+
+# Top-level directories (and the contract references folder) the library
+# expects to exist. Checked by check_repo_layout.
+EXPECTED_DIRS = [
+    "core",
+    "skills",
+    "adapters",
+    "practice-profiles",
+    "matter-workspaces",
+    "skills/setup",
+    "skills/legal-methodology",
+    "skills/contracts/references",
+]
+
 
 def parse_frontmatter(text: str):
     """Return (frontmatter_lines, body) or (None, None) if absent/unterminated."""
@@ -84,6 +101,8 @@ def canonical_skill_dirs() -> list[Path]:
         return dirs
     for area in sorted(p for p in base.iterdir() if p.is_dir()):
         for skill in sorted(p for p in area.iterdir() if p.is_dir()):
+            if skill.name in NON_SKILL_DIRS:
+                continue
             dirs.append(skill)
     return dirs
 
@@ -113,6 +132,18 @@ def excluded_from_content_scan(path: Path) -> bool:
     if path.name == "VALIDATION.md":
         return True
     return False
+
+
+# --- Check: expected repository layout ------------------------------------
+
+def check_repo_layout() -> None:
+    """Confirm the directories the library is organized around exist."""
+    for relpath in EXPECTED_DIRS:
+        path = REPO_ROOT / relpath
+        if not path.is_dir():
+            err(f"expected directory '{relpath}/' is missing")
+        elif not any(p.name != ".gitkeep" for p in path.iterdir()):
+            warn(f"directory '{relpath}/' is empty")
 
 
 # --- Check: skill structure ------------------------------------------------
@@ -337,10 +368,12 @@ def main() -> int:
     for skill_dir in plugin:
         check_skill(skill_dir, require_sections=False)
 
+    check_repo_layout()
     check_content_scans()
     check_links()
     check_index_paths("SKILLS_INDEX.md")
     check_index_paths("WORKFLOW_ROUTER.md")
+    check_index_paths("COMMANDS.md")
     check_adapters()
     check_plugin_manifest()
     check_plugin_bundle()

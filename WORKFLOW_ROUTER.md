@@ -104,6 +104,28 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
 | "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
 
+### Setting up and configuring AgentCounsel
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Configure the contracts practice" / "set up our contracts profile" | `skills/setup/contracts-cold-start-interview/SKILL.md` |
+| "Configure the litigation practice" / "set up our litigation profile" | `skills/setup/litigation-cold-start-interview/SKILL.md` |
+| "Configure the privacy practice" / "set up our privacy profile" | `skills/setup/privacy-cold-start-interview/SKILL.md` |
+| "Configure the corporate practice" / "set up our corporate profile" | `skills/setup/corporate-cold-start-interview/SKILL.md` |
+
+These interviews fill in a profile under `practice-profiles/`. See also `COMMANDS.md` for command shorthands and `matter-workspaces/` for per-matter scaffolds.
+
+### Methodology and verification
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Red-team this draft" / "stress-test this work product before review" | `skills/legal-methodology/red-team-verifier/SKILL.md` |
+| "Interpret this provision" / "work through this statute or clause" | `skills/legal-methodology/statutory-interpretation/SKILL.md` |
+| "Assess the legal risk" / "rate and prioritize these risks" | `skills/legal-methodology/risk-assessment/SKILL.md` |
+| "Validate the sources" / "check these citations and claims" | `skills/legal-methodology/source-validation/SKILL.md` |
+
+These cross-cutting skills support work in any practice area — run them alongside the practice-area skill, not instead of it.
+
 ## When several skills could apply
 
 - **A contract that is an NDA** -> `nda-review` (not `contract-risk-review`).

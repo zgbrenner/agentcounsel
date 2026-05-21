@@ -14,7 +14,8 @@ Run it from anywhere; the script locates the repository root relative to its own
 
 **Structure**
 
-- Every canonical skill folder under `skills/` contains a `SKILL.md`.
+- The directories the library is organized around exist: `core/`, `skills/`, `adapters/`, `practice-profiles/`, `matter-workspaces/`, `skills/setup/`, `skills/legal-methodology/`, and `skills/contracts/references/`.
+- Every canonical skill folder under `skills/` contains a `SKILL.md`. A `references/` folder under a practice area is treated as shared reference material, not a skill.
 - Every plugin skill folder under `adapters/claude-code-plugin/skills/` contains a `SKILL.md`.
 - Every `SKILL.md` has valid YAML frontmatter (an opening and a closing `---`).
 - Every `SKILL.md` frontmatter has a non-empty `name` and `description`.
@@ -30,7 +31,7 @@ Run it from anywhere; the script locates the repository root relative to its own
 **Links and paths**
 
 - Every relative Markdown link resolves to a file that exists.
-- Every skill path referenced in `SKILLS_INDEX.md` and `WORKFLOW_ROUTER.md` points to a real `SKILL.md`.
+- Every skill path referenced in `SKILLS_INDEX.md`, `WORKFLOW_ROUTER.md`, and `COMMANDS.md` points to a real `SKILL.md`.
 - Adapter index files point back to the canonical root files.
 - `adapters/claude-code-plugin/plugin.json` is valid JSON and has `name`, `version`, and `description`.
 
