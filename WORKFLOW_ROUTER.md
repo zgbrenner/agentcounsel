@@ -11,6 +11,10 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 3. If the request spans several skills, pick the **narrowest** one that fits the immediate task; the skill will point to siblings if needed.
 4. If nothing matches, say so — do not improvise a legal workflow.
 
+## Before you start: complex or multi-step matters
+
+If the task is more than a single, self-contained skill run — it spans several skills, multiple documents, more than one deadline, or more than one team member — create a **matter workspace** first. Run `skills/setup/create-matter-workspace/SKILL.md`: it recommends the right template from `matter-workspaces/` and produces a populated workspace draft. The workspace is the single file that carries the matter's parties, facts, jurisdiction, deadlines, and the draft work product produced by every skill you run, so context is not lost between steps. For a one-off task, skip this and go straight to the skill.
+
 ## Task -> Skill
 
 ### Contracts and agreements
@@ -112,8 +116,9 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 | "Configure the litigation practice" / "set up our litigation profile" | `skills/setup/litigation-cold-start-interview/SKILL.md` |
 | "Configure the privacy practice" / "set up our privacy profile" | `skills/setup/privacy-cold-start-interview/SKILL.md` |
 | "Configure the corporate practice" / "set up our corporate profile" | `skills/setup/corporate-cold-start-interview/SKILL.md` |
+| "Set up a workspace for this matter" / "create a matter file" / "organize this matter" | `skills/setup/create-matter-workspace/SKILL.md` |
 
-These interviews fill in a profile under `practice-profiles/`. See also `COMMANDS.md` for command shorthands and `matter-workspaces/` for per-matter scaffolds.
+The cold-start interviews fill in a profile under `practice-profiles/`; `create-matter-workspace` sets up a single matter file under `matter-workspaces/` (see "Before you start" above). See also `COMMANDS.md` for command shorthands and `matter-workspaces/` for per-matter scaffolds.
 
 ### Methodology and verification
 

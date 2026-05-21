@@ -37,6 +37,7 @@ If the official document is not provided, stop and request it. Do not proceed on
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Summarize only the document actually provided. Do not supplement with rule text, preamble language, or agency interpretations from model background knowledge without clearly marking each instance `[UNVERIFIED — attorney must confirm against source]`.
 - Do not invent effective dates, compliance deadlines, penalty provisions, or phase-in schedules. Every date in the summary must be drawn from the provided document and marked `[CONFIRM date against source]` until the attorney verifies it.

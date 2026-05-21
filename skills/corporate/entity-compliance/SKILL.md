@@ -50,6 +50,7 @@ If the entity list is not provided, stop and request it. Do not proceed on a par
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. Attorney review and sign-off are required before any filing obligation or compliance posture is relied upon.
 - **Never populate a filing obligation, deadline, fee, or requirement from model background knowledge.** Filing rules are jurisdiction-specific, entity-type-specific, and subject to change. If the user has not supplied an obligation, record its status as "unknown" and flag it for confirmation with the registered agent or the relevant authority.
 - **Entity-type discipline.** Filing obligations depend on both the jurisdiction and the entity type. A corporation, an LLC, and a limited partnership formed in the same jurisdiction can have materially different obligations, due dates, and fees. Never transfer an obligation from one entity type to another. Never assume that because one entity in a jurisdiction has a particular obligation, another entity of a different type in the same jurisdiction shares it.

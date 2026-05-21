@@ -39,6 +39,7 @@ If the document text is not provided, stop and request it. If jurisdiction or em
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Do not assert that any provision is or is not legally compliant. Flag provisions for attorney review; do not certify them.
 - Do not assert what any jurisdiction requires, prohibits, or mandates in employment policies. Flag topics as jurisdiction-dependent and require attorney confirmation.

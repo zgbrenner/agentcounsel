@@ -41,6 +41,7 @@ If the policy text is missing, stop and request it. If the description of actual
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert which privacy law, regulation, or framework applies to the organization or its policy. Applicable law is always an attorney-verification item, even where the applicable framework seems obvious.
 - Do not conclude that a gap constitutes a legal violation, regulatory breach, or non-compliance. Identify gaps; attorneys determine legal consequences.

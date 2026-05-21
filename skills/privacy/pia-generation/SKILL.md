@@ -50,6 +50,7 @@ If the description of the processing activity or the data categories are not pro
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice. Privacy-counsel review and sign-off are required before any processing activity is approved or any PIA is treated as final.
 - Do not assert which privacy law, regulation, or framework applies to this activity, or whether a formal assessment is legally required. Those are attorney-verification items. Flag them as `[verify jurisdiction]` and route to privacy counsel.
 - Do not invent, infer, or assume data categories, purposes, access paths, or retention periods. Assess only the facts actually provided. If a material input is missing, flag it as `[CONFIRM: ...]` and note how the gap affects the analysis.

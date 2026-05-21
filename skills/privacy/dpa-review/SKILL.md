@@ -40,6 +40,7 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert which privacy law or regulatory framework applies to any given processing arrangement. The applicable law is always an attorney-verification item.
 - Do not invent, paraphrase, or assume document provisions. Review only the language actually present in the provided document. Quote the document directly when characterizing its terms.

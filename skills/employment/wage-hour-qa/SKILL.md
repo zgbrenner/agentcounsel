@@ -37,6 +37,7 @@ If any required input is missing, stop and request it. Do not infer jurisdiction
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice and does not constitute a legal conclusion.
 - **Do not state any wage-and-hour rule, threshold, multiplier, exemption criterion, lookback period, penalty rule, or computation formula from memory.** Treat all background knowledge about wage-and-hour standards as unverified until confirmed by current, jurisdiction-specific research. A confident wrong number is the worst-case output this skill can produce.
 - Do not assert, quote, or paraphrase any statute, regulation, agency guidance, or case law from memory. Use `[citation needed]` wherever legal authority would be referenced and flag it for verified research.

@@ -40,6 +40,7 @@ If the offer letter text is not provided, stop and request it before proceeding.
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice. Attorney review and sign-off are required before any party acts on this output.
 - Review only the language actually present in the provided documents. Do not infer, supply, or assume terms that are not written.
 - Do not assert whether any restrictive covenant is enforceable in any jurisdiction. Enforceability is a jurisdiction-specific legal question that has changed frequently in recent years and must be confirmed by counsel. Flag every enforceability question with `[verify jurisdiction]`.

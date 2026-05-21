@@ -39,6 +39,7 @@ If any required input is missing, stop and request it. Do not fabricate facts, r
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not predict enforcement outcomes as certainties. Use language such as "potential exposure," "a regulator might argue," "one plausible response," or "this factor could weigh against."
 - Do not invent enforcement precedent, settlement statistics, penalty ranges, or agency policy statements. If the user provides documents containing such data, summarize them; otherwise, flag the need to research and verify.

@@ -38,6 +38,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - This skill is **prospective only**. If the engagement has already started, stop immediately and do not proceed. Retroactive reclassification risk analysis is a separate attorney-led matter.
 - Do not assert, from memory, what the applicable classification test is in any jurisdiction. Tests, factors, and any statutory or regulatory carve-outs must be researched and verified by the attorney. Treat all background knowledge about classification standards as `[verify jurisdiction]` until confirmed by research.

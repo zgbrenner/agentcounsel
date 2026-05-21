@@ -39,6 +39,7 @@ If the contract text or the client's role is not provided, stop and request it. 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Review only the language actually present in the provided document. Quote clause language accurately; never paraphrase beyond what the text supports.
 - Do not invent contract terms, section numbers, defined terms, or quotations. If you cannot find a clause, say so — do not fabricate its absence or presence.

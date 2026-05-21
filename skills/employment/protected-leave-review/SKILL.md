@@ -41,6 +41,7 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review only. This is not legal advice.
 - Do not assert any entitlement amount, eligibility threshold, notice period, certification deadline, or measurement period from background knowledge. Every such rule must be confirmed through verified, current legal authority for the governing jurisdiction. Flag each with `[verify jurisdiction]` or `[deadline verification required]`.
 - Do not invent facts, procedural history, leave balances, or medical information not provided. Separate facts provided from assumptions and from items requiring attorney confirmation.

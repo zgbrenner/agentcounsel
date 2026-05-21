@@ -25,6 +25,7 @@ Run it from anywhere; the script locates the repository root relative to its own
 **Safety and content**
 
 - No file describes AgentCounsel as providing legal advice. Outputs must be described as draft legal work product for attorney review.
+- Every `SKILL.md` references the source/citation discipline core rule (`core/source-and-citation-discipline.md`) or carries equivalent language against inventing legal authority or citations.
 - No file contains the forbidden framing that this project is a ChatGPT Project instructions or package repository.
 - No substantive file contains a leftover placeholder marker (such as a TODO or FIXME note, or lorem ipsum filler text).
 

@@ -193,6 +193,32 @@ The build writes everything to `dist/` (git-ignored — regenerate it when skill
 
 The build fails if a skill is missing a required section, a generated pack is empty, a practice area has no index entry, or required safety language is missing from a pack. `dist/SKILL_PACKS_INDEX.md` explains how to install each pack type.
 
+## Improving skills
+
+`scripts/generate_skill_improvement_prompts.py` scans every canonical `SKILL.md` and writes two maintainer aids into `reports/`:
+
+- `reports/skill-improvement-prompts.md` — one copyable prompt per skill, ready to hand to an AI coding agent to revise that one skill. Each prompt names the skill path, skill name, and practice area, restates the skill's core purpose, and asks the agent to strengthen trigger clarity, required inputs, workflow steps, output format, and the attorney-review and source-discipline language — without changing what the skill is for or breaking the AgentCounsel skill structure.
+- `reports/skill-quality-checklist.md` — a reusable, skill-agnostic checklist for reviewing any skill by hand.
+
+```
+python scripts/generate_skill_improvement_prompts.py           # write the reports
+python scripts/generate_skill_improvement_prompts.py --check   # report staleness only
+```
+
+It uses only the Python standard library — no dependencies, nothing to install.
+
+### Using the prompts before a public release
+
+Before publishing a release, maintainers should:
+
+1. Regenerate the reports so they reflect the current skill set: `python scripts/generate_skill_improvement_prompts.py`.
+2. For each skill changed since the last release, copy its prompt from `reports/skill-improvement-prompts.md`, run it with an AI coding agent, review the diff with attorney-style scrutiny, and keep only the changes that genuinely tighten the skill.
+3. Spot-check every revised skill against `reports/skill-quality-checklist.md`.
+4. Run `python scripts/validate_repo.py` and `python scripts/sync_plugin_skills.py --check`.
+5. Regenerate the reports once more and commit them so the released library and its review aids stay in sync.
+
+The prompts never change a skill's core purpose — they only sharpen it. Treat every AI-suggested edit as draft work product for human review, exactly as the library treats its own output.
+
 ## Contributing
 
 New skills are welcome. AgentCounsel is Markdown-first and safety-first — see `CONTRIBUTING.md` for the rules, and `SECURITY.md` for security guidance.

@@ -38,6 +38,7 @@ If the requirement source is not provided, stop and request it. If control descr
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not assert that any control satisfies a legal requirement as a binding conclusion. "Met" status in the matrix means the described control appears to address the requirement based on the information provided — not that legal compliance has been achieved or that the control would withstand regulatory scrutiny.
 - Every requirement listed must trace to the source document provided. Do not add requirements from model background knowledge without clearly marking them `[UNVERIFIED — not from provided source]`.
