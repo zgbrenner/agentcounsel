@@ -7,6 +7,7 @@ This repository is **AgentCounsel**, a Markdown legal skills library. If you are
 - The canonical skill library is `/skills`. Treat it as the source of truth.
 - The operating rules are in `/core`. They apply to every skill.
 - Use `WORKFLOW_ROUTER.md` to map a task to a skill, and `SKILLS_INDEX.md` to browse.
+- Read `CONTEXT.md` for the repository's vocabulary and mental model — the precise meaning of "skill," "template," "canonical," and related terms.
 
 ## How to work
 

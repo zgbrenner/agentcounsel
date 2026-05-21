@@ -44,6 +44,7 @@ skills/      The canonical skill library, grouped by practice area.
 adapters/    Thin integration files for specific environments.
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
+CONTEXT.md          Vocabulary and mental model for AI agents working in the repo.
 ```
 
 The `skills/` directory is the **canonical source of truth.** Everything else points back to it.
