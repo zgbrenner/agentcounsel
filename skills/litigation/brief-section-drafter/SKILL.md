@@ -1,6 +1,27 @@
 ---
 name: Brief Section Drafter
-description: Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing.
+description: "Use when drafting a single section of a litigation brief — such as a statement of facts, argument section, standard of review, or conclusion — that is cited to the record, consistent with the case theory, and fully flagged for attorney verification before filing."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The case theory and procedural posture"
+  - "The brief section type to draft"
+  - "The relevant record materials and any house style"
+outputs:
+  - "Draft brief section cited to the record and flagged for attorney verification"
+related_skills:
+  - skills/legal-research/legal-research-memo/SKILL.md
+  - skills/litigation/claim-chart/SKILL.md
+  - skills/litigation/deposition-prep/SKILL.md
+tags:
+  - litigation
+  - brief-drafting
+  - motion-practice
+  - drafting
+  - record-citation
 ---
 
 # Brief Section Drafter

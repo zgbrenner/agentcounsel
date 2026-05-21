@@ -1,6 +1,29 @@
 ---
 name: Contract Risk Review
-description: Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review.
+description: "Use when reviewing a general commercial contract — such as a master services agreement, vendor agreement, supplier contract, or professional services agreement — to produce a structured risk assessment and prioritized issue list for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full commercial contract text"
+  - "The client's role under the agreement"
+  - "The business and transaction context"
+  - "Optional: the client's standard positions or playbook"
+outputs:
+  - "Structured risk matrix"
+  - "Prioritized issues list for attorney review"
+related_skills:
+  - skills/contracts/nda-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/contracts/sow-review/SKILL.md
+tags:
+  - contracts
+  - contract-review
+  - commercial-contract
+  - risk-matrix
+  - redline
 ---
 
 # Contract Risk Review

@@ -1,6 +1,26 @@
 ---
 name: Privilege Log Review
-description: Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.
+description: "Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment."
+practice_area: litigation
+task_type: review
+jurisdictions: []
+risk_level: critical
+requires_attorney_review: true
+inputs:
+  - "The privilege log to review"
+  - "The forum and applicable jurisdiction"
+  - "The matter context"
+outputs:
+  - "Privilege log review report sorting entries into confidently privileged, uncertain, and recommend-remove tiers"
+related_skills:
+  - skills/litigation/claim-chart/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - privilege-log
+  - privilege
+  - discovery
+  - ediscovery
 ---
 
 # Privilege Log Review

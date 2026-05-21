@@ -1,6 +1,26 @@
 ---
 name: Open Source License Review
-description: Use when reviewing the open-source licenses present in or proposed for a project to identify compliance obligations and flag compatibility or disclosure risks for attorney review.
+description: "Use when reviewing the open-source licenses present in or proposed for a project to identify compliance obligations and flag compatibility or disclosure risks for attorney review."
+practice_area: ip
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The component and license inventory for the project"
+  - "The project's distribution model"
+  - "How the components are combined and shipped"
+outputs:
+  - "License-obligations table"
+  - "Compatibility and disclosure issues for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - ip
+  - open-source
+  - licensing
+  - license-compliance
+  - copyleft
 ---
 
 # Open Source License Review

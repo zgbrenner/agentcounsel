@@ -1,6 +1,28 @@
 ---
 name: AI Feature Review
-description: Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review.
+description: "Use when conducting a legal issue-spotting review for a product feature that uses AI or machine learning to produce a structured issues register and recommendations for attorney review."
+practice_area: product-legal
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "A description of the AI or machine-learning product feature"
+  - "The model and data details"
+  - "The intended users and the decisions the feature affects"
+outputs:
+  - "Structured AI issues register"
+  - "Recommendations for attorney review"
+related_skills:
+  - skills/ai-governance/ai-vendor-terms-review/SKILL.md
+  - skills/product-legal/launch-review/SKILL.md
+  - skills/ai-governance/model-risk-triage/SKILL.md
+tags:
+  - product-legal
+  - ai
+  - feature-review
+  - issue-spotting
+  - ai-governance
 ---
 
 # AI Feature Review

@@ -1,6 +1,26 @@
 ---
 name: Legal Hold
-description: Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians.
+description: "Use when preparing a litigation hold notice and preservation-scope summary — issuing a new hold, refreshing an existing one, or releasing a closed one — as draft legal work product for attorney review before distribution to custodians."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: critical
+requires_attorney_review: true
+inputs:
+  - "The matter and the attorney-confirmed preservation trigger date"
+  - "The preservation scope"
+  - "The custodians and data systems involved"
+outputs:
+  - "Draft litigation hold notice and preservation-scope summary for attorney review"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+tags:
+  - litigation
+  - legal-hold
+  - preservation
+  - ediscovery
+  - spoliation
 ---
 
 # Legal Hold

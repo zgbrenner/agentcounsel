@@ -1,6 +1,24 @@
 ---
 name: Entity Compliance Review
-description: Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review.
+description: "Use when organizing and reviewing an organization's corporate-entity compliance status — periodic filings, registered-agent status, and good standing — into a structured review that flags overdue, due-soon, and unknown items as draft work product for attorney review."
+practice_area: corporate
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The list of legal entities to review"
+  - "Each entity's periodic filing and registered-agent obligations"
+  - "Known filing and good-standing status"
+outputs:
+  - "Entity compliance review flagging overdue, due-soon, and unknown items"
+related_skills:
+  - skills/regulatory/compliance-gap-matrix/SKILL.md
+tags:
+  - corporate
+  - entity-compliance
+  - good-standing
+  - corporate-filings
 ---
 
 # Entity Compliance Review

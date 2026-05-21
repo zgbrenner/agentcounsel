@@ -1,6 +1,26 @@
 ---
 name: Rule Change Summary
-description: Use when summarizing a regulatory rule change, proposed rule, or official guidance document and its practical impact on an organization, based on the actual document provided.
+description: "Use when summarizing a regulatory rule change, proposed rule, or official guidance document and its practical impact on an organization, based on the actual document provided."
+practice_area: regulatory
+task_type: summarization
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The regulatory rule change, proposed rule, or official guidance document"
+  - "The organization's relevant operations"
+  - "The business context for the impact assessment"
+outputs:
+  - "Plain-language summary of the rule change"
+  - "Practical impact table for attorney review"
+related_skills:
+  - skills/regulatory/enforcement-risk-memo/SKILL.md
+  - skills/regulatory/compliance-gap-matrix/SKILL.md
+tags:
+  - regulatory
+  - rule-change
+  - regulatory-summary
+  - impact-analysis
 ---
 
 # Rule Change Summary

@@ -1,6 +1,26 @@
 ---
 name: Subpoena Triage
-description: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+description: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
+practice_area: litigation
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received subpoena"
+  - "The recipient's role and relationship to the matter"
+  - "Any related preservation or notification context"
+outputs:
+  - "Structured subpoena triage summary identifying deadlines, scope, objections, and privilege issues for immediate attorney review"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - subpoena
+  - triage
+  - discovery
+  - deadlines
 ---
 
 # Subpoena Triage

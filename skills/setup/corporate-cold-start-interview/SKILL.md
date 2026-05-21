@@ -1,6 +1,26 @@
 ---
 name: Corporate Cold-Start Interview
-description: Use when a corporate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+description: "Use when a corporate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+practice_area: setup
+task_type: interview
+jurisdictions: []
+risk_level: low
+requires_attorney_review: true
+inputs:
+  - "Access to a corporate attorney or authorized designee"
+  - "The practice group's jurisdictions and client context"
+  - "Standard positions, escalation thresholds, and review requirements"
+outputs:
+  - "Filled corporate practice profile draft for attorney review"
+related_skills:
+  - skills/corporate/board-minutes/SKILL.md
+  - skills/corporate/diligence-issue-extraction/SKILL.md
+tags:
+  - setup
+  - cold-start
+  - practice-profile
+  - configuration
+  - corporate
 ---
 
 # Corporate Cold-Start Interview

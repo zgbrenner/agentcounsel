@@ -1,6 +1,26 @@
 ---
 name: Protected Leave Review
-description: Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review.
+description: "Use when organizing and reviewing a protected-leave situation to identify the leave frameworks that may apply, surface procedural obligations and deadlines requiring verified research, and flag adverse-action exposure — producing draft legal work product for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The protected-leave situation and its facts"
+  - "The procedural status and any contemplated action"
+  - "The applicable jurisdiction"
+outputs:
+  - "Protected-leave review identifying applicable frameworks and adverse-action exposure for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/employment/wage-hour-qa/SKILL.md
+tags:
+  - employment
+  - protected-leave
+  - fmla
+  - leave
+  - retaliation-risk
 ---
 
 # Protected Leave Review

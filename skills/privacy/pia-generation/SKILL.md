@@ -1,6 +1,27 @@
 ---
 name: Privacy Impact Assessment
-description: Use when drafting an internal privacy impact assessment for a new or changed processing activity to document the data involved, design-linked risks, policy consistency, and mitigations for privacy-counsel review.
+description: "Use when drafting an internal privacy impact assessment for a new or changed processing activity to document the data involved, design-linked risks, policy consistency, and mitigations for privacy-counsel review."
+practice_area: privacy
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "A description of the new or changed processing activity"
+  - "The data categories involved"
+  - "The data flows, recipients, and design details"
+outputs:
+  - "Draft privacy impact assessment documenting risks and mitigations for privacy-counsel review"
+related_skills:
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/privacy/dpa-review/SKILL.md
+  - skills/privacy/dsar-workflow/SKILL.md
+tags:
+  - privacy
+  - pia
+  - dpia
+  - impact-assessment
+  - data-protection
 ---
 
 # Privacy Impact Assessment

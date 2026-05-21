@@ -1,6 +1,28 @@
 ---
 name: Marketing Claims Review
-description: Use when reviewing marketing or advertising copy for legal risk to produce a claim-by-claim analysis, substantiation requirements, and flagged disclosures for attorney review.
+description: "Use when reviewing marketing or advertising copy for legal risk to produce a claim-by-claim analysis, substantiation requirements, and flagged disclosures for attorney review."
+practice_area: product-legal
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The marketing or advertising copy"
+  - "The product or service the claims describe"
+  - "Any available substantiation"
+outputs:
+  - "Claim-by-claim analysis"
+  - "Substantiation requirements and flagged disclosures for attorney review"
+related_skills:
+  - skills/product-legal/launch-review/SKILL.md
+  - skills/product-legal/terms-of-service-review/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - product-legal
+  - marketing-claims
+  - advertising
+  - substantiation
+  - disclosures
 ---
 
 # Marketing Claims Review

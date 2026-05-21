@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Subpoena Triage — AgentCounsel</title>
-<meta name="description" content="Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.">
+<meta name="description" content="&quot;Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.</p>
+<p>"Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -85,7 +85,27 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Subpoena Triage
-description: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+description: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
+practice_area: litigation
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received subpoena"
+  - "The recipient's role and relationship to the matter"
+  - "Any related preservation or notification context"
+outputs:
+  - "Structured subpoena triage summary identifying deadlines, scope, objections, and privilege issues for immediate attorney review"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - subpoena
+  - triage
+  - discovery
+  - deadlines
 ---
 
 # Subpoena Triage
@@ -234,7 +254,27 @@ Operating rules (these always apply):
 === BEGIN SKILL: Subpoena Triage ===
 ---
 name: Subpoena Triage
-description: Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review.
+description: "Use when an incoming subpoena has been received to produce a structured triage summary identifying the compliance deadline, scope, objections, privilege issues, preservation obligations, and internal notification requirements for immediate attorney review."
+practice_area: litigation
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The received subpoena"
+  - "The recipient's role and relationship to the matter"
+  - "Any related preservation or notification context"
+outputs:
+  - "Structured subpoena triage summary identifying deadlines, scope, objections, and privilege issues for immediate attorney review"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - subpoena
+  - triage
+  - discovery
+  - deadlines
 ---
 
 # Subpoena Triage

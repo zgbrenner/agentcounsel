@@ -1,6 +1,26 @@
 ---
 name: Wage and Hour Question Triage
-description: Use when a specific wage-and-hour or related employment question — such as overtime eligibility, exemption status, break entitlements, final-pay timing, paid-time-off payout, or leave eligibility — needs to be structured and analyzed against verified, jurisdiction-specific rules, producing a draft analysis for attorney review.
+description: "Use when a specific wage-and-hour or related employment question — such as overtime eligibility, exemption status, break entitlements, final-pay timing, paid-time-off payout, or leave eligibility — needs to be structured and analyzed against verified, jurisdiction-specific rules, producing a draft analysis for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The specific wage-and-hour question"
+  - "The applicable jurisdiction"
+  - "The operative facts and the worker's role and pay structure"
+outputs:
+  - "Structured wage-and-hour analysis routed to verified research for attorney review"
+related_skills:
+  - skills/employment/worker-classification/SKILL.md
+  - skills/legal-research/legal-research-memo/SKILL.md
+tags:
+  - employment
+  - wage-and-hour
+  - overtime
+  - exemption
+  - compliance
 ---
 
 # Wage and Hour Question Triage

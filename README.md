@@ -44,6 +44,7 @@ skills/             The canonical skill library, grouped by practice area.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
 matter-workspaces/  Single-file scaffolds for organizing one specific matter.
 adapters/           Thin integration files for specific environments.
+metadata/           Generated machine-readable skill index (index.json).
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
 COMMANDS.md         Slash-style command shorthands mapped to skills.
@@ -64,7 +65,7 @@ skills/contracts/nda-review/
   templates/nda-risk-table.md  A copyable, attorney-review-ready template.
 ```
 
-Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, and an Attorney Verification Checklist.
+Every `SKILL.md` follows the same structure: Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, and an Attorney Verification Checklist. Each one also carries standardized, agent-readable YAML frontmatter so tools and agents can discover and route skills — see `docs/SKILL_METADATA_STANDARD.md`.
 
 ## Practice areas
 
@@ -161,6 +162,19 @@ python scripts/validate_repo.py                # full repository validation
 ```
 
 The workflow is `.github/workflows/validate.yml`. It uses only Python and the standard library — no extra dependencies.
+
+## Skill metadata
+
+Every canonical skill carries standardized, agent-readable YAML frontmatter — `name`, `description`, `practice_area`, `task_type`, `jurisdictions`, `risk_level`, `requires_attorney_review`, `inputs`, `outputs`, `related_skills`, and `tags`. This metadata lets LLMs, browser agents, static-site generators, and package builders discover, filter, and route skills without parsing the Markdown body. The full standard — every field, its allowed values, and the formatting rules — is in `docs/SKILL_METADATA_STANDARD.md`.
+
+`scripts/build_skill_index.py` parses that frontmatter and writes `metadata/index.json`, a single machine-readable index of every skill with counts by practice area, task type, and risk level. Regenerate it whenever a skill's frontmatter changes:
+
+```
+python scripts/build_skill_index.py           # write metadata/index.json
+python scripts/build_skill_index.py --check    # report drift only
+```
+
+`scripts/validate_repo.py` enforces the standard: every skill must declare valid frontmatter, and `metadata/index.json` must stay in sync. The build uses only the Python standard library.
 
 ## Browsable skill catalog
 

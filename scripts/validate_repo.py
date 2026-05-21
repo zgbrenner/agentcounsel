@@ -302,6 +302,48 @@ def check_plugin_manifest() -> None:
             err(f"adapters/claude-code-plugin/plugin.json: missing '{field}'")
 
 
+# --- Check: standardized skill frontmatter --------------------------------
+
+def check_skill_frontmatter(skill_dirs: list[Path]) -> None:
+    """Every canonical skill must declare valid standardized frontmatter.
+
+    The metadata standard and its validation rules live in
+    scripts/build_skill_index.py; see docs/SKILL_METADATA_STANDARD.md.
+    """
+    try:
+        import build_skill_index as index
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run skill frontmatter checks (import failed: {exc})")
+        return
+    for skill_dir in skill_dirs:
+        for msg in index.validate_skill_metadata(skill_dir):
+            err(msg)
+
+
+# --- Check: skill metadata index is in sync -------------------------------
+
+def check_skill_index() -> None:
+    """The generated metadata/index.json must match canonical /skills."""
+    try:
+        import build_skill_index as index
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run skill index checks (import failed: {exc})")
+        return
+    index_path = REPO_ROOT / "metadata" / "index.json"
+    if not index_path.is_file():
+        err("metadata/index.json is missing — run: "
+            "python scripts/build_skill_index.py")
+        return
+    # Drift is only meaningful once frontmatter is valid; any frontmatter
+    # errors are already reported by check_skill_frontmatter.
+    if any(index.validate_skill_metadata(d)
+           for d in index.canonical_skill_dirs()):
+        return
+    if index_path.read_text(encoding="utf-8") != index.render_index():
+        err("metadata/index.json is out of date — run: "
+            "python scripts/build_skill_index.py")
+
+
 # --- Check: every canonical skill is catalogued ---------------------------
 
 def check_index_coverage(skill_dirs: list[Path]) -> None:
@@ -406,6 +448,8 @@ def main() -> int:
     check_adapters()
     check_plugin_manifest()
     check_plugin_bundle()
+    check_skill_frontmatter(canonical)
+    check_skill_index()
     check_index_coverage(canonical)
 
     if warnings:

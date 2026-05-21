@@ -1,6 +1,28 @@
 ---
 name: DPA Review
-description: Use when reviewing a data processing agreement (DPA) or data processing addendum to produce a structured risk summary and prioritized issues for attorney review.
+description: "Use when reviewing a data processing agreement (DPA) or data processing addendum to produce a structured risk summary and prioritized issues for attorney review."
+practice_area: privacy
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The data processing agreement or addendum text"
+  - "The client's role: controller, processor, or sub-processor"
+  - "The processing context and the data involved"
+outputs:
+  - "Structured risk summary"
+  - "Prioritized issues for attorney review"
+related_skills:
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/privacy/dsar-workflow/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - privacy
+  - dpa
+  - data-processing
+  - contract-review
+  - data-protection
 ---
 
 # DPA Review

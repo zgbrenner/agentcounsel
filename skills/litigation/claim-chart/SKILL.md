@@ -1,6 +1,27 @@
 ---
 name: Claim Chart
-description: Use when building an element-by-element claim chart — mapping patent claim limitations or the elements of a civil cause of action or affirmative defense against evidence — to produce a structured gap analysis for attorney review.
+description: "Use when building an element-by-element claim chart — mapping patent claim limitations or the elements of a civil cause of action or affirmative defense against evidence — to produce a structured gap analysis for attorney review."
+practice_area: litigation
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The patent claim, pleaded cause of action, or affirmative defense"
+  - "The evidence to map against each element"
+  - "The applicable jurisdiction"
+outputs:
+  - "Element-by-element claim chart with a structured gap analysis for attorney review"
+related_skills:
+  - skills/litigation/brief-section-drafter/SKILL.md
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/privilege-log-review/SKILL.md
+tags:
+  - litigation
+  - claim-chart
+  - elements-analysis
+  - patent
+  - gap-analysis
 ---
 
 # Claim Chart

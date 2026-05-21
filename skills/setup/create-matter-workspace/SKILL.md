@@ -1,6 +1,29 @@
 ---
 name: Create Matter Workspace
-description: Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review.
+description: "Use when starting a new legal matter that will span multiple skills, documents, or deadlines, to select the right matter-workspace template, gather core matter information, and produce a populated workspace draft for attorney review."
+practice_area: setup
+task_type: intake
+jurisdictions: []
+risk_level: low
+requires_attorney_review: true
+inputs:
+  - "The matter type, or a description of the legal work sufficient to infer it"
+  - "The client's identity and the responsible attorney or team"
+  - "A short description of what the matter concerns and the outcome sought"
+  - "Any known parties, jurisdiction, key dates, and source documents"
+outputs:
+  - "Matter-workspace template recommendation"
+  - "Populated matter-workspace draft for attorney review"
+  - "Maintenance instructions and an open-items list"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/legal-methodology/red-team-verifier/SKILL.md
+tags:
+  - setup
+  - matter-workspace
+  - matter-intake
+  - organization
+  - scaffold
 ---
 
 # Create Matter Workspace

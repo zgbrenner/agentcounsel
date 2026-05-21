@@ -1,6 +1,28 @@
 ---
 name: Terms of Service Review
-description: Use when reviewing a terms of service or terms of use document to produce a structured risk summary, issues table, and prioritized recommendations for attorney review.
+description: "Use when reviewing a terms of service or terms of use document to produce a structured risk summary, issues table, and prioritized recommendations for attorney review."
+practice_area: product-legal
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The terms of service or terms of use text"
+  - "The product or service the terms govern"
+  - "The user base and business model"
+outputs:
+  - "Structured risk summary"
+  - "Issues table and prioritized recommendations for attorney review"
+related_skills:
+  - skills/contracts/nda-review/SKILL.md
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/product-legal/launch-review/SKILL.md
+tags:
+  - product-legal
+  - terms-of-service
+  - contract-review
+  - consumer-terms
+  - risk-summary
 ---
 
 # Terms of Service Review

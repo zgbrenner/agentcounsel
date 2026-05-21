@@ -1,6 +1,26 @@
 ---
 name: Hiring Review
-description: Use when reviewing an employment offer letter (and any restrictive-covenant exhibits) against the candidate's actual work jurisdiction and the employer's standard hiring practices to produce a structured draft review memo with a verdict, for attorney review.
+description: "Use when reviewing an employment offer letter (and any restrictive-covenant exhibits) against the candidate's actual work jurisdiction and the employer's standard hiring practices to produce a structured draft review memo with a verdict, for attorney review."
+practice_area: employment
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The employment offer letter and any restrictive-covenant exhibits"
+  - "The candidate's actual work jurisdiction"
+  - "The role, compensation, and the employer's standard hiring practices"
+outputs:
+  - "Structured hiring review memo with a verdict for attorney review"
+related_skills:
+  - skills/employment/employee-policy-review/SKILL.md
+  - skills/employment/worker-classification/SKILL.md
+tags:
+  - employment
+  - hiring
+  - offer-letter
+  - restrictive-covenants
+  - onboarding
 ---
 
 # Hiring Review

@@ -1,0 +1,208 @@
+# AgentCounsel Skill Metadata Standard
+
+Every canonical skill in AgentCounsel carries a standardized block of
+**YAML frontmatter** at the top of its `SKILL.md`. The frontmatter is
+agent-readable metadata: it lets LLMs, browser agents, static-site
+generators, and package builders discover, filter, and route skills
+without parsing the Markdown body.
+
+This document defines each field, the allowed values, and the formatting
+rules. It is the reference for the validation enforced by
+`scripts/validate_repo.py` and for the index produced by
+`scripts/build_skill_index.py`.
+
+## Where the metadata lives
+
+The frontmatter is the first thing in every `skills/<area>/<skill>/SKILL.md`
+file, delimited by a line containing only `---` at the start and another at
+the end:
+
+```yaml
+---
+name: NDA Review
+description: "Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full NDA or confidentiality agreement text"
+  - "The client's role: disclosing, receiving, or mutual"
+  - "The business and transaction context"
+  - "Optional: the client's standard NDA positions or playbook"
+outputs:
+  - "Triage rating (route, flag, or stop)"
+  - "Structured risk summary"
+  - "Prioritized redline points for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+tags:
+  - contracts
+  - nda
+  - confidentiality
+  - contract-review
+  - risk-triage
+---
+```
+
+All eleven fields below are **required** on every canonical skill, and they
+appear in the order shown above.
+
+## The fields
+
+### `name`
+
+The human-readable skill name, in title case (for example, `NDA Review`).
+A non-empty string. It matches the H1 title in the body.
+
+### `description`
+
+One line describing **when to use the skill** — action-oriented and
+trigger-rich, not a definition. It must begin with `Use when` and name the
+situations, documents, or requests that should route to this skill, so an
+agent can match a user's intent to it. Quote the value with double quotes.
+
+Good: `"Use when reviewing a statement of work to assess scope, deliverables, and consistency with the governing master agreement."`
+
+Avoid a bare definition such as `"A skill for statements of work."` — it
+says what the skill *is*, not when to reach for it.
+
+### `practice_area`
+
+The practice area the skill belongs to. It **must exactly match the
+directory area** — the folder name directly under `skills/`. Current
+values: `legal-research`, `litigation`, `contracts`, `corporate`,
+`employment`, `privacy`, `product-legal`, `regulatory`, `ai-governance`,
+`ip`, `setup`, `legal-methodology`.
+
+### `task_type`
+
+The kind of work the skill performs. One of the controlled values:
+
+| Value | Meaning |
+|---|---|
+| `intake` | Capture and structure a new matter, use case, or disclosure so it can be routed. |
+| `interview` | Run a structured cold-start interview to configure a practice profile. |
+| `research` | Produce a legal research memo answering a specific question. |
+| `review` | Review a provided document or document set for risk, gaps, or issues. |
+| `triage` | Run a first-pass assessment that rates a matter and routes it to the right specialist. |
+| `drafting` | Produce a draft legal document or instrument. |
+| `analysis` | Work a structured analytical method through a situation, question, or set of facts. |
+| `summarization` | Condense a document or a set of changes into a structured summary. |
+| `extraction` | Pull structured data, issues, or events out of a document set. |
+| `verification` | Quality-control a draft, or its sources, before it is relied on. |
+
+### `jurisdictions`
+
+A list of jurisdictions the skill is **specific to**. AgentCounsel skills
+supply process and structure, not the law of any jurisdiction, so this list
+is normally empty (`[]`) — the skill is jurisdiction-agnostic and the actual
+jurisdiction is supplied per matter. Populate it only if a skill is
+genuinely bound to one or more named jurisdictions.
+
+### `risk_level`
+
+How much is at stake if the skill's draft output is wrong and the error is
+not caught. One of `low`, `medium`, `high`, `critical`:
+
+| Value | Meaning |
+|---|---|
+| `low` | Configuration or administrative scaffolding. An error is easy to catch and low-consequence. |
+| `medium` | Standard issue-spotting, review, or analytical drafts. An error is normally caught at attorney review; consequences are moderate. |
+| `high` | Adversarial-facing, filing-bound, deadline-sensitive, or exposure-creating work product. An uncaught error can create real legal exposure. |
+| `critical` | Work where an error risks irreversible or severe harm — for example spoliation or waiver of privilege. |
+
+`risk_level` describes the inherent stakes of the skill's domain. It is not
+a statement that the output may be used without review — every skill still
+requires attorney review (see the next field).
+
+### `requires_attorney_review`
+
+A boolean. `true` means the skill's output is draft legal work product that
+a qualified, licensed attorney must review before it is relied upon. For
+every skill in this library it is `true`. Set it to `false` only for a
+hypothetical future skill whose output is not legal work product at all.
+
+### `inputs`
+
+A list of the inputs the skill needs to run — the materials, facts, and
+context a user must supply. Each item is a short noun phrase. Mark
+optional-but-recommended inputs by beginning the item with `Optional:`.
+At least one item is required.
+
+### `outputs`
+
+A list of the deliverables the skill produces. Each item is a short noun
+phrase naming a section or artifact of the output. At least one item is
+required.
+
+### `related_skills`
+
+A list of other skills a user might reach for instead of, or alongside,
+this one — drawn from the skill's "Do Not Use When" cross-references and its
+practice area. **Each entry is a repository path** of the form
+`skills/<area>/<skill>/SKILL.md`, and each must resolve to a real skill. A
+skill never lists itself. The list may be empty, but in practice every
+skill names at least one neighbor.
+
+### `tags`
+
+A list of lowercase, hyphenated keyword tags for search and filtering — for
+example `contract-review`, `risk-triage`, `data-protection`. Four to seven
+tags is typical. At least one is required.
+
+## YAML format conventions
+
+The frontmatter uses a deliberately small, fixed YAML subset so it stays
+both valid YAML (for external tools) and parseable without a third-party
+YAML library (the repository is standard-library only):
+
+- **Scalars** are written `key: value`. Quote `description` with double
+  quotes; `name`, `practice_area`, `task_type`, and `risk_level` are plain.
+- **`requires_attorney_review`** is the bare word `true` or `false`.
+- **An empty list** is written inline: `jurisdictions: []`.
+- **A non-empty list** is a block of `  - item` lines, indented two spaces.
+  Quote `inputs` and `outputs` items with double quotes (they contain
+  punctuation); `related_skills` paths and `tags` are plain.
+
+Do not introduce other YAML features (anchors, flow mappings, multi-line
+scalars). Keep `description` on a single line.
+
+## The generated index
+
+`scripts/build_skill_index.py` parses the frontmatter of every canonical
+skill and writes `metadata/index.json` — one machine-readable file with the
+full metadata of every skill, plus counts by practice area, task type, and
+risk level. Regenerate it whenever a skill's frontmatter changes:
+
+```
+python scripts/build_skill_index.py           # write metadata/index.json
+python scripts/build_skill_index.py --check    # report drift only
+```
+
+Consumers — agents, site generators, package builders — should read
+`metadata/index.json` rather than re-parsing every `SKILL.md`.
+
+## Validation
+
+`scripts/validate_repo.py` enforces this standard on every canonical skill.
+A skill fails validation if any required field is missing, a list field is
+not a list, `description` does not begin with `Use when`, `practice_area`
+does not match the directory, `task_type` or `risk_level` is outside its
+controlled set, `requires_attorney_review` is not a boolean, `inputs`,
+`outputs`, or `tags` is empty, or a `related_skills` entry does not resolve
+to a real skill. Validation also fails if `metadata/index.json` is missing
+or out of date.
+
+## Adding or changing a skill
+
+1. Write the frontmatter with all eleven fields, in the order above.
+2. Make `description` trigger-rich — it must say *when* to use the skill.
+3. Set `practice_area` to the directory area.
+4. Pick `task_type` and `risk_level` from the controlled values.
+5. Keep `requires_attorney_review: true` for any legal work product.
+6. List concrete `inputs`, `outputs`, `related_skills` paths, and `tags`.
+7. Run `python scripts/build_skill_index.py` to regenerate the index.
+8. Run `python scripts/validate_repo.py` and confirm it passes.

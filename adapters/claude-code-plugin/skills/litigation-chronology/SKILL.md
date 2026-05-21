@@ -1,6 +1,27 @@
 ---
 name: Litigation Chronology
-description: Use when building a factual timeline for litigation from provided source documents, producing a structured chronology table with citations, disputed/undisputed flags, and gap analysis for attorney review.
+description: "Use when building a factual timeline for litigation from provided source documents, producing a structured chronology table with citations, disputed/undisputed flags, and gap analysis for attorney review."
+practice_area: litigation
+task_type: extraction
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The source documents, records, and correspondence"
+  - "The matter context"
+  - "The date range and events of interest"
+outputs:
+  - "Structured chronology table with citations, disputed/undisputed flags, and gap analysis"
+related_skills:
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+tags:
+  - litigation
+  - chronology
+  - timeline
+  - fact-development
+  - ediscovery
 ---
 
 # Litigation Chronology

@@ -1,6 +1,27 @@
 ---
 name: Trademark Clearance Triage
-description: Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search.
+description: "Use when a user wants a preliminary triage of a proposed brand name, product name, or logo before engaging trademark counsel for a formal clearance search."
+practice_area: ip
+task_type: triage
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The proposed brand name, product name, or logo"
+  - "The goods and services it will be used for"
+  - "The target markets and jurisdictions"
+outputs:
+  - "Trademark clearance triage summary with a preliminary signal for trademark counsel"
+related_skills:
+  - skills/ip/cease-and-desist-response/SKILL.md
+  - skills/ip/infringement-triage/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - ip
+  - trademark
+  - brand-clearance
+  - triage
+  - naming
 ---
 
 # Trademark Clearance Triage
