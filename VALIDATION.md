@@ -60,3 +60,5 @@ The script validates structure and consistency — not legal accuracy. It cannot
 ## Note
 
 `scripts/validate_repo.py` and this file (`VALIDATION.md`) are excluded from the forbidden-phrase scans, because they necessarily describe the phrases being checked for.
+
+Generated build output is not validated as repository source: the scan skips `dist/` (platform install packs from `scripts/build_platform_packs.py`) and `node_modules/`. `scripts/build_platform_packs.py` performs its own build-time validation of the packs it generates.

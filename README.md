@@ -175,6 +175,24 @@ npm run dev        # build, then serve
 
 The output in `site/public/` is plain HTML, one CSS file, and a small script. Deploy it by serving that directory with any static host (GitHub Pages, Netlify, Vercel, an object store, or a plain file server) — there is no backend, no login, and no build step beyond `npm run build`. Re-run the build after adding or editing a skill so the catalog stays in sync. See `site/README.md` for details.
 
+## Platform install packs
+
+`scripts/build_platform_packs.py` generates ready-to-install packs of the library for specific AI environments — all from the canonical `skills/` and `core/` directories, with nothing copied by hand. It uses the Python standard library only.
+
+```
+python scripts/build_platform_packs.py
+```
+
+The build writes everything to `dist/` (git-ignored — regenerate it when skills change):
+
+- `dist/chatgpt/` — one consolidated Markdown file per practice area, plus a global `project-instructions.md`. ChatGPT Projects limit file counts, so each pack consolidates a whole practice area into one file.
+- `dist/claude/` — one ZIP per practice area (`CLAUDE.md`, the practice profile, `commands.md`, `skills/`, `templates/`, `README.md`). Unzip into a Claude Project's knowledge.
+- `dist/gemini/` — one ZIP per practice area with four `source-*.md` files to add as Gemini notebook sources.
+- `dist/repo-agents/` — `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, and a generic install guide for repo-based agents.
+- `dist/index.json`, `dist/manifest.json`, `dist/SKILL_PACKS_INDEX.md` — machine- and human-readable indexes.
+
+The build fails if a skill is missing a required section, a generated pack is empty, a practice area has no index entry, or required safety language is missing from a pack. `dist/SKILL_PACKS_INDEX.md` explains how to install each pack type.
+
 ## Contributing
 
 New skills are welcome. AgentCounsel is Markdown-first and safety-first — see `CONTRIBUTING.md` for the rules, and `SECURITY.md` for security guidance.

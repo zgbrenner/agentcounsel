@@ -4,3 +4,6 @@ __pycache__/
 
 # Node — the site generator has no dependencies, but npm may still create this
 node_modules/
+
+# Generated platform install packs (scripts/build_platform_packs.py)
+dist/
