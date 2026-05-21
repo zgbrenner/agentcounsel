@@ -21,7 +21,7 @@ AgentCounsel needs as follows.
 ## Routing a task
 
 1. View `WORKFLOW_ROUTER.md` to map the request to a skill.
-2. View the six `core/` files.
+2. View the seven `core/` files.
 3. View the chosen `skills/.../SKILL.md` and any file in its `templates/`
    folder.
 

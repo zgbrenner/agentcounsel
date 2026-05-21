@@ -74,6 +74,10 @@ A complete catalog of every skill in the library. The canonical source of truth 
 
 > **Before relying on any high-stakes legal output**, run `red-team-verifier` (`skills/legal-methodology/red-team-verifier/SKILL.md`) as a final quality-control pass. It adversarially stress-tests any memo, review, letter, filing, risk matrix, or analysis — the output of any skill in this index, or of another tool — for invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues. A PASS verdict does not replace attorney review.
 
+## Business-stakeholder summary mode
+
+Many commercial skills — across **contracts**, **product legal**, **privacy**, **regulatory**, **employment**, and **corporate** — offer an **optional Business Stakeholder Summary** in their Output Format. It is a plain-language layer for briefing non-lawyer decision-makers (product owners, deal leads, managers, founders, executives): a **Business Summary**, the **Decision Needed**, a **Recommended Ask**, a **Fallback Position**, and an **Escalation Needed?** call. Ask for it when the output is going to the business rather than to the supervising attorney. It is an addition to the skill's normal deliverable, never a replacement, and it does not change the attorney-review requirement. See `core/business-stakeholder-communication.md`.
+
 ## Practice areas at a glance
 
 - **Legal Research** — turning questions into structured, verifiable memos.

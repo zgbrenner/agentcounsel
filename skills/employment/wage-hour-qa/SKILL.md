@@ -96,6 +96,16 @@ Deliver the output as a labeled draft, headed **DRAFT — ATTORNEY REVIEW REQUIR
 8. **Computation Components** (if applicable) — if the question involves a wage or back-pay calculation, list each component that must be researched and verified before any number is calculated; flag each `[VERIFY]`. Do not compute any figure.
 9. **Attorney Verification Items** — every open item requiring attorney or verified-research confirmation before this analysis can be relied upon.
 
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a product owner, deal lead, people manager, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language, with unnecessary legal jargon removed and legal risk stated separately from business and commercial risk.
+- **Decision Needed** — the specific business decision(s) now on the table, stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
+
 ## Attorney Verification Checklist
 
 - [ ] The specific question as restated accurately reflects the matter to be analyzed.

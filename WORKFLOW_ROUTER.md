@@ -128,6 +128,10 @@ These cross-cutting skills support work in any practice area — run them alongs
 
 **Final quality-control pass.** Run `red-team-verifier` after any high-stakes legal output — a memo, a contract or document review, a demand letter, a risk matrix, a client email, a research summary, or a draft filing — before it is finalized, sent, filed, or relied upon. It adversarially stress-tests the draft for invented authority, unsupported claims, weak legal reasoning, jurisdiction and deadline gaps, and professional-responsibility issues, and returns a PASS / REVISE verdict. It works on the output of any skill in this library, and on legal output produced by other tools or by a person. A PASS does not replace attorney review.
 
+## Briefing a business stakeholder
+
+When a skill's output needs to go to a non-lawyer decision-maker — a product owner, deal lead, manager, founder, or executive — ask for that skill's **optional Business Stakeholder Summary**. Most commercial skills (contracts, product legal, privacy, regulatory, employment, and corporate) can append one: a plain-language **Business Summary**, the **Decision Needed**, a **Recommended Ask**, a **Fallback Position**, and an **Escalation Needed?** call. It is an addition to the normal deliverable, not a replacement, and it does not change the attorney-review requirement. See `core/business-stakeholder-communication.md`.
+
 ## When several skills could apply
 
 - **A contract that is an NDA** -> `nda-review` (not `contract-risk-review`).
