@@ -632,6 +632,324 @@ For each clause category below:
 
 ---
 
+## 12. Warranties and Disclaimers
+
+See also Section 11.4 on representations or warranties that are forward-looking or extend beyond a party's knowledge.
+
+### 12.1 Blanket "as is" disclaimer leaving no performance recourse
+
+**Pattern:** The counterparty disclaims all warranties — express and implied, including merchantability, fitness for a particular purpose, and non-infringement — and provides the product or service strictly "as is," with no affirmative warranty that it will perform as described or conform to its documentation.
+
+**Why it matters:** If the counterparty makes no enforceable performance promise, the client may have no contractual remedy when the product or service fails to do what the client is paying for — even if the failure is total.
+
+**What to check:**
+- Is there any affirmative warranty (conformance to documentation, conformance to specifications, or performance for a defined period)?
+- Quote the disclaimer verbatim and identify exactly which warranties are disclaimed.
+- Does the disclaimer's breadth conflict with the order form, statement of work, or materials the client relied on?
+
+**Most exposed:** Customer / buyer / licensee relying on the product or service for a business-critical function.
+
+---
+
+### 12.2 Warranty remedy limited to repair-or-replace as the sole remedy
+
+**Pattern:** The only remedy for breach of warranty is the counterparty's election to repair, replace, or re-perform, with no right to a refund, no right to terminate, and no damages if repair or replacement fails.
+
+**Why it matters:** A sole-and-exclusive repair-or-replace remedy can leave the client with no exit and no compensation if the counterparty cannot actually cure the defect.
+
+**What to check:**
+- Is the remedy expressed as "sole and exclusive"?
+- Is there a fallback (refund or termination right) if repair or replacement fails or cannot be completed within a reasonable time?
+- How does the remedy limitation interact with the liability cap (see Section 1)?
+
+**Most exposed:** Customer / buyer of goods, software, or services with defined performance expectations.
+
+---
+
+### 12.3 Warranty period or survival too short to surface real defects
+
+**Pattern:** The warranty period is very short relative to how long defects would realistically take to appear, or warranties expire on delivery or acceptance with no post-acceptance survival.
+
+**Why it matters:** A warranty that expires before latent defects can reasonably be discovered provides little practical protection.
+
+**What to check:**
+- What is the warranty period, and when does it start (delivery, acceptance, go-live)?
+- Is the period appropriate for the nature of the goods or services and the way defects would surface?
+- Is the survival of warranties on termination addressed?
+
+**Most exposed:** Buyer of goods or deliverables where defects may be latent.
+
+---
+
+## 13. Service Levels and Performance Commitments
+
+### 13.1 No service levels for a service the client depends on
+
+**Pattern:** The agreement is for an ongoing service (hosting, SaaS, managed services, support) but contains no uptime commitment, no response or resolution targets, and no defined performance standard.
+
+**Why it matters:** Without a defined service level, the client has no objective standard to measure performance against and no contractual trigger for a remedy when the service degrades.
+
+**What to check:**
+- Is there any uptime, availability, or response-time commitment?
+- If service levels appear in a separate SLA or exhibit, confirm it is attached and incorporated.
+- Is service availability stated as a warranty, a service-level commitment, or merely aspirational language?
+
+**Most exposed:** Customer relying on continuous service availability for operations.
+
+---
+
+### 13.2 Service credits framed as the sole and exclusive remedy
+
+**Pattern:** When the counterparty misses a service level, the client's only remedy is a service credit — typically a small percentage of fees — and the contract states this is the sole and exclusive remedy for any performance failure.
+
+**Why it matters:** Service credits are often far smaller than the client's actual loss from an outage. As a sole-and-exclusive remedy, they can foreclose any other claim for chronic or severe underperformance.
+
+**What to check:**
+- Are service credits expressed as the sole and exclusive remedy?
+- Is there a right to terminate for chronic or material SLA failure, separate from the credit mechanism?
+- Must the client claim credits within a short window or forfeit them?
+
+**Most exposed:** Customer whose realistic outage losses far exceed a fee-percentage credit.
+
+---
+
+### 13.3 Exclusions that swallow the service-level commitment
+
+**Pattern:** The uptime or availability commitment is subject to broad exclusions — scheduled maintenance, emergency maintenance, third-party failures, "force majeure," anything outside the counterparty's "direct control" — wide enough to exclude most realistic downtime.
+
+**Why it matters:** A high headline availability figure can be meaningless if the definition of measured downtime excludes the events that actually cause outages.
+
+**What to check:**
+- List every exclusion from the availability calculation.
+- Is scheduled maintenance capped as to frequency, duration, notice, and off-peak windows?
+- Does the exclusion for third-party or "outside our control" events swallow the commitment?
+
+**Most exposed:** Customer relying on the headline availability figure without reading the measurement definition.
+
+---
+
+## 14. Insurance
+
+### 14.1 No insurance requirement on the counterparty
+
+**Pattern:** The agreement imposes no obligation on the counterparty to carry insurance, even though the counterparty's performance creates risks (property damage, bodily injury, professional error, data breach) that insurance would ordinarily backstop.
+
+**Why it matters:** Without an insurance requirement, the client's ability to actually recover on an indemnity or damages claim depends entirely on the counterparty's balance sheet. An uninsured or judgment-proof counterparty makes a strong indemnity worth little.
+
+**What to check:**
+- Is any insurance required?
+- Do the required coverage types match the risks the counterparty's performance creates (commercial general liability, professional liability / errors and omissions, cyber / data-breach, workers' compensation, auto)?
+- Are coverage limits specified, and are they meaningful relative to the realistic exposure?
+
+**Most exposed:** Client relying on the counterparty's indemnity or damages obligations as a real source of recovery.
+
+---
+
+### 14.2 Insurance mechanics missing (additional insured, certificates, notice)
+
+**Pattern:** The contract requires coverage but omits the operational mechanics: no additional-insured status for the client, no certificate-of-insurance delivery requirement, no advance notice of cancellation or material reduction, no primary-and-noncontributory language.
+
+**Why it matters:** A bare requirement to "carry insurance" without these mechanics gives the client no visibility into whether coverage exists and no direct rights against the policy.
+
+**What to check:**
+- Is the client named (or required to be named) as an additional insured where appropriate?
+- Must the counterparty deliver certificates of insurance, including on renewal?
+- Is there a notice obligation if coverage lapses, is cancelled, or is materially reduced?
+
+**Most exposed:** Client that would need to claim against the counterparty's policy.
+
+---
+
+### 14.3 Insurance offered as a substitute for liability allocation
+
+**Pattern:** The counterparty points to its insurance to justify a low liability cap or broad limitation, but the insurance requirement and the liability cap are not aligned — the cap is below the coverage limit, or the policies exclude the very risks the indemnity covers.
+
+**Why it matters:** Insurance and contractual liability allocation are separate. A policy the client cannot reach, or that excludes the relevant risk, does not cure a deficient liability clause.
+
+**What to check:**
+- Does the liability cap align with the insurance limits, or is the cap far lower?
+- Do the required policies actually cover the indemnified risks?
+- Is the insurance a real backstop, or a negotiating talking point?
+
+**Most exposed:** Client persuaded to accept a low cap on the strength of insurance that may not respond.
+
+---
+
+## 15. Audit and Inspection Rights
+
+### 15.1 No audit right where verification matters
+
+**Pattern:** The client has obligations it needs to confirm the counterparty is meeting — security controls, data handling, regulatory compliance, royalty or usage-based fee calculations — but the contract gives the client no right to audit, inspect, or obtain compliance evidence.
+
+**Why it matters:** Without an audit or reporting right, the client must take the counterparty's compliance on trust and may be unable to detect a breach until it causes harm.
+
+**What to check:**
+- Does the client have any audit, inspection, or reporting right?
+- For security and data obligations, is there a right to obtain third-party audit reports or certifications in place of, or alongside, a direct audit?
+- Are there obligations whose breach the client could not otherwise detect?
+
+**Most exposed:** Client with regulatory exposure, usage-based pricing, or sensitive-data obligations flowing to the counterparty.
+
+---
+
+### 15.2 One-sided audit right running against the client
+
+**Pattern:** The counterparty has a broad right to audit the client's use of a product or service (a license "true-up" audit), often including entry to premises, inspection of systems, and back-charges for any underpayment — with no reciprocal right and few limits.
+
+**Why it matters:** A broad vendor audit right can be used to generate surprise back-charges, disrupt operations, and create leverage at renewal.
+
+**What to check:**
+- What triggers the audit right, and how often can it be exercised?
+- Is there advance-notice, business-hours, scope, and confidentiality protection?
+- Who bears audit costs, and what are the consequences of an adverse finding?
+
+**Most exposed:** Licensee or customer subject to usage-based or seat-based licensing.
+
+---
+
+### 15.3 Audit right with no procedural limits
+
+**Pattern:** An audit right (in either direction) is granted with no limits on notice, frequency, scope, duration, location, who conducts it, the confidentiality of what is reviewed, or who pays.
+
+**Why it matters:** An unbounded audit right is disruptive and can expose the audited party's sensitive information. Procedural limits are what make an audit right workable.
+
+**What to check:**
+- Notice period, frequency cap, scope limitation, and business-hours restriction.
+- Confidentiality protection for information reviewed during the audit.
+- Cost allocation, including any shifting rule if the audit finds a material discrepancy.
+
+**Most exposed:** Whichever party is subject to the audit.
+
+---
+
+## 16. Publicity, Marketing, and Use of Name
+
+### 16.1 Counterparty may use the client's name, marks, or a case study without consent
+
+**Pattern:** The counterparty is permitted to use the client's name, logo, or trademarks, to identify the client as a customer, or to publish a case study or testimonial — without the client's prior written consent for each use.
+
+**Why it matters:** Unconsented use of the client's name and marks can create unwanted public association, implied endorsement, brand-control problems, and trademark-licensing issues.
+
+**What to check:**
+- Does the counterparty need the client's prior written consent for each public use?
+- Is any permitted use narrowly limited (e.g., to a customer list) and revocable?
+- Is the right mutual, and does it survive termination?
+
+**Most exposed:** Client sensitive about brand, public association, or confidentiality of the relationship.
+
+---
+
+### 16.2 No mutual control over public statements about the relationship
+
+**Pattern:** The contract is silent on press releases and public announcements, or allows one party to announce the deal unilaterally.
+
+**Why it matters:** A unilateral announcement can disclose a relationship the client wanted kept confidential, or mischaracterize it.
+
+**What to check:**
+- Is there a mutual prior-approval requirement for press releases and public statements?
+- Are disclosures required by law or stock-exchange rule carved out?
+
+**Most exposed:** Client with confidentiality, competitive, or regulatory sensitivity about the relationship.
+
+---
+
+## 17. Non-Solicitation and Non-Competition
+
+This section expands on Section 11.5, which flags restrictive covenants embedded in routine commercial agreements. Enforceability of restrictive covenants is highly jurisdiction-dependent and, in some jurisdictions, restricted or prohibited `[verify jurisdiction]`.
+
+### 17.1 Non-compete restricting the client's ordinary business
+
+**Pattern:** The client is restricted from competing with the counterparty, from working with the counterparty's competitors, or from offering certain products or services — in a way that reaches the client's ordinary business activity.
+
+**Why it matters:** A non-compete can constrain the client's core operations, future deals, and strategic flexibility, often far beyond the value of the contract.
+
+**What to check:**
+- What activity is restricted, for how long, and in what geography or market?
+- Does the restriction reach beyond the subject matter of this contract?
+- Is the restriction mutual, and is it enforceable in the governing jurisdiction `[verify jurisdiction]`?
+
+**Most exposed:** Client whose business overlaps with the counterparty's market.
+
+---
+
+### 17.2 Overbroad non-solicitation of employees
+
+**Pattern:** A non-solicit of employees has no carve-out for general advertising, job postings, or unsolicited inbound applications, and/or covers all employees rather than those connected to the engagement.
+
+**Why it matters:** An overbroad non-solicit can be triggered by ordinary recruiting and restrict the client's hiring well beyond the people connected to the deal.
+
+**What to check:**
+- Is there a carve-out for general solicitations not targeted at the counterparty's staff, and for unsolicited applicants?
+- Is the covered population limited to employees connected to the engagement?
+- What is the duration, and does it run from termination?
+
+**Most exposed:** Client that recruits in the same talent market as the counterparty.
+
+---
+
+### 17.3 Customer non-solicitation or exclusivity embedded in the deal
+
+**Pattern:** The agreement restricts the client from soliciting, serving, or contracting with certain customers or categories of customers, or grants the counterparty exclusivity.
+
+**Why it matters:** Customer non-solicits and exclusivity provisions can foreclose revenue opportunities and lock the client out of markets.
+
+**What to check:**
+- What customers or segments are covered, and for how long?
+- Is exclusivity reciprocal, and is it tied to minimum commitments?
+- Flag the provision prominently regardless of where it appears.
+
+**Most exposed:** Client whose growth depends on access to the restricted customers or markets.
+
+---
+
+## 18. Governing Law and Choice of Forum
+
+See also Section 8 (Dispute Resolution) for arbitration-specific patterns.
+
+### 18.1 Governing law or forum with no connection to the parties or transaction
+
+**Pattern:** The agreement selects a governing law or an exclusive forum that has no relationship to either party, the place of performance, or the subject matter.
+
+**Why it matters:** An unrelated governing law can introduce unfamiliar legal rules; an unrelated or distant forum raises the cost and burden of any dispute and can deter the client from enforcing its rights. A choice with no reasonable connection may also face enforceability questions `[verify jurisdiction]`.
+
+**What to check:**
+- What law governs, and what is the exclusive forum or venue?
+- Is there a reasonable connection between the chosen law or forum and the deal?
+- Is the forum the counterparty's home turf and inconvenient for the client?
+
+**Most exposed:** Client distant from the chosen forum, or a smaller party with limited litigation resources.
+
+---
+
+### 18.2 Inconsistent or split governing-law, forum, and arbitration provisions
+
+**Pattern:** Different provisions point in different directions — a governing-law clause naming one jurisdiction, a forum-selection clause naming another, an arbitration clause naming a third seat — or incorporated documents (online terms, exhibits) carry their own conflicting clauses.
+
+**Why it matters:** Inconsistent dispute provisions create uncertainty about where and under what law a dispute would proceed, and can trigger expensive threshold litigation about the dispute clause itself.
+
+**What to check:**
+- Do the governing-law, forum-selection, and arbitration clauses align?
+- Do incorporated or online terms contain their own, conflicting clauses?
+- Is there a clear order-of-precedence rule?
+
+**Most exposed:** Either party, if a dispute arises.
+
+---
+
+### 18.3 Jury-trial waiver
+
+**Pattern:** The agreement waives the right to a jury trial for any dispute.
+
+**Why it matters:** A jury-trial waiver changes who decides the facts in any litigation. Its enforceability and effect vary by jurisdiction `[verify jurisdiction]`.
+
+**What to check:**
+- Is a jury-trial waiver present, and is it mutual?
+- Is it enforceable under the governing law `[verify jurisdiction]`?
+
+**Most exposed:** Either party; the effect depends on the dispute and the jurisdiction.
+
+---
+
 ## Reviewer Notes
 
 - A red flag is a prompt to look closely and flag for attorney attention — not a conclusion that a clause is unenforceable or unacceptable.

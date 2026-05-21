@@ -76,7 +76,7 @@ If the contract text or the client's role is not provided, stop and request it. 
 
 ## Workflow
 
-This skill draws on shared contract-review reference material in `skills/contracts/references/`: `red-flags.md` (red-flag catalogue), `negotiability-ratings.md` (negotiability rubric), `market-benchmark-framework.md` (benchmarking discipline), `document-type-checklists.md` (per-document-type checklists), and `redline-output-guidance.md` (how to frame redline direction). Consult them at the steps noted below.
+This skill draws on shared contract-review reference material in `skills/contracts/references/`: `red-flags.md` (red-flag catalogue), `negotiability-ratings.md` (six-rating negotiability rubric), `market-benchmark-framework.md` (benchmarking discipline and market-practice vocabulary), `fallback-language-bank.md` (sample preferred and fallback positions by clause type), `document-type-checklists.md` (per-document-type checklists), and `redline-output-guidance.md` (how to frame redline direction). Consult them at the steps noted below.
 
 1. **Confirm inputs.** Verify that you have the full contract text, the client's role, business context, and whether this is the counterparty's form or a negotiated draft. If anything is missing, request it before proceeding.
 
@@ -113,15 +113,17 @@ This skill draws on shared contract-review reference material in `skills/contrac
 
 7. **Build the risk matrix.** Complete `templates/contract-risk-matrix.md` for each clause category reviewed.
 
-8. **Rate negotiability and benchmark.** For each material issue, assign a negotiability rating using the rubric in `skills/contracts/references/negotiability-ratings.md`, with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor. Record any market comparison using `skills/contracts/references/market-benchmark-framework.md`: state the basis for each benchmark and flag every unverified benchmark as an attorney-verification item. AgentCounsel does not supply market data.
+8. **Rate negotiability and benchmark.** For each material issue, assign one of the six negotiability ratings from `skills/contracts/references/negotiability-ratings.md` — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor. Record any market comparison using `skills/contracts/references/market-benchmark-framework.md`: characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm as an attorney-verification item. AgentCounsel does not supply market data.
 
-9. **Draft prioritized issue list.** Rank all identified issues as High / Medium / Low priority for the client based on likelihood and impact. For each High and Medium item, following `skills/contracts/references/redline-output-guidance.md`, state a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** — the direction of the change, not final clause language. Route substantive drafting to an attorney.
+9. **Draft prioritized issue list.** Rank all identified issues as High / Medium / Low priority for the client based on likelihood and impact. For each High and Medium item, following `skills/contracts/references/redline-output-guidance.md`, state a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** — the direction of the change, not final clause language. Use `skills/contracts/references/fallback-language-bank.md` to help articulate preferred and fallback positions. Route substantive drafting to an attorney.
 
 10. **Internal consistency check.** Confirm that defined terms, party names, cross-references, exhibit and schedule references, and section numbers are used consistently throughout the contract. Flag any defined-but-unused term, used-but-undefined term, broken cross-reference, mismatched party label, missing exhibit, or numbering gap.
 
 11. **List open items for attorney verification.** Include every unverified assumption, every `[CONFIRM: ...]` placeholder, and every issue requiring legal judgment before execution.
 
-12. **Assemble the output** and label it clearly as a draft for attorney review.
+12. **Draft a business-friendly summary.** Produce a short, plain-language summary aimed at non-lawyer stakeholders: the handful of things that matter most, what the client should push on and why, the key tradeoffs that need a business decision, and what — if anything — would stop the deal. Use the stakeholder-communication language patterns in `skills/contracts/references/negotiability-ratings.md`. Avoid legal jargon.
+
+13. **Assemble the output** and label it clearly as a draft for attorney review.
 
 ## Output Format
 
@@ -132,13 +134,14 @@ Deliver, in order:
 3. **Red Flags Quick Scan** — each red-flag pattern from `skills/contracts/references/red-flags.md` found in the contract, or a note that none surfaced in the scan.
 4. **Clause-by-Clause Summary** — plain-language summary of each category with risk note.
 5. **Risk Matrix** — completed using `templates/contract-risk-matrix.md`, with two severity dimensions rated per clause: **Legal Risk** (High / Med / Low) for the client's legal exposure, and **Business Friction** (Blocking / Slowing / Confusing / None) for the practical operational impact. A term can be legally enforceable yet operationally damaging, or legally marginal yet a deal-blocker operationally — both dimensions should be captured.
-6. **Negotiability Rating** — for each material issue, a rating from the rubric in `skills/contracts/references/negotiability-ratings.md`, with a one-line rationale.
-7. **Market Benchmark Notes** — any market comparison, recorded using `skills/contracts/references/market-benchmark-framework.md`, with its basis stated; every unverified benchmark flagged for attorney verification.
-8. **Prioritized Issue List** — ranked High / Medium / Low. Each High and Medium item states a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** (direction of change, not final language), following `skills/contracts/references/redline-output-guidance.md`.
+6. **Negotiability Table** — a table covering each material issue, with columns: Issue | Negotiability Rating | Basis | Recommended Lawyer Action. The Negotiability Rating is one of the six ratings defined in `skills/contracts/references/negotiability-ratings.md` (Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, Do Not Spend Leverage); the Basis is a one-line rationale.
+7. **Market Practice Notes** — any market comparison, recorded using `skills/contracts/references/market-benchmark-framework.md`. Characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm for attorney verification. AgentCounsel does not supply market data.
+8. **Prioritized Issue List** — ranked High / Medium / Low. For each High and Medium item, present these labeled components, following `skills/contracts/references/redline-output-guidance.md`: the issue and why it matters; **Preferred Position**; **Fallback Position**; and **Suggested Redline Direction** (the direction of the change, not final clause language). Use `skills/contracts/references/fallback-language-bank.md` to help articulate preferred and fallback positions.
 9. **Missing Provisions** — list of standard protections absent from the agreement.
 10. **Internal Consistency Check** — whether defined terms, party names, cross-references, exhibit/schedule references, and section numbers are used consistently, with any inconsistency flagged.
-11. **Open Items for Attorney Verification** — checkbox list.
-12. **Assumptions** — explicit list of all assumptions made about business context, facts, or legal standard.
+11. **Business-Friendly Summary** — a short, plain-language summary for non-lawyer stakeholders: the few things that matter most, what to push on and why, the key tradeoffs that need a business decision, and what — if anything — would stop the deal. Avoid legal jargon.
+12. **Open Items for Attorney Verification** — checkbox list.
+13. **Assumptions** — explicit list of all assumptions made about business context, facts, or legal standard.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or legal conclusion is unverified or ambiguous.
 
@@ -163,8 +166,10 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] Data privacy obligations have been assessed against applicable regulatory requirements (e.g., GDPR, CCPA) — this skill does not perform a regulatory compliance review.
 - [ ] Indemnification scope and limitation-of-liability caps are consistent with the client's insurance coverage.
 - [ ] No market-standard assertions have been relied upon without independent verification.
-- [ ] The red-flag quick scan and negotiability ratings have been reviewed; every market benchmark has a stated basis and was independently verified.
+- [ ] The red-flag quick scan and the negotiability table have been reviewed; each of the six-scale negotiability ratings reflects the client's actual leverage and risk tolerance.
+- [ ] Every market-practice characterization has a stated basis and supporting source and was independently verified; no unsupported market-data assertion has been relied upon.
 - [ ] Preferred and fallback positions reflect the client's actual leverage and risk tolerance.
+- [ ] The business-friendly summary accurately reflects the review and neither overstates nor understates any risk.
 - [ ] The internal consistency check is complete; defined terms, cross-references, and exhibits are sound.
 - [ ] All missing provisions have been assessed for materiality and whether their absence is acceptable.
 - [ ] All `[CONFIRM: ...]` placeholders and open items have been resolved before the review is relied upon.

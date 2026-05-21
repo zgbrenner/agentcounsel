@@ -74,6 +74,8 @@ A Fallback Position acknowledges that the client may not get everything it wants
 
 **Fallback positions require attorney confirmation.** Whether a Fallback Position is actually acceptable depends on the client's risk tolerance, leverage, and priorities — all of which are attorney judgment.
 
+For commonly negotiated clauses, `skills/contracts/references/fallback-language-bank.md` provides sample preferred and fallback positions, organized by clause type, that a reviewer can draw on to articulate the direction of a change. The illustrative drafting skeletons in that bank are a drafting aid for the supervising attorney — they are not final clause language and must not be pasted into a deliverable as finished text.
+
 ### Format
 
 Present the Preferred and Fallback positions together, in this pattern:
@@ -141,7 +143,7 @@ Minor imbalance or suboptimal language. A Low-priority issue may not be worth sp
 
 ### How priority and negotiability interact
 
-A High-priority issue that is also Difficult (from the negotiability framework in `skills/contracts/references/negotiability-ratings.md`) means: this matters a lot, and it will be hard to move — strategic decision needed. A High-priority issue that is Negotiable means: spend the effort here.
+Priority (from this section) and negotiability (from `skills/contracts/references/negotiability-ratings.md`) answer different questions. Priority measures how much an issue matters — the size of the risk. The negotiability rating — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — recommends how the lawyer should handle it. A High-priority issue rated Must Push signals that movement is required, not merely desirable; a High-priority issue rated Strong Push signals that the effort is worth spending and movement is realistic. Record both ratings for each material issue.
 
 Priority ratings are draft assessments for attorney confirmation. The attorney adjusts priorities based on the client's actual risk tolerance, leverage, and strategic objectives.
 
@@ -189,7 +191,7 @@ A complete redline point in an issue list has the following components. All are 
 | Current posture | What the contract currently says, in plain language (do not quote at length here; full quotes belong in the risk matrix) |
 | Why it matters | One or two sentences on the risk or imbalance |
 | Priority | High / Medium / Low |
-| Negotiability | S / N / D / W (from `skills/contracts/references/negotiability-ratings.md`) |
+| Negotiability | Must Push / Strong Push / Business Call / Acceptable if Balanced / Low Priority / Do Not Spend Leverage (from `skills/contracts/references/negotiability-ratings.md`) |
 | Preferred Position | Direction of the ideal change |
 | Fallback Position | Direction of the minimum acceptable improvement |
 | Notes and Verification Items | All `[CONFIRM: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and routing instructions |
