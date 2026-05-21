@@ -37,6 +37,7 @@ If the transaction agreement is not provided and the mode is **initialize**, sto
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - A "closing-ready" determination — concluding that all conditions precedent have been satisfied and the deal may close — is a legal judgment. This skill produces a checklist and a blocking analysis to support that judgment; it does not make it. Attorney review and sign-off are required before a closing proceeds.
 - Extract closing conditions and deliverables only from the language actually present in the provided agreement. Do not supplement from model background knowledge about what conditions are typical for a given deal type.

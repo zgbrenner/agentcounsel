@@ -35,6 +35,7 @@ If the draft text is not provided, stop and request it. Do not conduct verificat
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - This skill identifies defects; it does not fix them. Recommended fixes are directions for correction, not substitute analysis.
 - Do not invent corrections. A finding that a citation may be fabricated is a flag for attorney verification, not a conclusion that it is fabricated.
