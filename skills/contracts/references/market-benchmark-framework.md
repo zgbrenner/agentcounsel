@@ -64,6 +64,54 @@ If a benchmark observation cannot be sourced to one of the four permitted source
 
 ---
 
+## A Controlled Vocabulary for Characterizing Terms
+
+A reviewer often needs to give the attorney a sense of *how a term reads* without asserting market data the reviewer cannot supply. The five characterizations below are the permitted way to do that. They replace prohibited statements like "market standard is X" with a qualitative, clearly-labeled impression.
+
+**These five labels are general drafting heuristics.** They reflect a reviewer's qualitative impression of how a clause is constructed — not a measured or verified market position. They become reliable benchmarks **only** when supported by one of the four permitted sources above: a provided client playbook, attorney-provided comparables, the counterparty's prior form, or an attorney-supplied industry norm. Used on their own, every one of these characterizations is an attorney-verification item.
+
+Use exactly one of these labels for any term the reviewer characterizes:
+
+### Common
+
+The clause follows a familiar, frequently-seen drafting pattern for this contract type. "Common" is **not** a claim that the term is "market standard," nor that any particular share of contracts use it. It means only this: the construction is unremarkable, and a reviewer would not be surprised to encounter it. A Common term may still carry real risk for the client — see "Benchmark Observations vs. Risk Ratings" below.
+
+### Aggressive
+
+The clause follows a recognizable pattern but is drafted notably toward one party — typically the drafting party. It is a familiar construction sitting at the one-sided end of the range. Always state which party it favors.
+
+### Unusual
+
+The clause departs from familiar drafting patterns. The reviewer has not commonly seen this construction, or it combines terms in an unexpected way. "Unusual" is a prompt for close attention and explanation — it does not by itself mean the term is unacceptable, but it warrants attorney scrutiny.
+
+### Depends on Leverage
+
+Whether the term reads as ordinary or as one-sided genuinely turns on the parties' relative bargaining power and cannot be characterized without knowing it. Many liability, indemnity, exclusivity, and pricing terms fall here. Record what is known about leverage and flag the gap.
+
+### Needs Attorney Confirmation
+
+The reviewer cannot characterize the term against any reference point — there is no playbook position, no comparable, no counterparty prior form, and the reviewer has no basis to call the term Common, Aggressive, or Unusual. The attorney must supply the market read. This is the correct default whenever the reviewer is uncertain; do not guess at one of the other four labels to avoid using this one.
+
+### Recording a characterization
+
+```
+Clause / Term:        [name of the clause or issue]
+Characterization:     [Common / Aggressive / Unusual /
+                       Depends on Leverage / Needs Attorney Confirmation]
+Basis:                [why the reviewer chose this label]
+Supporting source:    [client playbook / attorney comparable /
+                       counterparty prior form / attorney-supplied norm /
+                       NONE — drafting heuristic only]
+Verification status:  [UNVERIFIED — attorney confirmation required]
+                      OR [CONFIRMED by: (attorney / playbook / comparables)]
+```
+
+When the supporting source is NONE, the characterization is a drafting heuristic only and must be flagged: `[ATTORNEY TO CONFIRM: characterization of [term] as "[label]" is a drafting heuristic, not verified market data — confirm against current market practice for [transaction type / sector / deal size]]`.
+
+These characterizations are the vocabulary used in the **Market Practice Notes** output section of the contracts skills.
+
+---
+
 ## How to Record a Benchmark Observation
 
 Every benchmark observation in a deliverable must follow this structure:

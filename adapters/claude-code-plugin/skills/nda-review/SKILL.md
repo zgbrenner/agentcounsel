@@ -50,7 +50,7 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 
 ## Workflow
 
-This skill draws on shared contract-review reference material in `skills/contracts/references/`: `red-flags.md` (red-flag catalogue), `negotiability-ratings.md` (negotiability rubric), `market-benchmark-framework.md` (benchmarking discipline), `document-type-checklists.md` (per-document-type checklists), and `redline-output-guidance.md` (how to frame redline direction). Consult them at the steps noted below.
+This skill draws on shared contract-review reference material in `skills/contracts/references/`: `red-flags.md` (red-flag catalogue), `negotiability-ratings.md` (six-rating negotiability rubric), `market-benchmark-framework.md` (benchmarking discipline and market-practice vocabulary), `fallback-language-bank.md` (sample preferred and fallback positions by clause type), `document-type-checklists.md` (per-document-type checklists), and `redline-output-guidance.md` (how to frame redline direction). Consult them at the steps noted below.
 
 1. **Confirm inputs.** Verify you have the full NDA text, the client's role, and the transaction context. If anything is missing, request it before proceeding.
 2. **Transaction-context check.** If the NDA is part of an M&A, employment, or investment transaction, stop and route the matter to specialist counsel (see Do Not Use When). Continue only for stand-alone commercial NDAs.
@@ -59,18 +59,19 @@ This skill draws on shared contract-review reference material in `skills/contrac
 5. **Scope check.** Scan for obligations that go beyond confidentiality — for example a standstill, exclusivity, non-solicitation, non-competition, IP assignment, a licensing grant, a right of first refusal, a most-favored-nation clause, broad arbitration, or a governing-law clause reaching beyond confidentiality disputes. Any such term means the document is more than an NDA: flag it prominently and raise the triage rating accordingly.
 6. **Summarize each key term** in plain language, citing the section number as written.
 7. **Assess risk allocation from the client's role.** A receiving party and a disclosing party care about opposite asymmetries; analyze from the client's actual position.
-8. **Benchmark against the client's standard positions.** If a playbook was provided, note where the NDA matches it, where it deviates, and where any term hits a "never accept" position. Record any market comparison using the discipline in `skills/contracts/references/market-benchmark-framework.md`: state the basis for each benchmark and flag every unverified benchmark as an attorney-verification item. AgentCounsel does not supply market data.
+8. **Benchmark against the client's standard positions.** If a playbook was provided, note where the NDA matches it, where it deviates, and where any term hits a "never accept" position. Record any market comparison using the discipline in `skills/contracts/references/market-benchmark-framework.md`: characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm as an attorney-verification item. AgentCounsel does not supply market data.
 9. **Flag missing or one-sided terms** — for example, no standard exclusions, a perpetual term on all information, broad injunctive-relief language, or unilateral obligations in a document labeled "mutual."
 10. **Build the risk table** using `templates/nda-risk-table.md`.
-11. **Rate negotiability.** For each material issue, assign a negotiability rating using the rubric in `skills/contracts/references/negotiability-ratings.md`, with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor.
-12. **Draft prioritized redline points.** Rank issues High / Medium / Low. For each, following `skills/contracts/references/redline-output-guidance.md`, state: the issue, why it matters, a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** — the direction of the change, not final clause language unless the user asks for it. Route substantive drafting to an attorney.
+11. **Rate negotiability.** For each material issue, assign one of the six negotiability ratings from `skills/contracts/references/negotiability-ratings.md` — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor.
+12. **Draft prioritized redline points.** Rank issues High / Medium / Low. For each, following `skills/contracts/references/redline-output-guidance.md`, state: the issue, why it matters, a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** — the direction of the change, not final clause language unless the user asks for it. Use `skills/contracts/references/fallback-language-bank.md` to help articulate preferred and fallback positions. Route substantive drafting to an attorney.
 13. **Internal consistency check.** Confirm that defined terms, party names, cross-references, and section numbers are used consistently throughout the NDA. Flag any defined-but-unused term, used-but-undefined term, broken cross-reference, mismatched party label, or numbering gap.
 14. **Assign an overall triage rating:**
     - **GREEN — clear to route for signature.** Terms are consistent with the client's role and standard positions; no obligations beyond confidentiality; no missing protection that matters for the client's role. Attorney sign-off is still required.
     - **YELLOW — flag for negotiation or approver review.** One or more terms deviate from the client's standard positions or are one-sided but not dealbreakers; or a playbook is silent on a material term; or the scope check found a non-confidentiality term that needs review.
     - **RED — stop and escalate.** A term hits a "never accept" position; there is a structural mismatch (such as unilateral obligations in a "mutual" NDA, or a perpetual term on all information); or the document carries significant non-confidentiality obligations or arises in an M&A, employment, or investment context.
 15. **List attorney verification items** — governing-law implications, enforceability questions, every unverified benchmark, and anything requiring legal judgment.
-16. **Assemble the output** and label it as a draft for attorney review.
+16. **Draft a business-friendly summary.** Produce a short, plain-language summary for non-lawyer stakeholders: the overall posture, the few terms that matter most, what to push on and why, and what — if anything — would stop signature. Use the stakeholder-communication language patterns in `skills/contracts/references/negotiability-ratings.md`. Avoid legal jargon.
+17. **Assemble the output** and label it as a draft for attorney review.
 
 ## Output Format
 
@@ -82,12 +83,13 @@ Deliver:
 4. **Key Terms Table** — plain-language summary with section references.
 5. **Scope Check** — whether the document contains obligations beyond confidentiality, and which.
 6. **Risk Table** — from `templates/nda-risk-table.md`.
-7. **Negotiability Rating** — for each material issue, a rating from the rubric in `skills/contracts/references/negotiability-ratings.md`, with a one-line rationale.
-8. **Market Benchmark Notes** — any market comparison, recorded using `skills/contracts/references/market-benchmark-framework.md`, with its basis stated; every unverified benchmark flagged for attorney verification.
-9. **Prioritized Redline Points** — High / Medium / Low. Each point states the issue, why it matters, a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** (direction of change, not final language), following `skills/contracts/references/redline-output-guidance.md`.
-10. **Internal Consistency Check** — whether defined terms, party names, cross-references, and section numbers are used consistently, with any inconsistency flagged.
-11. **Attorney Verification Items** — open questions and items requiring legal judgment.
-12. **Assumptions** — every assumption made, listed explicitly.
+7. **Negotiability Table** — a table covering each material issue, with columns: Issue | Negotiability Rating | Basis | Recommended Lawyer Action. The Negotiability Rating is one of the six ratings defined in `skills/contracts/references/negotiability-ratings.md` (Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, Do Not Spend Leverage); the Basis is a one-line rationale.
+8. **Market Practice Notes** — any market comparison, recorded using `skills/contracts/references/market-benchmark-framework.md`. Characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm for attorney verification. AgentCounsel does not supply market data.
+9. **Prioritized Redline Points** — High / Medium / Low. Each point states the issue and why it matters, a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** (direction of change, not final language), following `skills/contracts/references/redline-output-guidance.md`. Use `skills/contracts/references/fallback-language-bank.md` to help articulate preferred and fallback positions.
+10. **Business-Friendly Summary** — a short, plain-language summary for non-lawyer stakeholders: the overall posture, the few terms that matter most, what to push on and why, and what — if anything — would stop signature. Avoid legal jargon.
+11. **Internal Consistency Check** — whether defined terms, party names, cross-references, and section numbers are used consistently, with any inconsistency flagged.
+12. **Attorney Verification Items** — open questions and items requiring legal judgment.
+13. **Assumptions** — every assumption made, listed explicitly.
 
 Use placeholders like `[CONFIRM: governing law]` wherever information is missing. Do not fill gaps with invented content.
 
@@ -103,8 +105,10 @@ Use placeholders like `[CONFIRM: governing law]` wherever information is missing
 - [ ] Governing law and jurisdiction are appropriate for the client.
 - [ ] Term and survival periods are acceptable for the type of information being shared.
 - [ ] The triage rating and risk ratings reflect the client's standard positions, role, and leverage.
-- [ ] The red-flag quick scan and negotiability ratings have been reviewed; no market benchmark has been relied on without independent verification.
+- [ ] The red-flag quick scan and the negotiability table have been reviewed; each of the six-scale negotiability ratings reflects the client's actual leverage and standard positions.
+- [ ] Every market-practice characterization has a stated basis and supporting source; no market benchmark has been relied on without independent verification.
 - [ ] Preferred and fallback positions reflect the client's actual leverage and standard positions.
+- [ ] The business-friendly summary accurately reflects the review and neither overstates nor understates any risk.
 - [ ] The internal consistency check is complete; defined terms and cross-references are sound.
 - [ ] A GREEN rating has attorney sign-off before the NDA is signed.
 - [ ] All assumptions and open items are resolved before the review is relied upon.
