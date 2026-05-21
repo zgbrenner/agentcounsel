@@ -1,6 +1,26 @@
 ---
 name: DSAR Workflow
-description: Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review.
+description: "Use when an organization receives a data subject access request (or any data subject rights request) and needs a structured triage, handling record, and response plan for attorney review."
+practice_area: privacy
+task_type: triage
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The data subject rights request"
+  - "The requester's details and identity information"
+  - "The organization's processing and systems context"
+outputs:
+  - "Structured triage, handling record, and response plan for attorney review"
+related_skills:
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/privacy/dpa-review/SKILL.md
+tags:
+  - privacy
+  - dsar
+  - data-subject-rights
+  - triage
+  - request-handling
 ---
 
 # DSAR Workflow

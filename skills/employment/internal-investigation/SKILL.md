@@ -1,6 +1,27 @@
 ---
 name: Internal Investigation
-description: Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review.
+description: "Use when supporting an attorney-directed internal investigation to track evidentiary coverage, connect evidence to issues, and draft a privileged investigation memorandum and audience-specific summaries as draft work product for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The allegation or complaint under investigation"
+  - "Confirmation that the investigation is attorney-directed"
+  - "Documents, evidence, and interview notes"
+outputs:
+  - "Privileged investigation memorandum"
+  - "Audience-specific summaries for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - employment
+  - internal-investigation
+  - privileged
+  - workplace-complaint
+  - evidence
 ---
 
 # Internal Investigation

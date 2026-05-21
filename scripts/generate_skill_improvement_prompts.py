@@ -108,7 +108,12 @@ def frontmatter_value(fm_text: str, field: str) -> str:
         return ""
     value = match.group(1).strip()
     if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+        quote = value[0]
         value = value[1:-1]
+        if quote == '"':
+            value = value.replace('\\"', '"').replace("\\\\", "\\")
+        else:
+            value = value.replace("''", "'")
     return value
 
 

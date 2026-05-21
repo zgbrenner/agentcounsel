@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privilege Log Review — AgentCounsel</title>
-<meta name="description" content="Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.">
+<meta name="description" content="&quot;Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.</p>
+<p>"Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -81,7 +81,27 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Privilege Log Review
-description: Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.
+description: "Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment."
+practice_area: litigation
+task_type: review
+jurisdictions: []
+risk_level: critical
+requires_attorney_review: true
+inputs:
+  - "The privilege log to review"
+  - "The forum and applicable jurisdiction"
+  - "The matter context"
+outputs:
+  - "Privilege log review report sorting entries into confidently privileged, uncertain, and recommend-remove tiers"
+related_skills:
+  - skills/litigation/claim-chart/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - privilege-log
+  - privilege
+  - discovery
+  - ediscovery
 ---
 
 # Privilege Log Review
@@ -197,7 +217,27 @@ Operating rules (these always apply):
 === BEGIN SKILL: Privilege Log Review ===
 ---
 name: Privilege Log Review
-description: Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment.
+description: "Use when conducting a first-pass review of a privilege log to sort entries into three tiers — confidently privileged, uncertain (flagged for attorney decision), and recommend-remove — so attorney review time focuses on the entries that require judgment."
+practice_area: litigation
+task_type: review
+jurisdictions: []
+risk_level: critical
+requires_attorney_review: true
+inputs:
+  - "The privilege log to review"
+  - "The forum and applicable jurisdiction"
+  - "The matter context"
+outputs:
+  - "Privilege log review report sorting entries into confidently privileged, uncertain, and recommend-remove tiers"
+related_skills:
+  - skills/litigation/claim-chart/SKILL.md
+  - skills/litigation/legal-hold/SKILL.md
+tags:
+  - litigation
+  - privilege-log
+  - privilege
+  - discovery
+  - ediscovery
 ---
 
 # Privilege Log Review

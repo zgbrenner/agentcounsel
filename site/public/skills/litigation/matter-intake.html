@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Matter Intake — AgentCounsel</title>
-<meta name="description" content="Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.">
+<meta name="description" content="&quot;Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.</p>
+<p>"Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -86,7 +86,27 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: Matter Intake
-description: Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.
+description: "Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review."
+practice_area: litigation
+task_type: intake
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The parties and their roles"
+  - "A description of the dispute or claims"
+  - "The procedural posture and any known key dates"
+outputs:
+  - "Structured matter intake summary with key dates and immediate action flags for attorney review"
+related_skills:
+  - skills/litigation/subpoena-triage/SKILL.md
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+tags:
+  - litigation
+  - matter-intake
+  - intake
+  - case-assessment
 ---
 
 # Matter Intake
@@ -220,7 +240,27 @@ Operating rules (these always apply):
 === BEGIN SKILL: Matter Intake ===
 ---
 name: Matter Intake
-description: Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.
+description: "Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review."
+practice_area: litigation
+task_type: intake
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The parties and their roles"
+  - "A description of the dispute or claims"
+  - "The procedural posture and any known key dates"
+outputs:
+  - "Structured matter intake summary with key dates and immediate action flags for attorney review"
+related_skills:
+  - skills/litigation/subpoena-triage/SKILL.md
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+tags:
+  - litigation
+  - matter-intake
+  - intake
+  - case-assessment
 ---
 
 # Matter Intake

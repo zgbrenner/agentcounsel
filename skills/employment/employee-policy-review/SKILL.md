@@ -1,6 +1,27 @@
 ---
 name: Employee Policy Review
-description: Use when reviewing an employee handbook or individual workplace policy — or a proposed change to one — for clarity, internal consistency, completeness, and legal risk flags requiring attorney and jurisdiction-specific review.
+description: "Use when reviewing an employee handbook or individual workplace policy — or a proposed change to one — for clarity, internal consistency, completeness, and legal risk flags requiring attorney and jurisdiction-specific review."
+practice_area: employment
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The employee handbook or workplace policy text"
+  - "Or a proposed change to an existing policy"
+  - "The jurisdictions and workforce the policy covers"
+outputs:
+  - "Gap and issues table"
+  - "Prioritized legal-risk flags for attorney and jurisdiction-specific review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/employment/severance-review/SKILL.md
+tags:
+  - employment
+  - handbook
+  - workplace-policy
+  - policy-review
+  - gap-analysis
 ---
 
 # Employee Policy Review

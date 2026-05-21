@@ -1,6 +1,26 @@
 ---
 name: Enforcement Risk Memo
-description: Use when structuring a memo that assesses potential enforcement exposure for a described practice, conduct, or set of facts, to produce attorney-ready draft analysis for review.
+description: "Use when structuring a memo that assesses potential enforcement exposure for a described practice, conduct, or set of facts, to produce attorney-ready draft analysis for review."
+practice_area: regulatory
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The practice, conduct, or facts at issue"
+  - "The relevant rules or regulatory regime"
+  - "The organization's context and objectives"
+outputs:
+  - "Draft enforcement risk memo assessing exposure for attorney review"
+related_skills:
+  - skills/regulatory/compliance-gap-matrix/SKILL.md
+  - skills/regulatory/rule-change-summary/SKILL.md
+  - skills/legal-methodology/risk-assessment/SKILL.md
+tags:
+  - regulatory
+  - enforcement-risk
+  - exposure-analysis
+  - regulatory-risk
 ---
 
 # Enforcement Risk Memo

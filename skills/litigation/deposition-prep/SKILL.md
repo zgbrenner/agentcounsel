@@ -1,6 +1,27 @@
 ---
 name: Deposition Preparation
-description: Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition.
+description: "Use when building a structured deposition outline from the case theory, witness profile, and documentary record to produce a focused, attorney-ready map for taking or defending a deposition."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The case theory"
+  - "The witness profile"
+  - "The documentary record"
+outputs:
+  - "Structured deposition outline for taking or defending a deposition"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/brief-section-drafter/SKILL.md
+tags:
+  - litigation
+  - deposition
+  - discovery
+  - witness-prep
+  - outline
 ---
 
 # Deposition Preparation

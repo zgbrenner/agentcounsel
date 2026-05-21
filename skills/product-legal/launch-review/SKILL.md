@@ -1,6 +1,29 @@
 ---
 name: Launch Review
-description: Use when conducting a pre-launch legal issue-spotting review for a new product or feature to produce a structured issues register and a draft go/hold/conditions recommendation for attorney sign-off.
+description: "Use when conducting a pre-launch legal issue-spotting review for a new product or feature to produce a structured issues register and a draft go/hold/conditions recommendation for attorney sign-off."
+practice_area: product-legal
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "A description of the product or feature to launch"
+  - "The data, claims, and integrations involved"
+  - "The launch timeline and markets"
+outputs:
+  - "Structured issues register"
+  - "Draft go / hold / conditions recommendation for attorney sign-off"
+related_skills:
+  - skills/product-legal/marketing-claims-review/SKILL.md
+  - skills/product-legal/ai-feature-review/SKILL.md
+  - skills/privacy/privacy-policy-gap-review/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - product-legal
+  - launch-review
+  - issue-spotting
+  - product-counsel
+  - go-no-go
 ---
 
 # Launch Review

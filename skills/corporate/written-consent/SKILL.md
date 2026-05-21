@@ -1,6 +1,25 @@
 ---
 name: Written Consent
-description: Use when drafting a board or board-committee action by written consent in lieu of a meeting to produce a structured draft for attorney review.
+description: "Use when drafting a board or board-committee action by written consent in lieu of a meeting to produce a structured draft for attorney review."
+practice_area: corporate
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The corporate action to be approved"
+  - "The signatories and the approving body"
+  - "The intended effective date"
+outputs:
+  - "Draft action by written consent for attorney review and sign-off"
+related_skills:
+  - skills/corporate/board-minutes/SKILL.md
+tags:
+  - corporate
+  - governance
+  - written-consent
+  - board-action
+  - drafting
 ---
 
 # Written Consent

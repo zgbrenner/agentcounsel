@@ -1,6 +1,26 @@
 ---
 name: Red-Team Verifier
-description: Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues.
+description: "Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues."
+practice_area: legal-methodology
+task_type: verification
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The legal draft or AI output to verify"
+  - "The sources, record, or instructions it relied on"
+  - "The intended use and audience of the output"
+outputs:
+  - "Verification findings report with a reliability verdict for attorney review"
+related_skills:
+  - skills/legal-methodology/source-validation/SKILL.md
+  - skills/legal-methodology/risk-assessment/SKILL.md
+tags:
+  - legal-methodology
+  - quality-control
+  - verification
+  - red-team
+  - hallucination-check
 ---
 
 # Red-Team Verifier

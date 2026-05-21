@@ -1,6 +1,27 @@
 ---
 name: Redline Summary
-description: Use when summarizing the substantive changes between two versions of a contract, a set of tracked changes, or a base agreement plus a series of amendments — to produce a change-by-change table and narrative of the most material shifts for attorney review.
+description: "Use when summarizing the substantive changes between two versions of a contract, a set of tracked changes, or a base agreement plus a series of amendments — to produce a change-by-change table and narrative of the most material shifts for attorney review."
+practice_area: contracts
+task_type: summarization
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "Two versions of a contract, a set of tracked changes, or a base agreement plus amendments"
+  - "The client's role under the agreement"
+  - "Optional: the issues the reviewer most cares about"
+outputs:
+  - "Change-by-change comparison table"
+  - "Narrative of the most material shifts for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+  - skills/contracts/sow-review/SKILL.md
+tags:
+  - contracts
+  - redline
+  - contract-comparison
+  - change-summary
 ---
 
 # Redline Summary

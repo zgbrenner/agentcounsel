@@ -1,6 +1,28 @@
 ---
 name: Privacy Policy Gap Review
-description: Use when reviewing a published privacy policy or privacy notice to identify gaps, internal inconsistencies, and discrepancies between what the policy says and the organization's described actual data practices.
+description: "Use when reviewing a published privacy policy or privacy notice to identify gaps, internal inconsistencies, and discrepancies between what the policy says and the organization's described actual data practices."
+practice_area: privacy
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The published privacy policy or notice"
+  - "A description of the organization's actual data practices"
+  - "The applicable products and processing context"
+outputs:
+  - "Gap table comparing the policy to actual practice"
+  - "Recommendations for attorney review"
+related_skills:
+  - skills/privacy/dpa-review/SKILL.md
+  - skills/privacy/dsar-workflow/SKILL.md
+  - skills/privacy/pia-generation/SKILL.md
+tags:
+  - privacy
+  - privacy-policy
+  - gap-analysis
+  - policy-review
+  - disclosures
 ---
 
 # Privacy Policy Gap Review

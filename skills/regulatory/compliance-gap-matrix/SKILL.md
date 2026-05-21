@@ -1,6 +1,28 @@
 ---
 name: Compliance Gap Matrix
-description: Use when mapping a set of regulatory or framework requirements against an organization's current controls to surface gaps, prioritize remediation, and produce an attorney-ready draft gap analysis.
+description: "Use when mapping a set of regulatory or framework requirements against an organization's current controls to surface gaps, prioritize remediation, and produce an attorney-ready draft gap analysis."
+practice_area: regulatory
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The regulatory or framework requirement source"
+  - "The organization's current controls"
+  - "The scope and business context of the assessment"
+outputs:
+  - "Compliance gap matrix mapping requirements to controls"
+  - "Prioritized remediation for attorney review"
+related_skills:
+  - skills/regulatory/rule-change-summary/SKILL.md
+  - skills/regulatory/enforcement-risk-memo/SKILL.md
+  - skills/corporate/entity-compliance/SKILL.md
+tags:
+  - regulatory
+  - compliance
+  - gap-analysis
+  - controls-mapping
+  - remediation
 ---
 
 # Compliance Gap Matrix

@@ -1,6 +1,26 @@
 ---
 name: Matter Intake
-description: Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review.
+description: "Use when opening a new litigation or dispute matter to produce a structured intake summary capturing parties, claims, jurisdiction, key dates, and immediate action flags for attorney review."
+practice_area: litigation
+task_type: intake
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The parties and their roles"
+  - "A description of the dispute or claims"
+  - "The procedural posture and any known key dates"
+outputs:
+  - "Structured matter intake summary with key dates and immediate action flags for attorney review"
+related_skills:
+  - skills/litigation/subpoena-triage/SKILL.md
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+tags:
+  - litigation
+  - matter-intake
+  - intake
+  - case-assessment
 ---
 
 # Matter Intake

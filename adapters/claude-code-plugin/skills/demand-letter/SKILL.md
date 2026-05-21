@@ -1,6 +1,27 @@
 ---
 name: Demand Letter
-description: Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending.
+description: "Use when drafting a demand letter for attorney review — running a structured intake, a pre-draft risk gate, and a draft with every legal conclusion, damages figure, and deadline flagged for attorney confirmation before sending."
+practice_area: litigation
+task_type: drafting
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The underlying facts"
+  - "The client's position and the relief sought"
+  - "Any deadlines and the recipient's identity"
+outputs:
+  - "Draft demand letter with legal conclusions, damages figures, and deadlines flagged for attorney confirmation"
+related_skills:
+  - skills/litigation/litigation-chronology/SKILL.md
+  - skills/litigation/matter-intake/SKILL.md
+  - skills/ip/cease-and-desist-response/SKILL.md
+tags:
+  - litigation
+  - demand-letter
+  - pre-litigation
+  - drafting
+  - damages
 ---
 
 # Demand Letter

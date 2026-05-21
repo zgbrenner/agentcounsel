@@ -1,6 +1,29 @@
 ---
 name: Infringement Triage
-description: Use when a client needs a first-pass, structured triage of a potential intellectual property infringement issue — identifying the key factors, flagging their direction, and routing to IP counsel — without concluding whether infringement occurred.
+description: "Use when a client needs a first-pass, structured triage of a potential intellectual property infringement issue — identifying the key factors, flagging their direction, and routing to IP counsel — without concluding whether infringement occurred."
+practice_area: ip
+task_type: triage
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The intellectual property right or rights at issue"
+  - "The parties' posture and relationship"
+  - "The available evidence of potential infringement"
+outputs:
+  - "Infringement triage memo identifying key factors and routing to IP counsel"
+related_skills:
+  - skills/ip/cease-and-desist-response/SKILL.md
+  - skills/ip/fto-triage/SKILL.md
+  - skills/ip/trademark-clearance-triage/SKILL.md
+  - skills/ip/dmca-takedown/SKILL.md
+  - skills/litigation/demand-letter/SKILL.md
+tags:
+  - ip
+  - infringement
+  - triage
+  - ip-enforcement
+  - routing
 ---
 
 # Infringement Triage

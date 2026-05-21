@@ -1,6 +1,25 @@
 ---
 name: Board Minutes
-description: Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review.
+description: "Use when drafting minutes of a board of directors or board-committee meeting as a corporate record, producing a structured draft for attorney review."
+practice_area: corporate
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "Meeting details: entity, body, date, time, and location"
+  - "Attendance and quorum information"
+  - "Agenda items, materials presented, and actions taken"
+outputs:
+  - "Draft minutes of the board or committee meeting for attorney review"
+related_skills:
+  - skills/corporate/written-consent/SKILL.md
+tags:
+  - corporate
+  - governance
+  - board-minutes
+  - corporate-records
+  - drafting
 ---
 
 # Board Minutes

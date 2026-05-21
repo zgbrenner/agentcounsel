@@ -1,6 +1,27 @@
 ---
 name: Diligence Issue Extraction
-description: Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review.
+description: "Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review."
+practice_area: corporate
+task_type: extraction
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The provided due-diligence documents"
+  - "Deal context and transaction type"
+  - "The materiality threshold for the review"
+outputs:
+  - "Severity-sorted diligence issues memo for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/corporate/material-contract-schedule/SKILL.md
+  - skills/corporate/closing-checklist/SKILL.md
+tags:
+  - corporate
+  - due-diligence
+  - m-and-a
+  - issue-extraction
+  - diligence
 ---
 
 # Diligence Issue Extraction

@@ -1,6 +1,28 @@
 ---
 name: SOW Review
-description: Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement.
+description: "Use when reviewing a statement of work or work order to assess scope clarity, deliverables, acceptance criteria, timeline, pricing, and — critically — consistency with the governing master agreement."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The statement of work or work order text"
+  - "The governing master services agreement"
+  - "The client's role and the business context"
+outputs:
+  - "Structured SOW review"
+  - "Issues table flagging scope, deliverable, and MSA-consistency gaps"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+tags:
+  - contracts
+  - sow
+  - statement-of-work
+  - contract-review
+  - msa-consistency
 ---
 
 # SOW Review

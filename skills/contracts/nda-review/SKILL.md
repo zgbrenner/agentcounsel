@@ -1,6 +1,29 @@
 ---
 name: NDA Review
-description: Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.
+description: "Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full NDA or confidentiality agreement text"
+  - "The client's role: disclosing, receiving, or mutual"
+  - "The business and transaction context"
+  - "Optional: the client's standard NDA positions or playbook"
+outputs:
+  - "Triage rating (route, flag, or stop)"
+  - "Structured risk summary"
+  - "Prioritized redline points for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+tags:
+  - contracts
+  - nda
+  - confidentiality
+  - contract-review
+  - risk-triage
 ---
 
 # NDA Review

@@ -1,6 +1,27 @@
 ---
 name: Severance Review
-description: Use when reviewing a severance or separation agreement to produce a structured analysis of consideration, release scope, restrictive covenants, and open legal issues for attorney review.
+description: "Use when reviewing a severance or separation agreement to produce a structured analysis of consideration, release scope, restrictive covenants, and open legal issues for attorney review."
+practice_area: employment
+task_type: review
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The severance or separation agreement text"
+  - "The party the review is for: employer or employee"
+  - "The termination and consideration context"
+outputs:
+  - "Structured analysis of consideration, release scope, and restrictive covenants"
+  - "Open legal issues for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/employment/termination-risk/SKILL.md
+tags:
+  - employment
+  - severance
+  - separation-agreement
+  - release-of-claims
+  - contract-review
 ---
 
 # Severance Review

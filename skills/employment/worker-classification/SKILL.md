@@ -1,6 +1,25 @@
 ---
 name: Worker Classification
-description: Use when organizing the facts of a proposed worker engagement and structuring an analysis of whether the worker should be classified as an employee or an independent contractor, producing a draft classification analysis memo for attorney review.
+description: "Use when organizing the facts of a proposed worker engagement and structuring an analysis of whether the worker should be classified as an employee or an independent contractor, producing a draft classification analysis memo for attorney review."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The proposed worker engagement facts"
+  - "The purpose of the classification analysis"
+  - "The applicable jurisdiction"
+outputs:
+  - "Draft worker-classification analysis memo for attorney review"
+related_skills:
+  - skills/employment/termination-risk/SKILL.md
+  - skills/employment/hiring-review/SKILL.md
+tags:
+  - employment
+  - worker-classification
+  - independent-contractor
+  - misclassification
 ---
 
 # Worker Classification

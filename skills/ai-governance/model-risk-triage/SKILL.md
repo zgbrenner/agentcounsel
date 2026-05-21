@@ -1,6 +1,29 @@
 ---
 name: Model Risk Triage
-description: Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review.
+description: "Use when triaging the legal and governance risk of a specific AI model or AI system before or during deployment, to produce a structured risk register and recommended controls for attorney and governance review."
+practice_area: ai-governance
+task_type: triage
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "Description of the AI model or system"
+  - "Its intended use and deployment context"
+  - "The data it processes and its individual-facing outputs"
+outputs:
+  - "Structured risk register"
+  - "Risk tier"
+  - "Recommended controls for attorney and governance review"
+related_skills:
+  - skills/ai-governance/ai-use-case-intake/SKILL.md
+  - skills/ai-governance/ai-vendor-terms-review/SKILL.md
+  - skills/product-legal/ai-feature-review/SKILL.md
+tags:
+  - ai-governance
+  - ai
+  - model-risk
+  - risk-triage
+  - controls
 ---
 
 # Model Risk Triage

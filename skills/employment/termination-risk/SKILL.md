@@ -1,6 +1,26 @@
 ---
 name: Termination Risk
-description: Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs.
+description: "Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs."
+practice_area: employment
+task_type: analysis
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The facts surrounding the proposed termination"
+  - "The stated reason for the termination"
+  - "The employee's history, including performance and protected activity"
+outputs:
+  - "Risk checklist and factor analysis for attorney review before the termination"
+related_skills:
+  - skills/employment/worker-classification/SKILL.md
+  - skills/employment/protected-leave-review/SKILL.md
+  - skills/employment/severance-review/SKILL.md
+tags:
+  - employment
+  - termination
+  - wrongful-termination
+  - risk-assessment
 ---
 
 # Termination Risk

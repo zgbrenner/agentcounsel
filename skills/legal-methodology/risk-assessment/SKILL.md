@@ -1,6 +1,26 @@
 ---
 name: Risk Assessment
-description: Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review.
+description: "Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review."
+practice_area: legal-methodology
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The situation to be assessed"
+  - "The known facts"
+  - "The client's posture and objectives"
+outputs:
+  - "Prioritized risk register with severity bands and a summary for attorney review"
+related_skills:
+  - skills/legal-research/legal-research-memo/SKILL.md
+  - skills/contracts/nda-review/SKILL.md
+  - skills/legal-methodology/statutory-interpretation/SKILL.md
+tags:
+  - legal-methodology
+  - risk-assessment
+  - risk-register
+  - prioritization
 ---
 
 # Risk Assessment

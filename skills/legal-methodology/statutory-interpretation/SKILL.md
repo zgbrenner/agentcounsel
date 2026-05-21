@@ -1,6 +1,26 @@
 ---
 name: Statutory Interpretation
-description: Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review.
+description: "Use when applying a disciplined analytical method to parse and interpret a statutory, regulatory, or contractual provision — mapping structure, defined terms, and competing readings — to produce a structured interpretation worksheet for attorney review."
+practice_area: legal-methodology
+task_type: analysis
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The statutory, regulatory, or contractual provision text"
+  - "The interpretive question to be resolved"
+  - "Relevant context such as definitions and related provisions"
+outputs:
+  - "Structured interpretation worksheet mapping competing readings for attorney review"
+related_skills:
+  - skills/legal-research/legal-research-memo/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/legal-methodology/risk-assessment/SKILL.md
+tags:
+  - legal-methodology
+  - statutory-interpretation
+  - construction
+  - provision-analysis
 ---
 
 # Statutory Interpretation

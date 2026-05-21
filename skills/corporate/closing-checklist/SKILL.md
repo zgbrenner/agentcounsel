@@ -1,6 +1,28 @@
 ---
 name: Closing Checklist
-description: Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review.
+description: "Use when building or updating a transaction closing checklist — conditions precedent, closing deliverables, and pre-closing actions — and identifying what is blocking a deal closing, as draft work product for attorney review."
+practice_area: corporate
+task_type: drafting
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The transaction agreement"
+  - "Deal context and structure"
+  - "Diligence findings and current deal status"
+outputs:
+  - "Transaction closing checklist"
+  - "Blocking-item analysis for attorney review"
+related_skills:
+  - skills/corporate/diligence-issue-extraction/SKILL.md
+  - skills/corporate/material-contract-schedule/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
+tags:
+  - corporate
+  - m-and-a
+  - closing-checklist
+  - transaction
+  - deal-management
 ---
 
 # Closing Checklist

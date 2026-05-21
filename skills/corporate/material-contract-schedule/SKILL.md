@@ -1,6 +1,26 @@
 ---
 name: Material Contract Schedule
-description: Use when building the disclosure schedule that lists contracts meeting a transaction agreement's definition of "Material Contract," producing a draft for attorney review before it is delivered as an exhibit.
+description: "Use when building the disclosure schedule that lists contracts meeting a transaction agreement's definition of \"Material Contract,\" producing a draft for attorney review before it is delivered as an exhibit."
+practice_area: corporate
+task_type: extraction
+jurisdictions: []
+risk_level: high
+requires_attorney_review: true
+inputs:
+  - "The transaction agreement's definition of \"Material Contract\""
+  - "The contract data or inventory to assess"
+  - "Deal context for the disclosure schedule"
+outputs:
+  - "Draft material-contract disclosure schedule for attorney review"
+related_skills:
+  - skills/corporate/diligence-issue-extraction/SKILL.md
+  - skills/corporate/closing-checklist/SKILL.md
+tags:
+  - corporate
+  - m-and-a
+  - disclosure-schedule
+  - material-contracts
+  - transaction
 ---
 
 # Material Contract Schedule

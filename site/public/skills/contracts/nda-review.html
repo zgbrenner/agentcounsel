@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NDA Review — AgentCounsel</title>
-<meta name="description" content="Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.">
+<meta name="description" content="&quot;Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.&quot;">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 <div class="trigger">
 <h2>Agent Trigger Description</h2>
-<p>Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.</p>
+<p>"Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review."</p>
 </div>
 
 <section class="skill-section" id="purpose">
@@ -72,7 +72,30 @@
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">---
 name: NDA Review
-description: Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.
+description: "Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full NDA or confidentiality agreement text"
+  - "The client's role: disclosing, receiving, or mutual"
+  - "The business and transaction context"
+  - "Optional: the client's standard NDA positions or playbook"
+outputs:
+  - "Triage rating (route, flag, or stop)"
+  - "Structured risk summary"
+  - "Prioritized redline points for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+tags:
+  - contracts
+  - nda
+  - confidentiality
+  - contract-review
+  - risk-triage
 ---
 
 # NDA Review
@@ -196,7 +219,30 @@ Operating rules (these always apply):
 === BEGIN SKILL: NDA Review ===
 ---
 name: NDA Review
-description: Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review.
+description: "Use when reviewing a non-disclosure or confidentiality agreement to produce a triage rating (route, flag, or stop), a structured risk summary, and prioritized redline points for attorney review."
+practice_area: contracts
+task_type: review
+jurisdictions: []
+risk_level: medium
+requires_attorney_review: true
+inputs:
+  - "The full NDA or confidentiality agreement text"
+  - "The client's role: disclosing, receiving, or mutual"
+  - "The business and transaction context"
+  - "Optional: the client's standard NDA positions or playbook"
+outputs:
+  - "Triage rating (route, flag, or stop)"
+  - "Structured risk summary"
+  - "Prioritized redline points for attorney review"
+related_skills:
+  - skills/contracts/contract-risk-review/SKILL.md
+  - skills/contracts/redline-summary/SKILL.md
+tags:
+  - contracts
+  - nda
+  - confidentiality
+  - contract-review
+  - risk-triage
 ---
 
 # NDA Review
