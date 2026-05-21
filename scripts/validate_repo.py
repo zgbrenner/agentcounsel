@@ -118,7 +118,9 @@ def iter_text_files():
     for path in sorted(REPO_ROOT.rglob("*")):
         if not path.is_file():
             continue
-        if ".git" in path.parts:
+        # Skip VCS internals and generated build output (dist/ is produced by
+        # scripts/build_platform_packs.py; node_modules by the site tooling).
+        if {".git", "dist", "node_modules"} & set(path.parts):
             continue
         if path.suffix.lower() in TEXT_SUFFIXES:
             yield path

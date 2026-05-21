@@ -26,6 +26,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `skills/contracts/references/`: five shared contract-review reference files — `red-flags.md`, `negotiability-ratings.md`, `market-benchmark-framework.md`, `document-type-checklists.md`, and `redline-output-guidance.md`.
 - `matter-workspaces/`: four single-file matter scaffolds — litigation, contract review, privacy, and regulatory.
 - `site/`: a static, browser-readable skill catalog generated from `skills/` by a zero-dependency Node script — a homepage, practice-area pages, per-skill pages (with the rendered sections, the full raw `SKILL.md`, and Copy Full Skill / Copy One-Off Prompt buttons), platform setup guides, and `llms.txt` / `llms-full.txt`. Build with `npm run build` from `site/`; documented in `site/README.md` and the root `README.md`.
+- `scripts/build_platform_packs.py`: generates platform-specific install packs into `dist/` from the canonical `skills/` and `core/` — consolidated Markdown packs for ChatGPT Projects, per-practice-area ZIPs for Claude Projects and Gemini Notebooks, instruction files for repo agents (Codex, Claude Code, Cursor), and `index.json` / `manifest.json` / `SKILL_PACKS_INDEX.md`. The build self-validates skill structure, pack contents, index coverage, and safety language. Standard library only; documented in `README.md`.
 
 ### Changed
 
@@ -34,7 +35,7 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 - `docs/MIGRATION_PLAN_FROM_AGNOSTIC_SKILLS.md`: refreshed to record Phases A–C as executed and to add a Phase D for newly identified gaps (five new source prompts and the unrun Phase A improvement passes).
 - Phase D2: nine existing skills improved with content adapted from `agnostic-skills-for-legal` — `litigation-chronology`, `matter-intake`, and `subpoena-triage` (litigation); `dpa-review` and `dsar-workflow` (privacy); `termination-risk` and `employee-policy-review` (employment); and `redline-summary` and `contract-risk-review` (contracts).
 - `nda-review` and `contract-risk-review`: added a Red Flags Quick Scan, a Negotiability Rating, Market Benchmark Notes, Preferred / Fallback Position and Suggested Redline Direction for each redline point, and an Internal Consistency Check — all drawing on the new `skills/contracts/references/` material.
-- `scripts/validate_repo.py`: now recognizes shared `references/` folders under a practice area as non-skill directories, validates skill paths referenced in `COMMANDS.md`, and checks that the library's expected top-level directories exist. README practice-area and skills badges updated to 12 practice areas and 58 skills.
+- `scripts/validate_repo.py`: now recognizes shared `references/` folders under a practice area as non-skill directories, validates skill paths referenced in `COMMANDS.md`, and checks that the library's expected top-level directories exist. It also skips generated build output (`dist/`, `node_modules/`) when scanning. README practice-area and skills badges updated to 12 practice areas and 58 skills.
 
 ### Fixed
 
