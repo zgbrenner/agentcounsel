@@ -47,7 +47,7 @@
 </section>
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
-<ul><li>The request is to conclude whether the document or a term is enforceable or legally sufficient.</li><li>The request is to determine the legal effect of a release, covenant, or condition, or to draft final clause language.</li><li>The request is for legal advice or a deadline calculation.</li></ul>
+<ul><li>The request is to conclude whether the document or a term is enforceable or legally sufficient, or to conclude plan feasibility.</li><li>The request is to determine the legal effect of a release, covenant, or condition, or to draft final clause language.</li><li>The request is for legal advice or a deadline calculation.</li></ul>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -60,6 +60,7 @@
 <section class="skill-section" id="output-format">
 <h2>Output Format</h2>
 <ol><li><strong>Capability and reliance notice</strong> — draft only; not legal advice; no enforceability or sufficiency determination; attorney review required.</li><li><strong>Gates table</strong> — transaction type, parties, the user's role and perspective, document reference.</li><li><strong>Key terms table</strong> — source-cited summary of the restructuring terms.</li><li><strong>Issue list and risk matrix</strong> — issue | trigger | source | concern for the user's side | risk (High/Medium/Low) | attorney follow-up.</li><li><strong>Missing terms</strong> — expected terms marked <code>not found</code>.</li><li><strong>Negotiation points</strong> — direction of change only, from the user's side.</li><li><strong>Attorney verification checklist</strong> and <strong>assumptions</strong>.</li></ol>
+<p>The key terms table and issue list follow the <strong>Restructuring Term Sheet Issue List</strong> structure in <code>skills/bankruptcy-restructuring/references/output-patterns.md</code>.</p>
 </section>
 <section class="skill-section" id="attorney-verification-checklist">
 <h2>Attorney Verification Checklist</h2>
@@ -115,8 +116,9 @@ citations; build a role-aware issue list and risk matrix; flag missing terms;
 and list negotiation points and verification questions.
 
 **This skill does not:** conclude whether a document or any term is enforceable
-or legally sufficient; determine the legal effect of releases, covenants, or
-conditions; draft final clause language; or constitute legal advice.
+or legally sufficient; conclude plan feasibility; determine the legal effect of
+releases, covenants, or conditions; draft final clause language; or constitute
+legal advice.
 
 ## Use When
 
@@ -148,7 +150,7 @@ as `not provided` and return the missing-information list first.
 ## Do Not Use When
 
 - The request is to conclude whether the document or a term is enforceable or
-  legally sufficient.
+  legally sufficient, or to conclude plan feasibility.
 - The request is to determine the legal effect of a release, covenant, or
   condition, or to draft final clause language.
 - The request is for legal advice or a deadline calculation.
@@ -201,6 +203,10 @@ as `not provided` and return the missing-information list first.
 5. **Missing terms** — expected terms marked `not found`.
 6. **Negotiation points** — direction of change only, from the user's side.
 7. **Attorney verification checklist** and **assumptions**.
+
+The key terms table and issue list follow the **Restructuring Term Sheet Issue
+List** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
 
 ## Example Request and Expected Output Shape
 
@@ -288,8 +294,9 @@ citations; build a role-aware issue list and risk matrix; flag missing terms;
 and list negotiation points and verification questions.
 
 **This skill does not:** conclude whether a document or any term is enforceable
-or legally sufficient; determine the legal effect of releases, covenants, or
-conditions; draft final clause language; or constitute legal advice.
+or legally sufficient; conclude plan feasibility; determine the legal effect of
+releases, covenants, or conditions; draft final clause language; or constitute
+legal advice.
 
 ## Use When
 
@@ -321,7 +328,7 @@ as `not provided` and return the missing-information list first.
 ## Do Not Use When
 
 - The request is to conclude whether the document or a term is enforceable or
-  legally sufficient.
+  legally sufficient, or to conclude plan feasibility.
 - The request is to determine the legal effect of a release, covenant, or
   condition, or to draft final clause language.
 - The request is for legal advice or a deadline calculation.
@@ -374,6 +381,10 @@ as `not provided` and return the missing-information list first.
 5. **Missing terms** — expected terms marked `not found`.
 6. **Negotiation points** — direction of change only, from the user's side.
 7. **Attorney verification checklist** and **assumptions**.
+
+The key terms table and issue list follow the **Restructuring Term Sheet Issue
+List** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
 
 ## Example Request and Expected Output Shape
 

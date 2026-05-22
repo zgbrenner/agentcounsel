@@ -137,6 +137,10 @@ intake.
 7. **Missing information** and **document request list**.
 8. **Attorney verification questions** and **assumptions**.
 
+The fact register and risk themes follow the **Bankruptcy Matter Intake
+Matrix** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run bankruptcy-matter-intake for a fictional matter where

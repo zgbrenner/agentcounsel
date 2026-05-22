@@ -129,6 +129,9 @@ first.
 6. **Missing documents** and **attorney verification questions**.
 7. **Assumptions and unresolved items**.
 
+The transfer timeline follows the **Preference Demand Response Timeline**
+structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run preference-demand-response-triage for a fictional
