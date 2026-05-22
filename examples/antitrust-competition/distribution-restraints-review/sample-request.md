@@ -1,11 +1,11 @@
-# Sample Request — merger-antitrust-issue-spotter
+# Sample Request — distribution-restraints-review
 
-Use the **merger-antitrust-issue-spotter** skill to prepare a draft for attorney review.
+Use the **distribution-restraints-review** skill to prepare a draft for attorney review.
 
 - Jurisdiction: United States (state law overlay: unknown)
 - Industry/market context: fictional B2B software logistics tools
 - Party role: Client is supplier/distributor (`not provided` for some affiliates)
-- Conduct type: merger-antitrust-issue-spotter
+- Conduct type: distribution-restraints-review
 - Review stage: pre-signing planning
 - Document set: Memos A/B, Draft Agreement, Email Thread, Meeting Notes (fictional)
 

@@ -1,4 +1,4 @@
-# Sample Output — merger-antitrust-issue-spotter
+# Sample Output — distribution-restraints-review
 
 ## Draft for Attorney Review Only (Not Legal Advice)
 
@@ -8,7 +8,7 @@
 | Jurisdiction | Provided (federal); state overlay `unknown` | User facts |
 | Industry / Market Context | Provided (enterprise route-optimization SaaS) | Intake Memo A §1 |
 | Party Role | Client vendor role provided; affiliate role `not provided` | Intake Memo A §2 |
-| Conduct Type | merger-antitrust-issue-spotter | User request |
+| Conduct Type | distribution-restraints-review | User request |
 | Review Stage | Pre-signing planning | User request |
 
 ### Primary Tables
