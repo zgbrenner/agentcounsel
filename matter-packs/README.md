@@ -50,6 +50,7 @@ matter-packs/
   real-estate.md                  - workflow bundles for the Real Estate practice area
   securities-capital-markets.md   - workflow bundles for the Securities / Capital Markets practice area
   tax.md                          - workflow bundles for the Tax practice area
+  trusts-estates.md               - workflow bundles for the Trusts & Estates practice area
 ```
 
 To add a matter pack for another practice area, create

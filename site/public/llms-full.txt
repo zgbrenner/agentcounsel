@@ -1326,115 +1326,115 @@ Use when:
   - The user needs the tender checked for completeness, supporting documents, and risk flags.
   - A draft tender needs attorney-review revisions before finalizing.
 
-## Family Law (12 skills)
+## Trusts & Estates (12 skills)
 
-### Asset / Debt Schedule Builder
-Path: skills/family-law/asset-debt-schedule-builder/SKILL.md
-Catalog page: skills/family-law/asset-debt-schedule-builder.html
-Trigger: "Use when building a source-cited property and debt schedule from user-provided facts and documents for a family law matter, for attorney review."
+### Asset Liability Inventory Builder
+Path: skills/trusts-estates/asset-liability-inventory-builder/SKILL.md
+Catalog page: skills/trusts-estates/asset-liability-inventory-builder.html
+Trigger: "Use when building a structured, source-cited inventory of estate or trust assets and liabilities for attorney review, without valuing assets."
 Use when:
-  - A family law matter needs an organized, source-cited schedule of assets and debts for an attorney.
-  - Statements, deeds, account records, and loan documents must be assembled into one schedule.
-  - An attorney needs a property/debt schedule before disclosure, negotiation, or settlement review.
+  - An estate or trust's assets and liabilities must be organized into an
+  - A planning, probate, or administration matter needs the estate's composition
+  - A team needs missing and ambiguous assets surfaced before substantive work.
 
-### Child Support Facts Intake
-Path: skills/family-law/child-support-facts-intake/SKILL.md
-Catalog page: skills/family-law/child-support-facts-intake.html
-Trigger: "Use when gathering the facts relevant to a child support review into a structured intake table, missing-documents list, and questions for counsel — without calculating support."
+### Beneficiary Designation Review
+Path: skills/trusts-estates/beneficiary-designation-review/SKILL.md
+Catalog page: skills/trusts-estates/beneficiary-designation-review.html
+Trigger: "Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review."
 Use when:
-  - A child support review is starting and the relevant facts must be organized for an attorney.
-  - Income, cost, and parenting-time facts must be captured in a structured intake before counsel applies the governing guideline.
-  - An attorney needs a missing-documents list before a support analysis.
+  - Beneficiary designations, account titling, and TOD/POD forms must be
+  - A team needs the designations compared against will or trust intent, where
+  - A planning or administration matter needs designation alignment reviewed.
 
-### Custody / Parenting Facts Chronology
-Path: skills/family-law/custody-parenting-facts-chronology/SKILL.md
-Catalog page: skills/family-law/custody-parenting-facts-chronology.html
-Trigger: "Use when building a source-cited chronology of parenting and caregiving facts for a custody or parenting dispute, for attorney review."
+### Capacity Undue Influence Facts Organizer
+Path: skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md
+Catalog page: skills/trusts-estates/capacity-undue-influence-facts-organizer.html
+Trigger: "Use when organizing the facts relevant to capacity and undue-influence questions into a source-cited chronology for attorney review, without determining capacity or undue influence."
 Use when:
-  - A custody or parenting dispute needs an organized, sourced timeline of caregiving and parenting facts.
-  - Communications, records, and incident notes must be ordered by date before substantive review.
-  - An attorney needs a chronology of exchanges, missed visits, school/medical involvement, or relocation facts.
+  - The facts around a capacity or undue-influence question must be organized for
+  - A will or trust contest, or a planning matter, raises capacity or
+  - A matter needs a neutral facts chronology before substantive analysis.
 
-### Custody Order Review Checklist
-Path: skills/family-law/custody-order-review-checklist/SKILL.md
-Catalog page: skills/family-law/custody-order-review-checklist.html
-Trigger: "Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review."
+### Estate Document Summary
+Path: skills/trusts-estates/estate-document-summary/SKILL.md
+Catalog page: skills/trusts-estates/estate-document-summary.html
+Trigger: "Use when producing a source-cited summary of a will, trust, codicil, amendment, power of attorney, or advance directive for attorney review."
 Use when:
-  - An existing or proposed custody or parenting order must be checked for clarity and administrability.
-  - An attorney wants the ambiguities, gaps, and enforcement-friction points in an order surfaced.
-  - A proposed order must be reviewed for missing administration details before it is finalized.
+  - A will, trust, or related estate instrument must be summarized and organized
+  - A team needs the dispositive provisions, fiduciary appointments, and powers
+  - An instrument must be reviewed for ambiguities before substantive analysis.
 
-### Divorce Intake Organizer
-Path: skills/family-law/divorce-intake-organizer/SKILL.md
-Catalog page: skills/family-law/divorce-intake-organizer.html
-Trigger: "Use when organizing the facts of a divorce or dissolution matter into a structured facts table, missing-documents list, and issue map for attorney review."
+### Estate Litigation Facts Chronology
+Path: skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md
+Catalog page: skills/trusts-estates/estate-litigation-facts-chronology.html
+Trigger: "Use when building a source-cited factual chronology for a will contest, trust contest, or fiduciary dispute for attorney review, without assessing the merits."
 Use when:
-  - A divorce or dissolution matter must be organized into a structured fact set for an attorney.
-  - An attorney needs a divorce facts table and a missing-documents list before drafting or a client meeting.
-  - Scattered divorce facts need a category-by-category organization before substantive review.
+  - A will or trust contest or a fiduciary dispute needs a factual chronology
+  - A team needs dated events organized with sources before substantive analysis.
+  - A dispute's facts must be assembled into a neutral timeline.
 
-### Domestic Violence Safety Referral Checklist
-Path: skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md
-Catalog page: skills/family-law/domestic-violence-safety-referral-checklist.html
-Trigger: "Use when organizing facts and referral/escalation considerations for a domestic violence or abuse-related concern in a family law matter, for attorney review — without creating a safety plan."
+### Estate Planning Intake
+Path: skills/trusts-estates/estate-planning-intake/SKILL.md
+Catalog page: skills/trusts-estates/estate-planning-intake.html
+Trigger: "Use when capturing the facts of an estate-planning matter into a structured, source-cited working paper and planning issue map for attorney review."
 Use when:
-  - A user raises a domestic violence, abuse, or safety concern within a family law matter.
-  - Facts and records around a safety concern must be organized and the right referrals identified for an attorney.
-  - A family law matter needs the safety dimension flagged and routed before other work proceeds.
+  - A new estate-planning matter needs structured intake before substantive
+  - An attorney needs the client's family, asset, fiduciary, and goal facts
+  - A matter must be scoped and routed to the right specialist Trusts & Estates
 
-### Family Law Discovery Tracker
-Path: skills/family-law/family-law-discovery-tracker/SKILL.md
-Catalog page: skills/family-law/family-law-discovery-tracker.html
-Trigger: "Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review."
+### Estate Tax Issue Intake
+Path: skills/trusts-estates/estate-tax-issue-intake/SKILL.md
+Catalog page: skills/trusts-estates/estate-tax-issue-intake.html
+Trigger: "Use when capturing the facts of an estate, gift, GST, or inheritance tax matter into a source-cited issue map for tax professional review, without calculating taxes."
 Use when:
-  - A family law matter's discovery must be tracked across requests, responses, and disclosures.
-  - An attorney needs a status view of discovery, identified deficiencies, and meet-and-confer items.
-  - Subpoenas, authorizations, and disclosure exchanges need an organized log.
+  - An estate, gift, GST, or inheritance tax matter needs structured intake
+  - A team needs the asset, gift, trust, and transfer facts organized with
+  - A planning or administration matter raises transfer-tax questions that must
 
-### Family Law Hearing Prep Checklist
-Path: skills/family-law/family-law-hearing-prep-checklist/SKILL.md
-Catalog page: skills/family-law/family-law-hearing-prep-checklist.html
-Trigger: "Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review."
+### Fiduciary Duty Issue Spotter
+Path: skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md
+Catalog page: skills/trusts-estates/fiduciary-duty-issue-spotter.html
+Trigger: "Use when issue-spotting potential fiduciary-duty questions from provided facts and documents into a source-cited issue matrix for attorney review."
 Use when:
-  - A family law hearing is approaching and the preparation tasks must be organized into a checklist for an attorney.
-  - An attorney needs a status view of the pleadings, declarations, exhibits, disclosures, and witnesses for a hearing.
-  - Open questions for counsel must be collected before a hearing.
+  - A fiduciary's conduct must be issue-spotted and organized for an attorney.
+  - A beneficiary, co-fiduciary, or fiduciary's counsel needs the conduct facts
+  - A fiduciary matter must be scoped before substantive analysis or a dispute.
 
-### Family Law Matter Intake
-Path: skills/family-law/family-law-matter-intake/SKILL.md
-Catalog page: skills/family-law/family-law-matter-intake.html
-Trigger: "Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review."
+### Post Death Administration Task Tracker
+Path: skills/trusts-estates/post-death-administration-task-tracker/SKILL.md
+Catalog page: skills/trusts-estates/post-death-administration-task-tracker.html
+Trigger: "Use when building a source-cited post-death administration task tracker for attorney review, without calculating deadlines or approving distributions."
 Use when:
-  - A new family law matter must be captured in a structured, reviewable form for an attorney.
-  - A user describes a divorce, custody, support, or property dispute and a first-pass organization of the facts and issues is needed.
-  - An attorney wants an issue map and a document request list before a client meeting.
+  - An estate or trust under post-death administration needs its tasks organized
+  - A fiduciary needs the administration workstreams captured with owners,
+  - An administration must be scoped before substantive work.
 
-### Parenting Schedule Facts Organizer
-Path: skills/family-law/parenting-schedule-facts-organizer/SKILL.md
-Catalog page: skills/family-law/parenting-schedule-facts-organizer.html
-Trigger: "Use when organizing the facts relevant to a parenting schedule discussion into a facts table, conflict/ambiguity list, and logistics checklist for attorney review."
+### Probate Document Checklist
+Path: skills/trusts-estates/probate-document-checklist/SKILL.md
+Catalog page: skills/trusts-estates/probate-document-checklist.html
+Trigger: "Use when building a probate document checklist and missing-document list for attorney review, without preparing filing-ready probate forms."
 Use when:
-  - A parenting schedule is being discussed and the relevant facts need an organized, reviewable layout.
-  - A current schedule and a proposed schedule must be set side by side so an attorney can see the differences.
-  - The practical logistics of a parenting arrangement need a checklist before negotiation or a hearing.
+  - A probate matter needs its document record organized for an attorney.
+  - A team needs to see what probate documents exist and what is missing.
+  - A fiduciary is assembling the probate file before substantive work.
 
-### Settlement Agreement Issue Spotter
-Path: skills/family-law/settlement-agreement-issue-spotter/SKILL.md
-Catalog page: skills/family-law/settlement-agreement-issue-spotter.html
-Trigger: "Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review."
+### Trust Administration Tracker
+Path: skills/trusts-estates/trust-administration-tracker/SKILL.md
+Catalog page: skills/trusts-estates/trust-administration-tracker.html
+Trigger: "Use when building a source-cited trust administration task tracker for attorney review, without approving distributions or determining entitlement."
 Use when:
-  - A marital settlement, parenting, support, or custody-stipulation agreement or draft needs an organized review for an attorney.
-  - An attorney wants the key terms, issues, ambiguities, and missing provisions surfaced before a client discussion or negotiation.
-  - A settlement draft must be checked for internal consistency and gaps.
+  - A trust under administration needs its tasks organized and tracked for an
+  - A trustee or beneficiary's counsel needs assets, distributions, accountings,
+  - An administration must be scoped before substantive fiduciary or
 
-### Spousal Support Facts Intake
-Path: skills/family-law/spousal-support-facts-intake/SKILL.md
-Catalog page: skills/family-law/spousal-support-facts-intake.html
-Trigger: "Use when gathering the facts relevant to a spousal support or alimony review into a structured intake table, missing-documents list, and questions for counsel — without calculating support."
+### Trust Funding Checklist
+Path: skills/trusts-estates/trust-funding-checklist/SKILL.md
+Catalog page: skills/trusts-estates/trust-funding-checklist.html
+Trigger: "Use when building a checklist for funding or reviewing the funding of a trust into a source-cited tracker for attorney review."
 Use when:
-  - A spousal support or alimony review is starting and the relevant facts must be organized for an attorney.
-  - Income, expense, employment, and standard-of-living facts must be captured in a structured intake before counsel applies the governing law.
-  - An attorney needs a missing-documents list before a support analysis.
+  - A trust is being funded, or its funding is being reviewed, and the status
+  - A team needs to see which assets have been transferred to the trust and which
+  - A planning or administration matter needs funding gaps surfaced.
 
 ## Legal Methodology (4 skills)
 

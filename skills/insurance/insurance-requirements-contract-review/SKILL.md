@@ -93,7 +93,7 @@ If the contract or the insurance/indemnity clauses are missing, record it as `no
 
 1. **Capability and reliance notice** — draft only; not legal advice; no sufficiency or enforceability conclusion; attorney review required.
 2. **Gates table** — contract type, user's role, jurisdiction, with status and source.
-3. **Contract insurance requirements table** — requirement | detail as written | responsible party | source clause.
+3. **Contract insurance requirements table** — requirement | detail as written | responsible party | source clause. Follows the Contract Insurance Requirements Table pattern in `skills/insurance/references/output-patterns.md`.
 4. **Indemnity and risk allocation** — indemnity provisions and how they interact with the insurance requirements, source-cited, with no scope or effect determination.
 5. **Risk matrix** — requirement/gap | source | concern for the user's side | risk (High/Medium/Low) | attorney follow-up.
 6. **Missing provisions** — expected provisions marked `not found`.

@@ -283,19 +283,19 @@ The Insurance skills produce **draft work product for a qualified, licensed atto
 - **I need a renewal or placement diligence checklist** -> `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
 - **I need to review insurer/insured/claimant/broker communications** -> `skills/insurance/insurer-insured-communications-review/SKILL.md`
 
-## Family Law
+## Trusts & Estates
 
-The Family Law skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, fact organization, chronologies, schedules, trackers, issue spotting, and reviewer-ready working papers — never family-law legal advice, custody or parenting-time recommendations, child or spousal support calculations, property characterizations, domestic violence safety plans, filing-ready court forms, or litigation strategy as a final answer. They are trauma-aware: if a matter raises a safety concern, run the safety referral checklist and escalate first. For a recurring multi-step matter, see the workflow bundles in `matter-packs/family-law.md`.
+The Trusts & Estates skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document inventories, administration trackers, chronology tables, and reviewer-ready working papers — never estate-planning, probate, or tax advice, instruments or court forms, capacity or undue-influence conclusions, beneficiary-entitlement or fiduciary-breach conclusions, or calculated taxes or deadlines. For a recurring multi-step matter, see the workflow bundles in `matter-packs/trusts-estates.md`.
 
-- **I need to capture a new family law matter in a structured intake** -> `skills/family-law/family-law-matter-intake/SKILL.md`
-- **I need to organize the facts of a divorce or dissolution** -> `skills/family-law/divorce-intake-organizer/SKILL.md`
-- **I need to build a parenting and caregiving chronology for a custody dispute** -> `skills/family-law/custody-parenting-facts-chronology/SKILL.md`
-- **I need to organize the facts for a parenting schedule discussion** -> `skills/family-law/parenting-schedule-facts-organizer/SKILL.md`
-- **I need to gather the facts for a child support review** -> `skills/family-law/child-support-facts-intake/SKILL.md`
-- **I need to gather the facts for a spousal support or alimony review** -> `skills/family-law/spousal-support-facts-intake/SKILL.md`
-- **I need to build a property and debt schedule from documents** -> `skills/family-law/asset-debt-schedule-builder/SKILL.md`
-- **I need to organize facts and referrals for a domestic violence or safety concern** -> `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md`
-- **I need to track family-law discovery requests, responses, and disclosures** -> `skills/family-law/family-law-discovery-tracker/SKILL.md`
-- **I need to issue-spot a marital settlement, parenting, or support agreement** -> `skills/family-law/settlement-agreement-issue-spotter/SKILL.md`
-- **I need to review a custody or parenting order for clarity and administration** -> `skills/family-law/custody-order-review-checklist/SKILL.md`
-- **I need a hearing-preparation checklist for a family law hearing** -> `skills/family-law/family-law-hearing-prep-checklist/SKILL.md`
+- **I need to intake an estate-planning matter** -> `skills/trusts-estates/estate-planning-intake/SKILL.md`
+- **I need to summarize a will, trust, or related estate document** -> `skills/trusts-estates/estate-document-summary/SKILL.md`
+- **I need a probate document checklist** -> `skills/trusts-estates/probate-document-checklist/SKILL.md`
+- **I need to track trust administration tasks** -> `skills/trusts-estates/trust-administration-tracker/SKILL.md`
+- **I need to issue-spot fiduciary-duty questions** -> `skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md`
+- **I need to review beneficiary designations and account titling** -> `skills/trusts-estates/beneficiary-designation-review/SKILL.md`
+- **I need to build an estate or trust asset and liability inventory** -> `skills/trusts-estates/asset-liability-inventory-builder/SKILL.md`
+- **I need to organize capacity or undue-influence facts** -> `skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md`
+- **I need a chronology for a will or trust contest or fiduciary dispute** -> `skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md`
+- **I need a trust funding checklist** -> `skills/trusts-estates/trust-funding-checklist/SKILL.md`
+- **I need a post-death administration task tracker** -> `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md`
+- **I need to intake estate, gift, GST, or inheritance tax issues** -> `skills/trusts-estates/estate-tax-issue-intake/SKILL.md`

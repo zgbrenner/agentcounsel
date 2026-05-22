@@ -32,7 +32,7 @@ For a manual review pass, work through `reports/skill-quality-checklist.md` alon
 - [Legal Methodology](#legal-methodology) — 4 skills
 - [M And A](#m-and-a) — 10 skills
 - [Antitrust Competition](#antitrust-competition) — 10 skills
-- [Family Law](#family-law) — 12 skills
+- [Trusts Estates](#trusts-estates) — 12 skills
 - [Bankruptcy Restructuring](#bankruptcy-restructuring) — 12 skills
 - [Insurance](#insurance) — 12 skills
 - [Securities Capital Markets](#securities-capital-markets) — 12 skills
@@ -7199,13 +7199,13 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-## Family Law
+## Trusts Estates
 
-### Asset / Debt Schedule Builder
+### Asset Liability Inventory Builder
 
-- **Skill file:** `skills/family-law/asset-debt-schedule-builder/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when building a source-cited property and debt schedule from user-provided facts and documents for a family law matter, for attorney review.
+- **Skill file:** `skills/trusts-estates/asset-liability-inventory-builder/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when building a structured, source-cited inventory of estate or trust assets and liabilities for attorney review, without valuing assets.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7215,14 +7215,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/asset-debt-schedule-builder/SKILL.md
-- Current skill name: Asset / Debt Schedule Builder
-- Practice area: Family Law
-- Current description: Use when building a source-cited property and debt schedule from user-provided facts and documents for a family law matter, for attorney review.
-- Core purpose (must not change): Build a source-cited property and debt schedule from user-provided facts and documents — real estate, bank accounts, investments, retirement accounts, business interests, vehicles, personal property, debts, credit cards, loans, and tax liabilities — so a qualified, licensed attorney has an organized schedule for a family law matter.
+- Skill path: skills/trusts-estates/asset-liability-inventory-builder/SKILL.md
+- Current skill name: Asset Liability Inventory Builder
+- Practice area: Trusts Estates
+- Current description: Use when building a structured, source-cited inventory of estate or trust assets and liabilities for attorney review, without valuing assets.
+- Core purpose (must not change): Build a structured, source-cited inventory of estate or trust assets and liabilities — with owner/title, source, and any user-supplied value for each item — so a qualified attorney can review the estate's composition.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/asset-debt-schedule-builder/SKILL.md in full.
+- Read skills/trusts-estates/asset-liability-inventory-builder/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7289,11 +7289,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Child Support Facts Intake
+### Beneficiary Designation Review
 
-- **Skill file:** `skills/family-law/child-support-facts-intake/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when gathering the facts relevant to a child support review into a structured intake table, missing-documents list, and questions for counsel — without calculating support.
+- **Skill file:** `skills/trusts-estates/beneficiary-designation-review/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7303,14 +7303,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/child-support-facts-intake/SKILL.md
-- Current skill name: Child Support Facts Intake
-- Practice area: Family Law
-- Current description: Use when gathering the facts relevant to a child support review into a structured intake table, missing-documents list, and questions for counsel — without calculating support.
-- Core purpose (must not change): Gather the facts relevant to a child support review — the children, custody and parenting-time facts, income facts supplied by the user, healthcare and childcare costs, special expenses, existing orders, any stated arrears, and financial disclosures — into a structured intake table, a missing-documents list, and questions for counsel, so a qualified, licensed attorney has an organized fact set.
+- Skill path: skills/trusts-estates/beneficiary-designation-review/SKILL.md
+- Current skill name: Beneficiary Designation Review
+- Practice area: Trusts Estates
+- Current description: Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review.
+- Core purpose (must not change): Review beneficiary designations, account titling, and transfer-on-death or payable-on-death forms into a source-cited designation table and an inconsistency list, so a qualified attorney can evaluate them against estate intent.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/child-support-facts-intake/SKILL.md in full.
+- Read skills/trusts-estates/beneficiary-designation-review/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7377,11 +7377,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Custody / Parenting Facts Chronology
+### Capacity Undue Influence Facts Organizer
 
-- **Skill file:** `skills/family-law/custody-parenting-facts-chronology/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when building a source-cited chronology of parenting and caregiving facts for a custody or parenting dispute, for attorney review.
+- **Skill file:** `skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when organizing the facts relevant to capacity and undue-influence questions into a source-cited chronology for attorney review, without determining capacity or undue influence.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7391,14 +7391,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/custody-parenting-facts-chronology/SKILL.md
-- Current skill name: Custody / Parenting Facts Chronology
-- Practice area: Family Law
-- Current description: Use when building a source-cited chronology of parenting and caregiving facts for a custody or parenting dispute, for attorney review.
-- Core purpose (must not change): Build a source-cited chronology of parenting and caregiving facts — caregiving roles, exchanges, school and medical involvement, communications, incidents, missed visits, relocation facts, and child-related records — so a qualified, licensed attorney has an organized factual timeline for a custody or parenting dispute.
+- Skill path: skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md
+- Current skill name: Capacity Undue Influence Facts Organizer
+- Practice area: Trusts Estates
+- Current description: Use when organizing the facts relevant to capacity and undue-influence questions into a source-cited chronology for attorney review, without determining capacity or undue influence.
+- Core purpose (must not change): Organize the facts relevant to capacity and undue-influence questions into a source-cited chronology, a source table, and red-flag themes, so a qualified attorney can evaluate them.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/custody-parenting-facts-chronology/SKILL.md in full.
+- Read skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7465,11 +7465,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Custody Order Review Checklist
+### Estate Document Summary
 
-- **Skill file:** `skills/family-law/custody-order-review-checklist/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review.
+- **Skill file:** `skills/trusts-estates/estate-document-summary/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when producing a source-cited summary of a will, trust, codicil, amendment, power of attorney, or advance directive for attorney review.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7479,14 +7479,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/custody-order-review-checklist/SKILL.md
-- Current skill name: Custody Order Review Checklist
-- Practice area: Family Law
-- Current description: Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review.
-- Core purpose (must not change): Review an existing or proposed custody or parenting order for clarity and day-to-day administration issues — legal and physical custody language, the parenting schedule, holidays, exchanges, travel, communication, school and medical decisions, relocation and travel notices, dispute resolution, enforcement and ambiguity points, and any safety provisions — and produce an order-clarity checklist,...
+- Skill path: skills/trusts-estates/estate-document-summary/SKILL.md
+- Current skill name: Estate Document Summary
+- Practice area: Trusts Estates
+- Current description: Use when producing a source-cited summary of a will, trust, codicil, amendment, power of attorney, or advance directive for attorney review.
+- Core purpose (must not change): Produce a source-cited summary of a will, trust, codicil, trust amendment, power of attorney, advance directive, or related estate document — a key terms table, an ambiguity list, and verification items — so a qualified attorney can review the instrument.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/custody-order-review-checklist/SKILL.md in full.
+- Read skills/trusts-estates/estate-document-summary/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7553,11 +7553,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Divorce Intake Organizer
+### Estate Litigation Facts Chronology
 
-- **Skill file:** `skills/family-law/divorce-intake-organizer/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when organizing the facts of a divorce or dissolution matter into a structured facts table, missing-documents list, and issue map for attorney review.
+- **Skill file:** `skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when building a source-cited factual chronology for a will contest, trust contest, or fiduciary dispute for attorney review, without assessing the merits.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7567,14 +7567,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/divorce-intake-organizer/SKILL.md
-- Current skill name: Divorce Intake Organizer
-- Practice area: Family Law
-- Current description: Use when organizing the facts of a divorce or dissolution matter into a structured facts table, missing-documents list, and issue map for attorney review.
-- Core purpose (must not change): Organize the facts of a divorce or dissolution matter — dates, children, income, assets, debts, business and real-estate interests, retirement accounts, support and custody issues, existing agreements, and the contested or uncontested posture — into a structured facts table, a missing-documents list, and an issue map, so a qualified, licensed attorney has an organized factual foundation.
+- Skill path: skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md
+- Current skill name: Estate Litigation Facts Chronology
+- Practice area: Trusts Estates
+- Current description: Use when building a source-cited factual chronology for a will contest, trust contest, or fiduciary dispute for attorney review, without assessing the merits.
+- Core purpose (must not change): Build a source-cited factual chronology for a will contest, trust contest, fiduciary dispute, accounting dispute, beneficiary dispute, or capacity / undue-influence matter, so a qualified attorney can work from an organized timeline.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/divorce-intake-organizer/SKILL.md in full.
+- Read skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7641,11 +7641,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Domestic Violence Safety Referral Checklist
+### Estate Planning Intake
 
-- **Skill file:** `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when organizing facts and referral/escalation considerations for a domestic violence or abuse-related concern in a family law matter, for attorney review — without creating a safety plan.
+- **Skill file:** `skills/trusts-estates/estate-planning-intake/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when capturing the facts of an estate-planning matter into a structured, source-cited working paper and planning issue map for attorney review.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7655,14 +7655,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md
-- Current skill name: Domestic Violence Safety Referral Checklist
-- Practice area: Family Law
-- Current description: Use when organizing facts and referral/escalation considerations for a domestic violence or abuse-related concern in a family law matter, for attorney review — without creating a safety plan.
-- Core purpose (must not change): Organize the facts and the referral and escalation considerations for a domestic violence or abuse-related concern in a family law matter — immediate safety concerns, existing protective orders, described incidents, available records, children involved, housing and financial access concerns, and upcoming court dates — so a qualified, licensed attorney and the appropriate support resources can b...
+- Skill path: skills/trusts-estates/estate-planning-intake/SKILL.md
+- Current skill name: Estate Planning Intake
+- Practice area: Trusts Estates
+- Current description: Use when capturing the facts of an estate-planning matter into a structured, source-cited working paper and planning issue map for attorney review.
+- Core purpose (must not change): Capture the facts of an estate-planning matter into a structured, source-cited working paper — an intake summary, a planning issue map, missing facts, a document request list, and verification questions — so a qualified, licensed attorney can plan the engagement.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md in full.
+- Read skills/trusts-estates/estate-planning-intake/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7729,11 +7729,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Family Law Discovery Tracker
+### Estate Tax Issue Intake
 
-- **Skill file:** `skills/family-law/family-law-discovery-tracker/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.
+- **Skill file:** `skills/trusts-estates/estate-tax-issue-intake/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when capturing the facts of an estate, gift, GST, or inheritance tax matter into a source-cited issue map for tax professional review, without calculating taxes.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7743,14 +7743,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/family-law-discovery-tracker/SKILL.md
-- Current skill name: Family Law Discovery Tracker
-- Practice area: Family Law
-- Current description: Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.
-- Core purpose (must not change): Organize family-law discovery — requests, responses, financial disclosures, subpoenas, authorizations, identified deficiencies, and meet-and-confer items — into a single tracker, so a qualified, licensed attorney can manage discovery in a family law matter.
+- Skill path: skills/trusts-estates/estate-tax-issue-intake/SKILL.md
+- Current skill name: Estate Tax Issue Intake
+- Practice area: Trusts Estates
+- Current description: Use when capturing the facts of an estate, gift, GST, or inheritance tax matter into a source-cited issue map for tax professional review, without calculating taxes.
+- Core purpose (must not change): Capture the facts of an estate, gift, generation-skipping transfer (GST), or inheritance tax matter into a source-cited issue map, with missing facts, a document request list, and verification questions, so a qualified tax professional or attorney can evaluate the issues.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/family-law-discovery-tracker/SKILL.md in full.
+- Read skills/trusts-estates/estate-tax-issue-intake/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7817,11 +7817,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Family Law Hearing Prep Checklist
+### Fiduciary Duty Issue Spotter
 
-- **Skill file:** `skills/family-law/family-law-hearing-prep-checklist/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review.
+- **Skill file:** `skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when issue-spotting potential fiduciary-duty questions from provided facts and documents into a source-cited issue matrix for attorney review.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7831,14 +7831,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/family-law-hearing-prep-checklist/SKILL.md
-- Current skill name: Family Law Hearing Prep Checklist
-- Practice area: Family Law
-- Current description: Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review.
-- Core purpose (must not change): Build a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, financial disclosures, witnesses, prior orders, service and proof documents, the issues to be heard, and the requested relief as the user supplies it — so a qualified, licensed attorney has an organized preparation list.
+- Skill path: skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md
+- Current skill name: Fiduciary Duty Issue Spotter
+- Practice area: Trusts Estates
+- Current description: Use when issue-spotting potential fiduciary-duty questions from provided facts and documents into a source-cited issue matrix for attorney review.
+- Core purpose (must not change): Issue-spot potential fiduciary-duty questions from provided facts and documents into a source-cited issue matrix, with missing facts, escalation items, and verification questions, so a qualified attorney can evaluate fiduciary conduct.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/family-law-hearing-prep-checklist/SKILL.md in full.
+- Read skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7905,11 +7905,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Family Law Matter Intake
+### Post Death Administration Task Tracker
 
-- **Skill file:** `skills/family-law/family-law-matter-intake/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review.
+- **Skill file:** `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when building a source-cited post-death administration task tracker for attorney review, without calculating deadlines or approving distributions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7919,14 +7919,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/family-law-matter-intake/SKILL.md
-- Current skill name: Family Law Matter Intake
-- Practice area: Family Law
-- Current description: Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review.
-- Core purpose (must not change): Capture the facts of a new family law matter — divorce or dissolution, custody and parenting, support, property and debt, or a related dispute — into a structured intake summary, an issue map, a missing-facts list, a document request list, and safety/escalation flags, so a qualified, licensed attorney has an organized starting point.
+- Skill path: skills/trusts-estates/post-death-administration-task-tracker/SKILL.md
+- Current skill name: Post Death Administration Task Tracker
+- Practice area: Trusts Estates
+- Current description: Use when building a source-cited post-death administration task tracker for attorney review, without calculating deadlines or approving distributions.
+- Core purpose (must not change): Build a source-cited post-death administration task tracker — with a source, owner, status, dependency, and uncertainty flag for each task — so a qualified attorney can supervise estate or trust administration after a death.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/family-law-matter-intake/SKILL.md in full.
+- Read skills/trusts-estates/post-death-administration-task-tracker/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7993,11 +7993,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Parenting Schedule Facts Organizer
+### Probate Document Checklist
 
-- **Skill file:** `skills/family-law/parenting-schedule-facts-organizer/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when organizing the facts relevant to a parenting schedule discussion into a facts table, conflict/ambiguity list, and logistics checklist for attorney review.
+- **Skill file:** `skills/trusts-estates/probate-document-checklist/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when building a probate document checklist and missing-document list for attorney review, without preparing filing-ready probate forms.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8007,14 +8007,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/parenting-schedule-facts-organizer/SKILL.md
-- Current skill name: Parenting Schedule Facts Organizer
-- Practice area: Family Law
-- Current description: Use when organizing the facts relevant to a parenting schedule discussion into a facts table, conflict/ambiguity list, and logistics checklist for attorney review.
-- Core purpose (must not change): Organize the facts relevant to a parenting schedule discussion — the current and any proposed schedule, school and daycare, transportation, holidays and vacations, distance, work schedules, stated child needs, communication method, exchanges, and existing orders — into a facts table, a conflict/ambiguity list, and a logistics checklist, so a qualified, licensed attorney has an organized basis f...
+- Skill path: skills/trusts-estates/probate-document-checklist/SKILL.md
+- Current skill name: Probate Document Checklist
+- Practice area: Trusts Estates
+- Current description: Use when building a probate document checklist and missing-document list for attorney review, without preparing filing-ready probate forms.
+- Core purpose (must not change): Build a probate document checklist and missing-document list — with a status, source, and responsible party for each item — so a qualified attorney can assemble and review the probate record.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/parenting-schedule-facts-organizer/SKILL.md in full.
+- Read skills/trusts-estates/probate-document-checklist/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -8081,11 +8081,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Settlement Agreement Issue Spotter
+### Trust Administration Tracker
 
-- **Skill file:** `skills/family-law/settlement-agreement-issue-spotter/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review.
+- **Skill file:** `skills/trusts-estates/trust-administration-tracker/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when building a source-cited trust administration task tracker for attorney review, without approving distributions or determining entitlement.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8095,14 +8095,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/settlement-agreement-issue-spotter/SKILL.md
-- Current skill name: Settlement Agreement Issue Spotter
-- Practice area: Family Law
-- Current description: Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review.
-- Core purpose (must not change): Review a marital settlement agreement, parenting agreement, support agreement, custody stipulation, or related settlement draft and produce a key-terms table, an issue list, an ambiguity list, and a missing-provisions list, so a qualified, licensed attorney has an organized review.
+- Skill path: skills/trusts-estates/trust-administration-tracker/SKILL.md
+- Current skill name: Trust Administration Tracker
+- Practice area: Trusts Estates
+- Current description: Use when building a source-cited trust administration task tracker for attorney review, without approving distributions or determining entitlement.
+- Core purpose (must not change): Build a source-cited trust administration task tracker — with a source, responsible party, status, dependency, and missing facts for each task — so a qualified attorney can supervise the administration.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/settlement-agreement-issue-spotter/SKILL.md in full.
+- Read skills/trusts-estates/trust-administration-tracker/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -8169,11 +8169,11 @@ WHEN YOU ARE DONE
   the skill clearer or safer.
 ````
 
-### Spousal Support Facts Intake
+### Trust Funding Checklist
 
-- **Skill file:** `skills/family-law/spousal-support-facts-intake/SKILL.md`
-- **Practice area:** Family Law
-- **Current description:** Use when gathering the facts relevant to a spousal support or alimony review into a structured intake table, missing-documents list, and questions for counsel — without calculating support.
+- **Skill file:** `skills/trusts-estates/trust-funding-checklist/SKILL.md`
+- **Practice area:** Trusts Estates
+- **Current description:** Use when building a checklist for funding or reviewing the funding of a trust into a source-cited tracker for attorney review.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8183,14 +8183,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/spousal-support-facts-intake/SKILL.md
-- Current skill name: Spousal Support Facts Intake
-- Practice area: Family Law
-- Current description: Use when gathering the facts relevant to a spousal support or alimony review into a structured intake table, missing-documents list, and questions for counsel — without calculating support.
-- Core purpose (must not change): Gather the facts relevant to a spousal support or alimony review — the relationship or marriage duration if provided, income, expenses, employment, health facts if provided, standard-of-living facts if provided, assets and debts, existing orders, and financial disclosures — into a structured intake table, a missing-documents list, and questions for counsel, so a qualified, licensed attorney has...
+- Skill path: skills/trusts-estates/trust-funding-checklist/SKILL.md
+- Current skill name: Trust Funding Checklist
+- Practice area: Trusts Estates
+- Current description: Use when building a checklist for funding or reviewing the funding of a trust into a source-cited tracker for attorney review.
+- Core purpose (must not change): Build a checklist for funding, or reviewing the funding of, a trust — a source-cited tracker of which assets have been transferred, with the funding evidence and missing items — so a qualified attorney can review trust funding.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/spousal-support-facts-intake/SKILL.md in full.
+- Read skills/trusts-estates/trust-funding-checklist/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
