@@ -135,6 +135,10 @@ the missing-information list first.
 6. **Missing information list**.
 7. **Attorney verification items**.
 
+The draft deadline tracker follows the **Bankruptcy Deadline Tracker Intake
+Table** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run bankruptcy-deadline-tracker-intake for a fictional

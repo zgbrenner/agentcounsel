@@ -46,9 +46,9 @@ injunctions, executory contracts, claims reconciliation, governance, and equity
 treatment; flag internal inconsistencies; and prepare verification questions.
 
 **This skill does not:** conclude whether a plan is confirmable, whether
-disclosure is adequate, whether the plan complies with priority rules, or how
-voting will come out; determine the legal effect of releases or injunctions; or
-constitute legal advice.
+disclosure is adequate, whether the plan complies with priority rules, whether
+the plan is feasible, or how voting will come out; determine the legal effect
+of releases or injunctions; or constitute legal advice.
 
 ## Use When
 
@@ -82,8 +82,8 @@ list first.
 
 ## Do Not Use When
 
-- The request is to conclude whether the plan is confirmable or whether
-  disclosure is adequate.
+- The request is to conclude whether the plan is confirmable, whether
+  disclosure is adequate, or whether the plan is feasible.
 - The request is to conclude on priority compliance, the legal effect of
   releases, or the voting outcome.
 - The request is for legal advice or a deadline calculation.
@@ -137,6 +137,10 @@ list first.
    statement, with sources.
 6. **Missing facts** and **attorney verification questions**.
 7. **Assumptions and unresolved items**.
+
+The treatment table and issue list follow the **Plan / Disclosure Statement
+Issue Tracker** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
 
 ## Example Request and Expected Output Shape
 

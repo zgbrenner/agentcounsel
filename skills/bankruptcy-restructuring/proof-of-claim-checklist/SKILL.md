@@ -133,6 +133,9 @@ it as `not provided` and return the missing-information list first.
 6. **Missing information list**.
 7. **Attorney verification items** and **assumptions**.
 
+The preparation checklist follows the **Proof of Claim Preparation Checklist**
+structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run proof-of-claim-checklist for a fictional creditor
