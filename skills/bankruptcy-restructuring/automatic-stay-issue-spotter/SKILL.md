@@ -133,6 +133,9 @@ them as `not provided` and return the missing-information list first.
 6. **Missing facts** and **attorney verification questions**.
 7. **Assumptions and unresolved items**.
 
+The stay-risk fact map follows the **Automatic Stay Issue-Spotting Matrix**
+structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run automatic-stay-issue-spotter for a fictional lender

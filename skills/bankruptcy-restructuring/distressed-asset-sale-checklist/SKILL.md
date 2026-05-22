@@ -132,6 +132,9 @@ record it as `not provided` and return the missing-information list first.
 6. **Closing-deliverables tracker** — deliverable | responsible party | status.
 7. **Missing information** and **attorney verification items**.
 
+The sale checklist and trackers follow the **Distressed Asset Sale Checklist**
+structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run distressed-asset-sale-checklist for a fictional buyer

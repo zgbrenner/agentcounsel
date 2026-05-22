@@ -129,6 +129,9 @@ list first.
 5. **Missing information list** and **attorney verification questions**.
 6. **Assumptions and unresolved items**.
 
+The request list follows the **Bankruptcy Diligence Request List** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run bankruptcy-diligence-request-list for a fictional

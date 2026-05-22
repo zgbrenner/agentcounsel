@@ -135,6 +135,10 @@ record it as `not provided` and return the missing-information list first.
 6. **Missing facts** and **attorney verification checklist**.
 7. **Assumptions and unresolved items**.
 
+The contract status table and trackers follow the **Executory Contract
+Assumption/Rejection Tracker** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run executory-contract-assumption-rejection-checklist for

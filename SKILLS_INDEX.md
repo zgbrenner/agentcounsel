@@ -183,6 +183,7 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/contracts/references/` — shared reference material for the contracts skills.
 - `skills/m-and-a/references/` — shared M&A output-pattern reference for the M&A skills.
 - `skills/tax/references/` — shared Tax output-pattern reference for the Tax skills.
+- `skills/bankruptcy-restructuring/references/` — shared Bankruptcy / Restructuring output-pattern reference for those skills.
 
 
 ## Antitrust / Competition
