@@ -282,3 +282,20 @@ The Insurance skills produce **draft work product for a qualified, licensed atto
 - **I need to organize potential subrogation and recovery facts** -> `skills/insurance/subrogation-recovery-tracker/SKILL.md`
 - **I need a renewal or placement diligence checklist** -> `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
 - **I need to review insurer/insured/claimant/broker communications** -> `skills/insurance/insurer-insured-communications-review/SKILL.md`
+
+## Trusts & Estates
+
+The Trusts & Estates skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document inventories, administration trackers, chronology tables, and reviewer-ready working papers — never estate-planning, probate, or tax advice, instruments or court forms, capacity or undue-influence conclusions, beneficiary-entitlement or fiduciary-breach conclusions, or calculated taxes or deadlines. For a recurring multi-step matter, see the workflow bundles in `matter-packs/trusts-estates.md`.
+
+- **I need to intake an estate-planning matter** -> `skills/trusts-estates/estate-planning-intake/SKILL.md`
+- **I need to summarize a will, trust, or related estate document** -> `skills/trusts-estates/estate-document-summary/SKILL.md`
+- **I need a probate document checklist** -> `skills/trusts-estates/probate-document-checklist/SKILL.md`
+- **I need to track trust administration tasks** -> `skills/trusts-estates/trust-administration-tracker/SKILL.md`
+- **I need to issue-spot fiduciary-duty questions** -> `skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md`
+- **I need to review beneficiary designations and account titling** -> `skills/trusts-estates/beneficiary-designation-review/SKILL.md`
+- **I need to build an estate or trust asset and liability inventory** -> `skills/trusts-estates/asset-liability-inventory-builder/SKILL.md`
+- **I need to organize capacity or undue-influence facts** -> `skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md`
+- **I need a chronology for a will or trust contest or fiduciary dispute** -> `skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md`
+- **I need a trust funding checklist** -> `skills/trusts-estates/trust-funding-checklist/SKILL.md`
+- **I need a post-death administration task tracker** -> `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md`
+- **I need to intake estate, gift, GST, or inheritance tax issues** -> `skills/trusts-estates/estate-tax-issue-intake/SKILL.md`

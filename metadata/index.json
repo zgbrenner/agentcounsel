@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 141,
+  "skill_count": 153,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
@@ -23,24 +23,25 @@
     "regulatory": 4,
     "securities-capital-markets": 12,
     "setup": 5,
-    "tax": 10
+    "tax": 10,
+    "trusts-estates": 12
   },
   "task_types": {
-    "analysis": 23,
+    "analysis": 26,
     "drafting": 20,
-    "extraction": 14,
-    "intake": 12,
+    "extraction": 19,
+    "intake": 14,
     "interview": 4,
     "research": 1,
-    "review": 48,
-    "summarization": 4,
+    "review": 49,
+    "summarization": 5,
     "triage": 11,
     "verification": 4
   },
   "risk_levels": {
     "low": 6,
-    "medium": 64,
-    "high": 69,
+    "medium": 68,
+    "high": 77,
     "critical": 2
   },
   "skills": [
@@ -4395,6 +4396,407 @@
         "tax",
         "attorney-review",
         "diligence",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+      "name": "Asset Liability Inventory Builder",
+      "description": "Use when building a structured, source-cited inventory of estate or trust assets and liabilities for attorney review, without valuing assets.",
+      "practice_area": "trusts-estates",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The asset and liability records and the user's role and review purpose",
+        "Jurisdiction and the estate or trust status",
+        "Owner/title facts and any user-supplied values",
+        "Source references to statements, deeds, records, or pages"
+      ],
+      "outputs": [
+        "Source-cited asset and liability inventory table",
+        "Missing-facts list and ambiguous-asset list",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-planning-intake/SKILL.md",
+        "skills/trusts-estates/probate-document-checklist/SKILL.md",
+        "skills/trusts-estates/trust-funding-checklist/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "inventory",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/beneficiary-designation-review/SKILL.md",
+      "name": "Beneficiary Designation Review",
+      "description": "Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review.",
+      "practice_area": "trusts-estates",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The beneficiary designation forms, account titling records, and TOD/POD forms",
+        "The user's role, jurisdiction, and review purpose",
+        "Estate documents (will, trust) for intent comparison, if provided",
+        "Source references to forms, account records, or pages"
+      ],
+      "outputs": [
+        "Source-cited beneficiary designation table",
+        "Inconsistency list and missing-document list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-document-summary/SKILL.md",
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+        "skills/trusts-estates/trust-funding-checklist/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "beneficiary-designations",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md",
+      "name": "Capacity Undue Influence Facts Organizer",
+      "description": "Use when organizing the facts relevant to capacity and undue-influence questions into a source-cited chronology for attorney review, without determining capacity or undue influence.",
+      "practice_area": "trusts-estates",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The facts, records, and documents bearing on capacity or undue influence",
+        "The user's role, jurisdiction, and matter type",
+        "Document execution facts and the relationships involved",
+        "Source references to records, documents, communications, or pages"
+      ],
+      "outputs": [
+        "Source-cited facts chronology and source table",
+        "Red-flag themes and missing-facts list",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md",
+        "skills/trusts-estates/estate-document-summary/SKILL.md",
+        "skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "capacity",
+        "analysis",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/estate-document-summary/SKILL.md",
+      "name": "Estate Document Summary",
+      "description": "Use when producing a source-cited summary of a will, trust, codicil, amendment, power of attorney, or advance directive for attorney review.",
+      "practice_area": "trusts-estates",
+      "task_type": "summarization",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The estate document(s) to summarize and the user's role and review purpose",
+        "Jurisdiction and governing law if stated in the document",
+        "Parties, fiduciaries, and beneficiaries as named in the document",
+        "Source references to articles, sections, or pages",
+        "Any related instruments (codicils, amendments) provided"
+      ],
+      "outputs": [
+        "Source-cited document summary and key terms table",
+        "Ambiguity list and missing-document list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-planning-intake/SKILL.md",
+        "skills/trusts-estates/beneficiary-designation-review/SKILL.md",
+        "skills/trusts-estates/trust-administration-tracker/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "document-summary",
+        "summarization",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md",
+      "name": "Estate Litigation Facts Chronology",
+      "description": "Use when building a source-cited factual chronology for a will contest, trust contest, or fiduciary dispute for attorney review, without assessing the merits.",
+      "practice_area": "trusts-estates",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The documents, records, and correspondence for the dispute",
+        "The user's role, jurisdiction, and the dispute type",
+        "Disputed/undisputed status of facts where the user provides it",
+        "Source references to documents, records, or pages"
+      ],
+      "outputs": [
+        "Source-cited factual chronology",
+        "Missing-facts list and follow-up items",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md",
+        "skills/trusts-estates/estate-document-summary/SKILL.md",
+        "skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "litigation-chronology",
+        "analysis",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/estate-planning-intake/SKILL.md",
+      "name": "Estate Planning Intake",
+      "description": "Use when capturing the facts of an estate-planning matter into a structured, source-cited working paper and planning issue map for attorney review.",
+      "practice_area": "trusts-estates",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Client identity, jurisdiction, and the review purpose / planning goals",
+        "Marital/relationship status, dependents, beneficiaries, and family context as provided",
+        "Fiduciary choices, assets, liabilities, business interests, real estate, and digital assets",
+        "Incapacity-planning, healthcare-directive, guardianship, charitable-intent, and tax concerns",
+        "Prior estate documents and any source references"
+      ],
+      "outputs": [
+        "Intake summary and source-cited planning issue map",
+        "Missing-facts list and document request list",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-document-summary/SKILL.md",
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+        "skills/trusts-estates/estate-tax-issue-intake/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "intake",
+        "estate-planning",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/estate-tax-issue-intake/SKILL.md",
+      "name": "Estate Tax Issue Intake",
+      "description": "Use when capturing the facts of an estate, gift, GST, or inheritance tax matter into a source-cited issue map for tax professional review, without calculating taxes.",
+      "practice_area": "trusts-estates",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Jurisdiction, the decedent or donor identity, and the tax year or date of death",
+        "Assets, gifts, trusts, business interests, real estate, and retirement/insurance facts",
+        "Marital, charitable, and foreign-asset or foreign-person facts as provided",
+        "Prior filings and any notices received",
+        "Source documents with citations to statements, returns, or pages"
+      ],
+      "outputs": [
+        "Source-cited estate/gift/GST tax issue map",
+        "Missing-facts list and document request list",
+        "Tax-professional verification questions"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-planning-intake/SKILL.md",
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+        "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "estate-tax",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md",
+      "name": "Fiduciary Duty Issue Spotter",
+      "description": "Use when issue-spotting potential fiduciary-duty questions from provided facts and documents into a source-cited issue matrix for attorney review.",
+      "practice_area": "trusts-estates",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The fiduciary, the user's role, jurisdiction, and the matter type",
+        "The facts and documents bearing on fiduciary conduct",
+        "Conflicts, transactions, communications, accountings, and distributions as provided",
+        "Beneficiary objections and any court supervision facts",
+        "Source references to documents, accountings, communications, or pages"
+      ],
+      "outputs": [
+        "Source-cited fiduciary-duty issue matrix",
+        "Missing-facts list and escalation items",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/trust-administration-tracker/SKILL.md",
+        "skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md",
+        "skills/trusts-estates/estate-document-summary/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "fiduciary-duty",
+        "issue-spotting",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md",
+      "name": "Post Death Administration Task Tracker",
+      "description": "Use when building a source-cited post-death administration task tracker for attorney review, without calculating deadlines or approving distributions.",
+      "practice_area": "trusts-estates",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The decedent, the user's fiduciary or party role, and jurisdiction",
+        "The estate or trust status and the review purpose",
+        "Notices, documents, and tasks already underway, with source references",
+        "Beneficiary context and any user-supplied dates"
+      ],
+      "outputs": [
+        "Source-cited post-death administration task tracker",
+        "Missing-information list and uncertainty flags",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/probate-document-checklist/SKILL.md",
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+        "skills/trusts-estates/estate-tax-issue-intake/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "post-death-administration",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/probate-document-checklist/SKILL.md",
+      "name": "Probate Document Checklist",
+      "description": "Use when building a probate document checklist and missing-document list for attorney review, without preparing filing-ready probate forms.",
+      "practice_area": "trusts-estates",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Decedent identity, jurisdiction, and the user's fiduciary or party role",
+        "Estate status and the review purpose",
+        "Documents already collected, with source references",
+        "Beneficiary/heir context and any notices received"
+      ],
+      "outputs": [
+        "Probate document checklist with status, source, and responsible party",
+        "Missing-document list",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+        "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md",
+        "skills/trusts-estates/estate-document-summary/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "probate",
+        "checklist",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/trust-administration-tracker/SKILL.md",
+      "name": "Trust Administration Tracker",
+      "description": "Use when building a source-cited trust administration task tracker for attorney review, without approving distributions or determining entitlement.",
+      "practice_area": "trusts-estates",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Trustee identity, jurisdiction, and the trust's status",
+        "The trust instrument and the user's role and review purpose",
+        "Trust assets, beneficiaries, distributions, and accountings as provided",
+        "Notices, tax documents, and fiduciary communications as provided",
+        "Source references to trust articles, statements, notices, or pages"
+      ],
+      "outputs": [
+        "Source-cited trust administration task tracker",
+        "Missing-facts list and open-dispute list",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-document-summary/SKILL.md",
+        "skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md",
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "trust-administration",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/trusts-estates/trust-funding-checklist/SKILL.md",
+      "name": "Trust Funding Checklist",
+      "description": "Use when building a checklist for funding or reviewing the funding of a trust into a source-cited tracker for attorney review.",
+      "practice_area": "trusts-estates",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The trust instrument and the assets intended to fund it",
+        "The user's role, jurisdiction, and review purpose",
+        "Funding evidence (deeds, assignments, retitling, designations) as provided",
+        "Source references to instruments, account records, or pages"
+      ],
+      "outputs": [
+        "Source-cited trust funding checklist and source table",
+        "Missing-items list with responsible party and status",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/beneficiary-designation-review/SKILL.md",
+        "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
+        "skills/trusts-estates/estate-document-summary/SKILL.md"
+      ],
+      "tags": [
+        "trusts-estates",
+        "attorney-review",
+        "trust-funding",
         "extraction",
         "draft-work-product"
       ]
