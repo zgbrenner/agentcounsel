@@ -128,6 +128,9 @@ first.
 5. **Missing facts** and **document request list**.
 6. **Tax-professional verification questions** and **assumptions**.
 
+The tax issue map follows the **Estate Tax Issue Intake Matrix** structure in
+`skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run estate-tax-issue-intake for a fictional estate with

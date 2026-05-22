@@ -119,6 +119,9 @@ it as `not provided` and return the missing-information list first.
 5. **Missing items** — assets with missing or ambiguous funding evidence.
 6. **Attorney verification questions** and **assumptions**.
 
+The funding checklist follows the **Trust Funding Checklist** structure in
+`skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run trust-funding-checklist for a fictional revocable

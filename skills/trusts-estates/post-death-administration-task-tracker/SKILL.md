@@ -127,6 +127,9 @@ If the decedent, the user's role, or the jurisdiction is missing, record it as
 5. **Missing information** and **attorney verification items**.
 6. **Assumptions and unresolved items**.
 
+The task tracker follows the **Post-Death Administration Task Tracker**
+structure in `skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run post-death-administration-task-tracker for a fictional

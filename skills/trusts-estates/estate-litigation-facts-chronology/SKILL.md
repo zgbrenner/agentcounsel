@@ -120,6 +120,9 @@ If the documents, the user's role, or the dispute type is missing, record it as
 4. **Missing facts** and **follow-up items**.
 5. **Attorney verification questions** and **assumptions**.
 
+The factual chronology follows the **Estate Litigation Chronology** structure
+in `skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run estate-litigation-facts-chronology for a fictional

@@ -135,6 +135,9 @@ substantive intake.
 6. **Missing information** and **document request list**.
 7. **Attorney verification questions** and **assumptions**.
 
+The planning issue map follows the **Estate Planning Intake Matrix** structure
+in `skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run estate-planning-intake for a fictional married client

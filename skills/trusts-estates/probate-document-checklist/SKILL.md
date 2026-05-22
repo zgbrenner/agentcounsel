@@ -121,6 +121,9 @@ If the decedent, the user's role, or the jurisdiction is missing, record it as
 5. **Dates as provided** — each marked `[deadline verification required]`.
 6. **Attorney verification items** and **assumptions**.
 
+The checklist follows the **Probate Document Checklist** structure in
+`skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run probate-document-checklist for a fictional estate

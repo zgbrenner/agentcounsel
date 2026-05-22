@@ -132,6 +132,9 @@ If the records, the user's role, or the matter type is missing, record it as
 6. **Missing facts** and **attorney verification questions**.
 7. **Assumptions and unresolved items**.
 
+The facts chronology follows the **Capacity / Undue Influence Facts Organizer**
+structure in `skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run capacity-undue-influence-facts-organizer for a

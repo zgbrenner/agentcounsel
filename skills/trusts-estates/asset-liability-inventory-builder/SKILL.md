@@ -122,6 +122,9 @@ If the records, the user's role, or the review purpose is missing, record it as
 5. **Missing facts** and **attorney verification items**.
 6. **Assumptions and unresolved items**.
 
+The inventory table follows the **Asset / Liability Inventory** structure in
+`skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run asset-liability-inventory-builder for a fictional

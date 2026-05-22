@@ -46,7 +46,7 @@ citations; flag ambiguities; and prepare an attorney verification checklist.
 
 **This skill does not:** conclude whether a document is valid, properly
 executed, or enforceable; determine the testator's or grantor's capacity;
-determine the legal effect of any provision; resolve an ambiguity; or
+determine the legal or tax effect of any provision; resolve an ambiguity; or
 constitute legal advice.
 
 ## Use When
@@ -127,6 +127,9 @@ it as `not provided` and return the missing-information list first.
 5. **Ambiguity list** — ambiguous or conflicting provisions, with sources.
 6. **Execution facts as provided** — recorded, not assessed.
 7. **Missing document list** and **attorney verification checklist**.
+
+The key terms table follows the **Estate Document Summary Table** structure in
+`skills/trusts-estates/references/output-patterns.md`.
 
 ## Example Request and Expected Output Shape
 

@@ -131,6 +131,9 @@ as `not provided` and return the missing-information list first.
    `[deadline verification required]`).
 6. **Attorney verification items** and **assumptions**.
 
+The administration task tracker follows the **Trust Administration Tracker**
+structure in `skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run trust-administration-tracker for a fictional

@@ -171,3 +171,33 @@ medical details) throughout.
 - **Reminder:** outputs are draft working papers — not estate-planning advice,
   tax advice, a legal-effectiveness conclusion, or a beneficiary-entitlement
   conclusion.
+
+## 6. Fiduciary Dispute Matter Pack
+
+- **When to use:** a dispute over a fiduciary's conduct — an accounting
+  objection, a surcharge claim, a removal petition, or a beneficiary challenge
+  to a trustee, executor, or agent — where the conduct facts must be organized.
+- **Required starting materials:** the governing instrument; the user's role
+  and the dispute posture; the jurisdiction; accountings, communications, and
+  transaction records bearing on fiduciary conduct; the asset and liability
+  records; beneficiary objections.
+- **Recommended skill sequence:**
+  1. `skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md`
+  2. `skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md`
+  3. `skills/trusts-estates/estate-document-summary/SKILL.md`
+  4. `skills/trusts-estates/asset-liability-inventory-builder/SKILL.md`
+- **Expected outputs:** fiduciary-duty issue matrix; factual chronology of the
+  dispute; instrument summary anchoring the fiduciary's powers and duties as
+  written; asset and liability inventory.
+- **Attorney verification checkpoints:** confirm the gates and the dispute
+  posture; review the issue matrix and chronology; review the instrument's
+  powers provisions; review before any objection, petition, or settlement step.
+- **Do-not-use boundaries:** no fiduciary-breach, liability, or compliance
+  conclusion; no merits assessment or outcome prediction; no surcharge or
+  damages figure; no distribution approval.
+- **Handoff notes:** the issue spotter surfaces the conduct questions; the
+  chronology organizes the dispute timeline; the document summary anchors the
+  fiduciary's powers and duties as written; the inventory provides the
+  asset context for accounting and transaction questions.
+- **Reminder:** outputs are draft working papers — not litigation advice, a
+  fiduciary-breach conclusion, a merits assessment, or a distribution approval.
