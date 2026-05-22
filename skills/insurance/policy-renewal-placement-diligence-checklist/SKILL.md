@@ -96,7 +96,7 @@ If the renewal/placement context, the lines in scope, or the user's role is miss
 
 1. **Capability and reliance notice** — draft only; not legal advice; not insurance advice; no carrier recommendation; attorney and broker review required.
 2. **Gates table** — renewal/placement context, lines in scope, user's role, jurisdictions, renewal/effective date, with status and source.
-3. **Diligence checklist** — organized by workstream; each item with a status field and, where applicable, a source.
+3. **Diligence checklist** — organized by workstream; each item with a status field and, where applicable, a source. Follows the Renewal / Placement Diligence Checklist pattern in `skills/insurance/references/output-patterns.md`.
 4. **Document request list** — documents to obtain, with the workstream each supports.
 5. **Coverage gap questions** — gaps and structure questions for the attorney and broker, framed as questions.
 6. **Attorney and broker verification items** — what the attorney and the broker must each confirm; carrier selection, placement, and pricing are noted as broker/client decisions outside this checklist.

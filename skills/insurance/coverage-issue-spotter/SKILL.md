@@ -99,7 +99,7 @@ If the policy, the claim facts, the policy type, or the role is missing, record 
 
 1. **Capability and reliance notice** — draft only; not legal advice; no coverage determination; attorney review required.
 2. **Gates table** — policy type, user's role, claim type, claim stage, policy period, jurisdiction, with status and source.
-3. **Coverage issue matrix** — issue | coverage layer | policy provision (source) | claim fact (source) | why it is an open question | attorney follow-up.
+3. **Coverage issue matrix** — issue | coverage layer | policy provision (source) | claim fact (source) | why it is an open question | attorney follow-up. Follows the Coverage Issue Matrix pattern in `skills/insurance/references/output-patterns.md`.
 4. **Policy / claim fact table** — source-cited extraction of the policy provisions and claim facts the matrix relies on.
 5. **Missing facts** — facts needed to analyze each issue, marked `not provided`/`unknown`/`ambiguous`.
 6. **Document request list** — documents to obtain, with the issue each supports.

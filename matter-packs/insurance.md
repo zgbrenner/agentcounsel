@@ -173,3 +173,39 @@ calculated.
 - **Handoff notes:** the diligence checklist scopes the documents; the policy
   summary informs the expiring-program review; the certificate and contract
   reviews surface coverage obligations the renewal must address.
+
+## 8. Claim File Review Matter Pack
+
+- **When to use:** a whole claim file must be organized, issue-spotted, and
+  triaged for an attorney — a comprehensive first pass over a claim before a
+  coverage, claim-handling, or litigation assessment.
+- **Required starting materials:** the claim file (first notice of loss,
+  adjuster or examiner notes, correspondence, coverage letters, demands, the
+  claim diary); the policy or policy documents; policy type, the user's role,
+  the claim type, the claim stage, and jurisdiction.
+- **Recommended skill sequence:** `skills/insurance/claims-chronology-builder/SKILL.md`
+  -> `skills/insurance/coverage-issue-spotter/SKILL.md`
+  -> `skills/insurance/insurer-insured-communications-review/SKILL.md`
+  -> `skills/insurance/bad-faith-risk-triage/SKILL.md`.
+- **Expected outputs:** a source-cited claim chronology; a coverage issue
+  matrix; a communications issue list with draft edits; and a neutrally framed
+  claim-handling risk-theme list with jurisdiction-specific questions for
+  counsel.
+- **Attorney verification checkpoints:** after the chronology (confirm the
+  timeline and gaps); after the issue spotter (confirm the coverage issues and
+  missing facts); after the risk triage (confirm the themes and the
+  jurisdiction's standards, which the attorney supplies).
+- **Do-not-use boundaries:** do not decide coverage or a duty to defend or
+  indemnify, conclude that bad faith occurred or did not occur, estimate
+  exposure or reserves, or value the claim.
+- **Handoff notes:** the chronology supplies the timeline every later step
+  depends on; the issue spotter maps the coverage questions; the communications
+  review and the risk triage draw on the chronology and the issue matrix so the
+  whole file is read consistently.
+
+## A reminder on every pack
+
+No matter pack output is a coverage determination, a claim approval or denial,
+a bad-faith conclusion, a reserve calculation, a claim valuation, a carrier
+recommendation, or insurance sales advice. Each pack sequences draft-only
+working papers; a qualified, licensed attorney reviews and decides.

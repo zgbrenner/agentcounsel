@@ -99,7 +99,7 @@ If the communications, the user's role, or the review purpose is missing, record
 
 1. **Capability and reliance notice** — draft only; not legal advice; not approval to send; attorney review required.
 2. **Gates table** — policy/claim context, user's role, claim stage, review purpose, jurisdiction, with status and source.
-3. **Communication issue list** — issue | communication reference | description | category (clarity/consistency/tone/posture/privilege/claim-handling/information-request/escalation) | why it matters | attorney follow-up.
+3. **Communication issue list** — issue | communication reference | description | category (clarity/consistency/tone/posture/privilege/claim-handling/information-request/escalation) | why it matters | attorney follow-up. Follows the Insurer / Insured Communications Review Table pattern in `skills/insurance/references/output-patterns.md`.
 4. **Source table** — source-cited extraction of the communication content the issue list relies on.
 5. **Suggested attorney-review edits** — direction-only suggestions and draft wording, clearly labeled draft-only.
 6. **Missing facts** — facts a communication relies on but the record does not show.

@@ -93,7 +93,7 @@ If the loss facts, the recovery types, or the user's role is missing, record it 
 1. **Capability and reliance notice** — draft only; not legal advice; no determination of recovery rights or value; attorney review required.
 2. **Gates table** — recovery types in scope, user's role, responsible parties, jurisdiction, with status and source.
 3. **Loss summary** — 3-5 sentences: the loss and the recovery theories in scope at a glance.
-4. **Recovery fact map** — recovery theory | responsible party | supporting facts (source) | contract/policy basis (source) | open question for the attorney.
+4. **Recovery fact map** — recovery theory | responsible party | supporting facts (source) | contract/policy basis (source) | open question for the attorney. Follows the Subrogation / Recovery Tracker pattern in `skills/insurance/references/output-patterns.md`.
 5. **Source table** — source-cited extraction of the loss, payment, contract, and policy facts the map relies on.
 6. **Evidence preservation** — evidence, sites, and records to preserve, with preservation concerns flagged.
 7. **Notices and litigation status** — recovery notices and litigation posture, source-cited.
