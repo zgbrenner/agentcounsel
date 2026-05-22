@@ -3,8 +3,8 @@
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-17-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-129-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-18-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-141-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 
@@ -51,7 +51,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **129 skills**: 117 across **17 practice areas**, plus 12 cross-cutting skills in three supporting groups.
+AgentCounsel has **141 skills**: 129 across **18 practice areas**, plus 12 cross-cutting skills in three supporting groups.
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -72,6 +72,7 @@ AgentCounsel has **129 skills**: 117 across **17 practice areas**, plus 12 cross
 | Securities / Capital Markets | 12 | Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings. |
 | Tax | 10 | Tax issue intake, entity tax-classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax worker-classification intake, contract tax-provision and covenant/indemnity review, tax document organization, international tax issue-spotting, and crypto/digital-asset tax intake. |
 | Bankruptcy / Restructuring | 12 | Bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract assumption/rejection review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, DIP financing issue-spotting, and deadline-tracker intake. |
+| Insurance | 12 | Insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation/recovery tracking, and renewal/placement diligence checklists. |
 
 Three **cross-cutting skill groups** support work in every practice area:
 

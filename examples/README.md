@@ -71,6 +71,18 @@ The [`bankruptcy-restructuring/`](bankruptcy-restructuring/) subdirectory holds 
 | [`bankruptcy-restructuring/distressed-asset-sale-checklist/`](bankruptcy-restructuring/distressed-asset-sale-checklist/) | [Distressed Asset Sale Checklist](../skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md) — a sale checklist, contract/cure tracker, and closing-deliverables tracker. |
 | [`bankruptcy-restructuring/restructuring-term-sheet-review/`](bankruptcy-restructuring/restructuring-term-sheet-review/) | [Restructuring Term Sheet Review](../skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md) — a key terms table and issue list with a risk matrix for a forbearance agreement. |
 
+## Insurance worked examples
+
+The [`insurance/`](insurance/) subdirectory holds worked examples for the Insurance practice area, each as a request-and-output pair. Every example uses fictional insureds, insurers, policies, forms, endorsements, and documents; treats reviewed documents as data; and stays inside issue spotting, source-cited summaries, and reviewer-ready working papers — no coverage determinations, claim approvals or denials, bad-faith conclusions, reserve calculations, or insurance sales advice. Each output is a draft working paper for attorney review.
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`insurance/insurance-policy-summary/`](insurance/insurance-policy-summary/) | [Insurance Policy Summary](../skills/insurance/insurance-policy-summary/SKILL.md) — a source-cited policy overview, key terms table, coverage-parts table, and endorsements table. |
+| [`insurance/coverage-issue-spotter/`](insurance/coverage-issue-spotter/) | [Coverage Issue Spotter](../skills/insurance/coverage-issue-spotter/SKILL.md) — a coverage issue matrix and source-cited policy/claim fact table with missing facts and document requests. |
+| [`insurance/reservation-of-rights-review/`](insurance/reservation-of-rights-review/) | [Reservation of Rights Review](../skills/insurance/reservation-of-rights-review/SKILL.md) — an issue list and provision-reference table cross-referencing a reservation of rights letter to the policy. |
+| [`insurance/certificate-of-insurance-review/`](insurance/certificate-of-insurance-review/) | [Certificate of Insurance Review](../skills/insurance/certificate-of-insurance-review/SKILL.md) — a COI comparison table with a missing-endorsement list and a mismatch list. |
+| [`insurance/insurance-requirements-contract-review/`](insurance/insurance-requirements-contract-review/) | [Insurance Requirements Contract Review](../skills/insurance/insurance-requirements-contract-review/SKILL.md) — a contract insurance requirements table, risk matrix, and negotiation points. |
+
 ## Using examples safely
 
 - Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.

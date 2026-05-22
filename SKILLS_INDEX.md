@@ -120,6 +120,18 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Bankruptcy / Restructuring | Distressed Asset Sale Checklist | `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md` | Building a bankruptcy or distressed asset-sale checklist and trackers | Asset description, sale process, party role, sale documents | Sale checklist + closing trackers |
 | Bankruptcy / Restructuring | Cash Collateral DIP Financing Issue Spotter | `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md` | Issue-spotting a cash collateral or DIP financing document | The financing document, party role, lenders, collateral, budget | Key terms table + issue list |
 | Bankruptcy / Restructuring | Bankruptcy Deadline Tracker Intake | `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md` | Intaking user-provided bankruptcy dates into a draft tracker for verification | Dates the user provides with sources, party role, task deadlines | Draft deadline tracker |
+| Insurance | Insurance Policy Summary | `skills/insurance/insurance-policy-summary/SKILL.md` | Summarizing an insurance policy into a source-cited overview | Policy document set, policy type, role, policy period | Source-cited policy summary |
+| Insurance | Coverage Issue Spotter | `skills/insurance/coverage-issue-spotter/SKILL.md` | Issue-spotting coverage questions from a policy and claim | Policy, claim facts, tender, pleadings, role | Coverage issue matrix |
+| Insurance | Claims Chronology Builder | `skills/insurance/claims-chronology-builder/SKILL.md` | Building a source-cited claim chronology from the claim file | Notices, correspondence, adjuster notes, payment history | Claim chronology |
+| Insurance | Reservation of Rights Review | `skills/insurance/reservation-of-rights-review/SKILL.md` | Reviewing a reservation of rights letter or coverage correspondence | ROR letter or correspondence, the policy, role | Issue list + provision-reference table |
+| Insurance | Tender Letter Review | `skills/insurance/tender-letter-review/SKILL.md` | Reviewing a tender, claim notice, or additional insured tender | Tender letter, asserted policy/contract basis, role | Tender completeness checklist + risk flags |
+| Insurance | Coverage Position Outline | `skills/insurance/coverage-position-outline/SKILL.md` | Assembling a coverage-position outline for a coverage attorney | Policy, claim facts, correspondence, role, claim stage | Coverage-position outline |
+| Insurance | Bad Faith Risk Triage | `skills/insurance/bad-faith-risk-triage/SKILL.md` | Issue-spotting claim-handling and bad-faith risk themes | Claim file materials, the policy, role, claim stage | Risk-theme list + questions for counsel |
+| Insurance | Certificate of Insurance Review | `skills/insurance/certificate-of-insurance-review/SKILL.md` | Reviewing certificates of insurance against contract requirements | Certificate(s), endorsements, contract requirements | COI comparison table |
+| Insurance | Insurance Requirements Contract Review | `skills/insurance/insurance-requirements-contract-review/SKILL.md` | Reviewing the insurance and indemnity clauses of a contract | Contract, contract type, role | Requirements table + risk matrix |
+| Insurance | Subrogation Recovery Tracker | `skills/insurance/subrogation-recovery-tracker/SKILL.md` | Organizing potential subrogation and recovery facts from a loss | Loss facts, payment documents, contracts, policy provisions | Recovery fact map |
+| Insurance | Policy Renewal Placement Diligence Checklist | `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md` | Generating a legal and compliance diligence checklist for a renewal or placement | Renewal context, expiring policies, claims history, lines in scope | Diligence checklist + document requests |
+| Insurance | Insurer Insured Communications Review | `skills/insurance/insurer-insured-communications-review/SKILL.md` | Reviewing insurer, insured, claimant, or broker communications | Communications, policy/claim context, role, review purpose | Communication issue list + suggested edits |
 | Legal Operations | Templated Legal Response | `skills/legal-ops/templated-legal-response/SKILL.md` | Drafting a templated response to a recurring legal inquiry with an escalation gate | The inquiry, response template, customization facts | Draft response + escalation check |
 | Legal Operations | Legal Meeting Briefing | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | Preparing a structured briefing for a meeting with legal relevance | Meeting context, background materials | Meeting briefing + action tracker |
 | Legal Operations | Signature Routing Checklist | `skills/legal-ops/signature-routing-checklist/SKILL.md` | Running a pre-signature readiness check and routing plan for a final document | The document, intended signers, approvals | Signature readiness review |
@@ -158,6 +170,7 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - **Securities / Capital Markets** — private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings.
 - **Tax** — tax issue intake, entity tax-classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax worker-classification intake, contract tax-provision and covenant/indemnity review, tax document organization, international tax issue-spotting, and crypto/digital-asset tax intake.
 - **Bankruptcy / Restructuring** — bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract assumption/rejection review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, DIP financing issue-spotting, and deadline-tracker intake.
+- **Insurance** — insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation/recovery tracking, and renewal/placement diligence checklists.
 - **Legal Operations** — templated legal responses, meeting briefings, and signature routing.
 - **Setup** — cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile.
 - **Legal Methodology** — cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.
@@ -184,3 +197,18 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md`
 - `skills/antitrust-competition/trade-association-meeting-review/SKILL.md`
 - `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md`
+
+## Insurance
+
+- `skills/insurance/insurance-policy-summary/SKILL.md`
+- `skills/insurance/coverage-issue-spotter/SKILL.md`
+- `skills/insurance/claims-chronology-builder/SKILL.md`
+- `skills/insurance/reservation-of-rights-review/SKILL.md`
+- `skills/insurance/tender-letter-review/SKILL.md`
+- `skills/insurance/coverage-position-outline/SKILL.md`
+- `skills/insurance/bad-faith-risk-triage/SKILL.md`
+- `skills/insurance/certificate-of-insurance-review/SKILL.md`
+- `skills/insurance/insurance-requirements-contract-review/SKILL.md`
+- `skills/insurance/subrogation-recovery-tracker/SKILL.md`
+- `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
+- `skills/insurance/insurer-insured-communications-review/SKILL.md`

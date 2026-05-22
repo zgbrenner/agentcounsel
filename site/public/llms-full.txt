@@ -2,8 +2,8 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 129
-Practice areas: 20
+Total skills: 141
+Practice areas: 21
 
 ## Legal Research (1 skill)
 
@@ -1215,6 +1215,116 @@ Use when:
   - A restructuring support agreement, forbearance agreement, exchange offer,
   - A negotiating party needs the key terms, issues, and risks mapped from one
   - Restructuring terms must be checked for completeness before negotiation or
+
+## Insurance (12 skills)
+
+### Bad Faith Risk Triage
+Path: skills/insurance/bad-faith-risk-triage/SKILL.md
+Catalog page: skills/insurance/bad-faith-risk-triage.html
+Trigger: "Use when issue-spotting potential claim-handling and bad-faith risk themes from claim file materials into a source-cited risk-theme list for attorney review."
+Use when:
+  - A claim file must be triaged for potential claim-handling and bad-faith risk themes before attorney review.
+  - Counsel needs the file's risk themes, chronology gaps, and communication issues organized and sourced.
+  - An insurer or insured wants potential exposure themes surfaced for a bad-faith or claim-handling assessment.
+
+### Certificate of Insurance Review
+Path: skills/insurance/certificate-of-insurance-review/SKILL.md
+Catalog page: skills/insurance/certificate-of-insurance-review.html
+Trigger: "Use when reviewing certificates of insurance and related endorsements against contract insurance requirements into a source-cited comparison table for attorney review."
+Use when:
+  - A certificate of insurance must be checked against contract insurance requirements.
+  - A reviewer needs the certificate's policy types, limits, dates, and endorsements extracted and compared.
+  - Missing endorsements or mismatches with the contract must be surfaced before a transaction or tender.
+
+### Claims Chronology Builder
+Path: skills/insurance/claims-chronology-builder/SKILL.md
+Catalog page: skills/insurance/claims-chronology-builder.html
+Trigger: "Use when building a source-cited claim chronology from notices, correspondence, adjuster notes, pleadings, demands, and payment history for attorney review."
+Use when:
+  - A claim file must be organized into a factual timeline for an attorney.
+  - Coverage, claim-handling, or bad-faith review needs a sourced chronology of what happened and when.
+  - A claim spans many documents and a date-ordered, source-cited record is needed before substantive analysis.
+
+### Coverage Issue Spotter
+Path: skills/insurance/coverage-issue-spotter/SKILL.md
+Catalog page: skills/insurance/coverage-issue-spotter.html
+Trigger: "Use when issue-spotting insurance coverage questions from a policy, claim facts, tender, pleadings, and correspondence into a source-cited coverage issue matrix for attorney review."
+Use when:
+  - A coverage question must be triaged before substantive attorney analysis.
+  - A claim, tender, or denial needs the coverage issues mapped against the policy.
+  - Counsel needs a source-cited issue matrix with explicit missing facts and document requests.
+
+### Coverage Position Outline
+Path: skills/insurance/coverage-position-outline/SKILL.md
+Catalog page: skills/insurance/coverage-position-outline.html
+Trigger: "Use when assembling a draft coverage-position outline from supplied policy and claim materials for a coverage attorney to develop and decide."
+Use when:
+  - A coverage attorney needs the materials organized into a position outline before drafting an analysis.
+  - The policy and claim file must be structured so candidate grants, exclusions, and open issues are visible.
+  - A reviewer wants the analytical skeleton, with every coverage decision left to counsel.
+
+### Insurance Policy Summary
+Path: skills/insurance/insurance-policy-summary/SKILL.md
+Catalog page: skills/insurance/insurance-policy-summary.html
+Trigger: "Use when summarizing an insurance policy into a source-cited overview of declarations, coverage parts, limits, exclusions, endorsements, and conditions for attorney review."
+Use when:
+  - An insurance policy must be summarized and organized for an attorney before a coverage review, claim review, or renewal.
+  - A reviewer needs declarations, coverage parts, limits, exclusions, endorsements, and conditions mapped with source citations.
+  - The policy is a long, definition-heavy document and a source-grounded summary is needed before substantive analysis.
+
+### Insurance Requirements Contract Review
+Path: skills/insurance/insurance-requirements-contract-review/SKILL.md
+Catalog page: skills/insurance/insurance-requirements-contract-review.html
+Trigger: "Use when reviewing the insurance and indemnity clauses of a contract, lease, or MSA into a source-cited requirements table and risk matrix for attorney review."
+Use when:
+  - The insurance and indemnity clauses of a contract must be reviewed and organized for an attorney.
+  - A party needs the required policies, limits, endorsements, and indemnity terms mapped from its perspective.
+  - Missing or one-sided insurance provisions must be flagged before negotiation or signing.
+
+### Insurer Insured Communications Review
+Path: skills/insurance/insurer-insured-communications-review/SKILL.md
+Catalog page: skills/insurance/insurer-insured-communications-review.html
+Trigger: "Use when reviewing insurer, insured, claimant, or broker communications for clarity, consistency, privilege concerns, and claim-handling risk for attorney review."
+Use when:
+  - Insurer, insured, claimant, or broker communications must be reviewed before they are sent or after they are received.
+  - A draft claim or coverage communication needs a clarity, consistency, and risk check before an attorney finalizes it.
+  - Privilege, confidentiality, or escalation concerns in a communication thread must be surfaced.
+
+### Policy Renewal Placement Diligence Checklist
+Path: skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md
+Catalog page: skills/insurance/policy-renewal-placement-diligence-checklist.html
+Trigger: "Use when generating a legal and compliance diligence checklist for an insurance policy renewal or placement for attorney and broker review."
+Use when:
+  - A renewal or new placement needs a structured legal and compliance diligence checklist.
+  - Counsel or risk management needs the document requests and coverage-gap questions organized before a renewal.
+  - Material changes, new operations, or contractual coverage obligations must be checked against the program before renewal.
+
+### Reservation of Rights Review
+Path: skills/insurance/reservation-of-rights-review/SKILL.md
+Catalog page: skills/insurance/reservation-of-rights-review.html
+Trigger: "Use when reviewing a reservation of rights letter or coverage correspondence into a source-cited issue list and provision-reference table for attorney review."
+Use when:
+  - A reservation of rights letter or coverage-position letter must be reviewed and organized for an attorney.
+  - An insured or insurer needs the letter's reserved rights, cited provisions, and information requests mapped against the policy.
+  - Coverage correspondence must be checked for clarity, consistency, and completeness before a response.
+
+### Subrogation Recovery Tracker
+Path: skills/insurance/subrogation-recovery-tracker/SKILL.md
+Catalog page: skills/insurance/subrogation-recovery-tracker.html
+Trigger: "Use when organizing potential subrogation, reimbursement, salvage, contribution, and recovery facts from a loss into a source-cited recovery fact map for attorney review."
+Use when:
+  - The facts bearing on a potential recovery from a third party must be organized for an attorney.
+  - An insurer or insured needs the loss, payment, party, contract, and policy facts mapped by recovery theory.
+  - Evidence-preservation and document needs must be surfaced early in a potential recovery.
+
+### Tender Letter Review
+Path: skills/insurance/tender-letter-review/SKILL.md
+Catalog page: skills/insurance/tender-letter-review.html
+Trigger: "Use when reviewing a tender letter, notice of claim, or additional insured or contractual indemnity tender into a completeness checklist and risk flags for attorney review."
+Use when:
+  - A tender letter, claim notice, additional insured tender, or contractual indemnity tender must be reviewed before it is sent or after it is received.
+  - The user needs the tender checked for completeness, supporting documents, and risk flags.
+  - A draft tender needs attorney-review revisions before finalizing.
 
 ## Legal Methodology (4 skills)
 
