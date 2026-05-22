@@ -3,8 +3,8 @@
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-19-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-153-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-165-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 
@@ -51,7 +51,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **153 skills**: 141 across **19 practice areas**, plus 12 cross-cutting skills in three supporting groups.
+AgentCounsel has **165 skills**: 153 across **20 practice areas**, plus 12 cross-cutting skills in three supporting groups.
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -74,6 +74,7 @@ AgentCounsel has **153 skills**: 141 across **19 practice areas**, plus 12 cross
 | Bankruptcy / Restructuring | 12 | Bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract assumption/rejection review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, DIP financing issue-spotting, and deadline-tracker intake. |
 | Insurance | 12 | Insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation/recovery tracking, and renewal/placement diligence checklists. |
 | Trusts & Estates | 12 | Estate-planning intake, estate-document summaries, probate document checklists, trust administration and post-death task tracking, fiduciary-duty issue-spotting, beneficiary-designation review, asset and liability inventories, capacity and undue-influence facts organization, estate-litigation chronologies, trust-funding checklists, and estate-tax issue intake. |
+| Family Law | 12 | Family law matter intake, divorce intake organization, custody and parenting chronologies and parenting-schedule organization, child and spousal support facts intake, property and debt schedules, domestic violence safety referral checklists, discovery tracking, settlement-agreement issue-spotting, custody-order review, and hearing-prep checklists. |
 
 Three **cross-cutting skill groups** support work in every practice area:
 

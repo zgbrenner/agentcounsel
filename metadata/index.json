@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 153,
+  "skill_count": 165,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
@@ -29,21 +29,21 @@
   },
   "task_types": {
     "analysis": 26,
-    "drafting": 20,
-    "extraction": 19,
-    "intake": 14,
+    "drafting": 21,
+    "extraction": 23,
+    "intake": 18,
     "interview": 4,
     "research": 1,
-    "review": 49,
+    "review": 51,
     "summarization": 5,
-    "triage": 11,
+    "triage": 12,
     "verification": 4
   },
   "risk_levels": {
     "low": 6,
-    "medium": 68,
-    "high": 77,
-    "critical": 2
+    "medium": 70,
+    "high": 86,
+    "critical": 3
   },
   "skills": [
     {

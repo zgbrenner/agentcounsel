@@ -45,6 +45,7 @@ const AREA_META = {
   'bankruptcy-restructuring': { name: 'Bankruptcy / Restructuring', blurb: 'Bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, and DIP financing issue-spotting.' },
   'insurance': { name: 'Insurance', blurb: 'Insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation and recovery tracking, and renewal and placement diligence checklists.' },
   'trusts-estates': { name: 'Trusts & Estates', blurb: 'Estate-planning intake, estate-document summaries, probate document checklists, trust administration and post-death task tracking, fiduciary-duty issue-spotting, beneficiary-designation review, asset and liability inventories, capacity and undue-influence facts organization, estate-litigation chronologies, trust-funding checklists, and estate-tax issue intake.' },
+  'family-law': { name: 'Family Law', blurb: 'Family law matter intake, divorce intake organization, custody and parenting chronologies and parenting-schedule organization, child and spousal support facts intake, property and debt schedules, domestic violence safety referral checklists, discovery tracking, settlement-agreement issue-spotting, custody-order review, and hearing-prep checklists.' },
   'legal-methodology': { name: 'Legal Methodology', blurb: 'Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.' },
   'legal-ops': { name: 'Legal Operations', blurb: 'Templated legal responses, meeting briefings, and signature-routing checks.' },
   'setup': { name: 'Setup', blurb: 'Cold-start interviews that configure AgentCounsel for a practice group.' },
@@ -55,7 +56,7 @@ const AREA_ORDER = [
   'privacy', 'product-legal', 'regulatory', 'ai-governance', 'ip',
   'financial-crime', 'real-estate', 'm-and-a', 'antitrust-competition',
   'securities-capital-markets', 'tax', 'bankruptcy-restructuring', 'insurance',
-  'trusts-estates', 'legal-methodology', 'legal-ops', 'setup',
+  'trusts-estates', 'family-law', 'legal-methodology', 'legal-ops', 'setup',
 ];
 
 // --- small helpers ---------------------------------------------------------
