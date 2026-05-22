@@ -2,8 +2,8 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 85
-Practice areas: 16
+Total skills: 117
+Practice areas: 19
 
 ## Legal Research (1 skill)
 
@@ -811,6 +811,300 @@ Use when:
   - A user asks to "list the consents we need," "review these contracts for
   - A deal team needs a structured read of diligence contracts to plan consent
   - Contracts or diligence summaries must be triaged for anti-assignment,
+
+## Antitrust / Competition (10 skills)
+
+### Antitrust Compliance Policy Review
+Path: skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md
+Catalog page: skills/antitrust-competition/antitrust-compliance-policy-review.html
+Trigger: "Use when performing antitrust compliance policy review as draft work product for attorney review."
+Use when:
+  - The user requests antitrust compliance policy review support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Antitrust Risk Intake
+Path: skills/antitrust-competition/antitrust-risk-intake/SKILL.md
+Catalog page: skills/antitrust-competition/antitrust-risk-intake.html
+Trigger: "Use when performing antitrust risk intake as draft work product for attorney review."
+Use when:
+  - The user requests antitrust risk intake support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Competitor Collaboration Review
+Path: skills/antitrust-competition/competitor-collaboration-review/SKILL.md
+Catalog page: skills/antitrust-competition/competitor-collaboration-review.html
+Trigger: "Use when performing competitor collaboration review as draft work product for attorney review."
+Use when:
+  - The user requests competitor collaboration review support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Distribution Restraints Review
+Path: skills/antitrust-competition/distribution-restraints-review/SKILL.md
+Catalog page: skills/antitrust-competition/distribution-restraints-review.html
+Trigger: "Use when performing distribution restraints review as draft work product for attorney review."
+Use when:
+  - The user requests distribution restraints review support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Exclusivity MFN Pricing Review
+Path: skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md
+Catalog page: skills/antitrust-competition/exclusivity-mfn-pricing-review.html
+Trigger: "Use when performing exclusivity mfn pricing review as draft work product for attorney review."
+Use when:
+  - The user requests exclusivity mfn pricing review support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Gun Jumping Clean Team Checklist
+Path: skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md
+Catalog page: skills/antitrust-competition/gun-jumping-clean-team-checklist.html
+Trigger: "Use when performing gun jumping clean team checklist as draft work product for attorney review."
+Use when:
+  - The user requests gun jumping clean team checklist support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Information Sharing Clean Team Review
+Path: skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md
+Catalog page: skills/antitrust-competition/information-sharing-clean-team-review.html
+Trigger: "Use when performing information sharing clean team review as draft work product for attorney review."
+Use when:
+  - The user requests information sharing clean team review support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Merger Antitrust Issue Spotter
+Path: skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md
+Catalog page: skills/antitrust-competition/merger-antitrust-issue-spotter.html
+Trigger: "Use when performing merger antitrust issue spotter as draft work product for attorney review."
+Use when:
+  - The user requests merger antitrust issue spotter support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Pricing Algorithm Risk Triage
+Path: skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md
+Catalog page: skills/antitrust-competition/pricing-algorithm-risk-triage.html
+Trigger: "Use when performing pricing algorithm risk triage as draft work product for attorney review."
+Use when:
+  - The user requests pricing algorithm risk triage support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+### Trade Association Meeting Review
+Path: skills/antitrust-competition/trade-association-meeting-review/SKILL.md
+Catalog page: skills/antitrust-competition/trade-association-meeting-review.html
+Trigger: "Use when performing trade association meeting review as draft work product for attorney review."
+Use when:
+  - The user requests trade association meeting review support.
+  - Antitrust/competition issues need issue spotting and workflow organization.
+  - Counsel needs a source-cited draft with explicit gaps and verification items.
+
+## Securities / Capital Markets (12 skills)
+
+### Capital Markets Closing Checklist
+Path: skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md
+Catalog page: skills/securities-capital-markets/capital-markets-closing-checklist.html
+Trigger: "Use when performing capital markets closing checklist as draft work product for attorney review."
+Use when:
+  - The user requests capital markets closing checklist.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Comfort and Backup Request Tracker
+Path: skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md
+Catalog page: skills/securities-capital-markets/comfort-backup-request-tracker.html
+Trigger: "Use when performing comfort and backup tracker as draft work product for attorney review."
+Use when:
+  - The user requests comfort and backup tracker.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Form D and Blue Sky Tracker
+Path: skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md
+Catalog page: skills/securities-capital-markets/form-d-blue-sky-tracker.html
+Trigger: "Use when performing Form D and blue sky tracking as draft work product for attorney review."
+Use when:
+  - The user requests Form D and blue sky tracking.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Insider Trading Policy Review
+Path: skills/securities-capital-markets/insider-trading-policy-review/SKILL.md
+Catalog page: skills/securities-capital-markets/insider-trading-policy-review.html
+Trigger: "Use when performing insider trading policy review as draft work product for attorney review."
+Use when:
+  - The user requests insider trading policy review.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Investor Rights Agreement Review
+Path: skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md
+Catalog page: skills/securities-capital-markets/investor-rights-agreement-review.html
+Trigger: "Use when performing investor rights agreement review as draft work product for attorney review."
+Use when:
+  - The user requests investor rights agreement review.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Offering Document Disclosure Review
+Path: skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md
+Catalog page: skills/securities-capital-markets/offering-document-disclosure-review.html
+Trigger: "Use when performing offering disclosure review as draft work product for attorney review."
+Use when:
+  - The user requests offering disclosure review.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Private Placement Checklist
+Path: skills/securities-capital-markets/private-placement-checklist/SKILL.md
+Catalog page: skills/securities-capital-markets/private-placement-checklist.html
+Trigger: "Use when performing private placement checklist as draft work product for attorney review."
+Use when:
+  - The user requests private placement checklist.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Public Company Reporting Calendar Intake
+Path: skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md
+Catalog page: skills/securities-capital-markets/public-company-reporting-calendar-intake.html
+Trigger: "Use when performing public company reporting calendar intake as draft work product for attorney review."
+Use when:
+  - The user requests public company reporting calendar intake.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Risk Factor Review
+Path: skills/securities-capital-markets/risk-factor-review/SKILL.md
+Catalog page: skills/securities-capital-markets/risk-factor-review.html
+Trigger: "Use when performing risk factor review as draft work product for attorney review."
+Use when:
+  - The user requests risk factor review.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### SEC Filing Consistency Check
+Path: skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md
+Catalog page: skills/securities-capital-markets/sec-filing-consistency-check.html
+Trigger: "Use when performing SEC filing consistency as draft work product for attorney review."
+Use when:
+  - The user requests SEC filing consistency.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Section 16 and Beneficial Ownership Triage
+Path: skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md
+Catalog page: skills/securities-capital-markets/section-16-beneficial-ownership-triage.html
+Trigger: "Use when performing section 16 and beneficial ownership triage as draft work product for attorney review."
+Use when:
+  - The user requests section 16 and beneficial ownership triage.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+### Securities Exemption Issue Spotter
+Path: skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md
+Catalog page: skills/securities-capital-markets/securities-exemption-issue-spotter.html
+Trigger: "Use when performing securities exemption issue spotting as draft work product for attorney review."
+Use when:
+  - The user requests securities exemption issue spotting.
+  - The user needs a structured, source-cited draft for supervising counsel.
+  - Documents or factual inputs are available for extraction and organization.
+
+## Tax (10 skills)
+
+### Crypto Digital Asset Tax Intake
+Path: skills/tax/crypto-digital-asset-tax-intake/SKILL.md
+Catalog page: skills/tax/crypto-digital-asset-tax-intake.html
+Trigger: "Use when intaking crypto and digital-asset activity and organizing wallet, exchange, and transaction records into a source-cited intake matrix for tax professional review."
+Use when:
+  - A taxpayer's digital-asset activity must be organized into an auditable record
+  - A team needs wallet, exchange, and transaction records categorized with
+  - Crypto activity must be scoped — business vs. personal, entity-involved or
+
+### Employment Tax Worker Classification Intake
+Path: skills/tax/employment-tax-worker-classification-intake/SKILL.md
+Catalog page: skills/tax/employment-tax-worker-classification-intake.html
+Trigger: "Use when intaking worker, engagement, and payroll facts into a source-cited facts-to-verify table for employment-tax and worker-classification review by qualified counsel."
+Use when:
+  - A worker or worker population's employment-tax facts must be organized before
+  - A team needs engagement, payment, and document facts captured with sources
+  - An employment-tax question must be coordinated between tax and employment
+
+### Entity Tax Classification Checklist
+Path: skills/tax/entity-tax-classification-checklist/SKILL.md
+Catalog page: skills/tax/entity-tax-classification-checklist.html
+Trigger: "Use when organizing entity formation, ownership, and election facts into a source-cited facts table so qualified tax counsel can evaluate tax classification."
+Use when:
+  - A new or existing entity's tax classification facts must be organized for
+  - An ownership change, a new owner, or a contemplated election makes
+  - A transaction or diligence workstream needs the classification facts mapped
+
+### International Tax Issue Spotter
+Path: skills/tax/international-tax-issue-spotter/SKILL.md
+Catalog page: skills/tax/international-tax-issue-spotter.html
+Trigger: "Use when issue-spotting cross-border tax questions into a source-cited issue map and missing-facts list for tax counsel, without concluding treaty, withholding, PE, or CFC/PFIC treatment."
+Use when:
+  - A cross-border structure or transaction needs its tax issues spotted and
+  - A team needs the jurisdictions, issue areas, and missing facts mapped for an
+  - A matter touches foreign entities, persons, payments, or operations and the
+
+### Sales Use Tax Nexus Triage
+Path: skills/tax/sales-use-tax-nexus-triage/SKILL.md
+Catalog page: skills/tax/sales-use-tax-nexus-triage.html
+Trigger: "Use when intake-mapping sales and use tax nexus facts by jurisdiction into a source-cited fact map and open-question tracker for tax professional review."
+Use when:
+  - A taxpayer's sales/use tax footprint must be mapped across multiple
+  - A team needs physical-presence, economic-activity, and marketplace facts
+  - A transaction or registration project needs the nexus facts triaged first.
+
+### Tax Covenants Indemnities Review
+Path: skills/tax/tax-covenants-indemnities-review/SKILL.md
+Catalog page: skills/tax/tax-covenants-indemnities-review.html
+Trigger: "Use when reviewing the tax covenants and indemnities of a transaction agreement and mapping their architecture and negotiation issues for tax counsel verification."
+Use when:
+  - A transaction agreement's tax covenants and indemnities must be mapped and
+  - A negotiating team needs the tax-risk-allocation architecture and its gaps
+  - Tax indemnity mechanics must be checked for completeness before signing.
+
+### Tax Document Organizer
+Path: skills/tax/tax-document-organizer/SKILL.md
+Catalog page: skills/tax/tax-document-organizer.html
+Trigger: "Use when organizing a tax-related document set into a source-cited inventory with masked identifiers, missing-document list, and reviewer notes for supervised tax review."
+Use when:
+  - A tax document set must be ordered into an auditable inventory before review.
+  - A team needs to see what documents exist, what is missing, and what is
+  - A diligence, intake, or controversy workstream needs its document record
+
+### Tax Issue Intake
+Path: skills/tax/tax-issue-intake/SKILL.md
+Catalog page: skills/tax/tax-issue-intake.html
+Trigger: "Use when capturing and structuring the facts of a tax-sensitive matter or transaction into a source-cited working paper and tax issue map for qualified tax professional review."
+Use when:
+  - A new tax-sensitive matter, transaction, or activity needs structured intake
+  - A team needs an auditable working paper that separates facts, sources, and
+  - A matter must be routed to the right specialist tax skill and the issues
+
+### Tax Provision Review Checklist
+Path: skills/tax/tax-provision-review-checklist/SKILL.md
+Catalog page: skills/tax/tax-provision-review-checklist.html
+Trigger: "Use when reviewing the tax provisions of a contract and producing a source-cited issue checklist and negotiation-point list for tax professional review."
+Use when:
+  - A contract's tax provisions — gross-up, withholding, indemnity, allocation,
+  - A negotiating team needs the tax terms mapped, with gaps and negotiation
+  - Tax terms must be checked for completeness before signing.
+
+### Transaction Tax Diligence Request List
+Path: skills/tax/transaction-tax-diligence-request-list/SKILL.md
+Catalog page: skills/tax/transaction-tax-diligence-request-list.html
+Trigger: "Use when building a transaction tax diligence request list and follow-up tracker organized by tax workstream for attorney-supervised diligence."
+Use when:
+  - A transaction — M&A, asset purchase, stock purchase, reorganization, real
+  - A diligence team needs requests organized by workstream with priority,
+  - Tax diligence follow-ups must be tracked against documents produced.
 
 ## Legal Methodology (4 skills)
 

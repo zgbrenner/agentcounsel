@@ -233,3 +233,18 @@ If the request does not fit a skill, do not invent a workflow. Tell the user the
 - **I need a capital-markets closing checklist** -> `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md`
 - **I need a comfort/backup request tracker** -> `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md`
 - **I need public-company reporting calendar intake** -> `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md`
+
+## Tax
+
+The Tax skills produce **draft work product for qualified tax counsel or a licensed tax professional**. They stay inside issue spotting, intake, diligence, document organization, and reviewer-ready working papers — never tax computation, return preparation, filing, or tax advice. For a recurring multi-step tax matter, see the workflow bundles in `matter-packs/tax.md`.
+
+- **I need to intake a tax-sensitive matter and map the issues** -> `skills/tax/tax-issue-intake/SKILL.md`
+- **I need to organize entity facts for a tax-classification review** -> `skills/tax/entity-tax-classification-checklist/SKILL.md`
+- **I need a transaction tax diligence request list by workstream** -> `skills/tax/transaction-tax-diligence-request-list/SKILL.md`
+- **I need to map sales/use tax nexus facts by jurisdiction** -> `skills/tax/sales-use-tax-nexus-triage/SKILL.md`
+- **I need to intake worker and payroll facts for an employment-tax review** -> `skills/tax/employment-tax-worker-classification-intake/SKILL.md`
+- **I need to review the tax provisions of a contract** -> `skills/tax/tax-provision-review-checklist/SKILL.md`
+- **I need to organize a tax document set into a source-cited inventory** -> `skills/tax/tax-document-organizer/SKILL.md`
+- **I need to review tax covenants and indemnities in a transaction agreement** -> `skills/tax/tax-covenants-indemnities-review/SKILL.md`
+- **I need to issue-spot cross-border tax questions** -> `skills/tax/international-tax-issue-spotter/SKILL.md`
+- **I need to intake crypto and digital-asset activity and records** -> `skills/tax/crypto-digital-asset-tax-intake/SKILL.md`
