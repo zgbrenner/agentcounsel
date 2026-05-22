@@ -125,6 +125,9 @@ record it as `not provided` and return the missing-information list first.
 5. **Missing documents** — forms and designations `not provided`.
 6. **Attorney verification checklist** and **assumptions**.
 
+The designation table follows the **Beneficiary Designation Review Table**
+structure in `skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run beneficiary-designation-review on a fictional set of

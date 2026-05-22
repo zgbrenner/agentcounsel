@@ -98,6 +98,8 @@ The [`trusts-estates/`](trusts-estates/) subdirectory holds worked examples for 
 | [`trusts-estates/probate-document-checklist/`](trusts-estates/probate-document-checklist/) | [Probate Document Checklist](../skills/trusts-estates/probate-document-checklist/SKILL.md) — a probate document checklist with statuses, sources, and a missing-document list. |
 | [`trusts-estates/trust-administration-tracker/`](trusts-estates/trust-administration-tracker/) | [Trust Administration Tracker](../skills/trusts-estates/trust-administration-tracker/SKILL.md) — a source-cited administration task tracker with owners, statuses, and dependencies. |
 | [`trusts-estates/estate-litigation-facts-chronology/`](trusts-estates/estate-litigation-facts-chronology/) | [Estate Litigation Facts Chronology](../skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md) — a source-cited factual chronology for a trust contest with disputed/undisputed status. |
+| [`trusts-estates/beneficiary-designation-review/`](trusts-estates/beneficiary-designation-review/) | [Beneficiary Designation Review](../skills/trusts-estates/beneficiary-designation-review/SKILL.md) — a source-cited designation table and inconsistency list checked against a draft will. |
+| [`trusts-estates/capacity-undue-influence-facts-organizer/`](trusts-estates/capacity-undue-influence-facts-organizer/) | [Capacity Undue Influence Facts Organizer](../skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md) — a source-cited facts chronology and red-flag themes for a will contest. |
 
 ## Using examples safely
 

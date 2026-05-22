@@ -126,6 +126,9 @@ first.
 6. **Missing facts** and **attorney verification questions**.
 7. **Assumptions and unresolved items**.
 
+The issue matrix follows the **Fiduciary Duty Issue Matrix** structure in
+`skills/trusts-estates/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run fiduciary-duty-issue-spotter for a fictional matter
