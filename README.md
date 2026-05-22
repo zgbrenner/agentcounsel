@@ -3,8 +3,8 @@
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Practice areas](https://img.shields.io/badge/practice%20areas-13-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-85-success.svg)](SKILLS_INDEX.md)
+[![Practice areas](https://img.shields.io/badge/practice%20areas-16-purple.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-117-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 
@@ -51,7 +51,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **85 skills**: 73 across **13 practice areas**, plus 12 cross-cutting skills in three supporting groups.
+AgentCounsel has **117 skills**: 105 across **16 practice areas**, plus 12 cross-cutting skills in three supporting groups.
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -68,6 +68,9 @@ AgentCounsel has **85 skills**: 73 across **13 practice areas**, plus 12 cross-c
 | Financial Crime / AML | 2 | KYC onboarding review, and sanctions / PEP / adverse-media screening review. |
 | Real Estate | 9 | Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objection tracking, diligence and closing checklists, estoppel and SNDA review, zoning issue-spotting. |
 | Mergers & Acquisitions | 10 | LOI and term-sheet review, acquisition diligence and data-room review, purchase-agreement and disclosure-schedule review, indemnity and escrow analysis, third-party consents, and closing, post-closing, and integration tracking. |
+| Antitrust / Competition | 10 | Antitrust risk intake, competitor-collaboration and information-sharing review, pricing-algorithm and distribution-restraint review, merger issue-spotting, gun-jumping checklists, and compliance-policy review. |
+| Securities / Capital Markets | 12 | Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings. |
+| Tax | 10 | Tax issue intake, entity tax-classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax worker-classification intake, contract tax-provision and covenant/indemnity review, tax document organization, international tax issue-spotting, and crypto/digital-asset tax intake. |
 
 Three **cross-cutting skill groups** support work in every practice area:
 

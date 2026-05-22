@@ -21,6 +21,9 @@ AgentCounsel gives AI agents and legal professionals a consistent, reviewable wa
 - Financial Crime / AML: KYC onboarding review and sanctions / PEP / adverse-media screening review.
 - Real Estate: Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objections, diligence and closing checklists, estoppel and SNDA review, and zoning issue-spotting.
 - Mergers & Acquisitions: LOI and term-sheet review, acquisition diligence, purchase-agreement and disclosure-schedule review, indemnity and escrow analysis, third-party consents, and closing and post-closing tracking.
+- Antitrust / Competition: Antitrust risk intake, competitor-collaboration and information-sharing review, pricing-algorithm and distribution-restraint review, merger issue-spotting, gun-jumping checklists, and compliance-policy review.
+- Securities / Capital Markets: Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings.
+- Tax: Tax issue intake, entity classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax intake, contract tax-provision review, document organization, international tax issue-spotting, and crypto tax intake.
 - Legal Methodology: Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.
 - Legal Operations: Templated legal responses, meeting briefings, and signature-routing checks.
 - Setup: Cold-start interviews that configure AgentCounsel for a practice group.
@@ -109,6 +112,38 @@ AgentCounsel gives AI agents and legal professionals a consistent, reviewable wa
 - [Mergers & Acquisitions] Purchase Agreement Issue List: "Use when reviewing an M&A purchase agreement — a merger, stock purchase, asset purchase, or membership-interest purchase agreement — from a buyer or seller perspective to produce an issue list and risk matrix for attorney review."
 - [Mergers & Acquisitions] Reps and Warranties Disclosure Schedule Review: "Use when comparing the representations and warranties in an M&A purchase agreement against the disclosure schedules to surface gaps, mismatches, and unresolved items for attorney review."
 - [Mergers & Acquisitions] Third-Party Consents and Assignment Review: "Use when identifying contractual consent, notice, change-of-control, and anti-assignment issues from M&A diligence contracts or summaries, organized into a consent tracker for attorney review."
+- [Antitrust / Competition] Antitrust Compliance Policy Review: "Use when performing antitrust compliance policy review as draft work product for attorney review."
+- [Antitrust / Competition] Antitrust Risk Intake: "Use when performing antitrust risk intake as draft work product for attorney review."
+- [Antitrust / Competition] Competitor Collaboration Review: "Use when performing competitor collaboration review as draft work product for attorney review."
+- [Antitrust / Competition] Distribution Restraints Review: "Use when performing distribution restraints review as draft work product for attorney review."
+- [Antitrust / Competition] Exclusivity MFN Pricing Review: "Use when performing exclusivity mfn pricing review as draft work product for attorney review."
+- [Antitrust / Competition] Gun Jumping Clean Team Checklist: "Use when performing gun jumping clean team checklist as draft work product for attorney review."
+- [Antitrust / Competition] Information Sharing Clean Team Review: "Use when performing information sharing clean team review as draft work product for attorney review."
+- [Antitrust / Competition] Merger Antitrust Issue Spotter: "Use when performing merger antitrust issue spotter as draft work product for attorney review."
+- [Antitrust / Competition] Pricing Algorithm Risk Triage: "Use when performing pricing algorithm risk triage as draft work product for attorney review."
+- [Antitrust / Competition] Trade Association Meeting Review: "Use when performing trade association meeting review as draft work product for attorney review."
+- [Securities / Capital Markets] Capital Markets Closing Checklist: "Use when performing capital markets closing checklist as draft work product for attorney review."
+- [Securities / Capital Markets] Comfort and Backup Request Tracker: "Use when performing comfort and backup tracker as draft work product for attorney review."
+- [Securities / Capital Markets] Form D and Blue Sky Tracker: "Use when performing Form D and blue sky tracking as draft work product for attorney review."
+- [Securities / Capital Markets] Insider Trading Policy Review: "Use when performing insider trading policy review as draft work product for attorney review."
+- [Securities / Capital Markets] Investor Rights Agreement Review: "Use when performing investor rights agreement review as draft work product for attorney review."
+- [Securities / Capital Markets] Offering Document Disclosure Review: "Use when performing offering disclosure review as draft work product for attorney review."
+- [Securities / Capital Markets] Private Placement Checklist: "Use when performing private placement checklist as draft work product for attorney review."
+- [Securities / Capital Markets] Public Company Reporting Calendar Intake: "Use when performing public company reporting calendar intake as draft work product for attorney review."
+- [Securities / Capital Markets] Risk Factor Review: "Use when performing risk factor review as draft work product for attorney review."
+- [Securities / Capital Markets] SEC Filing Consistency Check: "Use when performing SEC filing consistency as draft work product for attorney review."
+- [Securities / Capital Markets] Section 16 and Beneficial Ownership Triage: "Use when performing section 16 and beneficial ownership triage as draft work product for attorney review."
+- [Securities / Capital Markets] Securities Exemption Issue Spotter: "Use when performing securities exemption issue spotting as draft work product for attorney review."
+- [Tax] Crypto Digital Asset Tax Intake: "Use when intaking crypto and digital-asset activity and organizing wallet, exchange, and transaction records into a source-cited intake matrix for tax professional review."
+- [Tax] Employment Tax Worker Classification Intake: "Use when intaking worker, engagement, and payroll facts into a source-cited facts-to-verify table for employment-tax and worker-classification review by qualified counsel."
+- [Tax] Entity Tax Classification Checklist: "Use when organizing entity formation, ownership, and election facts into a source-cited facts table so qualified tax counsel can evaluate tax classification."
+- [Tax] International Tax Issue Spotter: "Use when issue-spotting cross-border tax questions into a source-cited issue map and missing-facts list for tax counsel, without concluding treaty, withholding, PE, or CFC/PFIC treatment."
+- [Tax] Sales Use Tax Nexus Triage: "Use when intake-mapping sales and use tax nexus facts by jurisdiction into a source-cited fact map and open-question tracker for tax professional review."
+- [Tax] Tax Covenants Indemnities Review: "Use when reviewing the tax covenants and indemnities of a transaction agreement and mapping their architecture and negotiation issues for tax counsel verification."
+- [Tax] Tax Document Organizer: "Use when organizing a tax-related document set into a source-cited inventory with masked identifiers, missing-document list, and reviewer notes for supervised tax review."
+- [Tax] Tax Issue Intake: "Use when capturing and structuring the facts of a tax-sensitive matter or transaction into a source-cited working paper and tax issue map for qualified tax professional review."
+- [Tax] Tax Provision Review Checklist: "Use when reviewing the tax provisions of a contract and producing a source-cited issue checklist and negotiation-point list for tax professional review."
+- [Tax] Transaction Tax Diligence Request List: "Use when building a transaction tax diligence request list and follow-up tracker organized by tax workstream for attorney-supervised diligence."
 - [Legal Methodology] Red-Team Verifier: "Use when checking whether a legal memo, contract review, demand letter, risk matrix, research summary, draft filing, or other legal AI output is reliable enough to rely on — adversarially stress-testing it before attorney review to surface invented authority, unsupported claims, weak reasoning, jurisdiction and deadline gaps, and professional-responsibility issues."
 - [Legal Methodology] Risk Assessment: "Use when applying a structured, jurisdiction-agnostic method to identify, rate, and prioritize legal risks in a situation, producing a risk register with severity bands and a prioritized summary for attorney review."
 - [Legal Methodology] Source Validation: "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`."

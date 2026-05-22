@@ -39,6 +39,9 @@ const AREA_META = {
   'financial-crime': { name: 'Financial Crime / AML', blurb: 'KYC onboarding review and sanctions / PEP / adverse-media screening review.' },
   'real-estate': { name: 'Real Estate', blurb: 'Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objections, diligence and closing checklists, estoppel and SNDA review, and zoning issue-spotting.' },
   'm-and-a': { name: 'Mergers & Acquisitions', blurb: 'LOI and term-sheet review, acquisition diligence, purchase-agreement and disclosure-schedule review, indemnity and escrow analysis, third-party consents, and closing and post-closing tracking.' },
+  'antitrust-competition': { name: 'Antitrust / Competition', blurb: 'Antitrust risk intake, competitor-collaboration and information-sharing review, pricing-algorithm and distribution-restraint review, merger issue-spotting, gun-jumping checklists, and compliance-policy review.' },
+  'securities-capital-markets': { name: 'Securities / Capital Markets', blurb: 'Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings.' },
+  'tax': { name: 'Tax', blurb: 'Tax issue intake, entity classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax intake, contract tax-provision review, document organization, international tax issue-spotting, and crypto tax intake.' },
   'legal-methodology': { name: 'Legal Methodology', blurb: 'Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.' },
   'legal-ops': { name: 'Legal Operations', blurb: 'Templated legal responses, meeting briefings, and signature-routing checks.' },
   'setup': { name: 'Setup', blurb: 'Cold-start interviews that configure AgentCounsel for a practice group.' },
@@ -47,7 +50,8 @@ const AREA_META = {
 const AREA_ORDER = [
   'legal-research', 'litigation', 'contracts', 'corporate', 'employment',
   'privacy', 'product-legal', 'regulatory', 'ai-governance', 'ip',
-  'financial-crime', 'real-estate', 'm-and-a', 'legal-methodology', 'legal-ops', 'setup',
+  'financial-crime', 'real-estate', 'm-and-a', 'antitrust-competition',
+  'securities-capital-markets', 'tax', 'legal-methodology', 'legal-ops', 'setup',
 ];
 
 // --- small helpers ---------------------------------------------------------
