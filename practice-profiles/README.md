@@ -74,4 +74,5 @@ This design is intentional. The library has no backend and no runtime. Configura
 | `ai-governance.md` | AI governance — model risk, prohibited use cases, AI compliance |
 | `ip.md` | Intellectual property — patents, trademarks, copyright, licensing |
 | `tax.md` | Tax — issue intake, diligence, tax-provision and nexus triage workflows |
+| `insurance.md` | Insurance — coverage, claims, policy review, tender, and recovery workflows |
 

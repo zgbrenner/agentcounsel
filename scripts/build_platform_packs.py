@@ -61,6 +61,7 @@ AREA_NAMES = {
     "product-legal": "Product Legal",
     "regulatory": "Regulatory",
     "ai-governance": "AI Governance",
+    "insurance": "Insurance",
     "ip": "Intellectual Property",
     "legal-methodology": "Legal Methodology",
     "setup": "Setup",

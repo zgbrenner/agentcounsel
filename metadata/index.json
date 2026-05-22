@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 129,
+  "skill_count": 141,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
@@ -10,6 +10,7 @@
     "corporate": 6,
     "employment": 8,
     "financial-crime": 2,
+    "insurance": 12,
     "ip": 7,
     "legal-methodology": 4,
     "legal-ops": 3,
@@ -25,21 +26,21 @@
     "tax": 10
   },
   "task_types": {
-    "analysis": 21,
-    "drafting": 19,
-    "extraction": 12,
+    "analysis": 23,
+    "drafting": 20,
+    "extraction": 14,
     "intake": 12,
     "interview": 4,
     "research": 1,
-    "review": 43,
-    "summarization": 3,
-    "triage": 10,
+    "review": 48,
+    "summarization": 4,
+    "triage": 11,
     "verification": 4
   },
   "risk_levels": {
     "low": 6,
-    "medium": 60,
-    "high": 61,
+    "medium": 64,
+    "high": 69,
     "critical": 2
   },
   "skills": [
@@ -1503,6 +1504,402 @@
         "pep",
         "adverse-media",
         "alert-adjudication"
+      ]
+    },
+    {
+      "path": "skills/insurance/bad-faith-risk-triage/SKILL.md",
+      "name": "Bad Faith Risk Triage",
+      "description": "Use when issue-spotting potential claim-handling and bad-faith risk themes from claim file materials into a source-cited risk-theme list for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The claim file materials — adjuster notes, correspondence, coverage letters, demands",
+        "The policy or policy summary and any claim chronology",
+        "Policy type, the user's role, and the claim stage",
+        "Source references to each claim document"
+      ],
+      "outputs": [
+        "Source-cited claim-handling risk-theme list",
+        "Chronology gaps, communication issues, and missing documents",
+        "Jurisdiction-specific questions for counsel and attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/insurance/claims-chronology-builder/SKILL.md",
+        "skills/insurance/insurer-insured-communications-review/SKILL.md",
+        "skills/insurance/coverage-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "bad-faith",
+        "claim-handling",
+        "triage",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/certificate-of-insurance-review/SKILL.md",
+      "name": "Certificate of Insurance Review",
+      "description": "Use when reviewing certificates of insurance and related endorsements against contract insurance requirements into a source-cited comparison table for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The certificate(s) of insurance and any attached endorsements",
+        "The contract insurance requirements, if provided",
+        "The user's role and the relationship the certificate evidences",
+        "Source references to certificate fields, endorsement numbers, and contract clauses"
+      ],
+      "outputs": [
+        "Source-cited COI comparison table",
+        "Missing-endorsement list and mismatch list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/insurance/insurance-requirements-contract-review/SKILL.md",
+        "skills/insurance/tender-letter-review/SKILL.md",
+        "skills/insurance/insurance-policy-summary/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "certificate-of-insurance",
+        "additional-insured",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/claims-chronology-builder/SKILL.md",
+      "name": "Claims Chronology Builder",
+      "description": "Use when building a source-cited claim chronology from notices, correspondence, adjuster notes, pleadings, demands, and payment history for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The claim document set — notices, correspondence, adjuster notes, pleadings, demands",
+        "Policy documents and payment history if provided",
+        "Policy type, the user's role, and the claim type",
+        "Source references to each document and date"
+      ],
+      "outputs": [
+        "Source-cited claim chronology with actor and significance columns",
+        "Missing/ambiguous facts list and follow-up items",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/insurance/coverage-issue-spotter/SKILL.md",
+        "skills/insurance/bad-faith-risk-triage/SKILL.md",
+        "skills/insurance/reservation-of-rights-review/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "claims",
+        "chronology",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/coverage-issue-spotter/SKILL.md",
+      "name": "Coverage Issue Spotter",
+      "description": "Use when issue-spotting insurance coverage questions from a policy, claim facts, tender, pleadings, and correspondence into a source-cited coverage issue matrix for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The policy or policy summary and the claim facts as provided",
+        "Tender, pleadings, demand letters, denial letters, and correspondence",
+        "Policy type, policy period, and the user's insurer/insured/claimant role",
+        "Source references to policy sections, forms, and claim documents"
+      ],
+      "outputs": [
+        "Source-cited coverage issue matrix and policy/claim fact table",
+        "Missing-facts list and document request list",
+        "Attorney verification questions and escalation triggers"
+      ],
+      "related_skills": [
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/insurance/coverage-position-outline/SKILL.md",
+        "skills/insurance/claims-chronology-builder/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "coverage",
+        "issue-spotting",
+        "analysis",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/coverage-position-outline/SKILL.md",
+      "name": "Coverage Position Outline",
+      "description": "Use when assembling a draft coverage-position outline from supplied policy and claim materials for a coverage attorney to develop and decide.",
+      "practice_area": "insurance",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The policy or policy summary and the claim facts as provided",
+        "Tender, pleadings, correspondence, and any prior coverage analysis",
+        "Policy type, the user's insurer/insured role, and the claim stage",
+        "Source references to policy provisions and claim documents"
+      ],
+      "outputs": [
+        "A structured coverage-position outline (not an opinion or denial)",
+        "Open factual and legal issues for counsel",
+        "Attorney verification checklist and recommended questions for counsel"
+      ],
+      "related_skills": [
+        "skills/insurance/coverage-issue-spotter/SKILL.md",
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/insurance/claims-chronology-builder/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "coverage",
+        "coverage-position",
+        "analysis",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/insurance-policy-summary/SKILL.md",
+      "name": "Insurance Policy Summary",
+      "description": "Use when summarizing an insurance policy into a source-cited overview of declarations, coverage parts, limits, exclusions, endorsements, and conditions for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "summarization",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The policy document set, with declarations, forms, and endorsements",
+        "Policy type and the user's insurer/insured/claimant role",
+        "Policy period and review purpose",
+        "Source references to pages, forms, endorsement numbers, and sections"
+      ],
+      "outputs": [
+        "Source-cited policy overview and key terms table",
+        "Coverage parts, exclusions/conditions, and endorsements inventory",
+        "Missing/ambiguous items list and attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/insurance/coverage-issue-spotter/SKILL.md",
+        "skills/insurance/coverage-position-outline/SKILL.md",
+        "skills/insurance/certificate-of-insurance-review/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "policy-summary",
+        "coverage",
+        "summarization",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/insurance-requirements-contract-review/SKILL.md",
+      "name": "Insurance Requirements Contract Review",
+      "description": "Use when reviewing the insurance and indemnity clauses of a contract, lease, or MSA into a source-cited requirements table and risk matrix for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The contract and its insurance and indemnity clauses",
+        "The user's role and the contract type",
+        "The user's standard insurance positions or playbook, if provided",
+        "Source references to the relevant clauses"
+      ],
+      "outputs": [
+        "Source-cited contract insurance requirements table",
+        "Risk matrix, missing-provisions list, and negotiation points",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/insurance/certificate-of-insurance-review/SKILL.md",
+        "skills/insurance/tender-letter-review/SKILL.md",
+        "skills/insurance/insurance-policy-summary/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "contract-review",
+        "insurance-requirements",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/insurer-insured-communications-review/SKILL.md",
+      "name": "Insurer Insured Communications Review",
+      "description": "Use when reviewing insurer, insured, claimant, or broker communications for clarity, consistency, privilege concerns, and claim-handling risk for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The communications to review — letters, emails, claim notes",
+        "The policy or claim context and the user's role",
+        "The claim stage and the purpose of the review",
+        "Source references to each communication"
+      ],
+      "outputs": [
+        "Source-cited communication issue list and source table",
+        "Suggested attorney-review edits and missing facts",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/insurance/reservation-of-rights-review/SKILL.md",
+        "skills/insurance/bad-faith-risk-triage/SKILL.md",
+        "skills/insurance/claims-chronology-builder/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "communications",
+        "claim-handling",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md",
+      "name": "Policy Renewal Placement Diligence Checklist",
+      "description": "Use when generating a legal and compliance diligence checklist for an insurance policy renewal or placement for attorney and broker review.",
+      "practice_area": "insurance",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The renewal or placement context and the expiring policies if any",
+        "Claims history, material changes, and contracts requiring coverage",
+        "The user's role and the lines of coverage in scope",
+        "Source references to provided materials"
+      ],
+      "outputs": [
+        "A renewal/placement diligence checklist",
+        "Document request list and coverage gap questions",
+        "Attorney and broker verification items"
+      ],
+      "related_skills": [
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/insurance/insurance-requirements-contract-review/SKILL.md",
+        "skills/insurance/certificate-of-insurance-review/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "renewal",
+        "placement",
+        "diligence-checklist",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/reservation-of-rights-review/SKILL.md",
+      "name": "Reservation of Rights Review",
+      "description": "Use when reviewing a reservation of rights letter or coverage correspondence into a source-cited issue list and provision-reference table for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The reservation of rights letter or coverage correspondence",
+        "The policy or policy summary, with source references",
+        "Policy type, the user's insurer/insured role, and the claim",
+        "Source references to letter paragraphs and policy provisions"
+      ],
+      "outputs": [
+        "Source-cited issue list and provision-reference table",
+        "Missing-facts list and ambiguity list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/insurance/coverage-issue-spotter/SKILL.md",
+        "skills/insurance/insurer-insured-communications-review/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "reservation-of-rights",
+        "coverage-correspondence",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/subrogation-recovery-tracker/SKILL.md",
+      "name": "Subrogation Recovery Tracker",
+      "description": "Use when organizing potential subrogation, reimbursement, salvage, contribution, and recovery facts from a loss into a source-cited recovery fact map for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The loss facts and the claim or payment documents",
+        "Contracts, indemnity provisions, and policy subrogation provisions",
+        "The user's role and the recovery types in scope",
+        "Source references to each document"
+      ],
+      "outputs": [
+        "Source-cited recovery fact map and source table",
+        "Missing-facts list and document request list",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/insurance/claims-chronology-builder/SKILL.md",
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/insurance/coverage-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "subrogation",
+        "recovery",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/insurance/tender-letter-review/SKILL.md",
+      "name": "Tender Letter Review",
+      "description": "Use when reviewing a tender letter, notice of claim, or additional insured or contractual indemnity tender into a completeness checklist and risk flags for attorney review.",
+      "practice_area": "insurance",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The tender or notice letter and any supporting documents",
+        "The policy or contract basis asserted for the tender",
+        "The user's role and the claim being tendered",
+        "Source references to letter sections, policy provisions, and contract clauses"
+      ],
+      "outputs": [
+        "Tender completeness checklist and missing-documents list",
+        "Risk flags and proposed attorney-review revisions",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/insurance/insurance-requirements-contract-review/SKILL.md",
+        "skills/insurance/certificate-of-insurance-review/SKILL.md",
+        "skills/insurance/coverage-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "insurance",
+        "tender",
+        "additional-insured",
+        "review",
+        "draft-work-product"
       ]
     },
     {

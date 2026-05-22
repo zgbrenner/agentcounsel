@@ -43,6 +43,7 @@ const AREA_META = {
   'securities-capital-markets': { name: 'Securities / Capital Markets', blurb: 'Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings.' },
   'tax': { name: 'Tax', blurb: 'Tax issue intake, entity classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax intake, contract tax-provision review, document organization, international tax issue-spotting, and crypto tax intake.' },
   'bankruptcy-restructuring': { name: 'Bankruptcy / Restructuring', blurb: 'Bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, and DIP financing issue-spotting.' },
+  'insurance': { name: 'Insurance', blurb: 'Insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation and recovery tracking, and renewal and placement diligence checklists.' },
   'legal-methodology': { name: 'Legal Methodology', blurb: 'Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.' },
   'legal-ops': { name: 'Legal Operations', blurb: 'Templated legal responses, meeting briefings, and signature-routing checks.' },
   'setup': { name: 'Setup', blurb: 'Cold-start interviews that configure AgentCounsel for a practice group.' },
@@ -52,7 +53,7 @@ const AREA_ORDER = [
   'legal-research', 'litigation', 'contracts', 'corporate', 'employment',
   'privacy', 'product-legal', 'regulatory', 'ai-governance', 'ip',
   'financial-crime', 'real-estate', 'm-and-a', 'antitrust-competition',
-  'securities-capital-markets', 'tax', 'bankruptcy-restructuring',
+  'securities-capital-markets', 'tax', 'bankruptcy-restructuring', 'insurance',
   'legal-methodology', 'legal-ops', 'setup',
 ];
 

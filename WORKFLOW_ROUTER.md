@@ -265,3 +265,20 @@ The Bankruptcy / Restructuring skills produce **draft work product for a qualifi
 - **I need a bankruptcy or distressed asset-sale checklist** -> `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md`
 - **I need to issue-spot a cash collateral or DIP financing document** -> `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md`
 - **I need to intake bankruptcy dates into a draft deadline tracker** -> `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md`
+
+## Insurance
+
+The Insurance skills produce **draft work product for a qualified, licensed attorney**. They stay inside issue spotting, intake, source-cited summaries, chronologies, trackers, and reviewer-ready working papers — never insurance coverage advice, coverage determinations, claim approvals or denials, reserve calculations, bad-faith conclusions, or insurance sales advice. For a recurring multi-step matter, see the workflow bundles in `matter-packs/insurance.md`.
+
+- **I need to summarize an insurance policy with source cites** -> `skills/insurance/insurance-policy-summary/SKILL.md`
+- **I need to issue-spot the coverage questions on a claim** -> `skills/insurance/coverage-issue-spotter/SKILL.md`
+- **I need to build a claim chronology from the claim file** -> `skills/insurance/claims-chronology-builder/SKILL.md`
+- **I need to review a reservation of rights letter or coverage correspondence** -> `skills/insurance/reservation-of-rights-review/SKILL.md`
+- **I need to review a tender, claim notice, or additional insured tender** -> `skills/insurance/tender-letter-review/SKILL.md`
+- **I need to assemble a coverage-position outline for a coverage attorney** -> `skills/insurance/coverage-position-outline/SKILL.md`
+- **I need to triage claim-handling and bad-faith risk themes** -> `skills/insurance/bad-faith-risk-triage/SKILL.md`
+- **I need to review a certificate of insurance against contract requirements** -> `skills/insurance/certificate-of-insurance-review/SKILL.md`
+- **I need to review the insurance and indemnity clauses of a contract** -> `skills/insurance/insurance-requirements-contract-review/SKILL.md`
+- **I need to organize potential subrogation and recovery facts** -> `skills/insurance/subrogation-recovery-tracker/SKILL.md`
+- **I need a renewal or placement diligence checklist** -> `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
+- **I need to review insurer/insured/claimant/broker communications** -> `skills/insurance/insurer-insured-communications-review/SKILL.md`

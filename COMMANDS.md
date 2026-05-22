@@ -238,3 +238,21 @@ Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. 
 | `/bankruptcy:asset-sale` | `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md` | "distressed asset sale checklist" | Asset, sale process, party role, sale documents | Sale checklist + closing trackers | `/bankruptcy:diligence` |
 | `/bankruptcy:dip-financing` | `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md` | "cash collateral DIP financing issues" | Financing document, party role, lenders, collateral | Key terms table + issue list | `/bankruptcy:term-sheet` |
 | `/bankruptcy:deadline-tracker` | `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md` | "bankruptcy deadline tracker" | Dates the user provides with sources, party role | Draft deadline tracker | `/bankruptcy:intake` |
+
+
+## Insurance
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/insurance:policy-summary` | `skills/insurance/insurance-policy-summary/SKILL.md` | "summarize this insurance policy" | Policy document set, policy type, role, policy period | Source-cited policy summary | `/insurance:coverage-issues` |
+| `/insurance:coverage-issues` | `skills/insurance/coverage-issue-spotter/SKILL.md` | "issue-spot coverage on this claim" | Policy, claim facts, tender, pleadings, role | Coverage issue matrix | `/insurance:position-outline` |
+| `/insurance:claims-chronology` | `skills/insurance/claims-chronology-builder/SKILL.md` | "build a claim chronology" | Notices, correspondence, adjuster notes, payment history | Claim chronology | `/insurance:bad-faith-triage` |
+| `/insurance:ror-review` | `skills/insurance/reservation-of-rights-review/SKILL.md` | "review this reservation of rights letter" | ROR letter or correspondence, the policy, role | Issue list + provision-reference table | `/insurance:communications` |
+| `/insurance:tender-review` | `skills/insurance/tender-letter-review/SKILL.md` | "review this tender letter" | Tender letter, asserted policy/contract basis, role | Tender completeness checklist + risk flags | `/insurance:contract-requirements` |
+| `/insurance:position-outline` | `skills/insurance/coverage-position-outline/SKILL.md` | "assemble a coverage-position outline" | Policy, claim facts, correspondence, role, claim stage | Coverage-position outline | `/insurance:coverage-issues` |
+| `/insurance:bad-faith-triage` | `skills/insurance/bad-faith-risk-triage/SKILL.md` | "triage bad-faith risk themes" | Claim file materials, the policy, role, claim stage | Risk-theme list + questions for counsel | `/insurance:claims-chronology` |
+| `/insurance:coi-review` | `skills/insurance/certificate-of-insurance-review/SKILL.md` | "review this certificate of insurance" | Certificate(s), endorsements, contract requirements | COI comparison table | `/insurance:contract-requirements` |
+| `/insurance:contract-requirements` | `skills/insurance/insurance-requirements-contract-review/SKILL.md` | "review the insurance clauses in this contract" | Contract, contract type, role | Requirements table + risk matrix | `/insurance:coi-review` |
+| `/insurance:subrogation-tracker` | `skills/insurance/subrogation-recovery-tracker/SKILL.md` | "track subrogation and recovery facts" | Loss facts, payment documents, contracts, policy provisions | Recovery fact map | `/insurance:claims-chronology` |
+| `/insurance:renewal-diligence` | `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md` | "renewal or placement diligence checklist" | Renewal context, expiring policies, claims history, lines in scope | Diligence checklist + document requests | `/insurance:policy-summary` |
+| `/insurance:communications` | `skills/insurance/insurer-insured-communications-review/SKILL.md` | "review insurer/insured communications" | Communications, policy/claim context, role, review purpose | Communication issue list + suggested edits | `/insurance:ror-review` |
