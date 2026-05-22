@@ -9,6 +9,7 @@
     "contracts": 5,
     "corporate": 6,
     "employment": 8,
+    "family-law": 12,
     "financial-crime": 2,
     "insurance": 12,
     "ip": 7,
@@ -1436,6 +1437,397 @@
         "worker-classification",
         "independent-contractor",
         "misclassification"
+      ]
+    },
+    {
+      "path": "skills/family-law/asset-debt-schedule-builder/SKILL.md",
+      "name": "Asset / Debt Schedule Builder",
+      "description": "Use when building a source-cited property and debt schedule from user-provided facts and documents for a family law matter, for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The document set — statements, deeds, account records, loan documents, and disclosures — with source references",
+        "The asset and debt facts the user states, including any user-provided values",
+        "Title, ownership, and disputed/undisputed status as the user provides them",
+        "The parties, their roles, and the jurisdiction as the user states them"
+      ],
+      "outputs": [
+        "Source-cited asset/debt schedule with owner, value-if-provided, and status columns",
+        "Missing-facts list and unknown/ambiguous-items list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/divorce-intake-organizer/SKILL.md",
+        "skills/family-law/family-law-discovery-tracker/SKILL.md",
+        "skills/family-law/settlement-agreement-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "assets",
+        "debts",
+        "property-schedule",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/child-support-facts-intake/SKILL.md",
+      "name": "Child Support Facts Intake",
+      "description": "Use when gathering the facts relevant to a child support review into a structured intake table, missing-documents list, and questions for counsel — without calculating support.",
+      "practice_area": "family-law",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The jurisdiction, the children, and the custody/parenting-time facts as the user states them",
+        "Income facts supplied by the user, healthcare costs, childcare costs, and special expenses",
+        "Existing support orders, any arrears the user states, and financial disclosures provided",
+        "Source references to any disclosures, pay records, statements, or orders provided"
+      ],
+      "outputs": [
+        "Child support facts intake table organized by category",
+        "Missing-documents list and questions for counsel",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/spousal-support-facts-intake/SKILL.md",
+        "skills/family-law/asset-debt-schedule-builder/SKILL.md",
+        "skills/family-law/family-law-discovery-tracker/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "child-support",
+        "intake",
+        "financial-facts",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/custody-order-review-checklist/SKILL.md",
+      "name": "Custody Order Review Checklist",
+      "description": "Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full existing or proposed custody or parenting order text",
+        "The parties, their roles, the children involved, and whether the order is existing or proposed",
+        "The jurisdiction and the case stage as the user states them",
+        "Any related orders or agreements the user provides, with source references"
+      ],
+      "outputs": [
+        "Order-clarity checklist covering the standard administration topics",
+        "Ambiguity table and missing-details list",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
+        "skills/family-law/parenting-schedule-facts-organizer/SKILL.md",
+        "skills/family-law/settlement-agreement-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "custody-order",
+        "review",
+        "clarity",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
+      "name": "Custody / Parenting Facts Chronology",
+      "description": "Use when building a source-cited chronology of parenting and caregiving facts for a custody or parenting dispute, for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The document set — communications, records, incident notes, orders, and schedules — with source references",
+        "The parties, their roles, the children involved, and any existing orders",
+        "The jurisdiction and the case stage as the user states them",
+        "Whether each event is disputed or undisputed, if the user provides that"
+      ],
+      "outputs": [
+        "Source-cited custody/parenting chronology with actor and child-relevance columns",
+        "Missing/ambiguous facts list and follow-up items",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/family-law/parenting-schedule-facts-organizer/SKILL.md",
+        "skills/family-law/custody-order-review-checklist/SKILL.md",
+        "skills/family-law/family-law-matter-intake/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "custody",
+        "parenting",
+        "chronology",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/divorce-intake-organizer/SKILL.md",
+      "name": "Divorce Intake Organizer",
+      "description": "Use when organizing the facts of a divorce or dissolution matter into a structured facts table, missing-documents list, and issue map for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The marriage and separation dates if the user provides them",
+        "Children, income, assets, debts, business interests, real estate, and retirement facts as the user states them",
+        "Support and custody issues, existing agreements/orders, and the contested/uncontested posture as stated",
+        "Source references to any disclosures, statements, agreements, or records provided"
+      ],
+      "outputs": [
+        "Divorce facts table organized by category",
+        "Missing-documents list and issue map",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/family-law-matter-intake/SKILL.md",
+        "skills/family-law/asset-debt-schedule-builder/SKILL.md",
+        "skills/family-law/settlement-agreement-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "divorce",
+        "dissolution",
+        "intake",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md",
+      "name": "Domestic Violence Safety Referral Checklist",
+      "description": "Use when organizing facts and referral/escalation considerations for a domestic violence or abuse-related concern in a family law matter, for attorney review — without creating a safety plan.",
+      "practice_area": "family-law",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "critical",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The immediate safety concerns the user describes",
+        "Existing protective orders, incidents described, and any police or medical records provided",
+        "Children involved, housing and financial access concerns, and upcoming court dates supplied by the user",
+        "Source references to any documents the user provides"
+      ],
+      "outputs": [
+        "Safety/escalation flags, including immediate-danger guidance to emergency and local resources",
+        "Document checklist and attorney/local-resource referral checklist",
+        "Missing-facts list and attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/family-law/family-law-matter-intake/SKILL.md",
+        "skills/family-law/custody-parenting-facts-chronology/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "domestic-violence",
+        "safety",
+        "referral",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/family-law-discovery-tracker/SKILL.md",
+      "name": "Family Law Discovery Tracker",
+      "description": "Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The discovery set — requests, responses, disclosures, subpoenas, authorizations — with source references",
+        "Response status, the responsible party, and any deficiencies the user identifies",
+        "Deadlines the user supplies, echoed verbatim and unverified",
+        "The parties, their roles, the case stage, and the jurisdiction as stated"
+      ],
+      "outputs": [
+        "Discovery tracker with request, status, source, deadline-if-provided, and deficiency columns",
+        "Follow-up and meet-and-confer item list",
+        "Missing-facts list and attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/asset-debt-schedule-builder/SKILL.md",
+        "skills/family-law/family-law-hearing-prep-checklist/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "discovery",
+        "tracker",
+        "disclosures",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/family-law-hearing-prep-checklist/SKILL.md",
+      "name": "Family Law Hearing Prep Checklist",
+      "description": "Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The hearing type and the issues to be heard as the user states them",
+        "The pleadings, declarations, exhibits, disclosures, and prior orders available, with source references",
+        "The witness list, service/proof documents, and requested relief as the user supplies them",
+        "Deadlines the user supplies, echoed verbatim and unverified, and the jurisdiction"
+      ],
+      "outputs": [
+        "Hearing-prep checklist with task, source, owner, status, and deadline-if-provided",
+        "Open-questions-for-counsel list and missing-facts list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/family-law-discovery-tracker/SKILL.md",
+        "skills/family-law/custody-parenting-facts-chronology/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "hearing-prep",
+        "checklist",
+        "litigation-organization",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/family-law-matter-intake/SKILL.md",
+      "name": "Family Law Matter Intake",
+      "description": "Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The parties, their roles, and the relationship/marriage status as the user states them",
+        "The matter type, case stage, and any existing orders the user identifies",
+        "Jurisdiction, children involved, financial/property/support/custody issues, and safety concerns as the user states them",
+        "Source references to any pleadings, orders, correspondence, or records provided"
+      ],
+      "outputs": [
+        "Structured intake summary with an issue map",
+        "Missing-facts list and document request list",
+        "Safety/escalation flags and attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/family-law/divorce-intake-organizer/SKILL.md",
+        "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
+        "skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "intake",
+        "matter-intake",
+        "issue-spotting",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/parenting-schedule-facts-organizer/SKILL.md",
+      "name": "Parenting Schedule Facts Organizer",
+      "description": "Use when organizing the facts relevant to a parenting schedule discussion into a facts table, conflict/ambiguity list, and logistics checklist for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The current and any proposed parenting schedule as the user describes them",
+        "School, daycare, transportation, holiday, vacation, distance, and work-schedule facts as stated",
+        "Child needs the user states, the communication method, exchange logistics, and existing orders",
+        "Source references to any calendars, schedules, orders, or correspondence provided"
+      ],
+      "outputs": [
+        "Parenting schedule facts table",
+        "Conflict/ambiguity list and logistics checklist",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
+        "skills/family-law/custody-order-review-checklist/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "parenting-schedule",
+        "custody",
+        "logistics",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/settlement-agreement-issue-spotter/SKILL.md",
+      "name": "Settlement Agreement Issue Spotter",
+      "description": "Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full settlement, parenting, support, or stipulation agreement text or draft",
+        "The parties, their roles, and the matter type",
+        "The jurisdiction and the case stage as the user states them",
+        "Any related orders or prior agreements the user provides, with source references"
+      ],
+      "outputs": [
+        "Key terms table with section references",
+        "Issue list, ambiguity list, and missing-provisions list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/asset-debt-schedule-builder/SKILL.md",
+        "skills/family-law/custody-order-review-checklist/SKILL.md",
+        "skills/family-law/divorce-intake-organizer/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "settlement-agreement",
+        "issue-spotting",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/spousal-support-facts-intake/SKILL.md",
+      "name": "Spousal Support Facts Intake",
+      "description": "Use when gathering the facts relevant to a spousal support or alimony review into a structured intake table, missing-documents list, and questions for counsel — without calculating support.",
+      "practice_area": "family-law",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The jurisdiction and the relationship or marriage duration if the user provides it",
+        "Income, expenses, and employment facts as the user states them",
+        "Health facts and standard-of-living facts if provided, and assets and debts as stated",
+        "Existing support orders and financial disclosures provided, with source references"
+      ],
+      "outputs": [
+        "Spousal support facts intake table organized by category",
+        "Missing-documents list and questions for counsel",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/child-support-facts-intake/SKILL.md",
+        "skills/family-law/asset-debt-schedule-builder/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "spousal-support",
+        "alimony",
+        "intake",
+        "draft-work-product"
       ]
     },
     {

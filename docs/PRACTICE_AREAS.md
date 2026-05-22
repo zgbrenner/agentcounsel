@@ -55,6 +55,7 @@ met.
 | `financial-crime` | 2 — Advanced / specialized | stable | No | No | 0 of 2 skills |
 | `real-estate` | 2 — Advanced / specialized | experimental | Yes | No | 9 of 9 skills |
 | `m-and-a` | 2 — Advanced / specialized | experimental | Yes | No | 10 of 10 skills |
+| `family-law` | 2 — Advanced / specialized | experimental | Yes | No | 12 of 12 skills |
 
 ## Cross-cutting support groups — Tier 4
 
