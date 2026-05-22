@@ -70,6 +70,8 @@ The [`bankruptcy-restructuring/`](bankruptcy-restructuring/) subdirectory holds 
 | [`bankruptcy-restructuring/preference-demand-response-triage/`](bankruptcy-restructuring/preference-demand-response-triage/) | [Preference Demand Response Triage](../skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md) — a transfer timeline and defense-facts checklist for a preference demand. |
 | [`bankruptcy-restructuring/distressed-asset-sale-checklist/`](bankruptcy-restructuring/distressed-asset-sale-checklist/) | [Distressed Asset Sale Checklist](../skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md) — a sale checklist, contract/cure tracker, and closing-deliverables tracker. |
 | [`bankruptcy-restructuring/restructuring-term-sheet-review/`](bankruptcy-restructuring/restructuring-term-sheet-review/) | [Restructuring Term Sheet Review](../skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md) — a key terms table and issue list with a risk matrix for a forbearance agreement. |
+| [`bankruptcy-restructuring/automatic-stay-issue-spotter/`](bankruptcy-restructuring/automatic-stay-issue-spotter/) | [Automatic Stay Issue Spotter](../skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md) — an action inventory and stay-risk fact map with escalation flags. |
+| [`bankruptcy-restructuring/proof-of-claim-checklist/`](bankruptcy-restructuring/proof-of-claim-checklist/) | [Proof of Claim Checklist](../skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md) — a proof-of-claim preparation checklist and supporting-document tracker. |
 
 ## Insurance worked examples
 

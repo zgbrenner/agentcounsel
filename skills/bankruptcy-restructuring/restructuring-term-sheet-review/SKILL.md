@@ -46,8 +46,9 @@ citations; build a role-aware issue list and risk matrix; flag missing terms;
 and list negotiation points and verification questions.
 
 **This skill does not:** conclude whether a document or any term is enforceable
-or legally sufficient; determine the legal effect of releases, covenants, or
-conditions; draft final clause language; or constitute legal advice.
+or legally sufficient; conclude plan feasibility; determine the legal effect of
+releases, covenants, or conditions; draft final clause language; or constitute
+legal advice.
 
 ## Use When
 
@@ -79,7 +80,7 @@ as `not provided` and return the missing-information list first.
 ## Do Not Use When
 
 - The request is to conclude whether the document or a term is enforceable or
-  legally sufficient.
+  legally sufficient, or to conclude plan feasibility.
 - The request is to determine the legal effect of a release, covenant, or
   condition, or to draft final clause language.
 - The request is for legal advice or a deadline calculation.
@@ -132,6 +133,10 @@ as `not provided` and return the missing-information list first.
 5. **Missing terms** — expected terms marked `not found`.
 6. **Negotiation points** — direction of change only, from the user's side.
 7. **Attorney verification checklist** and **assumptions**.
+
+The key terms table and issue list follow the **Restructuring Term Sheet Issue
+List** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
 
 ## Example Request and Expected Output Shape
 

@@ -130,6 +130,9 @@ record it as `not provided` and return the missing-information list first.
 5. **Missing facts** and **document request list**.
 6. **Attorney verification questions** and **assumptions**.
 
+The claim facts table follows the **Creditor Claim Facts Table** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run creditor-claim-intake for a fictional vendor owed on

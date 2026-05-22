@@ -6,11 +6,12 @@ starting materials each sequence needs and the attorney verification
 checkpoints along the way.
 
 All packs produce **draft work product for a qualified, licensed attorney to
-review**. No pack output is bankruptcy legal advice, a pleading or filing, a
-filing approval, automatic-stay advice, claim-allowance advice, plan-
-confirmation advice, or approval of a restructuring transaction. Every pack
-stays inside intake, issue spotting, document tracking, checklist workflows,
-and reviewer-ready working papers — never filing automation or legal
+review**. No pack output is bankruptcy legal advice, a deadline calculation, a
+pleading or filing, a filing approval, automatic-stay advice, claim-allowance
+advice, lien-priority advice, plan-confirmation advice, sale approval, or
+approval of a restructuring transaction. Every pack stays inside intake, issue
+spotting, document tracking, diligence, trackers, and reviewer-ready working
+papers — never filing automation, deadline-calculation software, or legal
 conclusions. A qualified attorney must review every skill's output, and the
 pack's verification checkpoints, before anything is relied upon, filed, or
 acted on.
@@ -187,3 +188,31 @@ calculated.
   tracker.
 - **Reminder:** outputs are draft working papers — not plan-confirmation
   advice, voting recommendations, claim-allowance advice, or legal conclusions.
+
+## 7. DIP / Cash Collateral Matter Pack
+
+- **When to use:** a debtor, lender, committee, or party in interest is
+  evaluating debtor-in-possession financing or the use of cash collateral.
+- **Required starting materials:** the cash collateral or DIP financing
+  document(s); the lenders, collateral, and liens; the budget; the user's
+  party role; case status and court if known; any milestone, hearing, or
+  challenge-period dates.
+- **Recommended skill sequence:**
+  1. `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md`
+  2. `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md`
+  3. `skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md`
+  4. `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md`
+- **Expected outputs:** matter summary and risk themes; financing key terms
+  table and issue list with separated business and legal questions; diligence
+  request list scoped to the financing and collateral; draft deadline tracker.
+- **Attorney verification checkpoints:** confirm the gates; review the
+  financing issues and the business/legal questions before any hearing or
+  objection; verify every milestone, hearing, and challenge-period date.
+- **Do-not-use boundaries:** no financing approval; no determination of lien
+  validity, perfection, or priority; no conclusion on whether adequate
+  protection or a carveout is sufficient; no deadline calculation.
+- **Handoff notes:** intake scopes the matter; the financing issue spotter maps
+  the terms and the open questions; diligence scopes the collateral and budget
+  data request; every date flows into the deadline tracker.
+- **Reminder:** outputs are draft working papers — not financing approval,
+  lien-priority advice, deadline calculation, or legal conclusions.

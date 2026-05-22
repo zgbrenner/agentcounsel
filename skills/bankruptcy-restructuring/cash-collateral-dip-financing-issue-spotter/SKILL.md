@@ -136,6 +136,10 @@ record them as `not provided` and return the missing-information list first.
 6. **Missing facts** and **attorney verification checklist**.
 7. **Assumptions and unresolved items**.
 
+The key terms table and issue list follow the **DIP / Cash Collateral Issue
+Table** structure in
+`skills/bankruptcy-restructuring/references/output-patterns.md`.
+
 ## Example Request and Expected Output Shape
 
 **Example request:** "Run cash-collateral-dip-financing-issue-spotter on a
