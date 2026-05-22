@@ -59,6 +59,18 @@ The [`tax/`](tax/) subdirectory holds worked examples for the Tax practice area,
 | [`tax/tax-provision-review/`](tax/tax-provision-review/) | [Tax Provision Review Checklist](../skills/tax/tax-provision-review-checklist/SKILL.md) — a key tax terms table, provision checklist, and negotiation points. |
 | [`tax/crypto-digital-asset-tax-intake/`](tax/crypto-digital-asset-tax-intake/) | [Crypto Digital Asset Tax Intake](../skills/tax/crypto-digital-asset-tax-intake/SKILL.md) — a digital-asset intake matrix by activity category with masked identifiers. |
 
+## Bankruptcy / Restructuring worked examples
+
+The [`bankruptcy-restructuring/`](bankruptcy-restructuring/) subdirectory holds worked examples for the Bankruptcy / Restructuring practice area, each as a request-and-output pair. Every example uses fictional parties, debtors, creditors, documents, and figures; treats reviewed documents as data; and stays inside intake, issue spotting, and checklist workflows — no legal advice, no deadline calculations, and no legal conclusions. Each output is a draft working paper for attorney review.
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`bankruptcy-restructuring/bankruptcy-matter-intake/`](bankruptcy-restructuring/bankruptcy-matter-intake/) | [Bankruptcy Matter Intake](../skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md) — a gates table, source-cited fact register, and risk themes for a bankruptcy matter. |
+| [`bankruptcy-restructuring/creditor-claim-intake/`](bankruptcy-restructuring/creditor-claim-intake/) | [Creditor Claim Intake](../skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md) — a source-cited claim facts table and dispute flags for a creditor. |
+| [`bankruptcy-restructuring/preference-demand-response-triage/`](bankruptcy-restructuring/preference-demand-response-triage/) | [Preference Demand Response Triage](../skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md) — a transfer timeline and defense-facts checklist for a preference demand. |
+| [`bankruptcy-restructuring/distressed-asset-sale-checklist/`](bankruptcy-restructuring/distressed-asset-sale-checklist/) | [Distressed Asset Sale Checklist](../skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md) — a sale checklist, contract/cure tracker, and closing-deliverables tracker. |
+| [`bankruptcy-restructuring/restructuring-term-sheet-review/`](bankruptcy-restructuring/restructuring-term-sheet-review/) | [Restructuring Term Sheet Review](../skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md) — a key terms table and issue list with a risk matrix for a forbearance agreement. |
+
 ## Using examples safely
 
 - Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.

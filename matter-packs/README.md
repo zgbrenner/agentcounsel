@@ -41,12 +41,13 @@ through `WORKFLOW_ROUTER.md`.
 
 ```
 matter-packs/
-  README.md                     - this file
-  antitrust-competition.md      - workflow bundles for the Antitrust / Competition practice area
-  m-and-a.md                    - workflow bundles for the Mergers & Acquisitions practice area
-  real-estate.md                - workflow bundles for the Real Estate practice area
-  securities-capital-markets.md - workflow bundles for the Securities / Capital Markets practice area
-  tax.md                        - workflow bundles for the Tax practice area
+  README.md                       - this file
+  antitrust-competition.md        - workflow bundles for the Antitrust / Competition practice area
+  bankruptcy-restructuring.md     - workflow bundles for the Bankruptcy / Restructuring practice area
+  m-and-a.md                      - workflow bundles for the Mergers & Acquisitions practice area
+  real-estate.md                  - workflow bundles for the Real Estate practice area
+  securities-capital-markets.md   - workflow bundles for the Securities / Capital Markets practice area
+  tax.md                          - workflow bundles for the Tax practice area
 ```
 
 To add a matter pack for another practice area, create

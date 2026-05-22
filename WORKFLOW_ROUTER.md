@@ -248,3 +248,20 @@ The Tax skills produce **draft work product for qualified tax counsel or a licen
 - **I need to review tax covenants and indemnities in a transaction agreement** -> `skills/tax/tax-covenants-indemnities-review/SKILL.md`
 - **I need to issue-spot cross-border tax questions** -> `skills/tax/international-tax-issue-spotter/SKILL.md`
 - **I need to intake crypto and digital-asset activity and records** -> `skills/tax/crypto-digital-asset-tax-intake/SKILL.md`
+
+## Bankruptcy / Restructuring
+
+The Bankruptcy / Restructuring skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document tracking, and checklist workflows — never bankruptcy legal advice, pleadings, filings, deadline calculations, or legal conclusions. For a recurring multi-step matter, see the workflow bundles in `matter-packs/bankruptcy-restructuring.md`.
+
+- **I need to intake a bankruptcy or restructuring matter** -> `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md`
+- **I need to organize a creditor's facts for a potential claim** -> `skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md`
+- **I need a proof-of-claim preparation checklist** -> `skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md`
+- **I need to issue-spot automatic stay concerns** -> `skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md`
+- **I need to organize facts for responding to a preference demand** -> `skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md`
+- **I need to review executory contract assumption/rejection issues** -> `skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md`
+- **I need a bankruptcy or distressed-transaction diligence request list** -> `skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md`
+- **I need to review a restructuring support, forbearance, or workout document** -> `skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md`
+- **I need to issue-spot a Chapter 11 plan and disclosure statement** -> `skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md`
+- **I need a bankruptcy or distressed asset-sale checklist** -> `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md`
+- **I need to issue-spot a cash collateral or DIP financing document** -> `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md`
+- **I need to intake bankruptcy dates into a draft deadline tracker** -> `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md`
