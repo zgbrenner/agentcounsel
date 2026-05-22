@@ -220,3 +220,21 @@ Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. 
 | `/tax:covenants` | `skills/tax/tax-covenants-indemnities-review/SKILL.md` | "tax indemnity review" | Agreement provisions | Covenant/indemnity architecture | `/tax:provision-review` |
 | `/tax:international` | `skills/tax/international-tax-issue-spotter/SKILL.md` | "cross-border tax issue" | Cross-border facts and source docs | Issue map + follow-ups | `/tax:intake` |
 | `/tax:crypto-intake` | `skills/tax/crypto-digital-asset-tax-intake/SKILL.md` | "crypto tax intake" | Wallet/exchange records, activity data | Transaction category map | `/tax:docs`, `/tax:intake` |
+
+
+## Bankruptcy / Restructuring
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/bankruptcy:intake` | `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md` | "bankruptcy matter intake", "restructuring intake" | Parties, party role, case status, document set | Matter summary + risk themes | `/bankruptcy:claim-intake`, `/bankruptcy:deadline-tracker` |
+| `/bankruptcy:claim-intake` | `skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md` | "creditor claim intake" | Debtor/creditor, claim basis, amount as stated | Claim facts table + dispute flags | `/bankruptcy:proof-of-claim` |
+| `/bankruptcy:proof-of-claim` | `skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md` | "proof of claim checklist" | Claimant, debtor/case, supporting documents | Preparation checklist + tracker | `/bankruptcy:claim-intake` |
+| `/bankruptcy:stay-issues` | `skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md` | "automatic stay issue spotting" | Debtor, party role, actions in question | Stay-risk fact map + escalation flags | `/bankruptcy:intake` |
+| `/bankruptcy:preference-triage` | `skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md` | "preference demand response" | Demand letter, alleged transfers, payment history | Transfer timeline + defense-facts checklist | `/bankruptcy:intake` |
+| `/bankruptcy:executory-contracts` | `skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md` | "executory contract assumption rejection" | Contract identity, roles, defaults, cure amounts | Contract status table + cure tracker | `/bankruptcy:stay-issues` |
+| `/bankruptcy:diligence` | `skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md` | "bankruptcy diligence request list" | Transaction/matter type, party role, workstreams | Request list by workstream | `/bankruptcy:asset-sale` |
+| `/bankruptcy:term-sheet` | `skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md` | "restructuring term sheet review" | The document, party role, parties, debt instruments | Key terms table + issue list | `/bankruptcy:dip-financing` |
+| `/bankruptcy:plan-issues` | `skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md` | "plan disclosure statement review" | Plan/disclosure statement, party role | Treatment table + issue list | `/bankruptcy:claim-intake` |
+| `/bankruptcy:asset-sale` | `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md` | "distressed asset sale checklist" | Asset, sale process, party role, sale documents | Sale checklist + closing trackers | `/bankruptcy:diligence` |
+| `/bankruptcy:dip-financing` | `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md` | "cash collateral DIP financing issues" | Financing document, party role, lenders, collateral | Key terms table + issue list | `/bankruptcy:term-sheet` |
+| `/bankruptcy:deadline-tracker` | `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md` | "bankruptcy deadline tracker" | Dates the user provides with sources, party role | Draft deadline tracker | `/bankruptcy:intake` |

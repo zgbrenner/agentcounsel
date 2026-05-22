@@ -2,8 +2,8 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 117
-Practice areas: 19
+Total skills: 129
+Practice areas: 20
 
 ## Legal Research (1 skill)
 
@@ -1105,6 +1105,116 @@ Use when:
   - A transaction — M&A, asset purchase, stock purchase, reorganization, real
   - A diligence team needs requests organized by workstream with priority,
   - Tax diligence follow-ups must be tracked against documents produced.
+
+## Bankruptcy / Restructuring (12 skills)
+
+### Automatic Stay Issue Spotter
+Path: skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/automatic-stay-issue-spotter.html
+Trigger: "Use when issue-spotting automatic stay concerns from user-provided facts into a source-cited stay-risk fact map for attorney review, without concluding whether the stay applies."
+Use when:
+  - A party needs the automatic stay concerns around an action, communication, or
+  - A creditor, lender, landlord, or counterparty is unsure whether a step is
+  - Post-petition activity must be inventoried before an attorney evaluates stay
+
+### Bankruptcy Deadline Tracker Intake
+Path: skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake.html
+Trigger: "Use when intaking user-provided bankruptcy dates and notices into a draft deadline tracker for attorney verification, without calculating any deadline."
+Use when:
+  - A team needs the bankruptcy dates and notices it has collected organized into
+  - A matter has multiple notices, orders, and hearing dates that must be
+  - Internally assigned task deadlines must be tracked alongside court dates.
+
+### Bankruptcy Diligence Request List
+Path: skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/bankruptcy-diligence-request-list.html
+Trigger: "Use when generating a bankruptcy or distressed-transaction diligence request list organized by workstream for attorney-supervised diligence."
+Use when:
+  - A distressed M&A deal, a bankruptcy asset sale, creditor or lender diligence,
+  - A diligence team needs requests organized by workstream with priority,
+  - Diligence follow-ups must be tracked against documents produced.
+
+### Bankruptcy Matter Intake
+Path: skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/bankruptcy-matter-intake.html
+Trigger: "Use when capturing the facts of a bankruptcy or restructuring matter into a structured, source-cited working paper for attorney review."
+Use when:
+  - A new bankruptcy, insolvency, or restructuring matter needs structured intake
+  - A creditor, debtor, buyer, lender, committee, or contract counterparty needs
+  - A matter must be routed to the right specialist bankruptcy skill and the
+
+### Cash Collateral DIP Financing Issue Spotter
+Path: skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter.html
+Trigger: "Use when issue-spotting a cash collateral or DIP financing document into a source-cited key terms table and issue list for attorney review, without approving terms or determining lien priority."
+Use when:
+  - A cash collateral order, DIP credit agreement, DIP financing motion, or
+  - A debtor, lender, committee, or party in interest needs the financing terms
+  - Financing terms must be checked before a hearing or an objection is
+
+### Creditor Claim Intake
+Path: skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/creditor-claim-intake.html
+Trigger: "Use when organizing a creditor's facts and documents for a potential bankruptcy claim into a source-cited claim facts table for attorney review."
+Use when:
+  - A creditor's claim facts must be organized before an attorney evaluates the
+  - A team needs the contract or invoice basis, amounts, collateral, and disputes
+  - A bankruptcy matter requires the creditor's position scoped before
+
+### Distressed Asset Sale Checklist
+Path: skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/distressed-asset-sale-checklist.html
+Trigger: "Use when building a bankruptcy or distressed asset-sale checklist, contract/cure tracker, and closing-deliverables tracker for attorney review."
+Use when:
+  - A bankruptcy or distressed asset sale needs its process steps, diligence, and
+  - A buyer, seller, or debtor needs the sale checklist, contract/cure tracker,
+  - A sale process must be scoped before bid procedures or a sale hearing are
+
+### Executory Contract Assumption Rejection Checklist
+Path: skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist.html
+Trigger: "Use when organizing executory contract and unexpired lease facts into a source-cited contract status table and assumption/rejection issue list for attorney review."
+Use when:
+  - A debtor or a counterparty needs the facts of an executory contract or
+  - A team needs cure amounts, defaults, assignment rights, and consent issues
+  - A contract portfolio must be triaged before an attorney evaluates assumption
+
+### Plan Disclosure Statement Issue Spotter
+Path: skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter.html
+Trigger: "Use when issue-spotting a Chapter 11 plan and disclosure statement into a source-cited treatment table and issue list for attorney review, without concluding confirmability."
+Use when:
+  - A plan and/or disclosure statement must be reviewed and its issues organized
+  - A creditor, committee, or party in interest needs the classification,
+  - A plan draft must be checked for internal consistency before objections or a
+
+### Preference Demand Response Triage
+Path: skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/preference-demand-response-triage.html
+Trigger: "Use when organizing the facts for responding to a preference demand into a source-cited transfer timeline and defense-facts checklist for attorney review."
+Use when:
+  - A creditor has received a preference demand and the underlying facts must be
+  - A team needs the alleged transfers, invoice and payment history, and
+  - A preference matter must be triaged before substantive analysis or
+
+### Proof of Claim Checklist
+Path: skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/proof-of-claim-checklist.html
+Trigger: "Use when building a proof-of-claim preparation checklist and supporting-document tracker for attorney review, without preparing a filing-ready claim."
+Use when:
+  - A creditor is preparing a proof of claim and needs a preparation checklist
+  - A team needs to see what supporting documents exist and what is missing
+  - A claim's supporting record must be organized before submission is
+
+### Restructuring Term Sheet Review
+Path: skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md
+Catalog page: skills/bankruptcy-restructuring/restructuring-term-sheet-review.html
+Trigger: "Use when reviewing a restructuring support agreement, forbearance agreement, workout term sheet, or related restructuring document into a source-cited key terms table and issue list for attorney review."
+Use when:
+  - A restructuring support agreement, forbearance agreement, exchange offer,
+  - A negotiating party needs the key terms, issues, and risks mapped from one
+  - Restructuring terms must be checked for completeness before negotiation or
 
 ## Legal Methodology (4 skills)
 

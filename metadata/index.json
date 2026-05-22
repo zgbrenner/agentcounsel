@@ -1,10 +1,11 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 117,
+  "skill_count": 129,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
+    "bankruptcy-restructuring": 12,
     "contracts": 5,
     "corporate": 6,
     "employment": 8,
@@ -24,21 +25,21 @@
     "tax": 10
   },
   "task_types": {
-    "analysis": 18,
+    "analysis": 21,
     "drafting": 19,
-    "extraction": 9,
-    "intake": 9,
+    "extraction": 12,
+    "intake": 12,
     "interview": 4,
     "research": 1,
-    "review": 41,
+    "review": 43,
     "summarization": 3,
-    "triage": 9,
+    "triage": 10,
     "verification": 4
   },
   "risk_levels": {
     "low": 6,
     "medium": 60,
-    "high": 49,
+    "high": 61,
     "critical": 2
   },
   "skills": [
@@ -459,6 +460,414 @@
         "antitrust",
         "competition",
         "trade-association-meeting-review"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md",
+      "name": "Automatic Stay Issue Spotter",
+      "description": "Use when issue-spotting automatic stay concerns from user-provided facts into a source-cited stay-risk fact map for attorney review, without concluding whether the stay applies.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Debtor, the user's party role, and case status / petition date as provided",
+        "The actions, communications, or proceedings in question",
+        "Facts on collections, litigation, setoff, foreclosure, repossession, or termination",
+        "Post-petition communications and notices received",
+        "Source documents with citations to docket entries, letters, or pages"
+      ],
+      "outputs": [
+        "Source-cited stay-risk fact map and action inventory",
+        "Missing-facts list and escalation flags",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md",
+        "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "issue-spotting",
+        "automatic-stay",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md",
+      "name": "Bankruptcy Deadline Tracker Intake",
+      "description": "Use when intaking user-provided bankruptcy dates and notices into a draft deadline tracker for attorney verification, without calculating any deadline.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Dates the user provides (petition, bar, meeting, objection, plan, sale, hearing)",
+        "Notices, orders, or docket entries that state those dates",
+        "The user's party role and any internally assigned task deadlines",
+        "Any rule-and-date calculation the user supplies, if a draft computed entry is requested",
+        "Source references to docket entries, notices, or pages"
+      ],
+      "outputs": [
+        "Draft deadline tracker with source, responsible party, status, and uncertainty flag",
+        "Missing-information list",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md",
+        "skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "intake",
+        "deadline-tracking",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md",
+      "name": "Bankruptcy Diligence Request List",
+      "description": "Use when generating a bankruptcy or distressed-transaction diligence request list organized by workstream for attorney-supervised diligence.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Transaction or matter type (distressed M&A, asset sale, creditor/lender diligence, restructuring, plan)",
+        "Debtor profile, the user's party role, and case status if known",
+        "Workstreams in scope and any documents already provided",
+        "Known debt, lien, contract, litigation, or claim facts the user reports",
+        "Source references for any documents already produced"
+      ],
+      "outputs": [
+        "Diligence request list organized by workstream with priority and rationale",
+        "Owner assignments and follow-up tracker",
+        "Missing-information list and attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md",
+        "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "diligence",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+      "name": "Bankruptcy Matter Intake",
+      "description": "Use when capturing the facts of a bankruptcy or restructuring matter into a structured, source-cited working paper for attorney review.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Debtor and creditor identities and the user's party role and posture",
+        "Case status, chapter/case type if known, and court if known",
+        "Petition date and any deadlines or notices as provided by the user",
+        "Claim type, contract relationship, and collateral/lien facts",
+        "Litigation status, payments received, and the requested action"
+      ],
+      "outputs": [
+        "Matter summary and source-cited fact register",
+        "Risk themes, missing-facts list, and document request list",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "intake",
+        "issue-spotting",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md",
+      "name": "Cash Collateral DIP Financing Issue Spotter",
+      "description": "Use when issue-spotting a cash collateral or DIP financing document into a source-cited key terms table and issue list for attorney review, without approving terms or determining lien priority.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The cash collateral or DIP financing document and the user's party role",
+        "Lenders, collateral, liens, and the budget as written",
+        "Reporting covenants, milestones, and roll-ups as provided",
+        "Adequate-protection, carveout, default-trigger, and release provisions",
+        "Source references to sections, clauses, budget lines, or pages"
+      ],
+      "outputs": [
+        "Source-cited key terms table and issue list",
+        "Missing-facts list and business/legal questions",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "issue-spotting",
+        "dip-financing",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
+      "name": "Creditor Claim Intake",
+      "description": "Use when organizing a creditor's facts and documents for a potential bankruptcy claim into a source-cited claim facts table for attorney review.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Debtor and creditor identities and the user's party role",
+        "Basis of the claim (contracts, invoices) and the claim amount as stated by the user",
+        "Any secured / unsecured / priority assertion the user provides",
+        "Collateral facts, guaranties, offsets, payments, and disputes",
+        "Notices received and proof-of-claim status"
+      ],
+      "outputs": [
+        "Source-cited claim facts table",
+        "Document request list, missing-facts list, and dispute flags",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md",
+        "skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "intake",
+        "creditor",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md",
+      "name": "Distressed Asset Sale Checklist",
+      "description": "Use when building a bankruptcy or distressed asset-sale checklist, contract/cure tracker, and closing-deliverables tracker for attorney review.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Asset description, the sale process, and the user's party role",
+        "Stalking-horse terms and bid procedures as provided",
+        "Liens/encumbrances, cure costs, and assigned contracts as provided",
+        "Employee, IP, real estate, tax, and regulatory facts as relevant",
+        "Source references to sale documents, motions, or pages"
+      ],
+      "outputs": [
+        "Sale checklist and diligence request list",
+        "Contract/cure tracker and closing-deliverables tracker",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md",
+        "skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md",
+        "skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "asset-sale",
+        "extraction",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md",
+      "name": "Executory Contract Assumption Rejection Checklist",
+      "description": "Use when organizing executory contract and unexpired lease facts into a source-cited contract status table and assumption/rejection issue list for attorney review.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Contract or lease identity and the debtor/counterparty roles",
+        "Cure amounts as provided, defaults, and notice history",
+        "Assignment rights, anti-assignment language, and consent issues",
+        "Critical-vendor status if raised and assumption/rejection status",
+        "Source documents with citations to contract clauses, notices, or pages"
+      ],
+      "outputs": [
+        "Source-cited contract status table and cure/default tracker",
+        "Assumption/rejection issue list and missing-facts list",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md",
+        "skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "contracts",
+        "review",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md",
+      "name": "Plan Disclosure Statement Issue Spotter",
+      "description": "Use when issue-spotting a Chapter 11 plan and disclosure statement into a source-cited treatment table and issue list for attorney review, without concluding confirmability.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The plan and/or disclosure statement and the user's party role",
+        "Class classification and treatment provisions as written",
+        "Voting, releases, exculpation, and injunction provisions",
+        "Executory contracts, claims reconciliation, and governance/equity provisions",
+        "Source references to plan/disclosure-statement sections, articles, or pages"
+      ],
+      "outputs": [
+        "Source-cited treatment table and issue list",
+        "Consistency-issues list and missing-facts list",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
+        "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "issue-spotting",
+        "plan",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md",
+      "name": "Preference Demand Response Triage",
+      "description": "Use when organizing the facts for responding to a preference demand into a source-cited transfer timeline and defense-facts checklist for attorney review.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The preference demand letter and the alleged transfer dates and amounts",
+        "Invoice history, payment history, and the creditor relationship",
+        "Ordinary-course, new-value, and contemporaneous-exchange facts as provided",
+        "Security interests, settlement posture, and litigation status",
+        "Source documents with citations to invoices, statements, or pages"
+      ],
+      "outputs": [
+        "Source-cited transfer timeline and defense-facts checklist",
+        "Missing-documents list and response-planning issues",
+        "Attorney verification questions"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "triage",
+        "preference",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md",
+      "name": "Proof of Claim Checklist",
+      "description": "Use when building a proof-of-claim preparation checklist and supporting-document tracker for attorney review, without preparing a filing-ready claim.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Claimant identity and debtor/case information",
+        "Basis of the claim and the amount as stated by the user",
+        "Supporting documents available, and any secured/priority assertion provided",
+        "Interest/fees, assignment/transfer, and signature-authority facts as provided",
+        "Any bar date the user supplies"
+      ],
+      "outputs": [
+        "Proof-of-claim preparation checklist for attorney review",
+        "Supporting-document tracker and missing-information list",
+        "Attorney verification items"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "checklist",
+        "creditor",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
+      "name": "Restructuring Term Sheet Review",
+      "description": "Use when reviewing a restructuring support agreement, forbearance agreement, workout term sheet, or related restructuring document into a source-cited key terms table and issue list for attorney review.",
+      "practice_area": "bankruptcy-restructuring",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The restructuring document and the user's party role and perspective",
+        "The parties, debt instruments, and transaction type",
+        "Milestones, covenants, releases, and payment/collateral terms as written",
+        "Voting/support obligations, termination rights, and conditions",
+        "Source references to sections, clauses, or pages"
+      ],
+      "outputs": [
+        "Source-cited key terms table and issue list",
+        "Risk matrix, missing-facts list, and negotiation points",
+        "Attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md",
+        "skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md"
+      ],
+      "tags": [
+        "bankruptcy-restructuring",
+        "attorney-review",
+        "restructuring",
+        "review",
+        "draft-work-product"
       ]
     },
     {
