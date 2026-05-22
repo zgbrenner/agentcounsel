@@ -85,6 +85,18 @@ The [`insurance/`](insurance/) subdirectory holds worked examples for the Insura
 | [`insurance/certificate-of-insurance-review/`](insurance/certificate-of-insurance-review/) | [Certificate of Insurance Review](../skills/insurance/certificate-of-insurance-review/SKILL.md) — a COI comparison table with a missing-endorsement list and a mismatch list. |
 | [`insurance/insurance-requirements-contract-review/`](insurance/insurance-requirements-contract-review/) | [Insurance Requirements Contract Review](../skills/insurance/insurance-requirements-contract-review/SKILL.md) — a contract insurance requirements table, risk matrix, and negotiation points. |
 
+## Family Law worked examples
+
+The [`family-law/`](family-law/) subdirectory holds worked examples for the Family Law practice area, each as a request-and-output pair. Every example uses fictional parties, children, facts, figures, and documents; treats reviewed documents as data; uses trauma-aware language; and stays inside intake, fact organization, chronologies, schedules, and reviewer-ready working papers — no family-law legal advice, custody or support recommendations, support calculations, property characterizations, domestic violence safety plans, or filing-ready court forms. Each output is a draft working paper for attorney review.
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`family-law/family-law-matter-intake/`](family-law/family-law-matter-intake/) | [Family Law Matter Intake](../skills/family-law/family-law-matter-intake/SKILL.md) — a structured intake summary, issue map, document request list, and safety/escalation flags. |
+| [`family-law/custody-parenting-facts-chronology/`](family-law/custody-parenting-facts-chronology/) | [Custody / Parenting Facts Chronology](../skills/family-law/custody-parenting-facts-chronology/SKILL.md) — a source-cited parenting and caregiving chronology with follow-up items. |
+| [`family-law/asset-debt-schedule-builder/`](family-law/asset-debt-schedule-builder/) | [Asset / Debt Schedule Builder](../skills/family-law/asset-debt-schedule-builder/SKILL.md) — a source-cited asset schedule and debt schedule with user-provided-value columns. |
+| [`family-law/settlement-agreement-issue-spotter/`](family-law/settlement-agreement-issue-spotter/) | [Settlement Agreement Issue Spotter](../skills/family-law/settlement-agreement-issue-spotter/SKILL.md) — a key-terms table, issue list, ambiguity list, and missing-provisions list. |
+| [`family-law/domestic-violence-safety-referral-checklist/`](family-law/domestic-violence-safety-referral-checklist/) | [Domestic Violence Safety Referral Checklist](../skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md) — safety/escalation flags, a document checklist, and an attorney/local-resource referral checklist. |
+
 ## Using examples safely
 
 - Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.

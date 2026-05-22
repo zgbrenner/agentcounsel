@@ -2,8 +2,8 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 141
-Practice areas: 21
+Total skills: 153
+Practice areas: 22
 
 ## Legal Research (1 skill)
 
@@ -1325,6 +1325,116 @@ Use when:
   - A tender letter, claim notice, additional insured tender, or contractual indemnity tender must be reviewed before it is sent or after it is received.
   - The user needs the tender checked for completeness, supporting documents, and risk flags.
   - A draft tender needs attorney-review revisions before finalizing.
+
+## Family Law (12 skills)
+
+### Asset / Debt Schedule Builder
+Path: skills/family-law/asset-debt-schedule-builder/SKILL.md
+Catalog page: skills/family-law/asset-debt-schedule-builder.html
+Trigger: "Use when building a source-cited property and debt schedule from user-provided facts and documents for a family law matter, for attorney review."
+Use when:
+  - A family law matter needs an organized, source-cited schedule of assets and debts for an attorney.
+  - Statements, deeds, account records, and loan documents must be assembled into one schedule.
+  - An attorney needs a property/debt schedule before disclosure, negotiation, or settlement review.
+
+### Child Support Facts Intake
+Path: skills/family-law/child-support-facts-intake/SKILL.md
+Catalog page: skills/family-law/child-support-facts-intake.html
+Trigger: "Use when gathering the facts relevant to a child support review into a structured intake table, missing-documents list, and questions for counsel — without calculating support."
+Use when:
+  - A child support review is starting and the relevant facts must be organized for an attorney.
+  - Income, cost, and parenting-time facts must be captured in a structured intake before counsel applies the governing guideline.
+  - An attorney needs a missing-documents list before a support analysis.
+
+### Custody / Parenting Facts Chronology
+Path: skills/family-law/custody-parenting-facts-chronology/SKILL.md
+Catalog page: skills/family-law/custody-parenting-facts-chronology.html
+Trigger: "Use when building a source-cited chronology of parenting and caregiving facts for a custody or parenting dispute, for attorney review."
+Use when:
+  - A custody or parenting dispute needs an organized, sourced timeline of caregiving and parenting facts.
+  - Communications, records, and incident notes must be ordered by date before substantive review.
+  - An attorney needs a chronology of exchanges, missed visits, school/medical involvement, or relocation facts.
+
+### Custody Order Review Checklist
+Path: skills/family-law/custody-order-review-checklist/SKILL.md
+Catalog page: skills/family-law/custody-order-review-checklist.html
+Trigger: "Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review."
+Use when:
+  - An existing or proposed custody or parenting order must be checked for clarity and administrability.
+  - An attorney wants the ambiguities, gaps, and enforcement-friction points in an order surfaced.
+  - A proposed order must be reviewed for missing administration details before it is finalized.
+
+### Divorce Intake Organizer
+Path: skills/family-law/divorce-intake-organizer/SKILL.md
+Catalog page: skills/family-law/divorce-intake-organizer.html
+Trigger: "Use when organizing the facts of a divorce or dissolution matter into a structured facts table, missing-documents list, and issue map for attorney review."
+Use when:
+  - A divorce or dissolution matter must be organized into a structured fact set for an attorney.
+  - An attorney needs a divorce facts table and a missing-documents list before drafting or a client meeting.
+  - Scattered divorce facts need a category-by-category organization before substantive review.
+
+### Domestic Violence Safety Referral Checklist
+Path: skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md
+Catalog page: skills/family-law/domestic-violence-safety-referral-checklist.html
+Trigger: "Use when organizing facts and referral/escalation considerations for a domestic violence or abuse-related concern in a family law matter, for attorney review — without creating a safety plan."
+Use when:
+  - A user raises a domestic violence, abuse, or safety concern within a family law matter.
+  - Facts and records around a safety concern must be organized and the right referrals identified for an attorney.
+  - A family law matter needs the safety dimension flagged and routed before other work proceeds.
+
+### Family Law Discovery Tracker
+Path: skills/family-law/family-law-discovery-tracker/SKILL.md
+Catalog page: skills/family-law/family-law-discovery-tracker.html
+Trigger: "Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review."
+Use when:
+  - A family law matter's discovery must be tracked across requests, responses, and disclosures.
+  - An attorney needs a status view of discovery, identified deficiencies, and meet-and-confer items.
+  - Subpoenas, authorizations, and disclosure exchanges need an organized log.
+
+### Family Law Hearing Prep Checklist
+Path: skills/family-law/family-law-hearing-prep-checklist/SKILL.md
+Catalog page: skills/family-law/family-law-hearing-prep-checklist.html
+Trigger: "Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review."
+Use when:
+  - A family law hearing is approaching and the preparation tasks must be organized into a checklist for an attorney.
+  - An attorney needs a status view of the pleadings, declarations, exhibits, disclosures, and witnesses for a hearing.
+  - Open questions for counsel must be collected before a hearing.
+
+### Family Law Matter Intake
+Path: skills/family-law/family-law-matter-intake/SKILL.md
+Catalog page: skills/family-law/family-law-matter-intake.html
+Trigger: "Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review."
+Use when:
+  - A new family law matter must be captured in a structured, reviewable form for an attorney.
+  - A user describes a divorce, custody, support, or property dispute and a first-pass organization of the facts and issues is needed.
+  - An attorney wants an issue map and a document request list before a client meeting.
+
+### Parenting Schedule Facts Organizer
+Path: skills/family-law/parenting-schedule-facts-organizer/SKILL.md
+Catalog page: skills/family-law/parenting-schedule-facts-organizer.html
+Trigger: "Use when organizing the facts relevant to a parenting schedule discussion into a facts table, conflict/ambiguity list, and logistics checklist for attorney review."
+Use when:
+  - A parenting schedule is being discussed and the relevant facts need an organized, reviewable layout.
+  - A current schedule and a proposed schedule must be set side by side so an attorney can see the differences.
+  - The practical logistics of a parenting arrangement need a checklist before negotiation or a hearing.
+
+### Settlement Agreement Issue Spotter
+Path: skills/family-law/settlement-agreement-issue-spotter/SKILL.md
+Catalog page: skills/family-law/settlement-agreement-issue-spotter.html
+Trigger: "Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review."
+Use when:
+  - A marital settlement, parenting, support, or custody-stipulation agreement or draft needs an organized review for an attorney.
+  - An attorney wants the key terms, issues, ambiguities, and missing provisions surfaced before a client discussion or negotiation.
+  - A settlement draft must be checked for internal consistency and gaps.
+
+### Spousal Support Facts Intake
+Path: skills/family-law/spousal-support-facts-intake/SKILL.md
+Catalog page: skills/family-law/spousal-support-facts-intake.html
+Trigger: "Use when gathering the facts relevant to a spousal support or alimony review into a structured intake table, missing-documents list, and questions for counsel — without calculating support."
+Use when:
+  - A spousal support or alimony review is starting and the relevant facts must be organized for an attorney.
+  - Income, expense, employment, and standard-of-living facts must be captured in a structured intake before counsel applies the governing law.
+  - An attorney needs a missing-documents list before a support analysis.
 
 ## Legal Methodology (4 skills)
 

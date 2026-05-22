@@ -44,6 +44,7 @@ matter-packs/
   README.md                       - this file
   antitrust-competition.md        - workflow bundles for the Antitrust / Competition practice area
   bankruptcy-restructuring.md     - workflow bundles for the Bankruptcy / Restructuring practice area
+  family-law.md                   - workflow bundles for the Family Law practice area
   insurance.md                    - workflow bundles for the Insurance practice area
   m-and-a.md                      - workflow bundles for the Mergers & Acquisitions practice area
   real-estate.md                  - workflow bundles for the Real Estate practice area
