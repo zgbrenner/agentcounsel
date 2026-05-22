@@ -92,7 +92,7 @@ If the policy documents, the policy type, or the policy period is missing, recor
 1. **Capability and reliance notice** — draft only; not legal advice; no conclusion that coverage exists; attorney review required.
 2. **Gates table** — policy type, user's role, policy period, review purpose, jurisdiction, document set, each with status and source.
 3. **Policy overview** — 3-5 sentences: policy type, named insured, period, and the coverage parts at a glance.
-4. **Key terms table** — term | value as written | source (page/form/endorsement).
+4. **Key terms table** — term | value as written | source (page/form/endorsement). The key terms, coverage parts, exclusions/conditions, and endorsements tables follow the Insurance Policy Summary Table pattern in `skills/insurance/references/output-patterns.md`.
 5. **Coverage parts table** — coverage part | insuring agreement (plain language) | limits/sublimits | deductible or SIR | granting form | source.
 6. **Exclusions and conditions inventory** — item | type (exclusion/condition/definition) | plain-language summary | source.
 7. **Endorsements table** — endorsement number | effect (adds/deletes/modifies) | form amended | source.

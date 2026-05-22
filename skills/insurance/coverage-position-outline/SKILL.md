@@ -97,7 +97,7 @@ If the policy, the claim facts, the policy type, or the role is missing, record 
 2. **Gates table** — policy type, user's role, claim type, claim stage, jurisdiction, with status and source.
 3. **Facts** — source-cited material facts; disputed and missing facts flagged.
 4. **Policy provisions** — source-cited insuring agreements, definitions, exclusions, endorsements, and conditions in play.
-5. **Potential coverage grants** — candidate | insuring-agreement provision (source) | fact in play (source) | question for the attorney.
+5. **Potential coverage grants** — candidate | insuring-agreement provision (source) | fact in play (source) | question for the attorney. The outline as a whole follows the Coverage Position Outline pattern in `skills/insurance/references/output-patterns.md`.
 6. **Potentially applicable exclusions and endorsements** — candidate | provision (source) | fact in play (source) | question for the attorney.
 7. **Conditions** — condition | provision (source) | claim fact (source) | open question.
 8. **Posture** — reservation / denial / defense posture as it stands, with no recommendation.
