@@ -101,7 +101,7 @@ If the claim file, the policy type, or the role is missing, record it as `not pr
 
 1. **Capability and reliance notice** — draft only; not legal advice; no bad-faith or claim-handling conclusion; attorney review required.
 2. **Gates table** — policy type, user's role, claim type, claim stage, jurisdiction, with status and source.
-3. **Risk-theme list** — theme | factual trigger | source | why an attorney would examine it | jurisdiction-specific question for counsel.
+3. **Risk-theme list** — theme | factual trigger | source | why an attorney would examine it | jurisdiction-specific question for counsel. Follows the Bad Faith Risk Triage Matrix pattern in `skills/insurance/references/output-patterns.md`.
 4. **Chronology gaps** — gaps and unexplained periods in the claim-handling timeline.
 5. **Communication issues** — clarity, consistency, and responsiveness issues drawn from the documents.
 6. **Missing documents** — claim-file documents not provided that bear on the themes.

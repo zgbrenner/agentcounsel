@@ -93,7 +93,7 @@ If the letter, the asserted basis, or the user's role is missing, record it as `
 1. **Capability and reliance notice** — draft only; not legal advice; no validity, timeliness, or sufficiency conclusion; attorney review required before sending.
 2. **Gates table** — asserted basis, user's role, claim, duties tendered, jurisdiction, with status and source.
 3. **Tender summary** — 3-5 sentences: what is tendered, to whom, on what asserted basis.
-4. **Tender completeness checklist** — element | present / not found / ambiguous | source | note.
+4. **Tender completeness checklist** — element | present / not found / ambiguous | source | note. Follows the Tender Completeness Checklist pattern in `skills/insurance/references/output-patterns.md`.
 5. **Missing documents** — supporting documents not included, with what each would support.
 6. **Risk flags** — issue | description | source | attorney follow-up.
 7. **Proposed attorney-review revisions** — direction-only suggestions, clearly draft.

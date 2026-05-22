@@ -90,7 +90,7 @@ If the claim documents, the policy type, or the user's role is missing, record i
 
 1. **Capability and reliance notice** — draft only; not legal advice; no deadline computed; no claim value or coverage conclusion; attorney review required.
 2. **Gates table** — policy type, user's role, claim type, claim stage, with status and source.
-3. **Claim chronology** — date | event | source | actor | significance (neutral) | follow-up.
+3. **Claim chronology** — date | event | source | actor | significance (neutral) | follow-up. Follows the Claims Chronology Table pattern in `skills/insurance/references/output-patterns.md`.
 4. **Missing or ambiguous facts** — undated events, conflicting dates, and gaps, marked `not found`/`unknown`/`ambiguous`.
 5. **Follow-up items** — documents and dates to obtain to complete the timeline.
 6. **Attorney verification checklist** and **assumptions**.
