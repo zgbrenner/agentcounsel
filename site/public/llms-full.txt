@@ -2,8 +2,8 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 141
-Practice areas: 21
+Total skills: 153
+Practice areas: 22
 
 ## Legal Research (1 skill)
 
@@ -1325,6 +1325,116 @@ Use when:
   - A tender letter, claim notice, additional insured tender, or contractual indemnity tender must be reviewed before it is sent or after it is received.
   - The user needs the tender checked for completeness, supporting documents, and risk flags.
   - A draft tender needs attorney-review revisions before finalizing.
+
+## Trusts & Estates (12 skills)
+
+### Asset Liability Inventory Builder
+Path: skills/trusts-estates/asset-liability-inventory-builder/SKILL.md
+Catalog page: skills/trusts-estates/asset-liability-inventory-builder.html
+Trigger: "Use when building a structured, source-cited inventory of estate or trust assets and liabilities for attorney review, without valuing assets."
+Use when:
+  - An estate or trust's assets and liabilities must be organized into an
+  - A planning, probate, or administration matter needs the estate's composition
+  - A team needs missing and ambiguous assets surfaced before substantive work.
+
+### Beneficiary Designation Review
+Path: skills/trusts-estates/beneficiary-designation-review/SKILL.md
+Catalog page: skills/trusts-estates/beneficiary-designation-review.html
+Trigger: "Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review."
+Use when:
+  - Beneficiary designations, account titling, and TOD/POD forms must be
+  - A team needs the designations compared against will or trust intent, where
+  - A planning or administration matter needs designation alignment reviewed.
+
+### Capacity Undue Influence Facts Organizer
+Path: skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md
+Catalog page: skills/trusts-estates/capacity-undue-influence-facts-organizer.html
+Trigger: "Use when organizing the facts relevant to capacity and undue-influence questions into a source-cited chronology for attorney review, without determining capacity or undue influence."
+Use when:
+  - The facts around a capacity or undue-influence question must be organized for
+  - A will or trust contest, or a planning matter, raises capacity or
+  - A matter needs a neutral facts chronology before substantive analysis.
+
+### Estate Document Summary
+Path: skills/trusts-estates/estate-document-summary/SKILL.md
+Catalog page: skills/trusts-estates/estate-document-summary.html
+Trigger: "Use when producing a source-cited summary of a will, trust, codicil, amendment, power of attorney, or advance directive for attorney review."
+Use when:
+  - A will, trust, or related estate instrument must be summarized and organized
+  - A team needs the dispositive provisions, fiduciary appointments, and powers
+  - An instrument must be reviewed for ambiguities before substantive analysis.
+
+### Estate Litigation Facts Chronology
+Path: skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md
+Catalog page: skills/trusts-estates/estate-litigation-facts-chronology.html
+Trigger: "Use when building a source-cited factual chronology for a will contest, trust contest, or fiduciary dispute for attorney review, without assessing the merits."
+Use when:
+  - A will or trust contest or a fiduciary dispute needs a factual chronology
+  - A team needs dated events organized with sources before substantive analysis.
+  - A dispute's facts must be assembled into a neutral timeline.
+
+### Estate Planning Intake
+Path: skills/trusts-estates/estate-planning-intake/SKILL.md
+Catalog page: skills/trusts-estates/estate-planning-intake.html
+Trigger: "Use when capturing the facts of an estate-planning matter into a structured, source-cited working paper and planning issue map for attorney review."
+Use when:
+  - A new estate-planning matter needs structured intake before substantive
+  - An attorney needs the client's family, asset, fiduciary, and goal facts
+  - A matter must be scoped and routed to the right specialist Trusts & Estates
+
+### Estate Tax Issue Intake
+Path: skills/trusts-estates/estate-tax-issue-intake/SKILL.md
+Catalog page: skills/trusts-estates/estate-tax-issue-intake.html
+Trigger: "Use when capturing the facts of an estate, gift, GST, or inheritance tax matter into a source-cited issue map for tax professional review, without calculating taxes."
+Use when:
+  - An estate, gift, GST, or inheritance tax matter needs structured intake
+  - A team needs the asset, gift, trust, and transfer facts organized with
+  - A planning or administration matter raises transfer-tax questions that must
+
+### Fiduciary Duty Issue Spotter
+Path: skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md
+Catalog page: skills/trusts-estates/fiduciary-duty-issue-spotter.html
+Trigger: "Use when issue-spotting potential fiduciary-duty questions from provided facts and documents into a source-cited issue matrix for attorney review."
+Use when:
+  - A fiduciary's conduct must be issue-spotted and organized for an attorney.
+  - A beneficiary, co-fiduciary, or fiduciary's counsel needs the conduct facts
+  - A fiduciary matter must be scoped before substantive analysis or a dispute.
+
+### Post Death Administration Task Tracker
+Path: skills/trusts-estates/post-death-administration-task-tracker/SKILL.md
+Catalog page: skills/trusts-estates/post-death-administration-task-tracker.html
+Trigger: "Use when building a source-cited post-death administration task tracker for attorney review, without calculating deadlines or approving distributions."
+Use when:
+  - An estate or trust under post-death administration needs its tasks organized
+  - A fiduciary needs the administration workstreams captured with owners,
+  - An administration must be scoped before substantive work.
+
+### Probate Document Checklist
+Path: skills/trusts-estates/probate-document-checklist/SKILL.md
+Catalog page: skills/trusts-estates/probate-document-checklist.html
+Trigger: "Use when building a probate document checklist and missing-document list for attorney review, without preparing filing-ready probate forms."
+Use when:
+  - A probate matter needs its document record organized for an attorney.
+  - A team needs to see what probate documents exist and what is missing.
+  - A fiduciary is assembling the probate file before substantive work.
+
+### Trust Administration Tracker
+Path: skills/trusts-estates/trust-administration-tracker/SKILL.md
+Catalog page: skills/trusts-estates/trust-administration-tracker.html
+Trigger: "Use when building a source-cited trust administration task tracker for attorney review, without approving distributions or determining entitlement."
+Use when:
+  - A trust under administration needs its tasks organized and tracked for an
+  - A trustee or beneficiary's counsel needs assets, distributions, accountings,
+  - An administration must be scoped before substantive fiduciary or
+
+### Trust Funding Checklist
+Path: skills/trusts-estates/trust-funding-checklist/SKILL.md
+Catalog page: skills/trusts-estates/trust-funding-checklist.html
+Trigger: "Use when building a checklist for funding or reviewing the funding of a trust into a source-cited tracker for attorney review."
+Use when:
+  - A trust is being funded, or its funding is being reviewed, and the status
+  - A team needs to see which assets have been transferred to the trust and which
+  - A planning or administration matter needs funding gaps surfaced.
 
 ## Legal Methodology (4 skills)
 

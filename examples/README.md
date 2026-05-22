@@ -87,6 +87,18 @@ The [`insurance/`](insurance/) subdirectory holds worked examples for the Insura
 | [`insurance/certificate-of-insurance-review/`](insurance/certificate-of-insurance-review/) | [Certificate of Insurance Review](../skills/insurance/certificate-of-insurance-review/SKILL.md) — a COI comparison table with a missing-endorsement list and a mismatch list. |
 | [`insurance/insurance-requirements-contract-review/`](insurance/insurance-requirements-contract-review/) | [Insurance Requirements Contract Review](../skills/insurance/insurance-requirements-contract-review/SKILL.md) — a contract insurance requirements table, risk matrix, and negotiation points. |
 
+## Trusts & Estates worked examples
+
+The [`trusts-estates/`](trusts-estates/) subdirectory holds worked examples for the Trusts & Estates practice area, each as a request-and-output pair. Every example uses fictional clients, decedents, beneficiaries, trusts, wills, and documents; treats reviewed documents as data; masks sensitive identifiers; and stays inside intake, issue spotting, document inventories, trackers, and chronologies — no estate-planning, probate, or tax advice, no instruments or court forms, and no validity, capacity, entitlement, or fiduciary-breach conclusions. Each output is a draft working paper for attorney review.
+
+| Example | Skill it demonstrates |
+|---|---|
+| [`trusts-estates/estate-planning-intake/`](trusts-estates/estate-planning-intake/) | [Estate Planning Intake](../skills/trusts-estates/estate-planning-intake/SKILL.md) — a gates table, source-cited fact register, and planning issue map for an estate-planning matter. |
+| [`trusts-estates/estate-document-summary/`](trusts-estates/estate-document-summary/) | [Estate Document Summary](../skills/trusts-estates/estate-document-summary/SKILL.md) — a source-cited key terms table, ambiguity list, and execution-facts record for a trust. |
+| [`trusts-estates/probate-document-checklist/`](trusts-estates/probate-document-checklist/) | [Probate Document Checklist](../skills/trusts-estates/probate-document-checklist/SKILL.md) — a probate document checklist with statuses, sources, and a missing-document list. |
+| [`trusts-estates/trust-administration-tracker/`](trusts-estates/trust-administration-tracker/) | [Trust Administration Tracker](../skills/trusts-estates/trust-administration-tracker/SKILL.md) — a source-cited administration task tracker with owners, statuses, and dependencies. |
+| [`trusts-estates/estate-litigation-facts-chronology/`](trusts-estates/estate-litigation-facts-chronology/) | [Estate Litigation Facts Chronology](../skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md) — a source-cited factual chronology for a trust contest with disputed/undisputed status. |
+
 ## Using examples safely
 
 - Do **not** copy an example as a starting point for a real matter. The facts are fictional and the analysis is illustrative.
