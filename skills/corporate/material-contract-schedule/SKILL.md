@@ -116,6 +116,16 @@ Deliver:
 
 Do not merge the consent-tracking overlay into the schedule body.
 
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a deal lead, founder, CFO, business sponsor, or executive on the deal team — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language: how many contracts the definition captures, the headline categories, the consent burden, and any edge-case decisions the deal team needs to make.
+- **Decision Needed** — the specific business decision(s) now on the table (which edge-case contracts to include, which third-party consents to chase first), stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved before signing or closing.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
+
 ## Attorney Verification Checklist
 
 - [ ] The "Material Contract" definition quoted in the schedule is final, matches the executed or agreed form of the agreement, and has not been superseded by a subsequent redline. `[CONFIRM: definition version]`

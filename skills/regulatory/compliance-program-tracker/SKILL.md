@@ -124,6 +124,16 @@ Deliver the following sections in order:
 
 10. **Attorney Verification Items** — see the Attorney Verification Checklist below.
 
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a compliance owner, audit sponsor, control owner, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language: program coverage status, where evidence is current vs. stale, and the two or three things most likely to surface in the next audit.
+- **Decision Needed** — the specific decisions now on the table (control owners, remediation priorities, audit-readiness checkpoints), stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved before the audit window.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the board, the audit committee, or outside counsel), and why — or a plain statement that no escalation is needed.
+
 ## Attorney Verification Checklist
 
 - [ ] Every requirement in the tracker has been extracted from the actual framework source; none was supplied from model background knowledge without disclosure.

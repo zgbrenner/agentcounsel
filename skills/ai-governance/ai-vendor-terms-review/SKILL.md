@@ -143,6 +143,16 @@ Bullet list of every `[CONFIRM: ...]` item, ambiguity, and missing document.
 
 *Label the full document: DRAFT — For Attorney Review — Not Legal Advice.*
 
+### Optional: Business Stakeholder Summary
+
+When the output will be used to brief a non-lawyer business stakeholder — a procurement lead, product owner, AI program owner, founder, or executive — add a **Business Stakeholder Summary** as a clearly separated, plainly labeled section, following `core/business-stakeholder-communication.md`. Produce it only when the user requests it or when the audience is plainly a business decision-maker. It is an addition to the deliverable above — never a replacement for it, and never a substitute for attorney review. It contains:
+
+- **Business Summary** — the bottom line in plain language: what the vendor's terms commit to and reserve, how that fits the intended use, and the headline risks.
+- **Decision Needed** — the specific business decision(s) now on the table (sign as-is / push back / walk away), stated as concrete choices, each with its owner.
+- **Recommended Ask** — the legal team's recommended position or course of action, framed as a recommendation for the business to weigh, not a decision made on its behalf.
+- **Fallback Position** — the minimum acceptable alternative if the Recommended Ask cannot be achieved.
+- **Escalation Needed?** — whether the matter should be escalated, to whom (senior management, the AI governance committee, the board, or outside counsel), and why — or a plain statement that no escalation is needed.
+
 ## Attorney Verification Checklist
 
 - [ ] All relevant vendor documents have been provided and reviewed; no referenced documents are missing.
