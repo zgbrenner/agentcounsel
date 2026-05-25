@@ -212,6 +212,10 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/bankruptcy-restructuring/references/` — shared Bankruptcy / Restructuring output-pattern reference for those skills.
 - `skills/insurance/references/` — shared Insurance output-pattern reference for the Insurance skills.
 - `skills/trusts-estates/references/` — shared Trusts & Estates output-pattern reference for those skills.
+- `skills/litigation/references/` — shared Litigation output-pattern reference (cross-cutting rules every litigation skill's Output Format follows).
+- `skills/employment/references/` — shared Employment output-pattern reference (cross-cutting rules every employment skill's Output Format follows).
+- `skills/ip/references/` — shared Intellectual Property output-pattern reference (cross-cutting rules every IP skill's Output Format follows).
+- `skills/corporate/references/` — shared Corporate output-pattern reference (cross-cutting rules every corporate skill's Output Format follows).
 
 
 ## Antitrust / Competition
