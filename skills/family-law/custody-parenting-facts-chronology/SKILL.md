@@ -18,7 +18,7 @@ outputs:
 related_skills:
   - skills/family-law/parenting-schedule-facts-organizer/SKILL.md
   - skills/family-law/custody-order-review-checklist/SKILL.md
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
 tags:
   - family-law
   - custody
@@ -32,12 +32,6 @@ tags:
 ## Purpose
 
 Build a source-cited chronology of parenting and caregiving facts — caregiving roles, exchanges, school and medical involvement, communications, incidents, missed visits, relocation facts, and child-related records — so a qualified, licensed attorney has an organized factual timeline for a custody or parenting dispute. This skill organizes dated events from the provided documents; it recommends no custody outcome and no parenting time.
-
-## Capability Disclosure
-
-**This skill does:** extract dated parenting and caregiving events from the provided documents; build a chronology with the date, event, source, actor, child-related relevance, and (if the user provides it) disputed/undisputed status; and flag missing, undated, or ambiguous facts.
-
-**This skill does not:** recommend custody, legal or physical, or a parenting-time allocation; assess a parent's fitness; apply a best-interests standard; weigh the facts; compute or verify a deadline; decide what any document legally means; or constitute legal advice.
 
 ## Use When
 
@@ -62,6 +56,8 @@ If the document set, the parties, or the children involved is missing, record it
 - The request is for legal advice or a litigation strategy as a final answer.
 - The goal is to organize a parenting schedule's logistics (use `parenting-schedule-facts-organizer`).
 - The goal is to review a custody order's clarity (use `custody-order-review-checklist`).
+
+Also out of scope (this skill does not): recommend custody, legal or physical, or a parenting-time allocation; assess a parent's fitness; apply a best-interests standard; weigh the facts; compute or verify a deadline; decide what any document legally means; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -98,12 +94,6 @@ If the document set, the parties, or the children involved is missing, record it
 5. **Missing or ambiguous facts** — undated events, conflicting dates, and gaps, marked `not found` / `unknown` / `ambiguous`.
 6. **Follow-up items** — documents and dates to obtain to complete the timeline.
 7. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run custody-parenting-facts-chronology on this fictional custody matter — messages, a school record, and incident notes — and build a sourced timeline for counsel."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a date-ordered, source-cited chronology with actor and neutral child-relevance columns; a missing/ambiguous facts list; follow-up items; and verification questions — with no custody recommendation, no parenting-time allocation, no fitness assessment, no computed deadline, and no invented events or authority.
 
 ## Attorney Verification Checklist
 

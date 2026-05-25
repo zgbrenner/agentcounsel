@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 153,
+  "skill_count": 165,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
@@ -29,21 +29,21 @@
   },
   "task_types": {
     "analysis": 26,
-    "drafting": 20,
-    "extraction": 19,
-    "intake": 14,
+    "drafting": 21,
+    "extraction": 23,
+    "intake": 18,
     "interview": 4,
     "research": 1,
-    "review": 49,
+    "review": 51,
     "summarization": 5,
-    "triage": 11,
+    "triage": 12,
     "verification": 4
   },
   "risk_levels": {
     "low": 6,
-    "medium": 68,
-    "high": 77,
-    "critical": 2
+    "medium": 70,
+    "high": 86,
+    "critical": 3
   },
   "skills": [
     {
@@ -1461,7 +1461,7 @@
       ],
       "related_skills": [
         "skills/family-law/divorce-intake-organizer/SKILL.md",
-        "skills/family-law/family-law-discovery-tracker/SKILL.md",
+        "skills/family-law/discovery-tracker/SKILL.md",
         "skills/family-law/settlement-agreement-issue-spotter/SKILL.md"
       ],
       "tags": [
@@ -1495,7 +1495,7 @@
       "related_skills": [
         "skills/family-law/spousal-support-facts-intake/SKILL.md",
         "skills/family-law/asset-debt-schedule-builder/SKILL.md",
-        "skills/family-law/family-law-discovery-tracker/SKILL.md"
+        "skills/family-law/discovery-tracker/SKILL.md"
       ],
       "tags": [
         "family-law",
@@ -1561,13 +1561,45 @@
       "related_skills": [
         "skills/family-law/parenting-schedule-facts-organizer/SKILL.md",
         "skills/family-law/custody-order-review-checklist/SKILL.md",
-        "skills/family-law/family-law-matter-intake/SKILL.md"
+        "skills/family-law/matter-intake/SKILL.md"
       ],
       "tags": [
         "family-law",
         "custody",
         "parenting",
         "chronology",
+        "draft-work-product"
+      ]
+    },
+    {
+      "path": "skills/family-law/discovery-tracker/SKILL.md",
+      "name": "Family Law Discovery Tracker",
+      "description": "Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.",
+      "practice_area": "family-law",
+      "task_type": "extraction",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The discovery set — requests, responses, disclosures, subpoenas, authorizations — with source references",
+        "Response status, the responsible party, and any deficiencies the user identifies",
+        "Deadlines the user supplies, echoed verbatim and unverified",
+        "The parties, their roles, the case stage, and the jurisdiction as stated"
+      ],
+      "outputs": [
+        "Discovery tracker with request, status, source, deadline-if-provided, and deficiency columns",
+        "Follow-up and meet-and-confer item list",
+        "Missing-facts list and attorney verification checklist"
+      ],
+      "related_skills": [
+        "skills/family-law/asset-debt-schedule-builder/SKILL.md",
+        "skills/family-law/hearing-prep-checklist/SKILL.md"
+      ],
+      "tags": [
+        "family-law",
+        "discovery",
+        "tracker",
+        "disclosures",
         "draft-work-product"
       ]
     },
@@ -1592,7 +1624,7 @@
         "Attorney verification checklist"
       ],
       "related_skills": [
-        "skills/family-law/family-law-matter-intake/SKILL.md",
+        "skills/family-law/matter-intake/SKILL.md",
         "skills/family-law/asset-debt-schedule-builder/SKILL.md",
         "skills/family-law/settlement-agreement-issue-spotter/SKILL.md"
       ],
@@ -1625,7 +1657,7 @@
         "Missing-facts list and attorney verification questions"
       ],
       "related_skills": [
-        "skills/family-law/family-law-matter-intake/SKILL.md",
+        "skills/family-law/matter-intake/SKILL.md",
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md"
       ],
       "tags": [
@@ -1637,39 +1669,7 @@
       ]
     },
     {
-      "path": "skills/family-law/family-law-discovery-tracker/SKILL.md",
-      "name": "Family Law Discovery Tracker",
-      "description": "Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.",
-      "practice_area": "family-law",
-      "task_type": "extraction",
-      "jurisdictions": [],
-      "risk_level": "high",
-      "requires_attorney_review": true,
-      "inputs": [
-        "The discovery set — requests, responses, disclosures, subpoenas, authorizations — with source references",
-        "Response status, the responsible party, and any deficiencies the user identifies",
-        "Deadlines the user supplies, echoed verbatim and unverified",
-        "The parties, their roles, the case stage, and the jurisdiction as stated"
-      ],
-      "outputs": [
-        "Discovery tracker with request, status, source, deadline-if-provided, and deficiency columns",
-        "Follow-up and meet-and-confer item list",
-        "Missing-facts list and attorney verification checklist"
-      ],
-      "related_skills": [
-        "skills/family-law/asset-debt-schedule-builder/SKILL.md",
-        "skills/family-law/family-law-hearing-prep-checklist/SKILL.md"
-      ],
-      "tags": [
-        "family-law",
-        "discovery",
-        "tracker",
-        "disclosures",
-        "draft-work-product"
-      ]
-    },
-    {
-      "path": "skills/family-law/family-law-hearing-prep-checklist/SKILL.md",
+      "path": "skills/family-law/hearing-prep-checklist/SKILL.md",
       "name": "Family Law Hearing Prep Checklist",
       "description": "Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review.",
       "practice_area": "family-law",
@@ -1689,7 +1689,7 @@
         "Attorney verification checklist"
       ],
       "related_skills": [
-        "skills/family-law/family-law-discovery-tracker/SKILL.md",
+        "skills/family-law/discovery-tracker/SKILL.md",
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md"
       ],
       "tags": [
@@ -1701,7 +1701,7 @@
       ]
     },
     {
-      "path": "skills/family-law/family-law-matter-intake/SKILL.md",
+      "path": "skills/family-law/matter-intake/SKILL.md",
       "name": "Family Law Matter Intake",
       "description": "Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review.",
       "practice_area": "family-law",
@@ -4002,7 +4002,12 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+        "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
+        "skills/securities-capital-markets/private-placement-checklist/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4029,7 +4034,12 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+        "skills/securities-capital-markets/risk-factor-review/SKILL.md",
+        "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4056,7 +4066,11 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
+        "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
+        "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4083,7 +4097,10 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
+        "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4110,7 +4127,11 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
+        "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
+        "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4137,7 +4158,12 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/risk-factor-review/SKILL.md",
+        "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
+        "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+        "skills/securities-capital-markets/private-placement-checklist/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4164,7 +4190,12 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
+        "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+        "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4191,7 +4222,11 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
+        "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
+        "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4218,7 +4253,11 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+        "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
+        "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4245,7 +4284,12 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+        "skills/securities-capital-markets/risk-factor-review/SKILL.md",
+        "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+        "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4272,7 +4316,11 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
+        "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
+        "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",
@@ -4299,7 +4347,11 @@
         "Structured, source-cited draft deliverable",
         "Missing-information and attorney-verification list"
       ],
-      "related_skills": [],
+      "related_skills": [
+        "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
+        "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md"
+      ],
       "tags": [
         "securities",
         "capital-markets",

@@ -43,25 +43,6 @@ legal advice and does not constitute a final negotiating position or a
 recommendation to sign or close. The agreement itself, and the reviewing
 attorney's judgment, always control.
 
-## Capability Disclosure
-
-**This skill does:** locate and review the clauses of a real estate PSA from
-one stated party's perspective (buyer, seller, or lender); spot issues and
-describe the risk each creates for that party; organize those issues into a
-risk matrix across the standard PSA categories; assemble a key-dates table from
-dates the agreement states; and produce a prioritized issue list with a
-suggested direction of change for each item.
-
-**This skill does not:** give a final answer, a legal opinion, or advice on
-whether to sign or close; decide whether the deal is good or fair; determine
-whether any provision is enforceable; compute, confirm, or assume any date or
-deadline, including the diligence-period expiry or the closing date; supply
-jurisdiction-specific law — recording rules, title and survey requirements,
-transfer-tax or other tax consequences, securities implications, or financing
-requirements; or draft final clause or redline language. Those are attorney
-functions. Where the agreement is silent or unclear, the review says so — it
-does not fill the gap.
-
 ## Use When
 
 - A user asks to "review this PSA," "review this purchase agreement," "flag the
@@ -108,6 +89,8 @@ request it. Do not begin the review by guessing at facts.
 - The user wants a legal opinion on whether to sign or close, on whether a term
   is enforceable, or on the tax or title consequences of the deal — those
   require a qualified attorney.
+
+Also out of scope (this skill does not): give a final answer, a legal opinion, or advice on whether to sign or close; decide whether the deal is good or fair; determine whether any provision is enforceable; compute, confirm, or assume any date or deadline, including the diligence-period expiry or the closing date; supply jurisdiction-specific law — recording rules, title and survey requirements, transfer-tax or other tax consequences, securities implications, or financing requirements; or draft final clause or redline language. Those are attorney functions. Where the agreement is silent or unclear, the review says so — it does not fill the gap.
 
 ## Legal Safety Rules
 
@@ -274,25 +257,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or value is unverified or
 ambiguous. Do not fill a gap with an invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review this purchase and sale agreement. We are the
-buyer of a multifamily building in [state]; here is the full PSA PDF and one
-addendum. Flag what we should push back on before we sign."
-
-**Expected output shape:** a review header noting the property, the buyer
-perspective, the transaction posture, the jurisdiction, and that one addendum
-was provided; a document-set list; a structural map; a clause-by-clause issue
-list with a section or page citation for each issue and an explicit note where
-the PSA is silent; a risk matrix with a severity rating and a suggested
-direction of change in every row; a key-dates table with the diligence-period
-expiry, the financing-contingency date, and the closing date recorded as
-stated and each flagged `[deadline verification required]`; a prioritized issue
-list; a missing-provisions assessment; the open-items list; the assumptions
-list; and the attorney verification checklist. No date is computed, no
-jurisdiction-specific rule is supplied, no final clause language is drafted,
-and the output does not say whether the buyer should sign or close.
 
 ## Attorney Verification Checklist
 

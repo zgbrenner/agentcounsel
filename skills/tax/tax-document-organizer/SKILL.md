@@ -37,17 +37,6 @@ flags, and reviewer notes — so a tax professional can review an ordered,
 auditable record. This skill organizes documents; it does not interpret or act
 on their tax content.
 
-## Capability Disclosure
-
-**This skill does:** inventory tax documents by type and period; record
-completeness; mask sensitive identifiers; flag uncertainties; list missing
-documents; and add reviewer notes with source references.
-
-**This skill does not:** interpret a document's tax content, determine tax
-treatment, compute tax, prepare or file returns, provide tax advice, or
-reproduce sensitive identifiers beyond what is strictly necessary and expressly
-requested.
-
 ## Use When
 
 - A tax document set must be ordered into an auditable inventory before review.
@@ -80,6 +69,8 @@ first.
 - The request is to compute tax, prepare or file a return, or for tax advice.
 - The request is to print full SSNs, EINs, or account numbers without a
   strict, expressly stated need.
+
+Also out of scope (this skill does not): interpret a document's tax content, determine tax treatment, compute tax, prepare or file returns, provide tax advice, or reproduce sensitive identifiers beyond what is strictly necessary and expressly requested.
 
 ## Legal Safety Rules
 
@@ -128,17 +119,6 @@ first.
 5. **Uncertainty flags** — partial, illegible, or ambiguous items.
 6. **Reviewer notes** — what a reviewer should check, with source references.
 7. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run tax-document-organizer on this fictional set of
-returns, K-1s, and notices; build an inventory and keep the identifiers
-masked."
-
-**Expected output shape:** a gates table, a source-cited document inventory
-with masked references, a missing-document list, uncertainty flags, and
-reviewer notes — with no interpretation of tax content, no computation, and no
-unnecessary exposure of sensitive identifiers.
 
 ## Attorney Verification Checklist
 

@@ -41,25 +41,6 @@ legal advice and is not a conclusion that diligence is complete or adequate.
 What a data room index shows is a list of files; whether the diligence behind
 those files is sufficient is a judgment for the deal team and counsel.
 
-## Capability Disclosure
-
-**This skill does:** review a data room index or file list to surface missing
-diligence categories, duplicate or ambiguously named files, stale or outdated
-documents (by date as the index records it), inconsistent or unclear naming,
-potential privilege or confidentiality concerns visible from the index, and
-diligence coverage gaps; cite the index entry — folder or file reference — for
-each observation; and produce a gap matrix and a recommended follow-up request
-list.
-
-**This skill does not:** assess, summarize, or assume what is *inside* any
-document from its filename or folder name — a filename is metadata, not
-content; judge whether the diligence reflected in the index is complete,
-adequate, or sufficient for the deal; confirm that a file named for a category
-actually contains responsive material; supply jurisdiction-specific law,
-filing, securities, tax, antitrust, or employment rules; compute a deadline; or
-draft diligence findings. Whether a document satisfies a diligence need is a
-question for the reviewing attorney once the document itself is read.
-
 ## Use When
 
 - A user asks to "review our data room index," "check this file list for gaps,"
@@ -100,6 +81,8 @@ Do not review an index you have not been given, and do not assume the side.
   contents — that requires opening and reviewing each document, not the index.
 - The user wants a conclusion that diligence is complete or adequate — that is
   a judgment for the attorney and the deal team.
+
+Also out of scope (this skill does not): assess, summarize, or assume what is *inside* any document from its filename or folder name — a filename is metadata, not content; judge whether the diligence reflected in the index is complete, adequate, or sufficient for the deal; confirm that a file named for a category actually contains responsive material; supply jurisdiction-specific law, filing, securities, tax, antitrust, or employment rules; compute a deadline; or draft diligence findings. Whether a document satisfies a diligence need is a question for the reviewing attorney once the document itself is read.
 
 ## Legal Safety Rules
 
@@ -205,25 +188,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever coverage or naming is uncertain. Do not fill a
 gap with an invented file, category, or assumption about contents.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review our buyer-side data room index for this stock
-purchase. Here is the exported folder and file list. We especially care about
-IP and employment."
-
-**Expected output shape:** a review summary stating the buyer-side perspective,
-the stock-purchase deal type, the IP and employment focus areas, and that the
-review is of the index as metadata only; a gap matrix by diligence category,
-each row marked `Present`, `Partial`, or `Absent` with an index reference and
-observations that describe only what the index shows — never what a file
-contains; index-quality observations noting, for example, duplicate file names
-and an `[deadline verification required]` flag on documents dated several years
-back; a coverage-gaps list highlighting that the index shows no environmental
-folder and only one file under employee benefits; and a buyer-side follow-up
-request list. No file's contents are described or assumed from its name, no
-date is computed, no jurisdiction-specific rule is supplied, and no conclusion
-is drawn that diligence is complete.
 
 ## Attorney Verification Checklist
 

@@ -18,7 +18,7 @@ outputs:
 related_skills:
   - skills/family-law/spousal-support-facts-intake/SKILL.md
   - skills/family-law/asset-debt-schedule-builder/SKILL.md
-  - skills/family-law/family-law-discovery-tracker/SKILL.md
+  - skills/family-law/discovery-tracker/SKILL.md
 tags:
   - family-law
   - child-support
@@ -32,12 +32,6 @@ tags:
 ## Purpose
 
 Gather the facts relevant to a child support review — the children, custody and parenting-time facts, income facts supplied by the user, healthcare and childcare costs, special expenses, existing orders, any stated arrears, and financial disclosures — into a structured intake table, a missing-documents list, and questions for counsel, so a qualified, licensed attorney has an organized fact set. This skill organizes what the user provides; it calculates no support and determines no income.
-
-## Capability Disclosure
-
-**This skill does:** organize child-support-relevant facts by category; record income, cost, and parenting-time facts exactly as the user supplies them; list missing documents; and frame questions for counsel.
-
-**This skill does not:** calculate or estimate child support; apply a support guideline or worksheet; determine, impute, or verify income; decide a parenting-time percentage; conclude on arrears or a support obligation; compute or verify a deadline; or constitute legal advice.
 
 ## Use When
 
@@ -64,6 +58,8 @@ If the jurisdiction, the children, or the parties is missing, record it as `not 
 - The request is to determine, impute, or verify a party's income.
 - The request is for legal advice, an arrears conclusion, or a litigation strategy.
 - A property or debt schedule is the goal (use `asset-debt-schedule-builder`).
+
+Also out of scope (this skill does not): calculate or estimate child support; apply a support guideline or worksheet; determine, impute, or verify income; decide a parenting-time percentage; conclude on arrears or a support obligation; compute or verify a deadline; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -101,12 +97,6 @@ If the jurisdiction, the children, or the parties is missing, record it as `not 
 5. **Missing documents** — documents to obtain, grouped by category, marked `not provided`.
 6. **Questions for counsel** — guideline inputs, income questions, and parenting-time questions for the attorney.
 7. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run child-support-facts-intake on this fictional matter — two children, both parents employed, childcare and health-insurance costs — and organize the facts for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a category-by-category intake table of user-supplied facts; a missing-documents list; questions for counsel; and a verification checklist — with no support calculation, no income determination, no arrears conclusion, no computed deadline, and no invented guideline.
 
 ## Attorney Verification Checklist
 

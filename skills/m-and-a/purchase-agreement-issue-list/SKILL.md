@@ -42,23 +42,6 @@ legal advice and is not a final negotiating position. A purchase agreement is
 the document that, once signed, governs the transaction; whether to sign or
 close it is an attorney and client decision, not an output of this skill.
 
-## Capability Disclosure
-
-**This skill does:** spot issues in an acquisition agreement from one side of
-the deal; organize those issues into a risk matrix and a key-terms table;
-record what the agreement states about structure, consideration, risk
-allocation, conditions, and post-closing obligations, each with a source
-citation; identify negotiation points and missing provisions from the stated
-side; and check the agreement for internal inconsistency.
-
-**This skill does not:** give final advice or a final negotiating position;
-decide whether to sign or close the agreement; determine whether any provision
-is enforceable; conclude on the tax, securities, antitrust, or employment
-treatment of the deal; compute or confirm a deadline; supply jurisdiction-specific
-law, filing requirements, or approval requirements; or draft final clause
-language. Those are legal questions and drafting tasks for the attorney — this
-skill flags them and routes them to counsel.
-
 ## Use When
 
 - A user asks to "review this purchase agreement," "review this merger
@@ -106,6 +89,8 @@ review a document you have not been given.
 - The user wants a legal opinion on whether the agreement is enforceable,
   whether to sign or close, or how the deal is taxed or regulated — those
   require an attorney.
+
+Also out of scope (this skill does not): give final advice or a final negotiating position; decide whether to sign or close the agreement; determine whether any provision is enforceable; conclude on the tax, securities, antitrust, or employment treatment of the deal; compute or confirm a deadline; supply jurisdiction-specific law, filing requirements, or approval requirements; or draft final clause language. Those are legal questions and drafting tasks for the attorney — this skill flags them and routes them to counsel.
 
 ## Legal Safety Rules
 
@@ -255,23 +240,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a term is uncertain and `[deadline verification
 required]` for every date. Do not fill a gap with an invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review this stock purchase agreement for our
-acquisition. We are the buyer; here is the full SPA text and the disclosure
-schedules."
-
-**Expected output shape:** an agreement summary stating the buyer-side
-perspective, the deal type, the parties, and the governing law (or a
-`[CONFIRM]` flag); a key-terms table with a source citation per row and `Not
-found` where the SPA is silent; a buyer-side issue list with suggested
-directions; a risk matrix rating each issue High / Medium / Low for the buyer
-with a source citation per row; a buyer-side list of negotiation points; a
-list of missing provisions noting materiality; an internal-inconsistency check;
-and the attorney verification checklist. No provision is declared enforceable,
-no date is computed, no tax, securities, antitrust, or employment treatment is
-concluded, and no jurisdiction-specific rule is supplied.
 
 ## Attorney Verification Checklist
 

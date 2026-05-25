@@ -37,17 +37,6 @@ inconsistency list, so a qualified attorney can evaluate them against estate
 intent. This skill organizes the designations and flags inconsistencies; it
 concludes nothing about legal effect or beneficiary entitlement.
 
-## Capability Disclosure
-
-**This skill does:** extract and tabulate named and contingent beneficiaries,
-percentages, account ownership, and form dates with source citations; flag
-inconsistencies with estate documents where those documents are provided; and
-list missing forms.
-
-**This skill does not:** conclude the legal effect of a designation; determine
-whether a beneficiary is entitled to a distribution; determine which document
-controls; resolve a conflict; or constitute legal advice.
-
 ## Use When
 
 - Beneficiary designations, account titling, and TOD/POD forms must be
@@ -75,6 +64,8 @@ record it as `not provided` and return the missing-information list first.
 - The request is to determine whether a beneficiary is entitled to a
   distribution.
 - The request is to resolve a conflict or for legal advice.
+
+Also out of scope (this skill does not): conclude the legal effect of a designation; determine whether a beneficiary is entitled to a distribution; determine which document controls; resolve a conflict; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -127,17 +118,6 @@ record it as `not provided` and return the missing-information list first.
 
 The designation table follows the **Beneficiary Designation Review Table**
 structure in `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run beneficiary-designation-review on a fictional set of
-retirement and insurance beneficiary forms and compare them to the client's
-will; flag inconsistencies for the attorney."
-
-**Expected output shape:** a gates table, a source-cited beneficiary
-designation table, an inconsistency list framed as questions, a
-missing-documents list, and a verification checklist — with no legal-effect or
-entitlement conclusion and no invented rules.
 
 ## Attorney Verification Checklist
 

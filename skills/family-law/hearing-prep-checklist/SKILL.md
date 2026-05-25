@@ -16,7 +16,7 @@ outputs:
   - "Open-questions-for-counsel list and missing-facts list"
   - "Attorney verification checklist"
 related_skills:
-  - skills/family-law/family-law-discovery-tracker/SKILL.md
+  - skills/family-law/discovery-tracker/SKILL.md
   - skills/family-law/custody-parenting-facts-chronology/SKILL.md
 tags:
   - family-law
@@ -31,12 +31,6 @@ tags:
 ## Purpose
 
 Build a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, financial disclosures, witnesses, prior orders, service and proof documents, the issues to be heard, and the requested relief as the user supplies it — so a qualified, licensed attorney has an organized preparation list. This skill organizes preparation tasks; it invents no court deadlines or local rules and sets no hearing strategy.
-
-## Capability Disclosure
-
-**This skill does:** organize hearing-preparation tasks into a checklist; record for each task the source, the owner, the status, and the deadline if the user provides it; and list open questions for counsel and missing facts.
-
-**This skill does not:** invent court deadlines, filing requirements, local rules, or procedures; set a hearing strategy, an argument, or an order of proof; predict an outcome; decide what relief to request or what evidence is admissible; draft pleadings, declarations, or court forms; or constitute legal advice.
 
 ## Use When
 
@@ -60,6 +54,8 @@ If the hearing type, the issues to be heard, or the parties is missing, record i
 - The request is for a hearing strategy, an argument, an order of proof, or an outcome prediction.
 - The request is to draft pleadings, declarations, or court forms, or to decide what relief to request.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): invent court deadlines, filing requirements, local rules, or procedures; set a hearing strategy, an argument, or an order of proof; predict an outcome; decide what relief to request or what evidence is admissible; draft pleadings, declarations, or court forms; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -95,12 +91,6 @@ If the hearing type, the issues to be heard, or the parties is missing, record i
 5. **Open questions for counsel** — preparation gaps, evidentiary questions, and procedural confirmations.
 6. **Missing facts** — tasks, documents, and statuses marked `not provided` / `ambiguous`.
 7. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run family-law-hearing-prep-checklist on this fictional custody and support hearing — pleadings, declarations, exhibits, and a witness list — and build the prep checklist for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a hearing-prep checklist with task, source, owner, status, and user-provided-deadline columns; an open-questions-for-counsel list; a missing-facts list; and a verification checklist — with no invented court deadlines or local rules, no hearing strategy, no outcome prediction, and no drafted pleadings or forms.
 
 ## Attorney Verification Checklist
 

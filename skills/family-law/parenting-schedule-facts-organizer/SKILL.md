@@ -32,12 +32,6 @@ tags:
 
 Organize the facts relevant to a parenting schedule discussion — the current and any proposed schedule, school and daycare, transportation, holidays and vacations, distance, work schedules, stated child needs, communication method, exchanges, and existing orders — into a facts table, a conflict/ambiguity list, and a logistics checklist, so a qualified, licensed attorney has an organized basis for the discussion. This skill organizes what the user provides; it recommends no schedule and applies no best-interests standard.
 
-## Capability Disclosure
-
-**This skill does:** organize parenting-schedule facts by category; compare a current and a proposed schedule where both are provided; list conflicts and ambiguities between them; and build a logistics checklist of open practical questions.
-
-**This skill does not:** recommend a parenting schedule or parenting-time split; apply or weigh a best-interests standard; decide what is good for a child; resolve a conflict between schedules; compute or verify a deadline; draft a court form; or constitute legal advice.
-
 ## Use When
 
 - A parenting schedule is being discussed and the relevant facts need an organized, reviewable layout.
@@ -62,6 +56,8 @@ If the current schedule, the parties, or the children involved is missing, recor
 - The request is for legal advice or a litigation strategy.
 - A sourced timeline of parenting events is the goal (use `custody-parenting-facts-chronology`).
 - An existing custody order must be reviewed for clarity (use `custody-order-review-checklist`).
+
+Also out of scope (this skill does not): recommend a parenting schedule or parenting-time split; apply or weigh a best-interests standard; decide what is good for a child; resolve a conflict between schedules; compute or verify a deadline; draft a court form; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -97,12 +93,6 @@ If the current schedule, the parties, or the children involved is missing, recor
 5. **Conflict/ambiguity list** — conflicts between schedules, unclear arrangements, and gaps, marked `ambiguous` / `not provided`.
 6. **Logistics checklist** — open practical questions for the attorney and the parties.
 7. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run parenting-schedule-facts-organizer on this fictional matter with a current week-on/week-off schedule and a proposed alternative, and organize the facts for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a facts table comparing the current and proposed schedules by category; a conflict/ambiguity list; a logistics checklist; and verification questions — with no recommended schedule, no parenting-time allocation, no best-interests conclusion, no computed deadline, and no invented law.
 
 ## Attorney Verification Checklist
 

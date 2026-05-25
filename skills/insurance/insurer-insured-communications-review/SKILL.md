@@ -33,12 +33,6 @@ tags:
 
 Review insurer, insured, claimant, or broker communications — letters, emails, and claim notes — for clarity, consistency, privilege and confidentiality concerns, claim-handling risk, reservation/denial posture, information requests, and escalation needs, into a source-cited issue list and suggested attorney-review edits. This skill flags issues and proposes draft edits; it does not approve any communication for sending and reaches no legal conclusion.
 
-## Capability Disclosure
-
-**This skill does:** review the provided communications; flag clarity, consistency, tone, privilege/confidentiality, claim-handling-risk, and escalation issues with source citations; suggest draft attorney-review edits; and list missing facts.
-
-**This skill does not:** approve any communication for sending; conclude on coverage, a duty to defend or indemnify, bad faith, or claim-handling adequacy; make a privilege determination; decide whether a communication waives or reserves any right; finalize language; or constitute legal advice.
-
 ## Use When
 
 - Insurer, insured, claimant, or broker communications must be reviewed before they are sent or after they are received.
@@ -62,6 +56,8 @@ If the communications, the user's role, or the review purpose is missing, record
 - The request is to conclude on coverage, a duty to defend or indemnify, bad faith, or claim-handling adequacy.
 - The request is to make a privilege determination or decide whether a communication waives or reserves a right.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): approve any communication for sending; conclude on coverage, a duty to defend or indemnify, bad faith, or claim-handling adequacy; make a privilege determination; decide whether a communication waives or reserves any right; finalize language; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -105,12 +101,6 @@ If the communications, the user's role, or the review purpose is missing, record
 6. **Missing facts** — facts a communication relies on but the record does not show.
 7. **Escalation flags** — issues to route to an attorney, supervisor, or coverage counsel.
 8. **Attorney verification checklist** and **assumptions** — no communication is approved for sending.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run insurer-insured-communications-review on this fictional draft claim letter before it goes out — flag clarity, consistency, and privilege concerns for the attorney; do not approve it for sending."
-
-**Expected output shape:** a gates table, a categorized communication issue list, a source table, direction-only suggested edits labeled draft-only, a missing-facts list, escalation flags, and a verification checklist — with no approval to send, no coverage or bad-faith conclusion, no privilege determination, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

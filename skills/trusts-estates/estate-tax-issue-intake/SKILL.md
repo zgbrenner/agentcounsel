@@ -38,17 +38,6 @@ document request list, and verification questions, so a qualified tax
 professional or attorney can evaluate the issues. This skill organizes facts
 and spots issues; it calculates no tax and reaches no tax conclusion.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited fact register; map
-estate, gift, GST, and inheritance tax issues as questions; list missing facts
-and documents; and prepare tax-professional verification questions.
-
-**This skill does not:** calculate any tax, exemption, exclusion, or filing
-threshold; determine tax treatment, a filing obligation, or a deadline; opine
-on whether a position is correct; prepare a tax return; or constitute legal or
-tax advice.
-
 ## Use When
 
 - An estate, gift, GST, or inheritance tax matter needs structured intake
@@ -80,6 +69,8 @@ first.
 - The request is to determine tax treatment, a filing obligation, or a
   deadline.
 - The request is to prepare a tax return, or for legal or tax advice.
+
+Also out of scope (this skill does not): calculate any tax, exemption, exclusion, or filing threshold; determine tax treatment, a filing obligation, or a deadline; opine on whether a position is correct; prepare a tax return; or constitute legal or tax advice.
 
 ## Legal Safety Rules
 
@@ -130,17 +121,6 @@ first.
 
 The tax issue map follows the **Estate Tax Issue Intake Matrix** structure in
 `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run estate-tax-issue-intake for a fictional estate with
-business interests, real estate, and a prior gift tax filing; organize the tax
-issues for our tax professional."
-
-**Expected output shape:** a gates table, a source-cited fact register, a tax
-issue map of open questions, missing-facts and document-request lists, and
-verification questions — with no tax, exemption, or threshold calculated and no
-tax-treatment conclusion.
 
 ## Attorney Verification Checklist
 

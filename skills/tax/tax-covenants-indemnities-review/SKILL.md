@@ -38,17 +38,6 @@ counsel can verify the tax-risk allocation from the user's perspective. This
 skill maps and organizes the provisions; it does not determine enforceability,
 tax treatment, or adequacy.
 
-## Capability Disclosure
-
-**This skill does:** extract and map tax covenants and indemnity mechanics with
-source citations; summarize the architecture; build a role-aware issue list and
-negotiation points; and frame verification questions for tax counsel.
-
-**This skill does not:** determine whether a covenant or indemnity is
-enforceable; decide the tax treatment of a provision; opine on whether the
-indemnity scope, caps, or survival are adequate; compute exposure; draft final
-clause language; or provide tax advice.
-
 ## Use When
 
 - A transaction agreement's tax covenants and indemnities must be mapped and
@@ -80,6 +69,8 @@ record it as `not provided` and return the missing-information list first.
   indemnity terms are adequate.
 - The request is to compute exposure, draft final clause language, or for tax
   advice.
+
+Also out of scope (this skill does not): determine whether a covenant or indemnity is enforceable; decide the tax treatment of a provision; opine on whether the indemnity scope, caps, or survival are adequate; compute exposure; draft final clause language; or provide tax advice.
 
 ## Legal Safety Rules
 
@@ -130,17 +121,6 @@ record it as `not provided` and return the missing-information list first.
 5. **Issue list** and **source table**.
 6. **Negotiation points** — direction of change only, from the user's side.
 7. **Tax-counsel verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run tax-covenants-indemnities-review on the tax indemnity
-article of this fictional purchase agreement; we are the buyer — map the
-architecture and the negotiation points for our tax counsel."
-
-**Expected output shape:** a gates table, an architecture summary, a
-source-cited covenant/indemnity review table, an issue list, negotiation
-points, and a verification checklist — with no enforceability or adequacy
-determination, no exposure calculation, and no invented authority.
 
 ## Attorney Verification Checklist
 

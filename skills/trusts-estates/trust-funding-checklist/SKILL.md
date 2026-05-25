@@ -37,16 +37,6 @@ evidence and missing items — so a qualified attorney can review trust funding.
 This skill organizes funding status; it prepares no transfer documents and
 determines no tax consequences.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a funding checklist across asset
-categories; record the funding evidence for each asset with source citations;
-and flag missing funding evidence and items.
-
-**This skill does not:** prepare deeds, assignments, or transfer documents;
-determine whether title or a transfer is legally effective; determine the tax
-consequences of funding; determine ownership; or constitute legal advice.
-
 ## Use When
 
 - A trust is being funded, or its funding is being reviewed, and the status
@@ -74,6 +64,8 @@ it as `not provided` and return the missing-information list first.
 - The request is to determine whether title or a transfer is legally effective.
 - The request is to determine the tax consequences of funding, or for legal
   advice.
+
+Also out of scope (this skill does not): prepare deeds, assignments, or transfer documents; determine whether title or a transfer is legally effective; determine the tax consequences of funding; determine ownership; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -121,17 +113,6 @@ it as `not provided` and return the missing-information list first.
 
 The funding checklist follows the **Trust Funding Checklist** structure in
 `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run trust-funding-checklist for a fictional revocable
-trust to see which assets have been transferred into it; build the funding
-checklist for the attorney."
-
-**Expected output shape:** a gates table, a source-cited funding checklist, a
-source table, a missing-items list with responsible parties, and verification
-questions — with no transfer documents, no legal-effectiveness determination,
-and no tax conclusion.
 
 ## Attorney Verification Checklist
 

@@ -33,12 +33,6 @@ tags:
 
 Review a reservation of rights (ROR) letter or related coverage correspondence into a source-cited issue list and a provision-reference table, so a qualified attorney can evaluate what the letter says, what it relies on, and what is unclear. This skill organizes and cross-references the letter against the policy; it reaches no conclusion on whether the reservation is legally sufficient or effective.
 
-## Capability Disclosure
-
-**This skill does:** map the letter's contents — policy and claim identification, facts relied on, cited provisions, rights reserved, defense position, and information requests; cross-reference cited provisions to the policy; and flag missing facts, ambiguities, and inconsistencies.
-
-**This skill does not:** conclude that a reservation is legally sufficient, effective, or timely; determine whether rights were adequately reserved or waived; decide whether independent counsel is required; conclude on coverage, a duty to defend, or a conflict of interest; draft a final ROR or denial; or constitute legal advice.
-
 ## Use When
 
 - A reservation of rights letter or coverage-position letter must be reviewed and organized for an attorney.
@@ -63,6 +57,8 @@ If the letter, the policy, or the user's role is missing, record it as `not prov
 - The request is to decide whether independent or "Cumis"-type counsel is required, or whether a conflict of interest exists.
 - The request is to conclude on coverage or a duty to defend, or to draft a final ROR or denial.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): conclude that a reservation is legally sufficient, effective, or timely; determine whether rights were adequately reserved or waived; decide whether independent counsel is required; conclude on coverage, a duty to defend, or a conflict of interest; draft a final ROR or denial; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -97,12 +93,6 @@ If the letter, the policy, or the user's role is missing, record it as `not prov
 6. **Ambiguity and consistency list** — vague reservations, contradictions, and unsupported factual assertions.
 7. **Missing facts** — facts the letter relies on but the record does not show, marked `not provided`/`unknown`.
 8. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run reservation-of-rights-review on this fictional ROR letter and our CGL policy — map the reserved rights and cited provisions and flag what is unclear for coverage counsel."
-
-**Expected output shape:** a gates table, a letter summary, an issue list, a provision-reference table cross-referencing each cited provision, an ambiguity/consistency list, a missing-facts list, and a verification checklist — with no sufficiency or effectiveness conclusion, no coverage or independent-counsel determination, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

@@ -33,12 +33,6 @@ tags:
 
 Capture the facts of a new family law matter — divorce or dissolution, custody and parenting, support, property and debt, or a related dispute — into a structured intake summary, an issue map, a missing-facts list, a document request list, and safety/escalation flags, so a qualified, licensed attorney has an organized starting point. This skill organizes what the user provides; it gives no family-law advice, recommends no strategy, and reaches no conclusion.
 
-## Capability Disclosure
-
-**This skill does:** organize the parties, children, jurisdiction, relationship status, matter type, case stage, existing orders, and the financial, property, support, custody, and safety issues the user describes; build an issue map; list missing facts and documents to request; and flag safety and escalation concerns.
-
-**This skill does not:** give family-law advice; recommend a legal strategy, a custody outcome, a parenting schedule, or a support figure; compute or verify any deadline; decide what to file or where; characterize property; draft court forms; or constitute legal advice.
-
 ## Use When
 
 - A new family law matter must be captured in a structured, reviewable form for an attorney.
@@ -64,6 +58,8 @@ If the parties, the matter type, the case stage, or the jurisdiction is missing,
 - The request is to compute a deadline or to decide what or where to file.
 - A single document must be reviewed in depth (use `settlement-agreement-issue-spotter` or `custody-order-review-checklist`).
 - The matter is solely a safety concern — start with `domestic-violence-safety-referral-checklist`.
+
+Also out of scope (this skill does not): give family-law advice; recommend a legal strategy, a custody outcome, a parenting schedule, or a support figure; compute or verify any deadline; decide what to file or where; characterize property; draft court forms; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -101,12 +97,6 @@ If the parties, the matter type, the case stage, or the jurisdiction is missing,
 6. **Missing facts** — gates, dates, and facts marked `not provided` / `unknown` / `ambiguous`.
 7. **Document request list** — documents to obtain, grouped by category.
 8. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run family-law-matter-intake on this fictional new divorce matter with two children and a possible safety concern, and organize it for the attorney."
-
-**Expected output shape:** a capability notice; a safety/escalation flag block; a gates table; an intake summary with masked identifiers; an issue map; a missing-facts list; a document request list; and attorney verification questions — with no strategy, no custody or support conclusion, no property characterization, no computed deadline, and no invented law.
 
 ## Attorney Verification Checklist
 

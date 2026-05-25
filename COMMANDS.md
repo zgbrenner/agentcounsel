@@ -69,6 +69,21 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/real-estate:estoppel-snda` | `skills/real-estate/estoppel-snda-review/SKILL.md` | "review this estoppel or SNDA" | The estoppel or SNDA, perspective, lease if available | Issue list and lease discrepancy table | `/real-estate:lease-abstract` |
 | `/real-estate:zoning-issues` | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` | "spot zoning and use-restriction issues" | Intended use, provided materials, jurisdiction | Issue list and questions for local counsel | `/real-estate:diligence-checklist` |
 
+## Antitrust / Competition
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/antitrust:intake` | `skills/antitrust-competition/antitrust-risk-intake/SKILL.md` | "intake an antitrust risk", "open an antitrust matter" | Conduct or transaction at issue, parties, posture | Antitrust risk intake summary | `/antitrust:merger-issues`, `/antitrust:competitor-collab` |
+| `/antitrust:competitor-collab` | `skills/antitrust-competition/competitor-collaboration-review/SKILL.md` | "review this competitor collaboration", "JV or benchmarking review" | The collaboration/JV/benchmarking plan, parties, scope | Collaboration risk review | `/antitrust:info-sharing` |
+| `/antitrust:info-sharing` | `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md` | "review this clean-team or information-sharing protocol" | The protocol, parties, data categories | Information-sharing risk review | `/antitrust:gun-jumping` |
+| `/antitrust:pricing-algorithm` | `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md` | "triage antitrust risk in this pricing algorithm" | Algorithm description, market and counterparty facts | Pricing-algorithm risk triage | `/antitrust:exclusivity-mfn` |
+| `/antitrust:distribution` | `skills/antitrust-competition/distribution-restraints-review/SKILL.md` | "review distribution restraints or reseller restrictions" | The restraint terms, market context | Distribution restraints review | `/antitrust:exclusivity-mfn` |
+| `/antitrust:exclusivity-mfn` | `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md` | "review exclusivity, MFN, or loyalty pricing terms" | The terms, market position, counterparty facts | Exclusivity/MFN/loyalty pricing review | `/antitrust:distribution` |
+| `/antitrust:merger-issues` | `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md` | "issue-spot merger antitrust concerns" | Deal description, overlap and market facts | Merger antitrust issue list | `/antitrust:gun-jumping`, `/m-and-a:purchase-agreement` |
+| `/antitrust:gun-jumping` | `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md` | "build pre-closing gun-jumping checklist" | Pre-close coordination facts, parties | Gun-jumping clean-team checklist | `/antitrust:info-sharing`, `/antitrust:merger-issues` |
+| `/antitrust:trade-assoc` | `skills/antitrust-competition/trade-association-meeting-review/SKILL.md` | "review trade-association agenda or minutes" | Agenda, minutes, attendees | Trade-association meeting review | `/antitrust:compliance-policy` |
+| `/antitrust:compliance-policy` | `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md` | "review antitrust compliance policy or training" | Policy or training materials | Antitrust compliance policy review | `/antitrust:trade-assoc` |
+
 ## Mergers & Acquisitions
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
@@ -183,11 +198,6 @@ Cross-cutting analytical disciplines that support skills in any practice area.
 | `/method:risk-assessment` | `skills/legal-methodology/risk-assessment/SKILL.md` | "assess the legal risk", "rate and prioritize these risks" | The situation, known facts, client posture | Prioritized risk register | `/regulatory:enforcement-risk` |
 | `/method:source-validation` | `skills/legal-methodology/source-validation/SKILL.md` | "validate the sources", "check these citations" | A draft and the sources it cites | Source-by-source validation table | `/method:red-team` |
 
-## Keeping commands accurate
-
-Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. `scripts/validate_repo.py` checks that each path resolves. When a skill is added, renamed, or moved, update this file, `SKILLS_INDEX.md`, and `WORKFLOW_ROUTER.md` together.
-
-
 ## Securities / Capital Markets
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
@@ -274,3 +284,27 @@ Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. 
 | `/trusts-estates:trust-funding` | `skills/trusts-estates/trust-funding-checklist/SKILL.md` | "trust funding checklist" | Trust instrument, intended assets, funding evidence, role | Funding checklist + missing-items list | `/trusts-estates:beneficiary-review` |
 | `/trusts-estates:post-death-tracker` | `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md` | "post-death administration task tracker" | Decedent, fiduciary role, jurisdiction, tasks underway | Administration task tracker | `/trusts-estates:probate-checklist` |
 | `/trusts-estates:estate-tax-intake` | `skills/trusts-estates/estate-tax-issue-intake/SKILL.md` | "estate or gift tax issue intake" | Jurisdiction, decedent/donor, assets, gifts, trusts, prior filings | Tax issue map + document request list | `/trusts-estates:inventory` |
+
+
+## Family Law
+
+The Family Law skills produce **draft work product for a qualified, licensed attorney**. They organize facts and surface issues — they never calculate child or spousal support, recommend custody outcomes, draft pleadings, or supply safety plans.
+
+| Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
+|---|---|---|---|---|---|
+| `/family-law:intake` | `skills/family-law/matter-intake/SKILL.md` | "open a new family law matter", "family law intake" | Parties, household and minor-children facts, posture, documents, safety facts | Intake summary + issue map + safety flags | `/family-law:divorce-intake`, `/family-law:hearing-prep` |
+| `/family-law:divorce-intake` | `skills/family-law/divorce-intake-organizer/SKILL.md` | "divorce intake", "dissolution facts" | Parties, marriage facts, household and asset facts, documents | Facts table + missing-documents list + issue map | `/family-law:intake`, `/family-law:asset-debt-schedule` |
+| `/family-law:custody-chronology` | `skills/family-law/custody-parenting-facts-chronology/SKILL.md` | "build a parenting chronology", "custody facts chronology" | Records, communications, calendars, role | Source-cited factual chronology | `/family-law:parenting-schedule`, `/family-law:custody-order-review` |
+| `/family-law:parenting-schedule` | `skills/family-law/parenting-schedule-facts-organizer/SKILL.md` | "organize parenting schedule facts" | Schedule facts, school and activity facts, role | Facts table + conflict list + logistics checklist | `/family-law:custody-chronology` |
+| `/family-law:custody-order-review` | `skills/family-law/custody-order-review-checklist/SKILL.md` | "review this custody or parenting order" | The order, party role, related orders | Order-clarity checklist + ambiguity table | `/family-law:custody-chronology` |
+| `/family-law:child-support-intake` | `skills/family-law/child-support-facts-intake/SKILL.md` | "child support facts intake" | Parent and household facts, income and expense documents, role | Intake table + missing-documents list + questions for counsel | `/family-law:spousal-support-intake` |
+| `/family-law:spousal-support-intake` | `skills/family-law/spousal-support-facts-intake/SKILL.md` | "spousal support facts intake", "alimony intake" | Marriage and income facts, expense and asset documents, role | Intake table + missing-documents list + questions for counsel | `/family-law:child-support-intake` |
+| `/family-law:asset-debt-schedule` | `skills/family-law/asset-debt-schedule-builder/SKILL.md` | "build the asset and debt schedule" | Asset and debt records, owner/title facts, role | Source-cited property + debt schedule | `/family-law:divorce-intake` |
+| `/family-law:settlement-issues` | `skills/family-law/settlement-agreement-issue-spotter/SKILL.md` | "review this marital settlement agreement", "settlement issue spotting" | The agreement, role, related orders | Key-terms table + issue list + missing-provisions list | `/family-law:custody-order-review` |
+| `/family-law:discovery-tracker` | `skills/family-law/discovery-tracker/SKILL.md` | "family law discovery tracker" | Discovery requests and responses, disclosures, subpoenas, role | Discovery tracker + deficiency list | `/family-law:hearing-prep` |
+| `/family-law:hearing-prep` | `skills/family-law/hearing-prep-checklist/SKILL.md` | "family law hearing prep" | Hearing facts, pleadings, declarations, exhibits, witnesses, role | Hearing-prep checklist + open-questions list | `/family-law:discovery-tracker` |
+| `/family-law:dv-safety-referral` | `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md` | "domestic violence safety referral", "abuse safety considerations" | Documented facts and concerns, role, jurisdiction context | Referral / escalation considerations checklist | `/family-law:intake` |
+
+## Keeping commands accurate
+
+Every Skill path above is a real `SKILL.md` in the canonical `skills/` library. `scripts/validate_repo.py` checks that each path resolves. When a skill is added, renamed, or moved, update this file, `SKILLS_INDEX.md`, and `WORKFLOW_ROUTER.md` together.

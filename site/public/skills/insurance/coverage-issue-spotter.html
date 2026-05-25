@@ -48,6 +48,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The request is to decide whether the claim is covered, or whether the insurer must defend or indemnify.</li><li>The request is to conclude on an exclusion, endorsement, additional insured status, allocation, other-insurance priority, late notice, waiver, estoppel, or prejudice.</li><li>The request is for a coverage opinion, a denial, or legal advice.</li><li>The task is to draft a coverage position (use <code>coverage-position-outline</code>).</li></ul>
+<p>Also out of scope (this skill does not): determine whether a claim is covered; decide a duty to defend or indemnify; conclude on exclusions, endorsements, additional insured status, allocation, other-insurance priority, limits or SIR exhaustion, late notice, waiver, estoppel, or prejudice; predict coverage litigation outcomes; or constitute legal advice.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -102,12 +103,6 @@ tags:
 
 Issue-spot the insurance coverage questions raised by a policy and a claim — from the policy, claim facts, tender, pleadings, demand letters, denial letters, and correspondence — into a source-cited coverage issue matrix for attorney review. This skill identifies the questions a coverage attorney must work through; it answers none of them and determines no coverage outcome.
 
-## Capability Disclosure
-
-**This skill does:** identify coverage issues from the provided policy and claim materials; map each issue to the policy provision and claim fact that raises it, with citations; flag missing facts; and prepare document requests and verification questions.
-
-**This skill does not:** determine whether a claim is covered; decide a duty to defend or indemnify; conclude on exclusions, endorsements, additional insured status, allocation, other-insurance priority, limits or SIR exhaustion, late notice, waiver, estoppel, or prejudice; predict coverage litigation outcomes; or constitute legal advice.
-
 ## Use When
 
 - A coverage question must be triaged before substantive attorney analysis.
@@ -132,6 +127,8 @@ If the policy, the claim facts, the policy type, or the role is missing, record 
 - The request is to conclude on an exclusion, endorsement, additional insured status, allocation, other-insurance priority, late notice, waiver, estoppel, or prejudice.
 - The request is for a coverage opinion, a denial, or legal advice.
 - The task is to draft a coverage position (use `coverage-position-outline`).
+
+Also out of scope (this skill does not): determine whether a claim is covered; decide a duty to defend or indemnify; conclude on exclusions, endorsements, additional insured status, allocation, other-insurance priority, limits or SIR exhaustion, late notice, waiver, estoppel, or prejudice; predict coverage litigation outcomes; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -174,12 +171,6 @@ If the policy, the claim facts, the policy type, or the role is missing, record 
 6. **Document request list** — documents to obtain, with the issue each supports.
 7. **Attorney verification questions and escalation triggers** — required before any coverage position, reservation of rights, denial, defense decision, or communication.
 8. **Assumptions and limits** — no coverage, duty-to-defend, or duty-to-indemnify conclusion is drawn.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run coverage-issue-spotter on this fictional CGL policy and the tender and complaint — map the coverage issues for our coverage counsel; do not decide coverage."
-
-**Expected output shape:** a gates table, a coverage issue matrix, a source-cited policy/claim fact table, a missing-facts list, a document request list, and attorney verification questions — with every issue framed as an open question, no coverage or duty-to-defend/indemnify conclusion, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 
@@ -240,12 +231,6 @@ tags:
 
 Issue-spot the insurance coverage questions raised by a policy and a claim — from the policy, claim facts, tender, pleadings, demand letters, denial letters, and correspondence — into a source-cited coverage issue matrix for attorney review. This skill identifies the questions a coverage attorney must work through; it answers none of them and determines no coverage outcome.
 
-## Capability Disclosure
-
-**This skill does:** identify coverage issues from the provided policy and claim materials; map each issue to the policy provision and claim fact that raises it, with citations; flag missing facts; and prepare document requests and verification questions.
-
-**This skill does not:** determine whether a claim is covered; decide a duty to defend or indemnify; conclude on exclusions, endorsements, additional insured status, allocation, other-insurance priority, limits or SIR exhaustion, late notice, waiver, estoppel, or prejudice; predict coverage litigation outcomes; or constitute legal advice.
-
 ## Use When
 
 - A coverage question must be triaged before substantive attorney analysis.
@@ -270,6 +255,8 @@ If the policy, the claim facts, the policy type, or the role is missing, record 
 - The request is to conclude on an exclusion, endorsement, additional insured status, allocation, other-insurance priority, late notice, waiver, estoppel, or prejudice.
 - The request is for a coverage opinion, a denial, or legal advice.
 - The task is to draft a coverage position (use `coverage-position-outline`).
+
+Also out of scope (this skill does not): determine whether a claim is covered; decide a duty to defend or indemnify; conclude on exclusions, endorsements, additional insured status, allocation, other-insurance priority, limits or SIR exhaustion, late notice, waiver, estoppel, or prejudice; predict coverage litigation outcomes; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -312,12 +299,6 @@ If the policy, the claim facts, the policy type, or the role is missing, record 
 6. **Document request list** — documents to obtain, with the issue each supports.
 7. **Attorney verification questions and escalation triggers** — required before any coverage position, reservation of rights, denial, defense decision, or communication.
 8. **Assumptions and limits** — no coverage, duty-to-defend, or duty-to-indemnify conclusion is drawn.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run coverage-issue-spotter on this fictional CGL policy and the tender and complaint — map the coverage issues for our coverage counsel; do not decide coverage."
-
-**Expected output shape:** a gates table, a coverage issue matrix, a source-cited policy/claim fact table, a missing-facts list, a document request list, and attorney verification questions — with every issue framed as an open question, no coverage or duty-to-defend/indemnify conclusion, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

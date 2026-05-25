@@ -33,12 +33,6 @@ tags:
 
 Issue-spot potential claim-handling and bad-faith risk **themes** from claim file materials — investigation timeline, communications, delays, coverage explanations, information requests, settlement demands, defense handling, conflicts, documentation, and escalation — into a source-cited risk-theme list for attorney review. This skill surfaces themes a coverage or bad-faith attorney must evaluate; it concludes nothing about whether bad faith occurred.
 
-## Capability Disclosure
-
-**This skill does:** identify potential claim-handling risk themes from the provided claim file; map each theme to the documents and gaps that raise it; flag chronology gaps, communication issues, and missing documents; and prepare jurisdiction-specific questions for counsel.
-
-**This skill does not:** conclude that bad faith did or did not occur; determine whether claim handling was reasonable, unreasonable, in good faith, or in violation of any standard; assess extracontractual exposure or damages; predict litigation outcomes; apply any jurisdiction's bad-faith standard; or constitute legal advice.
-
 ## Use When
 
 - A claim file must be triaged for potential claim-handling and bad-faith risk themes before attorney review.
@@ -63,6 +57,8 @@ If the claim file, the policy type, or the role is missing, record it as `not pr
 - The request is to decide whether claim handling was reasonable, in good faith, or compliant with any claim-handling standard or statute.
 - The request is to assess extracontractual or punitive exposure, damages, or settlement value.
 - The request is for legal advice or a litigation prediction.
+
+Also out of scope (this skill does not): conclude that bad faith did or did not occur; determine whether claim handling was reasonable, unreasonable, in good faith, or in violation of any standard; assess extracontractual exposure or damages; predict litigation outcomes; apply any jurisdiction's bad-faith standard; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -107,12 +103,6 @@ If the claim file, the policy type, or the role is missing, record it as `not pr
 6. **Missing documents** — claim-file documents not provided that bear on the themes.
 7. **Questions for counsel** — including the jurisdiction-specific standards the attorney must supply.
 8. **Attorney verification questions** and **assumptions** — no bad-faith conclusion is drawn.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run bad-faith-risk-triage on this fictional first-party claim file — surface the claim-handling risk themes for our coverage counsel; do not decide whether bad faith occurred."
-
-**Expected output shape:** a gates table, a neutrally framed risk-theme list with jurisdiction-specific questions for counsel, chronology gaps, communication issues, a missing-documents list, and attorney verification questions — with no bad-faith conclusion, no reasonableness determination, no exposure or damages estimate, no computed deadline, and no invented standard or authority.
 
 ## Attorney Verification Checklist
 

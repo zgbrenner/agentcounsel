@@ -49,6 +49,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The document is a letter of intent or term sheet — use <code>loi-term-sheet-review</code>.</li><li>The user needs an issue list on a draft acquisition agreement — use <code>purchase-agreement-issue-list</code>.</li><li>The user needs to track the deliverables exchanged at the closing itself — use <code>closing-deliverables-tracker</code>.</li><li>The user needs an integration legal task list — use <code>integration-legal-issues-checklist</code>.</li><li>The user wants a legal opinion on whether an obligation has been satisfied or breached, or on the consequences of a missed obligation — that requires an attorney.</li></ul>
+<p>Also out of scope (this skill does not): invent an obligation, an owner, a trigger, or a date the documents do not state; decide whether an obligation has been satisfied, waived, or breached; determine the legal consequences of a missed or late obligation; compute, confirm, or assume any deadline; supply jurisdiction- specific law, filing, securities, tax, antitrust, or employment rules; draft notices or final clause language; or replace attorney review of the agreement. Whether an obligation has been met and what follows if it has not are legal questions for the attorney — this skill reports what the documents say and flags the question.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -125,24 +126,6 @@ waived, or breached. The acquisition agreement and the ancillary documents
 control; this tracker only restates what they say so an attorney and a deal
 team can monitor performance.
 
-## Capability Disclosure
-
-**This skill does:** locate and organize the post-closing obligations the
-acquisition agreement and its ancillary documents state; record, for each
-obligation, the owner, trigger, and due date as the documents state them; cite
-the document and section or clause for every obligation; note dependencies
-between obligations; and flag what is missing, not found, or ambiguous.
-
-**This skill does not:** invent an obligation, an owner, a trigger, or a date
-the documents do not state; decide whether an obligation has been satisfied,
-waived, or breached; determine the legal consequences of a missed or late
-obligation; compute, confirm, or assume any deadline; supply jurisdiction-
-specific law, filing, securities, tax, antitrust, or employment rules; draft
-notices or final clause language; or replace attorney review of the agreement.
-Whether an obligation has been met and what follows if it has not are legal
-questions for the attorney — this skill reports what the documents say and
-flags the question.
-
 ## Use When
 
 - A user asks to "build a post-closing tracker," "list the post-closing
@@ -185,6 +168,8 @@ extract obligations from a document you have not been given.
 - The user wants a legal opinion on whether an obligation has been satisfied or
   breached, or on the consequences of a missed obligation — that requires an
   attorney.
+
+Also out of scope (this skill does not): invent an obligation, an owner, a trigger, or a date the documents do not state; decide whether an obligation has been satisfied, waived, or breached; determine the legal consequences of a missed or late obligation; compute, confirm, or assume any deadline; supply jurisdiction- specific law, filing, securities, tax, antitrust, or employment rules; draft notices or final clause language; or replace attorney review of the agreement. Whether an obligation has been met and what follows if it has not are legal questions for the attorney — this skill reports what the documents say and flags the question.
 
 ## Legal Safety Rules
 
@@ -296,27 +281,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a detail is uncertain. Do not fill a gap with an
 invented obligation, owner, trigger, or date.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Build a post-closing obligations tracker for our
-acquisition. We are the buyer; here is the executed stock purchase agreement,
-the escrow agreement, and the transition services agreement; closing was
-[date]."
-
-**Expected output shape:** a deal summary stating the buyer-side perspective,
-the closing date as supplied, and the three provided ancillary documents (with
-any referenced-but-not-provided document flagged); a post-closing obligation
-tracker table with one row per obligation — purchase-price true-up, escrow
-release, transition services wind-down, restrictive covenants, tax cooperation,
-records retention, indemnity-notice procedure — each with an owner, a trigger,
-a due date copied verbatim and flagged `[deadline verification required]` or
-marked `Not found`, and a source citation to the document and section; a
-dependencies list (for example, escrow release following indemnity-claim
-resolution); a list of unstated and ambiguous items; and the attorney
-verification checklist. No obligation or date is invented, no deadline is
-computed, no obligation is declared satisfied or breached, and no jurisdiction-
-specific rule is supplied.
 
 ## Attorney Verification Checklist
 
@@ -396,24 +360,6 @@ waived, or breached. The acquisition agreement and the ancillary documents
 control; this tracker only restates what they say so an attorney and a deal
 team can monitor performance.
 
-## Capability Disclosure
-
-**This skill does:** locate and organize the post-closing obligations the
-acquisition agreement and its ancillary documents state; record, for each
-obligation, the owner, trigger, and due date as the documents state them; cite
-the document and section or clause for every obligation; note dependencies
-between obligations; and flag what is missing, not found, or ambiguous.
-
-**This skill does not:** invent an obligation, an owner, a trigger, or a date
-the documents do not state; decide whether an obligation has been satisfied,
-waived, or breached; determine the legal consequences of a missed or late
-obligation; compute, confirm, or assume any deadline; supply jurisdiction-
-specific law, filing, securities, tax, antitrust, or employment rules; draft
-notices or final clause language; or replace attorney review of the agreement.
-Whether an obligation has been met and what follows if it has not are legal
-questions for the attorney — this skill reports what the documents say and
-flags the question.
-
 ## Use When
 
 - A user asks to "build a post-closing tracker," "list the post-closing
@@ -456,6 +402,8 @@ extract obligations from a document you have not been given.
 - The user wants a legal opinion on whether an obligation has been satisfied or
   breached, or on the consequences of a missed obligation — that requires an
   attorney.
+
+Also out of scope (this skill does not): invent an obligation, an owner, a trigger, or a date the documents do not state; decide whether an obligation has been satisfied, waived, or breached; determine the legal consequences of a missed or late obligation; compute, confirm, or assume any deadline; supply jurisdiction- specific law, filing, securities, tax, antitrust, or employment rules; draft notices or final clause language; or replace attorney review of the agreement. Whether an obligation has been met and what follows if it has not are legal questions for the attorney — this skill reports what the documents say and flags the question.
 
 ## Legal Safety Rules
 
@@ -567,27 +515,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a detail is uncertain. Do not fill a gap with an
 invented obligation, owner, trigger, or date.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Build a post-closing obligations tracker for our
-acquisition. We are the buyer; here is the executed stock purchase agreement,
-the escrow agreement, and the transition services agreement; closing was
-[date]."
-
-**Expected output shape:** a deal summary stating the buyer-side perspective,
-the closing date as supplied, and the three provided ancillary documents (with
-any referenced-but-not-provided document flagged); a post-closing obligation
-tracker table with one row per obligation — purchase-price true-up, escrow
-release, transition services wind-down, restrictive covenants, tax cooperation,
-records retention, indemnity-notice procedure — each with an owner, a trigger,
-a due date copied verbatim and flagged `[deadline verification required]` or
-marked `Not found`, and a source citation to the document and section; a
-dependencies list (for example, escrow release following indemnity-claim
-resolution); a list of unstated and ambiguous items; and the attorney
-verification checklist. No obligation or date is invented, no deadline is
-computed, no obligation is declared satisfied or breached, and no jurisdiction-
-specific rule is supplied.
 
 ## Attorney Verification Checklist
 

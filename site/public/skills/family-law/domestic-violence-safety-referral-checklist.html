@@ -48,6 +48,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The request is to create a safety plan or to advise on how to stay safe — this skill does not do that; direct the user to a qualified local domestic violence resource.</li><li>The request is to advise on gathering evidence, recording, or confronting the other party.</li><li>The request is to determine whether abuse occurred, to assess credibility, or to prepare a protective order.</li><li>The request is for legal advice or for protective-order procedures, eligibility, or standards.</li></ul>
+<p>Also out of scope (this skill does not): create a safety plan or safety strategy; advise confrontation, evidence-gathering, surveillance, recording, or any step that could increase danger; determine whether abuse or domestic violence occurred; assess credibility; recommend or prepare a protective order or court form; describe protective-order procedures, eligibility, or standards; provide crisis counseling or therapy advice; or constitute legal advice.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -85,7 +86,7 @@ outputs:
   - "Document checklist and attorney/local-resource referral checklist"
   - "Missing-facts list and attorney verification questions"
 related_skills:
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
   - skills/family-law/custody-parenting-facts-chronology/SKILL.md
 tags:
   - family-law
@@ -100,12 +101,6 @@ tags:
 ## Purpose
 
 Organize the facts and the referral and escalation considerations for a domestic violence or abuse-related concern in a family law matter — immediate safety concerns, existing protective orders, described incidents, available records, children involved, housing and financial access concerns, and upcoming court dates — so a qualified, licensed attorney and the appropriate support resources can be engaged. This skill organizes information and points to help; it does not create a safety plan, give emergency legal advice, or decide whether abuse occurred.
-
-## Capability Disclosure
-
-**This skill does:** flag immediate safety and escalation concerns; point to emergency services and qualified local crisis and support resources when danger is indicated; organize described incidents, existing orders, and available records; build a document checklist and an attorney/local-resource referral checklist; and list missing facts.
-
-**This skill does not:** create a safety plan or safety strategy; advise confrontation, evidence-gathering, surveillance, recording, or any step that could increase danger; determine whether abuse or domestic violence occurred; assess credibility; recommend or prepare a protective order or court form; describe protective-order procedures, eligibility, or standards; provide crisis counseling or therapy advice; or constitute legal advice.
 
 ## Use When
 
@@ -130,6 +125,8 @@ The user is never required to describe more than they wish. Record only what the
 - The request is to advise on gathering evidence, recording, or confronting the other party.
 - The request is to determine whether abuse occurred, to assess credibility, or to prepare a protective order.
 - The request is for legal advice or for protective-order procedures, eligibility, or standards.
+
+Also out of scope (this skill does not): create a safety plan or safety strategy; advise confrontation, evidence-gathering, surveillance, recording, or any step that could increase danger; determine whether abuse or domestic violence occurred; assess credibility; recommend or prepare a protective order or court form; describe protective-order procedures, eligibility, or standards; provide crisis counseling or therapy advice; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -170,12 +167,6 @@ The user is never required to describe more than they wish. Record only what the
 7. **Attorney / local-resource referral checklist** — the referrals to make.
 8. **Missing facts** — facts the attorney will need, marked `not provided`.
 9. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run domestic-violence-safety-referral-checklist on this fictional matter where a client has raised a safety concern and there is an existing protective order, and organize it for the attorney."
-
-**Expected output shape:** an immediate safety notice (placed first if danger is indicated, pointing to emergency services and a qualified local crisis resource); a capability notice; a gates table; neutrally recorded safety/escalation flags; an existing-orders-and-incidents section; a document checklist; an attorney/local-resource referral checklist; a missing-facts list; and verification questions — with no safety plan, no advice to confront or gather evidence, no determination that abuse occurred, no protective-order procedures, no computed deadline, and no invented law.
 
 ## Attorney Verification Checklist
 
@@ -221,7 +212,7 @@ outputs:
   - "Document checklist and attorney/local-resource referral checklist"
   - "Missing-facts list and attorney verification questions"
 related_skills:
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
   - skills/family-law/custody-parenting-facts-chronology/SKILL.md
 tags:
   - family-law
@@ -236,12 +227,6 @@ tags:
 ## Purpose
 
 Organize the facts and the referral and escalation considerations for a domestic violence or abuse-related concern in a family law matter — immediate safety concerns, existing protective orders, described incidents, available records, children involved, housing and financial access concerns, and upcoming court dates — so a qualified, licensed attorney and the appropriate support resources can be engaged. This skill organizes information and points to help; it does not create a safety plan, give emergency legal advice, or decide whether abuse occurred.
-
-## Capability Disclosure
-
-**This skill does:** flag immediate safety and escalation concerns; point to emergency services and qualified local crisis and support resources when danger is indicated; organize described incidents, existing orders, and available records; build a document checklist and an attorney/local-resource referral checklist; and list missing facts.
-
-**This skill does not:** create a safety plan or safety strategy; advise confrontation, evidence-gathering, surveillance, recording, or any step that could increase danger; determine whether abuse or domestic violence occurred; assess credibility; recommend or prepare a protective order or court form; describe protective-order procedures, eligibility, or standards; provide crisis counseling or therapy advice; or constitute legal advice.
 
 ## Use When
 
@@ -266,6 +251,8 @@ The user is never required to describe more than they wish. Record only what the
 - The request is to advise on gathering evidence, recording, or confronting the other party.
 - The request is to determine whether abuse occurred, to assess credibility, or to prepare a protective order.
 - The request is for legal advice or for protective-order procedures, eligibility, or standards.
+
+Also out of scope (this skill does not): create a safety plan or safety strategy; advise confrontation, evidence-gathering, surveillance, recording, or any step that could increase danger; determine whether abuse or domestic violence occurred; assess credibility; recommend or prepare a protective order or court form; describe protective-order procedures, eligibility, or standards; provide crisis counseling or therapy advice; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -306,12 +293,6 @@ The user is never required to describe more than they wish. Record only what the
 7. **Attorney / local-resource referral checklist** — the referrals to make.
 8. **Missing facts** — facts the attorney will need, marked `not provided`.
 9. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run domestic-violence-safety-referral-checklist on this fictional matter where a client has raised a safety concern and there is an existing protective order, and organize it for the attorney."
-
-**Expected output shape:** an immediate safety notice (placed first if danger is indicated, pointing to emergency services and a qualified local crisis resource); a capability notice; a gates table; neutrally recorded safety/escalation flags; an existing-orders-and-incidents section; a document checklist; an attorney/local-resource referral checklist; a missing-facts list; and verification questions — with no safety plan, no advice to confront or gather evidence, no determination that abuse occurred, no protective-order procedures, no computed deadline, and no invented law.
 
 ## Attorney Verification Checklist
 

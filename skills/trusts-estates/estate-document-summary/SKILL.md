@@ -38,17 +38,6 @@ table, an ambiguity list, and verification items — so a qualified attorney can
 review the instrument. This skill summarizes what the document says; it
 concludes nothing about validity, capacity, or enforceability.
 
-## Capability Disclosure
-
-**This skill does:** extract and summarize the parties, fiduciaries,
-beneficiaries, dispositive provisions, powers, and conditions with source
-citations; flag ambiguities; and prepare an attorney verification checklist.
-
-**This skill does not:** conclude whether a document is valid, properly
-executed, or enforceable; determine the testator's or grantor's capacity;
-determine the legal or tax effect of any provision; resolve an ambiguity; or
-constitute legal advice.
-
 ## Use When
 
 - A will, trust, or related estate instrument must be summarized and organized
@@ -79,6 +68,8 @@ it as `not provided` and return the missing-information list first.
 - The request is to determine capacity, the legal effect of a provision, or to
   resolve an ambiguity.
 - The request is for legal advice or to draft an instrument.
+
+Also out of scope (this skill does not): conclude whether a document is valid, properly executed, or enforceable; determine the testator's or grantor's capacity; determine the legal or tax effect of any provision; resolve an ambiguity; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -130,16 +121,6 @@ it as `not provided` and return the missing-information list first.
 
 The key terms table follows the **Estate Document Summary Table** structure in
 `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run estate-document-summary on a fictional revocable
-trust and its one amendment; summarize the key terms for the attorney."
-
-**Expected output shape:** a gates table, a document summary, a source-cited
-key terms table, an ambiguity list, execution facts recorded as provided, and a
-verification checklist — with no validity, execution, capacity, or
-enforceability conclusion and no invented authority.
 
 ## Attorney Verification Checklist
 

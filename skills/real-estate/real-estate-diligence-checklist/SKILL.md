@@ -40,23 +40,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice. The checklist is a process scaffold the attorney adapts and
 extends; it does not define what diligence is legally required or sufficient.
 
-## Capability Disclosure
-
-**This skill does:** generate a structured, tailored due-diligence checklist
-organized by category; shape that checklist to the stated transaction type,
-property type, jurisdiction, and party role; record a short description and,
-where relevant, a responsible party and a status for each item; and produce a
-separate missing-document request list.
-
-**This skill does not:** perform the diligence itself; determine what diligence
-a jurisdiction legally requires; decide whether the diligence is complete,
-adequate, or sufficient; compute or confirm any date or deadline; or supply
-jurisdiction-specific law, recording rules, title or zoning rules, tax,
-securities, or financing requirements. Those are attorney functions. The
-checklist is a process scaffold the attorney adapts to the matter and to local
-requirements; where an item depends on local law, the checklist marks it for
-attorney or local-counsel confirmation rather than stating the requirement.
-
 ## Use When
 
 - A user asks to "build a diligence checklist," "put together a due-diligence
@@ -97,6 +80,8 @@ incomplete set of these gating inputs.
 - The user wants a legal opinion on whether the diligence is complete, whether
   a finding is a deal problem, or what the law of a jurisdiction requires —
   that requires an attorney.
+
+Also out of scope (this skill does not): perform the diligence itself; determine what diligence a jurisdiction legally requires; decide whether the diligence is complete, adequate, or sufficient; compute or confirm any date or deadline; or supply jurisdiction-specific law, recording rules, title or zoning rules, tax, securities, or financing requirements. Those are attorney functions. The checklist is a process scaffold the attorney adapts to the matter and to local requirements; where an item depends on local law, the checklist marks it for attorney or local-counsel confirmation rather than stating the requirement.
 
 ## Legal Safety Rules
 
@@ -210,25 +195,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` and `[VERIFY: ...]` wherever a value is uncertain. Do not
 fill a gap with an invented requirement or document.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "We're buying a multifamily property in Travis County,
-Texas. We're the buyer. We have the PSA and a preliminary rent roll so far —
-build us a diligence checklist."
-
-**Expected output shape:** a header noting the acquisition transaction, the
-multifamily property type, the Texas / Travis County jurisdiction, the buyer
-perspective, and the two documents provided; a matter-framing note that the
-checklist is a tailored scaffold and not a determination of legal sufficiency;
-a category-by-category checklist with a short description, responsible party,
-and status for each item, with recording, transfer-tax, and local-permit items
-marked `[ATTORNEY TO CONFIRM: local requirements]` rather than stated; a
-missing-document request list grouped by category covering everything beyond
-the PSA and rent roll; any diligence-period item flagged `[deadline
-verification required]`; an open-questions section; and the attorney
-verification checklist. No local legal requirement is stated and no date is
-computed.
 
 ## Attorney Verification Checklist
 

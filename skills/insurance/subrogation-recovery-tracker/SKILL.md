@@ -33,12 +33,6 @@ tags:
 
 Organize the potential subrogation, reimbursement, salvage, contribution, indemnity, and recovery facts arising from a loss — loss facts, responsible parties, contracts, indemnity provisions, policy subrogation provisions, payments made, evidence preservation, notices, and litigation status — into a source-cited recovery fact map for attorney review. This skill maps the facts and gaps; it determines no subrogation right and values no recovery.
 
-## Capability Disclosure
-
-**This skill does:** extract and organize the loss, payment, party, contract, and policy facts relevant to recovery; build a source-cited recovery fact map by recovery theory; and flag missing facts, evidence-preservation concerns, and document needs.
-
-**This skill does not:** determine whether a subrogation, contribution, reimbursement, or indemnity right exists; decide the priority of recovery rights; assess recovery value or the strength of a claim; conclude on the made-whole or anti-subrogation doctrines; compute any limitations or notice deadline; or constitute legal advice.
-
 ## Use When
 
 - The facts bearing on a potential recovery from a third party must be organized for an attorney.
@@ -62,6 +56,8 @@ If the loss facts, the recovery types, or the user's role is missing, record it 
 - The request is to determine whether a subrogation, contribution, reimbursement, or indemnity right exists, or its priority.
 - The request is to assess recovery value, the strength of a recovery claim, or the made-whole or anti-subrogation doctrines.
 - The request is to compute a limitations, notice, or contractual deadline, or for legal advice.
+
+Also out of scope (this skill does not): determine whether a subrogation, contribution, reimbursement, or indemnity right exists; decide the priority of recovery rights; assess recovery value or the strength of a claim; conclude on the made-whole or anti-subrogation doctrines; compute any limitations or notice deadline; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -99,12 +95,6 @@ If the loss facts, the recovery types, or the user's role is missing, record it 
 7. **Notices and litigation status** — recovery notices and litigation posture, source-cited.
 8. **Missing facts and document request list** — facts and documents needed, marked `not provided`/`unknown`/`ambiguous`.
 9. **Attorney verification questions** and **assumptions** — no recovery right or value is determined.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run subrogation-recovery-tracker on this fictional first-party property loss — we paid the claim and want to organize the recovery facts against the responsible contractor for our recovery counsel."
-
-**Expected output shape:** a gates table, a loss summary, a recovery fact map organized by theory, a source table, an evidence-preservation section, a notices/litigation-status section, a missing-facts and document request list, and attorney verification questions — with no determination of recovery rights or priority, no recovery valuation, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

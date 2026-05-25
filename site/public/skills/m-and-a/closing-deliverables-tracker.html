@@ -49,6 +49,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The user needs an issue list or review of the purchase agreement itself — use <code>purchase-agreement-issue-list</code>.</li><li>The user needs a review of third-party consents and assignment requirements — use <code>third-party-consents-assignment-review</code>.</li><li>The user needs to track obligations that survive closing — use <code>post-closing-obligations-tracker</code>.</li><li>The user wants a determination of whether the deal can or should close, or what the law requires to close — that requires an attorney.</li><li>The user wants a deadline computed — this skill never computes a deadline.</li></ul>
+<p>Also out of scope (this skill does not): decide whether the deal is ready to close; determine what closing documents the law, a lender, or a third party requires; compute or confirm any legal or closing deadline; supply jurisdiction-specific filing, recording, securities, or tax law; or replace the deal team's and counsel's judgment on what the transaction needs. What closing requires is a legal and business question for the attorney — this skill organizes the list and flags the questions.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -124,22 +125,6 @@ legal advice and is not a determination that a deal is ready to close. The
 tracker is a project-management aid; the deal team and counsel decide what the
 transaction actually requires.
 
-## Capability Disclosure
-
-**This skill does:** build and organize a closing-deliverables tracker; list
-the items a deal team typically assembles to close; record each item's
-responsible party, status, dependencies, source, signer, and any
-notary, original, or certified-copy need stated; cite the purchase-agreement
-section where a deliverable is derived from one; and collect open issues.
-
-**This skill does not:** decide whether the deal is ready to close; determine
-what closing documents the law, a lender, or a third party requires; compute or
-confirm any legal or closing deadline; supply jurisdiction-specific filing,
-recording, securities, or tax law; or replace the deal team's and counsel's
-judgment on what the transaction needs. What closing requires is a legal and
-business question for the attorney — this skill organizes the list and flags
-the questions.
-
 ## Use When
 
 - A user asks to "build a closing checklist," "make a closing-deliverables
@@ -184,6 +169,8 @@ not derived from the actual agreement.
 - The user wants a determination of whether the deal can or should close, or
   what the law requires to close — that requires an attorney.
 - The user wants a deadline computed — this skill never computes a deadline.
+
+Also out of scope (this skill does not): decide whether the deal is ready to close; determine what closing documents the law, a lender, or a third party requires; compute or confirm any legal or closing deadline; supply jurisdiction-specific filing, recording, securities, or tax law; or replace the deal team's and counsel's judgment on what the transaction needs. What closing requires is a legal and business question for the attorney — this skill organizes the list and flags the questions.
 
 ## Legal Safety Rules
 
@@ -300,23 +287,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` and `[deadline verification required]` wherever something
 is uncertain. Do not fill a gap with an invented deliverable, party, or date.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Build a closing checklist for our acquisition. We are the
-buyer in a stock purchase; the parties are BuyerCo, SellerCo, an escrow agent,
-and an acquisition lender; here is the signed purchase agreement."
-
-**Expected output shape:** a tracker summary stating the buyer-side
-perspective, the deal type, the parties, and that the tracker is derived from
-the provided agreement; a closing-deliverables tracker grouped by responsible
-party, each row citing the agreement section it is derived from (or "General
-scaffold" for items the agreement does not cover), with status, dependencies,
-signer, and any stated notary or certified-copy need; an open-issues and
-dependencies list (for example, a payoff letter dependent on the lender's
-payoff figure); a scope-and-basis note; and the attorney verification
-checklist. No closing or filing deadline is computed, no required form or law
-is invented, and the deal is not declared ready to close.
 
 ## Attorney Verification Checklist
 
@@ -397,22 +367,6 @@ legal advice and is not a determination that a deal is ready to close. The
 tracker is a project-management aid; the deal team and counsel decide what the
 transaction actually requires.
 
-## Capability Disclosure
-
-**This skill does:** build and organize a closing-deliverables tracker; list
-the items a deal team typically assembles to close; record each item's
-responsible party, status, dependencies, source, signer, and any
-notary, original, or certified-copy need stated; cite the purchase-agreement
-section where a deliverable is derived from one; and collect open issues.
-
-**This skill does not:** decide whether the deal is ready to close; determine
-what closing documents the law, a lender, or a third party requires; compute or
-confirm any legal or closing deadline; supply jurisdiction-specific filing,
-recording, securities, or tax law; or replace the deal team's and counsel's
-judgment on what the transaction needs. What closing requires is a legal and
-business question for the attorney — this skill organizes the list and flags
-the questions.
-
 ## Use When
 
 - A user asks to "build a closing checklist," "make a closing-deliverables
@@ -457,6 +411,8 @@ not derived from the actual agreement.
 - The user wants a determination of whether the deal can or should close, or
   what the law requires to close — that requires an attorney.
 - The user wants a deadline computed — this skill never computes a deadline.
+
+Also out of scope (this skill does not): decide whether the deal is ready to close; determine what closing documents the law, a lender, or a third party requires; compute or confirm any legal or closing deadline; supply jurisdiction-specific filing, recording, securities, or tax law; or replace the deal team's and counsel's judgment on what the transaction needs. What closing requires is a legal and business question for the attorney — this skill organizes the list and flags the questions.
 
 ## Legal Safety Rules
 
@@ -573,23 +529,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` and `[deadline verification required]` wherever something
 is uncertain. Do not fill a gap with an invented deliverable, party, or date.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Build a closing checklist for our acquisition. We are the
-buyer in a stock purchase; the parties are BuyerCo, SellerCo, an escrow agent,
-and an acquisition lender; here is the signed purchase agreement."
-
-**Expected output shape:** a tracker summary stating the buyer-side
-perspective, the deal type, the parties, and that the tracker is derived from
-the provided agreement; a closing-deliverables tracker grouped by responsible
-party, each row citing the agreement section it is derived from (or "General
-scaffold" for items the agreement does not cover), with status, dependencies,
-signer, and any stated notary or certified-copy need; an open-issues and
-dependencies list (for example, a payoff letter dependent on the lender's
-payoff figure); a scope-and-basis note; and the attorney verification
-checklist. No closing or filing deadline is computed, no required form or law
-is invented, and the deal is not declared ready to close.
 
 ## Attorney Verification Checklist
 

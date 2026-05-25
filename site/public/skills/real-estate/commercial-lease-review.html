@@ -49,6 +49,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The user needs a structured extraction of lease terms into a term sheet — use <code>lease-abstract</code>.</li><li>The lease has multiple amendments, side letters, or assignments that must be reconciled to determine the controlling terms — use <code>lease-amendment-reconciliation</code> first, then review the reconciled terms.</li><li>The document is a general commercial contract rather than a lease — use <code>contract-risk-review</code>.</li><li>The user wants a legal opinion on what a lease term means, whether it is enforceable, or whether the reviewing party should sign — that requires an attorney.</li></ul>
+<p>Also out of scope (this skill does not): give final advice or a recommendation; decide whether the reviewing party should sign, refuse, or walk away from the lease; determine whether any clause is enforceable; compute, confirm, or assume any date or deadline; supply jurisdiction-specific law, recording rules, title or zoning rules, or tax, securities, or financing requirements; or draft final clause language. Those are attorney functions. Where the lease is silent or unclear, the review says so — it does not fill the gap.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -121,23 +122,6 @@ legal advice, a recommendation to sign or refuse a lease, or a final
 negotiating position. The lease itself, and the reviewing attorney's judgment,
 always control.
 
-## Capability Disclosure
-
-**This skill does:** read a commercial lease from one stated party's
-perspective; spot business and legal issues that perspective should weigh;
-cite the clause, section, or page where each issue arises; organize the issues
-into a risk matrix across the standard lease risk categories; describe the
-direction in which a change would move risk; and produce a prioritized issue
-list for attorney review.
-
-**This skill does not:** give final advice or a recommendation; decide whether
-the reviewing party should sign, refuse, or walk away from the lease;
-determine whether any clause is enforceable; compute, confirm, or assume any
-date or deadline; supply jurisdiction-specific law, recording rules, title or
-zoning rules, or tax, securities, or financing requirements; or draft final
-clause language. Those are attorney functions. Where the lease is silent or
-unclear, the review says so — it does not fill the gap.
-
 ## Use When
 
 - A user asks to "review this lease," "flag the issues in this lease," "what
@@ -186,6 +170,8 @@ request it. Do not begin issue-spotting by guessing at facts.
 - The user wants a legal opinion on what a lease term means, whether it is
   enforceable, or whether the reviewing party should sign — that requires an
   attorney.
+
+Also out of scope (this skill does not): give final advice or a recommendation; decide whether the reviewing party should sign, refuse, or walk away from the lease; determine whether any clause is enforceable; compute, confirm, or assume any date or deadline; supply jurisdiction-specific law, recording rules, title or zoning rules, or tax, securities, or financing requirements; or draft final clause language. Those are attorney functions. Where the lease is silent or unclear, the review says so — it does not fill the gap.
 
 ## Legal Safety Rules
 
@@ -330,25 +316,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or conclusion is
 unverified or ambiguous. Do not fill a gap with an invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review this retail lease from the tenant's perspective —
-we are a restaurant tenant negotiating a new lease in a shopping center. Here
-is the full lease PDF and one exhibit."
-
-**Expected output shape:** a header noting the property, the retail property
-type, the new-lease posture, the tenant perspective, and `[CONFIRM: governing
-law]` if the lease does not state it; a document-set list; a clause-by-clause
-issue list working through rent and economic terms, use, exclusivity,
-co-tenancy, go-dark, assignment and subletting, and the remaining categories,
-each with a section or page citation and the risk to the tenant; a risk matrix
-across those categories; a date-driven-obligations table with each date
-flagged for verification; a prioritized issue list with a Suggested Direction
-(not drafted language) for each High and Medium item; an open-items checklist;
-and an assumptions list. No date is computed, no jurisdiction-specific law is
-supplied, no final clause language is drafted, and the output does not tell
-the tenant whether to sign.
 
 ## Attorney Verification Checklist
 
@@ -432,23 +399,6 @@ legal advice, a recommendation to sign or refuse a lease, or a final
 negotiating position. The lease itself, and the reviewing attorney's judgment,
 always control.
 
-## Capability Disclosure
-
-**This skill does:** read a commercial lease from one stated party's
-perspective; spot business and legal issues that perspective should weigh;
-cite the clause, section, or page where each issue arises; organize the issues
-into a risk matrix across the standard lease risk categories; describe the
-direction in which a change would move risk; and produce a prioritized issue
-list for attorney review.
-
-**This skill does not:** give final advice or a recommendation; decide whether
-the reviewing party should sign, refuse, or walk away from the lease;
-determine whether any clause is enforceable; compute, confirm, or assume any
-date or deadline; supply jurisdiction-specific law, recording rules, title or
-zoning rules, or tax, securities, or financing requirements; or draft final
-clause language. Those are attorney functions. Where the lease is silent or
-unclear, the review says so — it does not fill the gap.
-
 ## Use When
 
 - A user asks to "review this lease," "flag the issues in this lease," "what
@@ -497,6 +447,8 @@ request it. Do not begin issue-spotting by guessing at facts.
 - The user wants a legal opinion on what a lease term means, whether it is
   enforceable, or whether the reviewing party should sign — that requires an
   attorney.
+
+Also out of scope (this skill does not): give final advice or a recommendation; decide whether the reviewing party should sign, refuse, or walk away from the lease; determine whether any clause is enforceable; compute, confirm, or assume any date or deadline; supply jurisdiction-specific law, recording rules, title or zoning rules, or tax, securities, or financing requirements; or draft final clause language. Those are attorney functions. Where the lease is silent or unclear, the review says so — it does not fill the gap.
 
 ## Legal Safety Rules
 
@@ -641,25 +593,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or conclusion is
 unverified or ambiguous. Do not fill a gap with an invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review this retail lease from the tenant's perspective —
-we are a restaurant tenant negotiating a new lease in a shopping center. Here
-is the full lease PDF and one exhibit."
-
-**Expected output shape:** a header noting the property, the retail property
-type, the new-lease posture, the tenant perspective, and `[CONFIRM: governing
-law]` if the lease does not state it; a document-set list; a clause-by-clause
-issue list working through rent and economic terms, use, exclusivity,
-co-tenancy, go-dark, assignment and subletting, and the remaining categories,
-each with a section or page citation and the risk to the tenant; a risk matrix
-across those categories; a date-driven-obligations table with each date
-flagged for verification; a prioritized issue list with a Suggested Direction
-(not drafted language) for each High and Medium item; an open-items checklist;
-and an assumptions list. No date is computed, no jurisdiction-specific law is
-supplied, no final clause language is drafted, and the output does not tell
-the tenant whether to sign.
 
 ## Attorney Verification Checklist
 

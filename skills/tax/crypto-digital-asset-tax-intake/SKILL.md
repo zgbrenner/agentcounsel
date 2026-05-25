@@ -38,17 +38,6 @@ category, with missing records, uncertainty flags, and verification questions,
 so a qualified tax professional can evaluate treatment. This skill organizes
 records; it does not calculate gain or loss or determine tax treatment.
 
-## Capability Disclosure
-
-**This skill does:** confirm the gates; categorize digital-asset activity;
-inventory wallet, exchange, and cost-basis records; flag missing records and
-uncertainties; and frame verification questions for a tax professional.
-
-**This skill does not:** calculate gain or loss, basis, or holding period;
-determine the tax treatment of any transaction; prepare Form 8949 or any
-filing-ready schedule; conclude on foreign-account reporting; provide tax
-advice; or compute a deadline.
-
 ## Use When
 
 - A taxpayer's digital-asset activity must be organized into an auditable record
@@ -81,6 +70,8 @@ first.
 - The request is to determine the tax treatment of a transaction, prepare Form
   8949, or produce a filing-ready schedule.
 - The request is to conclude on foreign-account reporting, or for tax advice.
+
+Also out of scope (this skill does not): calculate gain or loss, basis, or holding period; determine the tax treatment of any transaction; prepare Form 8949 or any filing-ready schedule; conclude on foreign-account reporting; provide tax advice; or compute a deadline.
 
 ## Legal Safety Rules
 
@@ -132,17 +123,6 @@ first.
 5. **Uncertainty flags**.
 6. **Tax-professional verification questions**.
 7. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run crypto-digital-asset-tax-intake for a fictional
-individual with staking, swaps, and an NFT sale across two exchanges; organize
-the records for our tax professional."
-
-**Expected output shape:** a gates table, a per-category intake matrix, a
-missing-records list, a document request list, uncertainty flags, and
-verification questions — with no gain/loss calculation, no Form 8949, no
-treatment conclusion, and no invented rules or deadlines.
 
 ## Attorney Verification Checklist
 

@@ -144,6 +144,18 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Trusts & Estates | Trust Funding Checklist | `skills/trusts-estates/trust-funding-checklist/SKILL.md` | Building a checklist for funding or reviewing trust funding | Trust instrument, intended assets, funding evidence, role | Funding checklist + missing-items list |
 | Trusts & Estates | Post Death Administration Task Tracker | `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md` | Building a post-death administration task tracker | Decedent, fiduciary role, jurisdiction, tasks underway | Administration task tracker |
 | Trusts & Estates | Estate Tax Issue Intake | `skills/trusts-estates/estate-tax-issue-intake/SKILL.md` | Capturing estate, gift, GST, or inheritance tax issues | Jurisdiction, decedent/donor, assets, gifts, trusts, prior filings | Tax issue map + document request list |
+| Family Law | Family Law Matter Intake | `skills/family-law/matter-intake/SKILL.md` | Opening a new family law matter with a structured intake summary and safety/escalation flags | Parties, household and minor-children facts, posture, documents, safety facts | Intake summary + issue map + safety flags |
+| Family Law | Divorce Intake Organizer | `skills/family-law/divorce-intake-organizer/SKILL.md` | Organizing the facts of a divorce or dissolution matter into a structured intake | Parties, marriage facts, household and asset facts, documents | Facts table + missing-documents list + issue map |
+| Family Law | Custody / Parenting Facts Chronology | `skills/family-law/custody-parenting-facts-chronology/SKILL.md` | Building a source-cited chronology of parenting and caregiving facts | Records, communications, calendars, role | Source-cited factual chronology |
+| Family Law | Parenting Schedule Facts Organizer | `skills/family-law/parenting-schedule-facts-organizer/SKILL.md` | Organizing the facts relevant to a parenting schedule discussion | Schedule facts, school and activity facts, role | Facts table + conflict/ambiguity list + logistics checklist |
+| Family Law | Custody Order Review Checklist | `skills/family-law/custody-order-review-checklist/SKILL.md` | Reviewing an existing or proposed custody or parenting order for clarity and administration issues | The order, party role, related orders | Order-clarity checklist + ambiguity table |
+| Family Law | Child Support Facts Intake | `skills/family-law/child-support-facts-intake/SKILL.md` | Gathering the facts relevant to a child support review without calculating support | Parent and household facts, income and expense documents, role | Intake table + missing-documents list + questions for counsel |
+| Family Law | Spousal Support Facts Intake | `skills/family-law/spousal-support-facts-intake/SKILL.md` | Gathering the facts relevant to a spousal support or alimony review without calculating support | Marriage and income facts, expense and asset documents, role | Intake table + missing-documents list + questions for counsel |
+| Family Law | Asset / Debt Schedule Builder | `skills/family-law/asset-debt-schedule-builder/SKILL.md` | Building a source-cited property and debt schedule from user-provided facts and documents | Asset and debt records, owner/title facts, role | Source-cited property + debt schedule |
+| Family Law | Settlement Agreement Issue Spotter | `skills/family-law/settlement-agreement-issue-spotter/SKILL.md` | Reviewing a marital settlement, parenting, support, or custody-stipulation agreement | The agreement, role, related orders | Key-terms table + issue list + missing-provisions list |
+| Family Law | Family Law Discovery Tracker | `skills/family-law/discovery-tracker/SKILL.md` | Organizing family-law discovery requests, responses, disclosures, and deficiencies | Discovery requests and responses, disclosures, subpoenas, role | Discovery tracker + deficiency list |
+| Family Law | Family Law Hearing Prep Checklist | `skills/family-law/hearing-prep-checklist/SKILL.md` | Building a hearing-preparation checklist for a family law hearing | Hearing facts, pleadings, declarations, exhibits, witnesses, role | Hearing-prep checklist + open-questions list |
+| Family Law | Domestic Violence Safety Referral Checklist | `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md` | Organizing facts and referral/escalation considerations for a domestic violence concern (no safety plan) | Documented facts and concerns, role, jurisdiction context | Referral / escalation considerations checklist |
 | Legal Operations | Templated Legal Response | `skills/legal-ops/templated-legal-response/SKILL.md` | Drafting a templated response to a recurring legal inquiry with an escalation gate | The inquiry, response template, customization facts | Draft response + escalation check |
 | Legal Operations | Legal Meeting Briefing | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | Preparing a structured briefing for a meeting with legal relevance | Meeting context, background materials | Meeting briefing + action tracker |
 | Legal Operations | Signature Routing Checklist | `skills/legal-ops/signature-routing-checklist/SKILL.md` | Running a pre-signature readiness check and routing plan for a final document | The document, intended signers, approvals | Signature readiness review |
@@ -184,6 +196,7 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - **Bankruptcy / Restructuring** — bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract assumption/rejection review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, DIP financing issue-spotting, and deadline-tracker intake.
 - **Insurance** — insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation/recovery tracking, and renewal/placement diligence checklists.
 - **Trusts & Estates** — estate-planning intake, estate-document summaries, probate document checklists, trust administration and post-death task tracking, fiduciary-duty issue-spotting, beneficiary-designation review, asset and liability inventories, capacity and undue-influence facts organization, estate-litigation chronologies, trust-funding checklists, and estate-tax issue intake.
+- **Family Law** — matter and divorce intake, custody and parenting facts chronologies and schedule organization, custody-order review, child-support and spousal-support facts intake, asset/debt schedules, settlement-agreement issue-spotting, discovery tracking, hearing preparation, and domestic-violence safety referral. The cluster organizes facts and surfaces issues; it never calculates support, recommends custody outcomes, drafts pleadings, or supplies safety plans.
 - **Legal Operations** — templated legal responses, meeting briefings, and signature routing.
 - **Setup** — cold-start interviews that configure AgentCounsel for a practice group by filling in a practice profile.
 - **Legal Methodology** — cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.
@@ -199,6 +212,10 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/bankruptcy-restructuring/references/` — shared Bankruptcy / Restructuring output-pattern reference for those skills.
 - `skills/insurance/references/` — shared Insurance output-pattern reference for the Insurance skills.
 - `skills/trusts-estates/references/` — shared Trusts & Estates output-pattern reference for those skills.
+- `skills/litigation/references/` — shared Litigation output-pattern reference (cross-cutting rules every litigation skill's Output Format follows).
+- `skills/employment/references/` — shared Employment output-pattern reference (cross-cutting rules every employment skill's Output Format follows).
+- `skills/ip/references/` — shared Intellectual Property output-pattern reference (cross-cutting rules every IP skill's Output Format follows).
+- `skills/corporate/references/` — shared Corporate output-pattern reference (cross-cutting rules every corporate skill's Output Format follows).
 
 
 ## Antitrust / Competition
@@ -228,3 +245,18 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/insurance/subrogation-recovery-tracker/SKILL.md`
 - `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
 - `skills/insurance/insurer-insured-communications-review/SKILL.md`
+
+## Family Law
+
+- `skills/family-law/matter-intake/SKILL.md`
+- `skills/family-law/divorce-intake-organizer/SKILL.md`
+- `skills/family-law/custody-parenting-facts-chronology/SKILL.md`
+- `skills/family-law/parenting-schedule-facts-organizer/SKILL.md`
+- `skills/family-law/custody-order-review-checklist/SKILL.md`
+- `skills/family-law/child-support-facts-intake/SKILL.md`
+- `skills/family-law/spousal-support-facts-intake/SKILL.md`
+- `skills/family-law/asset-debt-schedule-builder/SKILL.md`
+- `skills/family-law/settlement-agreement-issue-spotter/SKILL.md`
+- `skills/family-law/discovery-tracker/SKILL.md`
+- `skills/family-law/hearing-prep-checklist/SKILL.md`
+- `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md`

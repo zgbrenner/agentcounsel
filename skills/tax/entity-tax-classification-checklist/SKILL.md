@@ -38,17 +38,6 @@ its tax classification. This skill structures the facts and frames the
 questions; it does not conclude classification, election validity, or tax
 status.
 
-## Capability Disclosure
-
-**This skill does:** confirm entity gates; extract source-cited formation,
-ownership, election, and governance facts; list documents to review; and frame
-classification questions for tax counsel.
-
-**This skill does not:** determine an entity's tax classification (disregarded
-entity, partnership, C corporation, S corporation); decide whether an election
-is valid, timely, or available; conclude tax status or consequences; compute
-tax; or provide tax advice.
-
 ## Use When
 
 - A new or existing entity's tax classification facts must be organized for
@@ -83,6 +72,8 @@ record them as `not provided` and return the missing-information list first.
 - The request is to decide whether an election is valid, timely, or available,
   or to compute the tax effect of a classification.
 - The request is for tax advice or a filing deadline.
+
+Also out of scope (this skill does not): determine an entity's tax classification (disregarded entity, partnership, C corporation, S corporation); decide whether an election is valid, timely, or available; conclude tax status or consequences; compute tax; or provide tax advice.
 
 ## Legal Safety Rules
 
@@ -132,17 +123,6 @@ record them as `not provided` and return the missing-information list first.
 5. **Possible classification questions for tax counsel** — questions only.
 6. **Missing facts and uncertainty flags**.
 7. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run entity-tax-classification-checklist for a fictional
-multi-member LLC that recently added a foreign member; organize the facts for
-our tax counsel."
-
-**Expected output shape:** a gates table, a source-cited classification facts
-table, a documents-to-review list, classification questions framed for counsel,
-and a missing-facts list — with no classification conclusion, no election-
-validity decision, and no invented rules or deadlines.
 
 ## Attorney Verification Checklist
 

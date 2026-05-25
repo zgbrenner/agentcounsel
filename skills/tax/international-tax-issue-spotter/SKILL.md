@@ -38,17 +38,6 @@ and questions for tax counsel. This skill identifies and frames cross-border
 issues; it concludes nothing about treaty benefits, withholding, permanent
 establishment, transfer pricing, VAT/GST, or CFC/PFIC status.
 
-## Capability Disclosure
-
-**This skill does:** confirm the cross-border gates; map cross-border tax
-issues as open questions; identify the jurisdictions involved; list missing
-facts and documents; and frame questions for tax counsel.
-
-**This skill does not:** conclude treaty benefits or withholding rates;
-determine permanent-establishment status; opine on transfer-pricing compliance;
-determine VAT/GST treatment; conclude CFC or PFIC status; determine a foreign
-reporting or filing obligation; compute tax; or provide tax advice.
-
 ## Use When
 
 - A cross-border structure or transaction needs its tax issues spotted and
@@ -82,6 +71,8 @@ them as `not provided` and return the missing-information list first.
 - The request is to determine a foreign reporting or filing obligation, or to
   compute foreign tax.
 - The request is for tax advice or a filing deadline.
+
+Also out of scope (this skill does not): conclude treaty benefits or withholding rates; determine permanent-establishment status; opine on transfer-pricing compliance; determine VAT/GST treatment; conclude CFC or PFIC status; determine a foreign reporting or filing obligation; compute tax; or provide tax advice.
 
 ## Legal Safety Rules
 
@@ -133,18 +124,6 @@ them as `not provided` and return the missing-information list first.
 5. **Missing facts list** and **document request list**.
 6. **Tax-counsel questions**.
 7. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run international-tax-issue-spotter for a fictional U.S.
-company paying royalties to a foreign affiliate; spot the cross-border issues
-for our tax counsel."
-
-**Expected output shape:** a gates table, a source-cited international tax issue
-map of open questions, a jurisdictions summary, missing-facts and
-document-request lists, and tax-counsel questions — with no treaty,
-withholding, PE, transfer-pricing, VAT/GST, or CFC/PFIC conclusion and no
-invented authority.
 
 ## Attorney Verification Checklist
 

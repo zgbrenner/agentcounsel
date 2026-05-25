@@ -367,6 +367,12 @@ def check_skill_index() -> None:
 # --- Check: every canonical skill is catalogued ---------------------------
 
 def check_index_coverage(skill_dirs: list[Path]) -> None:
+    """Every canonical skill must be listed in SKILLS_INDEX.md.
+
+    Missing entries are a structural drift (the family-law cluster shipped
+    without being indexed for one release because this was only a warning),
+    so this is treated as an error.
+    """
     index = REPO_ROOT / "SKILLS_INDEX.md"
     if not index.is_file():
         return
@@ -374,7 +380,131 @@ def check_index_coverage(skill_dirs: list[Path]) -> None:
     for skill_dir in skill_dirs:
         skill_path = rel(skill_dir / "SKILL.md")
         if skill_path not in text:
-            warn(f"{skill_path}: not listed in SKILLS_INDEX.md")
+            err(f"{skill_path}: not listed in SKILLS_INDEX.md")
+
+
+# --- Check: related_skills are wired in dense clusters --------------------
+
+# Practice-area folders that hold cross-cutting infrastructure rather than
+# a tightly interrelated workflow cluster — empty related_skills lists in
+# these areas are not necessarily drift.
+_RELATED_SKILLS_EXEMPT_AREAS = {
+    "setup",
+    "legal-methodology",
+    "legal-ops",
+    "legal-research",
+}
+
+
+def check_related_skills_wired(skill_dirs: list[Path]) -> None:
+    """In any practice-area cluster of four or more skills, an empty
+    `related_skills:` list almost certainly means the skill was added in
+    isolation and never wired into its cluster. The securities-capital-markets
+    cluster shipped with all twelve skills unwired for one release because
+    nothing caught this, so it is an error.
+    """
+    try:
+        import yaml  # noqa: F401  # standard repo is yaml-free; tolerate absence
+    except Exception:
+        pass
+
+    by_area: dict[str, list[Path]] = {}
+    for d in skill_dirs:
+        parts = d.relative_to(REPO_ROOT / "skills").parts
+        if len(parts) < 2:
+            continue
+        by_area.setdefault(parts[0], []).append(d)
+
+    for area, skills in by_area.items():
+        if area in _RELATED_SKILLS_EXEMPT_AREAS:
+            continue
+        if len(skills) < 4:
+            continue
+        for skill_dir in skills:
+            fm, _ = parse_frontmatter((skill_dir / "SKILL.md")
+                                      .read_text(encoding="utf-8"))
+            if fm is None:
+                continue
+            if _related_skills_is_empty(fm):
+                err(f"{rel(skill_dir / 'SKILL.md')}: "
+                    f"related_skills is empty, but the "
+                    f"'{area}' cluster has {len(skills)} skills — wire it "
+                    f"to its workflow neighbors")
+
+
+def _related_skills_is_empty(fm_lines: list[str]) -> bool:
+    """True if `related_skills:` is present in the frontmatter but lists
+    no entries (either `[]` or a colon followed by no `- ...` items before
+    the next top-level field).
+    """
+    lines = fm_lines
+    for i, line in enumerate(lines):
+        if not line.startswith("related_skills:"):
+            continue
+        rest = line[len("related_skills:"):].strip()
+        if rest == "[]":
+            return True
+        if rest:
+            return False
+        # No inline value — look for indented list items on following lines
+        # until the next top-level field (a line starting with a non-space
+        # character) or end of frontmatter.
+        for follow in lines[i + 1:]:
+            if not follow.strip():
+                continue
+            if not follow.startswith(" ") and not follow.startswith("\t"):
+                return True  # reached next field with no items
+            if follow.lstrip().startswith("- "):
+                return False  # at least one item
+        return True
+    return False  # field not present at all (other checks cover that)
+
+
+# --- Check: README counts match the actual library ------------------------
+
+def check_readme_counts(skill_dirs: list[Path]) -> None:
+    """The README badges and the 'AgentCounsel has N skills' line drift
+    from reality whenever a new practice area or skill is added without a
+    README pass (the family-law cluster shipped with the README still
+    saying 153 skills / 19 practice areas). Catch that here.
+    """
+    readme = REPO_ROOT / "README.md"
+    if not readme.is_file():
+        return
+    text = readme.read_text(encoding="utf-8")
+
+    skill_count = len(skill_dirs)
+    area_count = len({
+        d.relative_to(REPO_ROOT / "skills").parts[0] for d in skill_dirs
+    })
+
+    badge_skills = re.search(r"shields\.io/badge/skills-(\d+)", text)
+    if badge_skills and int(badge_skills.group(1)) != skill_count:
+        err(f"README.md: skills badge says "
+            f"{badge_skills.group(1)} but library has {skill_count}")
+
+    badge_areas = re.search(
+        r"shields\.io/badge/practice%20areas-(\d+)", text)
+    if badge_areas:
+        # README counts the supporting cross-cutting groups as separate from
+        # practice areas, so the badge is the practice-area count minus the
+        # four cross-cutting buckets (setup, legal-methodology, legal-ops,
+        # legal-research is its own practice area in the README).
+        cross_cutting = {"setup", "legal-methodology", "legal-ops"}
+        readme_areas = area_count - sum(
+            1 for c in cross_cutting
+            if (REPO_ROOT / "skills" / c).is_dir())
+        if int(badge_areas.group(1)) != readme_areas:
+            err(f"README.md: practice-areas badge says "
+                f"{badge_areas.group(1)} but library has {readme_areas} "
+                f"(of {area_count} total skill folders, "
+                f"{len(cross_cutting)} are cross-cutting groups)")
+
+    has_line = re.search(
+        r"AgentCounsel has \*\*(\d+) skills\*\*", text)
+    if has_line and int(has_line.group(1)) != skill_count:
+        err(f"README.md: 'AgentCounsel has N skills' says "
+            f"{has_line.group(1)} but library has {skill_count}")
 
 
 # --- Check: plugin bundle is present and in sync --------------------------
@@ -472,6 +602,8 @@ def main() -> int:
     check_skill_frontmatter(canonical)
     check_skill_index()
     check_index_coverage(canonical)
+    check_related_skills_wired(canonical)
+    check_readme_counts(canonical)
 
     if warnings:
         print(f"Warnings ({len(warnings)}):")

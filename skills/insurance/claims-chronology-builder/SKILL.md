@@ -33,12 +33,6 @@ tags:
 
 Build a source-cited chronology of an insurance claim — from notices, correspondence, adjuster notes, pleadings, demands, policy documents, medical or property records if provided, and payment history — so a qualified attorney has an organized factual timeline for coverage, claim-handling, or litigation review. This skill organizes dates and events from the documents; it computes no deadline and assesses no claim value.
 
-## Capability Disclosure
-
-**This skill does:** extract dated events from the provided claim documents; build a chronology with the date, event, source, actor, and significance; and flag missing, undated, or ambiguous facts.
-
-**This skill does not:** compute or verify any deadline; assess claim value, damages, or reserves; determine whether notice was timely; conclude on coverage, bad faith, or claim handling; decide what any document legally means; or constitute legal advice.
-
 ## Use When
 
 - A claim file must be organized into a factual timeline for an attorney.
@@ -62,6 +56,8 @@ If the claim documents, the policy type, or the user's role is missing, record i
 - The request is to value the claim, calculate damages, or set a reserve.
 - The request is to conclude on coverage, bad faith, late notice, or claim-handling adequacy.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): compute or verify any deadline; assess claim value, damages, or reserves; determine whether notice was timely; conclude on coverage, bad faith, or claim handling; decide what any document legally means; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -94,12 +90,6 @@ If the claim documents, the policy type, or the user's role is missing, record i
 4. **Missing or ambiguous facts** — undated events, conflicting dates, and gaps, marked `not found`/`unknown`/`ambiguous`.
 5. **Follow-up items** — documents and dates to obtain to complete the timeline.
 6. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run claims-chronology-builder on this fictional first-party property claim file — notices, adjuster notes, and payment history — and build the timeline for counsel."
-
-**Expected output shape:** a gates table, a date-ordered source-cited chronology with actor and neutral significance columns, a missing/ambiguous facts list, follow-up items, and a verification checklist — with no computed deadline, no timeliness conclusion, no claim valuation, and no invented events or authority.
 
 ## Attorney Verification Checklist
 

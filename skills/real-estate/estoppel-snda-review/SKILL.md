@@ -43,22 +43,6 @@ legal advice. An estoppel binds the party that signs it, and an SNDA reorders
 rights among lender, landlord, and tenant; whether to sign one, and on what
 terms, is always an attorney and client decision.
 
-## Capability Disclosure
-
-**This skill does:** review the language of an estoppel certificate, an SNDA,
-or a recognition agreement; identify the issues it raises from the stated
-review perspective; and, where the lease and its amendments are provided,
-compare the document's factual statements against the lease and flag
-inconsistencies, each with a citation on both sides.
-
-**This skill does not:** determine the legal effect or enforceability of an
-estoppel statement, a subordination provision, a non-disturbance covenant, or
-an attornment clause; decide whether the reviewing party should sign or accept
-the document; calculate, confirm, or assume any date or deadline; or supply
-jurisdiction-specific law, including subordination, non-disturbance, recording,
-or notice law. Those are attorney functions. Where the lease is not provided or
-a referenced document is missing, the skill says so — it does not fill the gap.
-
 ## Use When
 
 - A user asks to "review this estoppel," "check this tenant estoppel against
@@ -99,6 +83,8 @@ document.
 - The user wants a legal opinion on whether an estoppel statement binds a
   party, or on the effect of a subordination or non-disturbance provision —
   that requires an attorney.
+
+Also out of scope (this skill does not): determine the legal effect or enforceability of an estoppel statement, a subordination provision, a non-disturbance covenant, or an attornment clause; decide whether the reviewing party should sign or accept the document; calculate, confirm, or assume any date or deadline; or supply jurisdiction-specific law, including subordination, non-disturbance, recording, or notice law. Those are attorney functions. Where the lease is not provided or a referenced document is missing, the skill says so — it does not fill the gap.
 
 ## Legal Safety Rules
 
@@ -224,24 +210,6 @@ Deliver, in order:
 Use `[CONFIRM: ...]` wherever a fact, a comparison, or a term is uncertain, and
 `[deadline verification required]` for every date. Do not fill a gap with an
 invented term, law, or date.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "We are the lender refinancing this property. Review this
-tenant estoppel against the lease and tell me what to flag before closing.
-Here is the estoppel and the full lease with one amendment."
-
-**Expected output shape:** a header naming the lender perspective, the
-property, and the documents covered; a document-set list noting the lease and
-one amendment were provided; a plain-language summary of what the estoppel
-certifies with item citations; a perspective-ranked issue list with a source
-citation and an open question for each item; a lease-versus-estoppel
-discrepancy table with a citation on both sides for each row, covering rent,
-term, defaults, options, security deposit, amendments, side agreements, and
-notice rights; a consolidated list of open items and missing documents; and the
-attorney verification checklist. No date is computed, no jurisdiction-specific
-subordination or recording law is supplied, and no decision to accept or reject
-the estoppel is made.
 
 ## Attorney Verification Checklist
 

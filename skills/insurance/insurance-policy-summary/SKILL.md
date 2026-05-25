@@ -33,12 +33,6 @@ tags:
 
 Summarize an insurance policy into a structured, source-cited overview — declarations, named and additional insureds, policy period, coverage parts, limits, deductibles and self-insured retentions (SIRs), insuring agreements, definitions, exclusions, endorsements, conditions, and the forms schedule — so a qualified attorney can review the policy efficiently. This skill extracts and organizes what the policy documents say; it reaches no conclusion that coverage exists.
 
-## Capability Disclosure
-
-**This skill does:** extract and summarize policy terms with citations to the page, form, or endorsement; build a key terms table and a coverage-parts inventory; list exclusions, conditions, and endorsements; and flag missing or ambiguous items.
-
-**This skill does not:** conclude that coverage exists or is excluded, determine a duty to defend or indemnify, interpret ambiguous language, decide policy-limit exhaustion, determine additional insured status, calculate any deadline, constitute legal advice, or constitute a coverage opinion.
-
 ## Use When
 
 - An insurance policy must be summarized and organized for an attorney before a coverage review, claim review, or renewal.
@@ -62,6 +56,8 @@ If the policy documents, the policy type, or the policy period is missing, recor
 - The request is to draft a coverage position, reservation of rights, or denial.
 - The request is to interpret ambiguous policy language as a legal matter, or for a coverage opinion or legal advice.
 - Only a certificate of insurance is provided, not the policy (use `certificate-of-insurance-review`).
+
+Also out of scope (this skill does not): conclude that coverage exists or is excluded, determine a duty to defend or indemnify, interpret ambiguous language, decide policy-limit exhaustion, determine additional insured status, calculate any deadline, constitute legal advice, or constitute a coverage opinion.
 
 ## Legal Safety Rules
 
@@ -100,12 +96,6 @@ If the policy documents, the policy type, or the policy period is missing, recor
 9. **Attorney verification checklist** and **assumptions**.
 
 Use placeholders such as `[CONFIRM: policy type]` wherever information is missing. Do not fill gaps with invented content.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run insurance-policy-summary on this fictional commercial general liability policy — summarize the declarations, coverage parts, limits, exclusions, and endorsements with source cites for counsel."
-
-**Expected output shape:** a gates table, a policy overview, a key terms table, a coverage-parts table, an exclusions/conditions inventory, an endorsements table, a missing/ambiguous items list, and a verification checklist — with every term cited to a page, form, or endorsement, no conclusion that coverage exists, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

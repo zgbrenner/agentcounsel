@@ -33,12 +33,6 @@ tags:
 
 Review the insurance and indemnity provisions of a contract — lease, master services agreement, vendor agreement, construction agreement, service agreement, or purchase agreement — into a source-cited requirements table, a risk matrix, a missing-provisions list, and negotiation points for attorney review. This skill organizes what the contract requires and flags gaps from the user's perspective; it reaches no conclusion that the requirements are legally sufficient.
 
-## Capability Disclosure
-
-**This skill does:** extract the contract's insurance and indemnity requirements with source citations; organize them by required policy, limit, and endorsement; build a role-aware risk matrix; flag missing provisions; and list negotiation points.
-
-**This skill does not:** conclude that the insurance or indemnity provisions are adequate, sufficient, or enforceable; determine whether a party can meet the requirements; decide the legal effect or scope of an indemnity or additional insured clause; opine on insurability or anti-indemnity rules; draft final clause language; or constitute legal advice.
-
 ## Use When
 
 - The insurance and indemnity clauses of a contract must be reviewed and organized for an attorney.
@@ -62,6 +56,8 @@ If the contract or the insurance/indemnity clauses are missing, record it as `no
 - The request is to determine the legal effect or scope of an indemnity, additional insured, or waiver clause, or to opine on anti-indemnity rules.
 - The request is to draft final clause language, or for legal advice.
 - The task is to review a certificate (use `certificate-of-insurance-review`) or a policy (use `insurance-policy-summary`).
+
+Also out of scope (this skill does not): conclude that the insurance or indemnity provisions are adequate, sufficient, or enforceable; determine whether a party can meet the requirements; decide the legal effect or scope of an indemnity or additional insured clause; opine on insurability or anti-indemnity rules; draft final clause language; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -103,12 +99,6 @@ If the contract or the insurance/indemnity clauses are missing, record it as `no
 ### Optional: Business Stakeholder Summary
 
 When the output will brief a non-lawyer business stakeholder, add a clearly labeled **Business Stakeholder Summary** following `core/business-stakeholder-communication.md` — a plain-language Business Summary, the Decision Needed, a Recommended Ask, a Fallback Position, and an Escalation Needed? call. It is an addition to the deliverable above, never a replacement, and it does not change the attorney-review requirement.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run insurance-requirements-contract-review on the insurance and indemnity clauses of this fictional master services agreement — we are the customer; map the requirements and flag gaps for counsel."
-
-**Expected output shape:** a gates table, a source-cited requirements table, an indemnity and risk-allocation section, a role-aware risk matrix, a missing-provisions list, direction-only negotiation points, and a verification checklist — with no sufficiency or enforceability conclusion, no indemnity-scope determination, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

@@ -38,17 +38,6 @@ captures facts and themes; it makes no classification or withholding
 conclusion. It coordinates with, and does not replace, employment-law analysis
 (see `skills/employment/worker-classification/SKILL.md`).
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; capture source-cited engagement, payment,
-and document facts per worker or group; surface risk themes; and frame
-questions for employment and tax counsel.
-
-**This skill does not:** determine worker classification (employee vs.
-contractor); determine a withholding obligation, payroll-tax treatment,
-benefits eligibility, or employment-law status; compute payroll tax; or provide
-tax or employment-law advice.
-
 ## Use When
 
 - A worker or worker population's employment-tax facts must be organized before
@@ -81,6 +70,8 @@ them as `not provided` and return the missing-information list first.
 - The request is to decide a withholding obligation, payroll-tax treatment,
   benefits eligibility, or employment-law status.
 - The request is to compute payroll tax, or for tax or employment-law advice.
+
+Also out of scope (this skill does not): determine worker classification (employee vs. contractor); determine a withholding obligation, payroll-tax treatment, benefits eligibility, or employment-law status; compute payroll tax; or provide tax or employment-law advice.
 
 ## Legal Safety Rules
 
@@ -130,17 +121,6 @@ them as `not provided` and return the missing-information list first.
 5. **Missing documents list**.
 6. **Questions for employment and tax counsel**.
 7. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run employment-tax-worker-classification-intake for a
-fictional company that engages a group of delivery workers as contractors;
-organize the facts for our employment and tax counsel."
-
-**Expected output shape:** a gates table, a per-worker facts-to-verify table, a
-risk-themes list, a missing-documents list, and questions for counsel — with no
-classification conclusion, no withholding or payroll-tax decision, and no
-invented tests, factors, or rates.
 
 ## Attorney Verification Checklist
 

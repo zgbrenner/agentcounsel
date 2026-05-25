@@ -39,17 +39,6 @@ assignment. This skill organizes facts and spots issues; it never concludes
 whether a contract is executory or whether it may be assumed, rejected, or
 assigned.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; extract source-cited contract facts; track
-cure amounts as provided and defaults; surface assumption, rejection, and
-assignment issues as questions; and prepare an attorney verification checklist.
-
-**This skill does not:** conclude whether a contract or lease is executory or
-unexpired; conclude whether it may be assumed, rejected, or assigned; determine
-cure amounts; determine the effect of anti-assignment language; or constitute
-legal advice.
-
 ## Use When
 
 - A debtor or a counterparty needs the facts of an executory contract or
@@ -83,6 +72,8 @@ record it as `not provided` and return the missing-information list first.
 - The request is to conclude whether it may be assumed, rejected, or assigned,
   or to determine a cure amount.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): conclude whether a contract or lease is executory or unexpired; conclude whether it may be assumed, rejected, or assigned; determine cure amounts; determine the effect of anti-assignment language; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -138,17 +129,6 @@ record it as `not provided` and return the missing-information list first.
 The contract status table and trackers follow the **Executory Contract
 Assumption/Rejection Tracker** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run executory-contract-assumption-rejection-checklist for
-a fictional supply agreement where our client is the counterparty to a debtor;
-organize the contract facts for counsel."
-
-**Expected output shape:** a gates table, a source-cited contract status table,
-a cure/default tracker recording amounts as stated, an assumption/rejection
-issue list of open questions, missing facts, and a verification checklist —
-with no executory or assumability conclusion and no computed cure amount.
 
 ## Attorney Verification Checklist
 

@@ -48,6 +48,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The request is to determine whether the claim is valid, allowed, secured, or entitled to priority.</li><li>The request is to compute the claim amount, interest, or a bar date.</li><li>The request is for legal advice or a recommendation on filing.</li></ul>
+<p>Also out of scope (this skill does not): determine whether a claim is valid, allowable, secured, or entitled to priority; determine claim amount; advise on filing a claim; calculate a bar date; or constitute legal advice.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -108,16 +109,6 @@ missing facts, dispute flags, and verification questions — so a qualified
 attorney can evaluate the claim. This skill organizes facts; it determines no
 claim validity, priority, allowance, or secured status.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited claim facts table;
-record the amount and any characterization as stated by the user; flag
-disputes; list missing documents; and prepare attorney verification questions.
-
-**This skill does not:** determine whether a claim is valid, allowable, secured,
-or entitled to priority; determine claim amount; advise on filing a claim;
-calculate a bar date; or constitute legal advice.
-
 ## Use When
 
 - A creditor's claim facts must be organized before an attorney evaluates the
@@ -151,6 +142,8 @@ record it as `not provided` and return the missing-information list first.
   entitled to priority.
 - The request is to compute the claim amount, interest, or a bar date.
 - The request is for legal advice or a recommendation on filing.
+
+Also out of scope (this skill does not): determine whether a claim is valid, allowable, secured, or entitled to priority; determine claim amount; advise on filing a claim; calculate a bar date; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -202,17 +195,6 @@ record it as `not provided` and return the missing-information list first.
 
 The claim facts table follows the **Creditor Claim Facts Table** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run creditor-claim-intake for a fictional vendor owed on
-unpaid invoices by a company in bankruptcy; organize the claim facts for
-counsel."
-
-**Expected output shape:** a gates table, a source-cited claim facts table with
-the amount recorded as stated, dispute flags framed as questions, missing-facts
-and document-request lists, and verification questions — with no claim
-validity, priority, or secured-status conclusion and no computed amount.
 
 ## Attorney Verification Checklist
 
@@ -279,16 +261,6 @@ missing facts, dispute flags, and verification questions — so a qualified
 attorney can evaluate the claim. This skill organizes facts; it determines no
 claim validity, priority, allowance, or secured status.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited claim facts table;
-record the amount and any characterization as stated by the user; flag
-disputes; list missing documents; and prepare attorney verification questions.
-
-**This skill does not:** determine whether a claim is valid, allowable, secured,
-or entitled to priority; determine claim amount; advise on filing a claim;
-calculate a bar date; or constitute legal advice.
-
 ## Use When
 
 - A creditor's claim facts must be organized before an attorney evaluates the
@@ -322,6 +294,8 @@ record it as `not provided` and return the missing-information list first.
   entitled to priority.
 - The request is to compute the claim amount, interest, or a bar date.
 - The request is for legal advice or a recommendation on filing.
+
+Also out of scope (this skill does not): determine whether a claim is valid, allowable, secured, or entitled to priority; determine claim amount; advise on filing a claim; calculate a bar date; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -373,17 +347,6 @@ record it as `not provided` and return the missing-information list first.
 
 The claim facts table follows the **Creditor Claim Facts Table** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run creditor-claim-intake for a fictional vendor owed on
-unpaid invoices by a company in bankruptcy; organize the claim facts for
-counsel."
-
-**Expected output shape:** a gates table, a source-cited claim facts table with
-the amount recorded as stated, dispute flags framed as questions, missing-facts
-and document-request lists, and verification questions — with no claim
-validity, priority, or secured-status conclusion and no computed amount.
 
 ## Attorney Verification Checklist
 

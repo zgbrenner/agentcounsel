@@ -38,16 +38,6 @@ qualified attorney can supervise the administration. This skill organizes and
 tracks tasks; it approves no distribution and determines no beneficiary
 entitlement.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited administration task
-tracker; record assets, beneficiaries, distributions, and accountings as
-provided; flag missing facts and open disputes; and prepare verification items.
-
-**This skill does not:** approve a distribution; determine beneficiary
-entitlement; determine whether the trustee has met fiduciary duties; interpret
-the trust; calculate a deadline or a tax; or constitute legal advice.
-
 ## Use When
 
 - A trust under administration needs its tasks organized and tracked for an
@@ -81,6 +71,8 @@ as `not provided` and return the missing-information list first.
 - The request is to determine whether the trustee has met fiduciary duties or
   to interpret the trust.
 - The request is to calculate a deadline or tax, or for legal advice.
+
+Also out of scope (this skill does not): approve a distribution; determine beneficiary entitlement; determine whether the trustee has met fiduciary duties; interpret the trust; calculate a deadline or a tax; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -133,17 +125,6 @@ as `not provided` and return the missing-information list first.
 
 The administration task tracker follows the **Trust Administration Tracker**
 structure in `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run trust-administration-tracker for a fictional
-revocable trust now being administered after the grantor's death; build the
-task tracker for the attorney."
-
-**Expected output shape:** a gates table, a source-cited administration task
-tracker, an open-disputes list framed as questions, missing facts, dates echoed
-for verification, and verification items — with no distribution approval, no
-entitlement determination, and no invented authority.
 
 ## Attorney Verification Checklist
 

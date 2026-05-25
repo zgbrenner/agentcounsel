@@ -33,12 +33,6 @@ tags:
 
 Review an existing or proposed custody or parenting order for clarity and day-to-day administration issues — legal and physical custody language, the parenting schedule, holidays, exchanges, travel, communication, school and medical decisions, relocation and travel notices, dispute resolution, enforcement and ambiguity points, and any safety provisions — and produce an order-clarity checklist, an ambiguity table, and a missing-details list, so a qualified, licensed attorney has an organized review. This skill checks whether the order is clear and administrable; it recommends no custody outcome and decides no enforceability question.
 
-## Capability Disclosure
-
-**This skill does:** check the order against the standard administration topics; build an order-clarity checklist; record ambiguities and unclear mechanics in a table; and list details that appear missing.
-
-**This skill does not:** recommend a custody outcome, a parenting-time split, or a modification; decide whether the order is enforceable, valid, or in a child's best interests; resolve an ambiguity; interpret what a term legally means; compute or verify a deadline; draft order language; or constitute legal advice.
-
 ## Use When
 
 - An existing or proposed custody or parenting order must be checked for clarity and administrability.
@@ -61,6 +55,8 @@ If the order text, the parties, or the children involved is missing, record it a
 - The request is to decide whether the order is enforceable, valid, or in a child's best interests.
 - The request is to draft order language or to interpret what a term legally means as a final answer.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): recommend a custody outcome, a parenting-time split, or a modification; decide whether the order is enforceable, valid, or in a child's best interests; resolve an ambiguity; interpret what a term legally means; compute or verify a deadline; draft order language; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -96,12 +92,6 @@ If the order text, the parties, or the children involved is missing, record it a
 5. **Ambiguity table** — ambiguous term | section | the readings it is open to.
 6. **Missing details** — administration details not specified, marked `not found`.
 7. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run custody-order-review-checklist on this fictional existing custody order to surface the clarity and administration gaps for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; an order-clarity checklist across the standard administration topics with section references; an ambiguity table; a missing-details list; and verification questions — with no custody recommendation, no enforceability or best-interests conclusion, no resolved ambiguity, no computed deadline, and no invented terms or authority.
 
 ## Attorney Verification Checklist
 

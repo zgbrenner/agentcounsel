@@ -16,7 +16,7 @@ outputs:
   - "Missing-documents list and issue map"
   - "Attorney verification checklist"
 related_skills:
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
   - skills/family-law/asset-debt-schedule-builder/SKILL.md
   - skills/family-law/settlement-agreement-issue-spotter/SKILL.md
 tags:
@@ -32,12 +32,6 @@ tags:
 ## Purpose
 
 Organize the facts of a divorce or dissolution matter — dates, children, income, assets, debts, business and real-estate interests, retirement accounts, support and custody issues, existing agreements, and the contested or uncontested posture — into a structured facts table, a missing-documents list, and an issue map, so a qualified, licensed attorney has an organized factual foundation. This skill organizes what the user provides; it characterizes no property, computes no support, and reaches no conclusion on entitlement.
-
-## Capability Disclosure
-
-**This skill does:** organize divorce facts by category (parties, dates, children, income, assets, debts, business, real estate, retirement, support, custody, existing orders, disclosures, posture); build a facts table; list missing documents; and map the issues for counsel.
-
-**This skill does not:** determine whether property is marital, community, or separate; compute child or spousal support; decide entitlement, division, or distribution; recommend a custody outcome; compute or verify a deadline; draft court forms; or constitute legal advice.
 
 ## Use When
 
@@ -65,6 +59,8 @@ If the parties, the jurisdiction, or the posture is missing, record it as `not p
 - The matter is not a divorce or dissolution (use `family-law-matter-intake` to route).
 - A detailed asset/debt schedule is the goal (use `asset-debt-schedule-builder`).
 - A settlement document must be reviewed (use `settlement-agreement-issue-spotter`).
+
+Also out of scope (this skill does not): determine whether property is marital, community, or separate; compute child or spousal support; decide entitlement, division, or distribution; recommend a custody outcome; compute or verify a deadline; draft court forms; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -101,12 +97,6 @@ If the parties, the jurisdiction, or the posture is missing, record it as `not p
 5. **Missing documents** — documents to obtain, grouped by category, marked `not provided`.
 6. **Issue map** — issue | category | neutral description | open question for counsel.
 7. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run divorce-intake-organizer on this fictional dissolution matter — long marriage, two children, a house, retirement accounts, and a small business — and organize the facts for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a category-by-category divorce facts table; a missing-documents list; an issue map; and a verification checklist — with no property characterization, no support computation, no entitlement conclusion, no computed deadline, and no invented law.
 
 ## Attorney Verification Checklist
 

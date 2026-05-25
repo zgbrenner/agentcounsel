@@ -37,16 +37,6 @@ undue-influence matter, so a qualified attorney can work from an organized
 timeline. This skill organizes facts; it assesses no merits and predicts no
 outcome.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited timeline of dated
-events; record each event's actor and source; note disputed/undisputed status
-where the user provides it; and flag missing facts and follow-up items.
-
-**This skill does not:** assess the merits of any claim or defense; predict the
-likelihood of success; determine validity, capacity, undue influence, or
-fiduciary breach; weigh credibility; or constitute legal advice.
-
 ## Use When
 
 - A will or trust contest or a fiduciary dispute needs a factual chronology
@@ -73,6 +63,8 @@ If the documents, the user's role, or the dispute type is missing, record it as
 - The request is to determine validity, capacity, undue influence, or fiduciary
   breach.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): assess the merits of any claim or defense; predict the likelihood of success; determine validity, capacity, undue influence, or fiduciary breach; weigh credibility; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -122,17 +114,6 @@ If the documents, the user's role, or the dispute type is missing, record it as
 
 The factual chronology follows the **Estate Litigation Chronology** structure
 in `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run estate-litigation-facts-chronology for a fictional
-trust contest using the documents and correspondence provided; build the
-timeline for the attorney."
-
-**Expected output shape:** a gates table and a source-cited chronology of dated
-events with actors, sources, disputed/undisputed status where provided, and
-relevance notes, plus missing facts, follow-up items, and verification
-questions — with no merits assessment and no invented events or dates.
 
 ## Attorney Verification Checklist
 

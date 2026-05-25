@@ -37,19 +37,6 @@ attorney can evaluate them. This skill organizes facts and surfaces themes; it
 determines no capacity, no undue influence, no fraud, no duress, and no
 validity.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited facts chronology;
-record medical, relationship, and document-execution facts as stated in the
-records; surface red-flag themes as questions; and prepare verification
-questions.
-
-**This skill does not:** determine whether a person had capacity; determine
-whether undue influence, fraud, or duress occurred; determine the validity of
-any instrument; assess the merits of a claim; or constitute legal advice. It
-records medical and cognitive facts only as the records state them and makes no
-medical judgment.
-
 ## Use When
 
 - The facts around a capacity or undue-influence question must be organized for
@@ -79,6 +66,8 @@ If the records, the user's role, or the matter type is missing, record it as
   occurred, or whether an instrument is valid.
 - The request is to assess the merits of a claim, or for legal or medical
   advice.
+
+Also out of scope (this skill does not): determine whether a person had capacity; determine whether undue influence, fraud, or duress occurred; determine the validity of any instrument; assess the merits of a claim; or constitute legal advice. It records medical and cognitive facts only as the records state them and makes no medical judgment.
 
 ## Legal Safety Rules
 
@@ -134,17 +123,6 @@ If the records, the user's role, or the matter type is missing, record it as
 
 The facts chronology follows the **Capacity / Undue Influence Facts Organizer**
 structure in `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run capacity-undue-influence-facts-organizer for a
-fictional will contest where the records include medical notes and execution
-facts; organize the facts for the attorney."
-
-**Expected output shape:** a gates table, a source-cited facts chronology, a
-source table, red-flag themes framed as questions, missing facts, and
-verification questions — with no capacity, undue-influence, fraud, duress, or
-validity conclusion and no medical judgment.
 
 ## Attorney Verification Checklist
 

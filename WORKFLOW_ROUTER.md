@@ -164,6 +164,118 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Run KYC on this new client" / "review this onboarding packet" | `skills/financial-crime/kyc-onboarding-review/SKILL.md` |
 | "Review these screening hits" / "adjudicate these sanctions or PEP matches" | `skills/financial-crime/sanctions-screening-review/SKILL.md` |
 
+### Securities / capital markets
+
+The Securities / Capital Markets skills produce **draft work product for a qualified, licensed securities attorney**. They stay inside issue spotting, intake, document review, and checklist workflows — never securities legal advice, exemption determinations, registration calls, or deadline calculations.
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Build a private offering checklist" | `skills/securities-capital-markets/private-placement-checklist/SKILL.md` |
+| "Issue-spot securities exemption pathways" | `skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md` |
+| "Review this offering document disclosure draft" | `skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md` |
+| "Review the risk factors" | `skills/securities-capital-markets/risk-factor-review/SKILL.md` |
+| "Compare these SEC filing drafts for consistency" | `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md` |
+| "Track Form D and state notice filings" | `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md` |
+| "Review this investor rights or governance agreement" | `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md` |
+| "Review this insider-trading policy" | `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md` |
+| "Triage Section 16 or 13D/G beneficial ownership facts" | `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md` |
+| "Build a capital-markets closing checklist" | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` |
+| "Track comfort and backup requests" | `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md` |
+| "Intake public-company reporting calendar facts" | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` |
+
+### Tax
+
+The Tax skills produce **draft work product for qualified tax counsel or a licensed tax professional**. They stay inside issue spotting, intake, diligence, document organization, and reviewer-ready working papers — never tax computation, return preparation, filing, or tax advice. For a recurring multi-step tax matter, see the workflow bundles in `matter-packs/tax.md`.
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Intake a tax-sensitive matter and map the issues" | `skills/tax/tax-issue-intake/SKILL.md` |
+| "Organize entity facts for a tax-classification review" | `skills/tax/entity-tax-classification-checklist/SKILL.md` |
+| "Build a transaction tax diligence request list" | `skills/tax/transaction-tax-diligence-request-list/SKILL.md` |
+| "Map sales/use tax nexus facts by jurisdiction" | `skills/tax/sales-use-tax-nexus-triage/SKILL.md` |
+| "Intake worker and payroll facts for an employment-tax review" | `skills/tax/employment-tax-worker-classification-intake/SKILL.md` |
+| "Review the tax provisions of a contract" | `skills/tax/tax-provision-review-checklist/SKILL.md` |
+| "Organize a tax document set into a source-cited inventory" | `skills/tax/tax-document-organizer/SKILL.md` |
+| "Review tax covenants and indemnities in a transaction agreement" | `skills/tax/tax-covenants-indemnities-review/SKILL.md` |
+| "Issue-spot cross-border tax questions" | `skills/tax/international-tax-issue-spotter/SKILL.md` |
+| "Intake crypto and digital-asset activity and records" | `skills/tax/crypto-digital-asset-tax-intake/SKILL.md` |
+
+### Bankruptcy / restructuring
+
+The Bankruptcy / Restructuring skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document tracking, and checklist workflows — never bankruptcy legal advice, pleadings, filings, deadline calculations, or legal conclusions. For a recurring multi-step matter, see the workflow bundles in `matter-packs/bankruptcy-restructuring.md`.
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Intake a bankruptcy or restructuring matter" | `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md` |
+| "Organize a creditor's facts for a potential claim" | `skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md` |
+| "Build a proof-of-claim preparation checklist" | `skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md` |
+| "Issue-spot automatic stay concerns" | `skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md` |
+| "Respond to a preference demand" | `skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md` |
+| "Review executory contract assumption/rejection issues" | `skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md` |
+| "Build a bankruptcy or distressed-transaction diligence request list" | `skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md` |
+| "Review a restructuring support, forbearance, or workout document" | `skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md` |
+| "Issue-spot a Chapter 11 plan and disclosure statement" | `skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md` |
+| "Build a bankruptcy or distressed asset-sale checklist" | `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md` |
+| "Issue-spot a cash collateral or DIP financing document" | `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md` |
+| "Intake bankruptcy dates into a draft deadline tracker" | `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md` |
+
+### Insurance
+
+The Insurance skills produce **draft work product for a qualified, licensed attorney**. They stay inside issue spotting, intake, source-cited summaries, chronologies, trackers, and reviewer-ready working papers — never insurance coverage advice, coverage determinations, claim approvals or denials, reserve calculations, bad-faith conclusions, or insurance sales advice. For a recurring multi-step matter, see the workflow bundles in `matter-packs/insurance.md`.
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Summarize this insurance policy" | `skills/insurance/insurance-policy-summary/SKILL.md` |
+| "Issue-spot the coverage questions on this claim" | `skills/insurance/coverage-issue-spotter/SKILL.md` |
+| "Build a claim chronology from the claim file" | `skills/insurance/claims-chronology-builder/SKILL.md` |
+| "Review this reservation of rights letter or coverage correspondence" | `skills/insurance/reservation-of-rights-review/SKILL.md` |
+| "Review this tender, claim notice, or additional insured tender" | `skills/insurance/tender-letter-review/SKILL.md` |
+| "Assemble a coverage-position outline" | `skills/insurance/coverage-position-outline/SKILL.md` |
+| "Triage claim-handling and bad-faith risk themes" | `skills/insurance/bad-faith-risk-triage/SKILL.md` |
+| "Review this certificate of insurance against contract requirements" | `skills/insurance/certificate-of-insurance-review/SKILL.md` |
+| "Review the insurance and indemnity clauses of a contract" | `skills/insurance/insurance-requirements-contract-review/SKILL.md` |
+| "Organize potential subrogation and recovery facts" | `skills/insurance/subrogation-recovery-tracker/SKILL.md` |
+| "Build a renewal or placement diligence checklist" | `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md` |
+| "Review insurer/insured/claimant/broker communications" | `skills/insurance/insurer-insured-communications-review/SKILL.md` |
+
+### Trusts & estates
+
+The Trusts & Estates skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document inventories, administration trackers, chronology tables, and reviewer-ready working papers — never estate-planning, probate, or tax advice, instruments or court forms, capacity or undue-influence conclusions, beneficiary-entitlement or fiduciary-breach conclusions, or calculated taxes or deadlines. For a recurring multi-step matter, see the workflow bundles in `matter-packs/trusts-estates.md`.
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Intake an estate-planning matter" | `skills/trusts-estates/estate-planning-intake/SKILL.md` |
+| "Summarize a will, trust, or related estate document" | `skills/trusts-estates/estate-document-summary/SKILL.md` |
+| "Build a probate document checklist" | `skills/trusts-estates/probate-document-checklist/SKILL.md` |
+| "Track trust administration tasks" | `skills/trusts-estates/trust-administration-tracker/SKILL.md` |
+| "Issue-spot fiduciary-duty questions" | `skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md` |
+| "Review beneficiary designations and account titling" | `skills/trusts-estates/beneficiary-designation-review/SKILL.md` |
+| "Build an estate or trust asset and liability inventory" | `skills/trusts-estates/asset-liability-inventory-builder/SKILL.md` |
+| "Organize capacity or undue-influence facts" | `skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md` |
+| "Build a chronology for a will or trust contest or fiduciary dispute" | `skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md` |
+| "Build a trust funding checklist" | `skills/trusts-estates/trust-funding-checklist/SKILL.md` |
+| "Build a post-death administration task tracker" | `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md` |
+| "Intake estate, gift, GST, or inheritance tax issues" | `skills/trusts-estates/estate-tax-issue-intake/SKILL.md` |
+
+### Family law
+
+The Family Law skills produce **draft work product for a qualified, licensed attorney**. They organize facts and surface issues — they never calculate child or spousal support, recommend custody outcomes, draft pleadings, or supply safety plans. A potential domestic-violence concern routes to `domestic-violence-safety-referral-checklist` and to the attorney; the library does not create safety plans.
+
+| The task sounds like... | Use this skill |
+|---|---|
+| "Open a new family law matter" | `skills/family-law/matter-intake/SKILL.md` |
+| "Divorce or dissolution intake" | `skills/family-law/divorce-intake-organizer/SKILL.md` |
+| "Build a custody / parenting chronology" | `skills/family-law/custody-parenting-facts-chronology/SKILL.md` |
+| "Organize parenting schedule facts" | `skills/family-law/parenting-schedule-facts-organizer/SKILL.md` |
+| "Review this custody or parenting order" | `skills/family-law/custody-order-review-checklist/SKILL.md` |
+| "Child support facts intake" | `skills/family-law/child-support-facts-intake/SKILL.md` |
+| "Spousal support / alimony facts intake" | `skills/family-law/spousal-support-facts-intake/SKILL.md` |
+| "Build the asset and debt schedule" | `skills/family-law/asset-debt-schedule-builder/SKILL.md` |
+| "Review this marital settlement / parenting / support agreement" | `skills/family-law/settlement-agreement-issue-spotter/SKILL.md` |
+| "Family law discovery tracker" | `skills/family-law/discovery-tracker/SKILL.md` |
+| "Family law hearing preparation" | `skills/family-law/hearing-prep-checklist/SKILL.md` |
+| "Domestic violence safety referral considerations" | `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md` |
+
 ### Legal operations
 
 | The task sounds like... | Use this skill |
@@ -217,85 +329,3 @@ When a skill's output needs to go to a non-lawyer decision-maker — a product o
 ## When nothing matches
 
 If the request does not fit a skill, do not invent a workflow. Tell the user the library does not yet cover the task and — if useful — point to the closest skill and explain the gap. New skills can be proposed per `CONTRIBUTING.md`.
-
-
-## Securities / Capital Markets
-
-- **I need to plan a private offering checklist** -> `skills/securities-capital-markets/private-placement-checklist/SKILL.md`
-- **I need to issue-spot securities exemption pathways without final conclusions** -> `skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md`
-- **I need to review an offering document disclosure draft** -> `skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md`
-- **I need to review risk factors** -> `skills/securities-capital-markets/risk-factor-review/SKILL.md`
-- **I need to compare SEC filing drafts for consistency** -> `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md`
-- **I need Form D/state notice workflow tracking** -> `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md`
-- **I need investor-rights document review** -> `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md`
-- **I need insider-trading policy review** -> `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md`
-- **I need Section 16/13D-13G fact triage** -> `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md`
-- **I need a capital-markets closing checklist** -> `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md`
-- **I need a comfort/backup request tracker** -> `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md`
-- **I need public-company reporting calendar intake** -> `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md`
-
-## Tax
-
-The Tax skills produce **draft work product for qualified tax counsel or a licensed tax professional**. They stay inside issue spotting, intake, diligence, document organization, and reviewer-ready working papers — never tax computation, return preparation, filing, or tax advice. For a recurring multi-step tax matter, see the workflow bundles in `matter-packs/tax.md`.
-
-- **I need to intake a tax-sensitive matter and map the issues** -> `skills/tax/tax-issue-intake/SKILL.md`
-- **I need to organize entity facts for a tax-classification review** -> `skills/tax/entity-tax-classification-checklist/SKILL.md`
-- **I need a transaction tax diligence request list by workstream** -> `skills/tax/transaction-tax-diligence-request-list/SKILL.md`
-- **I need to map sales/use tax nexus facts by jurisdiction** -> `skills/tax/sales-use-tax-nexus-triage/SKILL.md`
-- **I need to intake worker and payroll facts for an employment-tax review** -> `skills/tax/employment-tax-worker-classification-intake/SKILL.md`
-- **I need to review the tax provisions of a contract** -> `skills/tax/tax-provision-review-checklist/SKILL.md`
-- **I need to organize a tax document set into a source-cited inventory** -> `skills/tax/tax-document-organizer/SKILL.md`
-- **I need to review tax covenants and indemnities in a transaction agreement** -> `skills/tax/tax-covenants-indemnities-review/SKILL.md`
-- **I need to issue-spot cross-border tax questions** -> `skills/tax/international-tax-issue-spotter/SKILL.md`
-- **I need to intake crypto and digital-asset activity and records** -> `skills/tax/crypto-digital-asset-tax-intake/SKILL.md`
-
-## Bankruptcy / Restructuring
-
-The Bankruptcy / Restructuring skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document tracking, and checklist workflows — never bankruptcy legal advice, pleadings, filings, deadline calculations, or legal conclusions. For a recurring multi-step matter, see the workflow bundles in `matter-packs/bankruptcy-restructuring.md`.
-
-- **I need to intake a bankruptcy or restructuring matter** -> `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md`
-- **I need to organize a creditor's facts for a potential claim** -> `skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md`
-- **I need a proof-of-claim preparation checklist** -> `skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md`
-- **I need to issue-spot automatic stay concerns** -> `skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md`
-- **I need to organize facts for responding to a preference demand** -> `skills/bankruptcy-restructuring/preference-demand-response-triage/SKILL.md`
-- **I need to review executory contract assumption/rejection issues** -> `skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md`
-- **I need a bankruptcy or distressed-transaction diligence request list** -> `skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md`
-- **I need to review a restructuring support, forbearance, or workout document** -> `skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md`
-- **I need to issue-spot a Chapter 11 plan and disclosure statement** -> `skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md`
-- **I need a bankruptcy or distressed asset-sale checklist** -> `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md`
-- **I need to issue-spot a cash collateral or DIP financing document** -> `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md`
-- **I need to intake bankruptcy dates into a draft deadline tracker** -> `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md`
-
-## Insurance
-
-The Insurance skills produce **draft work product for a qualified, licensed attorney**. They stay inside issue spotting, intake, source-cited summaries, chronologies, trackers, and reviewer-ready working papers — never insurance coverage advice, coverage determinations, claim approvals or denials, reserve calculations, bad-faith conclusions, or insurance sales advice. For a recurring multi-step matter, see the workflow bundles in `matter-packs/insurance.md`.
-
-- **I need to summarize an insurance policy with source cites** -> `skills/insurance/insurance-policy-summary/SKILL.md`
-- **I need to issue-spot the coverage questions on a claim** -> `skills/insurance/coverage-issue-spotter/SKILL.md`
-- **I need to build a claim chronology from the claim file** -> `skills/insurance/claims-chronology-builder/SKILL.md`
-- **I need to review a reservation of rights letter or coverage correspondence** -> `skills/insurance/reservation-of-rights-review/SKILL.md`
-- **I need to review a tender, claim notice, or additional insured tender** -> `skills/insurance/tender-letter-review/SKILL.md`
-- **I need to assemble a coverage-position outline for a coverage attorney** -> `skills/insurance/coverage-position-outline/SKILL.md`
-- **I need to triage claim-handling and bad-faith risk themes** -> `skills/insurance/bad-faith-risk-triage/SKILL.md`
-- **I need to review a certificate of insurance against contract requirements** -> `skills/insurance/certificate-of-insurance-review/SKILL.md`
-- **I need to review the insurance and indemnity clauses of a contract** -> `skills/insurance/insurance-requirements-contract-review/SKILL.md`
-- **I need to organize potential subrogation and recovery facts** -> `skills/insurance/subrogation-recovery-tracker/SKILL.md`
-- **I need a renewal or placement diligence checklist** -> `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
-- **I need to review insurer/insured/claimant/broker communications** -> `skills/insurance/insurer-insured-communications-review/SKILL.md`
-
-## Trusts & Estates
-
-The Trusts & Estates skills produce **draft work product for a qualified, licensed attorney**. They stay inside intake, issue spotting, document inventories, administration trackers, chronology tables, and reviewer-ready working papers — never estate-planning, probate, or tax advice, instruments or court forms, capacity or undue-influence conclusions, beneficiary-entitlement or fiduciary-breach conclusions, or calculated taxes or deadlines. For a recurring multi-step matter, see the workflow bundles in `matter-packs/trusts-estates.md`.
-
-- **I need to intake an estate-planning matter** -> `skills/trusts-estates/estate-planning-intake/SKILL.md`
-- **I need to summarize a will, trust, or related estate document** -> `skills/trusts-estates/estate-document-summary/SKILL.md`
-- **I need a probate document checklist** -> `skills/trusts-estates/probate-document-checklist/SKILL.md`
-- **I need to track trust administration tasks** -> `skills/trusts-estates/trust-administration-tracker/SKILL.md`
-- **I need to issue-spot fiduciary-duty questions** -> `skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md`
-- **I need to review beneficiary designations and account titling** -> `skills/trusts-estates/beneficiary-designation-review/SKILL.md`
-- **I need to build an estate or trust asset and liability inventory** -> `skills/trusts-estates/asset-liability-inventory-builder/SKILL.md`
-- **I need to organize capacity or undue-influence facts** -> `skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md`
-- **I need a chronology for a will or trust contest or fiduciary dispute** -> `skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md`
-- **I need a trust funding checklist** -> `skills/trusts-estates/trust-funding-checklist/SKILL.md`
-- **I need a post-death administration task tracker** -> `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md`
-- **I need to intake estate, gift, GST, or inheritance tax issues** -> `skills/trusts-estates/estate-tax-issue-intake/SKILL.md`
