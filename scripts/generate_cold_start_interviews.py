@@ -39,6 +39,29 @@ SETUP_DIR = REPO_ROOT / "skills" / "setup"
 HAND_AUTHORED = {"contracts", "corporate", "litigation", "privacy"}
 
 
+# Per-area prose: the indefinite article ("a" vs. "an") and the lower-case
+# noun phrase used mid-sentence. The data is split out from AREAS because
+# AREAS keys are slugs ("m-and-a"), display names are title-cased ("M&A"),
+# and neither reliably yields correct prose — "M&A" needs "an" because it
+# is read "em-and-ay", and a naive `.lower()` would turn "M&A" into "m&a".
+AREA_PROSE: dict[str, tuple[str, str]] = {
+    "employment":               ("an", "employment"),
+    "ip":                       ("an", "intellectual property"),
+    "ai-governance":            ("an", "AI-governance"),
+    "m-and-a":                  ("an", "M&A"),
+    "tax":                      ("a",  "tax"),
+    "trusts-estates":           ("a",  "trusts-and-estates"),
+    "real-estate":              ("a",  "real-estate"),
+    "securities-capital-markets": ("a", "securities and capital markets"),
+    "regulatory":               ("a",  "regulatory"),
+    "antitrust-competition":    ("an", "antitrust / competition"),
+    "bankruptcy-restructuring": ("a",  "bankruptcy and restructuring"),
+    "insurance":                ("an", "insurance"),
+    "family-law":               ("a",  "family-law"),
+    "product-legal":            ("a",  "product-legal"),
+}
+
+
 # Per-area content blocks.
 #
 # For each practice area:
@@ -1137,18 +1160,18 @@ AREAS: dict[str, dict] = {
 
 SKILL_MD_TEMPLATE = """---
 name: {display_name} Cold-Start Interview
-description: "Use when a {area_lower} practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering {description_topics}."
+description: "Use when {article} {area_phrase} practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering {description_topics}."
 practice_area: setup
 task_type: interview
 jurisdictions: []
 risk_level: low
 requires_attorney_review: true
 inputs:
-  - "Access to a {area_lower} attorney or authorized designee"
+  - "Access to {article} {area_phrase} attorney or authorized designee"
   - "The practice group's jurisdictions and client context"
   - "Standard positions, escalation thresholds, and review requirements"
 outputs:
-  - "Filled {area_lower} practice profile draft for attorney review"
+  - "Filled {area_phrase} practice profile draft for attorney review"
 related_skills:
 {related_skills_yaml}
 tags:
@@ -1163,26 +1186,26 @@ tags:
 
 ## Purpose
 
-Conduct a structured, staged interview with a {area_lower} practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/{area_slug}.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
+Conduct a structured, staged interview with {article} {area_phrase} practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/{area_slug}.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
 
 ## Use When
 
 - A team is adopting AgentCounsel and needs to configure `practice-profiles/{area_slug}.md` for the first time.
-- A {area_lower} practice group is being onboarded to the library and no current profile exists.
-- The library is being stood up for the first time and the {area_lower} area is included in scope.
+- {article_cap} {area_phrase} practice group is being onboarded to the library and no current profile exists.
+- The library is being stood up for the first time and the {area_phrase} area is included in scope.
 - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
 ## Required Inputs
 
-- A knowledgeable person from the {area_lower} practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.
+- A knowledgeable person from the {area_phrase} practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.
 - Any existing playbooks, templates, source-of-truth documents, or standard-form documents the group already uses, so they can be referenced or cited in the profile.
 
 ## Do Not Use When
 
-- The group is actively working a live {area_lower} matter. This skill configures the library; it does not support an open matter.
+- The group is actively working a live {area_phrase} matter. This skill configures the library; it does not support an open matter.
 - A `practice-profiles/{area_slug}.md` already exists and is current. In that case this is a refresh, not a cold start — though the skill may still be used to rebuild the profile deliberately.
 - No authorized person is available to answer. Do not complete the interview with guessed or inferred answers; record all gaps as `[CONFIRM: ...]` placeholders.
-- The purpose is to handle a specific {area_lower} matter (use the appropriate matter-level skill for that task).
+- The purpose is to handle a specific {area_phrase} matter (use the appropriate matter-level skill for that task).
 
 ## Legal Safety Rules
 
@@ -1293,10 +1316,13 @@ def render_checklist_extras(extras: list[str]) -> str:
 
 def render_skill_md(area_slug: str, area: dict) -> str:
     """Render a complete SKILL.md for one practice area."""
+    article, area_phrase = AREA_PROSE[area_slug]
     return SKILL_MD_TEMPLATE.format(
         display_name=area["display_name"],
         area_slug=area_slug,
-        area_lower=area["display_name"].lower(),
+        article=article,
+        article_cap=article.capitalize(),
+        area_phrase=area_phrase,
         area_tag=area_slug,
         description_topics=area["description_topics"],
         related_skills_yaml=render_related_skills(area["related_skills"]),
