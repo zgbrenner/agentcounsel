@@ -37,17 +37,6 @@ assemble and review the probate record. This skill organizes what a probate
 matter requires; it does not prepare filing-ready probate forms and calculates
 no deadlines.
 
-## Capability Disclosure
-
-**This skill does:** assemble a probate document checklist; record what has
-been collected and what is missing; assign a source and responsible party; and
-prepare attorney verification items.
-
-**This skill does not:** prepare filing-ready probate forms, petitions, or
-court documents; calculate probate or filing deadlines; determine heirship,
-beneficiary entitlement, or the validity of any document; or constitute legal
-advice.
-
 ## Use When
 
 - A probate matter needs its document record organized for an attorney.
@@ -77,6 +66,8 @@ If the decedent, the user's role, or the jurisdiction is missing, record it as
 - The request is to calculate a probate or filing deadline.
 - The request is to determine heirship, beneficiary entitlement, or document
   validity, or for legal advice.
+
+Also out of scope (this skill does not): prepare filing-ready probate forms, petitions, or court documents; calculate probate or filing deadlines; determine heirship, beneficiary entitlement, or the validity of any document; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -123,17 +114,6 @@ If the decedent, the user's role, or the jurisdiction is missing, record it as
 
 The checklist follows the **Probate Document Checklist** structure in
 `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run probate-document-checklist for a fictional estate
-where our client is the named executor; build the document checklist for the
-attorney."
-
-**Expected output shape:** a gates table, a probate document checklist with
-statuses and sources, a missing-document list, any dates echoed for
-verification, and attorney verification items — with no filing-ready form, no
-deadline calculation, and no heirship or validity conclusion.
 
 ## Attorney Verification Checklist
 

@@ -32,12 +32,6 @@ tags:
 
 Organize family-law discovery — requests, responses, financial disclosures, subpoenas, authorizations, identified deficiencies, and meet-and-confer items — into a single tracker, so a qualified, licensed attorney can manage discovery in a family law matter. This skill organizes what the user provides; it drafts no objections, invents no deadlines, and sets no discovery strategy.
 
-## Capability Disclosure
-
-**This skill does:** organize discovery requests and responses into a tracker; record the response status, the source, the responsible party, the deadline if the user provides it, and any deficiency the user identifies; and list follow-up and meet-and-confer items.
-
-**This skill does not:** draft or invent discovery objections, privilege claims, or responses; compute or invent a discovery deadline or a response period; decide whether an objection or a privilege claim is valid; set a discovery strategy; decide what to subpoena or whom; or constitute legal advice.
-
 ## Use When
 
 - A family law matter's discovery must be tracked across requests, responses, and disclosures.
@@ -60,6 +54,8 @@ If the discovery set, the parties, or the jurisdiction is missing, record it as 
 - The request is to compute a discovery deadline or a response period.
 - The request is for a discovery strategy, or to decide what or whom to subpoena, as a final answer.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): draft or invent discovery objections, privilege claims, or responses; compute or invent a discovery deadline or a response period; decide whether an objection or a privilege claim is valid; set a discovery strategy; decide what to subpoena or whom; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -95,12 +91,6 @@ If the discovery set, the parties, or the jurisdiction is missing, record it as 
 5. **Follow-up and meet-and-confer items** — outstanding responses, deficiencies, and follow-ups.
 6. **Missing facts** — items, statuses, parties, and dates marked `not provided` / `ambiguous`.
 7. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run family-law-discovery-tracker on this fictional divorce — interrogatories, document requests, financial disclosures, and a bank subpoena — and build the tracker for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a discovery tracker with request, party, status, source, user-provided-deadline, and deficiency columns; a follow-up and meet-and-confer list; a missing-facts list; and a verification checklist — with no drafted objections, no invented deadlines, no privilege determinations, no discovery strategy, and no invented rules.
 
 ## Attorney Verification Checklist
 

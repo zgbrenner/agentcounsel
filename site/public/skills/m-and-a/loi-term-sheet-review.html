@@ -49,6 +49,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The document is a definitive acquisition agreement — use <code>purchase-agreement-issue-list</code>.</li><li>The user needs a diligence request list — use <code>acquisition-diligence-request-list</code>.</li><li>The user needs an analysis of indemnity and escrow mechanics — use <code>indemnity-escrow-risk-review</code>.</li><li>The document is a commercial contract rather than a deal LOI — use <code>skills/contracts/contract-risk-review/SKILL.md</code>.</li><li>The user wants a legal opinion on whether an LOI provision binds the parties — that requires an attorney.</li></ul>
+<p>Also out of scope (this skill does not): decide whether any provision is, as a matter of law, legally binding or enforceable; determine the legal effect of an exclusivity, confidentiality, or break-fee term; supply jurisdiction-specific law, filing, securities, tax, antitrust, or employment rules; compute a deadline; draft final clause language; or replace the definitive-agreement negotiation. Whether a provision is binding is a legal question for the attorney — this skill reports what the document says and flags the question.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -118,22 +119,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice and is not a final negotiating position. An LOI shapes the deal
 that follows; the definitive agreement, once negotiated, controls.
 
-## Capability Disclosure
-
-**This skill does:** locate and organize the deal terms an LOI or term sheet
-states; record how the document itself characterizes each provision as binding
-or non-binding; identify issues and negotiation points from the stated side;
-cite where each term appears; and flag what is missing, not found, or
-ambiguous.
-
-**This skill does not:** decide whether any provision is, as a matter of law,
-legally binding or enforceable; determine the legal effect of an exclusivity,
-confidentiality, or break-fee term; supply jurisdiction-specific law, filing,
-securities, tax, antitrust, or employment rules; compute a deadline; draft
-final clause language; or replace the definitive-agreement negotiation. Whether
-a provision is binding is a legal question for the attorney — this skill reports
-what the document says and flags the question.
-
 ## Use When
 
 - A user asks to "review this LOI," "review this term sheet," "what should we
@@ -173,6 +158,8 @@ review a document you have not been given.
   `skills/contracts/contract-risk-review/SKILL.md`.
 - The user wants a legal opinion on whether an LOI provision binds the parties
   — that requires an attorney.
+
+Also out of scope (this skill does not): decide whether any provision is, as a matter of law, legally binding or enforceable; determine the legal effect of an exclusivity, confidentiality, or break-fee term; supply jurisdiction-specific law, filing, securities, tax, antitrust, or employment rules; compute a deadline; draft final clause language; or replace the definitive-agreement negotiation. Whether a provision is binding is a legal question for the attorney — this skill reports what the document says and flags the question.
 
 ## Legal Safety Rules
 
@@ -265,21 +252,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a term is uncertain. Do not fill a gap with an
 invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review this term sheet for our acquisition. We are the
-buyer; it is a stock purchase; here is the term sheet text."
-
-**Expected output shape:** a document summary stating the buyer-side
-perspective and the deal type; a binding/non-binding table recording how the
-term sheet characterizes exclusivity, confidentiality, and the remaining
-provisions, with the legal question flagged rather than answered; a deal-terms
-table with a source citation per row and `Not found` where the term sheet is
-silent (for example, no earnout); a buyer-side issue list and negotiation
-checklist with suggested directions; a list of gaps and ambiguities; and the
-attorney verification checklist. No provision is declared legally binding, no
-date is computed, and no jurisdiction-specific rule is supplied.
 
 ## Attorney Verification Checklist
 
@@ -354,22 +326,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice and is not a final negotiating position. An LOI shapes the deal
 that follows; the definitive agreement, once negotiated, controls.
 
-## Capability Disclosure
-
-**This skill does:** locate and organize the deal terms an LOI or term sheet
-states; record how the document itself characterizes each provision as binding
-or non-binding; identify issues and negotiation points from the stated side;
-cite where each term appears; and flag what is missing, not found, or
-ambiguous.
-
-**This skill does not:** decide whether any provision is, as a matter of law,
-legally binding or enforceable; determine the legal effect of an exclusivity,
-confidentiality, or break-fee term; supply jurisdiction-specific law, filing,
-securities, tax, antitrust, or employment rules; compute a deadline; draft
-final clause language; or replace the definitive-agreement negotiation. Whether
-a provision is binding is a legal question for the attorney — this skill reports
-what the document says and flags the question.
-
 ## Use When
 
 - A user asks to "review this LOI," "review this term sheet," "what should we
@@ -409,6 +365,8 @@ review a document you have not been given.
   `skills/contracts/contract-risk-review/SKILL.md`.
 - The user wants a legal opinion on whether an LOI provision binds the parties
   — that requires an attorney.
+
+Also out of scope (this skill does not): decide whether any provision is, as a matter of law, legally binding or enforceable; determine the legal effect of an exclusivity, confidentiality, or break-fee term; supply jurisdiction-specific law, filing, securities, tax, antitrust, or employment rules; compute a deadline; draft final clause language; or replace the definitive-agreement negotiation. Whether a provision is binding is a legal question for the attorney — this skill reports what the document says and flags the question.
 
 ## Legal Safety Rules
 
@@ -501,21 +459,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a term is uncertain. Do not fill a gap with an
 invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review this term sheet for our acquisition. We are the
-buyer; it is a stock purchase; here is the term sheet text."
-
-**Expected output shape:** a document summary stating the buyer-side
-perspective and the deal type; a binding/non-binding table recording how the
-term sheet characterizes exclusivity, confidentiality, and the remaining
-provisions, with the legal question flagged rather than answered; a deal-terms
-table with a source citation per row and `Not found` where the term sheet is
-silent (for example, no earnout); a buyer-side issue list and negotiation
-checklist with suggested directions; a list of gaps and ambiguities; and the
-attorney verification checklist. No provision is declared legally binding, no
-date is computed, and no jurisdiction-specific rule is supplied.
 
 ## Attorney Verification Checklist
 

@@ -38,18 +38,6 @@ attorney can evaluate the documents. This skill spots issues and organizes the
 provisions; it concludes nothing on confirmability, the adequacy of disclosure,
 priority compliance, or the voting outcome.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; extract source-cited classification and
-treatment provisions; surface issues across voting, releases, exculpation,
-injunctions, executory contracts, claims reconciliation, governance, and equity
-treatment; flag internal inconsistencies; and prepare verification questions.
-
-**This skill does not:** conclude whether a plan is confirmable, whether
-disclosure is adequate, whether the plan complies with priority rules, whether
-the plan is feasible, or how voting will come out; determine the legal effect
-of releases or injunctions; or constitute legal advice.
-
 ## Use When
 
 - A plan and/or disclosure statement must be reviewed and its issues organized
@@ -87,6 +75,8 @@ list first.
 - The request is to conclude on priority compliance, the legal effect of
   releases, or the voting outcome.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): conclude whether a plan is confirmable, whether disclosure is adequate, whether the plan complies with priority rules, whether the plan is feasible, or how voting will come out; determine the legal effect of releases or injunctions; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -141,17 +131,6 @@ list first.
 The treatment table and issue list follow the **Plan / Disclosure Statement
 Issue Tracker** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run plan-disclosure-statement-issue-spotter on a
-fictional Chapter 11 plan and disclosure statement where our client is an
-unsecured creditor; organize the issues for counsel."
-
-**Expected output shape:** a gates table, a source-cited treatment table, an
-issue list framed as questions, a consistency-issues list, missing facts, and
-verification questions — with no confirmability, adequacy, priority-compliance,
-or voting-outcome conclusion and no invented authority.
 
 ## Attorney Verification Checklist
 

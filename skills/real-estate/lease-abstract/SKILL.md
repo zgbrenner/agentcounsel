@@ -40,19 +40,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice. An abstract is a convenience summary; the lease itself always
 controls.
 
-## Capability Disclosure
-
-**This skill does:** locate and extract stated lease terms; record where each
-term appears in the document; present the terms in a consistent structure; and
-flag what is missing, not found, or ambiguous.
-
-**This skill does not:** interpret an ambiguous provision to reach a legal
-conclusion; determine whether a term is enforceable; calculate or confirm any
-date or deadline; supply a term the lease does not state; assess the lease
-against the law of any jurisdiction; or replace a reading of the lease itself.
-Those are attorney functions. Where the lease is silent or unclear, the
-abstract says so — it does not fill the gap.
-
 ## Use When
 
 - A user asks to "abstract this lease," "pull the key terms out of this lease,"
@@ -88,6 +75,8 @@ document you have not been given.
 - The document is an estoppel certificate or SNDA — use `estoppel-snda-review`.
 - The user wants a legal opinion on what a lease term means or whether it is
   enforceable — that requires an attorney.
+
+Also out of scope (this skill does not): interpret an ambiguous provision to reach a legal conclusion; determine whether a term is enforceable; calculate or confirm any date or deadline; supply a term the lease does not state; assess the lease against the law of any jurisdiction; or replace a reading of the lease itself. Those are attorney functions. Where the lease is silent or unclear, the abstract says so — it does not fill the gap.
 
 ## Legal Safety Rules
 
@@ -205,21 +194,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` wherever a value is uncertain. Do not fill a gap with an
 invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Abstract this office lease. We are the tenant; here is
-the full lease PDF and one amendment."
-
-**Expected output shape:** a header noting the property, the tenant
-perspective, and that one amendment was provided; a document-set list; the
-field-by-field abstract table with a section or page citation in every row and
-`Not found` where the lease is silent; a rent table; a critical-dates table
-with each date flagged for verification; a list of gaps and ambiguities
-(including a note that the amendment should be run through
-`lease-amendment-reconciliation` to confirm controlling terms); and the
-attorney verification checklist. No date is computed and no term is supplied
-that the documents do not state.
 
 ## Attorney Verification Checklist
 

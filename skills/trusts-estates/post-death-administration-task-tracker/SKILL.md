@@ -37,16 +37,6 @@ attorney can supervise estate or trust administration after a death. This skill
 organizes and tracks tasks; it calculates no deadlines and approves no
 distributions.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a source-cited task tracker across
-the administration workstreams; assign an owner, status, and dependency to each
-task; and flag uncertainties and missing information.
-
-**This skill does not:** calculate probate, tax, or notice deadlines; approve a
-distribution; determine beneficiary entitlement; determine fiduciary
-obligations or the validity of any document; or constitute legal advice.
-
 ## Use When
 
 - An estate or trust under post-death administration needs its tasks organized
@@ -78,6 +68,8 @@ If the decedent, the user's role, or the jurisdiction is missing, record it as
   entitlement.
 - The request is to determine fiduciary obligations or document validity, or
   for legal advice.
+
+Also out of scope (this skill does not): calculate probate, tax, or notice deadlines; approve a distribution; determine beneficiary entitlement; determine fiduciary obligations or the validity of any document; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -129,17 +121,6 @@ If the decedent, the user's role, or the jurisdiction is missing, record it as
 
 The task tracker follows the **Post-Death Administration Task Tracker**
 structure in `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run post-death-administration-task-tracker for a fictional
-estate where our client was just appointed executor; build the task tracker for
-the attorney."
-
-**Expected output shape:** a gates table, a source-cited administration task
-tracker with owners, statuses, and dependencies, dates echoed for verification,
-missing information, and verification items — with no deadline calculation, no
-distribution approval, and no invented authority.
 
 ## Attorney Verification Checklist
 

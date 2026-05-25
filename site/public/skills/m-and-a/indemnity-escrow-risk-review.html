@@ -49,6 +49,7 @@
 <section class="skill-section" id="do-not-use-when">
 <h2>Do Not Use When</h2>
 <ul><li>The document is a letter of intent or term sheet rather than a definitive agreement — use <code>loi-term-sheet-review</code>.</li><li>The user needs a full issue list across the entire purchase agreement — use <code>purchase-agreement-issue-list</code>.</li><li>The user needs a review of the representations, warranties, and disclosure schedules themselves — use <code>reps-warranties-disclosure-schedule-review</code>.</li><li>The document is a commercial contract rather than an M&amp;A purchase agreement — use <code>skills/contracts/contract-risk-review/SKILL.md</code>.</li><li>The user wants a conclusion on whether the indemnity terms are market standard, whether the package is adequate, or whether a tax indemnity has a particular tax result — those require an attorney.</li></ul>
+<p>Also out of scope (this skill does not): conclude whether any term is "market standard," "typical," or "off-market"; determine whether any provision is legally enforceable; reach a tax conclusion on a tax indemnity or its treatment; decide whether the indemnity or escrow package is adequate or acceptable; compute, confirm, or assume any survival period, claim deadline, or escrow release date; supply jurisdiction-specific law, securities, antitrust, tax, or employment rules; or draft final clause language. Whether the package is sufficient, enforceable, or market is a judgment for the attorney — this skill reports what the agreement says and flags the questions.</p>
 </section>
 <section class="skill-section" id="legal-safety-rules">
 <h2>Legal Safety Rules</h2>
@@ -121,25 +122,6 @@ legal advice and is not a final negotiating position. The indemnity and escrow
 package is the heart of post-closing risk allocation; the definitive agreement,
 as negotiated and signed, controls.
 
-## Capability Disclosure
-
-**This skill does:** locate and map the indemnification, escrow, and survival
-architecture an agreement sets out; summarize the recovery mechanics — caps,
-baskets, escrow, special indemnities, claim procedures, setoff, and exclusive
-remedy — as the agreement states them; organize a buyer/seller risk matrix and
-a recovery waterfall; cite where each element appears; and flag what is
-missing, not found, or ambiguous.
-
-**This skill does not:** conclude whether any term is "market standard,"
-"typical," or "off-market"; determine whether any provision is legally
-enforceable; reach a tax conclusion on a tax indemnity or its treatment;
-decide whether the indemnity or escrow package is adequate or acceptable;
-compute, confirm, or assume any survival period, claim deadline, or escrow
-release date; supply jurisdiction-specific law, securities, antitrust, tax, or
-employment rules; or draft final clause language. Whether the package is
-sufficient, enforceable, or market is a judgment for the attorney — this skill
-reports what the agreement says and flags the questions.
-
 ## Use When
 
 - A user asks to "review the indemnity in this purchase agreement," "check the
@@ -189,6 +171,8 @@ and request them. Do not review provisions you have not been given.
 - The user wants a conclusion on whether the indemnity terms are market
   standard, whether the package is adequate, or whether a tax indemnity has a
   particular tax result — those require an attorney.
+
+Also out of scope (this skill does not): conclude whether any term is "market standard," "typical," or "off-market"; determine whether any provision is legally enforceable; reach a tax conclusion on a tax indemnity or its treatment; decide whether the indemnity or escrow package is adequate or acceptable; compute, confirm, or assume any survival period, claim deadline, or escrow release date; supply jurisdiction-specific law, securities, antitrust, tax, or employment rules; or draft final clause language. Whether the package is sufficient, enforceable, or market is a judgment for the attorney — this skill reports what the agreement says and flags the questions.
 
 ## Legal Safety Rules
 
@@ -334,27 +318,6 @@ Use real Markdown tables. Use `[CONFIRM: ...]`, `[ATTORNEY TO CONFIRM: ...]`,
 and `[deadline verification required]` wherever a term, a market reference, or
 a date is uncertain. Do not fill a gap with an invented term and do not present
 a market-standard figure as a conclusion.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review the indemnification and escrow provisions in this
-stock purchase agreement. We are the buyer; RWI is the primary recovery; here
-is the text of Article 8 and the escrow terms."
-
-**Expected output shape:** a document summary stating the buyer-side
-perspective, the deal type, and that RWI is in play; an indemnity architecture
-table with a source citation per row — survival periods and the escrow release
-date each flagged `[deadline verification required]`, and the general cap,
-basket, and escrow amounts reported as the agreement's own figures with no
-market rating; a recovery waterfall setting out, in the agreement's stated
-order, the per-claim threshold, the basket, escrow, RWI, and the seller's
-direct exposure to the cap, with any unstated interaction marked `Ambiguous`; a
-buyer/seller risk matrix from the buyer side; a buyer-side negotiation
-checklist with suggested directions; a list of ambiguities and gaps, including
-any undefined "fraud"; and the attorney verification checklist. No figure is
-called market standard, no survival or release date is computed, the tax
-indemnity is reported without a tax conclusion, and no judgment is offered on
-whether the package is adequate.
 
 ## Attorney Verification Checklist
 
@@ -444,25 +407,6 @@ legal advice and is not a final negotiating position. The indemnity and escrow
 package is the heart of post-closing risk allocation; the definitive agreement,
 as negotiated and signed, controls.
 
-## Capability Disclosure
-
-**This skill does:** locate and map the indemnification, escrow, and survival
-architecture an agreement sets out; summarize the recovery mechanics — caps,
-baskets, escrow, special indemnities, claim procedures, setoff, and exclusive
-remedy — as the agreement states them; organize a buyer/seller risk matrix and
-a recovery waterfall; cite where each element appears; and flag what is
-missing, not found, or ambiguous.
-
-**This skill does not:** conclude whether any term is "market standard,"
-"typical," or "off-market"; determine whether any provision is legally
-enforceable; reach a tax conclusion on a tax indemnity or its treatment;
-decide whether the indemnity or escrow package is adequate or acceptable;
-compute, confirm, or assume any survival period, claim deadline, or escrow
-release date; supply jurisdiction-specific law, securities, antitrust, tax, or
-employment rules; or draft final clause language. Whether the package is
-sufficient, enforceable, or market is a judgment for the attorney — this skill
-reports what the agreement says and flags the questions.
-
 ## Use When
 
 - A user asks to "review the indemnity in this purchase agreement," "check the
@@ -512,6 +456,8 @@ and request them. Do not review provisions you have not been given.
 - The user wants a conclusion on whether the indemnity terms are market
   standard, whether the package is adequate, or whether a tax indemnity has a
   particular tax result — those require an attorney.
+
+Also out of scope (this skill does not): conclude whether any term is "market standard," "typical," or "off-market"; determine whether any provision is legally enforceable; reach a tax conclusion on a tax indemnity or its treatment; decide whether the indemnity or escrow package is adequate or acceptable; compute, confirm, or assume any survival period, claim deadline, or escrow release date; supply jurisdiction-specific law, securities, antitrust, tax, or employment rules; or draft final clause language. Whether the package is sufficient, enforceable, or market is a judgment for the attorney — this skill reports what the agreement says and flags the questions.
 
 ## Legal Safety Rules
 
@@ -657,27 +603,6 @@ Use real Markdown tables. Use `[CONFIRM: ...]`, `[ATTORNEY TO CONFIRM: ...]`,
 and `[deadline verification required]` wherever a term, a market reference, or
 a date is uncertain. Do not fill a gap with an invented term and do not present
 a market-standard figure as a conclusion.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Review the indemnification and escrow provisions in this
-stock purchase agreement. We are the buyer; RWI is the primary recovery; here
-is the text of Article 8 and the escrow terms."
-
-**Expected output shape:** a document summary stating the buyer-side
-perspective, the deal type, and that RWI is in play; an indemnity architecture
-table with a source citation per row — survival periods and the escrow release
-date each flagged `[deadline verification required]`, and the general cap,
-basket, and escrow amounts reported as the agreement's own figures with no
-market rating; a recovery waterfall setting out, in the agreement's stated
-order, the per-claim threshold, the basket, escrow, RWI, and the seller's
-direct exposure to the cap, with any unstated interaction marked `Ambiguous`; a
-buyer/seller risk matrix from the buyer side; a buyer-side negotiation
-checklist with suggested directions; a list of ambiguities and gaps, including
-any undefined "fraud"; and the attorney verification checklist. No figure is
-called market standard, no survival or release date is computed, the tax
-indemnity is reported without a tax conclusion, and no judgment is offered on
-whether the package is adequate.
 
 ## Attorney Verification Checklist
 

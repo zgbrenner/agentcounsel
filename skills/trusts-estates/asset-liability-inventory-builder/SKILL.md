@@ -37,16 +37,6 @@ item — so a qualified attorney can review the estate's composition. This skill
 organizes what was provided; it does not value assets and reaches no legal
 conclusion.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; tabulate assets and liabilities with source
-citations; record owner/title and any user-supplied value; and flag missing or
-ambiguous items.
-
-**This skill does not:** value or appraise an asset (it records only values the
-user provides); determine ownership, title, or whether an asset is part of the
-estate or trust; determine tax treatment; or constitute legal advice.
-
 ## Use When
 
 - An estate or trust's assets and liabilities must be organized into an
@@ -76,6 +66,8 @@ If the records, the user's role, or the review purpose is missing, record it as
 - The request is to determine ownership, title, or whether an asset belongs to
   the estate or trust.
 - The request is to determine tax treatment, or for legal advice.
+
+Also out of scope (this skill does not): value or appraise an asset (it records only values the user provides); determine ownership, title, or whether an asset is part of the estate or trust; determine tax treatment; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -124,17 +116,6 @@ If the records, the user's role, or the review purpose is missing, record it as
 
 The inventory table follows the **Asset / Liability Inventory** structure in
 `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run asset-liability-inventory-builder for a fictional
-estate using the account statements and deed provided; build the inventory for
-the attorney."
-
-**Expected output shape:** a gates table, a source-cited asset and liability
-inventory recording values only as the user provided them, an
-ambiguous-assets list, missing facts, and verification items — with no
-appraisal, no ownership determination, and no invented figures.
 
 ## Attorney Verification Checklist
 

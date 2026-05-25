@@ -41,22 +41,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice. The tracker is an organizing tool; the title commitment, the
 exception documents, and the survey themselves always control.
 
-## Capability Disclosure
-
-**This skill does:** locate and organize the exceptions and requirements stated
-in a title commitment or report; organize the matters shown or noted on a
-survey; record where each item appears in the source; describe the business
-impact of an item in plain terms; present everything in a consistent tracker
-structure; and flag what is missing, unresolved, or ambiguous.
-
-**This skill does not:** opine that title is marketable, insurable, or clear;
-determine the legal effect, validity, or priority of any exception; decide
-whether an objection is well-founded; calculate or confirm any cure or
-objection deadline; or supply jurisdiction-specific title, recording, or survey
-law. Those are attorney and title-company functions. Where an exception
-document was not provided or a matter is unresolved, the tracker says so — it
-does not fill the gap.
-
 ## Use When
 
 - A user asks to "track the title objections," "organize the Schedule B
@@ -98,6 +82,8 @@ build a tracker from a document you have not been given.
 - The user wants a legal opinion on whether title is marketable or insurable,
   whether an exception is valid, or how an exception should be resolved — that
   requires an attorney and, where applicable, the title company.
+
+Also out of scope (this skill does not): opine that title is marketable, insurable, or clear; determine the legal effect, validity, or priority of any exception; decide whether an objection is well-founded; calculate or confirm any cure or objection deadline; or supply jurisdiction-specific title, recording, or survey law. Those are attorney and title-company functions. Where an exception document was not provided or a matter is unresolved, the tracker says so — it does not fill the gap.
 
 ## Legal Safety Rules
 
@@ -194,22 +180,6 @@ Deliver, in order:
 Use `[CONFIRM: ...]` wherever an item is uncertain, and flag any date
 `[deadline verification required]`. Do not fill a gap with invented content,
 and do not characterize title as marketable, insurable, or clear.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Organize the title objections for the parcel we're
-buying. Here is the title commitment; the survey is attached but several of the
-recorded easements it references are not."
-
-**Expected output shape:** a header noting the parcel, the buyer perspective,
-and that the survey was provided but certain recorded easement documents were
-not; a document-set list; the objection tracker table with an exception number
-or survey note citation in every row, a plain-language business impact, and a
-proposed objection or request framed as a direction for the attorney; a list of
-the easement documents referenced but not provided; a list of open or
-unresolved matters; and the attorney verification checklist. No date is
-computed, no title, recording, or survey law is invented, and the tracker does
-not state or imply that title is marketable, insurable, or clear.
 
 ## Attorney Verification Checklist
 

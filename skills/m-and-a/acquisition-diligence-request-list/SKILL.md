@@ -40,23 +40,6 @@ legal advice and it is not a statement of what diligence the law or a duty of
 care requires. The reviewing attorney decides the scope of diligence, what the
 list must add or drop, and when the diligence is sufficient.
 
-## Capability Disclosure
-
-**This skill does:** generate a structured, tailored due-diligence request
-list, organized by workstream, with a priority, a one-line rationale, a
-responsible party, and follow-up questions for each item; shape the list to the
-deal type, industry, target profile, side, transaction stage, and known risks;
-and flag what the user must confirm.
-
-**This skill does not:** perform the diligence or review any produced
-documents; decide what diligence the law, fiduciary duty, or a standard of care
-requires; determine whether the diligence done is sufficient or complete;
-compute or assume any deadline; supply jurisdiction-specific law, filing,
-securities, tax, antitrust, or employment rules; or decide whether to proceed
-with the deal. What diligence is legally required and when it is sufficient are
-questions for the attorney — this skill drafts a request list and flags the
-questions.
-
 ## Use When
 
 - A user asks to "build a diligence request list," "draft a due-diligence
@@ -99,6 +82,8 @@ diligence list from assumed deal facts.
   `skills/m-and-a/loi-term-sheet-review/SKILL.md`.
 - The user wants a legal determination of what diligence is required, or
   whether the diligence done is adequate — that requires an attorney.
+
+Also out of scope (this skill does not): perform the diligence or review any produced documents; decide what diligence the law, fiduciary duty, or a standard of care requires; determine whether the diligence done is sufficient or complete; compute or assume any deadline; supply jurisdiction-specific law, filing, securities, tax, antitrust, or employment rules; or decide whether to proceed with the deal. What diligence is legally required and when it is sufficient are questions for the attorney — this skill drafts a request list and flags the questions.
 
 ## Legal Safety Rules
 
@@ -217,26 +202,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`
 wherever a deal fact is uncertain. Do not fill a gap with an assumed fact.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Build a buyer-side diligence request list. It is a stock
-purchase of a Delaware SaaS company, around 80 employees, in confirmatory
-diligence post-LOI; we are most concerned about customer concentration and data
-privacy."
-
-**Expected output shape:** a deal summary stating the buyer-side perspective,
-the stock-purchase structure, the SaaS industry, the post-LOI confirmatory
-stage, and the stated concerns; a workstream scope table marking software-
-relevant workstreams (IP, privacy/data/security, open-source software) in scope
-and marking environmental out of scope with a reason; a request list with one
-table per workstream, where each item carries a priority, a one-line rationale,
-a responsible party, and follow-up questions, and where customer-concentration
-and privacy items are prioritized High; a list of locally-dependent items
-(consents, change-of-control approvals, data-transfer rules) marked for
-attorney or local-counsel confirmation; and a gaps-and-assumptions list. No
-item is described as legally required or sufficient, no date is computed, and
-no jurisdiction-specific rule is supplied.
 
 ## Attorney Verification Checklist
 

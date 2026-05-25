@@ -37,16 +37,6 @@ into a source-cited fact map and open-question tracker, so a qualified tax
 professional can evaluate nexus, taxability, and registration. This skill
 organizes facts; it draws no nexus or taxability conclusion.
 
-## Capability Disclosure
-
-**This skill does:** confirm scope; build a per-jurisdiction fact map of
-physical-presence, activity, product/service, marketplace, and certificate
-facts; list missing facts; and frame open questions for a tax professional.
-
-**This skill does not:** conclude nexus, taxability, a registration obligation,
-a collection obligation, a remittance obligation, or a filing deadline;
-calculate tax due; or provide tax advice.
-
 ## Use When
 
 - A taxpayer's sales/use tax footprint must be mapped across multiple
@@ -81,6 +71,8 @@ first.
 - The request is to decide taxability, a registration, collection, or
   remittance obligation, or a filing deadline.
 - The request is to compute sales/use tax due, or for tax advice.
+
+Also out of scope (this skill does not): conclude nexus, taxability, a registration obligation, a collection obligation, a remittance obligation, or a filing deadline; calculate tax due; or provide tax advice.
 
 ## Legal Safety Rules
 
@@ -128,17 +120,6 @@ first.
 5. **Missing facts list** and **document request list**.
 6. **Tax-professional questions**.
 7. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run sales-use-tax-nexus-triage for a fictional SaaS
-company selling into several states; map the nexus facts for our tax
-professional."
-
-**Expected output shape:** a gates table, a per-jurisdiction nexus fact map, a
-jurisdiction tracker, missing-facts and document-request lists, and
-tax-professional questions — with no nexus or taxability conclusion, no
-registration or filing deadline, and no invented thresholds or rates.
 
 ## Attorney Verification Checklist
 

@@ -38,17 +38,6 @@ tracker — so a qualified attorney can run and review the sale process. This
 skill organizes the process and the documents; it concludes nothing on whether
 assets may be sold free and clear or whether sale procedures are sufficient.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; assemble a sale-process checklist; produce a
-diligence request list; track assigned contracts and cure costs as provided;
-build a closing-deliverables tracker; and prepare attorney verification items.
-
-**This skill does not:** conclude that assets may be sold free and clear of
-liens, claims, or interests; conclude that bid procedures or sale procedures
-are sufficient; determine cure amounts or lien priority; determine the legal
-effect of a sale order; or constitute legal advice.
-
 ## Use When
 
 - A bankruptcy or distressed asset sale needs its process steps, diligence, and
@@ -83,6 +72,8 @@ record it as `not provided` and return the missing-information list first.
 - The request is to conclude that bid or sale procedures are sufficient, or to
   determine cure amounts or lien priority.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): conclude that assets may be sold free and clear of liens, claims, or interests; conclude that bid procedures or sale procedures are sufficient; determine cure amounts or lien priority; determine the legal effect of a sale order; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -134,18 +125,6 @@ record it as `not provided` and return the missing-information list first.
 
 The sale checklist and trackers follow the **Distressed Asset Sale Checklist**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run distressed-asset-sale-checklist for a fictional buyer
-in a bankruptcy asset sale with a stalking-horse bid; build the checklist and
-trackers for our deal team."
-
-**Expected output shape:** a gates table, a sale-process checklist, a diligence
-request list, a contract/cure tracker recording amounts as provided, a
-closing-deliverables tracker, and verification items — with no free-and-clear
-conclusion, no sale-sufficiency conclusion, and no computed cure amounts or
-deadlines.
 
 ## Attorney Verification Checklist
 

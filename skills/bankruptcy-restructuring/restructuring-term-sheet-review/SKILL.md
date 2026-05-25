@@ -39,17 +39,6 @@ list, a risk matrix, and negotiation points, so a qualified attorney can
 evaluate the document from the user's perspective. This skill extracts and
 organizes terms; it concludes nothing on enforceability or legal sufficiency.
 
-## Capability Disclosure
-
-**This skill does:** extract and summarize restructuring terms with source
-citations; build a role-aware issue list and risk matrix; flag missing terms;
-and list negotiation points and verification questions.
-
-**This skill does not:** conclude whether a document or any term is enforceable
-or legally sufficient; conclude plan feasibility; determine the legal effect of
-releases, covenants, or conditions; draft final clause language; or constitute
-legal advice.
-
 ## Use When
 
 - A restructuring support agreement, forbearance agreement, exchange offer,
@@ -84,6 +73,8 @@ as `not provided` and return the missing-information list first.
 - The request is to determine the legal effect of a release, covenant, or
   condition, or to draft final clause language.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): conclude whether a document or any term is enforceable or legally sufficient; conclude plan feasibility; determine the legal effect of releases, covenants, or conditions; draft final clause language; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -137,17 +128,6 @@ as `not provided` and return the missing-information list first.
 The key terms table and issue list follow the **Restructuring Term Sheet Issue
 List** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run restructuring-term-sheet-review on a fictional
-forbearance agreement where our client is the borrower; flag the issues and
-negotiation points for counsel."
-
-**Expected output shape:** a gates table, a source-cited key terms table, an
-issue list and risk matrix, a missing-terms list, negotiation points, and a
-verification checklist — with no enforceability or sufficiency conclusion, no
-computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

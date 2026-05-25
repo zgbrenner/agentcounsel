@@ -38,18 +38,6 @@ business and legal questions, and a verification checklist, so a qualified
 attorney can evaluate the document. This skill extracts and organizes terms; it
 approves no financing terms and determines no lien validity or priority.
 
-## Capability Disclosure
-
-**This skill does:** extract and summarize cash collateral / DIP financing
-terms with source citations; surface issues across collateral, liens, budgets,
-covenants, milestones, roll-ups, adequate protection, carveouts, defaults, and
-releases; flag missing facts; and prepare a verification checklist.
-
-**This skill does not:** approve any financing term; determine lien validity,
-priority, or perfection; determine whether adequate protection or a carveout is
-sufficient; conclude on the legal effect of releases or investigation
-provisions; or constitute legal advice.
-
 ## Use When
 
 - A cash collateral order, DIP credit agreement, DIP financing motion, or
@@ -83,6 +71,8 @@ record them as `not provided` and return the missing-information list first.
 - The request is to determine lien validity, priority, or perfection, or
   whether adequate protection is sufficient.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): approve any financing term; determine lien validity, priority, or perfection; determine whether adequate protection or a carveout is sufficient; conclude on the legal effect of releases or investigation provisions; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -139,17 +129,6 @@ record them as `not provided` and return the missing-information list first.
 The key terms table and issue list follow the **DIP / Cash Collateral Issue
 Table** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run cash-collateral-dip-financing-issue-spotter on a
-fictional DIP credit agreement where our client is the official committee;
-organize the issues for counsel."
-
-**Expected output shape:** a gates table, a source-cited key terms table, an
-issue list framed as questions, separated business and legal questions, missing
-facts, and a verification checklist — with no financing approval, no
-lien-priority determination, and no invented authority or deadlines.
 
 ## Attorney Verification Checklist
 

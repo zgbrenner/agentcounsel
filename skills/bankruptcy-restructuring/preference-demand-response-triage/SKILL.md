@@ -38,16 +38,6 @@ response-planning issues, and verification questions, so a qualified attorney
 can evaluate the demand and a response. This skill organizes facts; it
 determines no preference liability and no available defense.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; build a transfer timeline from the alleged
-transfers; assemble a checklist of facts that may bear on common defense
-themes; list missing documents; and prepare attorney verification questions.
-
-**This skill does not:** determine whether a transfer is avoidable or
-preferential; determine whether any defense applies or its strength; assess
-exposure; advise on settlement; or constitute legal advice.
-
 ## Use When
 
 - A creditor has received a preference demand and the underlying facts must be
@@ -81,6 +71,8 @@ first.
 - The request is to determine whether a defense applies, to assess exposure, or
   to advise on settlement.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): determine whether a transfer is avoidable or preferential; determine whether any defense applies or its strength; assess exposure; advise on settlement; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -131,17 +123,6 @@ first.
 
 The transfer timeline follows the **Preference Demand Response Timeline**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run preference-demand-response-triage for a fictional
-supplier that received a preference demand; organize the transfer timeline and
-defense-relevant facts for our attorney."
-
-**Expected output shape:** a gates table, a transfer timeline, a defense-facts
-checklist of facts to verify, response-planning issues, missing documents, and
-verification questions — with no preference-liability conclusion, no defense
-determination, and no invented look-back period or authority.
 
 ## Attorney Verification Checklist
 

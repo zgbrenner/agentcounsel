@@ -38,17 +38,6 @@ questions, so a qualified attorney can evaluate the automatic stay. This skill
 spots issues and organizes facts; it never concludes whether the stay applies
 or whether an action is permitted.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; inventory the actions, communications, and
-proceedings in question; map the facts that bear on stay concerns; surface
-escalation flags; and prepare attorney verification questions.
-
-**This skill does not:** conclude whether the automatic stay applies, whether
-an exception applies, whether an action is permitted or prohibited, or whether
-a stay violation has occurred; advise a party to take or avoid action; or
-constitute legal advice.
-
 ## Use When
 
 - A party needs the automatic stay concerns around an action, communication, or
@@ -81,6 +70,8 @@ them as `not provided` and return the missing-information list first.
 - The request is to determine whether a stay violation occurred or to advise on
   a stay-related action.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): conclude whether the automatic stay applies, whether an exception applies, whether an action is permitted or prohibited, or whether a stay violation has occurred; advise a party to take or avoid action; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -135,17 +126,6 @@ them as `not provided` and return the missing-information list first.
 
 The stay-risk fact map follows the **Automatic Stay Issue-Spotting Matrix**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run automatic-stay-issue-spotter for a fictional lender
-that sent a demand letter after learning a borrower filed; map the stay
-concerns for our attorney."
-
-**Expected output shape:** a gates table, an action inventory, a stay-risk fact
-map of open questions, escalation flags, missing facts, and verification
-questions — with no conclusion on whether the stay applies, no permission or
-prohibition stated, and no invented authority.
 
 ## Attorney Verification Checklist
 

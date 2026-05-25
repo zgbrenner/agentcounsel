@@ -33,12 +33,6 @@ tags:
 
 Review a marital settlement agreement, parenting agreement, support agreement, custody stipulation, or related settlement draft and produce a key-terms table, an issue list, an ambiguity list, and a missing-provisions list, so a qualified, licensed attorney has an organized review. This skill identifies and organizes what the document says; it concludes nothing on fairness, enforceability, adequacy, or tax consequences.
 
-## Capability Disclosure
-
-**This skill does:** extract the agreement's key terms with section references; spot issues, internal inconsistencies, and ambiguities; list provisions that appear to be missing or undefined; and frame attorney verification questions.
-
-**This skill does not:** conclude whether the agreement is fair, enforceable, valid, or binding; decide whether support is adequate or custody terms are appropriate; determine tax consequences; recommend whether to sign or reject; draft new provisions or a counter-agreement; or constitute legal advice.
-
 ## Use When
 
 - A marital settlement, parenting, support, or custody-stipulation agreement or draft needs an organized review for an attorney.
@@ -61,6 +55,8 @@ If the agreement text, the parties, or the matter type is missing, record it as 
 - The request is to determine tax consequences, support adequacy, or custody appropriateness.
 - The request is to recommend signing or rejecting, or to draft new or counter provisions.
 - The request is for legal advice or a negotiation strategy as a final answer.
+
+Also out of scope (this skill does not): conclude whether the agreement is fair, enforceable, valid, or binding; decide whether support is adequate or custody terms are appropriate; determine tax consequences; recommend whether to sign or reject; draft new provisions or a counter-agreement; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -98,12 +94,6 @@ If the agreement text, the parties, or the matter type is missing, record it as 
 6. **Ambiguity list** — ambiguous term | section | the readings it is open to.
 7. **Missing provisions** — provisions referenced or implied but absent, marked `not found`.
 8. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run settlement-agreement-issue-spotter on this fictional marital settlement agreement covering custody, support, and a property division, and surface the issues for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a key-terms table with section references; an issue list; an ambiguity list; a missing-provisions list; and a verification checklist — with no fairness or enforceability conclusion, no adequacy or tax conclusion, no property characterization, no computed deadline, and no invented terms or authority.
 
 ## Attorney Verification Checklist
 

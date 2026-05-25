@@ -38,17 +38,6 @@ missing facts, a document request list, and verification questions — so a
 qualified, licensed attorney can evaluate the matter. This skill organizes
 facts and spots issues; it determines no legal rights, deadlines, or outcomes.
 
-## Capability Disclosure
-
-**This skill does:** confirm intake gates; build a source-cited fact register;
-surface risk themes as questions; list missing facts and documents; and prepare
-attorney verification questions.
-
-**This skill does not:** provide bankruptcy legal advice; determine legal
-rights, deadlines, claim priority, or whether the automatic stay applies; file
-pleadings; calculate bar dates or deadlines; or advise a party to take or avoid
-any action.
-
 ## Use When
 
 - A new bankruptcy, insolvency, or restructuring matter needs structured intake
@@ -83,6 +72,8 @@ intake.
 - The request is to calculate a deadline or bar date, or to determine claim
   priority, stay applicability, or any legal conclusion.
 - The request is to prepare or file a pleading or form.
+
+Also out of scope (this skill does not): provide bankruptcy legal advice; determine legal rights, deadlines, claim priority, or whether the automatic stay applies; file pleadings; calculate bar dates or deadlines; or advise a party to take or avoid any action.
 
 ## Legal Safety Rules
 
@@ -140,17 +131,6 @@ intake.
 The fact register and risk themes follow the **Bankruptcy Matter Intake
 Matrix** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run bankruptcy-matter-intake for a fictional matter where
-our client is a supplier owed money by a company that just filed; prepare a
-source-cited working paper for counsel."
-
-**Expected output shape:** a gates table, a matter summary, a source-cited fact
-register, risk themes framed as questions, dates echoed for verification,
-missing-facts and document-request lists, and attorney verification questions —
-with no legal conclusion, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

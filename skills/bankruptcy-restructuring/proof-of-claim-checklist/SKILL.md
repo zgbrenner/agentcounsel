@@ -38,16 +38,6 @@ organizes what a proof of claim preparation requires; it does not prepare a
 filing-ready proof of claim and does not calculate a bar date or filing
 deadline.
 
-## Capability Disclosure
-
-**This skill does:** assemble a preparation checklist; track supporting
-documents; record the claimant, debtor/case, basis, and amount as provided;
-flag redaction and signature-authority needs; and list missing information.
-
-**This skill does not:** prepare a filing-ready proof of claim or any form;
-calculate a bar date or filing deadline; determine the claim amount, validity,
-allowance, priority, or secured status; or constitute legal advice.
-
 ## Use When
 
 - A creditor is preparing a proof of claim and needs a preparation checklist
@@ -81,6 +71,8 @@ it as `not provided` and return the missing-information list first.
 - The request is to calculate a bar date or filing deadline.
 - The request is to determine the claim amount, validity, priority, or secured
   status, or for legal advice.
+
+Also out of scope (this skill does not): prepare a filing-ready proof of claim or any form; calculate a bar date or filing deadline; determine the claim amount, validity, allowance, priority, or secured status; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -135,17 +127,6 @@ it as `not provided` and return the missing-information list first.
 
 The preparation checklist follows the **Proof of Claim Preparation Checklist**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run proof-of-claim-checklist for a fictional creditor
-getting ready to file a proof of claim; build the preparation checklist and
-document tracker for our attorney."
-
-**Expected output shape:** a gates table, a preparation checklist, a
-supporting-document tracker, any bar date echoed for verification, a
-missing-information list, and attorney verification items — with no
-filing-ready claim, no bar-date calculation, and no claim determination.
 
 ## Attorney Verification Checklist
 

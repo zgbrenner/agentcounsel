@@ -38,19 +38,6 @@ for each entry — so a qualified attorney can verify every date. This skill
 records and organizes user-supplied dates; it does not calculate, infer, or
 confirm any deadline.
 
-## Capability Disclosure
-
-**This skill does:** record the dates the user provides; cite each to its
-source; assign a responsible party and a status; flag every entry as requiring
-attorney verification; and list missing information.
-
-**This skill does not:** calculate, infer, or confirm a bar date, response
-deadline, objection deadline, or any other deadline; determine which deadlines
-apply; or constitute legal advice. It computes a deadline only when the user
-supplies the rule and the date calculation and asks for a draft tracker entry —
-and even then the entry is recorded as user-supplied and flagged for attorney
-verification.
-
 ## Use When
 
 - A team needs the bankruptcy dates and notices it has collected organized into
@@ -81,6 +68,8 @@ the missing-information list first.
   the user has not supplied.
 - The request is to determine which deadlines apply or to confirm a date.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): calculate, infer, or confirm a bar date, response deadline, objection deadline, or any other deadline; determine which deadlines apply; or constitute legal advice. It computes a deadline only when the user supplies the rule and the date calculation and asks for a draft tracker entry — and even then the entry is recorded as user-supplied and flagged for attorney verification.
 
 ## Legal Safety Rules
 
@@ -138,17 +127,6 @@ the missing-information list first.
 The draft deadline tracker follows the **Bankruptcy Deadline Tracker Intake
 Table** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run bankruptcy-deadline-tracker-intake for a fictional
-matter; here are the petition date, the bar date from the notice, and a hearing
-date — build a draft tracker for our attorney to verify."
-
-**Expected output shape:** a gates table and a draft deadline tracker where
-every date is cited to its source, assigned a responsible party and status, and
-flagged `[deadline verification required]`, plus near-term escalation flags and
-verification items — with no deadline calculated and no invented rule.
 
 ## Attorney Verification Checklist
 

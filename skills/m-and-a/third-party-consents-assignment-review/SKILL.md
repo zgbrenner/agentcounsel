@@ -40,26 +40,6 @@ required. Whether a clause is enforceable and whether the deal structure
 triggers it are legal questions for the attorney; this skill reports what the
 contracts say and flags those questions.
 
-## Capability Disclosure
-
-**This skill does:** identify, from the provided contracts or diligence
-summaries, the clauses that a deal may trigger — consent, notice, assignment,
-change-of-control, anti-assignment, termination, most-favored-nation,
-exclusivity, non-compete and non-solicit, data-transfer, and regulatory or
-customer/vendor approval clauses; record the contract and section for each;
-note the timing the contract itself states; describe the business impact of a
-triggered clause; organize everything into a consent tracker; and flag what is
-missing, not found, or ambiguous.
-
-**This skill does not:** opine on whether any clause is enforceable; conclude
-whether a consent or notice is legally required; decide, as a legal conclusion,
-whether the deal structure triggers a clause; supply jurisdiction-specific law,
-regulatory approval requirements, filing requirements, or antitrust thresholds;
-compute or confirm a deadline; draft consent or notice language; or replace the
-attorney's review of each contract. Enforceability and whether consent is
-required are legal questions for the attorney — this skill reports what the
-contracts say and flags the questions.
-
 ## Use When
 
 - A user asks to "list the consents we need," "review these contracts for
@@ -106,6 +86,8 @@ them. Do not review a document set you have not been given.
 - The document is a single commercial contract being reviewed for negotiation
   risk rather than for deal triggers — use
   `skills/contracts/contract-risk-review/SKILL.md`.
+
+Also out of scope (this skill does not): opine on whether any clause is enforceable; conclude whether a consent or notice is legally required; decide, as a legal conclusion, whether the deal structure triggers a clause; supply jurisdiction-specific law, regulatory approval requirements, filing requirements, or antitrust thresholds; compute or confirm a deadline; draft consent or notice language; or replace the attorney's review of each contract. Enforceability and whether consent is required are legal questions for the attorney — this skill reports what the contracts say and flags the questions.
 
 ## Legal Safety Rules
 
@@ -209,24 +191,6 @@ Deliver, in order:
 
 Use real Markdown tables. Use `[CONFIRM: ...]` wherever a term is uncertain. Do
 not fill a gap with an invented term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "We are the buyer in a stock purchase of the target. Here
-are five of the target's material contracts. Build a consent tracker so we know
-what change-of-control and consent issues we are dealing with."
-
-**Expected output shape:** a review summary stating the buyer-side perspective,
-the stock-purchase structure, and the five contracts reviewed; a consent
-tracker with one row per trigger clause, each citing the contract and section,
-recording what the clause says, the required action, any contract-stated timing
-flagged `[deadline verification required]`, the described business impact, an
-owner, and a follow-up; an open-legal-questions section flagging enforceability
-and whether consent is required as attorney questions rather than answering
-them; a table of any contracts the provided contracts reference but that were
-not produced; a follow-up list; and the attorney verification checklist. No
-clause is declared enforceable or unenforceable, no consent is declared legally
-required, no date is computed, and no jurisdiction-specific rule is supplied.
 
 ## Attorney Verification Checklist
 

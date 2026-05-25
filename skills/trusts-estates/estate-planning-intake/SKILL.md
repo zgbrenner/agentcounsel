@@ -38,16 +38,6 @@ document request list, and verification questions — so a qualified, licensed
 attorney can plan the engagement. This skill organizes facts and spots issues;
 it recommends no estate plan and gives no advice.
 
-## Capability Disclosure
-
-**This skill does:** confirm intake gates; build a source-cited fact register;
-map estate-planning issues as questions; list missing facts and documents; and
-prepare attorney verification questions.
-
-**This skill does not:** provide estate-planning, tax, or probate advice;
-recommend a specific estate plan, instrument, or structure; determine the
-validity or effect of any document; or constitute legal advice.
-
 ## Use When
 
 - A new estate-planning matter needs structured intake before substantive
@@ -83,6 +73,8 @@ substantive intake.
   recommendation on which plan or instrument to use.
 - The request is to draft a will, trust, or other estate-planning instrument.
 - The request is to determine the validity or effect of a document.
+
+Also out of scope (this skill does not): provide estate-planning, tax, or probate advice; recommend a specific estate plan, instrument, or structure; determine the validity or effect of any document; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -137,17 +129,6 @@ substantive intake.
 
 The planning issue map follows the **Estate Planning Intake Matrix** structure
 in `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run estate-planning-intake for a fictional married client
-with minor children and a small business; prepare a source-cited working paper
-for the attorney."
-
-**Expected output shape:** a gates table, an intake summary, a source-cited
-fact register, a planning issue map of open questions, missing-facts and
-document-request lists, and verification questions — with no plan
-recommendation, no computed tax or deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

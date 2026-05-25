@@ -41,25 +41,6 @@ legal advice and is not a conclusion that the disclosures are adequate. Whether
 a disclosure properly qualifies a representation — and the indemnity exposure
 that follows — is a legal judgment for the reviewing attorney.
 
-## Capability Disclosure
-
-**This skill does:** map each representation and warranty to the disclosure
-schedule that qualifies it; surface gaps where a representation has no schedule
-or a schedule has no representation; flag missing or broken schedule
-references; flag overbroad or vague exceptions; flag defined terms used
-inconsistently between the agreement and the schedules; flag stale dates; flag
-unresolved "to be provided," "[TBD]," or placeholder entries; and note where a
-known diligence fact appears to conflict with what the schedules disclose.
-
-**This skill does not:** conclude that the disclosures are adequate, complete,
-or accurate; decide whether a disclosure legally defeats, qualifies, or
-satisfies a representation; determine enforceability, breach, or indemnity
-exposure as a legal conclusion; supply jurisdiction-specific law, filing,
-securities, tax, antitrust, or employment rules; compute or confirm any
-deadline; draft final schedule or clause language; or replace attorney review
-of the disclosure package. It reports what the documents say and flags the
-legal questions — it does not answer them.
-
 ## Use When
 
 - A user asks to "review the disclosure schedules," "compare the reps to the
@@ -106,6 +87,8 @@ it. Do not review a document you have not been given.
 - The user wants a legal conclusion on whether a disclosure defeats a
   representation, or on breach or indemnity exposure — that requires an
   attorney.
+
+Also out of scope (this skill does not): conclude that the disclosures are adequate, complete, or accurate; decide whether a disclosure legally defeats, qualifies, or satisfies a representation; determine enforceability, breach, or indemnity exposure as a legal conclusion; supply jurisdiction-specific law, filing, securities, tax, antitrust, or employment rules; compute or confirm any deadline; draft final schedule or clause language; or replace attorney review of the disclosure package. It reports what the documents say and flags the legal questions — it does not answer them.
 
 ## Legal Safety Rules
 
@@ -242,26 +225,6 @@ Deliver, in order:
 Use `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[deadline verification required]`
 wherever something is uncertain. Do not fill a gap with an invented
 representation, schedule entry, or term.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "We are the buyer in a stock purchase. Here is the
-representations-and-warranties article and the disclosure schedules. Compare the
-reps to the schedules and tell me what is still open."
-
-**Expected output shape:** a review summary stating the buyer-side perspective,
-the deal type, and that the disclosure schedules were provided; a rep-by-rep
-mapping table with a representation per row, an agreement section citation and a
-schedule citation per row, and `Not found` where a representation has no
-schedule; a schedule-completeness list flagging any missing schedule, orphan
-schedule, broken reference, overbroad exception, inconsistent definition, or
-stale date; an unresolved-items list capturing each "to be provided" entry and
-any conflict between a known diligence fact and the schedules; and the attorney
-verification checklist. No disclosure is declared adequate or accurate, no
-representation is declared satisfied or breached, no date is computed, and no
-jurisdiction-specific rule is supplied. Where the schedules are not provided,
-the output instead leads with a prominent flag that the schedule comparison was
-not performed and reviews the representations alone.
 
 ## Attorney Verification Checklist
 

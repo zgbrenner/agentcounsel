@@ -38,17 +38,6 @@ missing facts, a document request list, and verification questions — so
 qualified tax counsel or a licensed tax professional can evaluate treatment.
 This skill spots issues and organizes facts; it does not decide tax treatment.
 
-## Capability Disclosure
-
-**This skill does:** confirm intake gates; build a source-cited fact register;
-map potential tax issues as open questions; list missing facts and documents;
-and prepare verification questions for a tax professional.
-
-**This skill does not:** provide tax advice; compute tax, gain, basis, or
-liability; determine tax treatment, nexus, entity classification, worker
-classification, or tax consequences; prepare or file returns; calculate
-deadlines; or opine on whether a tax position is valid.
-
 ## Use When
 
 - A new tax-sensitive matter, transaction, or activity needs structured intake
@@ -88,6 +77,8 @@ missing-information list before substantive intake.
   consequence, or whether a tax position is valid.
 - The request is for a filing deadline or a computed date.
 - The request is for tax advice rather than organized facts for a professional.
+
+Also out of scope (this skill does not): provide tax advice; compute tax, gain, basis, or liability; determine tax treatment, nexus, entity classification, worker classification, or tax consequences; prepare or file returns; calculate deadlines; or opine on whether a tax position is valid.
 
 ## Legal Safety Rules
 
@@ -144,17 +135,6 @@ missing-information list before substantive intake.
 6. **Missing information list** and **document request list**.
 7. **Tax-professional verification questions**.
 8. **Assumptions and unresolved items**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run tax-issue-intake for this matter — a fictional LLC
-expanding into new states — and prepare a source-cited working paper for our
-tax professional."
-
-**Expected output shape:** a gates table, an intake summary, a source-cited
-fact register, a Tax Issue Intake Matrix of open questions, missing-facts and
-document-request lists, and verification questions — no tax computation, no
-treatment or nexus conclusion, and no invented authority.
 
 ## Attorney Verification Checklist
 

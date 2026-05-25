@@ -38,16 +38,6 @@ list, and negotiation points, so a qualified tax professional can evaluate the
 tax terms from the user's perspective. This skill identifies and organizes
 provisions; it does not determine tax consequences or enforceability.
 
-## Capability Disclosure
-
-**This skill does:** extract and summarize tax provisions with source
-citations; build a role-aware issue checklist and risk matrix; flag missing
-provisions; and list negotiation points and verification questions.
-
-**This skill does not:** determine the tax consequences of a provision, the
-validity of a tax position, or the enforceability of a clause; compute tax;
-draft final clause language; or provide tax advice.
-
 ## Use When
 
 - A contract's tax provisions — gross-up, withholding, indemnity, allocation,
@@ -80,6 +70,8 @@ record it as `not provided` and return the missing-information list first.
 - The request is to decide whether a clause is enforceable, or to draft final
   clause language.
 - The request is to compute tax, or for tax advice.
+
+Also out of scope (this skill does not): determine the tax consequences of a provision, the validity of a tax position, or the enforceability of a clause; compute tax; draft final clause language; or provide tax advice.
 
 ## Legal Safety Rules
 
@@ -130,17 +122,6 @@ record it as `not provided` and return the missing-information list first.
 5. **Missing provisions** — expected tax provisions marked `not found`.
 6. **Negotiation points** — direction of change only, from the user's side.
 7. **Tax-professional verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run tax-provision-review-checklist on the tax sections of
-this fictional services agreement; we are the customer — flag the issues and
-negotiation points for our tax professional."
-
-**Expected output shape:** a gates table, a source-cited key-terms table, a
-provision checklist and risk matrix, a missing-provisions list, negotiation
-points, and a verification checklist — with no tax-consequence determination,
-no enforceability opinion, and no invented authority.
 
 ## Attorney Verification Checklist
 

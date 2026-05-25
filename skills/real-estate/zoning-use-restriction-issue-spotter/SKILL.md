@@ -39,22 +39,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice. It identifies questions worth asking; it does not answer whether
 a use is permitted.
 
-## Capability Disclosure
-
-**This skill does:** issue-spot potential zoning, use, and restriction concerns
-strictly from the materials the user provides; tie each concern to the source
-that raised it; and produce questions to direct to local counsel or a zoning
-consultant.
-
-**This skill does not:** state whether a use is legally permitted; determine a
-property's zoning classification or its compliance status; interpret a zoning
-code, ordinance, or restriction; decide whether a variance, special-use permit,
-or certificate of occupancy will issue; calculate or confirm any date or
-deadline; or supply jurisdiction-specific zoning or land-use law. Those are
-functions for local counsel or a zoning consultant. **This skill never tells the
-user that a use is or is not allowed.** Where the materials do not answer a
-question, the skill says so and routes the question to a human.
-
 ## Use When
 
 - A user asks to "spot the zoning issues," "flag use-restriction concerns," or
@@ -96,6 +80,8 @@ description alone, and do not proceed without knowing the jurisdiction.
   local counsel or a zoning consultant.
 - The user wants a deadline for a zoning application, appeal, or hearing
   computed — deadline calculation is always an attorney task.
+
+Also out of scope (this skill does not): state whether a use is legally permitted; determine a property's zoning classification or its compliance status; interpret a zoning code, ordinance, or restriction; decide whether a variance, special-use permit, or certificate of occupancy will issue; calculate or confirm any date or deadline; or supply jurisdiction-specific zoning or land-use law. Those are functions for local counsel or a zoning consultant. **This skill never tells the user that a use is or is not allowed.** Where the materials do not answer a question, the skill says so and routes the question to a human.
 
 ## Legal Safety Rules
 
@@ -211,26 +197,6 @@ Deliver, in order:
 
 Use `[CONFIRM: ...]` and `[verify jurisdiction]` wherever something is
 uncertain. Do not fill a gap with an invented zoning rule or restriction.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "We want to put a fitness studio with evening classes
-into this retail unit in Springfield. Here's the zoning report, the recorded
-CC&Rs for the center, and our draft lease's use clause — spot the issues and
-tell me what to ask local counsel."
-
-**Expected output shape:** a header naming the property, retail type,
-Springfield as the user-stated jurisdiction, and the fitness-studio use; a
-restatement of the intended use labeled as a user-stated fact; a materials list
-noting the zoning report, CC&Rs, and use clause were provided and flagging any
-referenced plat or permit not provided; an issue-spotting table that, for
-example, flags an exclusive-use or prohibited-use clause that may reach a
-fitness use, a parking ratio in the CC&Rs against evening-class demand, and an
-hours-of-operation restriction — each tied to its source, none stating whether
-the use is allowed; a numbered questions-for-local-counsel list that routes the
-permitted-use, zoning-classification, and any variance or certificate questions
-to a human; a missing-materials list; and the attorney verification checklist.
-No zoning rule is invented and no conclusion on permissibility is stated.
 
 ## Attorney Verification Checklist
 

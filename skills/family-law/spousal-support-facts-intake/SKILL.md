@@ -32,12 +32,6 @@ tags:
 
 Gather the facts relevant to a spousal support or alimony review — the relationship or marriage duration if provided, income, expenses, employment, health facts if provided, standard-of-living facts if provided, assets and debts, existing orders, and financial disclosures — into a structured intake table, a missing-documents list, and questions for counsel, so a qualified, licensed attorney has an organized fact set. This skill organizes what the user provides; it calculates no support and determines no entitlement.
 
-## Capability Disclosure
-
-**This skill does:** organize spousal-support-relevant facts by category; record duration, income, expense, employment, health, and standard-of-living facts exactly as the user supplies them; list missing documents; and frame questions for counsel.
-
-**This skill does not:** calculate or estimate spousal support or alimony; apply a support formula or guideline; determine entitlement, duration, or amount; weigh statutory factors; determine or impute income or earning capacity; compute or verify a deadline; or constitute legal advice.
-
 ## Use When
 
 - A spousal support or alimony review is starting and the relevant facts must be organized for an attorney.
@@ -62,6 +56,8 @@ If the jurisdiction or the parties is missing, record it as `not provided` and r
 - The request is to determine entitlement, or to determine or impute income or earning capacity.
 - The request is for legal advice or a litigation strategy.
 - A detailed property/debt schedule is the goal (use `asset-debt-schedule-builder`).
+
+Also out of scope (this skill does not): calculate or estimate spousal support or alimony; apply a support formula or guideline; determine entitlement, duration, or amount; weigh statutory factors; determine or impute income or earning capacity; compute or verify a deadline; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -99,12 +95,6 @@ If the jurisdiction or the parties is missing, record it as `not provided` and r
 5. **Missing documents** — documents to obtain, grouped by category, marked `not provided`.
 6. **Questions for counsel** — statutory-factor inputs, income and earning-capacity questions, and duration questions for the attorney.
 7. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run spousal-support-facts-intake on this fictional matter — a long marriage, one party out of the workforce — and organize the income, expense, and standard-of-living facts for the attorney."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; a category-by-category intake table of user-supplied facts; a missing-documents list; questions for counsel; and a verification checklist — with no support calculation, no entitlement determination, no income or earning-capacity determination, no computed deadline, and no invented formula.
 
 ## Attorney Verification Checklist
 

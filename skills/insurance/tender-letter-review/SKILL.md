@@ -33,12 +33,6 @@ tags:
 
 Review a tender letter, notice of claim, additional insured tender, or contractual indemnity tender into a completeness checklist, a missing-documents list, risk flags, and proposed revisions for attorney review. This skill organizes what the tender contains and identifies gaps; it reaches no conclusion that the tender is timely, valid, or sufficient.
 
-## Capability Disclosure
-
-**This skill does:** map the tender's contents — recipient, asserted policy or contract basis, claim identification, duties tendered, and supporting documents; build a completeness checklist; flag missing documents and risks; and propose draft revisions for attorney review.
-
-**This skill does not:** conclude that a tender is timely, valid, sufficient, or properly made; determine additional insured status; decide whether a duty to defend or indemnify was triggered; conclude on contractual indemnity obligations; determine the effect of notice timing; or constitute legal advice.
-
 ## Use When
 
 - A tender letter, claim notice, additional insured tender, or contractual indemnity tender must be reviewed before it is sent or after it is received.
@@ -63,6 +57,8 @@ If the letter, the asserted basis, or the user's role is missing, record it as `
 - The request is to determine additional insured status, a duty to defend or indemnify, or a contractual indemnity obligation.
 - The request is to conclude on the consequences of notice timing, or for legal advice.
 - The request is to approve sending the tender as final (the attorney does that).
+
+Also out of scope (this skill does not): conclude that a tender is timely, valid, sufficient, or properly made; determine additional insured status; decide whether a duty to defend or indemnify was triggered; conclude on contractual indemnity obligations; determine the effect of notice timing; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -98,12 +94,6 @@ If the letter, the asserted basis, or the user's role is missing, record it as `
 6. **Risk flags** — issue | description | source | attorney follow-up.
 7. **Proposed attorney-review revisions** — direction-only suggestions, clearly draft.
 8. **Attorney verification questions** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run tender-letter-review on this fictional additional insured tender our subcontractor sent us — check completeness and flag risks for counsel before we respond."
-
-**Expected output shape:** a gates table, a tender summary, a completeness checklist, a missing-documents list, risk flags, direction-only proposed revisions, and attorney verification questions — with no validity, timeliness, or sufficiency conclusion, no additional-insured or duty-to-defend determination, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

@@ -38,16 +38,6 @@ attorney-supervised diligence can request, track, and escalate the right
 documents. This skill scopes and organizes diligence requests; it determines no
 legal exposure and no claim value.
 
-## Capability Disclosure
-
-**This skill does:** scope diligence by workstream; produce a prioritized,
-source-aware request list; build a follow-up tracker; assign owners; and frame
-open questions for the attorney.
-
-**This skill does not:** determine legal exposure, claim value, lien validity
-or priority, or avoidance-action risk; conclude on any legal question; or
-constitute legal advice.
-
 ## Use When
 
 - A distressed M&A deal, a bankruptcy asset sale, creditor or lender diligence,
@@ -80,6 +70,8 @@ list first.
 - The request is to determine legal exposure, claim value, or lien priority.
 - The request is to conclude on avoidance-action risk or any legal question.
 - The request is for legal advice or a deadline calculation.
+
+Also out of scope (this skill does not): determine legal exposure, claim value, lien validity or priority, or avoidance-action risk; conclude on any legal question; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -131,17 +123,6 @@ list first.
 
 The request list follows the **Bankruptcy Diligence Request List** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run bankruptcy-diligence-request-list for a fictional
-buyer evaluating a bankruptcy asset purchase; build the request list by
-workstream for our deal team."
-
-**Expected output shape:** a gates table, a workstream-organized request list
-with priority and rationale, a follow-up tracker, and missing-information and
-verification lists — with no exposure or valuation conclusion, no lien-priority
-determination, and no invented authority or deadlines.
 
 ## Attorney Verification Checklist
 

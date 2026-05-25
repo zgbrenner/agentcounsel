@@ -42,24 +42,6 @@ This skill produces draft work product for attorney review only. It is not
 legal advice. It identifies the latest *stated* term and surfaces conflicts and
 gaps — it does not decide which document legally controls.
 
-## Capability Disclosure
-
-**This skill does:** compare the base lease against every provided amendment,
-side letter, assignment, guaranty, estoppel, and related document; trace each
-changed term across document versions; identify the latest stated value of each
-material term with its source; build a change history; and flag conflicts,
-apparently superseded provisions, referenced-but-missing amendments, and
-unresolved ambiguity.
-
-**This skill does not:** decide which document or version legally controls;
-interpret ambiguous superseding language to reach a legal conclusion; determine
-whether any term, amendment, or assignment is enforceable; calculate or confirm
-any date or deadline; supply a term the documents do not state; assess the
-documents against the law of any jurisdiction; or replace a reading of the
-documents themselves. Those are attorney functions. Where the document set is
-unclear, conflicting, or incomplete, the reconciliation says so — it does not
-fill the gap or pick a winner.
-
 ## Use When
 
 - A user asks to "reconcile this lease and its amendments," "figure out the
@@ -99,6 +81,8 @@ it. Do not reconcile a document set you have not been given.
 - The user wants a legal opinion on which document controls, what an ambiguous
   superseding clause means, or whether an amendment is enforceable — that
   requires an attorney.
+
+Also out of scope (this skill does not): decide which document or version legally controls; interpret ambiguous superseding language to reach a legal conclusion; determine whether any term, amendment, or assignment is enforceable; calculate or confirm any date or deadline; supply a term the documents do not state; assess the documents against the law of any jurisdiction; or replace a reading of the documents themselves. Those are attorney functions. Where the document set is unclear, conflicting, or incomplete, the reconciliation says so — it does not fill the gap or pick a winner.
 
 ## Legal Safety Rules
 
@@ -200,25 +184,6 @@ Deliver, in order:
 Use `[CONFIRM: ...]` wherever a value, an ordering, or a chain is uncertain. Do
 not fill a gap with an invented term and do not silently pick a controlling
 document.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Reconcile this lease. Here is the base lease, the first
-amendment, and a side letter. We are the landlord — tell me the current terms."
-
-**Expected output shape:** a header noting the property, the landlord
-perspective, and the three documents provided; a document-set-and-chronology
-table ordering the base lease, the first amendment, and the side letter, with
-any inferred ordering flagged for confirmation; a current-controlling-term
-table giving, for each material term, the latest stated value with a
-document-and-section citation and the prior superseded value where one exists;
-a change history tracing each amended term; and a consolidated list of
-conflicts, apparently superseded provisions, referenced-but-not-provided
-documents, and ambiguities — for example a note that the side letter and the
-first amendment state inconsistent renewal-notice windows, surfaced with both
-sources rather than resolved. No date is computed, no term is supplied that the
-documents do not state, and no document is declared controlling. The attorney
-verification checklist is attached, unchecked.
 
 ## Attorney Verification Checklist
 

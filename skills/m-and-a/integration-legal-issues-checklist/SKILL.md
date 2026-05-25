@@ -40,22 +40,6 @@ requires. Integration touches HR, tax, antitrust, regulatory, and employment
 questions that belong to the responsible attorneys and specialists; this
 checklist is a process scaffold those professionals adapt and own.
 
-## Capability Disclosure
-
-**This skill does:** generate a structured legal integration checklist for an
-M&A transaction, organized by workstream; assign a candidate legal owner and
-business owner to each task; assign a priority; cite a provided document where
-a task is drawn from one; and surface open questions and escalation items so
-nothing legal is integrated silently.
-
-**This skill does not:** perform the integration; provide HR, tax, antitrust,
-regulatory, or employment legal conclusions; decide what the law requires;
-determine which employees may be terminated or how their benefits are handled;
-state the tax treatment of the transaction or the integration; compute or
-confirm a deadline; or supply jurisdiction-specific law, filing requirements,
-or thresholds. The checklist is a process scaffold — the attorneys and
-specialists adapt it, populate it, and own every legal conclusion.
-
 ## Use When
 
 - A user asks to "build an integration checklist," "list the legal issues for
@@ -102,6 +86,8 @@ without knowing the deal and the posture it is for.
   conclusion — that requires the responsible attorney or specialist.
 - The user wants the integration executed, decided, or project-managed rather
   than a legal checklist scaffold drafted.
+
+Also out of scope (this skill does not): perform the integration; provide HR, tax, antitrust, regulatory, or employment legal conclusions; decide what the law requires; determine which employees may be terminated or how their benefits are handled; state the tax treatment of the transaction or the integration; compute or confirm a deadline; or supply jurisdiction-specific law, filing requirements, or thresholds. The checklist is a process scaffold — the attorneys and specialists adapt it, populate it, and own every legal conclusion.
 
 ## Legal Safety Rules
 
@@ -233,26 +219,6 @@ Deliver, in order:
 State plainly, near the top of the output, that the checklist contains no HR,
 tax, antitrust, regulatory, or employment legal conclusions and that those
 questions are routed to the responsible attorneys and specialists.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "We just signed a stock purchase of a 200-employee
-software company; we are the buyer; it has not closed yet. Build us the legal
-integration checklist."
-
-**Expected output shape:** an integration summary stating a buyer-side,
-pre-close stock purchase and the target profile as given; a legal integration
-checklist with one table per workstream — entity, governance, contracts,
-customer and vendor notices, employment and benefits, IP, privacy, regulatory,
-antitrust clean-team boundaries (included because the matter is pre-close),
-litigation, insurance, real estate, records, tax, and policy — each row giving
-a task, a candidate legal and business owner, a priority, a source or
-`No source document`, open questions, and escalation items; a consolidated
-open-questions-and-escalation table routing the employment, tax, antitrust, and
-regulatory questions to the responsible attorneys and specialists; and the
-attorney verification checklist. No employment, tax, antitrust, or regulatory
-legal conclusion is stated, no date is computed, and no jurisdiction-specific
-rule is supplied.
 
 ## Attorney Verification Checklist
 

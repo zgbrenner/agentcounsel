@@ -33,12 +33,6 @@ tags:
 
 Build a source-cited property and debt schedule from user-provided facts and documents — real estate, bank accounts, investments, retirement accounts, business interests, vehicles, personal property, debts, credit cards, loans, and tax liabilities — so a qualified, licensed attorney has an organized schedule for a family law matter. This skill organizes what the user provides; it characterizes no property and values nothing on its own.
 
-## Capability Disclosure
-
-**This skill does:** organize assets and debts into a schedule; record each item with its source, the owner or title as the user provides it, any value or debt amount the user supplies, and a disputed/undisputed status; and flag unknown, ambiguous, and missing items.
-
-**This skill does not:** characterize property as marital, community, or separate; value, appraise, or estimate the worth of any asset; compute equity, net worth, or a division; decide who an asset belongs to; conclude on reimbursements or credits; compute or verify a deadline; or constitute legal advice.
-
 ## Use When
 
 - A family law matter needs an organized, source-cited schedule of assets and debts for an attorney.
@@ -61,6 +55,8 @@ If the document set, the parties, or the jurisdiction is missing, record it as `
 - The request is to value, appraise, or estimate an asset, or to compute equity or a division.
 - The request is for legal advice or a settlement recommendation.
 - The request is to advise on hiding, moving, or undervaluing an asset — decline and flag it.
+
+Also out of scope (this skill does not): characterize property as marital, community, or separate; value, appraise, or estimate the worth of any asset; compute equity, net worth, or a division; decide who an asset belongs to; conclude on reimbursements or credits; compute or verify a deadline; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -99,12 +95,6 @@ If the document set, the parties, or the jurisdiction is missing, record it as `
 6. **Unknown / ambiguous items** — undocumented items, conflicting figures, and items marked `not provided` / `ambiguous`.
 7. **Missing facts** — documents, values, and titling information to obtain.
 8. **Attorney verification checklist** and **assumptions**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run asset-debt-schedule-builder on this fictional divorce — a house, two bank accounts, a retirement account, a car loan, and credit-card debt — and build the schedule from the statements provided."
-
-**Expected output shape:** a capability notice; a safety note; a gates table; an asset schedule and a debt schedule, each source-cited with owner and user-provided-value columns and a disputed/undisputed status; an unknown/ambiguous-items list; a missing-facts list; and a verification checklist — with no property characterization, no valuation, no division, no computed deadline, and no invented law.
 
 ## Attorney Verification Checklist
 

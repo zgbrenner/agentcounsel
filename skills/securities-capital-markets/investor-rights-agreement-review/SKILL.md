@@ -31,12 +31,6 @@ tags:
 
 Review investor-side financing governance and rights documents for key terms, gaps, conflicts, and negotiation points. This skill provides **draft work product for attorney review only** and is **not legal advice**.
 
-## Capability Disclosure
-
-**This skill does:** organize user-provided facts and documents into a filing-type-aware legal workflow output, track missing inputs, and cite source locations (section/page/item/clause) for extracted statements.
-
-**This skill does not:** provide final legal conclusions, approve filings or transactions, determine exemption availability, determine beneficial ownership or insider status, approve trading decisions, compute deadlines, or provide investment, tax, broker-dealer, exchange, FINRA, blue-sky, or investment-company conclusions.
-
 ## Use When
 
 - The user requests investor rights agreement review.
@@ -58,6 +52,8 @@ If core gating inputs are missing, stop substantive analysis and return an intak
 - The user asks for final legal advice or a final filing/trading/exemption/ownership determination.
 - No source materials are provided but the user asks for source-grounded conclusions.
 - The user asks for valuation, buy/sell/hold advice, portfolio guidance, or market predictions.
+
+Also out of scope (this skill does not): provide final legal conclusions, approve filings or transactions, determine exemption availability, determine beneficial ownership or insider status, approve trading decisions, compute deadlines, or provide investment, tax, broker-dealer, exchange, FINRA, blue-sky, or investment-company conclusions.
 
 ## Legal Safety Rules
 
@@ -104,12 +100,6 @@ If core gating inputs are missing, stop substantive analysis and return an intak
 4. **Missing Information / Conflicts / Open Questions**.
 5. **Attorney Verification Items**.
 6. **Assumptions and Limits**.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Use this skill for our matter with the attached documents and produce a source-cited draft."
-
-**Expected output shape:** a scoped, source-cited draft that includes skill-specific tables/checklists, explicit missing information flags, no invented law/deadlines/citations, and a final attorney-verification section.
 
 ## Attorney Verification Checklist
 

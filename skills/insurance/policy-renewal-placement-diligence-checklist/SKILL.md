@@ -33,12 +33,6 @@ tags:
 
 Generate a legal and compliance-oriented diligence checklist for an insurance policy renewal or new placement — covering expiring policies, claims history, material changes, contracts requiring coverage, new operations and jurisdictions, regulatory issues if supplied, additional insured obligations, coverage gaps, exclusions, endorsements, limits, deductibles and SIRs, and open-claim implications — for attorney and broker review. This skill produces a process checklist; it recommends no carrier, binds no coverage, and gives no insurance sales advice.
 
-## Capability Disclosure
-
-**This skill does:** assemble a tailored diligence checklist for a renewal or placement; build a document request list; surface coverage-gap questions; and list verification items for the attorney and the broker.
-
-**This skill does not:** recommend or compare carriers; bind, place, or quote coverage; provide insurance sales, brokerage, or pricing advice; determine whether coverage is adequate; decide what limits or retentions to buy; conclude on regulatory compliance; or constitute legal advice.
-
 ## Use When
 
 - A renewal or new placement needs a structured legal and compliance diligence checklist.
@@ -63,6 +57,8 @@ If the renewal/placement context, the lines in scope, or the user's role is miss
 - The request is to bind, place, or quote coverage, or for insurance sales, brokerage, or pricing advice.
 - The request is to decide what limits, retentions, or coverages to purchase, or to conclude that a program is adequate.
 - The request is for legal advice or a regulatory-compliance conclusion.
+
+Also out of scope (this skill does not): recommend or compare carriers; bind, place, or quote coverage; provide insurance sales, brokerage, or pricing advice; determine whether coverage is adequate; decide what limits or retentions to buy; conclude on regulatory compliance; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -101,12 +97,6 @@ If the renewal/placement context, the lines in scope, or the user's role is miss
 5. **Coverage gap questions** — gaps and structure questions for the attorney and broker, framed as questions.
 6. **Attorney and broker verification items** — what the attorney and the broker must each confirm; carrier selection, placement, and pricing are noted as broker/client decisions outside this checklist.
 7. **Assumptions** — no carrier recommendation, no placement, and no adequacy or compliance conclusion is given.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run policy-renewal-placement-diligence-checklist for our fictional company's upcoming general liability and property renewal — we have new operations in two states; build the diligence checklist for counsel and our broker."
-
-**Expected output shape:** a gates table, a workstream-organized diligence checklist, a document request list, coverage-gap questions, and attorney/broker verification items — with no carrier recommendation, no placement or pricing advice, no adequacy or compliance conclusion, no computed deadline, and no invented authority.
 
 ## Attorney Verification Checklist
 

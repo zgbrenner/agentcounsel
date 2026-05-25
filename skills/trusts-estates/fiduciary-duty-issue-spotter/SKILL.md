@@ -38,16 +38,6 @@ verification questions, so a qualified attorney can evaluate fiduciary conduct.
 This skill spots issues and organizes facts; it concludes no breach, no
 liability, and no compliance.
 
-## Capability Disclosure
-
-**This skill does:** confirm gates; extract source-cited facts bearing on
-fiduciary conduct; surface potential fiduciary-duty issues as questions; flag
-escalation items; and prepare attorney verification questions.
-
-**This skill does not:** conclude whether a fiduciary breached a duty, is
-liable, or complied with any standard; determine whether a transaction was
-proper; quantify damages; or constitute legal advice.
-
 ## Use When
 
 - A fiduciary's conduct must be issue-spotted and organized for an attorney.
@@ -76,6 +66,8 @@ first.
 - The request is to determine whether a transaction was proper or to quantify
   damages.
 - The request is for legal advice.
+
+Also out of scope (this skill does not): conclude whether a fiduciary breached a duty, is liable, or complied with any standard; determine whether a transaction was proper; quantify damages; or constitute legal advice.
 
 ## Legal Safety Rules
 
@@ -128,17 +120,6 @@ first.
 
 The issue matrix follows the **Fiduciary Duty Issue Matrix** structure in
 `skills/trusts-estates/references/output-patterns.md`.
-
-## Example Request and Expected Output Shape
-
-**Example request:** "Run fiduciary-duty-issue-spotter for a fictional matter
-where beneficiaries have raised concerns about a trustee's investment and
-expense decisions; organize the issues for the attorney."
-
-**Expected output shape:** a gates table, source-cited facts, a fiduciary-duty
-issue matrix of open questions, escalation items, missing facts, and
-verification questions — with no breach, liability, or compliance conclusion
-and no invented standards.
 
 ## Attorney Verification Checklist
 
