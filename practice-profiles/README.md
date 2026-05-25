@@ -39,7 +39,7 @@ The privilege analysis for any deliverable a profile helps to produce belongs in
 
 ## Relationship to Cold-Start Interview Skills
 
-Four practice-area profiles have a matching cold-start interview skill under `skills/setup/`. Those skills walk a practice group through setting up the profile by asking guided questions and producing a draft-completed version for attorney review:
+Every practice-area profile has a matching cold-start interview skill under `skills/setup/`. Those skills walk a practice group through setting up the profile by asking guided questions and producing a draft-completed version for attorney review:
 
 | Profile | Cold-Start Interview Skill |
 |---|---|
@@ -47,8 +47,22 @@ Four practice-area profiles have a matching cold-start interview skill under `sk
 | `practice-profiles/litigation.md` | `skills/setup/litigation-cold-start-interview/SKILL.md` |
 | `practice-profiles/privacy.md` | `skills/setup/privacy-cold-start-interview/SKILL.md` |
 | `practice-profiles/corporate.md` | `skills/setup/corporate-cold-start-interview/SKILL.md` |
+| `practice-profiles/employment.md` | `skills/setup/employment-cold-start-interview/SKILL.md` |
+| `practice-profiles/ip.md` | `skills/setup/ip-cold-start-interview/SKILL.md` |
+| `practice-profiles/ai-governance.md` | `skills/setup/ai-governance-cold-start-interview/SKILL.md` |
+| `practice-profiles/m-and-a.md` | `skills/setup/m-and-a-cold-start-interview/SKILL.md` |
+| `practice-profiles/tax.md` | `skills/setup/tax-cold-start-interview/SKILL.md` |
+| `practice-profiles/trusts-estates.md` | `skills/setup/trusts-estates-cold-start-interview/SKILL.md` |
+| `practice-profiles/real-estate.md` | `skills/setup/real-estate-cold-start-interview/SKILL.md` |
+| `practice-profiles/securities-capital-markets.md` | `skills/setup/securities-capital-markets-cold-start-interview/SKILL.md` |
+| `practice-profiles/regulatory.md` | `skills/setup/regulatory-cold-start-interview/SKILL.md` |
+| `practice-profiles/antitrust-competition.md` | `skills/setup/antitrust-competition-cold-start-interview/SKILL.md` |
+| `practice-profiles/bankruptcy-restructuring.md` | `skills/setup/bankruptcy-restructuring-cold-start-interview/SKILL.md` |
+| `practice-profiles/insurance.md` | `skills/setup/insurance-cold-start-interview/SKILL.md` |
+| `practice-profiles/family-law.md` | `skills/setup/family-law-cold-start-interview/SKILL.md` |
+| `practice-profiles/product-legal.md` | `skills/setup/product-legal-cold-start-interview/SKILL.md` |
 
-The remaining profiles — `employment.md`, `product-legal.md`, `regulatory.md`, `ai-governance.md`, and `ip.md` — are populated directly by the practice group with the supervising attorney.
+The four hand-authored interviews — contracts, litigation, privacy, corporate — are maintained as standalone Markdown files. The remaining fourteen are generated from `scripts/generate_cold_start_interviews.py`; edit the per-area question bank in that script (not the SKILL.md output) and rerun the generator to refresh them.
 
 ---
 

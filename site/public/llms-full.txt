@@ -2,7 +2,7 @@
 
 > Full catalog of every AgentCounsel skill: name, repository path, catalog page, trigger description, and a use-when summary. Every skill produces draft legal work product for review by a licensed attorney; AgentCounsel does not provide legal advice.
 
-Total skills: 165
+Total skills: 179
 Practice areas: 23
 
 ## Legal Research (1 skill)
@@ -1627,7 +1627,37 @@ Use when:
   - A recurring inquiry arrives that the legal team normally handles with a standard template.
   - The team needs a consistent first draft together with a check on whether the matter is routine enough to be templated at all.
 
-## Setup (5 skills)
+## Setup (19 skills)
+
+### AI Governance Cold-Start Interview
+Path: skills/setup/ai-governance-cold-start-interview/SKILL.md
+Catalog page: skills/setup/ai-governance-cold-start-interview.html
+Trigger: "Use when a ai governance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/ai-governance.md for the first time.
+  - A ai governance practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the ai governance area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Antitrust / Competition Cold-Start Interview
+Path: skills/setup/antitrust-competition-cold-start-interview/SKILL.md
+Catalog page: skills/setup/antitrust-competition-cold-start-interview.html
+Trigger: "Use when a antitrust / competition practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/antitrust-competition.md for the first time.
+  - A antitrust / competition practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the antitrust / competition area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Bankruptcy and Restructuring Cold-Start Interview
+Path: skills/setup/bankruptcy-restructuring-cold-start-interview/SKILL.md
+Catalog page: skills/setup/bankruptcy-restructuring-cold-start-interview.html
+Trigger: "Use when a bankruptcy and restructuring practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/bankruptcy-restructuring.md for the first time.
+  - A bankruptcy and restructuring practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the bankruptcy and restructuring area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
 ### Contracts Cold-Start Interview
 Path: skills/setup/contracts-cold-start-interview/SKILL.md
@@ -1660,6 +1690,46 @@ Use when:
   - An existing matter has accumulated drafts, dates, and open items across several conversations and now needs a consolidated workspace.
   - The user is unsure which matter-workspace template fits the matter and wants a recommendation.
 
+### Employment Cold-Start Interview
+Path: skills/setup/employment-cold-start-interview/SKILL.md
+Catalog page: skills/setup/employment-cold-start-interview.html
+Trigger: "Use when a employment practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/employment.md for the first time.
+  - A employment practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the employment area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Family Law Cold-Start Interview
+Path: skills/setup/family-law-cold-start-interview/SKILL.md
+Catalog page: skills/setup/family-law-cold-start-interview.html
+Trigger: "Use when a family law practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/family-law.md for the first time.
+  - A family law practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the family law area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Insurance Cold-Start Interview
+Path: skills/setup/insurance-cold-start-interview/SKILL.md
+Catalog page: skills/setup/insurance-cold-start-interview.html
+Trigger: "Use when a insurance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/insurance.md for the first time.
+  - A insurance practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the insurance area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Intellectual Property Cold-Start Interview
+Path: skills/setup/ip-cold-start-interview/SKILL.md
+Catalog page: skills/setup/ip-cold-start-interview.html
+Trigger: "Use when a intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/ip.md for the first time.
+  - A intellectual property practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the intellectual property area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
 ### Litigation Cold-Start Interview
 Path: skills/setup/litigation-cold-start-interview/SKILL.md
 Catalog page: skills/setup/litigation-cold-start-interview.html
@@ -1670,6 +1740,16 @@ Use when:
   - The library is being stood up for the first time and the litigation area is included in scope.
   - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
+### M&A Cold-Start Interview
+Path: skills/setup/m-and-a-cold-start-interview/SKILL.md
+Catalog page: skills/setup/m-and-a-cold-start-interview.html
+Trigger: "Use when a m&a practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/m-and-a.md for the first time.
+  - A m&a practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the m&a area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
 ### Privacy Cold-Start Interview
 Path: skills/setup/privacy-cold-start-interview/SKILL.md
 Catalog page: skills/setup/privacy-cold-start-interview.html
@@ -1678,5 +1758,65 @@ Use when:
   - A team is adopting AgentCounsel and needs to configure practice-profiles/privacy.md for the first time.
   - A privacy practice group is being onboarded to the library and no current profile exists.
   - The library is being stood up for the first time and the privacy area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Product Legal Cold-Start Interview
+Path: skills/setup/product-legal-cold-start-interview/SKILL.md
+Catalog page: skills/setup/product-legal-cold-start-interview.html
+Trigger: "Use when a product legal practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/product-legal.md for the first time.
+  - A product legal practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the product legal area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Real Estate Cold-Start Interview
+Path: skills/setup/real-estate-cold-start-interview/SKILL.md
+Catalog page: skills/setup/real-estate-cold-start-interview.html
+Trigger: "Use when a real estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/real-estate.md for the first time.
+  - A real estate practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the real estate area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Regulatory Cold-Start Interview
+Path: skills/setup/regulatory-cold-start-interview/SKILL.md
+Catalog page: skills/setup/regulatory-cold-start-interview.html
+Trigger: "Use when a regulatory practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/regulatory.md for the first time.
+  - A regulatory practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the regulatory area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Securities and Capital Markets Cold-Start Interview
+Path: skills/setup/securities-capital-markets-cold-start-interview/SKILL.md
+Catalog page: skills/setup/securities-capital-markets-cold-start-interview.html
+Trigger: "Use when a securities and capital markets practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/securities-capital-markets.md for the first time.
+  - A securities and capital markets practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the securities and capital markets area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Tax Cold-Start Interview
+Path: skills/setup/tax-cold-start-interview/SKILL.md
+Catalog page: skills/setup/tax-cold-start-interview.html
+Trigger: "Use when a tax practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/tax.md for the first time.
+  - A tax practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the tax area is included in scope.
+  - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
+
+### Trusts and Estates Cold-Start Interview
+Path: skills/setup/trusts-estates-cold-start-interview/SKILL.md
+Catalog page: skills/setup/trusts-estates-cold-start-interview.html
+Trigger: "Use when a trusts and estates practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+Use when:
+  - A team is adopting AgentCounsel and needs to configure practice-profiles/trusts-estates.md for the first time.
+  - A trusts and estates practice group is being onboarded to the library and no current profile exists.
+  - The library is being stood up for the first time and the trusts and estates area is included in scope.
   - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
