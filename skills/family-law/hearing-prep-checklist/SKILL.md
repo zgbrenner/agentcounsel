@@ -16,7 +16,7 @@ outputs:
   - "Open-questions-for-counsel list and missing-facts list"
   - "Attorney verification checklist"
 related_skills:
-  - skills/family-law/family-law-discovery-tracker/SKILL.md
+  - skills/family-law/discovery-tracker/SKILL.md
   - skills/family-law/custody-parenting-facts-chronology/SKILL.md
 tags:
   - family-law

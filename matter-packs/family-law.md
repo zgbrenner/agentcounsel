@@ -26,7 +26,7 @@ resource — never to continue the workflow.
   case stage; the jurisdiction; whether children are involved; any existing
   orders; and any pleadings, orders, or correspondence available.
 - **Recommended skill sequence:**
-  `skills/family-law/family-law-matter-intake/SKILL.md`
+  `skills/family-law/matter-intake/SKILL.md`
   -> `skills/family-law/divorce-intake-organizer/SKILL.md` (if a dissolution or
   divorce is involved)
   -> `skills/family-law/custody-parenting-facts-chronology/SKILL.md` (if
@@ -122,7 +122,7 @@ resource — never to continue the workflow.
   involved)
   -> `skills/family-law/spousal-support-facts-intake/SKILL.md` (if spousal
   support is involved)
-  -> `skills/family-law/family-law-discovery-tracker/SKILL.md`.
+  -> `skills/family-law/discovery-tracker/SKILL.md`.
 - **Expected outputs:** a source-cited property/debt schedule; child- and
   spousal-support fact intakes; and a discovery tracker with deficiencies and
   follow-up items.
@@ -148,10 +148,10 @@ resource — never to continue the workflow.
   court dates; the jurisdiction.
 - **Recommended skill sequence:**
   `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md`
-  -> `skills/family-law/family-law-matter-intake/SKILL.md`
+  -> `skills/family-law/matter-intake/SKILL.md`
   -> `skills/family-law/custody-parenting-facts-chronology/SKILL.md` (if
   children are involved)
-  -> `skills/family-law/family-law-hearing-prep-checklist/SKILL.md` (if a court
+  -> `skills/family-law/hearing-prep-checklist/SKILL.md` (if a court
   date exists).
 - **Expected outputs:** safety/escalation flags and a referral checklist; a
   structured matter intake; where children are involved, a parenting
@@ -206,12 +206,12 @@ resource — never to continue the workflow.
   orders; service and proof documents; any deadlines the user supplies; the
   jurisdiction.
 - **Recommended skill sequence:**
-  `skills/family-law/family-law-hearing-prep-checklist/SKILL.md`
+  `skills/family-law/hearing-prep-checklist/SKILL.md`
   -> `skills/family-law/custody-parenting-facts-chronology/SKILL.md` (if
   custody is at issue)
   -> `skills/family-law/asset-debt-schedule-builder/SKILL.md` (if financial or
   property issues are at issue)
-  -> `skills/family-law/family-law-discovery-tracker/SKILL.md` (if discovery
+  -> `skills/family-law/discovery-tracker/SKILL.md` (if discovery
   issues are involved).
 - **Expected outputs:** a hearing-prep checklist with tasks, owners, statuses,
   and any user-supplied deadlines; a parenting chronology; a property/debt

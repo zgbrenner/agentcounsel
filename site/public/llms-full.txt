@@ -1493,8 +1493,8 @@ Use when:
   - A family law matter needs the safety dimension flagged and routed before other work proceeds.
 
 ### Family Law Discovery Tracker
-Path: skills/family-law/family-law-discovery-tracker/SKILL.md
-Catalog page: skills/family-law/family-law-discovery-tracker.html
+Path: skills/family-law/discovery-tracker/SKILL.md
+Catalog page: skills/family-law/discovery-tracker.html
 Trigger: "Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review."
 Use when:
   - A family law matter's discovery must be tracked across requests, responses, and disclosures.
@@ -1502,8 +1502,8 @@ Use when:
   - Subpoenas, authorizations, and disclosure exchanges need an organized log.
 
 ### Family Law Hearing Prep Checklist
-Path: skills/family-law/family-law-hearing-prep-checklist/SKILL.md
-Catalog page: skills/family-law/family-law-hearing-prep-checklist.html
+Path: skills/family-law/hearing-prep-checklist/SKILL.md
+Catalog page: skills/family-law/hearing-prep-checklist.html
 Trigger: "Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review."
 Use when:
   - A family law hearing is approaching and the preparation tasks must be organized into a checklist for an attorney.
@@ -1511,8 +1511,8 @@ Use when:
   - Open questions for counsel must be collected before a hearing.
 
 ### Family Law Matter Intake
-Path: skills/family-law/family-law-matter-intake/SKILL.md
-Catalog page: skills/family-law/family-law-matter-intake.html
+Path: skills/family-law/matter-intake/SKILL.md
+Catalog page: skills/family-law/matter-intake.html
 Trigger: "Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review."
 Use when:
   - A new family law matter must be captured in a structured, reviewable form for an attorney.

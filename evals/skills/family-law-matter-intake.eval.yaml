@@ -1,5 +1,5 @@
 skill: family-law-matter-intake
-skill_path: skills/family-law/family-law-matter-intake/SKILL.md
+skill_path: skills/family-law/matter-intake/SKILL.md
 description: Eval cases for family-law-matter-intake, covering golden-path quality and family-law-safety stress behavior.
 shared_assertions:
   - draft-for-attorney-review

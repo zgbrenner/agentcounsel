@@ -17,7 +17,7 @@ outputs:
   - "Missing-facts list and attorney verification checklist"
 related_skills:
   - skills/family-law/asset-debt-schedule-builder/SKILL.md
-  - skills/family-law/family-law-hearing-prep-checklist/SKILL.md
+  - skills/family-law/hearing-prep-checklist/SKILL.md
 tags:
   - family-law
   - discovery

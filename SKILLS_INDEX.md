@@ -144,7 +144,7 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Trusts & Estates | Trust Funding Checklist | `skills/trusts-estates/trust-funding-checklist/SKILL.md` | Building a checklist for funding or reviewing trust funding | Trust instrument, intended assets, funding evidence, role | Funding checklist + missing-items list |
 | Trusts & Estates | Post Death Administration Task Tracker | `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md` | Building a post-death administration task tracker | Decedent, fiduciary role, jurisdiction, tasks underway | Administration task tracker |
 | Trusts & Estates | Estate Tax Issue Intake | `skills/trusts-estates/estate-tax-issue-intake/SKILL.md` | Capturing estate, gift, GST, or inheritance tax issues | Jurisdiction, decedent/donor, assets, gifts, trusts, prior filings | Tax issue map + document request list |
-| Family Law | Family Law Matter Intake | `skills/family-law/family-law-matter-intake/SKILL.md` | Opening a new family law matter with a structured intake summary and safety/escalation flags | Parties, household and minor-children facts, posture, documents, safety facts | Intake summary + issue map + safety flags |
+| Family Law | Family Law Matter Intake | `skills/family-law/matter-intake/SKILL.md` | Opening a new family law matter with a structured intake summary and safety/escalation flags | Parties, household and minor-children facts, posture, documents, safety facts | Intake summary + issue map + safety flags |
 | Family Law | Divorce Intake Organizer | `skills/family-law/divorce-intake-organizer/SKILL.md` | Organizing the facts of a divorce or dissolution matter into a structured intake | Parties, marriage facts, household and asset facts, documents | Facts table + missing-documents list + issue map |
 | Family Law | Custody / Parenting Facts Chronology | `skills/family-law/custody-parenting-facts-chronology/SKILL.md` | Building a source-cited chronology of parenting and caregiving facts | Records, communications, calendars, role | Source-cited factual chronology |
 | Family Law | Parenting Schedule Facts Organizer | `skills/family-law/parenting-schedule-facts-organizer/SKILL.md` | Organizing the facts relevant to a parenting schedule discussion | Schedule facts, school and activity facts, role | Facts table + conflict/ambiguity list + logistics checklist |
@@ -153,8 +153,8 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Family Law | Spousal Support Facts Intake | `skills/family-law/spousal-support-facts-intake/SKILL.md` | Gathering the facts relevant to a spousal support or alimony review without calculating support | Marriage and income facts, expense and asset documents, role | Intake table + missing-documents list + questions for counsel |
 | Family Law | Asset / Debt Schedule Builder | `skills/family-law/asset-debt-schedule-builder/SKILL.md` | Building a source-cited property and debt schedule from user-provided facts and documents | Asset and debt records, owner/title facts, role | Source-cited property + debt schedule |
 | Family Law | Settlement Agreement Issue Spotter | `skills/family-law/settlement-agreement-issue-spotter/SKILL.md` | Reviewing a marital settlement, parenting, support, or custody-stipulation agreement | The agreement, role, related orders | Key-terms table + issue list + missing-provisions list |
-| Family Law | Family Law Discovery Tracker | `skills/family-law/family-law-discovery-tracker/SKILL.md` | Organizing family-law discovery requests, responses, disclosures, and deficiencies | Discovery requests and responses, disclosures, subpoenas, role | Discovery tracker + deficiency list |
-| Family Law | Family Law Hearing Prep Checklist | `skills/family-law/family-law-hearing-prep-checklist/SKILL.md` | Building a hearing-preparation checklist for a family law hearing | Hearing facts, pleadings, declarations, exhibits, witnesses, role | Hearing-prep checklist + open-questions list |
+| Family Law | Family Law Discovery Tracker | `skills/family-law/discovery-tracker/SKILL.md` | Organizing family-law discovery requests, responses, disclosures, and deficiencies | Discovery requests and responses, disclosures, subpoenas, role | Discovery tracker + deficiency list |
+| Family Law | Family Law Hearing Prep Checklist | `skills/family-law/hearing-prep-checklist/SKILL.md` | Building a hearing-preparation checklist for a family law hearing | Hearing facts, pleadings, declarations, exhibits, witnesses, role | Hearing-prep checklist + open-questions list |
 | Family Law | Domestic Violence Safety Referral Checklist | `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md` | Organizing facts and referral/escalation considerations for a domestic violence concern (no safety plan) | Documented facts and concerns, role, jurisdiction context | Referral / escalation considerations checklist |
 | Legal Operations | Templated Legal Response | `skills/legal-ops/templated-legal-response/SKILL.md` | Drafting a templated response to a recurring legal inquiry with an escalation gate | The inquiry, response template, customization facts | Draft response + escalation check |
 | Legal Operations | Legal Meeting Briefing | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | Preparing a structured briefing for a meeting with legal relevance | Meeting context, background materials | Meeting briefing + action tracker |
@@ -244,7 +244,7 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 
 ## Family Law
 
-- `skills/family-law/family-law-matter-intake/SKILL.md`
+- `skills/family-law/matter-intake/SKILL.md`
 - `skills/family-law/divorce-intake-organizer/SKILL.md`
 - `skills/family-law/custody-parenting-facts-chronology/SKILL.md`
 - `skills/family-law/parenting-schedule-facts-organizer/SKILL.md`
@@ -253,6 +253,6 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/family-law/spousal-support-facts-intake/SKILL.md`
 - `skills/family-law/asset-debt-schedule-builder/SKILL.md`
 - `skills/family-law/settlement-agreement-issue-spotter/SKILL.md`
-- `skills/family-law/family-law-discovery-tracker/SKILL.md`
-- `skills/family-law/family-law-hearing-prep-checklist/SKILL.md`
+- `skills/family-law/discovery-tracker/SKILL.md`
+- `skills/family-law/hearing-prep-checklist/SKILL.md`
 - `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md`

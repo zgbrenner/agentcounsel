@@ -17,7 +17,7 @@ outputs:
   - "Attorney verification checklist"
 related_skills:
   - skills/family-law/divorce-intake-organizer/SKILL.md
-  - skills/family-law/family-law-discovery-tracker/SKILL.md
+  - skills/family-law/discovery-tracker/SKILL.md
   - skills/family-law/settlement-agreement-issue-spotter/SKILL.md
 tags:
   - family-law

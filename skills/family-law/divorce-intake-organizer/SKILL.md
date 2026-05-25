@@ -16,7 +16,7 @@ outputs:
   - "Missing-documents list and issue map"
   - "Attorney verification checklist"
 related_skills:
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
   - skills/family-law/asset-debt-schedule-builder/SKILL.md
   - skills/family-law/settlement-agreement-issue-spotter/SKILL.md
 tags:

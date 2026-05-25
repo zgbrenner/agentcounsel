@@ -18,7 +18,7 @@ outputs:
 related_skills:
   - skills/family-law/parenting-schedule-facts-organizer/SKILL.md
   - skills/family-law/custody-order-review-checklist/SKILL.md
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
 tags:
   - family-law
   - custody

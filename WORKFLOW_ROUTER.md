@@ -263,7 +263,7 @@ The Family Law skills produce **draft work product for a qualified, licensed att
 
 | The task sounds like... | Use this skill |
 |---|---|
-| "Open a new family law matter" | `skills/family-law/family-law-matter-intake/SKILL.md` |
+| "Open a new family law matter" | `skills/family-law/matter-intake/SKILL.md` |
 | "Divorce or dissolution intake" | `skills/family-law/divorce-intake-organizer/SKILL.md` |
 | "Build a custody / parenting chronology" | `skills/family-law/custody-parenting-facts-chronology/SKILL.md` |
 | "Organize parenting schedule facts" | `skills/family-law/parenting-schedule-facts-organizer/SKILL.md` |
@@ -272,8 +272,8 @@ The Family Law skills produce **draft work product for a qualified, licensed att
 | "Spousal support / alimony facts intake" | `skills/family-law/spousal-support-facts-intake/SKILL.md` |
 | "Build the asset and debt schedule" | `skills/family-law/asset-debt-schedule-builder/SKILL.md` |
 | "Review this marital settlement / parenting / support agreement" | `skills/family-law/settlement-agreement-issue-spotter/SKILL.md` |
-| "Family law discovery tracker" | `skills/family-law/family-law-discovery-tracker/SKILL.md` |
-| "Family law hearing preparation" | `skills/family-law/family-law-hearing-prep-checklist/SKILL.md` |
+| "Family law discovery tracker" | `skills/family-law/discovery-tracker/SKILL.md` |
+| "Family law hearing preparation" | `skills/family-law/hearing-prep-checklist/SKILL.md` |
 | "Domestic violence safety referral considerations" | `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md` |
 
 ### Legal operations

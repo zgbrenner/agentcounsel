@@ -7732,7 +7732,7 @@ WHEN YOU ARE DONE
 
 ### Family Law Discovery Tracker
 
-- **Skill file:** `skills/family-law/family-law-discovery-tracker/SKILL.md`
+- **Skill file:** `skills/family-law/discovery-tracker/SKILL.md`
 - **Practice area:** Family Law
 - **Current description:** Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.
 - **Structure check:** all 8 required sections present.
@@ -7744,14 +7744,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/family-law-discovery-tracker/SKILL.md
+- Skill path: skills/family-law/discovery-tracker/SKILL.md
 - Current skill name: Family Law Discovery Tracker
 - Practice area: Family Law
 - Current description: Use when organizing family-law discovery requests, responses, disclosures, subpoenas, authorizations, deficiencies, and meet-and-confer items into a tracker for attorney review.
 - Core purpose (must not change): Organize family-law discovery — requests, responses, financial disclosures, subpoenas, authorizations, identified deficiencies, and meet-and-confer items — into a single tracker, so a qualified, licensed attorney can manage discovery in a family law matter.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/family-law-discovery-tracker/SKILL.md in full.
+- Read skills/family-law/discovery-tracker/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7820,7 +7820,7 @@ WHEN YOU ARE DONE
 
 ### Family Law Hearing Prep Checklist
 
-- **Skill file:** `skills/family-law/family-law-hearing-prep-checklist/SKILL.md`
+- **Skill file:** `skills/family-law/hearing-prep-checklist/SKILL.md`
 - **Practice area:** Family Law
 - **Current description:** Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review.
 - **Structure check:** all 8 required sections present.
@@ -7832,14 +7832,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/family-law-hearing-prep-checklist/SKILL.md
+- Skill path: skills/family-law/hearing-prep-checklist/SKILL.md
 - Current skill name: Family Law Hearing Prep Checklist
 - Practice area: Family Law
 - Current description: Use when building a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, disclosures, witnesses, and open questions — for attorney review.
 - Core purpose (must not change): Build a hearing-preparation checklist for a family law hearing — pleadings, declarations, exhibits, financial disclosures, witnesses, prior orders, service and proof documents, the issues to be heard, and the requested relief as the user supplies it — so a qualified, licensed attorney has an organized preparation list.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/family-law-hearing-prep-checklist/SKILL.md in full.
+- Read skills/family-law/hearing-prep-checklist/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.
@@ -7908,7 +7908,7 @@ WHEN YOU ARE DONE
 
 ### Family Law Matter Intake
 
-- **Skill file:** `skills/family-law/family-law-matter-intake/SKILL.md`
+- **Skill file:** `skills/family-law/matter-intake/SKILL.md`
 - **Practice area:** Family Law
 - **Current description:** Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review.
 - **Structure check:** all 8 required sections present.
@@ -7920,14 +7920,14 @@ them. Every skill is a SKILL.md file that produces draft legal work product
 for attorney review — never a final legal opinion.
 
 TARGET SKILL
-- Skill path: skills/family-law/family-law-matter-intake/SKILL.md
+- Skill path: skills/family-law/matter-intake/SKILL.md
 - Current skill name: Family Law Matter Intake
 - Practice area: Family Law
 - Current description: Use when opening a new family law matter and you need a structured intake summary, issue map, missing-facts list, document request list, and safety/escalation flags for attorney review.
 - Core purpose (must not change): Capture the facts of a new family law matter — divorce or dissolution, custody and parenting, support, property and debt, or a related dispute — into a structured intake summary, an issue map, a missing-facts list, a document request list, and safety/escalation flags, so a qualified, licensed attorney has an organized starting point.
 
 CONTEXT TO READ FIRST
-- Read skills/family-law/family-law-matter-intake/SKILL.md in full.
+- Read skills/family-law/matter-intake/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.

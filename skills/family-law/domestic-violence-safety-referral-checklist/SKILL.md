@@ -16,7 +16,7 @@ outputs:
   - "Document checklist and attorney/local-resource referral checklist"
   - "Missing-facts list and attorney verification questions"
 related_skills:
-  - skills/family-law/family-law-matter-intake/SKILL.md
+  - skills/family-law/matter-intake/SKILL.md
   - skills/family-law/custody-parenting-facts-chronology/SKILL.md
 tags:
   - family-law

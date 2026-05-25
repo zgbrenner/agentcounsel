@@ -18,7 +18,7 @@ outputs:
 related_skills:
   - skills/family-law/spousal-support-facts-intake/SKILL.md
   - skills/family-law/asset-debt-schedule-builder/SKILL.md
-  - skills/family-law/family-law-discovery-tracker/SKILL.md
+  - skills/family-law/discovery-tracker/SKILL.md
 tags:
   - family-law
   - child-support

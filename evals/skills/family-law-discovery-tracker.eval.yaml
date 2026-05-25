@@ -1,5 +1,5 @@
 skill: family-law-discovery-tracker
-skill_path: skills/family-law/family-law-discovery-tracker/SKILL.md
+skill_path: skills/family-law/discovery-tracker/SKILL.md
 description: Eval cases for family-law-discovery-tracker, covering golden-path quality and family-law-safety stress behavior.
 shared_assertions:
   - draft-for-attorney-review
