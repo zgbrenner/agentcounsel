@@ -15,7 +15,10 @@ inputs:
 outputs:
   - "Structured, source-cited draft deliverable"
   - "Missing-information and attorney-verification list"
-related_skills: []
+related_skills:
+  - skills/securities-capital-markets/insider-trading-policy-review/SKILL.md
+  - skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md
+  - skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md
 tags:
   - securities
   - capital-markets

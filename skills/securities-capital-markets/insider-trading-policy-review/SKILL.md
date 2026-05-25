@@ -15,7 +15,9 @@ inputs:
 outputs:
   - "Structured, source-cited draft deliverable"
   - "Missing-information and attorney-verification list"
-related_skills: []
+related_skills:
+  - skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md
+  - skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md
 tags:
   - securities
   - capital-markets

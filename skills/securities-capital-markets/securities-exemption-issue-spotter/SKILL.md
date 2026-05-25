@@ -15,7 +15,10 @@ inputs:
 outputs:
   - "Structured, source-cited draft deliverable"
   - "Missing-information and attorney-verification list"
-related_skills: []
+related_skills:
+  - skills/securities-capital-markets/private-placement-checklist/SKILL.md
+  - skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md
+  - skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md
 tags:
   - securities
   - capital-markets
