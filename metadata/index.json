@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 165,
+  "skill_count": 179,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
@@ -23,7 +23,7 @@
     "real-estate": 9,
     "regulatory": 4,
     "securities-capital-markets": 12,
-    "setup": 5,
+    "setup": 19,
     "tax": 10,
     "trusts-estates": 12
   },
@@ -32,7 +32,7 @@
     "drafting": 21,
     "extraction": 23,
     "intake": 18,
-    "interview": 4,
+    "interview": 18,
     "research": 1,
     "review": 51,
     "summarization": 5,
@@ -40,7 +40,7 @@
     "verification": 4
   },
   "risk_levels": {
-    "low": 6,
+    "low": 20,
     "medium": 70,
     "high": 86,
     "critical": 3
@@ -4359,6 +4359,96 @@
       ]
     },
     {
+      "path": "skills/setup/ai-governance-cold-start-interview/SKILL.md",
+      "name": "AI Governance Cold-Start Interview",
+      "description": "Use when a ai governance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a ai governance attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled ai governance practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/ai-governance/ai-use-case-intake/SKILL.md",
+        "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
+        "skills/ai-governance/model-risk-triage/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "ai-governance"
+      ]
+    },
+    {
+      "path": "skills/setup/antitrust-competition-cold-start-interview/SKILL.md",
+      "name": "Antitrust / Competition Cold-Start Interview",
+      "description": "Use when a antitrust / competition practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a antitrust / competition attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled antitrust / competition practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+        "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
+        "skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "antitrust-competition"
+      ]
+    },
+    {
+      "path": "skills/setup/bankruptcy-restructuring-cold-start-interview/SKILL.md",
+      "name": "Bankruptcy and Restructuring Cold-Start Interview",
+      "description": "Use when a bankruptcy and restructuring practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a bankruptcy and restructuring attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled bankruptcy and restructuring practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md",
+        "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "bankruptcy-restructuring"
+      ]
+    },
+    {
       "path": "skills/setup/contracts-cold-start-interview/SKILL.md",
       "name": "Contracts Cold-Start Interview",
       "description": "Use when a contracts practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
@@ -4449,6 +4539,126 @@
       ]
     },
     {
+      "path": "skills/setup/employment-cold-start-interview/SKILL.md",
+      "name": "Employment Cold-Start Interview",
+      "description": "Use when a employment practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a employment attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled employment practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/employment/termination-risk/SKILL.md",
+        "skills/employment/worker-classification/SKILL.md",
+        "skills/employment/employee-policy-review/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "employment"
+      ]
+    },
+    {
+      "path": "skills/setup/family-law-cold-start-interview/SKILL.md",
+      "name": "Family Law Cold-Start Interview",
+      "description": "Use when a family law practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a family law attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled family law practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/family-law/matter-intake/SKILL.md",
+        "skills/family-law/divorce-intake-organizer/SKILL.md",
+        "skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "family-law"
+      ]
+    },
+    {
+      "path": "skills/setup/insurance-cold-start-interview/SKILL.md",
+      "name": "Insurance Cold-Start Interview",
+      "description": "Use when a insurance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a insurance attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled insurance practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/insurance/coverage-issue-spotter/SKILL.md",
+        "skills/insurance/reservation-of-rights-review/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "insurance"
+      ]
+    },
+    {
+      "path": "skills/setup/ip-cold-start-interview/SKILL.md",
+      "name": "Intellectual Property Cold-Start Interview",
+      "description": "Use when a intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a intellectual property attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled intellectual property practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/ip/trademark-clearance-triage/SKILL.md",
+        "skills/ip/fto-triage/SKILL.md",
+        "skills/ip/open-source-license-review/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "ip"
+      ]
+    },
+    {
       "path": "skills/setup/litigation-cold-start-interview/SKILL.md",
       "name": "Litigation Cold-Start Interview",
       "description": "Use when a litigation practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
@@ -4478,6 +4688,36 @@
       ]
     },
     {
+      "path": "skills/setup/m-and-a-cold-start-interview/SKILL.md",
+      "name": "M&A Cold-Start Interview",
+      "description": "Use when a m&a practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a m&a attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled m&a practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/closing-deliverables-tracker/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "m-and-a"
+      ]
+    },
+    {
       "path": "skills/setup/privacy-cold-start-interview/SKILL.md",
       "name": "Privacy Cold-Start Interview",
       "description": "Use when a privacy practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
@@ -4504,6 +4744,186 @@
         "practice-profile",
         "configuration",
         "privacy"
+      ]
+    },
+    {
+      "path": "skills/setup/product-legal-cold-start-interview/SKILL.md",
+      "name": "Product Legal Cold-Start Interview",
+      "description": "Use when a product legal practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a product legal attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled product legal practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/product-legal/launch-review/SKILL.md",
+        "skills/product-legal/terms-of-service-review/SKILL.md",
+        "skills/product-legal/marketing-claims-review/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "product-legal"
+      ]
+    },
+    {
+      "path": "skills/setup/real-estate-cold-start-interview/SKILL.md",
+      "name": "Real Estate Cold-Start Interview",
+      "description": "Use when a real estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a real estate attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled real estate practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/real-estate/psa-review/SKILL.md",
+        "skills/real-estate/commercial-lease-review/SKILL.md",
+        "skills/real-estate/title-survey-objection-tracker/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "real-estate"
+      ]
+    },
+    {
+      "path": "skills/setup/regulatory-cold-start-interview/SKILL.md",
+      "name": "Regulatory Cold-Start Interview",
+      "description": "Use when a regulatory practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a regulatory attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled regulatory practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/regulatory/compliance-gap-matrix/SKILL.md",
+        "skills/regulatory/compliance-program-tracker/SKILL.md",
+        "skills/regulatory/enforcement-risk-memo/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "regulatory"
+      ]
+    },
+    {
+      "path": "skills/setup/securities-capital-markets-cold-start-interview/SKILL.md",
+      "name": "Securities and Capital Markets Cold-Start Interview",
+      "description": "Use when a securities and capital markets practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a securities and capital markets attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled securities and capital markets practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
+        "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+        "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "securities-capital-markets"
+      ]
+    },
+    {
+      "path": "skills/setup/tax-cold-start-interview/SKILL.md",
+      "name": "Tax Cold-Start Interview",
+      "description": "Use when a tax practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a tax attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled tax practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/tax/tax-issue-intake/SKILL.md",
+        "skills/tax/international-tax-issue-spotter/SKILL.md",
+        "skills/tax/sales-use-tax-nexus-triage/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "tax"
+      ]
+    },
+    {
+      "path": "skills/setup/trusts-estates-cold-start-interview/SKILL.md",
+      "name": "Trusts and Estates Cold-Start Interview",
+      "description": "Use when a trusts and estates practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a trusts and estates attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled trusts and estates practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/trusts-estates/estate-planning-intake/SKILL.md",
+        "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md",
+        "skills/trusts-estates/trust-administration-tracker/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "trusts-estates"
       ]
     },
     {
