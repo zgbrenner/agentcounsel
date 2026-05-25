@@ -4646,7 +4646,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/ai-governance-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a ai governance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when an AI-governance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -4659,8 +4659,8 @@ TARGET SKILL
 - Skill path: skills/setup/ai-governance-cold-start-interview/SKILL.md
 - Current skill name: AI Governance Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a ai governance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a ai governance practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/ai-governance.md`.
+- Current description: Use when an AI-governance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with an AI-governance practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/ai-governance.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/ai-governance-cold-start-interview/SKILL.md in full.
@@ -4734,7 +4734,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/antitrust-competition-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a antitrust / competition practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when an antitrust / competition practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -4747,8 +4747,8 @@ TARGET SKILL
 - Skill path: skills/setup/antitrust-competition-cold-start-interview/SKILL.md
 - Current skill name: Antitrust / Competition Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a antitrust / competition practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a antitrust / competition practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/antitrust-competition.md`.
+- Current description: Use when an antitrust / competition practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with an antitrust / competition practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/antitrust-competition.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/antitrust-competition-cold-start-interview/SKILL.md in full.
@@ -5174,7 +5174,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/employment-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a employment practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when an employment practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5187,8 +5187,8 @@ TARGET SKILL
 - Skill path: skills/setup/employment-cold-start-interview/SKILL.md
 - Current skill name: Employment Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a employment practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a employment practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/employment.md`.
+- Current description: Use when an employment practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with an employment practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/employment.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/employment-cold-start-interview/SKILL.md in full.
@@ -5262,7 +5262,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/family-law-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a family law practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when a family-law practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5275,8 +5275,8 @@ TARGET SKILL
 - Skill path: skills/setup/family-law-cold-start-interview/SKILL.md
 - Current skill name: Family Law Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a family law practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a family law practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/family-law.md`.
+- Current description: Use when a family-law practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with a family-law practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/family-law.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/family-law-cold-start-interview/SKILL.md in full.
@@ -5350,7 +5350,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/insurance-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a insurance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when an insurance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5363,8 +5363,8 @@ TARGET SKILL
 - Skill path: skills/setup/insurance-cold-start-interview/SKILL.md
 - Current skill name: Insurance Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a insurance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a insurance practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/insurance.md`.
+- Current description: Use when an insurance practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with an insurance practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/insurance.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/insurance-cold-start-interview/SKILL.md in full.
@@ -5438,7 +5438,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/ip-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when an intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5451,8 +5451,8 @@ TARGET SKILL
 - Skill path: skills/setup/ip-cold-start-interview/SKILL.md
 - Current skill name: Intellectual Property Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a intellectual property practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/ip.md`.
+- Current description: Use when an intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with an intellectual property practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/ip.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/ip-cold-start-interview/SKILL.md in full.
@@ -5614,7 +5614,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/m-and-a-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a m&a practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when an M&A practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5627,8 +5627,8 @@ TARGET SKILL
 - Skill path: skills/setup/m-and-a-cold-start-interview/SKILL.md
 - Current skill name: M&A Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a m&a practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a m&a practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/m-and-a.md`.
+- Current description: Use when an M&A practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with an M&A practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/m-and-a.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/m-and-a-cold-start-interview/SKILL.md in full.
@@ -5790,7 +5790,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/product-legal-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a product legal practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when a product-legal practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5803,8 +5803,8 @@ TARGET SKILL
 - Skill path: skills/setup/product-legal-cold-start-interview/SKILL.md
 - Current skill name: Product Legal Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a product legal practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a product legal practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/product-legal.md`.
+- Current description: Use when a product-legal practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with a product-legal practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/product-legal.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/product-legal-cold-start-interview/SKILL.md in full.
@@ -5878,7 +5878,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/real-estate-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a real estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when a real-estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -5891,8 +5891,8 @@ TARGET SKILL
 - Skill path: skills/setup/real-estate-cold-start-interview/SKILL.md
 - Current skill name: Real Estate Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a real estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a real estate practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/real-estate.md`.
+- Current description: Use when a real-estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with a real-estate practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/real-estate.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/real-estate-cold-start-interview/SKILL.md in full.
@@ -6230,7 +6230,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/setup/trusts-estates-cold-start-interview/SKILL.md`
 - **Practice area:** Setup
-- **Current description:** Use when a trusts and estates practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- **Current description:** Use when a trusts-and-estates practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -6243,8 +6243,8 @@ TARGET SKILL
 - Skill path: skills/setup/trusts-estates-cold-start-interview/SKILL.md
 - Current skill name: Trusts and Estates Cold-Start Interview
 - Practice area: Setup
-- Current description: Use when a trusts and estates practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
-- Core purpose (must not change): Conduct a structured, staged interview with a trusts and estates practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/trusts-estates.md`.
+- Current description: Use when a trusts-and-estates practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.
+- Core purpose (must not change): Conduct a structured, staged interview with a trusts-and-estates practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/trusts-estates.md`.
 
 CONTEXT TO READ FIRST
 - Read skills/setup/trusts-estates-cold-start-interview/SKILL.md in full.

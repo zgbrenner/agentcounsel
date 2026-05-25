@@ -1,17 +1,17 @@
 ---
 name: Real Estate Cold-Start Interview
-description: "Use when a real estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+description: "Use when a real-estate practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
 practice_area: setup
 task_type: interview
 jurisdictions: []
 risk_level: low
 requires_attorney_review: true
 inputs:
-  - "Access to a real estate attorney or authorized designee"
+  - "Access to a real-estate attorney or authorized designee"
   - "The practice group's jurisdictions and client context"
   - "Standard positions, escalation thresholds, and review requirements"
 outputs:
-  - "Filled real estate practice profile draft for attorney review"
+  - "Filled real-estate practice profile draft for attorney review"
 related_skills:
   - skills/real-estate/psa-review/SKILL.md
   - skills/real-estate/commercial-lease-review/SKILL.md
@@ -28,26 +28,26 @@ tags:
 
 ## Purpose
 
-Conduct a structured, staged interview with a real estate practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/real-estate.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
+Conduct a structured, staged interview with a real-estate practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/real-estate.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
 
 ## Use When
 
 - A team is adopting AgentCounsel and needs to configure `practice-profiles/real-estate.md` for the first time.
-- A real estate practice group is being onboarded to the library and no current profile exists.
-- The library is being stood up for the first time and the real estate area is included in scope.
+- A real-estate practice group is being onboarded to the library and no current profile exists.
+- The library is being stood up for the first time and the real-estate area is included in scope.
 - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
 ## Required Inputs
 
-- A knowledgeable person from the real estate practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.
+- A knowledgeable person from the real-estate practice group — a supervising attorney or an authorized designee — who can answer questions about the group's jurisdiction, positions, escalation rules, and review requirements.
 - Any existing playbooks, templates, source-of-truth documents, or standard-form documents the group already uses, so they can be referenced or cited in the profile.
 
 ## Do Not Use When
 
-- The group is actively working a live real estate matter. This skill configures the library; it does not support an open matter.
+- The group is actively working a live real-estate matter. This skill configures the library; it does not support an open matter.
 - A `practice-profiles/real-estate.md` already exists and is current. In that case this is a refresh, not a cold start — though the skill may still be used to rebuild the profile deliberately.
 - No authorized person is available to answer. Do not complete the interview with guessed or inferred answers; record all gaps as `[CONFIRM: ...]` placeholders.
-- The purpose is to handle a specific real estate matter (use the appropriate matter-level skill for that task).
+- The purpose is to handle a specific real-estate matter (use the appropriate matter-level skill for that task).
 
 ## Legal Safety Rules
 

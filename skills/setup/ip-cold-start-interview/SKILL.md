@@ -1,13 +1,13 @@
 ---
 name: Intellectual Property Cold-Start Interview
-description: "Use when a intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
+description: "Use when an intellectual property practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions."
 practice_area: setup
 task_type: interview
 jurisdictions: []
 risk_level: low
 requires_attorney_review: true
 inputs:
-  - "Access to a intellectual property attorney or authorized designee"
+  - "Access to an intellectual property attorney or authorized designee"
   - "The practice group's jurisdictions and client context"
   - "Standard positions, escalation thresholds, and review requirements"
 outputs:
@@ -28,12 +28,12 @@ tags:
 
 ## Purpose
 
-Conduct a structured, staged interview with a intellectual property practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/ip.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
+Conduct a structured, staged interview with an intellectual property practice group — led by a supervising attorney or authorized designee — to gather the information required to populate `practice-profiles/ip.md`. The skill walks through all eight profile fields in sequence, records every answer, and assembles a filled draft of the profile for the practice group's review and approval. It produces draft legal work product for attorney review — not legal advice and not a final configuration.
 
 ## Use When
 
 - A team is adopting AgentCounsel and needs to configure `practice-profiles/ip.md` for the first time.
-- A intellectual property practice group is being onboarded to the library and no current profile exists.
+- An intellectual property practice group is being onboarded to the library and no current profile exists.
 - The library is being stood up for the first time and the intellectual property area is included in scope.
 - A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates.
 
