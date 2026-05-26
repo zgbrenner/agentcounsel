@@ -1,6 +1,6 @@
 ---
 name: Merger Antitrust Issue Spotter
-description: "Use when performing merger antitrust issue spotter as draft work product for attorney review."
+description: "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction — to produce a draft horizontal-overlap matrix, vertical-relationship matrix, potential/nascent-competition flags, adjacent-overlap (data/IP/labor/innovation) flags, per-jurisdiction filing-question list, diligence-request list, and pre-closing integration guardrails for attorney review — without defining markets, reaching reportability conclusions, predicting clearance, or evaluating competitive effects."
 practice_area: antitrust-competition
 task_type: analysis
 jurisdictions: []
@@ -68,6 +68,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 5 (Merger / Integration Conduct) for the pre-closing leg, Section 6 (Monopolization / Abuse of Dominance) where the combined entity would approach market power on any market, and Section 7 (Labor-Market Conduct) where labor-market overlaps are in scope.
+
 1. **Confirm gates.** Jurisdiction(s) of competitive effect, parties' ultimate ownership, transaction structure, procedural posture, and target closing date. Any gate missing — stop and return the missing-information list.
 2. **Map the transaction.** Record the structure, parties, consideration, conditions, and pre-existing relationships between the parties. Cite the purchase agreement for each term.
 3. **Identify product and geographic markets.** For each product line in scope, record the user's preliminary view of the market and the geographic footprint. Mark market definition itself `[ATTORNEY TO CONFIRM: market definition]` — the skill organizes facts; it does not define markets.
@@ -105,3 +107,12 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Each potentially overlapping product/geographic market is flagged `[ATTORNEY TO CONFIRM: market definition]`; the skill has not defined any market.
+- [ ] User-supplied share figures are sourced and not computed or extrapolated; any HHI or share calculation requiring data the user has not supplied is left as a fact gap, not estimated.
+- [ ] Vertical foreclosure factors are recorded as facts; foreclosure itself has not been adjudicated and is flagged `[ATTORNEY TO CONFIRM]`.
+- [ ] Potential and nascent competition flags identify the underlying fact, the prior/contemplated competitor relationship, and the document source.
+- [ ] Adjacent overlaps (data, IP, labor markets — especially specialized roles — and innovation pipelines) are flagged separately, each with underlying fact and source.
+- [ ] The filing-question list raises the jurisdictional question for each implicated regime (HSR, EU EUMR, UK CMA, China SAMR, Brazil CADE, other applicable national regimes, foreign-investment and national-security overlays) `[verify jurisdiction]` without answering reportability.
+- [ ] Pre-closing-conduct inventory has been routed to `gun-jumping-clean-team-checklist` and `information-sharing-clean-team-review` where indicated.
+- [ ] Integration guardrails are framed as escalation triggers for the deal team, not approvals.
+- [ ] Target closing date and any signing-to-closing milestones are flagged `[deadline verification required]`; no deadline has been computed.

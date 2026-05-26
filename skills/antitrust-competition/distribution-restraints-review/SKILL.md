@@ -1,6 +1,6 @@
 ---
 name: Distribution Restraints Review
-description: "Use when performing distribution restraints review as draft work product for attorney review."
+description: "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales or marketplace bans, dual pricing, selective distribution, tying) to produce a draft restraint inventory with per-jurisdiction character flags (hardcore candidates, online-sales callouts, dual-distribution issues, state-law and sector overlays) for attorney review — without concluding enforceability, VBER applicability, or market power."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -67,8 +67,10 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 3 (Vertical Restraints) at the steps noted below, and Section 4 (Pricing-Related Conduct) where loyalty/bundled/MFN structures appear.
+
 1. **Confirm gates.** Jurisdiction, distribution structure, restraints in scope, supplier/buyer positions. If any gate is missing, stop and return the missing-information list.
-2. **Inventory each restraint.** One row per restraint type: scope, duration, geographic reach, customer or product carveouts, exceptions, termination triggers, source citation. Pull verbatim language for hardcore-candidate provisions.
+2. **Inventory each restraint.** One row per restraint type: scope, duration, geographic reach, customer or product carveouts, exceptions, termination triggers, source citation. Pull verbatim language for hardcore-candidate provisions. For each restraint type, scan against Section 3 of `skills/antitrust-competition/references/risk-indicators.md` and record each pattern present (RPM, MAP enforcement crossing into RPM, wide MFNs, exclusivity foreclosure, online-sales/marketplace restrictions, dual distribution, selective-distribution exclusion).
 3. **Map restraint character per applicable jurisdiction.** For each restraint, record the candidate framework — US Sherman Section 1 per se candidates (horizontal price-fixing only; not vertical RPM after `Leegin`, but state law may differ) vs. rule-of-reason; EU/UK VBER hardcore list (RPM, absolute territorial protection, restriction of passive sales, restriction of online sales by retailers); other jurisdictions. As questions for counsel, not conclusions.
 4. **Test ancillarity to legitimate rationale.** For each restraint, the user-supplied business rationale and the scope/duration limits supporting it. Free-rider, service-quality, brand-image, investment-incentive, and safety rationales each have known limits; the question is whether the restraint is calibrated to the rationale, framed for the attorney.
 5. **Flag online-sales restrictions and dual pricing as active-enforcement areas.** Separate callout; many jurisdictions treat absolute online-sales bans, marketplace bans, and dual pricing as hardcore or as requiring close scrutiny.
@@ -99,3 +101,12 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Each restraint is mapped against per-jurisdiction framework candidates (US Sherman §1 / state-law RPM treatment; EU/UK VBER hardcore list; other regimes) `[verify jurisdiction]` and treated as questions, not conclusions.
+- [ ] RPM provisions have been separately flagged for jurisdictions where RPM is treated as per se illegal under federal or state law `[verify jurisdiction]`.
+- [ ] MAP-policy enforcement mechanics have been examined for whether they cross into transaction-price restriction (and therefore RPM).
+- [ ] Online-sales restrictions, marketplace bans, and dual pricing have been called out as active-enforcement areas requiring specialist review.
+- [ ] Wide MFN / parity clauses have been flagged with comparator scope and direction recorded precisely.
+- [ ] Termination provisions that could function as enforcement of RPM/MAP have been flagged for coordination-indicia review.
+- [ ] State-law and sector-specific overlays (e.g., motor-vehicle, technology-transfer regimes) have been raised as questions.
+- [ ] User-supplied supplier-side and buyer-side market position facts are sourced and have not been invented, computed, or extrapolated.
+- [ ] Dual-distribution conduct (supplier competing with its dealers) has been assessed for horizontal-element exposure where applicable.

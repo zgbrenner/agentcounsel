@@ -1,6 +1,6 @@
 ---
 name: Gun Jumping Clean Team Checklist
-description: "Use when performing gun jumping clean team checklist as draft work product for attorney review."
+description: "Use when assessing pre-closing coordination between signed-but-not-yet-closed merger parties — to produce a draft pre-closing covenant inventory, actual-conduct-vs-covenants deviation log, information-sharing log, clean-team design summary, external-communications inventory, and integration-planning guardrail list for attorney review — without concluding HSR/Article 7 compliance or approving any pre-closing conduct."
 practice_area: antitrust-competition
 task_type: verification
 jurisdictions: []
@@ -70,10 +70,12 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 5 (Merger / Integration Conduct) at the steps noted below, and Section 2 (Information Exchange Between Competitors) for the information-sharing leg.
+
 1. **Confirm gates.** Jurisdiction(s), transaction structure, procedural posture, pre-closing covenant set. If any gate is missing, stop and return the missing-information list.
 2. **Inventory pre-closing covenants and consent rights.** One row per covenant or consent right: source section, character (operate-in-ordinary-course / affirmative / restrictive / consent-gated), threshold (if any), exceptions, expiration tied to closing.
 3. **Test covenant character.** For each consent right or restrictive covenant, record the candidate framing — ordinary-course-protection (generally lower risk), acquirer-control (higher risk), or ambiguous. Frame as questions for counsel, not as approvals.
-4. **Inventory actual pre-closing conduct against covenants.** For each significant decision recorded as having occurred (price changes, customer contracts, hires, integration meetings), record what occurred and which covenant or consent right would have applied. Deviations get a flag.
+4. **Inventory actual pre-closing conduct against covenants.** For each significant decision recorded as having occurred (price changes, customer contracts, hires, integration meetings), record what occurred and which covenant or consent right would have applied. Deviations get a flag. Scan against Section 5 of `skills/antitrust-competition/references/risk-indicators.md` for premature-integration, missing-clean-team, notification-gap, joint-outreach, and acquirer-control patterns.
 5. **Map information shared.** One row per item shared between the parties. Columns: Item | Source | Recipient | Control (clean-team only / counsel only / business / executive) | Granularity | Flag (high / medium / low sensitivity). Cross-reference `information-sharing-clean-team-review` for sensitivity criteria.
 6. **Test clean-team design.** Membership (with each member's scope), NDA scope, segregation from competitive decision-making, downstream restrictions (no-busting, no-carryover), audit.
 7. **Inventory external communications to customers, vendors, employees.** Joint or co-branded outreach, joint announcements, joint sales calls, joint pricing communications all get a flag. Internal-only communications about post-closing planning are not gun-jumping per se but are flagged for counsel.
@@ -103,3 +105,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Pre-closing integration planning is segregated from competitively sensitive operating decisions (pricing, output, customer commitments, capex above thresholds, hiring), and any deviation has been flagged with date, source, and applicable covenant.
+- [ ] HSR / notification-period and Article 7 standstill status is confirmed for each applicable jurisdiction `[verify jurisdiction]`; non-US filings are inventoried.
+- [ ] Each pre-closing covenant is characterized (ordinary-course-protection / acquirer-control / consent-gated / ambiguous) as a question for counsel, not as an approval.
+- [ ] Clean-team and dirty-team boundary is documented with named individuals and explicit scope; downstream restrictions (no-busting, no-carryover) and audit posture are in place.
+- [ ] Every joint customer, supplier, or employee communication referencing the deal or the other party has been inventoried and routed through the gun-jumping protocol.
+- [ ] Information shared between the parties is logged with control posture and sensitivity flag; cross-reference to `information-sharing-clean-team-review` has been completed for high-sensitivity items.
+- [ ] Operate-in-ordinary-course covenant has been examined for acquirer-control overreach (consent rights at low thresholds, affirmative direction of target operations).
+- [ ] Integration-planning guardrails are treated as escalation triggers for the deal team, not as approvals.

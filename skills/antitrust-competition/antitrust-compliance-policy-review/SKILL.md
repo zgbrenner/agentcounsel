@@ -1,6 +1,6 @@
 ---
 name: Antitrust Compliance Policy Review
-description: "Use when performing antitrust compliance policy review as draft work product for attorney review."
+description: "Use when reviewing a company's antitrust compliance policy and supporting program (training, dawn-raid protocol, document-creation guidance, reporting and discipline) — to produce a draft topic-coverage matrix, jurisdiction-coverage matrix, training/reporting/enforcement assessment, dawn-raid-protocol assessment, audience-fit notes, and drafting-suggestion list for attorney review — without attesting compliance, approving the policy, or representing it meets any jurisdiction's legal requirements."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -67,8 +67,10 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Use the catalog's section headings (Horizontal Collaboration, Information Exchange, Vertical Restraints, Pricing-Related Conduct, Merger/Integration Conduct, Monopolization, Labor-Market Conduct, Trade-Association Activity) as the topic-coverage spine for the policy review and to test whether the policy actually addresses the patterns its audiences are likely to encounter.
+
 1. **Confirm gates.** Jurisdictions covered, business scope, current policy text, audience(s). If any gate is missing, stop and return the missing-information list.
-2. **Map the current policy's coverage against the topic checklist.** One row per topic: addressed (yes / partial / no), source section in policy, gap flag.
+2. **Map the current policy's coverage against the topic checklist.** One row per topic: addressed (yes / partial / no), source section in policy, gap flag. Use the section headings of `skills/antitrust-competition/references/risk-indicators.md` as the topic spine and record whether the policy addresses each pattern bucket relevant to the user's business scope.
 3. **For each addressed topic, record the rule the policy states.** Quote the relevant policy language. Flag any imprecision — for example, a "never communicate with competitors" rule that ignores standard-setting and trade-association settings; or a "no information exchange" rule that lacks granularity carveouts.
 4. **Map the policy against jurisdiction-specific obligations.** For each jurisdiction in scope, identify the topics the policy must reflect (e.g., EU Article 102 unilateral conduct rules for companies in dominant positions; US labor-market rules; sector-specific obligations). Flag missing jurisdiction-specific coverage.
 5. **Inventory training, reporting, and enforcement provisions.** Is training required? for which audiences? at what frequency? is there a confidential reporting channel? is there enforcement and discipline language? Flag absences.
@@ -102,3 +104,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Topic-coverage matrix is complete; any topic the user's risk environment requires but the policy omits has been flagged.
+- [ ] Jurisdiction-coverage matrix has been built for each jurisdiction in scope; jurisdiction-specific obligations (e.g., EU Article 102 unilateral conduct for dominant companies; US labor-market no-poach/wage-fixing posture; UK DMCC; sector regimes) `[verify jurisdiction]` that the policy must reflect are flagged.
+- [ ] Dawn-raid protocol elements (counsel contact list, evidence-preservation rule, employee first-contact instructions, hold-and-segregate guidance) are inventoried, with absences flagged.
+- [ ] Training requirements (audience, frequency, completion tracking) and confidential reporting and discipline provisions are inventoried, with absences flagged.
+- [ ] Document-creation guidance covers competitively sensitive document hygiene appropriate to the user's risk environment (avoiding inflammatory language; distinguishing legitimate business observation from coordination indicia; when to consult counsel).
+- [ ] Audience-fit issues (sales / procurement / executives / board / HR / M&A team) are noted with role-specific drafting suggestions.
+- [ ] Drafting-suggestion list is framed as proposed direction for attorney review, never as approved drafting.
+- [ ] No statement attests that the policy is compliant or that it meets any jurisdiction's legal requirements.

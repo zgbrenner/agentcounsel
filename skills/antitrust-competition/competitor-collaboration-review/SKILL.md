@@ -1,6 +1,6 @@
 ---
 name: Competitor Collaboration Review
-description: "Use when performing competitor collaboration review as draft work product for attorney review."
+description: "Use when reviewing a proposed or existing collaboration between actual or potential competitors (JV, R&D pact, joint purchasing, benchmarking, standard-setting, joint bidding) to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity-question table, spillover-effect flags, and jurisdiction-specific safe-harbor questions for attorney review — without applying any safe harbor, deciding per se vs. rule-of-reason, or approving the collaboration."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -69,9 +69,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 1 (Horizontal Collaboration) and, where applicable, Section 2 (Information Exchange Between Competitors), Section 7 (Labor-Market Conduct), and Section 8 (Trade-Association Activity) at the steps noted below.
+
 1. **Confirm gates.** Jurisdiction, parties' competitive posture, collaboration purpose, information-exchange scope, and sources. If any gate is missing, stop and return the missing-information list.
 2. **Classify the collaboration type.** Joint venture / R&D pact / commercial collaboration / standard-setting / benchmarking / joint purchasing / joint bidding / settlement collaboration / other. The classification is descriptive, not a safe-harbor declaration.
-3. **Flag hardcore-restraint candidates.** Any provision that could be read as price-fixing, output restriction, customer or territory allocation, bid-rigging, or group boycott — record the provision verbatim with citation. Never explain the flag away; let the attorney resolve it.
+3. **Flag hardcore-restraint candidates.** Any provision that could be read as price-fixing, output restriction, customer or territory allocation, bid-rigging, or group boycott — record the provision verbatim with citation. Scan against Section 1 of `skills/antitrust-competition/references/risk-indicators.md` for scope-creep, ancillary-overreach, embedded-information-exchange, missing clean-team-boundary, joint-bidding, standard-setting, and joint-purchasing patterns. Never explain the flag away; let the attorney resolve it.
 4. **Map information flows.** One row per data item exchanged: direction, content category, granularity, age, frequency, aggregation, recipients, controls. Flag any item that puts competitively sensitive data into competitor hands without controls.
 5. **Test ancillarity questions.** For each restraint on parties' independent competitive conduct, record the underlying collaboration purpose, the scope/duration limits, and the proportionality question — as questions for counsel, not as conclusions.
 6. **Spot spillover-effect risks.** Effects on parties' independent conduct outside the collaboration — pricing, output, hiring, geographic expansion — that the collaboration could foreseeably influence.
@@ -100,3 +102,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Every hardcore-restraint candidate (price, output, customer/territory allocation, bid-rigging, group boycott) is quoted verbatim with citation and escalated to specialist counsel.
+- [ ] The parties' competitive posture is recorded per product and geographic market, with potential-competition and nascent-competition relationships separately flagged.
+- [ ] Each information flow between competitors is mapped with direction, content category, granularity, age, frequency, aggregation, recipients, and controls.
+- [ ] Ancillarity questions for each restraint on independent competitive conduct have been raised — calibration to the legitimate venture purpose is a question for counsel, not resolved.
+- [ ] Spillover-effect risks on conduct outside the collaboration (pricing, output, hiring, geographic expansion) have been identified.
+- [ ] No safe harbor or block exemption (e.g., EU R&D BER, EU Specialization BER, US business-review letter posture) has been treated as applicable; each is a question for counsel `[verify jurisdiction]`.
+- [ ] Candidate-framework questions per jurisdiction (Sherman §1, Article 101, UK CA98 ch. I, sector-specific regimes) have been routed without answer.
+- [ ] Where the collaboration involves trade-association or labor-market elements, the corresponding sections of `skills/antitrust-competition/references/risk-indicators.md` have been scanned and the relevant skills cross-referenced.
