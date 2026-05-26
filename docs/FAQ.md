@@ -2,6 +2,8 @@
 
 Questions about what AgentCounsel is, how to use it, and how to use it safely. See also [`README.md`](../README.md), [`QUICKSTART.md`](../QUICKSTART.md), and [`docs/SAFETY_MODEL.md`](SAFETY_MODEL.md).
 
+> Current totals (practice areas, skill counts) are tracked in [`metadata/index.json`](../metadata/index.json) and summarized in [`README.md`](../README.md). Any specific figures below reflect the state at the time of writing.
+
 ## About AgentCounsel
 
 ### What is AgentCounsel?

@@ -2,6 +2,8 @@
 
 **Status: Phases A, B, and C executed.** This document is the migration plan for bringing content from `agnostic-skills-for-legal` into AgentCounsel. The new-skill phases are complete; remaining work is tracked in **Phase D** below. See **Migration status** for a summary. The original plan text is retained for reference, with status notes added.
 
+> Current totals (practice areas, skill counts) are tracked in [`metadata/index.json`](../metadata/index.json) and summarized in [`README.md`](../README.md). Any specific figures below reflect the state at the time of writing.
+
 ## Purpose
 
 `foolish-bandit/agnostic-skills-for-legal` is an existing open-source legal-AI library. This plan compares it against AgentCounsel's canonical `skills/` directory and recommends, in priority order, what content to (A) fold into existing skills, (B) add as new skills, or (C) defer or reject.
