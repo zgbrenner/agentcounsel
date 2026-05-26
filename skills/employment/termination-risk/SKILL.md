@@ -79,6 +79,8 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 4. **Identify protected activity and leave.** Review the timeline for: recent complaints of discrimination or harassment by the employee; requests for or use of medical, family, or other protected leave; workers' compensation claims; whistleblower reports; union activity; or any other legally protected activity. Flag the proximity of any such activity to the proposed termination date. Do not conclude on legal significance — flag for attorney. **Routing note:** If the employee is on, has recently taken, or has recently returned from protected leave (medical/family, military/service, disability-accommodation, or similar), flag the leave-specific interference and retaliation exposure as a matter requiring deeper analysis under the `protected-leave-review` skill. This skill records the timing and flags the issue; `protected-leave-review` performs the leave-specific analysis.
 
+   **Anti-pattern to flag: PIP-as-pretext.** A performance improvement plan that was initiated, escalated, or accelerated shortly after protected activity (FMLA leave, EEOC charge, disability accommodation request, complaint of discrimination or harassment, whistleblower report, workers' comp claim) is a classic discrimination-claim trigger. Flag any PIP that began or was modified within a temporally proximate window of any protected-activity event. Note the chronological proximity but do not assert legal significance — that is an attorney determination.
+
 5. **Identify membership in or proximity to protected categories.** Note any known or apparent protected characteristics (e.g., age, race, sex, disability, national origin, religion, pregnancy status). Do not draw conclusions about discrimination. Flag every characteristic present for attorney review.
 
 6. **Identify comparators.** Ask whether other employees in similar roles, with similar conduct or performance, were treated differently. Note any comparators treated more favorably. Flag for attorney assessment of disparate treatment risk.
@@ -91,11 +93,17 @@ If any required input is missing, stop and request it before proceeding. Do not 
 
 10. **Identify severance and release considerations.** Note whether severance is being offered and whether a release of claims is contemplated. Flag consideration-period and revocation-period requirements as attorney-verification items, noting that these requirements vary by jurisdiction and by the age and number of employees being released. Do not assert specific statutory timeframes.
 
-11. **Review communications plan.** Note the proposed internal announcement and reference policy. Flag any statements about the reason for departure that could create evidentiary issues.
+11. **Executive-specific considerations.** If the employee is an executive, officer, or senior individual contributor, additionally assess:
+    - **Restrictive covenants.** Does the employee have a non-compete, non-solicit (employees and/or customers), or non-disparagement obligation? If so, what is the enforcement posture in the governing jurisdiction `[verify jurisdiction]`? Some jurisdictions restrict or prohibit enforcement.
+    - **Garden leave.** Is there a contractual or proposed garden-leave period? Note its duration, pay terms, and continued-employment status (some structures keep the employee on payroll, some do not, which can affect benefits and covenant tolling).
+    - **Equity forfeiture for competition.** Are there forfeiture-for-competition provisions in equity grants (RSUs, options, performance shares)? These can be enforceable in jurisdictions that would not enforce a traditional non-compete, under the "employee-choice" or "forfeiture-for-competition" doctrines. Flag for attorney review.
+    - **Change-in-control / severance triggers.** Note any change-in-control provision and whether the proposed termination might be construed as triggering CIC severance or accelerated vesting.
 
-12. **Populate the checklist template.** Complete the `templates/termination-risk-checklist.md` template with the gathered facts and flagged items.
+12. **Review communications plan.** Note the proposed internal announcement and reference policy. Flag any statements about the reason for departure that could create evidentiary issues.
 
-13. **Assemble the output.** Produce: (1) Fact Summary, (2) Risk Factor Summary, (3) Completed checklist referencing the template, (4) Open Items for attorney verification, (5) Stated assumptions. Label the entire output as a draft for attorney review.
+13. **Populate the checklist template.** Complete the `templates/termination-risk-checklist.md` template with the gathered facts and flagged items.
+
+14. **Assemble the output.** Produce: (1) Fact Summary, (2) Risk Factor Summary, (3) Completed checklist referencing the template, (4) Open Items for attorney verification, (5) Stated assumptions. Label the entire output as a draft for attorney review.
 
 ## Output Format
 
@@ -133,4 +141,6 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] Jurisdiction-specific final pay, notice, and WARN Act (or equivalent) requirements have been confirmed.
 - [ ] Severance and release terms, including any required consideration and revocation periods, have been reviewed under applicable law.
 - [ ] The communications plan and reference policy have been reviewed for evidentiary and reputational risk.
+- [ ] PIP-as-pretext pattern has been considered: any PIP initiated or modified within temporal proximity to protected activity has been flagged for retaliation-risk review.
+- [ ] If the employee is an executive or senior individual contributor: restrictive covenants, garden leave, equity-forfeiture-for-competition, and change-in-control provisions have all been reviewed; enforcement posture in the governing jurisdiction has been confirmed.
 - [ ] No legal conclusions in this document have been relied upon without attorney review and confirmation.

@@ -99,7 +99,10 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 11. **Review audit rights.** Identify whether the controller has the right to audit the processor, how audits are triggered and conducted, notice requirements, cost allocation, and whether third-party audit reports are accepted as a substitute. Flag provisions that significantly restrict audit rights.
 
-12. **Review cross-border transfer mechanism.** Identify how the DPA addresses transfers of personal data across borders (e.g., by reference to standard contractual clauses, binding corporate rules, adequacy decisions, or other mechanisms). Do not assess whether any mechanism is legally valid — flag for attorney review. Note if no transfer mechanism is addressed.
+12. **Review cross-border transfer mechanism.** Identify how the DPA addresses transfers of personal data across borders (e.g., by reference to standard contractual clauses, binding corporate rules, adequacy decisions, or other mechanisms). Do not assess whether any mechanism is legally valid — flag for attorney review. Note if no transfer mechanism is addressed. Additionally:
+    - **TIA reference check.** If the transfer mechanism cited relies on SCCs or equivalent contractual mechanism, note whether the DPA references or attaches a Transfer Impact Assessment (TIA) or equivalent supplementary-measures analysis. Absence of a TIA reference where one is doctrinally expected is itself a flag `[verify jurisdiction]`.
+    - **SCC-modification check.** If the DPA incorporates SCCs by reference, note whether the SCCs are referenced as-issued or with modifications. Material modification of SCC text is generally not permitted under the SCC terms themselves and is a flag for specialist review.
+    - **Annex/Schedule completeness.** Standard SCC structure requires processing-description annexes (parties, categories of data, processing purposes, security measures). Note whether the DPA includes these annexes and whether each annex is completed (not left in template form).
 
 13. **Review deletion and return obligations.** Identify what happens to personal data on termination or expiration — whether the processor must return, delete, or certify destruction, within what timeframe, and with what exceptions (e.g., legal retention obligations). Flag absence or vagueness.
 
@@ -145,6 +148,7 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] All statutory or regulatory deadlines referenced in or relevant to the DPA (especially breach notification periods) have been confirmed under current law — no deadline stated in this review has been computed or assumed.
 - [ ] The sub-processor approval and notice mechanism is consistent with applicable law and the client's operational requirements.
 - [ ] The cross-border transfer mechanism is valid and currently recognized under applicable law.
+- [ ] If the transfer mechanism relies on SCCs: any modifications to the SCC text have been identified and reviewed by transfer-mechanism specialist counsel; required annexes are present and completed; and the TIA or equivalent supplementary-measures analysis has been performed or routed to specialist counsel `[verify jurisdiction]`.
 - [ ] Security obligations meet applicable legal minimums and the client's risk tolerance.
 - [ ] The liability cap in the DPA is appropriate relative to the potential exposure from a data breach or regulatory fine.
 - [ ] The DPA is consistent with the main commercial agreement; any conflicts have been identified and resolved.

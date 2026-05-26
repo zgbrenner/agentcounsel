@@ -73,6 +73,7 @@ If the contract text or the client's role is not provided, stop and request it. 
 - Do not place client-sensitive facts into reusable templates.
 - Use `[CONFIRM: ...]` placeholders wherever information is missing or uncertain.
 - Flag every point of uncertainty rather than resolving it silently.
+- **Severity floor.** Once an issue has been rated High severity in the risk table or issues list, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.
 
 ## Workflow
 
