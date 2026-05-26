@@ -121,24 +121,35 @@ Every `SKILL.md` follows the same structure — Purpose, Use When, Required Inpu
 
 ## Ways to use AgentCounsel
 
-AgentCounsel is plain Markdown, so it works anywhere an agent or person can read a file. Here is how to use it on the most common surfaces.
+### Recommended: install a pre-built practice-area pack
+
+A platform pack is one file that bundles the global safety rules, the practice profile, the slash commands, and every skill in a practice area. Upload it to your AI tool's project or workspace and you can start work immediately — no copying files one at a time.
+
+Pre-built packs are hosted on the deployed Pages site and rebuilt on every push to `main`:
+
+- **[Browse the packs page](https://zgbrenner.github.io/agentcounsel/packs/)** — direct downloads per practice area for ChatGPT (.md), Claude (.zip), and Gemini (.zip), plus AGENTS.md / CLAUDE.md for repo agents.
+- The packs page lists every practice area with its skill count and a "How to use" block per platform.
+
+### For finer-grained control, you can also...
+
+AgentCounsel is plain Markdown, so it works anywhere an agent or person can read a file. The library-as-files paths below give you more control than a consolidated pack.
 
 | Surface | How to use AgentCounsel | Where to look |
 |---|---|---|
 | **Generic Markdown** | Open any `SKILL.md`, paste it into your assistant as context, and follow the workflow. Works with any model. | [`adapters/generic-md/`](adapters/generic-md/) |
-| **ChatGPT** | Create a ChatGPT Project and add skills as project files. Run `python scripts/build_platform_packs.py` to generate `dist/chatgpt/` — one consolidated file per practice area plus global project instructions, sized for Project file limits. | [`adapters/generic-md/`](adapters/generic-md/) |
-| **Claude** | Use the Claude Code plugin-style bundle, or keep the repo in a folder Claude can read as a local playbook. Platform packs build `dist/claude/` ZIPs per practice area for Claude Projects. | [`adapters/claude-code-plugin/`](adapters/claude-code-plugin/), [`adapters/claude-cowork/`](adapters/claude-cowork/) |
-| **Gemini** | Install the repository as a Gemini CLI extension — `gemini-extension.json` and `GEMINI.md` load the operating model automatically. Platform packs also build Gemini notebook sources. | [`adapters/gemini/`](adapters/gemini/) |
+| **ChatGPT** | Create a ChatGPT Project and add individual skill files. (For the consolidated practice-area pack, use the packs page above.) | [`adapters/generic-md/`](adapters/generic-md/) |
+| **Claude** | Use the Claude Code plugin-style bundle, or keep the repo in a folder Claude can read as a local playbook. | [`adapters/claude-code-plugin/`](adapters/claude-code-plugin/), [`adapters/claude-cowork/`](adapters/claude-cowork/) |
+| **Gemini** | Install the repository as a Gemini CLI extension — `gemini-extension.json` and `GEMINI.md` load the operating model automatically. | [`adapters/gemini/`](adapters/gemini/) |
 | **Codex / repo agents** | Point a repo-based coding or legal agent at the library through `AGENTS.md` so it selects the narrowest relevant skill. | [`adapters/codex/`](adapters/codex/), [`AGENTS.md`](AGENTS.md) |
-| **Cursor** | Add the library to a project and reference it from a `.cursorrules` file or `AGENTS.md`; `python scripts/build_platform_packs.py` generates a ready-made `.cursorrules` in `dist/repo-agents/`. | [`adapters/codex/`](adapters/codex/) |
+| **Cursor** | Add the library to a project and reference it from a `.cursorrules` file or `AGENTS.md`. (The packs page above also serves a ready-made `.cursorrules`.) | [`adapters/codex/`](adapters/codex/) |
 | **Your own agent** | Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions. | [`skills/`](skills/), [`core/`](core/) |
 
 Adapters are intentionally **thin**: they tell an environment how to find and use the canonical library; they do not duplicate it. The one exception is the Claude Code plugin bundle, which carries generated copies of a curated set of skills — regenerate it with `python scripts/sync_plugin_skills.py` (see [`PLUGIN_SYNC.md`](PLUGIN_SYNC.md)).
 
 ### Installing or copying skills
 
+- **A practice area (recommended):** download a pre-built pack from the [packs page](https://zgbrenner.github.io/agentcounsel/packs/) — one file per practice area for ChatGPT, Claude, and Gemini. Or run `python scripts/build_platform_packs.py` locally to produce the same packs in `dist/`.
 - **One skill:** copy a single `SKILL.md` (and its `templates/`, if any) into your assistant. Nothing else is required.
-- **A practice area:** copy that folder under `skills/`, or build a consolidated pack with `python scripts/build_platform_packs.py`.
 - **The whole library:** clone the repository, or vendor `skills/` and `core/` into your own project.
 
 There is no installer, no package to publish, and no runtime dependency. A skill is just a file.

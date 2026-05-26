@@ -25,6 +25,17 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build platform packs
+        run: |
+          python scripts/build_platform_packs.py
+          mkdir -p site/public/packs
+          cp -r dist/* site/public/packs/
+
       - name: Build static site
         run: node site/generate.mjs
 

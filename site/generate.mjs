@@ -324,6 +324,7 @@ function page({ title, depth, desc, body }) {
   <nav class="site-nav">
     <a href="${r}skill-index.html">Skill index</a>
     <a href="${r}index.html#practice-areas">Practice areas</a>
+    <a href="${r}packs/index.html">Packs</a>
     <a href="${r}platforms/index.html">Platform setup</a>
     <a href="${r}llms.txt">llms.txt</a>
   </nav>
@@ -616,6 +617,105 @@ ${REVIEW_NOTICE}`;
   return page({ title: p.title, depth: 1, desc: p.lead, body });
 }
 
+function buildPacksPage() {
+  const indexPath = join(REPO_ROOT, 'metadata', 'index.json');
+  if (!existsSync(indexPath)) return null;
+  const meta = JSON.parse(readFileSync(indexPath, 'utf8'));
+  const areas = {};
+  for (const s of meta.skills || []) {
+    const a = s.practice_area;
+    if (!a) continue;
+    (areas[a] = areas[a] || []).push(s);
+  }
+
+  let rows = '';
+  for (const a of AREA_ORDER) {
+    const list = areas[a] || [];
+    if (!list.length) continue;
+    rows += `<tr>
+<td>${esc(areaName(a))}</td>
+<td class="count">${list.length}</td>
+<td><a href="chatgpt/${a}.md">ChatGPT pack (.md)</a></td>
+<td><a href="claude/${a}.zip">Claude pack (.zip)</a></td>
+<td><a href="gemini/${a}.zip">Gemini pack (.zip)</a></td>
+</tr>\n`;
+  }
+
+  const body = `<nav class="breadcrumb"><a href="../index.html">Home</a> / <span>Packs</span></nav>
+<h1>Practice-area packs</h1>
+<p class="lead">A platform pack is one file you upload to your AI tool's project or workspace. It bundles the global safety rules, the practice profile, the slash commands, and every skill in a practice area — so you can start work without copying files one at a time.</p>
+
+${REVIEW_NOTICE}
+
+<section>
+<h2>Downloads</h2>
+<table class="index-table">
+<thead><tr><th>Practice area</th><th>Skills</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead>
+<tbody>
+${rows}</tbody>
+</table>
+</section>
+
+<section>
+<h2>Repo agents (Cursor, Codex, Claude Code)</h2>
+<p>For agents that run against a local checkout, use the repo-agent packs instead of the per-practice-area files:</p>
+<ul class="quicklinks">
+<li><a href="repo-agents/AGENTS.md">AGENTS.md</a> &mdash; Codex and repo-agent instructions.</li>
+<li><a href="repo-agents/CLAUDE.md">CLAUDE.md</a> &mdash; Claude Code instructions.</li>
+<li><a href="repo-agents/README.md">README.md</a> &mdash; how the repo-agent packs work.</li>
+</ul>
+</section>
+
+<section>
+<h2>How to use a pack</h2>
+<h3>ChatGPT</h3>
+<ol>
+<li>In ChatGPT, create a new Project for the practice area.</li>
+<li>Upload the practice area's <code>.md</code> file to the Project's files.</li>
+<li>In the Project instructions, paste: <em>"Follow the AgentCounsel pack in the Project files. Apply the global safety rules to every task. Use the practice profile and the skill that matches the request. Produce draft legal work product for attorney review — not legal advice."</em></li>
+<li>Start a chat, name the task, and let ChatGPT route to the right skill.</li>
+</ol>
+
+<h3>Claude</h3>
+<ol>
+<li>In Claude, create a new Project for the practice area.</li>
+<li>Unzip the <code>.zip</code> and upload its contents to the Project knowledge — or upload the zip directly if your Claude environment accepts it.</li>
+<li>In the Project's custom instructions, paste the same AgentCounsel operating instruction shown for ChatGPT above.</li>
+<li>Start a chat and describe the task.</li>
+</ol>
+
+<h3>Gemini</h3>
+<ol>
+<li>Create a notebook or workspace in your Gemini environment.</li>
+<li>Unzip the <code>.zip</code> and add its contents as sources, or upload the zip if your environment accepts it.</li>
+<li>Tell Gemini to follow the AgentCounsel pack and apply the safety rules. Provide the Required Inputs for the skill that matches the task.</li>
+</ol>
+
+<h3>Repo agents (Cursor, Codex, Claude Code)</h3>
+<ol>
+<li>Copy <code>AGENTS.md</code> (Codex) or <code>CLAUDE.md</code> (Claude Code) into your project root.</li>
+<li>The agent loads the operating rules and routes the task to the narrowest skill.</li>
+</ol>
+</section>
+
+<section>
+<h2>What every pack contains</h2>
+<ul>
+<li>The global safety rules from <code>core/</code> — the rules every skill inherits.</li>
+<li>The practice profile and command list for the practice area.</li>
+<li>Every <code>SKILL.md</code> in the practice area, with workflow and attorney-verification checklist.</li>
+<li>A "How to use this pack" header keyed to the target platform.</li>
+</ul>
+<p>Packs are regenerated on every push to <code>main</code>; the canonical library under <a href="../skill-index.html">skills/</a> is always the source of truth.</p>
+</section>`;
+
+  return page({
+    title: 'Packs', depth: 1,
+    desc: 'Pre-built AgentCounsel platform packs — one file per practice area for ChatGPT, Claude, Gemini, and repo agents.',
+    body,
+  });
+}
+
 function buildPlatformIndex() {
   let items = '';
   for (const p of PLATFORMS) {
@@ -715,8 +815,16 @@ function main() {
     byArea[area].sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  rmSync(OUT, { recursive: true, force: true });
-  mkdirSync(OUT, { recursive: true });
+  // Wipe site/public, but preserve any preexisting site/public/packs/
+  // (the CI workflow copies dist/* into packs/ before this runs).
+  if (existsSync(OUT)) {
+    for (const entry of readdirSync(OUT)) {
+      if (entry === 'packs') continue;
+      rmSync(join(OUT, entry), { recursive: true, force: true });
+    }
+  } else {
+    mkdirSync(OUT, { recursive: true });
+  }
 
   let count = 0;
 
@@ -740,6 +848,12 @@ function main() {
   count++;
   for (const p of PLATFORMS) {
     write('platforms/' + p.slug + '.html', buildPlatformPage(p));
+    count++;
+  }
+
+  const packsPage = buildPacksPage();
+  if (packsPage) {
+    write('packs/index.html', packsPage);
     count++;
   }
 
