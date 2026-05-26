@@ -3,6 +3,8 @@
 **Status:** Proposal for maintainer review. Nothing in this document has been
 implemented. It is a plan, not a change.
 
+> Current totals (practice areas, skill counts) are tracked in [`metadata/index.json`](../metadata/index.json) and summarized in [`README.md`](../README.md). Any specific figures below reflect the state at the time of writing.
+
 **Purpose:** Audit AgentCounsel's current practice-area taxonomy and propose a
 disciplined model for expanding it — adding the practice areas the library is
 missing without making the repository messy, duplicative, or inconsistent.

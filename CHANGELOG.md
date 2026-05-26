@@ -2,6 +2,8 @@
 
 All notable changes to AgentCounsel are recorded in this file. The format follows the Keep a Changelog convention. AgentCounsel is pre-1.0; the library's content and structure may still change between releases.
 
+> Current totals (practice areas, skill counts) are tracked in [`metadata/index.json`](metadata/index.json) and summarized in [`README.md`](README.md). Figures quoted below reflect the state at the time each entry was written.
+
 ## [Unreleased]
 
 ### Added
