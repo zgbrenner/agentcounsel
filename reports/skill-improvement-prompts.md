@@ -7556,7 +7556,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing antitrust compliance policy review as draft work product for attorney review.
+- **Current description:** Use when reviewing a company's antitrust compliance policy and supporting program (training, dawn-raid protocol, document-creation guidance, reporting and discipline) — to produce a draft topic-coverage matrix, jurisdiction-coverage matrix, training/reporting/enforcement assessment, dawn-raid-protocol assessment, audience-fit notes, and drafting-suggestion list for attorney review — without attesting compliance, approving the policy, or representing it meets any jurisdiction's legal requirements.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7569,7 +7569,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md
 - Current skill name: Antitrust Compliance Policy Review
 - Practice area: Antitrust Competition
-- Current description: Use when performing antitrust compliance policy review as draft work product for attorney review.
+- Current description: Use when reviewing a company's antitrust compliance policy and supporting program (training, dawn-raid protocol, document-creation guidance, reporting and discipline) — to produce a draft topic-coverage matrix, jurisdiction-coverage matrix, training/reporting/enforcement assessment, dawn-raid-protocol assessment, audience-fit notes, and drafting-suggestion list for attorney review — without attesting compliance, approving the policy, or representing it meets any jurisdiction's legal requirements.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for antitrust compliance policy review.
 
 CONTEXT TO READ FIRST
@@ -7644,7 +7644,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/antitrust-risk-intake/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing antitrust risk intake as draft work product for attorney review.
+- **Current description:** Use when intaking facts about proposed or existing conduct with potential competition-law exposure into a structured triage matrix that buckets each conduct item, flags any time-critical track, and routes to the relevant deep-dive antitrust skill — without classifying conduct, defining markets, or assessing legality, reportability, or enforcement likelihood.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7657,7 +7657,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/antitrust-risk-intake/SKILL.md
 - Current skill name: Antitrust Risk Intake
 - Practice area: Antitrust Competition
-- Current description: Use when performing antitrust risk intake as draft work product for attorney review.
+- Current description: Use when intaking facts about proposed or existing conduct with potential competition-law exposure into a structured triage matrix that buckets each conduct item, flags any time-critical track, and routes to the relevant deep-dive antitrust skill — without classifying conduct, defining markets, or assessing legality, reportability, or enforcement likelihood.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for antitrust risk intake.
 
 CONTEXT TO READ FIRST
@@ -7732,7 +7732,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/competitor-collaboration-review/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing competitor collaboration review as draft work product for attorney review.
+- **Current description:** Use when reviewing a proposed or existing collaboration between actual or potential competitors (JV, R&D pact, joint purchasing, benchmarking, standard-setting, joint bidding) to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity-question table, spillover-effect flags, and jurisdiction-specific safe-harbor questions for attorney review — without applying any safe harbor, deciding per se vs. rule-of-reason, or approving the collaboration.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7745,7 +7745,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/competitor-collaboration-review/SKILL.md
 - Current skill name: Competitor Collaboration Review
 - Practice area: Antitrust Competition
-- Current description: Use when performing competitor collaboration review as draft work product for attorney review.
+- Current description: Use when reviewing a proposed or existing collaboration between actual or potential competitors (JV, R&D pact, joint purchasing, benchmarking, standard-setting, joint bidding) to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity-question table, spillover-effect flags, and jurisdiction-specific safe-harbor questions for attorney review — without applying any safe harbor, deciding per se vs. rule-of-reason, or approving the collaboration.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for competitor collaboration review.
 
 CONTEXT TO READ FIRST
@@ -7820,7 +7820,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/distribution-restraints-review/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing distribution restraints review as draft work product for attorney review.
+- **Current description:** Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales or marketplace bans, dual pricing, selective distribution, tying) to produce a draft restraint inventory with per-jurisdiction character flags (hardcore candidates, online-sales callouts, dual-distribution issues, state-law and sector overlays) for attorney review — without concluding enforceability, VBER applicability, or market power.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7833,7 +7833,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/distribution-restraints-review/SKILL.md
 - Current skill name: Distribution Restraints Review
 - Practice area: Antitrust Competition
-- Current description: Use when performing distribution restraints review as draft work product for attorney review.
+- Current description: Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales or marketplace bans, dual pricing, selective distribution, tying) to produce a draft restraint inventory with per-jurisdiction character flags (hardcore candidates, online-sales callouts, dual-distribution issues, state-law and sector overlays) for attorney review — without concluding enforceability, VBER applicability, or market power.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for distribution restraints review.
 
 CONTEXT TO READ FIRST
@@ -7908,7 +7908,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing exclusivity mfn pricing review as draft work product for attorney review.
+- **Current description:** Use when reviewing exclusivity, MFN/parity, loyalty discount, rebate, or requirements provisions to produce a draft restraint-classification matrix, foreclosure-relevant facts table, narrow-vs-wide MFN map, loyalty/rebate structure analysis, and jurisdiction-specific framework questions (Sherman §1/§2, Article 101/102, UK CA98) for attorney review — without finding dominance, foreclosure, or legality.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -7921,7 +7921,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md
 - Current skill name: Exclusivity MFN Pricing Review
 - Practice area: Antitrust Competition
-- Current description: Use when performing exclusivity mfn pricing review as draft work product for attorney review.
+- Current description: Use when reviewing exclusivity, MFN/parity, loyalty discount, rebate, or requirements provisions to produce a draft restraint-classification matrix, foreclosure-relevant facts table, narrow-vs-wide MFN map, loyalty/rebate structure analysis, and jurisdiction-specific framework questions (Sherman §1/§2, Article 101/102, UK CA98) for attorney review — without finding dominance, foreclosure, or legality.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for exclusivity mfn pricing review.
 
 CONTEXT TO READ FIRST
@@ -7996,7 +7996,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing gun jumping clean team checklist as draft work product for attorney review.
+- **Current description:** Use when assessing pre-closing coordination between signed-but-not-yet-closed merger parties — to produce a draft pre-closing covenant inventory, actual-conduct-vs-covenants deviation log, information-sharing log, clean-team design summary, external-communications inventory, and integration-planning guardrail list for attorney review — without concluding HSR/Article 7 compliance or approving any pre-closing conduct.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8009,7 +8009,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md
 - Current skill name: Gun Jumping Clean Team Checklist
 - Practice area: Antitrust Competition
-- Current description: Use when performing gun jumping clean team checklist as draft work product for attorney review.
+- Current description: Use when assessing pre-closing coordination between signed-but-not-yet-closed merger parties — to produce a draft pre-closing covenant inventory, actual-conduct-vs-covenants deviation log, information-sharing log, clean-team design summary, external-communications inventory, and integration-planning guardrail list for attorney review — without concluding HSR/Article 7 compliance or approving any pre-closing conduct.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for gun jumping clean team checklist.
 
 CONTEXT TO READ FIRST
@@ -8084,7 +8084,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing information sharing clean team review as draft work product for attorney review.
+- **Current description:** Use when reviewing a proposed or in-progress exchange of competitively sensitive information between actual or potential competitors (M&A diligence, JV, benchmarking, trade association, supply-chain reasonableness) — to produce a draft information-item matrix, per-item sensitivity flag, clean-team design summary, spillover/carryover flags, control-gap notes, and jurisdiction-specific framework questions for attorney review — without authorizing any exchange or concluding lawfulness.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8097,7 +8097,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md
 - Current skill name: Information Sharing Clean Team Review
 - Practice area: Antitrust Competition
-- Current description: Use when performing information sharing clean team review as draft work product for attorney review.
+- Current description: Use when reviewing a proposed or in-progress exchange of competitively sensitive information between actual or potential competitors (M&A diligence, JV, benchmarking, trade association, supply-chain reasonableness) — to produce a draft information-item matrix, per-item sensitivity flag, clean-team design summary, spillover/carryover flags, control-gap notes, and jurisdiction-specific framework questions for attorney review — without authorizing any exchange or concluding lawfulness.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for information sharing clean team review.
 
 CONTEXT TO READ FIRST
@@ -8172,7 +8172,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing merger antitrust issue spotter as draft work product for attorney review.
+- **Current description:** Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction — to produce a draft horizontal-overlap matrix, vertical-relationship matrix, potential/nascent-competition flags, adjacent-overlap (data/IP/labor/innovation) flags, per-jurisdiction filing-question list, diligence-request list, and pre-closing integration guardrails for attorney review — without defining markets, reaching reportability conclusions, predicting clearance, or evaluating competitive effects.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8185,7 +8185,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md
 - Current skill name: Merger Antitrust Issue Spotter
 - Practice area: Antitrust Competition
-- Current description: Use when performing merger antitrust issue spotter as draft work product for attorney review.
+- Current description: Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction — to produce a draft horizontal-overlap matrix, vertical-relationship matrix, potential/nascent-competition flags, adjacent-overlap (data/IP/labor/innovation) flags, per-jurisdiction filing-question list, diligence-request list, and pre-closing integration guardrails for attorney review — without defining markets, reaching reportability conclusions, predicting clearance, or evaluating competitive effects.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for merger antitrust issue spotter.
 
 CONTEXT TO READ FIRST
@@ -8260,7 +8260,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing pricing algorithm risk triage as draft work product for attorney review.
+- **Current description:** Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, optimizer, or pricing-as-a-service deployment — to produce a draft data-flow map, hub-and-spoke risk assessment (vendor-driven coordination), signaling-risk flags, override/audit-posture review, vendor-diligence questions, and jurisdiction-specific framework questions (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance) for attorney review — without concluding concerted practice, hub-and-spoke conspiracy, signaling violation, or approving deployment.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8273,7 +8273,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md
 - Current skill name: Pricing Algorithm Risk Triage
 - Practice area: Antitrust Competition
-- Current description: Use when performing pricing algorithm risk triage as draft work product for attorney review.
+- Current description: Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, optimizer, or pricing-as-a-service deployment — to produce a draft data-flow map, hub-and-spoke risk assessment (vendor-driven coordination), signaling-risk flags, override/audit-posture review, vendor-diligence questions, and jurisdiction-specific framework questions (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance) for attorney review — without concluding concerted practice, hub-and-spoke conspiracy, signaling violation, or approving deployment.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for pricing algorithm risk triage.
 
 CONTEXT TO READ FIRST
@@ -8348,7 +8348,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/antitrust-competition/trade-association-meeting-review/SKILL.md`
 - **Practice area:** Antitrust Competition
-- **Current description:** Use when performing trade association meeting review as draft work product for attorney review.
+- **Current description:** Use when reviewing a trade-association meeting (agenda, minutes, attendee list, recordings) for antitrust risk — to produce a draft attendee competitive-relationship map, per-agenda-item risk matrix, high-risk discussion excerpts, output-product inventory, standard-setting and boycott flags, and side-meeting/informal-contact inventory for attorney review — without approving attendance, output products, or concluding lawfulness of any discussion.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -8361,7 +8361,7 @@ TARGET SKILL
 - Skill path: skills/antitrust-competition/trade-association-meeting-review/SKILL.md
 - Current skill name: Trade Association Meeting Review
 - Practice area: Antitrust Competition
-- Current description: Use when performing trade association meeting review as draft work product for attorney review.
+- Current description: Use when reviewing a trade-association meeting (agenda, minutes, attendee list, recordings) for antitrust risk — to produce a draft attendee competitive-relationship map, per-agenda-item risk matrix, high-risk discussion excerpts, output-product inventory, standard-setting and boycott flags, and side-meeting/informal-contact inventory for attorney review — without approving attendance, output products, or concluding lawfulness of any discussion.
 - Core purpose (must not change): Produce a structured **draft for attorney review** for trade association meeting review.
 
 CONTEXT TO READ FIRST
