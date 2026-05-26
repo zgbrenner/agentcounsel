@@ -1,6 +1,6 @@
 ---
 name: Pricing Algorithm Risk Triage
-description: "Use when performing pricing algorithm risk triage as draft work product for attorney review."
+description: "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, optimizer, or pricing-as-a-service deployment — to produce a draft data-flow map, hub-and-spoke risk assessment (vendor-driven coordination), signaling-risk flags, override/audit-posture review, vendor-diligence questions, and jurisdiction-specific framework questions (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance) for attorney review — without concluding concerted practice, hub-and-spoke conspiracy, signaling violation, or approving deployment."
 practice_area: antitrust-competition
 task_type: triage
 jurisdictions: []
@@ -68,6 +68,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill is the in-cluster anchor for pricing-algorithm conduct. Sections 4.3 (hub-and-spoke via shared vendor), 4.4 (public price-signaling), and 4.5 (algorithmic-pricing cross-reference) of `skills/antitrust-competition/references/risk-indicators.md` summarize the patterns this skill investigates in depth; consult Section 2 (Information Exchange Between Competitors) where vendor inputs include data from competing customers.
+
 1. **Confirm gates.** Jurisdiction, algorithm role, vendor relationship, data-flow posture. If any gate is missing, stop and return the missing-information list.
 2. **Classify the algorithm.** Recommender / dynamic pricing / optimization / pricing-as-a-service. Multi-role classification allowed.
 3. **Map data flows.** One row per input and output: source, sensitivity, recipient, frequency. Identify any input that traces to competitor data — direct (scraped), indirect (via shared vendor), or pooled (consortium).
@@ -100,3 +102,10 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Every input traced to competitor data (direct, indirect via shared vendor, or pooled) has been identified and routed to attorney review.
+- [ ] Hub-and-spoke pattern flags (vendor with overlapping competing customers) have been verified against the vendor's actual customer base where the user can confirm it; gaps in user knowledge are flagged for vendor diligence.
+- [ ] Signaling-risk flags have been assessed against the algorithm's actual output cadence, granularity, and external visibility.
+- [ ] Override and audit posture (logs, parameter-change governance, independent-decision evidence, retention period) has been documented; absence of any of these is flagged.
+- [ ] Vendor-diligence questions covering data-access scope, customer overlap, output-sharing, segregation across customers, and audit availability have been routed for vendor follow-up.
+- [ ] Candidate-framework questions per jurisdiction (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance, other sector or national frameworks) `[verify jurisdiction]` have been raised, not answered.
+- [ ] No representation has been made that any deployment is consistent with concerted-practice, hub-and-spoke, or signaling frameworks; deployment approval is reserved to attorney sign-off.

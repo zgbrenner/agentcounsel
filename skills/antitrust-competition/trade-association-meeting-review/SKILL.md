@@ -1,6 +1,6 @@
 ---
 name: Trade Association Meeting Review
-description: "Use when performing trade association meeting review as draft work product for attorney review."
+description: "Use when reviewing a trade-association meeting (agenda, minutes, attendee list, recordings) for antitrust risk — to produce a draft attendee competitive-relationship map, per-agenda-item risk matrix, high-risk discussion excerpts, output-product inventory, standard-setting and boycott flags, and side-meeting/informal-contact inventory for attorney review — without approving attendance, output products, or concluding lawfulness of any discussion."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -68,9 +68,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 8 (Trade-Association Activity) at the steps noted below, and Section 2 (Information Exchange Between Competitors) for benchmarking, statistics, and information-exchange outputs.
+
 1. **Confirm gates.** Jurisdiction, association and meeting context, attendee map, agenda content. If any gate is missing, stop and return the missing-information list.
 2. **Map attendees by competitive relationship.** One row per attendee: name, member entity, competitive relationship (direct competitor / potential competitor / customer / supplier / unrelated), role at meeting, level.
-3. **Categorize each agenda item.** High-risk topics (pricing, costs, customer-specific terms, output, capacity, wages/hiring, future plans, strategy, market allocation, boycott or refusal language), medium-risk (industry conditions, regulatory developments, broad future planning), low-risk (legislative advocacy, sponsor recognition, social).
+3. **Categorize each agenda item.** High-risk topics (pricing, costs, customer-specific terms, output, capacity, wages/hiring, future plans, strategy, market allocation, boycott or refusal language), medium-risk (industry conditions, regulatory developments, broad future planning), low-risk (legislative advocacy, sponsor recognition, social). For each topic, scan against Section 8 of `skills/antitrust-competition/references/risk-indicators.md` for minutes-discussion, agenda-framing, off-agenda-contact, insufficient-aggregation, and joint-commercial-conduct patterns.
 4. **For each high-risk agenda item, record the controls in place.** Antitrust statement at opening; counsel present; agenda pre-cleared; topic-specific instructions to attendees; minutes review; rules against side-meeting follow-up.
 5. **For each high-risk discussion in the minutes/notes (where supplied), record verbatim what was said.** Flag any item where the discussion went beyond what the controls would protect — e.g., specific pricing, specific customer-level decisions, agreement to coordinate.
 6. **Inventory output products.** Statistics, benchmarking, joint positions, standards. For each: granularity, age, anonymity, aggregation level, recipients. Flag where granularity, currency, or recipient scope creates risk.
@@ -104,3 +106,12 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] The agenda was reviewed and (where available) pre-cleared by antitrust counsel before the meeting; absence of pre-clearance is flagged.
+- [ ] Each agenda item is categorized (high/medium/low risk) and high-risk items have documented controls (antitrust statement at opening, counsel presence, topic-specific instructions, minutes review).
+- [ ] Minutes and notes have been scanned for verbatim discussion that went beyond what controls would protect; any such discussion is quoted with attribution and source.
+- [ ] Standard-setting activity (if applicable) has been flagged for F/RAND and patent-disclosure review.
+- [ ] Any boycott or collective-refusal language has been called out separately with the verbatim text.
+- [ ] Side-meeting, dinner, and informal-contact inventory is complete; competitively sensitive content discussed off-agenda is flagged with attendees.
+- [ ] Output-product flags (statistics, benchmarking reports, joint positions, model contracts) record granularity, currency, anonymity, aggregation, and recipient scope.
+- [ ] The attendee map records each attendee's member entity, competitive relationship (direct competitor / potential / customer / supplier / unrelated), role at meeting, and level.
+- [ ] Activity that crosses into joint commercial conduct (joint negotiation, group boycott, joint pricing recommendations) has been escalated rather than treated as ordinary association activity.

@@ -1,6 +1,6 @@
 ---
 name: Information Sharing Clean Team Review
-description: "Use when performing information sharing clean team review as draft work product for attorney review."
+description: "Use when reviewing a proposed or in-progress exchange of competitively sensitive information between actual or potential competitors (M&A diligence, JV, benchmarking, trade association, supply-chain reasonableness) — to produce a draft information-item matrix, per-item sensitivity flag, clean-team design summary, spillover/carryover flags, control-gap notes, and jurisdiction-specific framework questions for attorney review — without authorizing any exchange or concluding lawfulness."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -68,9 +68,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 2 (Information Exchange Between Competitors) at the steps noted below; consult Section 5 where the exchange is M&A diligence and Section 8 where it is trade-association activity.
+
 1. **Confirm gates.** Jurisdiction, parties' competitive posture, the information categories proposed, and the recipient/control posture. If any gate is missing, stop and return the missing-information list.
 2. **Inventory the proposed information items.** One row per item: category, granularity, age, frequency, source, intended recipient, intended purpose.
-3. **Classify sensitivity.** For each item, record the sensitivity flag — high (current/forward pricing, capacity, customer-specific terms, wages/hiring decisions, bid information, future plans), medium (recent historical pricing, customer-level historical data, costs), or low (aged or aggregated public-type data) — with rationale, never as a legal conclusion.
+3. **Classify sensitivity.** For each item, record the sensitivity flag — high (current/forward pricing, capacity, customer-specific terms, wages/hiring decisions, bid information, future plans), medium (recent historical pricing, customer-level historical data, costs), or low (aged or aggregated public-type data) — with rationale, never as a legal conclusion. Scan against Section 2 of `skills/antitrust-competition/references/risk-indicators.md` for identifiable-current-data, insufficient-aggregation, no-lag, competitor-specific-report, missing-policy-framing, and shared-vendor-conduit patterns.
 4. **Test the clean-team design.** Membership (counsel only? designated individuals? business decision-makers?), NDA scope, segregation from competitive decision-making, retention and destruction protocol, post-deal carryover restrictions, audit.
 5. **Flag carryover and spillover risks.** Risks if the deal does not close (information returning to a competitive decision-maker), and post-closing risks if the deal does close (information used in non-deal contexts).
 6. **Identify control gaps.** For each item, compare the proposed posture against mature-practice indicators (counsel-mediated transfer for high-sensitivity items; aggregation/anonymization for capacity/pricing; bright-line segregation for forward-looking data). Flag where controls are thinner — frame as questions for counsel, not as legal conclusions.
@@ -100,3 +102,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Each information item's sensitivity is flagged with rationale (granularity, age, recipient scope) and is treated as descriptive, not as a legal conclusion.
+- [ ] Forward-looking, customer-specific, current-pricing, capacity, wage/hiring, and bid information is separately flagged as high-sensitivity.
+- [ ] Aggregation, anonymization, and time-lag protocols required by the governing framework are documented and operational where required `[verify jurisdiction]`.
+- [ ] Clean-team membership, NDA scope, segregation from competitive decision-makers, retention/destruction protocol, and post-deal carryover restrictions are documented.
+- [ ] Carryover risks (information returning to a competitive decision-maker if the deal does not close) and spillover risks (post-closing use outside the deal) are flagged.
+- [ ] Control gaps (counsel-mediated transfer absent for high-sensitivity items, missing aggregation, no bright-line segregation for forward-looking data) are raised as questions for counsel.
+- [ ] Where the exchange runs through a shared vendor or consultant, vendor-overlap and segregation posture has been examined per Section 2.6 of `skills/antitrust-competition/references/risk-indicators.md`.
+- [ ] Candidate-framework questions per jurisdiction (Sherman §1 information-exchange line, Article 101 information-exchange framework, UK CMA framework, sector-specific rules) have been routed without answer.

@@ -1,6 +1,6 @@
 ---
 name: Exclusivity MFN Pricing Review
-description: "Use when performing exclusivity mfn pricing review as draft work product for attorney review."
+description: "Use when reviewing exclusivity, MFN/parity, loyalty discount, rebate, or requirements provisions to produce a draft restraint-classification matrix, foreclosure-relevant facts table, narrow-vs-wide MFN map, loyalty/rebate structure analysis, and jurisdiction-specific framework questions (Sherman §1/§2, Article 101/102, UK CA98) for attorney review — without finding dominance, foreclosure, or legality."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -68,8 +68,10 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 ## Workflow
 
+This skill draws on the shared antitrust risk-indicator catalog in `skills/antitrust-competition/references/risk-indicators.md`. Consult Section 3 (Vertical Restraints — exclusivity, wide MFN) and Section 4 (Pricing-Related Conduct — loyalty/bundled discounts, predatory pricing flags) at the steps noted below; consult Section 6 (Monopolization / Abuse of Dominance) where the user-supplied facts imply market power.
+
 1. **Confirm gates.** Jurisdiction, restraint type, counterparty context, foreclosure-relevant facts. If any gate is missing, stop and return the missing-information list.
-2. **Classify each restraint.** Exclusivity / MFN/parity / loyalty / rebate / requirements / non-compete / bundling / pricing-related. Multi-restraint allowed; each gets its own row.
+2. **Classify each restraint.** Exclusivity / MFN/parity / loyalty / rebate / requirements / non-compete / bundling / pricing-related. Multi-restraint allowed; each gets its own row. For each restraint, scan against Sections 3, 4, and (where market power is implicated) 6 of `skills/antitrust-competition/references/risk-indicators.md` and record each pattern present.
 3. **Record restraint mechanics.** For each restraint: scope (products / customers / geographies), duration, exceptions, opt-outs, triggers, termination. Quote restraint language verbatim with citation.
 4. **Map foreclosure-relevant facts.** For each restraint: share of market covered, contestable share remaining, counterparties' alternatives, switching costs, evidence of foreclosure or non-foreclosure. Never adjudicate foreclosure; record the facts.
 5. **For MFN/parity provisions: distinguish narrow vs. wide and direction.** Narrow (parity with own direct channel) vs. wide (parity with competing platforms); direction (which platform is favored relative to which). Record the comparator scope precisely.
@@ -100,3 +102,11 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Each restraint is classified (exclusivity / MFN / loyalty / rebate / requirements / non-compete / bundling) and the classification is treated as descriptive, not as a legal characterization.
+- [ ] MFN / parity provisions are characterized as narrow vs. wide with the comparator scope and direction recorded precisely.
+- [ ] Share-conditional, retroactive, cliff, and market-share-threshold rebate structures are separately flagged; bundled discounts have been tested for whether a competitor offering only the contested product could match.
+- [ ] Foreclosure-relevant facts (share of market covered, contestable share remaining, counterparties' alternatives, switching costs) are user-supplied and not invented; foreclosure itself has not been adjudicated.
+- [ ] Candidate-framework questions are raised per jurisdiction (US Sherman §1 vertical / §2 unilateral; EU Article 101 vertical / 102 abuse and rebate framework; UK CA98 ch. I/II; other regimes) `[verify jurisdiction]` and not answered.
+- [ ] Below-cost or predatory-pricing posture, where implicated by loyalty/bundled structures, has been flagged for economic-expert review.
+- [ ] Calibration of each restraint to its user-supplied business rationale has been raised as a question, not resolved.
+- [ ] Dominance and market-power determinations are flagged `[ATTORNEY TO CONFIRM]`; no dominance conclusion has been reached.

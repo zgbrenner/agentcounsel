@@ -1,6 +1,6 @@
 ---
 name: Antitrust Risk Intake
-description: "Use when performing antitrust risk intake as draft work product for attorney review."
+description: "Use when intaking facts about proposed or existing conduct with potential competition-law exposure into a structured triage matrix that buckets each conduct item, flags any time-critical track, and routes to the relevant deep-dive antitrust skill — without classifying conduct, defining markets, or assessing legality, reportability, or enforcement likelihood."
 practice_area: antitrust-competition
 task_type: intake
 jurisdictions: []
@@ -68,7 +68,7 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 
 1. **Confirm gates.** Jurisdiction(s) of competitive effect, business sector and footprint, counterparty posture, urgency posture, and sources. If any gate is missing, stop and return the missing-information list.
 2. **Inventory the conduct.** One row per conduct item: who, what, when, where, with which counterparties, and the document source. Use `unknown/not found/not provided/ambiguous` for every gap.
-3. **Bucket each conduct item.** For each item, identify the candidate conduct bucket(s) — horizontal collaboration, vertical restraint, information exchange, pricing-related, merger, monopolization/dominance, trade association/standard-setting, gun-jumping, distribution, algorithmic, labor-market, other. Multi-bucket allowed.
+3. **Bucket each conduct item.** For each item, identify the candidate conduct bucket(s) — horizontal collaboration, vertical restraint, information exchange, pricing-related, merger, monopolization/dominance, trade association/standard-setting, gun-jumping, distribution, algorithmic, labor-market, other. Multi-bucket allowed. For each candidate bucket, scan the corresponding section of `skills/antitrust-competition/references/risk-indicators.md` and record each pattern present in the user's facts as a preliminary risk indicator — descriptive, not adjudicative.
 4. **Build the triage matrix.** Combine conduct, parties, jurisdiction, candidate bucket, and a short list of preliminary risk indicators (the user-supplied facts that would matter to an antitrust attorney). Indicators are descriptive, not adjudicative.
 5. **Identify the time-critical track, if any.** Active investigation, pending HSR, ongoing potentially-problematic conduct, or imminent dawn-raid risk all elevate urgency. Flag `[CRITICAL — ATTORNEY TO VERIFY DEADLINE]` for any date the user supplied that drives urgency.
 6. **Route to deep-dive skills.** For each conduct item, recommend the deep-dive skill best matched to its bucket: `merger-antitrust-issue-spotter`, `competitor-collaboration-review`, `information-sharing-clean-team-review`, `distribution-restraints-review`, `exclusivity-mfn-pricing-review`, `gun-jumping-clean-team-checklist`, `pricing-algorithm-risk-triage`, `trade-association-meeting-review`, or `antitrust-compliance-policy-review`. The recommendation is a routing signal, not a workflow decision for the attorney.
@@ -95,3 +95,10 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - [ ] No final legality/reportability/enforceability/clearance conclusion was given.
 - [ ] Competitor information sharing, pricing conduct, and communications are not approved without attorney sign-off.
 - [ ] All placeholders and open questions are resolved before reliance.
+- [ ] Every conduct item has been bucketed and the bucketing is treated as a routing signal, not a legal classification.
+- [ ] Each conduct item's recommended deep-dive skill matches its bucketing and the user's posture (pre-clearance / compliance / defensive).
+- [ ] Any time-critical track (active investigation, pending HSR, dawn-raid risk, imminent conduct) is flagged `[CRITICAL — ATTORNEY TO VERIFY DEADLINE]` and routed to specialist counsel.
+- [ ] User-supplied dates driving urgency are flagged `[deadline verification required]`; no deadline has been computed or assumed.
+- [ ] Fact-gap and document-request lists are complete for each recommended deep-dive skill.
+- [ ] Multi-bucket conduct items have not been collapsed into a single bucket without attorney sign-off.
+- [ ] Preliminary risk indicators drawn from `skills/antitrust-competition/references/risk-indicators.md` are recorded as descriptive flags, not as conclusions about liability or legality.
