@@ -179,6 +179,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 Commands for configuring AgentCounsel and opening a matter. The cold-start interviews configure a practice group and produce a filled-in practice profile under `practice-profiles/`; `create-matter-workspace` sets up a single matter file under `matter-workspaces/`.
 
+Only the four hand-authored cold-start interviews (`/setup:contracts`, `/setup:litigation`, `/setup:privacy`, `/setup:corporate`) carry slash-style commands. The other fourteen cold-start interviews under `skills/setup/` are intentionally not slash-commandable — they are one-time administrative configuration flows run with a practice-group lead rather than ad-hoc legal tasks. Reach them directly via `skills/setup/<area>-cold-start-interview/SKILL.md`.
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/setup:contracts` | `skills/setup/contracts-cold-start-interview/SKILL.md` | "configure the contracts practice", "set up the contracts profile" | A knowledgeable contracts attorney or designee | Filled `practice-profiles/contracts.md` draft | `/contracts:review` |

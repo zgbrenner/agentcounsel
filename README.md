@@ -78,7 +78,7 @@ AgentCounsel has **179 skills**: 153 across **20 practice areas**, plus 26 cross
 
 Three **cross-cutting skill groups** support work in every practice area:
 
-- **Setup** (5 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
+- **Setup** (19 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
 - **Legal Methodology** (4 skills) — red-team verification, statutory interpretation, risk assessment, and source validation.
 - **Legal Operations** (3 skills) — templated legal responses, meeting briefings, and signature-routing checks.
 
