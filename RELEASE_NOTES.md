@@ -1,5 +1,7 @@
 # AgentCounsel v0.1.0 — First Public Release
 
+> **This file is the archived release-notes snapshot for v0.1.0 (the first public release on 2026-05-21). It records what shipped at that point in time and is intentionally not updated as the library evolves. For the **current** scope of the library — practice areas, skill counts, and design — see [`README.md`](README.md). For the development history that has accumulated since v0.1.0, see [`CHANGELOG.md`](CHANGELOG.md).**
+
 **Release date:** 2026-05-21
 **License:** Apache-2.0
 
