@@ -14,7 +14,7 @@ backend, no login, and no browser extension.
 From this `site/` directory:
 
 ```
-npm run build      generate the static site into site/public/
+npm run build      generate the static site into site/public/ (gitignored)
 npm run serve      preview it at http://localhost:8080
 npm run dev        build, then serve
 ```
@@ -35,9 +35,11 @@ Everything is written to `site/public/`:
 
 ## Deploy
 
-Serve the contents of `site/public/` with any static host — GitHub Pages,
-Netlify, Vercel, an object store, or a plain file server. `llms.txt` is
-written at the root of that directory so it is served at `/llms.txt`.
+The site is built and deployed automatically by GitHub Actions on every
+push to `main` — see `.github/workflows/deploy-pages.yml`. The generated
+`site/public/` directory is gitignored; pull requests verify that the
+generator still runs cleanly but do not deploy. `llms.txt` is written at
+the root of the output so it is served at `/llms.txt`.
 
 ## Keeping it current
 
@@ -45,5 +47,5 @@ The catalog is generated, not hand-edited. After adding or changing a skill
 under `skills/`, run `npm run build` again. Source files for the generator:
 
 - `generate.mjs` — reads `skills/` and writes the site.
-- `serve.mjs` — the local preview server.
+- `serve.mjs` — the local preview server (run after `npm run build`).
 - `assets/style.css`, `assets/app.js` — copied into the build output.

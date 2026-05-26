@@ -7,3 +7,7 @@ node_modules/
 
 # Generated platform install packs (scripts/build_platform_packs.py)
 dist/
+
+# Generated static skill catalog (site/generate.mjs) — built and deployed
+# by .github/workflows/deploy-pages.yml on every push to main.
+site/public/
