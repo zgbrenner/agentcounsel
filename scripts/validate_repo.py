@@ -367,20 +367,32 @@ def check_skill_index() -> None:
 # --- Check: every canonical skill is catalogued ---------------------------
 
 def check_index_coverage(skill_dirs: list[Path]) -> None:
-    """Every canonical skill must be listed in SKILLS_INDEX.md.
+    """Every canonical skill must appear as exactly one row in the main
+    SKILLS_INDEX.md table.
 
-    Missing entries are a structural drift (the family-law cluster shipped
-    without being indexed for one release because this was only a warning),
-    so this is treated as an error.
+    Missing entries are structural drift (the family-law cluster shipped
+    without being indexed for one release because this was only a warning).
+    Bullet-list mentions outside the table also satisfied a substring check
+    once, hiding both Antitrust's absence from the main table and Insurance /
+    Family Law duplication, so this counts table rows specifically: a row
+    starts with `|` and contains the canonical path wrapped in backticks.
     """
     index = REPO_ROOT / "SKILLS_INDEX.md"
     if not index.is_file():
         return
-    text = index.read_text(encoding="utf-8")
+    lines = index.read_text(encoding="utf-8").splitlines()
+    table_rows = [line for line in lines if line.lstrip().startswith("|")]
+    counts: dict[str, int] = {}
     for skill_dir in skill_dirs:
         skill_path = rel(skill_dir / "SKILL.md")
-        if skill_path not in text:
-            err(f"{skill_path}: not listed in SKILLS_INDEX.md")
+        token = f"`{skill_path}`"
+        n = sum(1 for row in table_rows if token in row)
+        counts[skill_path] = n
+        if n == 0:
+            err(f"{skill_path}: not listed in the SKILLS_INDEX.md main table")
+        elif n > 1:
+            err(f"{skill_path}: appears {n} times in the SKILLS_INDEX.md "
+                f"main table (expected exactly one row)")
 
 
 # --- Check: related_skills are wired in dense clusters --------------------
@@ -403,11 +415,6 @@ def check_related_skills_wired(skill_dirs: list[Path]) -> None:
     cluster shipped with all twelve skills unwired for one release because
     nothing caught this, so it is an error.
     """
-    try:
-        import yaml  # noqa: F401  # standard repo is yaml-free; tolerate absence
-    except Exception:
-        pass
-
     by_area: dict[str, list[Path]] = {}
     for d in skill_dirs:
         parts = d.relative_to(REPO_ROOT / "skills").parts
@@ -505,6 +512,32 @@ def check_readme_counts(skill_dirs: list[Path]) -> None:
     if has_line and int(has_line.group(1)) != skill_count:
         err(f"README.md: 'AgentCounsel has N skills' says "
             f"{has_line.group(1)} but library has {skill_count}")
+
+    # The README's cross-cutting bullet block names per-group counts:
+    #   "- **Setup** (5 skills) — ..."
+    # These drift silently from disk whenever a new skill is added to one of
+    # the cross-cutting groups (Setup gained 14 cold-start interviews but the
+    # bullet kept reading "5 skills"). Map each bullet name to its skills/
+    # folder and verify.
+    group_dirs = {
+        "Setup": "setup",
+        "Legal Methodology": "legal-methodology",
+        "Legal Operations": "legal-ops",
+    }
+    bullet_pat = re.compile(
+        r"\*\*(Setup|Legal Methodology|Legal Operations)\*\*\s*"
+        r"\((\d+)\s+skills?\)")
+    for match in bullet_pat.finditer(text):
+        group, claimed = match.group(1), int(match.group(2))
+        folder = REPO_ROOT / "skills" / group_dirs[group]
+        if not folder.is_dir():
+            continue
+        actual = sum(
+            1 for p in folder.iterdir()
+            if p.is_dir() and p.name not in NON_SKILL_DIRS)
+        if claimed != actual:
+            err(f"README.md: '{group}' bullet says {claimed} skills "
+                f"but skills/{group_dirs[group]}/ has {actual}")
 
 
 # --- Check: plugin bundle is present and in sync --------------------------

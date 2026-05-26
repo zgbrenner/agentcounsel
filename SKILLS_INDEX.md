@@ -98,6 +98,16 @@ A complete catalog of every skill in the library. The canonical source of truth 
 | Securities / Capital Markets | Comfort and Backup Request Tracker | `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md` | Tracking factual support and comfort-style requests | Offering docs, metrics claims, source references | Numbered request tracker |
 | Securities / Capital Markets | Public Company Reporting Calendar Intake | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` | Intaking reporting workflow facts for calendar drafting | Filer profile, governance cadence, workflow facts | Intake checklist + matrix |
 | Mergers & Acquisitions | Integration Legal Issues Checklist | `skills/m-and-a/integration-legal-issues-checklist/SKILL.md` | Generating a legal integration checklist by workstream | Deal type, pre/post-close status, target profile | Integration legal checklist |
+| Antitrust / Competition | Antitrust Risk Intake | `skills/antitrust-competition/antitrust-risk-intake/SKILL.md` | Intaking an antitrust-sensitive matter and mapping risk themes | Conduct or transaction facts, jurisdictions, party role | Intake summary + risk-theme map |
+| Antitrust / Competition | Competitor Collaboration Review | `skills/antitrust-competition/competitor-collaboration-review/SKILL.md` | Reviewing a proposed competitor collaboration for antitrust exposure | Collaboration description, parties, scope, governance | Risk matrix + issue list |
+| Antitrust / Competition | Information Sharing Clean Team Review | `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md` | Reviewing competitively-sensitive information sharing or clean-team protocols | Information categories, recipients, protocol documents | Issue list + clean-team controls table |
+| Antitrust / Competition | Pricing Algorithm Risk Triage | `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md` | Triaging antitrust risk for a pricing algorithm or shared analytics tool | Algorithm description, inputs, users, governance | Risk-theme list + questions for counsel |
+| Antitrust / Competition | Distribution Restraints Review | `skills/antitrust-competition/distribution-restraints-review/SKILL.md` | Reviewing distribution, resale, or territorial restraints for antitrust risk | The restraint, distribution structure, jurisdictions | Risk matrix + issue list |
+| Antitrust / Competition | Exclusivity MFN Pricing Review | `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md` | Reviewing exclusivity, MFN, or related pricing provisions for antitrust risk | The provisions, counterparty posture, market context | Risk matrix + issue list |
+| Antitrust / Competition | Merger Antitrust Issue Spotter | `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md` | Issue-spotting antitrust theories of harm and filing triggers for a transaction | Transaction facts, parties, overlaps, jurisdictions | Theories-of-harm map + filing-trigger flags |
+| Antitrust / Competition | Gun Jumping Clean Team Checklist | `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md` | Building a gun-jumping and clean-team checklist for a pending transaction | Transaction stage, parties, integration plans | Gun-jumping checklist + clean-team controls |
+| Antitrust / Competition | Trade Association Meeting Review | `skills/antitrust-competition/trade-association-meeting-review/SKILL.md` | Reviewing a trade-association meeting agenda or minutes for antitrust risk | Agenda, minutes, attendees, topic list | Topic-by-topic risk table |
+| Antitrust / Competition | Antitrust Compliance Policy Review | `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md` | Reviewing an antitrust compliance policy or program for gaps | Policy text, training and reporting facts | Gap + issues table |
 | Tax | Tax Issue Intake | `skills/tax/tax-issue-intake/SKILL.md` | Intaking a tax-sensitive matter and mapping the tax issues for a professional | Taxpayer/entity type, jurisdictions, tax period, activity facts, source docs | Intake summary + tax issue map |
 | Tax | Entity Tax Classification Checklist | `skills/tax/entity-tax-classification-checklist/SKILL.md` | Organizing entity formation, ownership, and election facts for classification review | Entity type, formation, ownership, governing documents, elections | Classification facts table + questions |
 | Tax | Transaction Tax Diligence Request List | `skills/tax/transaction-tax-diligence-request-list/SKILL.md` | Building a transaction tax diligence request list by workstream | Transaction type, jurisdictions, role, workstreams, documents | Request list + follow-up tracker |
@@ -230,47 +240,3 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/employment/references/` — shared Employment output-pattern reference (cross-cutting rules every employment skill's Output Format follows).
 - `skills/ip/references/` — shared Intellectual Property output-pattern reference (cross-cutting rules every IP skill's Output Format follows).
 - `skills/corporate/references/` — shared Corporate output-pattern reference (cross-cutting rules every corporate skill's Output Format follows).
-
-
-## Antitrust / Competition
-
-- `skills/antitrust-competition/antitrust-risk-intake/SKILL.md`
-- `skills/antitrust-competition/competitor-collaboration-review/SKILL.md`
-- `skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md`
-- `skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md`
-- `skills/antitrust-competition/distribution-restraints-review/SKILL.md`
-- `skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md`
-- `skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md`
-- `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md`
-- `skills/antitrust-competition/trade-association-meeting-review/SKILL.md`
-- `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md`
-
-## Insurance
-
-- `skills/insurance/insurance-policy-summary/SKILL.md`
-- `skills/insurance/coverage-issue-spotter/SKILL.md`
-- `skills/insurance/claims-chronology-builder/SKILL.md`
-- `skills/insurance/reservation-of-rights-review/SKILL.md`
-- `skills/insurance/tender-letter-review/SKILL.md`
-- `skills/insurance/coverage-position-outline/SKILL.md`
-- `skills/insurance/bad-faith-risk-triage/SKILL.md`
-- `skills/insurance/certificate-of-insurance-review/SKILL.md`
-- `skills/insurance/insurance-requirements-contract-review/SKILL.md`
-- `skills/insurance/subrogation-recovery-tracker/SKILL.md`
-- `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md`
-- `skills/insurance/insurer-insured-communications-review/SKILL.md`
-
-## Family Law
-
-- `skills/family-law/matter-intake/SKILL.md`
-- `skills/family-law/divorce-intake-organizer/SKILL.md`
-- `skills/family-law/custody-parenting-facts-chronology/SKILL.md`
-- `skills/family-law/parenting-schedule-facts-organizer/SKILL.md`
-- `skills/family-law/custody-order-review-checklist/SKILL.md`
-- `skills/family-law/child-support-facts-intake/SKILL.md`
-- `skills/family-law/spousal-support-facts-intake/SKILL.md`
-- `skills/family-law/asset-debt-schedule-builder/SKILL.md`
-- `skills/family-law/settlement-agreement-issue-spotter/SKILL.md`
-- `skills/family-law/discovery-tracker/SKILL.md`
-- `skills/family-law/hearing-prep-checklist/SKILL.md`
-- `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md`
