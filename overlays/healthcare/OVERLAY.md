@@ -72,6 +72,7 @@ Each rule has substantial substantive content beyond what is sketched here; the 
 - Notification methods (written, substitute, urgent).
 - Separate timing for individual notification, HHS notification, and (for breaches above the threshold) prominent-media-outlet notification.
 - BA-to-CE reporting framework, contractual reporting timelines, and the CE's downstream notification triggers.
+- Discovery-date vs. occurrence-date distinction: notification timing runs from the date of **discovery**, not the date the breach occurred. "Discovery" is the date the covered entity knew, or by exercising reasonable diligence would have known, of the breach `[verify current HHS rule]`. The overlay does not compute or assert a discovery date — it is fact-intensive and is an attorney determination.
 - Outer deadlines and content requirements live in the rule itself `[verify current HHS rule]` — the overlay **does not compute notification deadlines**.
 
 **Enforcement Rule** — OCR investigations, civil money penalty tiers, willfulness gradations, corrective-action plans, resolution agreements `[verify current HHS rule]`. Principal framework elements:
@@ -359,7 +360,7 @@ These are recurring negotiation and documentation positions a healthcare team ne
 
 ---
 
-## 7. Loading sequence and interaction with other overlays
+## 6. Loading sequence and interaction with other overlays
 
 When this overlay is loaded, the agent should observe the load order described in `overlays/README.md`:
 
@@ -374,7 +375,7 @@ The overlay is also designed to compose with the cluster-level reference catalog
 
 ---
 
-## 6. What this overlay does NOT do
+## 7. What this overlay does NOT do
 
 - **No HIPAA training content.** Workforce training is its own deliverable; this overlay does not produce it.
 - **No breach-notification letters.** Letter generation is a downstream drafting task. When a notification-drafting skill exists, route to it; until then, route to specialist counsel.

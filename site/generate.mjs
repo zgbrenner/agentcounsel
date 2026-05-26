@@ -230,6 +230,16 @@ function mdToHtml(md) {
 
 // --- skill loading ---------------------------------------------------------
 
+function stripQuotes(s) {
+  if (s.length >= 2) {
+    const first = s[0], last = s[s.length - 1];
+    if ((first === '"' && last === '"') || (first === "'" && last === "'")) {
+      return s.slice(1, -1);
+    }
+  }
+  return s;
+}
+
 function parseSkill(text) {
   const lines = text.split('\n');
   let name = '';
@@ -243,9 +253,9 @@ function parseSkill(text) {
     if (fmEnd > 0) {
       const fm = lines.slice(1, fmEnd).join('\n');
       const nm = fm.match(/^name:\s*(.+)$/m);
-      if (nm) name = nm[1].trim();
+      if (nm) name = stripQuotes(nm[1].trim());
       const dm = fm.match(/^description:\s*(.+)$/m);
-      if (dm) description = dm[1].trim();
+      if (dm) description = stripQuotes(dm[1].trim());
       bodyStart = fmEnd + 1;
     }
   }
