@@ -4,8 +4,6 @@ This guide takes you from zero to your first AgentCounsel skill run in about fiv
 
 > Everything AgentCounsel produces is **draft legal work product for attorney review** — not legal advice. A licensed attorney must review the output before it is relied upon.
 
-> Current totals (practice areas, skill counts) are tracked in [`metadata/index.json`](metadata/index.json) and summarized in [`README.md`](README.md). Any specific figures below reflect the state at the time of writing.
-
 ## The idea in one minute
 
 A **skill** is a single Markdown file (`SKILL.md`) that describes a legal workflow: what it is for, what inputs it needs, the steps to follow, the structure of the output, and what an attorney must verify. You give the skill file to an AI assistant as context, provide your inputs, and the assistant produces a structured draft. You — or a supervising attorney — then review it.
@@ -16,7 +14,7 @@ Nothing is installed. A skill is just a file an AI model reads.
 
 Open [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) and find the row that matches your task ("review this NDA", "build a timeline from these documents", "run a privacy impact assessment"). It points you to a `SKILL.md`.
 
-If you would rather browse, [`SKILLS_INDEX.md`](SKILLS_INDEX.md) lists all 66 skills by practice area. If you prefer short command names, [`COMMANDS.md`](COMMANDS.md) maps shorthands like `/contracts:nda` to skills.
+If you would rather browse, [`SKILLS_INDEX.md`](SKILLS_INDEX.md) lists every skill by practice area. If you prefer short command names, [`COMMANDS.md`](COMMANDS.md) maps shorthands like `/contracts:nda` to skills.
 
 ## Step 2 — Read the skill
 
