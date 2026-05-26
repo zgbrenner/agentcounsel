@@ -70,12 +70,13 @@ cold-start interviews do not apply to them.
 
 ## Industry / regulatory overlays — Tier 3
 
-Overlays live under `overlays/`, not `skills/`. None have been built yet. The
-overlay mechanism and templates are in place; see `overlays/README.md`.
+Overlays live under `overlays/`, not `skills/`. The overlay mechanism and
+templates are in place; see `overlays/README.md`.
 
 | Overlay | Maturity | Status |
 |---|---|---|
-| *(none yet)* | — | Candidate overlays are listed in `reports/practice-area-expansion-plan.md`. |
+| `healthcare` | `experimental` | First overlay built under the overlays/ scaffold. Tunes privacy, contracts, employment, regulatory, and AI-governance skills for HIPAA, HITECH, state-law overlays (CMIA, HB 300, MHMDA, SHIELD), 42 CFR Part 2, GINA, and reproductive-health frameworks. `[ORGANIZATION TO FILL]` placeholders in `profile.md` until configured for a specific organization. See `overlays/healthcare/OVERLAY.md`. |
+| *(other candidates)* | — | Listed in `reports/practice-area-expansion-plan.md`. |
 
 ## Coverage gaps in the released baseline
 
