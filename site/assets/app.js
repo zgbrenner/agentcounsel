@@ -25,6 +25,19 @@
     });
   }
 
+  var filter = document.getElementById('skill-filter');
+  if (filter) {
+    var rows = document.querySelectorAll('[data-filter-row]');
+    filter.addEventListener('input', function () {
+      var q = filter.value.trim().toLowerCase();
+      for (var k = 0; k < rows.length; k++) {
+        var r = rows[k];
+        var text = (r.getAttribute('data-filter-text') || r.textContent).toLowerCase();
+        r.style.display = (!q || text.indexOf(q) !== -1) ? '' : 'none';
+      }
+    });
+  }
+
   var buttons = document.querySelectorAll('[data-copy]');
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {

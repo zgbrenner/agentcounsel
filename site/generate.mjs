@@ -16,8 +16,19 @@ import { fileURLToPath } from 'node:url';
 const SITE_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = dirname(SITE_DIR);
 const SKILLS_DIR = join(REPO_ROOT, 'skills');
+const EXAMPLES_DIR = join(REPO_ROOT, 'examples');
 const ASSETS = join(SITE_DIR, 'assets');
 const OUT = join(SITE_DIR, 'public');
+
+// Flagship example files at examples/<name>-example.md map back to skills
+// that pre-date the per-skill examples/<area>/<slug>/ layout.
+const FLAGSHIP_EXAMPLES = {
+  'contracts/contract-risk-review': 'contract-review-example.md',
+  'privacy/dpa-review': 'dpa-review-example.md',
+  'litigation/litigation-chronology': 'litigation-chronology-example.md',
+  'product-legal/launch-review': 'product-launch-review-example.md',
+  'legal-methodology/red-team-verifier': 'red-team-verifier-example.md',
+};
 
 const SECTION_ORDER = [
   'Purpose', 'Use When', 'Required Inputs', 'Do Not Use When',
@@ -240,10 +251,27 @@ function stripQuotes(s) {
   return s;
 }
 
+function parseListField(fmLines, field) {
+  const out = [];
+  for (let i = 0; i < fmLines.length; i++) {
+    if (fmLines[i].match(new RegExp('^' + field + '\\s*:\\s*$'))) {
+      for (let j = i + 1; j < fmLines.length; j++) {
+        const m = fmLines[j].match(/^\s+-\s+(.+)$/);
+        if (m) { out.push(stripQuotes(m[1].trim())); continue; }
+        if (/^\S/.test(fmLines[j])) break;
+      }
+      break;
+    }
+  }
+  return out;
+}
+
 function parseSkill(text) {
   const lines = text.split('\n');
   let name = '';
   let description = '';
+  let inputs = [];
+  let outputs = [];
   let bodyStart = 0;
   if (lines[0] && lines[0].trim() === '---') {
     let fmEnd = -1;
@@ -251,11 +279,14 @@ function parseSkill(text) {
       if (lines[i].trim() === '---') { fmEnd = i; break; }
     }
     if (fmEnd > 0) {
-      const fm = lines.slice(1, fmEnd).join('\n');
+      const fmLines = lines.slice(1, fmEnd);
+      const fm = fmLines.join('\n');
       const nm = fm.match(/^name:\s*(.+)$/m);
       if (nm) name = stripQuotes(nm[1].trim());
       const dm = fm.match(/^description:\s*(.+)$/m);
       if (dm) description = stripQuotes(dm[1].trim());
+      inputs = parseListField(fmLines, 'inputs');
+      outputs = parseListField(fmLines, 'outputs');
       bodyStart = fmEnd + 1;
     }
   }
@@ -273,7 +304,12 @@ function parseSkill(text) {
     const end = j + 1 < marks.length ? marks[j + 1].start : body.length;
     sections[marks[j].name] = body.slice(marks[j].contentStart, end).trim();
   }
-  return { name: name || h1, description, h1, sections };
+  return { name: name || h1, description, inputs, outputs, h1, sections };
+}
+
+function firstUseWhenBullet(skill) {
+  const bullets = useWhenBullets(skill);
+  return bullets.length ? bullets[0] : '';
 }
 
 function loadSkills() {
@@ -404,13 +440,15 @@ ${cards}</div>
 function buildSkillIndex(skills, byArea) {
   let body = `<nav class="breadcrumb"><a href="index.html">Home</a> / <span>Skill index</span></nav>
 <h1>Skill index</h1>
-<p class="lead">All ${skills.length} skills in the library, grouped by practice area. Each skill produces draft legal work product for review by a licensed attorney.</p>`;
+<p class="lead">All ${skills.length} skills in the library, grouped by practice area. Each skill produces draft legal work product for review by a licensed attorney.</p>
+<input type="search" class="skill-filter" id="skill-filter" placeholder="Filter skills (try 'nda', 'privacy', 'antitrust')...">`;
   for (const area of AREA_ORDER) {
     const list = byArea[area] || [];
     if (!list.length) continue;
     let rows = '';
     for (const s of list) {
-      rows += `<tr>
+      const ft = attr(areaName(area) + ' ' + s.name + ' ' + s.description);
+      rows += `<tr data-filter-row data-filter-text="${ft}">
 <td><a href="skills/${area}/${s.slug}.html">${esc(s.name)}</a></td>
 <td>${inline(s.description)}</td>
 </tr>\n`;
@@ -432,7 +470,8 @@ function buildAreaPage(area, list) {
   for (const s of list) {
     const useWhen = s.sections['Use When'] || '';
     const inputs = s.sections['Required Inputs'] || '';
-    cards += `<article class="skill-card">
+    const ft = attr(s.name + ' ' + s.description);
+    cards += `<article class="skill-card" data-filter-row data-filter-text="${ft}">
 <h2><a href="../skills/${area}/${s.slug}.html">${esc(s.name)}</a></h2>
 <p class="desc">${inline(s.description)}</p>
 <details><summary>When to use</summary>${mdToHtml(useWhen)}</details>
@@ -444,6 +483,7 @@ function buildAreaPage(area, list) {
 <h1>${esc(areaName(area))}</h1>
 <p class="lead">${esc(areaBlurb(area))}</p>
 <p class="muted">${list.length} skill${list.length === 1 ? '' : 's'} in this practice area. Every skill produces draft legal work product for review by a licensed attorney.</p>
+<input type="search" class="skill-filter" id="skill-filter" placeholder="Filter ${esc(areaName(area))} skills...">
 ${cards}`;
   return page({
     title: areaName(area), depth: 1,
@@ -469,7 +509,67 @@ ${skill.raw}
 First, confirm which Required Inputs you have and ask me for any that are missing. Then proceed with the Workflow.`;
 }
 
-function buildSkillPage(skill) {
+// --- examples --------------------------------------------------------------
+
+function loadExamples(skills) {
+  const map = {};
+  for (const s of skills) {
+    const key = s.area + '/' + s.slug;
+    const dir = join(EXAMPLES_DIR, s.area, s.slug);
+    const out = join(dir, 'sample-output.md');
+    const req = join(dir, 'sample-request.md');
+    if (existsSync(out)) {
+      map[key] = {
+        kind: 'per-skill',
+        output: readFileSync(out, 'utf8'),
+        request: existsSync(req) ? readFileSync(req, 'utf8') : '',
+        htmlRel: 'examples/' + s.area + '/' + s.slug + '.html',
+      };
+      continue;
+    }
+    const flagship = FLAGSHIP_EXAMPLES[key];
+    if (flagship) {
+      const fp = join(EXAMPLES_DIR, flagship);
+      if (existsSync(fp)) {
+        map[key] = {
+          kind: 'flagship',
+          output: readFileSync(fp, 'utf8'),
+          request: '',
+          htmlRel: 'examples/' + flagship.replace(/\.md$/, '.html'),
+        };
+      }
+    }
+  }
+  return map;
+}
+
+function buildExamplePage(skill, ex) {
+  const depth = ex.htmlRel.split('/').length - 1;
+  const r = '../'.repeat(depth);
+  let body = `<nav class="breadcrumb"><a href="${r}index.html">Home</a> / <a href="${r}practice-areas/${skill.area}.html">${esc(areaName(skill.area))}</a> / <a href="${r}skills/${skill.area}/${skill.slug}.html">${esc(skill.name)}</a> / <span>Sample output</span></nav>
+<h1>Sample output: ${esc(skill.name)}</h1>
+<p class="lead">This is an illustrative sample of what the <a href="${r}skills/${skill.area}/${skill.slug}.html">${esc(skill.name)}</a> skill produces. Every party, date, document, and fact is <strong>fictional</strong> — invented for illustration only.</p>
+${REVIEW_NOTICE}
+`;
+  if (ex.request) {
+    body += `<section class="skill-section">
+<h2>The fictional scenario</h2>
+${mdToHtml(ex.request)}
+</section>
+`;
+  }
+  body += `<section class="skill-section">
+<h2>What the skill produced</h2>
+${mdToHtml(ex.output)}
+</section>`;
+  return page({
+    title: 'Sample: ' + skill.name, depth,
+    desc: 'Illustrative sample output for the ' + skill.name + ' skill — fictional facts, draft work product, not legal advice.',
+    body,
+  });
+}
+
+function buildSkillPage(skill, example) {
   const a = skill.area;
   let sections = '';
   for (const name of SECTION_ORDER) {
@@ -480,6 +580,35 @@ function buildSkillPage(skill) {
 ${mdToHtml(content)}
 </section>\n`;
   }
+  const summaryLines = [];
+  if (skill.outputs && skill.outputs.length) {
+    summaryLines.push(`<p><span class="label">What this produces:</span> ${esc(skill.outputs.join('; '))}</p>`);
+  }
+  if (skill.inputs && skill.inputs.length) {
+    summaryLines.push(`<p><span class="label">What you give it:</span> ${esc(skill.inputs.join('; '))}</p>`);
+  }
+  const firstUseWhen = firstUseWhenBullet(skill);
+  if (firstUseWhen) {
+    summaryLines.push(`<p><span class="label">When to use it:</span> ${inline(firstUseWhen)}</p>`);
+  }
+  const summaryBlock = summaryLines.length
+    ? `<div class="skill-summary">
+${summaryLines.join('\n')}
+</div>
+`
+    : '';
+
+  let exampleBlock;
+  if (example) {
+    exampleBlock = `<div class="example-callout">
+<strong>See sample output</strong> &mdash; <a href="../../${example.htmlRel}">View an illustrative sample of what this skill produces &rarr;</a>
+</div>
+`;
+  } else {
+    exampleBlock = `<p class="example-missing">Example output not yet available.</p>
+`;
+  }
+
   const body = `<nav class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../practice-areas/${a}.html">${esc(areaName(a))}</a> / <span>${esc(skill.name)}</span></nav>
 <h1>${esc(skill.name)}</h1>
 <p class="path">Canonical path: <code>${esc(skill.path)}</code></p>
@@ -494,6 +623,7 @@ ${mdToHtml(content)}
 <p>${inline(skill.description)}</p>
 </div>
 
+${summaryBlock}${exampleBlock}
 ${sections}<section class="skill-section" id="raw-skill">
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">${esc(skill.raw)}</pre>
@@ -839,8 +969,16 @@ function main() {
     count++;
   }
 
+  const examples = loadExamples(skills);
   for (const s of skills) {
-    write('skills/' + s.area + '/' + s.slug + '.html', buildSkillPage(s));
+    const ex = examples[s.area + '/' + s.slug];
+    write('skills/' + s.area + '/' + s.slug + '.html', buildSkillPage(s, ex));
+    count++;
+  }
+  for (const s of skills) {
+    const ex = examples[s.area + '/' + s.slug];
+    if (!ex) continue;
+    write(ex.htmlRel, buildExamplePage(s, ex));
     count++;
   }
 
