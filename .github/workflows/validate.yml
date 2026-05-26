@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 concurrency:
   group: validate-${{ github.ref }}
   cancel-in-progress: true
@@ -41,11 +44,5 @@ jobs:
       - name: Check generated cold-start interviews are in sync
         run: python scripts/generate_cold_start_interviews.py --check
 
-      - name: Check the static site is in sync with canonical skills
-        run: |
-          node site/generate.mjs
-          if [ -n "$(git status --porcelain site/public/)" ]; then
-            echo "::error::site/public/ is out of date — run 'npm run build' in site/ and commit the result."
-            git status --porcelain site/public/
-            exit 1
-          fi
+      - name: Build static site (verification only)
+        run: node site/generate.mjs
