@@ -49,6 +49,7 @@ This skill produces draft legal work product for attorney review. It does not re
 - **Client's intended use**: A plain-language description of what the organization plans to do with the vendor's AI system (e.g., generate customer-facing marketing copy, process employee HR queries, analyze legal documents).
 - **Client's role**: Whether the organization is an API consumer, enterprise licensee, reseller, or end user.
 - **Data the client will input**: The types of data the client will send to the vendor's system — including whether it includes personal data, confidential business information, or privileged material.
+- **Privileged or work-product material**: Whether the client intends to input or has historically input material protected by attorney-client privilege or attorney work-product doctrine (drafts of legal memos, analyses for counsel, litigation strategy, etc.). If yes, note the matter context and the governing privilege jurisdiction.
 
 If the vendor agreement text is not provided, stop and request it. Do not fabricate, paraphrase, or assume contract terms.
 
@@ -70,6 +71,8 @@ If the vendor agreement text is not provided, stop and request it. Do not fabric
 - Distinguish findings based on the provided text from assumptions and open items that require verification.
 - Use `[CONFIRM: ...]` placeholders for provisions that are ambiguous, potentially missing, or require vendor clarification.
 - Flag if a separate data processing agreement or acceptable use policy is referenced but not provided — the review is incomplete without it.
+- **Privilege-impact framing.** If the client will input privileged or work-product material, the vendor's terms-of-service may affect the third-party-disclosure prong of privilege under the governing jurisdiction's privilege doctrine. Flag the privilege-impact analysis as attorney-verification only — do not conclude on privilege preservation or waiver.
+- **Severity floor.** Once an issue has been rated High priority in the issues list or AI-Specific Terms Assessment table, that rating must not be silently downgraded. Any reduction in priority is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the vendor's explanation or commercial commonness of the provision.
 
 ## Workflow
 
@@ -87,21 +90,31 @@ If the vendor agreement text is not provided, stop and request it. Do not fabric
 
 7. **Assess confidentiality and data handling.** Identify what confidentiality obligations apply to customer inputs and outputs. Note whether outputs can be shared with other customers or used as training data for other organizations. Confirm whether the confidentiality terms are adequate for the client's intended data inputs.
 
-8. **Assess security and sub-processors.** Review security commitments (standards, certifications, breach notification). Identify sub-processor disclosure and approval rights. Note any geographic data residency commitments or restrictions.
+8. **Assess privilege impact when privileged material will be input.** If the client has indicated that privileged or work-product material has been or will be input to the vendor's system, assess the vendor's terms against the third-party-disclosure question:
+   - Vendor's data-retention rights and duration
+   - Vendor's right to use inputs for training, fine-tuning, or other product development
+   - Vendor's right to access inputs for support, debugging, or trust-and-safety review
+   - Sub-processor disclosure: who else can access the inputs
+   - Whether enterprise-tier or "zero-retention" terms are available and whether they have been elected
+   - Whether the vendor offers a contractual representation about confidentiality treatment that approximates the duty-of-confidentiality owed by an agent or vendor under privilege doctrine
 
-9. **Assess accuracy disclaimers and liability for outputs.** Identify how the vendor disclaims liability for inaccurate, biased, or harmful outputs. Note any specific disclaimers about the suitability of outputs for particular purposes. Assess whether the disclaimer scope is consistent with the client's intended use.
+   Flag every finding as `[ATTORNEY TO CONFIRM: privilege impact under governing jurisdiction's privilege and work-product doctrine]`. Do not conclude on privilege preservation. Note that some courts have held consumer-tier AI vendor terms to effect third-party disclosure that defeats privilege; route to litigation/privilege specialist counsel.
 
-10. **Assess usage restrictions and acceptable use.** Review the acceptable use policy for restrictions on use cases, prohibited content, and industry restrictions. Flag any restrictions inconsistent with the client's intended use.
+9. **Assess security and sub-processors.** Review security commitments (standards, certifications, breach notification). Identify sub-processor disclosure and approval rights. Note any geographic data residency commitments or restrictions.
 
-11. **Assess service and model change rights.** Identify whether the vendor can modify, deprecate, or replace the model or service, and on what notice. Flag any right to materially change terms without consent.
+10. **Assess accuracy disclaimers and liability for outputs.** Identify how the vendor disclaims liability for inaccurate, biased, or harmful outputs. Note any specific disclaimers about the suitability of outputs for particular purposes. Assess whether the disclaimer scope is consistent with the client's intended use.
 
-12. **Assess liability caps and warranty terms.** Note the cap on vendor liability, any exclusions from the cap, and the warranty/disclaimer structure. Compare to the risk profile of the client's intended use.
+11. **Assess usage restrictions and acceptable use.** Review the acceptable use policy for restrictions on use cases, prohibited content, and industry restrictions. Flag any restrictions inconsistent with the client's intended use.
 
-13. **Assess termination and data deletion.** Review termination rights (for cause, for convenience, for policy violation). Identify data deletion obligations on termination — scope, timing, certification. Note any data retention rights the vendor retains post-termination.
+12. **Assess service and model change rights.** Identify whether the vendor can modify, deprecate, or replace the model or service, and on what notice. Flag any right to materially change terms without consent.
 
-14. **Prioritize redline points.** Categorize all issues as High (significant risk requiring negotiation), Medium (should be addressed if possible), or Low (minor, flag for awareness).
+13. **Assess liability caps and warranty terms.** Note the cap on vendor liability, any exclusions from the cap, and the warranty/disclaimer structure. Compare to the risk profile of the client's intended use.
 
-15. **Assemble the output.** Compile all sections, include all assumptions and open items, and label the document as a draft for attorney review.
+14. **Assess termination and data deletion.** Review termination rights (for cause, for convenience, for policy violation). Identify data deletion obligations on termination — scope, timing, certification. Note any data retention rights the vendor retains post-termination.
+
+15. **Prioritize redline points.** Categorize all issues as High (significant risk requiring negotiation), Medium (should be addressed if possible), or Low (minor, flag for awareness).
+
+16. **Assemble the output.** Compile all sections, include all assumptions and open items, and label the document as a draft for attorney review.
 
 ## Output Format
 
@@ -121,6 +134,7 @@ Table: Document(s) reviewed, governing law, dispute resolution, effective date, 
 | Training data use / opt-out | | | |
 | Output ownership / license | | | |
 | IP infringement indemnity | | | |
+| Privilege impact (if privileged material involved) | | | |
 | Confidentiality of inputs/outputs | | | |
 | Security and sub-processors | | | |
 | Accuracy disclaimers | | | |
@@ -137,6 +151,7 @@ Numbered list, sorted High / Medium / Low, each with: the provision at issue (se
 - `contract-risk-review` — if the broader commercial terms (payment, warranties, IP ownership) require a full commercial review.
 - Privacy specialist — if personal data is processed and regulatory compliance (GDPR, CCPA, etc.) needs verification.
 - `model-risk-triage` — if the vendor model's reliability or bias characteristics need further assessment.
+- Litigation/privilege specialist counsel — if the client will input privileged or work-product material and the vendor's data-retention, training-use, sub-processor, or trust-and-safety access terms could implicate the third-party-disclosure analysis under the governing jurisdiction's privilege doctrine.
 
 **6. Open Items and Assumptions**
 Bullet list of every `[CONFIRM: ...]` item, ambiguity, and missing document.
@@ -167,3 +182,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] Data deletion obligations on termination have been confirmed as sufficient.
 - [ ] No legal conclusion about enforceability or regulatory compliance has been asserted without attorney verification.
 - [ ] A separate DPA review has been completed if personal data is processed.
+- [ ] If privileged or work-product material has been or will be input, the privilege impact of the vendor's terms has been reviewed under the governing jurisdiction's privilege and work-product doctrine; the enterprise/zero-retention election (if available) has been considered; and the analysis has been routed to litigation/privilege counsel.
+- [ ] All High-priority issues remain rated High unless an attorney has explicitly documented the rationale for any downgrade, including their name and the date of the decision.

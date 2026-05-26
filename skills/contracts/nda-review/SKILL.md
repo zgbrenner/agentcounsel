@@ -71,6 +71,7 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 - Distinguish what the contract says from what you assume and from what the attorney must confirm.
 - Preserve confidentiality and privilege: the review is attorney work product. Do not place client-sensitive facts into reusable templates.
 - Flag every point of uncertainty rather than resolving it silently.
+- **Severity floor.** Once an issue has been rated High priority in the prioritized redline points or risk table, that rating must not be silently downgraded. Any reduction in priority is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.
 
 ## Workflow
 

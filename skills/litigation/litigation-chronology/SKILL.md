@@ -80,6 +80,13 @@ If no source documents are provided, stop and request them. Do not populate the 
 
 3. **Catalog source documents.** Create a source document list: Document Name | Bates Range / Identifier | Date of Document | Document Type (email, contract, invoice, deposition excerpt, etc.) | Produced by / Custodian. This list becomes the "Sources Reviewed" header in the chronology.
 
+   **Source-type discipline.** Different evidence types carry different citation conventions and evidentiary characteristics. When cataloging, note:
+   - **Deposition extracts**: cite by deponent, date, page:line range (e.g., "Smith Dep. 47:8-12, June 5, 2025"), not Bates.
+   - **Discovery responses**: distinguish responses verified by the party (under oath) from responses signed by counsel only. Note the distinction in the source column.
+   - **Documents bearing metadata**: where a document has a metadata date (file creation, email send/received, document modification) that differs from the content date (the date the document describes an event as having occurred), record both. The metadata date goes in the Source Document column with a tag; the content date drives the chronology row placement, with a note where the two diverge materially.
+   - **Pleadings and filings**: cite by docket number and date filed, with paragraph references.
+   - **Transcripts of recorded statements** (interviews, recorded calls): cite by recording identifier, date, and timestamp.
+
 4. **Extract events from each document.** For each source document, extract every discrete event, communication, action, or statement that is relevant to the matter. Record:
    - The event date (from the document; flag if approximate or unclear).
    - The time, if stated in the document.
@@ -108,7 +115,9 @@ If no source documents are provided, stop and request them. Do not populate the 
 Deliver a Litigation Chronology consisting of:
 
 1. **Header Block** — Matter name, client and role, preparer, date prepared, sources reviewed (document catalog).
-2. **Chronology Table** — Using the template at `templates/chronology-table.md`. Columns: Date | Time (if known) | Event Description | Source Document / Bates | Actor(s) | Significance | Disputed? | Attorney Note.
+2. **Chronology Table** — Using the template at `templates/chronology-table.md`. Columns: Date | Time (if known) | Event Description | Source Document / Citation (Bates, page:line for depositions, docket cite for filings, timestamp for recordings) | Actor(s) | Significance | Disputed? | Attorney Note.
+
+   Where a document's metadata date and the event date it describes diverge materially, both dates appear: the event date drives row order; the metadata date appears in the Source column with a tag (e.g., "Email sent [date]; describes meeting on [different date]").
 3. **Gaps and Missing Periods** — Bulleted list of time periods not covered and anticipated documents not produced.
 4. **Open Items for Attorney Verification** — All `[DISPUTED]`, `[CONFIRM]`, and unresolved items requiring attorney review.
 5. **Assumptions** — Any assumptions made about document dates, party identities, or event sequencing.
@@ -129,4 +138,7 @@ Every row in the chronology table must cite a source. The completed document mus
 - [ ] Gaps and missing periods have been identified and flagged for follow-up discovery or production.
 - [ ] The significance assessments reflect the current theory of the case — verify with lead counsel.
 - [ ] The chronology has been reviewed for completeness against the full document production.
+- [ ] Source citations follow the appropriate convention for each evidence type (Bates for produced documents, page:line for depositions, docket cites for filings, timestamps for recordings).
+- [ ] Where document metadata dates and event dates diverge, both have been recorded and the chronology placement reflects the event date.
+- [ ] Discovery responses have been tagged by verification status (party-verified vs. counsel-signed only).
 - [ ] The document is labeled as draft attorney work product and distribution is appropriately limited.
