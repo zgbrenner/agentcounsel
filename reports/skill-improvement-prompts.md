@@ -12670,7 +12670,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing capital markets closing checklist as draft work product for attorney review.
+- **Current description:** Use when organizing the closing universe for a public or private capital-markets transaction (IPO, follow-on, secondary, debt issuance, registered direct, private placement) — to produce a draft closing-workstream tracker covering issuer/underwriter approvals, purchase/underwriting agreement bring-down, legal opinions (validity, exemption, 10b-5 disclosure letter), officer/secretary certificates, comfort letter and bring-down, lock-ups, transfer agent/DTC/legend matters, listing/FINRA items, blue-sky/Form D items, funds flow, and post-closing filings for attorney review — without approving closing or any closing condition.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -12683,8 +12683,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md
 - Current skill name: Capital Markets Closing Checklist
 - Practice area: Securities Capital Markets
-- Current description: Use when performing capital markets closing checklist as draft work product for attorney review.
-- Core purpose (must not change): Build a capital-markets closing deliverables tracker with ownership, dependencies, and verification gates.
+- Current description: Use when organizing the closing universe for a public or private capital-markets transaction (IPO, follow-on, secondary, debt issuance, registered direct, private placement) — to produce a draft closing-workstream tracker covering issuer/underwriter approvals, purchase/underwriting agreement bring-down, legal opinions (validity, exemption, 10b-5 disclosure letter), officer/secretary certificates, comfort letter and bring-down, lock-ups, transfer agent/DTC/legend matters, listing/FINRA items, blue-sky/Form D items, funds flow, and post-closing filings for attorney review — without approving closing or any closing condition.
+- Core purpose (must not change): Organize the closing-workstream universe for a capital-markets transaction, from signing through closing, settlement, and any over-allotment closing — covering approvals, agreements, opinions, certificates, comfort, lock-ups, transfer-agent/DTC mechanics, listing and FINRA, blue-sky/Form D, funds flow, and post-closing filings.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md in full.
@@ -12758,7 +12758,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing comfort and backup tracker as draft work product for attorney review.
+- **Current description:** Use when assembling the comfort-letter backup request universe for a securities offering — to produce a draft tracker of each factual assertion in the offering document (financial figures, percentages and ratios, share counts, operational metrics, market-position claims, customer/employee counts, regulatory/litigation/IP claims, ESG/cybersecurity/AI claims) keyed to source, requested support, and proposed comfort treatment for attorney and accountant review — without concluding what level of comfort can be provided or approving any disclosure.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -12771,8 +12771,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md
 - Current skill name: Comfort and Backup Request Tracker
 - Practice area: Securities Capital Markets
-- Current description: Use when performing comfort and backup tracker as draft work product for attorney review.
-- Core purpose (must not change): Create a numbered tracker of factual statements potentially requiring comfort or backup support.
+- Current description: Use when assembling the comfort-letter backup request universe for a securities offering — to produce a draft tracker of each factual assertion in the offering document (financial figures, percentages and ratios, share counts, operational metrics, market-position claims, customer/employee counts, regulatory/litigation/IP claims, ESG/cybersecurity/AI claims) keyed to source, requested support, and proposed comfort treatment for attorney and accountant review — without concluding what level of comfort can be provided or approving any disclosure.
+- Core purpose (must not change): Assemble the comfort-letter and backup-request universe for a securities offering — inventorying each factual assertion in the offering document and keying each assertion to its source, requested support, and proposed comfort treatment.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md in full.
@@ -12846,7 +12846,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing Form D and blue sky tracking as draft work product for attorney review.
+- **Current description:** Use when, after a Reg D triggering fact (typically first sale in a 506(b) or 506(c) offering), organizing the Form D and state notice-filing universe — to produce a draft state-by-state tracker capturing each state of sale, the user-supplied notice fee, consent-to-service-of-process status, EDGAR/coordinated-review/EFD posture, and amendment triggers for attorney review — without computing any filing deadline or asserting filing completeness.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -12859,8 +12859,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md
 - Current skill name: Form D and Blue Sky Tracker
 - Practice area: Securities Capital Markets
-- Current description: Use when performing Form D and blue sky tracking as draft work product for attorney review.
-- Core purpose (must not change): Build a source-grounded tracker for Form D and state notice workflow facts without determining obligations or deadlines.
+- Current description: Use when, after a Reg D triggering fact (typically first sale in a 506(b) or 506(c) offering), organizing the Form D and state notice-filing universe — to produce a draft state-by-state tracker capturing each state of sale, the user-supplied notice fee, consent-to-service-of-process status, EDGAR/coordinated-review/EFD posture, and amendment triggers for attorney review — without computing any filing deadline or asserting filing completeness.
+- Core purpose (must not change): Build a source-grounded Form D and state notice-filing tracker after a Reg D triggering fact has occurred or is imminent.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md in full.
@@ -12934,7 +12934,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing insider trading policy review as draft work product for attorney review.
+- **Current description:** Use when reviewing a company's insider-trading policy — to produce a draft gap matrix against current SEC rule architecture for covered persons, MNPI definition, trading windows, blackout periods, pre-clearance, Rule 10b5-1 plan provisions, gifts/pledges/hedging/margin restrictions, restricted/watch lists, training, escalation, enforcement, and recordkeeping for attorney review — without asserting which rule version is current or concluding policy adequacy `[verify current SEC rule version at time of review]`.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -12947,8 +12947,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/insider-trading-policy-review/SKILL.md
 - Current skill name: Insider Trading Policy Review
 - Practice area: Securities Capital Markets
-- Current description: Use when performing insider trading policy review as draft work product for attorney review.
-- Core purpose (must not change): Review insider-trading policy documents for covered-person scope, procedure gaps, and ambiguities without approving trades.
+- Current description: Use when reviewing a company's insider-trading policy — to produce a draft gap matrix against current SEC rule architecture for covered persons, MNPI definition, trading windows, blackout periods, pre-clearance, Rule 10b5-1 plan provisions, gifts/pledges/hedging/margin restrictions, restricted/watch lists, training, escalation, enforcement, and recordkeeping for attorney review — without asserting which rule version is current or concluding policy adequacy `[verify current SEC rule version at time of review]`.
+- Core purpose (must not change): Review a company's insider-trading policy text against the framework elements practitioners expect under current SEC rule architecture, surfacing gaps, imprecisions, and rule-version-drift flags.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/insider-trading-policy-review/SKILL.md in full.
@@ -13022,7 +13022,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing investor rights agreement review as draft work product for attorney review.
+- **Current description:** Use when reviewing an investor rights agreement, side letter, or related governance instrument (information / inspection / observer / preemptive / pro-rata / ROFR / co-sale / drag-along / protective provisions / registration rights / transfer restrictions / MFN / confidentiality / termination) — to produce a draft term-by-term risk-and-issue matrix from the client's role (issuer, lead investor, follow-on, founder), with side-letter conflict flags, for attorney review — without concluding enforceability or approving the agreement.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13035,8 +13035,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md
 - Current skill name: Investor Rights Agreement Review
 - Practice area: Securities Capital Markets
-- Current description: Use when performing investor rights agreement review as draft work product for attorney review.
-- Core purpose (must not change): Review investor-side financing governance and rights documents for key terms, gaps, conflicts, and negotiation points.
+- Current description: Use when reviewing an investor rights agreement, side letter, or related governance instrument (information / inspection / observer / preemptive / pro-rata / ROFR / co-sale / drag-along / protective provisions / registration rights / transfer restrictions / MFN / confidentiality / termination) — to produce a draft term-by-term risk-and-issue matrix from the client's role (issuer, lead investor, follow-on, founder), with side-letter conflict flags, for attorney review — without concluding enforceability or approving the agreement.
+- Core purpose (must not change): Review an investor rights agreement (IRA), side letter, voting agreement, or related governance instrument — surfacing each governance and transfer-restriction term from the client's perspective (issuer, lead investor, follow-on investor, founder, secondary purchaser), with side-letter conflict flags.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md in full.
@@ -13110,7 +13110,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing offering disclosure review as draft work product for attorney review.
+- **Current description:** Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness — to produce a draft section-by-section disclosure-gap matrix covering business description, risk factors, use of proceeds, MD&A consistency, related-party transactions, material developments not yet disclosed, forward-looking-statement framing, and selling-stockholder posture for attorney review — without concluding adequacy of disclosure or approving the filing.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13123,8 +13123,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md
 - Current skill name: Offering Document Disclosure Review
 - Practice area: Securities Capital Markets
-- Current description: Use when performing offering disclosure review as draft work product for attorney review.
-- Core purpose (must not change): Review offering disclosure documents for completeness, consistency, and source-cited issue spotting without certifying compliance.
+- Current description: Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness — to produce a draft section-by-section disclosure-gap matrix covering business description, risk factors, use of proceeds, MD&A consistency, related-party transactions, material developments not yet disclosed, forward-looking-statement framing, and selling-stockholder posture for attorney review — without concluding adequacy of disclosure or approving the filing.
+- Core purpose (must not change): Review an offering document (S-1, S-3, S-4, prospectus supplement, private placement memorandum, or offering memorandum) and surface section-by-section disclosure gaps, consistency issues, and questions for counsel.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md in full.
@@ -13198,7 +13198,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/private-placement-checklist/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing private placement checklist as draft work product for attorney review.
+- **Current description:** Use when organizing a Reg D 506(b) or 506(c) (or §4(a)(2)) private placement workflow — to produce a draft pre-closing diligence checklist covering accredited-investor verification posture, investor-questionnaire and purchaser-rep status, bad-actor diligence universe, transfer-restriction and legend posture, Form D triggers, and state-by-state notice-filing map for attorney review — without concluding exemption availability or approving any sale.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13211,8 +13211,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/private-placement-checklist/SKILL.md
 - Current skill name: Private Placement Checklist
 - Practice area: Securities Capital Markets
-- Current description: Use when performing private placement checklist as draft work product for attorney review.
-- Core purpose (must not change): Build a private-placement process checklist by workstream, ownership, priority, source, gaps, and attorney-verification items.
+- Current description: Use when organizing a Reg D 506(b) or 506(c) (or §4(a)(2)) private placement workflow — to produce a draft pre-closing diligence checklist covering accredited-investor verification posture, investor-questionnaire and purchaser-rep status, bad-actor diligence universe, transfer-restriction and legend posture, Form D triggers, and state-by-state notice-filing map for attorney review — without concluding exemption availability or approving any sale.
+- Core purpose (must not change): Build a source-grounded pre-closing checklist for a Reg D 506(b) or 506(c) (or §4(a)(2)) private placement, covering the diligence, verification, documentation, and tracking workstreams that must be in place before the offering can close.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/private-placement-checklist/SKILL.md in full.
@@ -13286,7 +13286,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing public company reporting calendar intake as draft work product for attorney review.
+- **Current description:** Use when intaking a public company's reporting cadence (filer status, fiscal year end, exchange/listing, recurring forms, committee/board cadence, earnings-release process, proxy/annual-meeting timing, 8-K trigger inventory, Section 16 workflow, insider-trading windows, 10b5-1 process, beneficial-ownership monitoring) — to produce a draft calendar-fact map for attorney review — without computing any filing deadline or asserting compliance with any reporting requirement.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13299,8 +13299,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md
 - Current skill name: Public Company Reporting Calendar Intake
 - Practice area: Securities Capital Markets
-- Current description: Use when performing public company reporting calendar intake as draft work product for attorney review.
-- Core purpose (must not change): Intake facts needed to draft or review a public-company reporting workflow calendar without computing deadlines.
+- Current description: Use when intaking a public company's reporting cadence (filer status, fiscal year end, exchange/listing, recurring forms, committee/board cadence, earnings-release process, proxy/annual-meeting timing, 8-K trigger inventory, Section 16 workflow, insider-trading windows, 10b5-1 process, beneficial-ownership monitoring) — to produce a draft calendar-fact map for attorney review — without computing any filing deadline or asserting compliance with any reporting requirement.
+- Core purpose (must not change): Intake a public company's reporting cadence — capturing filer status, fiscal calendar, exchange/listing, recurring filings, governance cadence, earnings process, 8-K trigger inventory, Section 16 / 10b5-1 workflow, and beneficial-ownership monitoring — into a calendar-fact map for attorney use.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md in full.
@@ -13374,7 +13374,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/risk-factor-review/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing risk factor review as draft work product for attorney review.
+- **Current description:** Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM — to produce a draft specificity-vs-boilerplate matrix, MD&A and other-filing consistency notes, duplication and known-trend flags, and category-coverage gaps (cybersecurity / AI / privacy / supply chain / customer concentration / regulatory / litigation / liquidity) for attorney review — without concluding adequacy of risk-factor disclosure.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13387,8 +13387,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/risk-factor-review/SKILL.md
 - Current skill name: Risk Factor Review
 - Practice area: Securities Capital Markets
-- Current description: Use when performing risk factor review as draft work product for attorney review.
-- Core purpose (must not change): Review risk-factor sections for specificity, issuer fit, duplication, and cross-document consistency without concluding sufficiency.
+- Current description: Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM — to produce a draft specificity-vs-boilerplate matrix, MD&A and other-filing consistency notes, duplication and known-trend flags, and category-coverage gaps (cybersecurity / AI / privacy / supply chain / customer concentration / regulatory / litigation / liquidity) for attorney review — without concluding adequacy of risk-factor disclosure.
+- Core purpose (must not change): Review the risk-factor section of a filing or offering document, surfacing specificity vs.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/risk-factor-review/SKILL.md in full.
@@ -13462,7 +13462,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing SEC filing consistency as draft work product for attorney review.
+- **Current description:** Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, prospectus supplement, Form D) for cross-filing consistency — to produce a draft cross-reference matrix covering business descriptions, risk factors, MD&A narrative, financial-statement figures cited outside the financials, share counts, executive/director information, related-party disclosures, material-contract references, forward-looking-statement framing, and defined-term usage for attorney review — without concluding adequacy or correctness of any filing.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13475,8 +13475,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md
 - Current skill name: SEC Filing Consistency Check
 - Practice area: Securities Capital Markets
-- Current description: Use when performing SEC filing consistency as draft work product for attorney review.
-- Core purpose (must not change): Compare user-provided SEC filing drafts for internal and cross-document consistency with source-cited discrepancies.
+- Current description: Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, prospectus supplement, Form D) for cross-filing consistency — to produce a draft cross-reference matrix covering business descriptions, risk factors, MD&A narrative, financial-statement figures cited outside the financials, share counts, executive/director information, related-party disclosures, material-contract references, forward-looking-statement framing, and defined-term usage for attorney review — without concluding adequacy or correctness of any filing.
+- Core purpose (must not change): Cross-check a set of SEC filings for internal and cross-filing consistency, surfacing numerical, narrative, defined-term, and disclosure-item discrepancies.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md in full.
@@ -13550,7 +13550,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing section 16 and beneficial ownership triage as draft work product for attorney review.
+- **Current description:** Use when triaging Section 16 and beneficial-ownership reporting facts (Forms 3/4/5 universe, Schedule 13D vs. 13G analysis, group-formation indicators, derivative securities, voting/investment power) — to produce a draft reporting-person fact map and threshold-trigger flag list for attorney review — without concluding insider status, beneficial ownership, group formation, or any reporting obligation or deadline.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13563,8 +13563,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md
 - Current skill name: Section 16 and Beneficial Ownership Triage
 - Practice area: Securities Capital Markets
-- Current description: Use when performing section 16 and beneficial ownership triage as draft work product for attorney review.
-- Core purpose (must not change): Organize facts for Section 16 and beneficial-ownership filing analysis without final status conclusions.
+- Current description: Use when triaging Section 16 and beneficial-ownership reporting facts (Forms 3/4/5 universe, Schedule 13D vs. 13G analysis, group-formation indicators, derivative securities, voting/investment power) — to produce a draft reporting-person fact map and threshold-trigger flag list for attorney review — without concluding insider status, beneficial ownership, group formation, or any reporting obligation or deadline.
+- Core purpose (must not change): Triage the facts that drive Section 16 (Forms 3/4/5) reporting and Schedule 13D / 13G beneficial-ownership reporting.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md in full.
@@ -13638,7 +13638,7 @@ WHEN YOU ARE DONE
 
 - **Skill file:** `skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md`
 - **Practice area:** Securities Capital Markets
-- **Current description:** Use when performing securities exemption issue spotting as draft work product for attorney review.
+- **Current description:** Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, §4(a)(2)) for a contemplated private offering — to produce a draft decision-tree-driven issue map with the facts needed to evaluate each candidate path (general-solicitation posture, accredited-investor mix, integration lookback, bad-actor universe, state-by-state blue-sky map) for attorney review — without concluding which exemption applies or that any exemption is available.
 - **Structure check:** all 8 required sections present.
 
 ````text
@@ -13651,8 +13651,8 @@ TARGET SKILL
 - Skill path: skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md
 - Current skill name: Securities Exemption Issue Spotter
 - Practice area: Securities Capital Markets
-- Current description: Use when performing securities exemption issue spotting as draft work product for attorney review.
-- Core purpose (must not change): Issue-spot potential exemption pathways and missing facts for private offerings without concluding exemption availability.
+- Current description: Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, §4(a)(2)) for a contemplated private offering — to produce a draft decision-tree-driven issue map with the facts needed to evaluate each candidate path (general-solicitation posture, accredited-investor mix, integration lookback, bad-actor universe, state-by-state blue-sky map) for attorney review — without concluding which exemption applies or that any exemption is available.
+- Core purpose (must not change): Issue-spot candidate exemption pathways and the facts needed to evaluate each, for a contemplated or in-progress private offering.
 
 CONTEXT TO READ FIRST
 - Read skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md in full.
