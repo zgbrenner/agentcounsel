@@ -280,16 +280,6 @@ details summary {
 }
 details[open] summary { margin-bottom: 0.4rem; }
 
-/* Footer */
-.site-footer {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 1.4rem 1.25rem 2.5rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
 /* Filter input for skill-index and area pages */
 .skill-filter {
   display: block;
@@ -356,4 +346,56 @@ details[open] summary { margin-bottom: 0.4rem; }
   main { padding: 1.25rem 1rem 2.5rem; }
   h1 { font-size: 1.6rem; }
   .hero h1 { font-size: 1.8rem; }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, #fbfdff 0%, #f6f9fc 100%);
+  margin-top: 2rem;
+}
+.site-footer-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.5rem 1.35rem 2rem;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+.site-footer p { margin: 0.3rem 0; color: var(--muted); font-size: 0.92rem; }
+.site-footer-title {
+  font-size: 1rem;
+  color: var(--text) !important;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.site-footer-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text) !important;
+  font-weight: 700;
+}
+.site-footer-links { list-style: none; margin: 0.35rem 0 0; padding: 0; }
+.site-footer-links li { margin: 0.25rem 0; }
+.site-footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.site-footer-links a:hover {
+  color: var(--accent);
+  border-bottom-color: color-mix(in srgb, var(--accent), transparent 65%);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .site-header {
+    position: static;
+    background: #fff;
+    backdrop-filter: none;
+  }
+  main { padding-top: 1.3rem; }
+  .site-footer-inner { grid-template-columns: 1fr; }
 }
