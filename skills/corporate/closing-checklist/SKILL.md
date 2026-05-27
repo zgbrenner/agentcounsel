@@ -46,6 +46,7 @@ Build and maintain a structured transaction closing checklist that captures ever
 - **Operating mode** — one of: **initialize** (build from the agreement), **add** (fold in diligence items), **update** (revise item status), or **status report** (surface blocking items and critical path).
 - **Diligence findings** — required only for **add** mode; a list or memo of findings that carry pre-closing action items.
 - **Existing checklist** — required for **update** and **status report** modes; provide the current checklist to be updated.
+- Optional: the practice group's `practice-profiles/corporate.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the output and to gate escalation. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the transaction agreement is not provided and the mode is **initialize**, stop and request it. Do not construct a checklist from deal-type assumptions alone. If the existing checklist is not provided for **update** or **status report** modes, stop and request it.
 
@@ -70,6 +71,7 @@ If the transaction agreement is not provided and the mode is **initialize**, sto
 - A condition marked "Blocking: Yes" reflects that the agreement makes closing contingent on it, or that the user has designated it as blocking — not an independent legal conclusion about materiality or waivability.
 - Preserve confidentiality and privilege. Do not include client-sensitive facts in reusable copies of this template.
 - Flag every point of uncertainty with a placeholder rather than resolving it silently.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/corporate.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -139,7 +141,11 @@ Identify every item with:
 
 Summarize the critical path: which open blocking items are on the longest path to closing, and what dependencies exist among them (e.g., a regulatory filing must be completed before a clearance can be obtained). Do not assert that any item is legally satisfied — describe status as reported and flag what remains to be confirmed.
 
-### Step 6 — Assemble the output
+### Step 6 — Apply practice-profile thresholds and positions if loaded
+
+If `practice-profiles/corporate.md` has been loaded with this skill, scan its Escalation Thresholds and Standard Positions tables for any entry that applies to facts already extracted in earlier steps — for example, the group's standing dollar-size thresholds for partner involvement, standing list of always-required closing deliverables for this deal structure, or standing house positions on consent waivers. For each applicable entry: record the threshold or position in the output, note whether the matter meets, deviates from, or is silent on it, and flag any deviation for attorney review per the skill's normal escalation route. If the profile is not loaded, skip this step silently.
+
+### Step 7 — Assemble the output
 
 Produce the closing checklist using `templates/closing-checklist.md`. Follow the Output Format below. Label the entire output as a draft for attorney review.
 
@@ -179,3 +185,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] No legal authority, statute, regulation, or case law has been asserted without verification.
 - [ ] The checklist and blocking analysis have been reviewed by deal counsel before being relied upon to determine closing readiness.
 - [ ] All assumptions and open items are resolved before the checklist is used to support a closing determination.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

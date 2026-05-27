@@ -43,6 +43,7 @@ Produce a structured, attorney-ready draft of a corporate action taken by writte
 - **Signatories.** The full board, a named committee, or a specific subset, with each signatory's full name and title. If not provided, the draft cannot include accurate signature blocks; stop and request this information.
 - **Director conflicts.** Whether any signatory has a disclosed financial or other interest in the action. Even a "none known" confirmation is useful.
 - **Optional — precedent consent.** A prior consent from the company for format and house-style reference. If not provided, the draft uses the neutral standard form in `templates/written-consent-outline.md` and flags it to be conformed to house style.
+- Optional: the practice group's `practice-profiles/corporate.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Preferred Output Style and Standard Positions tables to benchmark the draft against the group's house style and resolution-form defaults. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the action description or the signatory list is not provided, stop and request it before proceeding. Do not fabricate names, titles, amounts, or agreement terms.
 
@@ -67,6 +68,7 @@ If the action description or the signatory list is not provided, stop and reques
 - Distinguish what was provided by the user from what you assumed and from what the attorney must confirm.
 - Preserve confidentiality and privilege: this draft is attorney work product. Do not carry client-sensitive facts into the reusable template.
 - Flag every point of uncertainty rather than resolving it silently.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/corporate.md` is loaded, its Preferred Output Style and Standard Positions inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -95,7 +97,7 @@ If the action description or the signatory list is not provided, stop and reques
    - Add a FURTHER RESOLVED omnibus paragraph authorizing officers to execute any ancillary documents and take any further action necessary to carry out the consent, if appropriate.
    - Add counterparts language (flagged `[verify jurisdiction]` for permissibility and required form).
    - Populate signature blocks for each signatory with name, title, and a signature line.
-   - If a precedent was provided, note where the draft departs from the precedent's format and flag those departures for attorney review.
+   - If a precedent was provided — either inline by the user or via the loaded `practice-profiles/corporate.md` Preferred Output Style / Standard Positions sections — note where the draft departs from the precedent's format and flag those departures for attorney review.
    - If no precedent was provided, flag the entire draft as using a neutral standard form that should be conformed to the company's house style before execution.
 
 7. **Compile open items.** Gather every `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and conflict flag from the draft into a consolidated checklist.
@@ -133,3 +135,5 @@ Use `[CONFIRM: ...]` for missing or unverified facts. Use `[verify jurisdiction]
 - [ ] No legal authority, statute, or case law has been asserted in the draft without verification.
 - [ ] All assumptions and open items are resolved before the consent is signed or treated as effective.
 - [ ] Attorney sign-off has been obtained before the consent is circulated for signature or filed.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

@@ -605,6 +605,40 @@ def check_citation_discipline(skill_dirs: list[Path]) -> None:
             f"language against inventing legal authority or citations")
 
 
+# --- Check: practice-profile references in skills are consistent ----------
+
+PROFILE_REF_RE = re.compile(r"practice-profiles/([a-z0-9-]+)\.md")
+PRACTICE_AREA_RE = re.compile(r"^practice_area:\s*([a-z0-9-]+)\s*$", re.M)
+
+
+def check_profile_references_consistent(skill_dirs: list[Path]) -> None:
+    """Every reference to practice-profiles/<area>.md in a non-setup skill
+    must use the slug that matches the skill's own practice_area frontmatter
+    value. Catches a contracts skill accidentally pointing at
+    practice-profiles/employment.md, etc.
+
+    File existence is NOT checked — silent-if-absent is the design, and a
+    skill may reference a profile that has not yet been authored."""
+    for skill_dir in skill_dirs:
+        rel_dir = rel(skill_dir)
+        if rel_dir.startswith("skills/setup/"):
+            continue
+        md = skill_dir / "SKILL.md"
+        if not md.is_file():
+            continue
+        text = md.read_text(encoding="utf-8")
+        m = PRACTICE_AREA_RE.search(text)
+        if not m:
+            continue
+        skill_area = m.group(1).strip()
+        for ref in PROFILE_REF_RE.findall(text):
+            if ref != skill_area:
+                err(
+                    f"{rel(md)}: references practice-profiles/{ref}.md but "
+                    f"the skill's practice_area is '{skill_area}'"
+                )
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -637,6 +671,7 @@ def main() -> int:
     check_index_coverage(canonical)
     check_related_skills_wired(canonical)
     check_readme_counts(canonical)
+    check_profile_references_consistent(canonical)
 
     if warnings:
         print(f"Warnings ({len(warnings)}):")

@@ -46,6 +46,7 @@ Produce a structured, attorney-ready draft of minutes for a meeting of a board o
 Optional but recommended:
 - A prior set of the organization's minutes for house-format reference.
 - The organization's preferred minutes style: narrative (full discussion summaries), action-only (resolutions with minimal discussion), or hybrid.
+- The practice group's `practice-profiles/corporate.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Preferred Output Style and Standard Positions tables to benchmark the draft minutes against the group's house style and resolution-form defaults. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If any required input is missing, stop and request it. Do not fabricate attendance lists, resolution language, discussion content, or quorum determinations.
 
@@ -69,6 +70,7 @@ If any required input is missing, stop and request it. Do not fabricate attendan
 - A quorum defect is a substantive legal problem. If a quorum was not present, do not draft minutes that imply a valid meeting occurred (see Workflow, Step 4).
 - Preserve confidentiality and privilege. Do not place client-sensitive facts, sensitive discussion content, or identifying transaction details into a reusable copy of the template.
 - Flag every uncertainty with a bracketed placeholder (`[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`). Never resolve uncertainty silently.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/corporate.md` is loaded, its Preferred Output Style and Standard Positions inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -89,7 +91,7 @@ If any required input is missing, stop and request it. Do not fabricate attendan
    - **Opening:** confirm the chair called the meeting to order; state notice was proper or was waived and by whom; state quorum was present `[verify jurisdiction]`; confirm the secretary.
    - **Approval of prior minutes:** note if prior minutes were presented, by whom, and whether they were approved as presented or with corrections.
    - **One section per agenda item:** write a discussion summary and the resolution or action taken. For narrative and hybrid style, summarize the substance of the discussion as reflected in the materials. For action-only style, record the resolution and the vote. Where materials do not describe the discussion, insert `[PLACEHOLDER — summarize discussion based on materials provided]`. Never fabricate discussion.
-   - **Resolution language:** use the organization's resolution form if a precedent is provided. Otherwise use a neutral standard form and flag it: `[CONFIRM: conform resolution form to organization's house style and governing documents]`.
+   - **Resolution language:** use the organization's resolution form if a precedent is provided — either inline by the user or via the loaded `practice-profiles/corporate.md` Preferred Output Style / Standard Positions sections. Otherwise use a neutral standard form and flag it: `[CONFIRM: conform resolution form to organization's house style and governing documents]`. Where the profile is loaded but is silent on a specific resolution form, treat that form as not addressed by the playbook and flag for attorney review.
    - **Adjournment:** note that there being no further business, the chair declared the meeting adjourned, and record the time if provided.
    - **Signature block:** include lines for chair and secretary, flagged for execution and dating `[ATTORNEY TO CONFIRM: signature and attestation requirements]`.
 
@@ -126,3 +128,5 @@ Use placeholders consistently. Do not fill any gap with invented content.
 - [ ] No legal authority, statute, or case law has been asserted in the draft without verification.
 - [ ] All placeholders and open items are resolved before the minutes are adopted as a corporate record.
 - [ ] The finalized minutes are filed in the corporate record book or equivalent repository as required by the governing documents and applicable law. `[verify jurisdiction]`
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

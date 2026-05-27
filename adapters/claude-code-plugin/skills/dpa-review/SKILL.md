@@ -49,6 +49,7 @@ Which privacy laws, frameworks, or regulations apply — and what they require �
 - **The main commercial agreement** (or a description of it), if available — needed to assess the liability and indemnity interplay. If not provided, note the gap and flag it as an attorney-verification item.
 - Optional: the applicable privacy framework(s) or regulation(s) the parties have identified (e.g., the DPA references GDPR, CCPA/CPRA, or another framework). Note these as stated in the document; do not independently assert which law applies.
 - Optional: any prior version of the DPA or a markup showing changes, if this is a revision review.
+- Optional: the practice group's `practice-profiles/privacy.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the output and to gate escalation. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the DPA text is missing, stop and request it. Never fabricate document terms or infer what a DPA "probably says."
 
@@ -73,7 +74,8 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 - Use `[CONFIRM: ...]` for every point where the legal consequence, applicable rule, or factual context is uncertain.
 - Flag but do not resolve: conflicts between the DPA and the main agreement; gaps in the DPA relative to any stated regulatory requirement; provisions that may be unenforceable or non-standard.
 - Adverse provisions (provisions unfavorable to the client) must be identified even if the other party's position is commercially common.
-- **Severity floor.** Once an issue has been rated High severity in the risk table, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.
+- **Severity floor.** Once an issue has been rated High severity in the risk table, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision. Where `practice-profiles/privacy.md` is loaded, the profile's Escalation Thresholds for DPA terms (e.g., minimum acceptable sub-processor approval mechanism, breach-reporting timeline floor, audit-rights floor, SCC-modification posture) inform what constitutes High; the loaded thresholds apply alongside, not instead of, the inline ratings.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/privacy.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -155,3 +157,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] All `[CONFIRM: ...]` placeholders in the risk table and issue list have been resolved before the review is relied upon.
 - [ ] No legal authority, regulatory requirement, or deadline has been asserted in this review without attorney verification.
 - [ ] Privilege and confidentiality designations are appropriate for the matter.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

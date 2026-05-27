@@ -169,6 +169,16 @@ The full safety model — the threat model, what AgentCounsel deliberately does 
 
 ## Configuring AgentCounsel for a team
 
+AgentCounsel runs out-of-the-box without configuration. To improve output quality for a practice group adopting the library across multiple matters, you can populate a practice-group profile at `practice-profiles/<area>.md`. The profile gives ~20 skills access to the group's standing positions, escalation thresholds, and output preferences.
+
+See [`CONFIGURING.md`](CONFIGURING.md) for the full configuration guide. The short version:
+
+1. Run the cold-start interview for the practice area (`skills/setup/<area>-cold-start-interview/SKILL.md`) with a supervising attorney, or edit the profile template directly.
+2. Load the populated profile into your AI workspace alongside any skill that consumes it (see `practice-profiles/README.md` for the list).
+3. Skills that consume the profile will benchmark against its Standard Positions and Escalation Thresholds; skills that do not consume it are unaffected.
+
+Configuration is opt-in. Skipping it costs you benchmarking-against-standing-positions but does not degrade any other skill's output.
+
 Two optional layers let a legal team adapt the library without changing any skill:
 
 - **[`practice-profiles/`](practice-profiles/)** — one profile per practice area capturing the team's jurisdictions, escalation thresholds, standard positions, review requirements, and prohibited assumptions. The **Setup** cold-start interview skills fill a profile in.

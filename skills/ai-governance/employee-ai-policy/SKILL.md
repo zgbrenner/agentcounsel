@@ -46,6 +46,7 @@ This skill does not certify legal compliance, render an opinion on what any law 
 - **Policy text (if one exists)**: The full text of the current or draft employee AI-use policy, uploaded or pasted.
 - **Organization context**: A brief description of the organization's industry, approximate size, and the types of AI tools employees are currently using or are likely to use.
 - **Jurisdictions**: The countries and states or provinces where employees are located — employment law is jurisdiction-specific and the review will flag where jurisdiction-specific legal input is needed.
+- Optional: the practice group's `practice-profiles/ai-governance.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the output and to gate escalation. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If no policy text is provided, the skill will produce a gap analysis based on the topics a policy should address. Note clearly that this is a gap analysis and not a policy review.
 
@@ -69,6 +70,7 @@ If the organization context and jurisdictions are not provided, stop and request
 - Use `[CONFIRM: ...]` placeholders wherever jurisdiction-specific legal input is required or a provision is ambiguous.
 - Employee monitoring and consent topics are legally sensitive and jurisdiction-specific — always flag for employment law specialist review.
 - Confidentiality and privilege implications of employee AI use are a significant risk area — ensure these are flagged prominently.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/ai-governance.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -76,7 +78,7 @@ If the organization context and jurisdictions are not provided, stop and request
 
 2. **Identify the policy scope and structure.** If a policy exists, summarize its stated scope (which employees, which tools, which uses), effective date, and owner. Note any definitions of "AI tool" or "generative AI" and assess whether they are broad enough to cover the tools employees actually use.
 
-3. **Review approved and prohibited tools.** Assess whether the policy clearly identifies approved AI tools and prohibited or unapproved tools. Flag if the policy is silent on tool approval or if the approval process is unclear. Note whether the policy covers both employer-provided tools and personal/consumer AI tools used for work purposes.
+3. **Review approved and prohibited tools.** Assess whether the policy clearly identifies approved AI tools and prohibited or unapproved tools. Flag if the policy is silent on tool approval or if the approval process is unclear. Note whether the policy covers both employer-provided tools and personal/consumer AI tools used for work purposes. Where `practice-profiles/ai-governance.md` is loaded with a Standard Positions table naming the organization's standing approved-tool list, benchmark the policy text against it and flag any tool the standing list approves but the policy omits, or vice versa.
 
 4. **Review handling of confidential and sensitive data.** Assess whether the policy prohibits employees from entering confidential business information, trade secrets, non-public financial information, or other sensitive organizational data into unapproved AI systems. Flag if confidential data categories are undefined or underinclusive.
 
@@ -169,3 +171,5 @@ When the output will be used to brief a non-lawyer business stakeholder — an H
 - [ ] Enforcement and training provisions are consistent with the organization's disciplinary framework.
 - [ ] No legal conclusion about compliance with any law or regulation has been asserted without attorney verification.
 - [ ] All open items and `[CONFIRM: ...]` placeholders have been resolved before the policy is published.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

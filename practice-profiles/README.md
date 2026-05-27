@@ -27,6 +27,42 @@ The loading order is: `core/` rules first, then the practice profile, then the s
 
 ---
 
+## Skills That Use This Profile
+
+The following ~20 non-setup skills explicitly consume profile data when a populated profile is loaded alongside them. Each skill's Required Inputs lists the profile as optional, and the skill's Workflow benchmarks against the profile's Standard Positions, Escalation Thresholds, Source-of-Truth Documents, or Preferred Output Style as relevant. Skills not listed here are unaffected by the profile's presence; they do not consume it.
+
+| Practice area | Skills that consume the profile |
+|---|---|
+| `ai-governance.md` | `skills/ai-governance/ai-vendor-terms-review/SKILL.md`, `skills/ai-governance/employee-ai-policy/SKILL.md` |
+| `contracts.md` | `skills/contracts/contract-risk-review/SKILL.md`, `skills/contracts/nda-review/SKILL.md`, `skills/contracts/sow-review/SKILL.md` |
+| `corporate.md` | `skills/corporate/board-minutes/SKILL.md`, `skills/corporate/closing-checklist/SKILL.md`, `skills/corporate/entity-compliance/SKILL.md`, `skills/corporate/written-consent/SKILL.md` |
+| `employment.md` | `skills/employment/employee-policy-review/SKILL.md`, `skills/employment/hiring-review/SKILL.md` |
+| `insurance.md` | `skills/insurance/insurance-requirements-contract-review/SKILL.md` |
+| `litigation.md` | `skills/litigation/brief-section-drafter/SKILL.md` |
+| `privacy.md` | `skills/privacy/dpa-review/SKILL.md`, `skills/privacy/dsar-workflow/SKILL.md`, `skills/privacy/pia-generation/SKILL.md`, `skills/privacy/privacy-policy-gap-review/SKILL.md` |
+| `regulatory.md` | `skills/regulatory/compliance-gap-matrix/SKILL.md`, `skills/regulatory/compliance-program-tracker/SKILL.md` |
+
+Other profiles (`antitrust-competition`, `bankruptcy-restructuring`, `family-law`, `ip`, `m-and-a`, `product-legal`, `real-estate`, `securities-capital-markets`, `tax`, `trusts-estates`) exist as configuration scaffolds and are populated by their cold-start interviews, but no skill currently consumes them. A skill will be wired to one of these profiles in a future PR if and when its workflow grows a benchmark-against-standing-position step.
+
+---
+
+## How to Use a Populated Profile Alongside a Skill
+
+A practice profile is a single Markdown file. To use it alongside a skill:
+
+1. Populate `practice-profiles/<area>.md` once — either by running the cold-start interview at `skills/setup/<area>-cold-start-interview/SKILL.md`, or by editing the file directly. Have a supervising attorney review and approve the populated profile.
+
+2. When running a skill that uses profile data (see the list above), include the populated profile in your AI workspace alongside the skill:
+   - **For platform packs:** the profile is uploaded as a separate file in the same project.
+   - **For Claude Code:** place the profile in the same directory the skill is loaded from.
+   - **For file-by-file workflows:** paste the profile into the conversation before the skill's Required Inputs.
+
+3. The skill detects the profile by its filename pattern (`practice-profiles/<area>.md`) and uses its Standard Positions, Escalation Thresholds, Source-of-Truth Documents, and Preferred Output Style tables as benchmarking inputs. Skills not on the list above do not consume the profile and are unaffected by its presence.
+
+Profile is always optional. Running a skill without a profile is the default behavior and does not degrade output quality — it only removes benchmarking against the group's standing positions. See `CONFIGURING.md` at the repository root for the full configuration guide.
+
+---
+
 ## The Privilege Caution
 
 Practice profiles configure behavior. They are not work-product files. Treating them otherwise risks mixing configuration with privileged analysis, which creates both a privilege-management problem and an operational problem (a configuration file full of client facts is not reusable).

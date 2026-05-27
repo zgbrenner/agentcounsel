@@ -50,6 +50,7 @@ This skill does not decide litigation strategy, invent legal authority, or produ
 - **House style sample** — a sample brief or excerpt from the supervising attorney or firm showing the expected tone, heading style, citation format, and prose register. If none is provided, the skill will note the absence and apply a neutral, professional default, flagging the style choice for attorney review.
 - **Record materials** — the documents, deposition transcripts, declarations, pleadings, or other record items that will supply the factual predicate for this section. Every fact in the draft must be tied to a provided record item or flagged `[VERIFY: record cite needed]`. If no record materials are provided, the skill cannot draft a fact-intensive section and will stop to request them.
 - **Authorities already identified by counsel** — any cases, statutes, rules, or secondary sources that the supervising attorney has already confirmed and directed the skill to use. The skill will insert these as placeholders in the proper locations; it will not add authority beyond what is provided and directed.
+- Optional: the practice group's `practice-profiles/litigation.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Preferred Output Style and Standard Positions tables to benchmark the draft against the group's house style. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If matter identification, case theory, or section type is missing, stop and request the missing information before proceeding. Do not fabricate any input.
 
@@ -77,6 +78,7 @@ If matter identification, case theory, or section type is missing, stop and requ
 - **Preserve confidentiality and privilege.** Client-sensitive facts, privileged communications, and attorney work product must not be included in any reusable or shareable copy of this output.
 - **Separate facts, assumptions, law, analysis, and verification items.** The Drafting Notes section makes these categories explicit so the attorney can assess each independently.
 - **Filing without attorney review carries professional-responsibility exposure.** The output carries a "DRAFT FOR ATTORNEY REVIEW — DO NOT FILE UNREVIEWED" banner. This is not a formality; filing an AI-generated draft without verification of every citation, quotation, and factual statement creates serious professional risk.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/litigation.md` is loaded, its Preferred Output Style and Standard Positions inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -90,10 +92,10 @@ If matter identification, case theory, or section type is missing, stop and requ
 
 4. **Theory-consistency check.** Confirm that the proposed section, as framed, is consistent with the stated case theory. If the proposed section contradicts or undermines the case theory, stop, flag the inconsistency explicitly, and ask the attorney to resolve it before drafting begins. Do not draft a section that cuts against the case theory without explicit attorney direction.
 
-5. **Review forum rules and house style.** From the pasted local rules, standing orders, and style sample:
+5. **Review forum rules and house style.** From the pasted local rules, standing orders, and style sample — or, where the group has loaded `practice-profiles/litigation.md`, from its Preferred Output Style and Standard Positions sections:
    - Note the applicable page or word limit, heading requirements, and citation format.
    - Flag any rule the skill cannot confirm from the provided material: `[CONFIRM: forum rule not verified — attorney to confirm]`.
-   - Note the tone and register from the house style sample. If no sample was provided, flag the style choice: `[CONFIRM: no style sample provided — attorney to confirm draft register and heading format]`.
+   - Note the tone and register from the house style sample. If no sample was provided and no Preferred Output Style is loaded from the profile, flag the style choice: `[CONFIRM: no style sample provided — attorney to confirm draft register and heading format]`. Where the profile is loaded but is silent on a specific style element, treat that element as not addressed by the playbook and flag for attorney review.
 
 6. **Map the record to the section.** For each key fact the section will rely on, identify the record item and the specific page, line, paragraph, or Bates number. Flag every fact that lacks a confirmed record cite as `[VERIFY: record cite needed]`. Do not draft a factual statement you cannot pin to a provided source.
 
@@ -172,3 +174,5 @@ The checklist from the section below, pre-populated with the specific gaps ident
 - [ ] All open questions from the Drafting Notes have been resolved before the draft is submitted for filing.
 - [ ] Output is held in the appropriate client file and no confidential or privileged content has been shared outside the matter team.
 - [ ] The responsible attorney has reviewed, revised, and approved the section and accepts professional responsibility for its contents before filing.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.
