@@ -10,6 +10,7 @@
   --subtle: #f6f7f8;
   --warn: #8a5a00;
   --warn-bg: #fdf6e7;
+  --shadow: 0 10px 30px rgba(11, 24, 45, 0.08);
   --maxw: 880px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
@@ -24,7 +25,10 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, #f7faff 0%, transparent 45%),
+    radial-gradient(circle at top right, #f4f7fc 0%, transparent 35%),
+    var(--bg);
 }
 
 a { color: var(--accent); }
@@ -41,6 +45,11 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: 1.1rem 1.25rem;
   border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
 }
 .brand {
   font-weight: 700;
@@ -61,7 +70,7 @@ a:hover { text-decoration: underline; }
 main {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 1.75rem 1.25rem 3rem;
+  padding: 1.9rem 1.25rem 3rem;
 }
 
 section { margin: 0 0 2rem; }
@@ -119,12 +128,17 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 .card {
   display: block;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 0.9rem 1rem;
   text-decoration: none;
   color: var(--text);
 }
-.card:hover { border-color: var(--accent); text-decoration: none; }
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
 .card h3 { margin: 0 0 0.15rem; color: var(--accent); }
 .card p { margin: 0.25rem 0 0; font-size: 0.9rem; color: var(--muted); }
 .card .count {
@@ -137,9 +151,10 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 /* Skill cards on area pages */
 .skill-card {
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 0.6rem 1.1rem 1rem;
   margin: 1rem 0;
+  background: #fff;
 }
 .skill-card h2 { font-size: 1.15rem; margin: 0.6rem 0 0.3rem; }
 .skill-card .desc { color: var(--text); margin: 0.3rem 0 0.7rem; }
@@ -169,10 +184,12 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
   background: var(--bg);
   color: var(--accent);
   padding: 0.4rem 0.85rem;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, transform .1s ease;
 }
 .btn:hover { background: var(--accent-soft); }
+.btn:active { transform: translateY(1px); }
 .btn.copied { background: var(--accent); color: #fff; }
 .btn:disabled { cursor: default; }
 
@@ -191,9 +208,30 @@ pre.code, pre.raw {
   line-height: 1.5;
   background: var(--subtle);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 0.9rem 1rem;
   overflow-x: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: .5rem .8rem;
+  border-radius: 0 0 8px 8px;
+}
+.skip-link:focus {
+  left: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 pre.raw { white-space: pre-wrap; word-wrap: break-word; }
 pre.code code, pre.raw { background: none; border: 0; padding: 0; }
