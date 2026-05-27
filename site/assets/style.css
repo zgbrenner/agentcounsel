@@ -11,7 +11,8 @@
   --warn: #8a5a00;
   --warn-bg: #fdf6e7;
   --shadow: 0 10px 30px rgba(11, 24, 45, 0.08);
-  --maxw: 880px;
+  --maxw: 960px;
+  --radius: 12px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
@@ -23,7 +24,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.68;
   color: var(--text);
   background:
     radial-gradient(circle at top left, #f7faff 0%, transparent 45%),
@@ -70,13 +71,13 @@ a:hover { text-decoration: underline; }
 main {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 1.9rem 1.25rem 3rem;
+  padding: 2.2rem 1.35rem 3.2rem;
 }
 
 section { margin: 0 0 2rem; }
 
-h1 { font-size: 1.9rem; line-height: 1.25; margin: 0.2rem 0 0.75rem; }
-h2 { font-size: 1.3rem; margin: 1.8rem 0 0.6rem; }
+h1 { font-size: 2rem; line-height: 1.22; margin: 0.2rem 0 0.75rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.34rem; margin: 2rem 0 0.65rem; letter-spacing: -0.005em; }
 h3 { font-size: 1.05rem; margin: 1.2rem 0 0.4rem; }
 h4 { font-size: 0.98rem; margin: 1rem 0 0.3rem; }
 
@@ -92,7 +93,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 
 /* Hero */
 .hero { margin-bottom: 1.5rem; }
-.hero h1 { font-size: 2.1rem; }
+.hero h1 { font-size: 2.25rem; }
 
 /* Notice / callouts */
 .notice {
@@ -128,10 +129,12 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 .card {
   display: block;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 0.9rem 1rem;
   text-decoration: none;
   color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
 }
 .card:hover {
   border-color: var(--accent);
@@ -151,10 +154,11 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 /* Skill cards on area pages */
 .skill-card {
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.6rem 1.1rem 1rem;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.15rem 1.05rem;
   margin: 1rem 0;
   background: #fff;
+  box-shadow: 0 3px 14px rgba(11, 24, 45, 0.04);
 }
 .skill-card h2 { font-size: 1.15rem; margin: 0.6rem 0 0.3rem; }
 .skill-card .desc { color: var(--text); margin: 0.3rem 0 0.7rem; }
@@ -186,7 +190,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
   padding: 0.4rem 0.85rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color .15s ease, color .15s ease, transform .1s ease;
+  transition: background-color .15s ease, color .15s ease, transform .1s ease, box-shadow .15s ease;
 }
 .btn:hover { background: var(--accent-soft); }
 .btn:active { transform: translateY(1px); }
@@ -203,12 +207,13 @@ code {
   padding: 0.05rem 0.3rem;
 }
 pre.code, pre.raw {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
   font-family: var(--mono);
   font-size: 0.84rem;
   line-height: 1.5;
   background: var(--subtle);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 0.9rem 1rem;
   overflow-x: auto;
 }
@@ -334,6 +339,15 @@ details[open] summary { margin-bottom: 0.4rem; }
   font-style: italic;
   font-size: 0.9rem;
   margin: 0.6rem 0 1.2rem;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (max-width: 600px) {
