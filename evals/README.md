@@ -97,9 +97,38 @@ that every shared assertion referenced is defined. It needs no API key and no
 network. It runs in CI alongside `scripts/validate_repo.py` — see
 `../.github/workflows/validate.yml`. Exit code `0` means all checks passed.
 
-### 2. Manual review pass (exercises the skills)
+### 2. Static heuristic runner (no API keys, runs in CI)
 
-The evals are written so a reviewer can run them by hand:
+```
+python scripts/run_evals.py                 # run all eval files
+python scripts/run_evals.py <skill-slug>    # run one skill's eval
+python scripts/run_evals.py --strict        # required candidates must pass
+python scripts/run_evals.py --quiet         # rollup only, no per-case detail
+```
+
+The runner reads candidate skill outputs from `evals/outputs/<slug>/<case-id>.md`
+and scores them against the shared assertions in `shared/assertions.md`,
+modulated by each case's `input_facts` (jurisdiction-missing,
+prompt-injection, stop-and-ask). It is a non-LLM, stdlib-only check — no
+API keys and no network.
+
+For each case the runner reports per-assertion pass / fail / skip, an
+automated assertion pass rate, and the count of per-case manual-review
+items (`expected_output_characteristics`, `failure_modes`, `safety_checks`)
+that this static layer does not score. Those remain for the manual review
+pass below — or for the LLM-judge promptfoo path the schema already maps
+onto.
+
+Under `--strict`, every case in every required eval slug must have a
+candidate file under `evals/outputs/` and every applicable assertion must
+pass; failure exits 1. The CI pipeline runs `--strict --quiet` after
+`check_evals.py`. See `outputs/README.md` for the file convention and how
+to add a candidate.
+
+### 3. Manual review pass (exercises the skills)
+
+The evals are written so a reviewer can run them by hand for the items
+the static runner cannot score:
 
 1. Pick a skill eval file under `skills/`.
 2. For each case, give the skill its `user_request` and `input_facts` in
@@ -115,7 +144,7 @@ The evals are written so a reviewer can run them by hand:
 This pass is human-judged and intentionally not part of CI, so CI stays free
 of API keys and model calls.
 
-### 3. Adapting to promptfoo (optional, later)
+### 4. Adapting to promptfoo (optional, later)
 
 The eval files are deliberately shaped to map onto
 [promptfoo](https://promptfoo.dev) with minimal change, so the manual pass can

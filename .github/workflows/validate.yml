@@ -38,6 +38,9 @@ jobs:
       - name: Validate skill eval framework
         run: python scripts/check_evals.py
 
+      - name: Run skill eval candidates (static, --strict)
+        run: python scripts/run_evals.py --strict --quiet
+
       - name: Check skill-improvement reports are up to date
         run: python scripts/generate_skill_improvement_prompts.py --check
 
