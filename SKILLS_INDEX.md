@@ -240,3 +240,4 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 - `skills/employment/references/` — shared Employment output-pattern reference (cross-cutting rules every employment skill's Output Format follows).
 - `skills/ip/references/` — shared Intellectual Property output-pattern reference (cross-cutting rules every IP skill's Output Format follows).
 - `skills/corporate/references/` — shared Corporate output-pattern reference (cross-cutting rules every corporate skill's Output Format follows).
+- `connectors/` — external-source integrations a skill can consult to verify citation placeholders. See `connectors/README.md` for the contract; `connectors/courtlistener.md` is the first concrete connector (US federal case law).

@@ -66,6 +66,7 @@ EXPECTED_DIRS = [
     "core",
     "skills",
     "adapters",
+    "connectors",
     "practice-profiles",
     "matter-workspaces",
     "overlays",

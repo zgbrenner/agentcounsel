@@ -121,6 +121,9 @@ the checks pass — not "I think it looks right." CI
 ```
 core/               Operating rules every skill inherits. Read first.
 skills/             Canonical skill library, grouped by practice area.
+connectors/         External-source integrations skills can consult to
+                    verify citation placeholders (Markdown only — no
+                    runtime). See connectors/README.md for the contract.
 practice-profiles/  Per-practice-area configuration for a legal team.
 matter-workspaces/  Single-file scaffolds for organizing one matter.
 adapters/           Thin per-environment integration files.

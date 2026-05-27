@@ -74,6 +74,7 @@ If the legal question, jurisdiction, or relevant facts are not provided, stop an
 - Identify any conflict of laws, choice-of-law, or multi-jurisdictional issue as an attorney verification item.
 - Do not place client-sensitive facts into reusable templates.
 - Use `[CONFIRM: ...]` placeholders wherever information is missing or uncertain. Never fill gaps with invented content.
+- **Consult `connectors/` when a verification path is available.** When the session has access to a case-law connector — for US federal case law, `connectors/courtlistener.md` — resolve each `[VERIFY-CITE: ...]` placeholder by querying the connector and recording the verified URL in the Authorities Cited table. A verified citation still requires attorney verification of the proposition it stands for; the connector closes the "does this case exist" gap, not the "does it support this proposition" gap. When no connector is available, the placeholder remains; the discipline never relaxes.
 
 ## Workflow
 
@@ -95,7 +96,7 @@ If the legal question, jurisdiction, or relevant facts are not provided, stop an
 
 7. **Write the Conclusion.** Summarize the overall answer to each Question Presented in two to five sentences. Identify the key legal and factual variables on which the answer depends. Do not overstate certainty.
 
-8. **Compile the Authorities Cited table.** List every legal authority referenced in the memo — cases, statutes, regulations, secondary sources. For each, include: authority name/citation, source (user-provided or researched), proposition it stands for, and a verification checkbox. See `templates/legal-research-memo.md`.
+8. **Compile the Authorities Cited table.** List every legal authority referenced in the memo — cases, statutes, regulations, secondary sources. For each, include: authority name/citation, source (user-provided, researched, or verified via connector), proposition it stands for, and a verification checkbox. For US federal case citations, attempt verification through CourtListener when the session has access to it — see `connectors/courtlistener.md` for the calling pattern, in-scope corpus, and fallback behavior. When a citation is verified, record the connector URL in the table and replace the `[VERIFY-CITE: ...]` placeholder with `[ATTORNEY TO CONFIRM: proposition supported by the cited case]`. When no connector is available, or the citation falls outside the connector's in-scope corpus, retain the placeholder unchanged. See `templates/legal-research-memo.md`.
 
 9. **List Open Items for Attorney Verification.** Enumerate every factual gap, unverified authority, jurisdictional question, ambiguity, or strategic judgment that requires attorney review before the memo is relied upon.
 
@@ -112,7 +113,7 @@ Deliver a complete memo using the structure in `templates/legal-research-memo.md
 5. **Assumptions** — explicit list.
 6. **Discussion / Analysis** — IRAC per issue, with source citations for every rule stated.
 7. **Conclusion** — summary with qualified confidence.
-8. **Authorities Cited** — table with verification checkbox column.
+8. **Authorities Cited** — table with verification-source column (user-provided, connector-verified with URL, or `[VERIFY-CITE: ...]`) and verification checkbox column.
 9. **Open Items / Attorney Verification** — checkbox list.
 
 Use `[CONFIRM: ...]` wherever a fact, authority, or conclusion is unverified. Do not omit a section because it is difficult to fill; instead, mark it with a placeholder and a note.
@@ -125,7 +126,7 @@ Use `[CONFIRM: ...]` wherever a fact, authority, or conclusion is unverified. Do
 - [ ] All assumptions are identified and their legal materiality has been assessed.
 - [ ] Every case cited exists, the citation is accurate, and the holding attributed to it is correct.
 - [ ] Every statute and regulation cited is current, in the correct version, and the section referenced says what the memo claims.
-- [ ] No authority has been cited that was not in a user-provided document or independently verified in this session.
+- [ ] No authority has been cited that was not in a user-provided document or independently verified in this session (including via a `connectors/` source, where applicable).
 - [ ] The rule/holding has not been overstated, paraphrased inaccurately, or taken out of context.
 - [ ] Adverse authority has been identified and addressed, not omitted.
 - [ ] Any conflict-of-laws or choice-of-law issue has been identified and resolved or flagged.
