@@ -247,6 +247,57 @@ details[open] summary { margin-bottom: 0.4rem; }
   font-size: 0.85rem;
 }
 
+/* Filter input for skill-index and area pages */
+.skill-filter {
+  display: block;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.skill-filter:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* Skill page: TL;DR summary, example callout, missing-example note */
+.skill-summary {
+  background: var(--subtle);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.4rem;
+  font-size: 0.96rem;
+}
+.skill-summary p { margin: 0.35rem 0; }
+.skill-summary .label {
+  font-weight: 600;
+  color: var(--accent);
+  margin-right: 0.25rem;
+}
+.example-callout {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 0.7rem 1rem;
+  margin: 0.6rem 0 1.4rem;
+  font-size: 0.95rem;
+  border-radius: 0 6px 6px 0;
+}
+.example-missing {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0.6rem 0 1.2rem;
+}
+
 @media (max-width: 600px) {
   body { font-size: 15px; }
   .site-header { padding: 0.9rem 1rem; }
