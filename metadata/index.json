@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
-  "skill_count": 179,
+  "skill_count": 183,
   "practice_areas": {
     "ai-governance": 4,
     "antitrust-competition": 10,
@@ -15,7 +15,7 @@
     "ip": 7,
     "legal-methodology": 4,
     "legal-ops": 3,
-    "legal-research": 1,
+    "legal-research": 5,
     "litigation": 9,
     "m-and-a": 10,
     "privacy": 4,
@@ -33,15 +33,15 @@
     "extraction": 23,
     "intake": 18,
     "interview": 18,
-    "research": 1,
+    "research": 5,
     "review": 51,
     "summarization": 5,
     "triage": 12,
     "verification": 4
   },
   "risk_levels": {
-    "low": 20,
-    "medium": 70,
+    "low": 21,
+    "medium": 73,
     "high": 86,
     "critical": 3
   },
@@ -2720,6 +2720,68 @@
       ]
     },
     {
+      "path": "skills/legal-research/authority-synthesis/SKILL.md",
+      "name": "Authority Synthesis",
+      "description": "Use when synthesizing a rule statement from multiple judicial opinions (and, where relevant, statutory or secondary sources) for a single Question Presented, producing a structured synthesis with explicit majority-and-minority handling, a temporal-confidence pass for older authority, and a Holding / Relevance / Weight block per authority — capped at the smallest set that supports the rule.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The Question Presented the synthesis answers",
+        "The set of authorities (cases, statutes, regulations, secondary sources) to be synthesized",
+        "The applicable jurisdiction",
+        "The relevant date for the analysis"
+      ],
+      "outputs": [
+        "Rule-synthesis worksheet with authority blocks, majority / minority split, and temporal-confidence flag, for attorney review"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/case-brief/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "authority-synthesis",
+        "rule-synthesis",
+        "case-law",
+        "citations"
+      ]
+    },
+    {
+      "path": "skills/legal-research/case-brief/SKILL.md",
+      "name": "Case Brief",
+      "description": "Use when producing a structured brief of a single judicial opinion for attorney review, extracting the facts, procedural posture, issue, holding, reasoning, rule, and weight in a fixed template — with every slot tied to a specific passage in the provided opinion and the case verified against `connectors/courtlistener.md` where applicable.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The opinion text (or a verified link to it)",
+        "The matter or research question the brief supports",
+        "The applicable jurisdiction",
+        "Why the case is being briefed (relevance to the matter)"
+      ],
+      "outputs": [
+        "Structured case brief with Holding / Relevance / Weight per case, for attorney review"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/authority-synthesis/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "case-brief",
+        "case-law",
+        "citations",
+        "irac"
+      ]
+    },
+    {
       "path": "skills/legal-research/legal-research-memo/SKILL.md",
       "name": "Legal Research Memo",
       "description": "Use when producing a structured legal research memo in response to a specific legal question, organizing analysis using IRAC discipline (Question Presented, Brief Answer, Facts, Assumptions, Discussion/Analysis, Conclusion) with explicit sourcing requirements and attorney verification checkpoints.",
@@ -2748,6 +2810,68 @@
         "irac",
         "legal-analysis",
         "citations"
+      ]
+    },
+    {
+      "path": "skills/legal-research/regulatory-history-tracer/SKILL.md",
+      "name": "Regulatory History Tracer",
+      "description": "Use when tracing the amendment history of a specific CFR section — what the text said on a given date, which Federal Register rulemakings amended it, and what version was in effect at a specific point in time — producing a date-stable history table for attorney review, verified through `connectors/ecfr.md` and `connectors/federal-register.md`.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The CFR citation to trace (e.g., 17 C.F.R. § 240.10b-5)",
+        "The relevant date or date range",
+        "The matter or research question this trace supports",
+        "Any specific question about the amendment history"
+      ],
+      "outputs": [
+        "Date-stable regulatory history table with version snapshots and FR amendment references, for attorney review"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/regulatory/rule-change-summary/SKILL.md",
+        "skills/regulatory/enforcement-risk-memo/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "regulatory-history",
+        "cfr",
+        "federal-register",
+        "citations"
+      ]
+    },
+    {
+      "path": "skills/legal-research/research-plan/SKILL.md",
+      "name": "Research Plan",
+      "description": "Use when scoping a legal-research task before any research is conducted, producing a research roadmap of statute leads, case-law areas, search terms, and source-hierarchy targets — with no citations and no analysis — so the attorney can approve the scope before authority is gathered.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The legal question or task to be researched",
+        "Known facts",
+        "Applicable jurisdiction",
+        "Any authority already provided",
+        "Time and scope constraints"
+      ],
+      "outputs": [
+        "Research-plan roadmap (leads only — no citations) for attorney approval before research begins"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-methodology/statutory-interpretation/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "research-planning",
+        "scoping",
+        "issue-framing"
       ]
     },
     {
