@@ -55,6 +55,7 @@ This skill records and organizes information supplied by the user. It does not p
 Optional but recommended:
 - A prior compliance review or registered-agent compliance report, to use as a reference for gap identification.
 - Any notes the user has about dormant or inactive entities under consideration for dissolution.
+- The practice group's `practice-profiles/corporate.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Source-of-Truth Documents tables to benchmark which filings the group treats as routine and where the authoritative records live. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the entity list is not provided, stop and request it. Do not proceed on a partial entity list without noting which entities are absent and flagging all outputs accordingly. If filing obligations for a given entity and jurisdiction are not provided, record the status as "unknown" and flag it for confirmation — do not supply obligations from model background knowledge.
 
@@ -79,6 +80,7 @@ If the entity list is not provided, stop and request it. Do not proceed on a par
 - Flag every point of uncertainty with a bracketed placeholder: `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[citation needed]`, `[verify jurisdiction]`, or `[deadline verification required]`. Never resolve uncertainty silently.
 - Foreign-qualification gap flags are informational only. Whether an entity is legally required to qualify in a given jurisdiction depends on the nature and extent of its activities there — a fact-dependent question for the attorney. The skill flags the gap; it does not answer the question.
 - Preserve confidentiality and privilege. Do not place client-sensitive entity names, ownership details, or transaction context into a reusable copy of the template.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/corporate.md` is loaded, its Standard Positions and Source-of-Truth Documents tables inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -111,7 +113,9 @@ If the entity list is not provided, stop and request it. Do not proceed on a par
    - **Stale good-standing confirmations:** entities for which the user has not supplied a recent good-standing confirmation, or for which the last-confirmed date is not provided. Flag: `[VERIFY: obtain current good-standing certificate before reliance — confirm with filing authority or registered agent]`.
    - **Potential foreign-qualification gaps:** entities with operational presence in a jurisdiction for which no foreign qualification is noted in the supplied information. Flag each as a potential gap and note: `[ATTORNEY TO CONFIRM: whether this entity's activities in this jurisdiction require foreign qualification is a fact-dependent legal determination — do not rely on this flag as a legal conclusion]`. Do not assert that qualification is or is not required.
 
-8. **Assemble the output.** Combine: (a) the entity compliance table from `templates/entity-compliance-table.md`, populated from the user-supplied information with placeholders for every unknown item; (b) the overdue / due-soon / unknown-status summary; (c) the audit view; (d) the assumptions section; and (e) the attorney verification checklist. Label the entire output as a draft for attorney review.
+8. **Apply practice-profile thresholds and positions if loaded.** If `practice-profiles/corporate.md` has been loaded with this skill, scan its Standard Positions and Source-of-Truth Documents tables for any entry that applies to the entity-compliance roster — for example, the group's standing list of "always-track" filing types, standing minimum cadence for good-standing confirmation, standing dissolution criteria for dormant entities, or the authoritative location of the master entity register. For each applicable entry: record the threshold or position in the output, note whether the matter meets, deviates from, or is silent on it, and flag any deviation for attorney review per the skill's normal escalation route. If the profile is not loaded, skip this step silently.
+
+9. **Assemble the output.** Combine: (a) the entity compliance table from `templates/entity-compliance-table.md`, populated from the user-supplied information with placeholders for every unknown item; (b) the overdue / due-soon / unknown-status summary; (c) the audit view; (d) the assumptions section; and (e) the attorney verification checklist. Label the entire output as a draft for attorney review.
 
 ## Output Format
 
@@ -153,3 +157,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] No legal authority, statute, or regulation has been cited in this review without verification by the attorney.
 - [ ] All placeholders and open items are resolved before this review is relied upon for any filing, transaction, or compliance certification.
 - [ ] The finalized review has been approved by the reviewing attorney before distribution or filing.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

@@ -48,6 +48,7 @@ This skill provides workflow discipline and analytical structure. It does not as
 - **Organization context**: business type, size, and any relevant regulatory status (e.g., licensed entity, registered filer, covered entity) that affects applicability of specific requirements.
 - **Scope boundaries** (optional but recommended): which parts of the organization, business lines, or systems are in scope for this analysis. If not provided, flag as `[SCOPE: CONFIRM with attorney]`.
 - **Priority areas** (optional): if the user identifies specific requirements or control areas to focus on, note them and address them first.
+- Optional: the practice group's `practice-profiles/regulatory.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions, Source-of-Truth Documents, and Escalation Thresholds tables to benchmark the output against the group's standing control library and escalation criteria. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the requirement source is not provided, stop and request it. If control descriptions are too vague to enable meaningful mapping, ask targeted follow-up questions.
 
@@ -70,6 +71,7 @@ If the requirement source is not provided, stop and request it. If control descr
 - Never fabricate control descriptions, system capabilities, or organizational facts.
 - Preserve confidentiality; do not incorporate client-identifying sensitive operational details into reusable templates.
 - Flag every area of uncertainty, including requirements whose applicability to the organization is unclear.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/regulatory.md` is loaded, its Standard Positions, Source-of-Truth Documents, and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -77,7 +79,7 @@ If the requirement source is not provided, stop and request it. If control descr
 
 2. **Parse the requirement source.** Extract discrete, individually assessable requirements from the source document. Number each requirement for matrix reference. Quote the operative language where precision matters — do not paraphrase in a way that narrows or expands scope. Flag requirements whose applicability to this organization is unclear as `[APPLICABILITY: CONFIRM]`.
 
-3. **Map requirements to controls.** For each requirement, identify which described control, policy, procedure, or system the organization has offered as addressing it. If no control is described, note "No control described."
+3. **Map requirements to controls.** For each requirement, identify which described control, policy, procedure, or system the organization has offered as addressing it. If no control is described, note "No control described." Where `practice-profiles/regulatory.md` is loaded, use its Standard Positions and Source-of-Truth Documents tables as the canonical reference for the group's standing control library; benchmark each mapped control against it and flag any control that deviates from the standing position, plus any control the standing position would expect but the organization has not described.
 
 4. **Classify gap status.** For each requirement, apply one of the following statuses based on the mapping:
    - **Met**: The described control appears to address the requirement as stated. Subject to attorney verification.
@@ -144,3 +146,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] The scope of the analysis (which entity, business line, or system) has been confirmed and documented.
 - [ ] All open questions have been resolved or escalated before the matrix is presented to regulators, auditors, or the board.
 - [ ] The draft is labeled appropriately and has not been transmitted to any third party without attorney review and approval.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

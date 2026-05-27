@@ -47,6 +47,7 @@ Produce a structured, attorney-ready review of an employment offer letter and an
 Optional inputs — provide if available, skip if not:
 - **Restrictive-covenant exhibits**: any non-compete, non-solicitation, IP assignment, or confidentiality agreement attached to or referenced in the offer.
 - **Employer's standard hiring practices or policy playbook**: if the employer has a standard template or policy the offer is meant to follow, provide it to allow a conformance check.
+- The practice group's `practice-profiles/employment.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the offer against the group's house hiring practices. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the offer letter text is not provided, stop and request it before proceeding. If the candidate's work location is not provided, stop and request it. Do not fabricate, assume, or infer missing required inputs.
 
@@ -71,6 +72,7 @@ If the offer letter text is not provided, stop and request it before proceeding.
 - Separate what the document says from what you assume and from what the attorney must verify. Label each category explicitly.
 - Preserve confidentiality and privilege. Do not include client-identifying information in reusable template copies of this output.
 - Flag every point of uncertainty with a placeholder — `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, `[deadline verification required]` — rather than resolving uncertainty silently.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/employment.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -107,7 +109,7 @@ If the offer letter text is not provided, stop and request it before proceeding.
    - Integration or entire-agreement clause — note whether present and whether it supersedes prior representations;
    - Offer expiration or acceptance deadline: note whether stated and flag `[deadline verification required]` if a deadline is present.
 
-7. **Conformance check (if playbook provided).** If the employer's standard hiring-practices playbook was provided, compare the offer against it. Note any deviations — terms that differ from the standard template, provisions that are present in the template but absent from the offer, or non-standard additions. Flag each deviation for attorney assessment.
+7. **Conformance check (if playbook provided).** If the employer's standard hiring-practices playbook was provided — either inline by the user or via the loaded `practice-profiles/employment.md` Standard Positions section — compare the offer against it. Note any deviations — terms that differ from the standard template, provisions that are present in the template but absent from the offer, or non-standard additions. Flag each deviation for attorney assessment. Where the profile is loaded but a specific term is silent in its Standard Positions, treat that term as not addressed by the playbook and flag for attorney review.
 
 8. **Identify open items and action items.** Compile a consolidated list of every issue, discrepancy, missing provision, and flagged question identified in Steps 2 through 7. Assign a priority level — High, Medium, or Low — to each item based on its legal significance and likelihood of creating liability or dispute.
 
@@ -168,3 +170,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] No legal authority, citation, or statutory rule has been asserted in this memo without independent verification by counsel.
 - [ ] All assumptions and open items identified in this memo are resolved before the offer is sent or signed.
 - [ ] Client-identifying information has been removed from any version of this memo retained as a reusable template.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

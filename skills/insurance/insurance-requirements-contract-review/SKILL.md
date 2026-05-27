@@ -45,6 +45,7 @@ Review the insurance and indemnity provisions of a contract — lease, master se
 - The contract type (lease, MSA, vendor agreement, construction agreement, service agreement, purchase agreement, or other) — or `not provided`.
 - The user's role (the party requiring coverage, the party providing it, landlord, tenant, owner, contractor, customer, vendor, or other) — or `not provided`.
 - Optional but recommended: the user's standard insurance requirements or playbook.
+- Optional: the practice group's `practice-profiles/insurance.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the output and to gate escalation. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 - Any dates or notice periods in the clauses, echoed and marked `[deadline verification required]`.
 - Jurisdiction and governing law, or `[verify jurisdiction]` — anti-indemnity and insurance-procurement rules are jurisdiction-specific.
 
@@ -71,6 +72,7 @@ Also out of scope (this skill does not): conclude that the insurance or indemnit
 - Record gaps as `unknown`, `not found`, `not provided`, or `ambiguous`. Use `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Cite every extracted requirement to its clause.
 - Require attorney review before reliance, negotiation, signing, or issuing insurance specifications.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/insurance.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -81,7 +83,7 @@ Also out of scope (this skill does not): conclude that the insurance or indemnit
 5. Extract the **endorsement and status requirements** — additional insured, waiver of subrogation, primary and noncontributory, and any required form references.
 6. Extract the **administrative requirements** — certificates, notice of cancellation or nonrenewal, renewal evidence, and subcontractor or lower-tier requirements.
 7. Extract the **indemnity provisions** and note how they interact with the insurance requirements and the overall risk allocation — without deciding scope or effect.
-8. Build the role-aware risk matrix — requirement or gap, source, why it matters to the user's side, risk level, attorney follow-up.
+8. Build the role-aware risk matrix — requirement or gap, source, why it matters to the user's side, risk level, attorney follow-up. Where the user's standard insurance requirements or playbook was supplied — either inline or via the loaded `practice-profiles/insurance.md` Standard Positions section — benchmark each extracted requirement against it: flag below-floor limits, missing required endorsements, missing required carrier ratings, and any deviation from the group's standing additional-insured / waiver-of-subrogation / primary-noncontributory posture. Where the profile is loaded but is silent on a specific requirement, treat it as not addressed by the playbook and flag for attorney review.
 9. After a full review, list missing provisions — provisions a contract of this type usually contains but this one omits.
 10. List negotiation points (direction only); echo dates for verification; draft the attorney verification checklist.
 
@@ -112,3 +114,5 @@ When the output will brief a non-lawyer business stakeholder, add a clearly labe
 - [ ] Notice periods and dates are echoed and flagged for verification, not computed.
 - [ ] No invented insurance law, anti-indemnity rules, or citations appear.
 - [ ] A qualified attorney has reviewed before negotiation or signing.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

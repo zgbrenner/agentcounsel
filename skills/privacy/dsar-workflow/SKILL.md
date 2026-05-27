@@ -52,6 +52,7 @@ This skill provides workflow discipline only. It does not determine which privac
 - Optional: any prior correspondence with the requester about this or related requests.
 - Optional: the applicable privacy framework(s) the organization operates under, as confirmed by counsel (e.g., GDPR, CCPA/CPRA, state law). Do not independently assert which law applies.
 - **Adverse context information** — any known information about the requester's relationship to the organization beyond ordinary customer or employee status: whether the requester is an adverse party in actual or anticipated litigation, a known regulator or regulatory contact, a journalist, or a representative of a third party with an adversarial interest. Also note whether the organization is aware of any active litigation hold, regulatory inquiry, or anticipated dispute that could intersect with the personal data in scope. If no such context is known, state that explicitly; do not assume it is absent.
+- Optional: the practice group's `practice-profiles/privacy.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions, Escalation Thresholds, and Preferred Output Style tables to benchmark the workflow against the group's standing DSAR process. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the request text and date received are not provided, stop and request them. Do not fabricate request details.
 
@@ -77,6 +78,7 @@ If the request text and date received are not provided, stop and request them. D
 - Use `[CONFIRM: ...]` for every point where the legal consequence, applicable rule, deadline, or exemption is uncertain.
 - Flag any request that may involve third-party personal data, law enforcement interests, legal privilege, or trade secrets as requiring immediate attorney consultation before responding.
 - **Adverse-context requests must not be processed as routine.** If the requester is an adverse party in actual or anticipated litigation, a regulator, or a journalist, or if the request intersects an active or anticipated litigation matter or litigation hold, flag the request for immediate attorney involvement and do not advance the standard workflow. The timing, scope, and handling of an adverse-context request — including its interaction with discovery obligations, privilege considerations, and litigation-hold duties — present legal questions that differ materially from a routine DSAR and must be directed to counsel before any response steps are taken. `[verify jurisdiction]`
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/privacy.md` is loaded, its Standard Positions, Escalation Thresholds, and Preferred Output Style inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -122,7 +124,7 @@ If the request text and date received are not provided, stop and request them. D
    - Law enforcement or national security considerations
    - Manifestly unfounded or excessive requests `[CONFIRM: criteria and consequences under applicable law]`
 
-9. **Prepare the response plan.** Draft a structured response plan covering: (a) the action to be taken (fulfill, partially fulfill, deny — each denial basis must be attorney-reviewed before use); (b) the data or information to be provided or withheld; (c) the format and delivery method for any data provided; (d) any fee or extension considerations `[CONFIRM: whether fee or extension is permissible under applicable law]`; (e) the draft response communication (stub only — attorney drafts or reviews before sending).
+9. **Prepare the response plan.** Draft a structured response plan covering: (a) the action to be taken (fulfill, partially fulfill, deny — each denial basis must be attorney-reviewed before use); (b) the data or information to be provided or withheld; (c) the format and delivery method for any data provided; (d) any fee or extension considerations `[CONFIRM: whether fee or extension is permissible under applicable law]`; (e) the draft response communication (stub only — attorney drafts or reviews before sending). Where `practice-profiles/privacy.md` is loaded, use its Standard Positions and Preferred Output Style tables as the canonical source for the group's standing response templates, routing rules, and format defaults; flag any deviation from those standing positions for attorney review.
 
 10. **Document the handling record.** Compile the full handling record including: intake log, identity verification record, request classification, system scope, exemptions flagged, response plan, and any communications sent. The handling record should be retained in accordance with the organization's record-retention policy `[CONFIRM: retention period under applicable law]`.
 
@@ -172,3 +174,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] The handling record is complete and will be retained in accordance with applicable law and organizational policy.
 - [ ] All `[CONFIRM: ...]` placeholders in the handling record have been resolved before the response is sent.
 - [ ] Escalation items, if any, have been escalated and addressed before the response deadline.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

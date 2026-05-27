@@ -51,6 +51,8 @@ If you prefer to work skill-by-skill rather than installing a whole pack:
 3. Paste the contents of [`core/`](core/) (or at minimum [`core/source-and-citation-discipline.md`](core/source-and-citation-discipline.md)) plus the `SKILL.md` into your AI assistant, then provide your inputs.
 4. Each platform's deeper setup guide lives in [`adapters/`](adapters/) — Claude Code plugin, Claude Cowork, Gemini CLI extension, Codex, generic Markdown.
 
+If your practice group has populated a profile at `practice-profiles/<area>.md`, include it alongside the skill — about 20 skills consume it to benchmark against the group's standing positions. See [`CONFIGURING.md`](CONFIGURING.md) for details.
+
 ## A worked example: reviewing an NDA
 
 1. **Route.** `WORKFLOW_ROUTER.md` → "Review this NDA" → `skills/contracts/nda-review/SKILL.md`. (In a Contracts pack, just say "review this NDA" in chat.)

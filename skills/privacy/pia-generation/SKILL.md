@@ -57,6 +57,7 @@ Optional but recommended:
 - The organization's current privacy policy or privacy notice (used to perform the policy-consistency check in Step 5).
 - Any prior triage memo, preliminary PIA, or risk log for this activity.
 - The organization's PIA house style or template preferences (if the output should conform to an internal format).
+- The practice group's `practice-profiles/privacy.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Preferred Output Style tables to benchmark the PIA against the group's standing template, risk-rating rubric, and approval routing. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the description of the processing activity or the data categories are not provided, stop and request them. Never fabricate processing details, invent data fields, or assume purpose from context.
 
@@ -81,6 +82,7 @@ If the description of the processing activity or the data categories are not pro
 - The recommendation section — approve, approve with conditions, changes required, or not approved — is a draft recommendation for privacy-counsel sign-off. It is not a decision. Do not frame it as a decision.
 - Preserve confidentiality and privilege. Keep client-sensitive facts and deal-specific details out of any reusable copy of the template.
 - Flag all uncertainty with `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, `[deadline verification required]`, or `[citation needed]` as appropriate. Never resolve uncertainty silently.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/privacy.md` is loaded, its Standard Positions and Preferred Output Style inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -100,7 +102,7 @@ If the description of the processing activity or the data categories are not pro
 
 8. **Compile the open items list.** Collect all `[CONFIRM: ...]`, `[VERIFY: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` flags into a consolidated open-items section at the end of the document.
 
-9. **Assemble and label the output.** Use `templates/privacy-impact-assessment.md`. Label the output clearly as a draft for privacy-counsel review. Do not represent it as a final, approved, or regulator-ready document.
+9. **Assemble and label the output.** Use `templates/privacy-impact-assessment.md` — or, where the organization's PIA house style or template preferences were provided (either inline by the user or via the loaded `practice-profiles/privacy.md` Preferred Output Style section), conform the output to that format and flag any departures from `templates/privacy-impact-assessment.md` for attorney review. Where the profile is loaded but is silent on a specific format element, treat that element as not addressed by the playbook. Label the output clearly as a draft for privacy-counsel review. Do not represent it as a final, approved, or regulator-ready document.
 
 ## Output Format
 
@@ -147,3 +149,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] The draft recommendation in Section 7 has been reviewed and a final determination made by privacy counsel.
 - [ ] All open items flagged in the consolidated list have been resolved or documented as accepted risks before the PIA is treated as final.
 - [ ] No agent-generated content has been relied upon as legal authority, citation, or regulatory quotation without independent verification.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

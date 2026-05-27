@@ -47,6 +47,7 @@ Produce a structured, attorney-ready review of a non-disclosure agreement (NDA) 
 - The business context: what is being shared and why.
 - The transaction context: whether this is a stand-alone commercial NDA, or part of an M&A, employment, or investment deal.
 - Optional but recommended: the client's standard NDA positions or playbook — acceptable terms, "never accept" terms, mutuality default, required carve-outs, term and survival caps, and governing-law preferences. The review benchmarks against these where they are provided.
+- Optional: the practice group's `practice-profiles/contracts.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the output and to gate escalation. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the NDA text is not provided, stop and request it. Do not reconstruct or assume contract language.
 
@@ -72,6 +73,7 @@ If the NDA text is not provided, stop and request it. Do not reconstruct or assu
 - Preserve confidentiality and privilege: the review is attorney work product. Do not place client-sensitive facts into reusable templates.
 - Flag every point of uncertainty rather than resolving it silently.
 - **Severity floor.** Once an issue has been rated High priority in the prioritized redline points or risk table, that rating must not be silently downgraded. Any reduction in priority is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/contracts.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -84,7 +86,7 @@ This skill draws on shared contract-review reference material in `skills/contrac
 5. **Scope check.** Scan for obligations that go beyond confidentiality — for example a standstill, exclusivity, non-solicitation, non-competition, IP assignment, a licensing grant, a right of first refusal, a most-favored-nation clause, broad arbitration, or a governing-law clause reaching beyond confidentiality disputes. Any such term means the document is more than an NDA: flag it prominently and raise the triage rating accordingly.
 6. **Summarize each key term** in plain language, citing the section number as written.
 7. **Assess risk allocation from the client's role.** A receiving party and a disclosing party care about opposite asymmetries; analyze from the client's actual position.
-8. **Benchmark against the client's standard positions.** If a playbook was provided, note where the NDA matches it, where it deviates, and where any term hits a "never accept" position. Record any market comparison using the discipline in `skills/contracts/references/market-benchmark-framework.md`: characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm as an attorney-verification item. AgentCounsel does not supply market data.
+8. **Benchmark against the client's standard positions.** If a playbook was provided — either inline by the user or via the loaded `practice-profiles/contracts.md` Standard Positions section — note where the NDA matches it, where it deviates, and where any term hits a "never accept" position. Where the profile is loaded but a specific term is silent in its Standard Positions, treat that term as not addressed by the playbook and flag for attorney review. Record any market comparison using the discipline in `skills/contracts/references/market-benchmark-framework.md`: characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm as an attorney-verification item. AgentCounsel does not supply market data.
 9. **Flag missing or one-sided terms** — for example, no standard exclusions, a perpetual term on all information, broad injunctive-relief language, or unilateral obligations in a document labeled "mutual."
 10. **Build the risk table** using `templates/nda-risk-table.md`.
 11. **Rate negotiability.** For each material issue, assign one of the six negotiability ratings from `skills/contracts/references/negotiability-ratings.md` — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor.
@@ -147,3 +149,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] The internal consistency check is complete; defined terms and cross-references are sound.
 - [ ] A GREEN rating has attorney sign-off before the NDA is signed.
 - [ ] All assumptions and open items are resolved before the review is relied upon.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

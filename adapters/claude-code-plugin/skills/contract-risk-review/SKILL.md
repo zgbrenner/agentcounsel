@@ -49,6 +49,7 @@ This skill produces draft legal work product for attorney review only. It is not
 - **The client's role** — which party is the client (e.g., customer/buyer, vendor/service provider, licensor, licensee)?
 - **Business context** — what is the commercial relationship, what is being provided or received, and what is the approximate transaction value or risk exposure?
 - **Counterparty form or negotiated draft** — note whether this is the counterparty's standard form (higher scrutiny) or a negotiated draft.
+- Optional: the practice group's `practice-profiles/contracts.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Escalation Thresholds tables to benchmark the output and to gate escalation. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the contract text or the client's role is not provided, stop and request it. Do not begin risk assessment by guessing at facts.
 
@@ -74,6 +75,7 @@ If the contract text or the client's role is not provided, stop and request it. 
 - Use `[CONFIRM: ...]` placeholders wherever information is missing or uncertain.
 - Flag every point of uncertainty rather than resolving it silently.
 - **Severity floor.** Once an issue has been rated High severity in the risk table or issues list, that rating must not be silently downgraded. Any reduction in severity is an explicit attorney decision and must be recorded as such (e.g., "Downgraded from High to Medium by [attorney], [date], reason: [brief rationale]"). This applies regardless of the counterparty's explanation or commercial commonness of the provision.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/contracts.md` is loaded, its Standard Positions and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -114,7 +116,7 @@ This skill draws on shared contract-review reference material in `skills/contrac
 
 7. **Build the risk matrix.** Complete `templates/contract-risk-matrix.md` for each clause category reviewed.
 
-8. **Rate negotiability and benchmark.** For each material issue, assign one of the six negotiability ratings from `skills/contracts/references/negotiability-ratings.md` — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor. Record any market comparison using `skills/contracts/references/market-benchmark-framework.md`: characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook, comparable, counterparty prior form, or attorney-supplied norm as an attorney-verification item. AgentCounsel does not supply market data.
+8. **Rate negotiability and benchmark.** For each material issue, assign one of the six negotiability ratings from `skills/contracts/references/negotiability-ratings.md` — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — with a one-line rationale drawn from leverage, who drafted the form, the deal value, and any regulatory floor. Where the practice group's `practice-profiles/contracts.md` is loaded, treat its Standard Positions as the playbook for this step; deviations from the profile's positions become the basis for ratings, and profile-silent terms are flagged for attorney review rather than benchmarked. Record any market comparison using `skills/contracts/references/market-benchmark-framework.md`: characterize each relevant term with the controlled vocabulary (Common, Aggressive, Unusual, Depends on Leverage, Needs Attorney Confirmation), state the basis and supporting source, and flag every characterization not backed by a playbook (inline or profile-supplied), comparable, counterparty prior form, or attorney-supplied norm as an attorney-verification item. AgentCounsel does not supply market data.
 
 9. **Draft prioritized issue list.** Rank all identified issues as High / Medium / Low priority for the client based on likelihood and impact. For each High and Medium item, following `skills/contracts/references/redline-output-guidance.md`, state a **Preferred Position**, a **Fallback Position**, and a **Suggested Redline Direction** — the direction of the change, not final clause language. Use `skills/contracts/references/fallback-language-bank.md` to help articulate preferred and fallback positions. Route substantive drafting to an attorney.
 
@@ -175,3 +177,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] All missing provisions have been assessed for materiality and whether their absence is acceptable.
 - [ ] All `[CONFIRM: ...]` placeholders and open items have been resolved before the review is relied upon.
 - [ ] The review has been assessed by counsel before it is used in negotiation, execution, or reliance.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

@@ -49,6 +49,7 @@ This skill provides workflow discipline and analytical structure. It produces dr
 - **Audit context**: any known audit dates, the audit period or reporting window, and the assessor if known.
 - **Organization context**: business type and any regulatory status that affects which requirements apply.
 - **Scope boundaries** (optional but recommended): which entities, business lines, or systems are in scope. If not provided, flag as `[SCOPE: CONFIRM with attorney]`.
+- Optional: the practice group's `practice-profiles/regulatory.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions, Source-of-Truth Documents, and Escalation Thresholds tables to benchmark the tracker against the group's standing program design, cadence, and ownership conventions. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the framework source is not provided, stop and request it.
 
@@ -71,6 +72,7 @@ If the framework source is not provided, stop and request it.
 - Use `[CONFIRM: ...]` placeholders for any control fact, applicability question, or requirement interpretation that cannot be resolved from the provided materials.
 - Preserve confidentiality; do not place sensitive operational details into reusable templates.
 - Flag every requirement whose applicability is unclear and every control with stale or missing evidence.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/regulatory.md` is loaded, its Standard Positions, Source-of-Truth Documents, and Escalation Thresholds inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -78,7 +80,7 @@ If the framework source is not provided, stop and request it.
 
 2. **Parse the framework.** Extract discrete, individually trackable requirements from the source. Number each for reference. Quote the operative language where precision matters. Flag any requirement whose applicability to the organization is unclear as `[APPLICABILITY: CONFIRM]`.
 
-3. **Build the control inventory map.** For each requirement, identify the control, the control owner, the evidence location, and the date evidence was last collected, from the inventory provided. If no control is described, note "No control described."
+3. **Build the control inventory map.** For each requirement, identify the control, the control owner, the evidence location, and the date evidence was last collected, from the inventory provided. If no control is described, note "No control described." Where `practice-profiles/regulatory.md` is loaded, use its Standard Positions and Source-of-Truth Documents tables as the canonical reference for the group's standing program design (the controls, owners, cadence, and authoritative evidence locations the group treats as baseline); benchmark each mapped control against it and flag any deviation from the standing program design for attorney review.
 
 4. **Classify the tracking status.** For each requirement, apply one status: **Control in place** (a described control addresses the requirement, subject to verification); **Partial** (the described control addresses some elements only); **No control** (no described control addresses the requirement); **Unknown** (insufficient information to classify).
 
@@ -147,3 +149,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a co
 - [ ] The priority view reflects the organization's actual audit timeline and risk tolerance.
 - [ ] All open questions have been resolved before the tracker is presented to an assessor, an auditor, or the board.
 - [ ] The draft is labeled appropriately and is not represented as a compliance certification.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.

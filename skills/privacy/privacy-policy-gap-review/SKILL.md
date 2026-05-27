@@ -50,6 +50,7 @@ This skill provides structural and drafting analysis only. It does not certify c
 - Optional: the organization's industry or sector (e.g., healthcare, financial services, children's services, e-commerce) — relevant for identifying sector-specific disclosure topics to flag, though applicable law is always `[CONFIRM]`.
 - Optional: the audience or jurisdictions the policy is intended to serve (e.g., EU residents, California residents, global) — used to identify disclosure topics commonly associated with those audiences, not to assert applicable law.
 - Optional: a prior version of the policy, if this is a revision review.
+- Optional: the practice group's `practice-profiles/privacy.md` if it has been populated and is loaded alongside this skill. If present, the skill uses its Standard Positions and Source-of-Truth Documents tables to benchmark the policy against the group's baseline policy template. If absent, the skill proceeds without practice-profile benchmarking and asks the user to supply standing positions inline if needed.
 
 If the policy text is missing, stop and request it. If the description of actual practices is missing, proceed with structural review only and flag the practice comparison as incomplete.
 
@@ -74,6 +75,7 @@ If the policy text is missing, stop and request it. If the description of actual
 - Common disclosure topics flagged in this review reflect widely observed practice patterns, not verified legal requirements. Whether any topic is legally required for this organization is `[CONFIRM]`.
 - Use `[CONFIRM: ...]` for every point where the legal consequence, applicable requirement, or factual context is uncertain.
 - Flag but do not resolve: internal inconsistencies, vague representations, and potential mismatches between policy and practice. Each is an attorney review item.
+- **Profile reference is optional, not authoritative.** Where `practice-profiles/privacy.md` is loaded, its Standard Positions and Source-of-Truth Documents inform the draft but never substitute for attorney judgment. The profile is a configuration record approved by the practice group; it is not legal advice and does not override the skill's normal attorney-verification gates. If the profile's standing positions conflict with the matter facts or with what the supervising attorney concludes, the attorney prevails.
 
 ## Workflow
 
@@ -83,7 +85,7 @@ If the policy text is missing, stop and request it. If the description of actual
 
 3. **Map the policy structure.** List the sections and topics the policy currently addresses. Identify the overall organization and navigation — whether a reader can quickly find key information such as what data is collected, how it is shared, and how to exercise rights.
 
-4. **Check for standard disclosure topics.** Review the policy against a checklist of commonly addressed disclosure topics. For each, note: present and substantive, present but vague or generic, or absent. Standard topics to check include:
+4. **Check for standard disclosure topics.** Review the policy against a checklist of commonly addressed disclosure topics. For each, note: present and substantive, present but vague or generic, or absent. Where `practice-profiles/privacy.md` is loaded, also benchmark against its Standard Positions and Source-of-Truth Documents tables — use the group's baseline policy template as the canonical list of topics the group expects to see covered, and flag both group-list omissions and group-template deviations as gaps. Where the profile is loaded but is silent on a specific topic, treat that topic as not addressed by the playbook and flag for attorney review. Standard topics to check include:
    - Identity and contact information for the organization and any privacy contact or DPO `[CONFIRM if DPO designation is required]`
    - Categories of personal data collected
    - Sources of personal data (direct collection, third parties, inference)
@@ -172,3 +174,5 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] The policy update and notification procedure complies with applicable requirements.
 - [ ] All `[CONFIRM: ...]` placeholders in the gap table and recommendations have been resolved before remediation work begins.
 - [ ] Privilege and confidentiality designations are appropriate for the matter, particularly where undisclosed practices are discussed.
+- [ ] If a practice profile was loaded: every Standard Position and Escalation Threshold that applies to the matter facts has been surfaced; deviations are flagged; profile-silent items are flagged as not-yet-addressed by the playbook.
+- [ ] If no practice profile was loaded: any benchmarking or "standard position" framing in the output is grounded in user-supplied inline data, not assumed.
