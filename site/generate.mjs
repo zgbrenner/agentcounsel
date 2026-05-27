@@ -355,6 +355,7 @@ function page({ title, depth, desc, body }) {
 <link rel="stylesheet" href="${r}style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <a class="brand" href="${r}index.html">AgentCounsel</a>
   <nav class="site-nav">
@@ -365,7 +366,7 @@ function page({ title, depth, desc, body }) {
     <a href="${r}llms.txt">llms.txt</a>
   </nav>
 </header>
-<main>
+<main id="main-content">
 ${body}
 </main>
 <footer class="site-footer">
