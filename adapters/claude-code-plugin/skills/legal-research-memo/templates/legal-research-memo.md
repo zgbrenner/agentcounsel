@@ -144,7 +144,8 @@
 **Authority source key:**
 - **User-provided** — document or citation supplied directly by the user or client.
 - **Researched** — retrieved from a named research source during this session; identify the source.
-- **[CONFIRM]** — authority has not been verified; attorney must locate, review, and confirm before relying on this memo.
+- **Connector-verified** — citation resolved through a documented connector (e.g., CourtListener — see `connectors/courtlistener.md`); record the verified opinion URL in the Source column. The citation form is confirmed; whether the cited authority supports the asserted proposition remains an attorney verification item.
+- **[VERIFY-CITE]** / **[CONFIRM]** — authority has not been verified; attorney must locate, review, and confirm before relying on this memo.
 
 ---
 

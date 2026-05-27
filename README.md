@@ -97,6 +97,7 @@ matter-workspaces/  Single-file scaffolds for organizing one specific matter.
 matter-packs/       Workflow bundles — recommended skill sequences per matter type.
 overlays/           Industry and sector overlays that tune skills for a context.
 adapters/           Thin integration files for specific environments.
+connectors/         External-source verification integrations (e.g., CourtListener).
 metadata/           Generated machine-readable skill index (index.json).
 docs/               The metadata standard, the safety model, the FAQ, and the practice-area registry.
 scripts/            Standard-library Python helpers (validation, index, packs).
