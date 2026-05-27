@@ -370,10 +370,30 @@ function page({ title, depth, desc, body }) {
 ${body}
 </main>
 <footer class="site-footer">
-<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
-<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
-and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
-repository's <code>skills/</code> directory.</p>
+  <div class="site-footer-inner">
+    <div>
+      <p class="site-footer-title">AgentCounsel</p>
+      <p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+      <strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+      and not a substitute for a qualified lawyer.</p>
+    </div>
+    <div>
+      <p class="site-footer-heading">Catalog</p>
+      <ul class="site-footer-links">
+        <li><a href="${r}index.html">Home</a></li>
+        <li><a href="${r}skill-index.html">Skill index</a></li>
+        <li><a href="${r}index.html#practice-areas">Practice areas</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer-heading">Reference</p>
+      <ul class="site-footer-links">
+        <li><a href="${r}packs/index.html">Packs</a></li>
+        <li><a href="${r}platforms/index.html">Platform setup</a></li>
+        <li><a href="${r}llms.txt">llms.txt</a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
 <script src="${r}app.js"></script>
 </body>
