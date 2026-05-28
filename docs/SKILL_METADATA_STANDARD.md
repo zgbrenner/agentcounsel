@@ -175,15 +175,47 @@ scalars). Keep `description` on a single line.
 `scripts/build_skill_index.py` parses the frontmatter of every canonical
 skill and writes `metadata/index.json` — one machine-readable file with the
 full metadata of every skill, plus counts by practice area, task type, and
-risk level. Regenerate it whenever a skill's frontmatter changes:
+risk level. It also writes `metadata/router.json`, a generated routing index
+derived from the same canonical skills. Regenerate both whenever a skill's
+frontmatter changes:
 
 ```
-python scripts/build_skill_index.py           # write metadata/index.json
+python scripts/build_skill_index.py           # write metadata/index.json and metadata/router.json
 python scripts/build_skill_index.py --check    # report drift only
 ```
 
 Consumers — agents, site generators, package builders — should read
-`metadata/index.json` rather than re-parsing every `SKILL.md`.
+`metadata/index.json` and `metadata/router.json` rather than re-parsing every
+`SKILL.md`.
+
+## Normalized generated fields
+
+The frontmatter remains intentionally small. The generated index adds derived
+fields needed for routing, pack generation, site display, eval tracking, and
+plugin compatibility:
+
+| Field | Source |
+|---|---|
+| `id` | Stable `<practice_area>/<skill-folder>` identifier. |
+| `title` | Alias of frontmatter `name`. |
+| `category` | Alias of frontmatter `task_type`. |
+| `path` | Repository path to the canonical `SKILL.md`. |
+| `summary` | Alias of frontmatter `description`. |
+| `use_when` | Bullets from the skill's `Use When` section, falling back to `description`. |
+| `required_inputs` | Alias of frontmatter `inputs`. |
+| `expected_outputs` | Alias of frontmatter `outputs`. |
+| `risk_level` | Frontmatter `risk_level`. |
+| `requires_jurisdiction` | Derived from jurisdiction metadata and jurisdiction/governing-law gates in the skill body. |
+| `requires_deadline_check` | Derived from deadline/date language in the skill body. |
+| `requires_attorney_review` | Frontmatter `requires_attorney_review`. |
+| `related_skills` | Frontmatter `related_skills`. |
+| `recommended_quality_checks` | Derived list of AgentCounsel quality checks such as attorney review, source validation, red-team verification, jurisdiction/deadline gates, confidentiality/privilege, and legal prose quality. |
+| `compatible_platforms` | File-based platform surfaces currently supported by generated packs and adapters. |
+| `pack_tags` | Search and pack-building tags derived from practice area, task type, risk level, and frontmatter `tags`. |
+| `eval_status` | Eval coverage status based on `evals/skills/<slug>.eval.yaml` and candidate outputs under `evals/outputs/<slug>/`. |
+
+Do not hand-edit generated metadata. If a derived field looks wrong, fix the
+skill body/frontmatter or the generator and re-run the script.
 
 ## Validation
 
@@ -193,8 +225,10 @@ not a list, `description` does not begin with `Use when`, `practice_area`
 does not match the directory, `task_type` or `risk_level` is outside its
 controlled set, `requires_attorney_review` is not a boolean, `inputs`,
 `outputs`, or `tags` is empty, or a `related_skills` entry does not resolve
-to a real skill. Validation also fails if `metadata/index.json` is missing
-or out of date.
+to a real skill. Validation also fails if `metadata/index.json` or
+`metadata/router.json` is missing or out of date, if normalized skill IDs are
+duplicated, if a normalized path does not exist, if a compatible platform or
+quality-check ID is invalid, or if an eval coverage status is invalid.
 
 ## Adding or changing a skill
 
@@ -204,5 +238,6 @@ or out of date.
 4. Pick `task_type` and `risk_level` from the controlled values.
 5. Keep `requires_attorney_review: true` for any legal work product.
 6. List concrete `inputs`, `outputs`, `related_skills` paths, and `tags`.
-7. Run `python scripts/build_skill_index.py` to regenerate the index.
-8. Run `python scripts/validate_repo.py` and confirm it passes.
+7. Run `python scripts/build_skill_index.py` to regenerate the index and router.
+8. If the skill should affect platform packs, run `python scripts/build_platform_packs.py`.
+9. Run `python scripts/validate_repo.py` and confirm it passes.

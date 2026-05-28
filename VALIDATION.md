@@ -6,6 +6,8 @@ AgentCounsel ships a lightweight validation script, `scripts/validate_repo.py`, 
 
 ```
 python scripts/validate_repo.py
+python scripts/build_skill_index.py --check
+python scripts/build_platform_packs.py --check
 ```
 
 Run it from anywhere; the script locates the repository root relative to its own location. It prints a report and exits with status `0` if all checks pass, or `1` if any error is found. Warnings are advisory and do not affect the exit code.
@@ -27,7 +29,8 @@ Run it from anywhere; the script locates the repository root relative to its own
 
 - Every canonical skill under `skills/` declares valid standardized frontmatter — all eleven fields (`name`, `description`, `practice_area`, `task_type`, `jurisdictions`, `risk_level`, `requires_attorney_review`, `inputs`, `outputs`, `related_skills`, `tags`), each with the correct type.
 - `description` is trigger-rich and begins with `Use when`; `practice_area` matches the directory area; `task_type` and `risk_level` use the allowed values; `related_skills` entries resolve to real skills. The full standard is in `docs/SKILL_METADATA_STANDARD.md`.
-- `metadata/index.json` exists and matches the canonical skills. If it is stale, run `python scripts/build_skill_index.py` to regenerate it.
+- `metadata/index.json` and `metadata/router.json` exist and match the canonical skills. If either is stale, run `python scripts/build_skill_index.py` to regenerate them.
+- Normalized generated metadata has unique skill IDs, existing skill paths, valid risk levels, valid compatible-platform IDs, valid recommended quality-check IDs, and valid eval coverage statuses.
 
 **Safety and content**
 
@@ -48,6 +51,13 @@ Run it from anywhere; the script locates the repository root relative to its own
 - Every expected plugin skill is present — the eight curated skills plus the hand-maintained `legal-core`.
 - Each curated plugin skill under `adapters/claude-code-plugin/skills/` matches its canonical source in `/skills`, including templates. If they differ, the validator reports drift; run `python scripts/sync_plugin_skills.py` to regenerate the bundle. See `PLUGIN_SYNC.md`.
 
+**Platform pack registry**
+
+- `metadata/packs.json` exists and matches `scripts/build_platform_packs.py`.
+- Every pack manifest has a pack ID, platform, practice area or use case, included skills, included core rules, quality checks, setup instructions, safety disclaimer, attorney-review requirements, version, and date.
+- Every referenced skill, core rule, template, matter pack, matter-workspace template, and quality-check target exists.
+- Generated pack manifests preserve the draft-work-product and attorney-review posture.
+
 **Warnings (advisory)**
 
 - A canonical skill that is not listed in `SKILLS_INDEX.md`.
@@ -62,7 +72,8 @@ The script validates structure and consistency — not legal accuracy. It cannot
 
 - Before opening or updating a pull request.
 - After adding, renaming, or moving a skill, template, or adapter file.
-- After editing a skill's frontmatter — then run `python scripts/build_skill_index.py` to regenerate `metadata/index.json` (see `docs/SKILL_METADATA_STANDARD.md`).
+- After editing a skill's frontmatter — then run `python scripts/build_skill_index.py` to regenerate `metadata/index.json` and `metadata/router.json` (see `docs/SKILL_METADATA_STANDARD.md`).
+- After changing platform pack inputs — then run `python scripts/build_platform_packs.py` to regenerate `metadata/packs.json` and `dist/` locally.
 - After editing `SKILLS_INDEX.md` or `WORKFLOW_ROUTER.md`.
 - After running `python scripts/sync_plugin_skills.py` to regenerate the plugin bundle (see `PLUGIN_SYNC.md`).
 

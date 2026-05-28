@@ -640,6 +640,52 @@ def check_profile_references_consistent(skill_dirs: list[Path]) -> None:
                 )
 
 
+# --- Check: normalized metadata and router --------------------------------
+
+def check_normalized_metadata() -> None:
+    """Validate derived metadata fields and the generated router artifact."""
+    try:
+        import build_skill_index as index
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run normalized metadata checks (import failed: {exc})")
+        return
+
+    router_path = REPO_ROOT / "metadata" / "router.json"
+    if not router_path.is_file():
+        err("metadata/router.json is missing â€” run: "
+            "python scripts/build_skill_index.py")
+    elif router_path.read_text(encoding="utf-8") != index.render_router():
+        err("metadata/router.json is out of date â€” run: "
+            "python scripts/build_skill_index.py")
+
+    for msg in index.validate_normalized_index():
+        err(f"normalized metadata: {msg}")
+
+
+# --- Check: platform pack registry ----------------------------------------
+
+def check_pack_registry() -> None:
+    """metadata/packs.json must match the platform pack generator and
+    reference only existing source files."""
+    try:
+        import build_platform_packs as packs
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run pack registry checks (import failed: {exc})")
+        return
+
+    path = REPO_ROOT / "metadata" / "packs.json"
+    if not path.is_file():
+        err("metadata/packs.json is missing â€” run: "
+            "python scripts/build_platform_packs.py")
+        return
+    areas = packs.load_areas()
+    if path.read_text(encoding="utf-8") != packs.render_pack_registry(areas):
+        err("metadata/packs.json is out of date â€” run: "
+            "python scripts/build_platform_packs.py")
+    for msg in packs.validate_pack_registry(packs.build_pack_registry(areas)):
+        err(f"pack registry: {msg}")
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -669,6 +715,8 @@ def main() -> int:
     check_plugin_bundle()
     check_skill_frontmatter(canonical)
     check_skill_index()
+    check_normalized_metadata()
+    check_pack_registry()
     check_index_coverage(canonical)
     check_related_skills_wired(canonical)
     check_readme_counts(canonical)

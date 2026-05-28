@@ -208,6 +208,12 @@ python scripts/validate_repo.py                # full repository validation
 
 Other standard-library helpers in `scripts/` build the machine-readable skill index (`build_skill_index.py`), the per-platform install packs (`build_platform_packs.py`), and the browsable static catalog under [`site/`](site/). See [`VALIDATION.md`](VALIDATION.md) for the full list of checks.
 
+Platform pack manifests and plugin-compatibility guidance are documented in
+[`docs/PLUGIN_COMPATIBILITY.md`](docs/PLUGIN_COMPATIBILITY.md). The generated
+metadata files `metadata/index.json`, `metadata/router.json`, and
+`metadata/packs.json` are the machine-readable surfaces for skills, routing,
+and platform packs.
+
 ## Contributing
 
 New skills and improvements are welcome. AgentCounsel is Markdown-first and safety-first — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules, [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md) for the frontmatter standard, and [`SECURITY.md`](SECURITY.md) for security guidance. Questions are answered in [`docs/FAQ.md`](docs/FAQ.md).

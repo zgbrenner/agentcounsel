@@ -772,20 +772,36 @@ function buildPacksPage() {
   const indexPath = join(REPO_ROOT, 'metadata', 'index.json');
   if (!existsSync(indexPath)) return null;
   const meta = JSON.parse(readFileSync(indexPath, 'utf8'));
+  const packsMetaPath = join(REPO_ROOT, 'metadata', 'packs.json');
+  const packsMeta = existsSync(packsMetaPath)
+    ? JSON.parse(readFileSync(packsMetaPath, 'utf8'))
+    : null;
   const areas = {};
   for (const s of meta.skills || []) {
     const a = s.practice_area;
     if (!a) continue;
     (areas[a] = areas[a] || []).push(s);
   }
+  const packByArea = {};
+  if (packsMeta && Array.isArray(packsMeta.packs)) {
+    for (const p of packsMeta.packs) {
+      if (!p.practice_area || !p.platform || p.practice_area === 'all') continue;
+      (packByArea[p.practice_area] = packByArea[p.practice_area] || {})[p.platform] = p;
+    }
+  }
 
   let rows = '';
   for (const a of AREA_ORDER) {
     const list = areas[a] || [];
     if (!list.length) continue;
+    const manifest = packByArea[a] || {};
+    const platforms = Object.keys(manifest).sort().join(', ') || 'chatgpt, claude, gemini';
+    const checkCount = new Set(Object.values(manifest).flatMap((p) => p.included_quality_checks || [])).size;
     rows += `<tr>
 <td>${esc(areaName(a))}</td>
 <td class="count">${list.length}</td>
+<td>${esc(platforms)}</td>
+<td class="count">${checkCount || '—'}</td>
 <td><a href="chatgpt/${a}.md">ChatGPT pack (.md)</a></td>
 <td><a href="claude/${a}.zip">Claude pack (.zip)</a></td>
 <td><a href="gemini/${a}.zip">Gemini pack (.zip)</a></td>
@@ -800,8 +816,9 @@ ${REVIEW_NOTICE}
 
 <section>
 <h2>Downloads</h2>
+<p>The generated <a href="packs.json">pack manifest</a> lists each pack's platform, included skills, core rules, templates, quality checks, matter-pack references, workspace templates, setup instructions, and attorney-review requirements.</p>
 <table class="index-table">
-<thead><tr><th>Practice area</th><th>Skills</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead>
+<thead><tr><th>Practice area</th><th>Skills</th><th>Platforms</th><th>Quality checks</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead>
 <tbody>
 ${rows}</tbody>
 </table>

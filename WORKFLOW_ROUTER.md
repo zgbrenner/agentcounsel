@@ -11,6 +11,46 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 3. If the request spans several skills, pick the **narrowest** one that fits the immediate task; the skill will point to siblings if needed.
 4. If nothing matches, say so — do not improvise a legal workflow.
 
+## Choose the right surface
+
+Use this order before selecting a skill:
+
+| User need | Route to | When to choose it |
+|---|---|---|
+| A single self-contained task | One `skills/<area>/<skill>/SKILL.md` | The user supplied one document/request and wants one draft output. |
+| Repeated work in one practice area | Practice-area platform pack | The user will run several tasks in the same practice area in ChatGPT, Claude, Gemini, Cursor, Codex, or another repo agent. See `metadata/packs.json`. |
+| A recurring multi-step matter type | `matter-packs/<area>.md` | The matter needs an ordered sequence of skills. |
+| A live matter with parties, facts, documents, deadlines, and multiple outputs | `matter-workspaces/<matter-type>.md` through `skills/setup/create-matter-workspace/SKILL.md` | Context must persist across skill runs or deadlines/open items must be tracked. |
+| Review an output before reliance | Quality check skill or core checklist | Use `skills/legal-methodology/source-validation/SKILL.md`, `skills/legal-methodology/red-team-verifier/SKILL.md`, and `core/attorney-review-checklist.md`. |
+| Structured sign-off status | Review panel pattern | Use the skill's Attorney Verification Checklist for now; a reusable review-panel block is planned in `docs/IMPLEMENTATION_SEQUENCE.md`. |
+
+## Routing gates
+
+Before running any legal skill, identify missing facts and stop to ask for them
+if the skill cannot safely proceed.
+
+| Gate | Ask for or flag |
+|---|---|
+| Required inputs | The document, facts, client role, business context, and objective named in the selected skill. |
+| Jurisdiction | Jurisdiction, governing law, venue, agency, court, or regulatory authority. If unknown, mark `[JURISDICTION UNKNOWN]` and avoid legal conclusions. |
+| Deadlines | Any response date, filing date, effective date, hearing date, closing date, notice period, or user-supplied deadline. Never calculate a legal deadline without attorney verification. |
+| Attorney escalation | Escalate when facts are missing, authority is uncertain, privilege/confidentiality is implicated, an adversarial filing or communication is involved, a deadline is present, or the user asks for a final legal conclusion. |
+| Source validation | Mandatory for legal research, rule summaries, authority-cited analysis, filings, adversarial communications, or any output that cites cases, statutes, regulations, agency materials, or quotations. |
+| Follow-up quality checks | Use `source-validation` for authority, `red-team-verifier` for high-risk output, `jurisdiction-and-deadline-gates` for date/jurisdiction issues, and the Attorney Verification Checklist for every output. |
+
+Machine-readable routing data is generated in `metadata/router.json`.
+
+## Examples for vague requests
+
+| Request | Route | Missing facts to ask for | Mandatory gates and checks |
+|---|---|---|---|
+| "Review this NDA" | `skills/contracts/nda-review/SKILL.md` | Full NDA text; client role; transaction context; governing law if supplied; client playbook if any. | Jurisdiction if governing law matters; attorney review; source validation for any cited authority; legal prose quality. |
+| "Help me respond to opposing counsel" | Start with `skills/litigation/matter-intake/SKILL.md`; then route to `skills/litigation/demand-letter/SKILL.md` or `skills/legal-research/legal-research-memo/SKILL.md` as needed. | Communication from opposing counsel; matter posture; jurisdiction/venue; response deadline; client objective; authorized tone. | Matter workspace recommended; deadline gate; privilege/confidentiality; source validation; red-team verifier; attorney review. |
+| "Summarize this new privacy rule" | `skills/regulatory/rule-change-summary/SKILL.md` | Official rule source; issuing authority; effective date; affected business/process; jurisdiction. | Source validation mandatory; jurisdiction and effective-date gate; attorney review. |
+| "Draft a demand letter" | `skills/litigation/demand-letter/SKILL.md` | Parties; factual chronology; counsel-approved claim theory; jurisdiction; response deadline; settlement authority. | Deadline gate; source validation for legal assertions; red-team verifier; attorney review before sending. |
+| "Check this contract for risk" | `skills/contracts/contract-risk-review/SKILL.md`; use a contracts practice-area pack for repeated contract work. | Contract text; client role; deal context; governing law; fallback positions or playbook. | Attorney review; source validation if legal authority is cited; legal prose quality. |
+| "I need help with a California employee termination" | `skills/employment/termination-risk/SKILL.md`; create a matter workspace if this is a live matter. | Employee role/tenure; reason; protected-class, leave, accommodation, retaliation, complaint, and wage facts; policies; planned date. | California jurisdiction gate; deadline/final-pay timing gate; confidentiality/privilege; source validation; red-team verifier; attorney review. |
+
 ## Before you start: complex or multi-step matters
 
 If the task is more than a single, self-contained skill run — it spans several skills, multiple documents, more than one deadline, or more than one team member — create a **matter workspace** first. Run `skills/setup/create-matter-workspace/SKILL.md`: it recommends the right template from `matter-workspaces/` and produces a populated workspace draft. The workspace is the single file that carries the matter's parties, facts, jurisdiction, deadlines, and the draft work product produced by every skill you run, so context is not lost between steps. For a one-off task, skip this and go straight to the skill.
