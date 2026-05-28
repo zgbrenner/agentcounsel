@@ -878,6 +878,57 @@ def check_router_workspace_references() -> None:
                 err(f"metadata/router.json: example route_to does not exist: {target}")
 
 
+# --- Check: required docs and doc/script references ------------------------
+
+# Top-level docs a new user / contributor relies on. Missing one is an error.
+REQUIRED_DOCS = [
+    "README.md",
+    "QUICKSTART.md",
+    "CONTRIBUTING.md",
+    "WORKFLOW_ROUTER.md",
+    "docs/CHOOSE_YOUR_WORKFLOW.md",
+    "docs/CLI.md",
+    "docs/AGENT_COMMANDS.md",
+    "docs/WORKFLOW_MAP.md",
+    "docs/PROJECT_STATUS.md",
+    "docs/MATTER_WORKSPACES.md",
+    "docs/PLAYBOOKS.md",
+    "docs/REVIEW_PANELS.md",
+    "docs/QUALITY_LAYER.md",
+    "docs/SAFETY_MODEL.md",
+]
+
+# Docs that document how to run the tooling. Every scripts/<name>.py they name
+# must exist, so command guidance never points at a missing script.
+DOC_COMMAND_FILES = [
+    "README.md", "QUICKSTART.md", "CONTRIBUTING.md",
+    "docs/CLI.md", "docs/AGENT_COMMANDS.md",
+]
+_SCRIPT_REF_PAT = re.compile(r"scripts/([A-Za-z0-9_]+\.py)")
+
+
+def check_required_docs() -> None:
+    """Required top-level and docs/ files must exist."""
+    for rel_path in REQUIRED_DOCS:
+        if not (REPO_ROOT / rel_path).is_file():
+            err(f"required doc missing: {rel_path}")
+
+
+def check_doc_script_references() -> None:
+    """Every scripts/<name>.py referenced in command docs must exist, and a
+    referenced 'node site/generate.mjs' must point at a real file."""
+    for rel_path in DOC_COMMAND_FILES:
+        path = REPO_ROOT / rel_path
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for script in sorted(set(_SCRIPT_REF_PAT.findall(text))):
+            if not (REPO_ROOT / "scripts" / script).is_file():
+                err(f"{rel_path}: references missing script 'scripts/{script}'")
+        if "site/generate.mjs" in text and not (REPO_ROOT / "site" / "generate.mjs").is_file():
+            err(f"{rel_path}: references missing 'site/generate.mjs'")
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -918,6 +969,8 @@ def main() -> int:
     check_playbooks()
     check_review_panels()
     check_router_workspace_references()
+    check_required_docs()
+    check_doc_script_references()
 
     if warnings:
         print(f"Warnings ({len(warnings)}):")

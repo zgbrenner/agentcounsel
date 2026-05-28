@@ -86,6 +86,22 @@ The four-tier taxonomy that classifies these areas and groups — and the model 
 
 See [`SKILLS_INDEX.md`](SKILLS_INDEX.md) for the full catalog and [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) to route from a task to a skill.
 
+## Choose your workflow
+
+Most tasks are one skill. When the work is larger, AgentCounsel gives you several surfaces:
+
+| Surface | Use it when |
+|---|---|
+| **One-off skill** | A single, self-contained task and one draft output. |
+| **Quality check** | Reviewing an existing draft — source validation, citation integrity, prose polish, red-team. |
+| **Practice-area pack** | Repeated work in one practice area, installed into your AI tool. |
+| **Matter pack** | A recurring matter *type* that runs an ordered sequence of skills. |
+| **Matter workspace** | A multi-step, document-heavy, deadline- or source-sensitive, ongoing matter. |
+| **Playbook** | A recurring task type you run the same way every time (e.g., NDA review). |
+| **Review panel** | A high-risk draft that needs several supervised review passes before reliance. |
+
+Full decision guide with worked examples: **[docs/CHOOSE_YOUR_WORKFLOW.md](docs/CHOOSE_YOUR_WORKFLOW.md)**. Every surface ends in attorney review.
+
 ## How it is organized
 
 ```
@@ -93,8 +109,11 @@ core/               Operating rules every skill inherits (read these first).
 skills/             The canonical skill library, grouped by practice area.
 examples/           Illustrative sample outputs, with fictional facts.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
-matter-workspaces/  Single-file scaffolds for organizing one specific matter.
+matter-workspaces/  Scaffolds for organizing one matter — single-file templates
+                    plus the canonical multi-file _template/.
 matter-packs/       Workflow bundles — recommended skill sequences per matter type.
+playbooks/          Repeatable recipes for recurring task types (NDA review, etc.).
+review-panels/      Supervised multi-pass review workflows for a draft.
 overlays/           Industry and sector overlays that tune skills for a context.
 adapters/           Thin integration files for specific environments.
 connectors/         External-source verification integrations (e.g., CourtListener).
@@ -188,7 +207,7 @@ Configuration is opt-in. Skipping it costs you benchmarking-against-standing-pos
 Two optional layers let a legal team adapt the library without changing any skill:
 
 - **[`practice-profiles/`](practice-profiles/)** — one profile per practice area capturing the team's jurisdictions, escalation thresholds, standard positions, review requirements, and prohibited assumptions. The **Setup** cold-start interview skills fill a profile in.
-- **[`matter-workspaces/`](matter-workspaces/)** — single-file scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, and an index of the draft work product produced by skills.
+- **[`matter-workspaces/`](matter-workspaces/)** — scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, sources, and an index of the draft work product produced by skills. Single-file templates plus a canonical multi-file template at `matter-workspaces/_template/`, which `python scripts/init_matter_workspace.py` instantiates. See [`docs/MATTER_WORKSPACES.md`](docs/MATTER_WORKSPACES.md).
 
 Both are plain Markdown and add no backend, runtime, or vendor dependency.
 
@@ -211,7 +230,7 @@ python scripts/sync_plugin_skills.py --check   # plugin bundle is in sync
 python scripts/validate_repo.py                # full repository validation
 ```
 
-Other standard-library helpers in `scripts/` build the machine-readable skill index (`build_skill_index.py`), the per-platform install packs (`build_platform_packs.py`), and the browsable static catalog under [`site/`](site/). See [`VALIDATION.md`](VALIDATION.md) for the full list of checks.
+Other standard-library helpers in `scripts/` build the machine-readable skill index (`build_skill_index.py`), the per-platform install packs (`build_platform_packs.py`), the matter-workspace initializer (`init_matter_workspace.py`), and the browsable static catalog under [`site/`](site/). Every script is documented in [`docs/CLI.md`](docs/CLI.md); the recommended commands to run after each kind of edit are in [`docs/AGENT_COMMANDS.md`](docs/AGENT_COMMANDS.md). See [`VALIDATION.md`](VALIDATION.md) for the full list of checks.
 
 Platform pack manifests and plugin-compatibility guidance are documented in
 [`docs/PLUGIN_COMPATIBILITY.md`](docs/PLUGIN_COMPATIBILITY.md). The generated
@@ -221,7 +240,9 @@ and platform packs.
 
 ## Contributing
 
-New skills and improvements are welcome. AgentCounsel is Markdown-first and safety-first — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules, [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md) for the frontmatter standard, and [`SECURITY.md`](SECURITY.md) for security guidance. Questions are answered in [`docs/FAQ.md`](docs/FAQ.md).
+New skills and improvements are welcome. AgentCounsel is Markdown-first and safety-first — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules (including how to add skills, quality checks, evals, playbooks, review panels, and packs), [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md) for the frontmatter standard, and [`SECURITY.md`](SECURITY.md) for security guidance. Questions are answered in [`docs/FAQ.md`](docs/FAQ.md).
+
+For the bigger picture, see [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) (an honest maturity snapshot — what is stable, what needs manual review, what is experimental) and [`docs/WORKFLOW_MAP.md`](docs/WORKFLOW_MAP.md) (how core rules, skills, quality checks, packs, workspaces, playbooks, review panels, and evals fit together).
 
 ## License
 

@@ -399,3 +399,40 @@ details[open] summary { margin-bottom: 0.4rem; }
   main { padding-top: 1.3rem; }
   .site-footer-inner { grid-template-columns: 1fr; }
 }
+
+/* Skill "at a glance" facts panel */
+.skill-facts {
+  background: var(--subtle);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.4rem;
+  font-size: 0.95rem;
+}
+.skill-facts h2 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+.facts-table { width: 100%; border-collapse: collapse; }
+.facts-table th, .facts-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.facts-table th { width: 13rem; font-weight: 600; color: var(--accent); }
+.facts-table code { font-size: 0.85em; }
+.risk { font-weight: 600; text-transform: capitalize; }
+.risk-low { color: #2f7d32; }
+.risk-medium { color: #b06a00; }
+.risk-high, .risk-critical { color: #b3261e; }
+
+/* Pack detail disclosure blocks */
+.pack-detail {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  margin: 0.6rem 0;
+}
+.pack-detail summary { cursor: pointer; font-size: 1rem; }
+.pack-detail p { margin: 0.4rem 0; }
+.pack-detail .label { font-weight: 600; color: var(--accent); margin-right: 0.25rem; }
+.pack-skill-list { columns: 2; font-size: 0.92rem; }
+@media (max-width: 640px) { .pack-skill-list { columns: 1; } }
