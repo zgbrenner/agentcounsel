@@ -4,7 +4,7 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-179-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-186-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 
@@ -51,7 +51,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **179 skills**: 153 across **20 practice areas**, plus 26 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
+AgentCounsel has **186 skills**: 153 across **20 practice areas**, plus 33 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -79,7 +79,7 @@ AgentCounsel has **179 skills**: 153 across **20 practice areas**, plus 26 cross
 Three **cross-cutting skill groups** support work in every practice area:
 
 - **Setup** (19 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
-- **Legal Methodology** (4 skills) — red-team verification, statutory interpretation, risk assessment, and source validation.
+- **Legal Methodology** (11 skills) — source validation, citation integrity, assumption audit, hallucination red-team, attorney-review gate, privilege/confidentiality review, legal prose polish, output-format compliance, statutory interpretation, risk assessment, and red-team verification.
 - **Legal Operations** (3 skills) — templated legal responses, meeting briefings, and signature-routing checks.
 
 The four-tier taxonomy that classifies these areas and groups — and the model for expanding it — is recorded in [`docs/PRACTICE_AREAS.md`](docs/PRACTICE_AREAS.md).
@@ -189,7 +189,7 @@ Both are plain Markdown and add no backend, runtime, or vendor dependency.
 
 ## Examples
 
-The [`examples/`](examples/) directory contains illustrative sample outputs — a contract review, a litigation chronology, a DPA review, a product launch review, and a red-team verification. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter.
+The [`examples/`](examples/) directory contains illustrative sample outputs — including primary skill outputs and quality-layer passes such as source validation, prose polish, hallucination red-team, and attorney-review gating. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter.
 
 ## Validation and continuous integration
 

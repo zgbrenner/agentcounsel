@@ -11,27 +11,39 @@
   ],
   "quality_checks": [
     {
-      "id": "attorney-review",
-      "path": "core/attorney-review-checklist.md"
+      "id": "assumption-audit",
+      "path": "skills/legal-methodology/assumption-audit/SKILL.md"
     },
     {
-      "id": "confidentiality-privilege",
-      "path": "core/confidentiality-and-privilege.md"
+      "id": "attorney-review-gate",
+      "path": "skills/legal-methodology/attorney-review-gate/SKILL.md"
+    },
+    {
+      "id": "citation-integrity-check",
+      "path": "skills/legal-methodology/citation-integrity-check/SKILL.md"
+    },
+    {
+      "id": "hallucination-red-team",
+      "path": "skills/legal-methodology/hallucination-red-team/SKILL.md"
     },
     {
       "id": "jurisdiction-deadline-gates",
       "path": "core/jurisdiction-and-deadline-gates.md"
     },
     {
-      "id": "legal-prose-quality",
-      "path": "core/output-format-rules.md"
+      "id": "legal-prose-polish",
+      "path": "skills/legal-methodology/legal-prose-polish/SKILL.md"
     },
     {
-      "id": "red-team-verifier",
-      "path": "skills/legal-methodology/red-team-verifier/SKILL.md"
+      "id": "output-format-compliance-check",
+      "path": "skills/legal-methodology/output-format-compliance-check/SKILL.md"
     },
     {
-      "id": "source-validation",
+      "id": "privilege-confidentiality-check",
+      "path": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md"
+    },
+    {
+      "id": "source-validation-check",
       "path": "skills/legal-methodology/source-validation/SKILL.md"
     }
   ],
@@ -59,11 +71,12 @@
         "skills/legal-research/legal-research-memo/templates/legal-research-memo.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -106,11 +119,12 @@
         "skills/legal-research/legal-research-memo/templates/legal-research-memo.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -153,11 +167,12 @@
         "skills/legal-research/legal-research-memo/templates/legal-research-memo.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -214,12 +229,15 @@
         "skills/litigation/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -272,12 +290,15 @@
         "skills/litigation/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -330,12 +351,15 @@
         "skills/litigation/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -385,11 +409,13 @@
         "skills/contracts/references/redline-output-guidance.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -440,11 +466,13 @@
         "skills/contracts/references/redline-output-guidance.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -495,11 +523,13 @@
         "skills/contracts/references/redline-output-guidance.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -550,12 +580,15 @@
         "skills/corporate/written-consent/templates/written-consent-outline.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -605,12 +638,15 @@
         "skills/corporate/written-consent/templates/written-consent-outline.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -660,12 +696,15 @@
         "skills/corporate/written-consent/templates/written-consent-outline.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -713,12 +752,14 @@
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/tax.md"
@@ -768,12 +809,14 @@
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/tax.md"
@@ -823,12 +866,14 @@
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/tax.md"
@@ -873,12 +918,15 @@
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -922,12 +970,15 @@
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -971,12 +1022,15 @@
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1017,11 +1071,13 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1058,11 +1114,13 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1099,11 +1157,13 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1140,12 +1200,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1185,12 +1247,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1230,12 +1294,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1275,11 +1341,13 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1316,11 +1384,13 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1357,11 +1427,13 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1408,12 +1480,15 @@
         "skills/insurance/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [
         "matter-packs/insurance.md"
@@ -1462,12 +1537,15 @@
         "skills/insurance/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [
         "matter-packs/insurance.md"
@@ -1516,12 +1594,15 @@
         "skills/insurance/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [
         "matter-packs/insurance.md"
@@ -1565,12 +1646,15 @@
         "skills/ip/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1612,12 +1696,15 @@
         "skills/ip/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1659,12 +1746,15 @@
         "skills/ip/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -1686,6 +1776,13 @@
       "practice_area_name": "Legal Methodology",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/hallucination-red-team/SKILL.md",
+        "skills/legal-methodology/legal-prose-polish/SKILL.md",
+        "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
         "skills/legal-methodology/red-team-verifier/SKILL.md",
         "skills/legal-methodology/risk-assessment/SKILL.md",
         "skills/legal-methodology/source-validation/SKILL.md",
@@ -1701,11 +1798,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1730,6 +1830,13 @@
       "practice_area_name": "Legal Methodology",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/hallucination-red-team/SKILL.md",
+        "skills/legal-methodology/legal-prose-polish/SKILL.md",
+        "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
         "skills/legal-methodology/red-team-verifier/SKILL.md",
         "skills/legal-methodology/risk-assessment/SKILL.md",
         "skills/legal-methodology/source-validation/SKILL.md",
@@ -1745,11 +1852,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1774,6 +1884,13 @@
       "practice_area_name": "Legal Methodology",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/hallucination-red-team/SKILL.md",
+        "skills/legal-methodology/legal-prose-polish/SKILL.md",
+        "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
         "skills/legal-methodology/red-team-verifier/SKILL.md",
         "skills/legal-methodology/risk-assessment/SKILL.md",
         "skills/legal-methodology/source-validation/SKILL.md",
@@ -1789,11 +1906,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1848,11 +1968,12 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1906,11 +2027,12 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -1964,11 +2086,12 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -2015,12 +2138,14 @@
         "skills/antitrust-competition/references/risk-indicators.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2065,12 +2190,14 @@
         "skills/antitrust-competition/references/risk-indicators.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2115,12 +2242,14 @@
         "skills/antitrust-competition/references/risk-indicators.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2167,12 +2296,14 @@
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [
         "matter-packs/bankruptcy-restructuring.md"
@@ -2221,12 +2352,14 @@
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [
         "matter-packs/bankruptcy-restructuring.md"
@@ -2275,12 +2408,14 @@
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [
         "matter-packs/bankruptcy-restructuring.md"
@@ -2327,12 +2462,15 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [
         "matter-packs/family-law.md"
@@ -2379,12 +2517,15 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [
         "matter-packs/family-law.md"
@@ -2431,12 +2572,15 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [
         "matter-packs/family-law.md"
@@ -2473,12 +2617,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2513,12 +2659,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2553,12 +2701,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2594,11 +2744,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2634,11 +2787,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2674,11 +2830,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "legal-prose-polish"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -2723,11 +2882,14 @@
         "skills/m-and-a/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [
         "matter-packs/m-and-a.md"
@@ -2774,11 +2936,14 @@
         "skills/m-and-a/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [
         "matter-packs/m-and-a.md"
@@ -2825,11 +2990,14 @@
         "skills/m-and-a/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [
         "matter-packs/m-and-a.md"
@@ -2873,11 +3041,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [
         "matter-packs/real-estate.md"
@@ -2921,11 +3092,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [
         "matter-packs/real-estate.md"
@@ -2969,11 +3143,14 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "assumption-audit"
       ],
       "included_matter_packs": [
         "matter-packs/real-estate.md"
@@ -3022,12 +3199,15 @@
         "skills/securities-capital-markets/references/issue-spotting-frameworks.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -3074,12 +3254,15 @@
         "skills/securities-capital-markets/references/issue-spotting-frameworks.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -3126,12 +3309,15 @@
         "skills/securities-capital-markets/references/issue-spotting-frameworks.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
@@ -3176,12 +3362,14 @@
         "skills/tax/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [
         "matter-packs/tax.md"
@@ -3228,12 +3416,14 @@
         "skills/tax/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [
         "matter-packs/tax.md"
@@ -3280,12 +3470,14 @@
         "skills/tax/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "included_matter_packs": [
         "matter-packs/tax.md"
@@ -3334,12 +3526,14 @@
         "skills/trusts-estates/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/trusts-estates.md"
@@ -3388,12 +3582,14 @@
         "skills/trusts-estates/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/trusts-estates.md"
@@ -3442,12 +3638,14 @@
         "skills/trusts-estates/references/output-patterns.md"
       ],
       "included_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege",
-        "red-team-verifier"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/trusts-estates.md"
@@ -3480,12 +3678,15 @@
       ],
       "included_templates": [],
       "included_quality_checks": [
-        "attorney-review",
-        "confidentiality-privilege",
+        "assumption-audit",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "legal-prose-quality",
-        "red-team-verifier",
-        "source-validation"
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "privilege-confidentiality-check",
+        "source-validation-check"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],

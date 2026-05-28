@@ -238,6 +238,53 @@ def check_content_scans() -> None:
             err(f"{rel(path)}: leftover placeholder marker '{match.group(0)}'")
 
 
+# --- Check: quality-layer overclaims --------------------------------------
+
+_QUALITY_LIMIT_FILES = [
+    "docs/QUALITY_LAYER.md",
+    "docs/SOURCE_VALIDATION.md",
+    "docs/CITATION_INTEGRITY.md",
+    "docs/ATTORNEY_REVIEW_GATE.md",
+    "skills/legal-methodology/source-validation/SKILL.md",
+    "skills/legal-methodology/citation-integrity-check/SKILL.md",
+]
+
+_OVERCLAIM_PATTERNS = [
+    re.compile(r"\bguarantees?\s+(legal\s+)?(correctness|accuracy|citation)", re.I),
+    re.compile(r"\bcertif(?:y|ies)\s+(legal\s+)?(correctness|accuracy|citation)", re.I),
+    re.compile(r"\bindependently\s+verif(?:y|ies)\s+(current\s+)?law", re.I),
+    re.compile(r"\bautomatically\s+verif(?:y|ies)\s+(current\s+)?law", re.I),
+    re.compile(r"\bautomated\s+legal\s+citation\s+verification\b", re.I),
+]
+
+_LIMITING_LANGUAGE = re.compile(
+    r"\b(not|does\s+not|do\s+not|cannot|no|never|without|unless)\b",
+    re.I,
+)
+
+
+def check_quality_layer_overclaims() -> None:
+    """Quality-layer docs must not imply automated legal verification.
+
+    AgentCounsel can classify source support and citation risk, but it does
+    not independently verify current law or certify citation correctness.
+    """
+    for relpath in _QUALITY_LIMIT_FILES:
+        path = REPO_ROOT / relpath
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        sentences = re.split(r"(?<=[.!?])\s+", text)
+        for sentence in sentences:
+            for pat in _OVERCLAIM_PATTERNS:
+                if not pat.search(sentence):
+                    continue
+                if _LIMITING_LANGUAGE.search(sentence):
+                    continue
+                err(f"{relpath}: possible quality-layer overclaim "
+                    f"('{sentence.strip()}')")
+
+
 # --- Check: relative links resolve ----------------------------------------
 
 LINK_PAT = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -706,6 +753,7 @@ def main() -> int:
     check_overlays()
     check_citation_discipline(canonical)
     check_content_scans()
+    check_quality_layer_overclaims()
     check_links()
     check_index_paths("SKILLS_INDEX.md")
     check_index_paths("WORKFLOW_ROUTER.md")

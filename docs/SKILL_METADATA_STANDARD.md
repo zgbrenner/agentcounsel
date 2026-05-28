@@ -209,7 +209,7 @@ plugin compatibility:
 | `requires_deadline_check` | Derived from deadline/date language in the skill body. |
 | `requires_attorney_review` | Frontmatter `requires_attorney_review`. |
 | `related_skills` | Frontmatter `related_skills`. |
-| `recommended_quality_checks` | Derived list of AgentCounsel quality checks such as attorney review, source validation, red-team verification, jurisdiction/deadline gates, confidentiality/privilege, and legal prose quality. |
+| `recommended_quality_checks` | Derived list of AgentCounsel quality-check IDs such as `attorney-review-gate`, `assumption-audit`, `citation-integrity-check`, `source-validation-check`, `hallucination-red-team`, `privilege-confidentiality-check`, `legal-prose-polish`, `output-format-compliance-check`, and `jurisdiction-deadline-gates`. |
 | `compatible_platforms` | File-based platform surfaces currently supported by generated packs and adapters. |
 | `pack_tags` | Search and pack-building tags derived from practice area, task type, risk level, and frontmatter `tags`. |
 | `eval_status` | Eval coverage status based on `evals/skills/<slug>.eval.yaml` and candidate outputs under `evals/outputs/<slug>/`. |

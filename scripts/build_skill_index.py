@@ -66,12 +66,15 @@ TASK_TYPES = {
 RISK_LEVELS = ["low", "medium", "high", "critical"]
 PLATFORMS = ["chatgpt", "claude", "cursor", "codex", "gemini", "generic-md"]
 QUALITY_CHECKS = {
-    "attorney-review": "core/attorney-review-checklist.md",
-    "source-validation": "skills/legal-methodology/source-validation/SKILL.md",
-    "red-team-verifier": "skills/legal-methodology/red-team-verifier/SKILL.md",
+    "assumption-audit": "skills/legal-methodology/assumption-audit/SKILL.md",
+    "attorney-review-gate": "skills/legal-methodology/attorney-review-gate/SKILL.md",
+    "citation-integrity-check": "skills/legal-methodology/citation-integrity-check/SKILL.md",
+    "hallucination-red-team": "skills/legal-methodology/hallucination-red-team/SKILL.md",
+    "legal-prose-polish": "skills/legal-methodology/legal-prose-polish/SKILL.md",
+    "output-format-compliance-check": "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+    "privilege-confidentiality-check": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
+    "source-validation-check": "skills/legal-methodology/source-validation/SKILL.md",
     "jurisdiction-deadline-gates": "core/jurisdiction-and-deadline-gates.md",
-    "confidentiality-privilege": "core/confidentiality-and-privilege.md",
-    "legal-prose-quality": "core/output-format-rules.md",
 }
 EVAL_STATUSES = {
     "covered_with_candidate",
@@ -446,20 +449,40 @@ def extract_section(body: str, section: str) -> str:
 def recommended_quality_checks(meta: dict, requires_jurisdiction: bool,
                                requires_deadline_check: bool,
                                body: str) -> list[str]:
-    checks = ["attorney-review", "legal-prose-quality"]
+    checks = ["attorney-review-gate"]
     task_type = meta.get("task_type")
     risk_level = meta.get("risk_level")
-    if (task_type in {"research", "verification", "analysis"}
-            or risk_level in {"high", "critical"}
-            or _mentions(body, ["citation", "authority", "statute", "case law",
-                                "regulation", "source validation"])):
-        checks.append("source-validation")
+    tags = set(meta.get("tags") or [])
+    authority_involved = (
+        task_type in {"research", "verification", "analysis"}
+        or _mentions(body, ["citation", "authority", "statute", "case law",
+                            "regulation", "source validation", "quotation"])
+    )
+    if task_type == "drafting":
+        checks.extend(["legal-prose-polish", "output-format-compliance-check"])
+    if task_type == "research":
+        checks.extend(["citation-integrity-check", "source-validation-check"])
+    if task_type == "review":
+        checks.extend(["source-validation-check", "assumption-audit"])
+    if task_type in {"analysis", "triage", "extraction", "summarization"}:
+        checks.append("assumption-audit")
+    if authority_involved:
+        checks.extend(["citation-integrity-check", "source-validation-check"])
     if risk_level in {"high", "critical"}:
-        checks.append("red-team-verifier")
+        checks.extend(["attorney-review-gate", "assumption-audit",
+                       "hallucination-red-team"])
+        if authority_involved:
+            checks.append("citation-integrity-check")
     if requires_jurisdiction or requires_deadline_check:
         checks.append("jurisdiction-deadline-gates")
-    if _mentions(body, ["privilege", "confidential", "work product"]):
-        checks.append("confidentiality-privilege")
+    if (_mentions(body, ["privilege", "confidential", "work product",
+                         "opposing counsel", "demand letter", "send",
+                         "external", "regulator", "court", "client update"])
+            or {"litigation", "demand-letter", "client-communication"} & tags):
+        checks.append("privilege-confidentiality-check")
+    if _mentions(body, ["memo", "email", "letter", "matrix", "chronology",
+                        "checklist", "table", "client update", "summary"]):
+        checks.append("output-format-compliance-check")
     return sorted(set(checks), key=checks.index)
 
 
@@ -599,6 +622,16 @@ def validate_normalized_index(data: dict | None = None) -> list[str]:
                 errors.append(f"{path}: unknown quality check '{check}'")
             elif not (REPO_ROOT / QUALITY_CHECKS[check]).exists():
                 errors.append(f"{path}: quality check target missing for '{check}'")
+        checks = set(skill.get("recommended_quality_checks") or [])
+        if skill.get("risk_level") in {"high", "critical"}:
+            for required in ("attorney-review-gate", "assumption-audit"):
+                if required not in checks:
+                    errors.append(f"{path}: high-risk skill missing '{required}'")
+            if ("citation" in " ".join(skill.get("pack_tags") or [])
+                    or "source-validation-check" in checks):
+                if "citation-integrity-check" not in checks:
+                    errors.append(f"{path}: authority-related high-risk skill "
+                                  "missing 'citation-integrity-check'")
         if skill.get("eval_status") not in EVAL_STATUSES:
             errors.append(f"{path}: invalid eval_status '{skill.get('eval_status')}'")
     canonical_paths = {rel(d / "SKILL.md") for d in canonical_skill_dirs()}

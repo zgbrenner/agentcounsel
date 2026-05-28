@@ -36,6 +36,7 @@ Run it from anywhere; the script locates the repository root relative to its own
 
 - No file describes AgentCounsel as providing legal advice. Outputs must be described as draft legal work product for attorney review.
 - Every `SKILL.md` references the source/citation discipline core rule (`core/source-and-citation-discipline.md`) or carries equivalent language against inventing legal authority or citations.
+- Quality-layer docs and citation/source-validation skills must not imply that AgentCounsel independently verifies current law, guarantees citation correctness, or provides automated legal citation verification.
 - No file contains the forbidden framing that this project is a ChatGPT Project instructions or package repository.
 - No substantive file contains a leftover placeholder marker (such as a TODO or FIXME note, or lorem ipsum filler text).
 
@@ -56,6 +57,7 @@ Run it from anywhere; the script locates the repository root relative to its own
 - `metadata/packs.json` exists and matches `scripts/build_platform_packs.py`.
 - Every pack manifest has a pack ID, platform, practice area or use case, included skills, included core rules, quality checks, setup instructions, safety disclaimer, attorney-review requirements, version, and date.
 - Every referenced skill, core rule, template, matter pack, matter-workspace template, and quality-check target exists.
+- High-risk generated metadata must recommend the attorney-review gate and assumption audit; high-risk authority-heavy skills must also recommend citation integrity.
 - Generated pack manifests preserve the draft-work-product and attorney-review posture.
 
 **Warnings (advisory)**

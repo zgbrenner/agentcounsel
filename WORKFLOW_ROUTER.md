@@ -36,7 +36,7 @@ if the skill cannot safely proceed.
 | Deadlines | Any response date, filing date, effective date, hearing date, closing date, notice period, or user-supplied deadline. Never calculate a legal deadline without attorney verification. |
 | Attorney escalation | Escalate when facts are missing, authority is uncertain, privilege/confidentiality is implicated, an adversarial filing or communication is involved, a deadline is present, or the user asks for a final legal conclusion. |
 | Source validation | Mandatory for legal research, rule summaries, authority-cited analysis, filings, adversarial communications, or any output that cites cases, statutes, regulations, agency materials, or quotations. |
-| Follow-up quality checks | Use `source-validation` for authority, `red-team-verifier` for high-risk output, `jurisdiction-and-deadline-gates` for date/jurisdiction issues, and the Attorney Verification Checklist for every output. |
+| Follow-up quality checks | Use `source-validation-check` for claim/source support, `citation-integrity-check` for legal authorities, `assumption-audit` for missing facts, `hallucination-red-team` for high-risk model-generated drafts, `jurisdiction-deadline-gates` for date/jurisdiction issues, and `attorney-review-gate` before attorney review. |
 
 Machine-readable routing data is generated in `metadata/router.json`.
 
@@ -44,12 +44,12 @@ Machine-readable routing data is generated in `metadata/router.json`.
 
 | Request | Route | Missing facts to ask for | Mandatory gates and checks |
 |---|---|---|---|
-| "Review this NDA" | `skills/contracts/nda-review/SKILL.md` | Full NDA text; client role; transaction context; governing law if supplied; client playbook if any. | Jurisdiction if governing law matters; attorney review; source validation for any cited authority; legal prose quality. |
-| "Help me respond to opposing counsel" | Start with `skills/litigation/matter-intake/SKILL.md`; then route to `skills/litigation/demand-letter/SKILL.md` or `skills/legal-research/legal-research-memo/SKILL.md` as needed. | Communication from opposing counsel; matter posture; jurisdiction/venue; response deadline; client objective; authorized tone. | Matter workspace recommended; deadline gate; privilege/confidentiality; source validation; red-team verifier; attorney review. |
-| "Summarize this new privacy rule" | `skills/regulatory/rule-change-summary/SKILL.md` | Official rule source; issuing authority; effective date; affected business/process; jurisdiction. | Source validation mandatory; jurisdiction and effective-date gate; attorney review. |
-| "Draft a demand letter" | `skills/litigation/demand-letter/SKILL.md` | Parties; factual chronology; counsel-approved claim theory; jurisdiction; response deadline; settlement authority. | Deadline gate; source validation for legal assertions; red-team verifier; attorney review before sending. |
-| "Check this contract for risk" | `skills/contracts/contract-risk-review/SKILL.md`; use a contracts practice-area pack for repeated contract work. | Contract text; client role; deal context; governing law; fallback positions or playbook. | Attorney review; source validation if legal authority is cited; legal prose quality. |
-| "I need help with a California employee termination" | `skills/employment/termination-risk/SKILL.md`; create a matter workspace if this is a live matter. | Employee role/tenure; reason; protected-class, leave, accommodation, retaliation, complaint, and wage facts; policies; planned date. | California jurisdiction gate; deadline/final-pay timing gate; confidentiality/privilege; source validation; red-team verifier; attorney review. |
+| "Review this NDA" | `skills/contracts/nda-review/SKILL.md` | Full NDA text; client role; transaction context; governing law if supplied; client playbook if any. | Jurisdiction if governing law matters; `source-validation-check` for any cited authority; `assumption-audit`; `legal-prose-polish`; `attorney-review-gate`. |
+| "Help me respond to opposing counsel" | Start with `skills/litigation/matter-intake/SKILL.md`; then route to `skills/litigation/demand-letter/SKILL.md` or `skills/legal-research/legal-research-memo/SKILL.md` as needed. | Communication from opposing counsel; matter posture; jurisdiction/venue; response deadline; client objective; authorized tone. | Matter workspace recommended; deadline gate; `privilege-confidentiality-check`; `source-validation-check`; `hallucination-red-team`; `attorney-review-gate`. |
+| "Summarize this new privacy rule" | `skills/regulatory/rule-change-summary/SKILL.md` | Official rule source; issuing authority; effective date; affected business/process; jurisdiction. | `source-validation-check` and `citation-integrity-check` mandatory; jurisdiction and effective-date gate; `attorney-review-gate`. |
+| "Draft a demand letter" | `skills/litigation/demand-letter/SKILL.md` | Parties; factual chronology; counsel-approved claim theory; jurisdiction; response deadline; settlement authority. | Deadline gate; `source-validation-check` and `citation-integrity-check` for legal assertions; `hallucination-red-team`; `privilege-confidentiality-check`; attorney review before sending. |
+| "Check this contract for risk" | `skills/contracts/contract-risk-review/SKILL.md`; use a contracts practice-area pack for repeated contract work. | Contract text; client role; deal context; governing law; fallback positions or playbook. | `source-validation-check` if legal authority is cited; `assumption-audit`; `legal-prose-polish`; `attorney-review-gate`. |
+| "I need help with a California employee termination" | `skills/employment/termination-risk/SKILL.md`; create a matter workspace if this is a live matter. | Employee role/tenure; reason; protected-class, leave, accommodation, retaliation, complaint, and wage facts; policies; planned date. | California jurisdiction gate; deadline/final-pay timing gate; `privilege-confidentiality-check`; `source-validation-check`; `hallucination-red-team`; `attorney-review-gate`. |
 
 ## Before you start: complex or multi-step matters
 
@@ -355,6 +355,13 @@ The cold-start interviews fill in a profile under `practice-profiles/`; `create-
 | The task sounds like... | Use this skill |
 |---|---|
 | "Red-team this draft" / "is this good enough?" / "check this memo, contract review, demand letter, or filing" / "find the weaknesses, missing issues, or hallucinations" | `skills/legal-methodology/red-team-verifier/SKILL.md` |
+| "Polish this legal draft" / "make this less AI-sounding" / "tighten the prose" | `skills/legal-methodology/legal-prose-polish/SKILL.md` |
+| "Check these citations" / "classify citation problems" / "does this authority need verification?" | `skills/legal-methodology/citation-integrity-check/SKILL.md` |
+| "Audit the assumptions" / "what facts or documents are missing?" / "what did this draft assume?" | `skills/legal-methodology/assumption-audit/SKILL.md` |
+| "Check for hallucinations" / "separate user facts from model claims" | `skills/legal-methodology/hallucination-red-team/SKILL.md` |
+| "Run the final attorney review gate" / "is this ready for attorney review?" | `skills/legal-methodology/attorney-review-gate/SKILL.md` |
+| "Check privilege and confidentiality" / "make a safer external version" | `skills/legal-methodology/privilege-confidentiality-check/SKILL.md` |
+| "Check the output format" / "does this follow the requested memo/table/checklist format?" | `skills/legal-methodology/output-format-compliance-check/SKILL.md` |
 | "Interpret this provision" / "work through this statute or clause" | `skills/legal-methodology/statutory-interpretation/SKILL.md` |
 | "Assess the legal risk" / "rate and prioritize these risks" | `skills/legal-methodology/risk-assessment/SKILL.md` |
 | "Validate the sources" / "check these citations and claims" | `skills/legal-methodology/source-validation/SKILL.md` |
@@ -362,6 +369,17 @@ The cold-start interviews fill in a profile under `practice-profiles/`; `create-
 These cross-cutting skills support work in any practice area — run them alongside the practice-area skill, not instead of it.
 
 **Final quality-control pass.** Run `red-team-verifier` after any high-stakes legal output — a memo, a contract or document review, a demand letter, a risk matrix, a client email, a research summary, or a draft filing — before it is finalized, sent, filed, or relied upon. It adversarially stress-tests the draft for invented authority, unsupported claims, weak legal reasoning, jurisdiction and deadline gaps, and professional-responsibility issues, and returns a PASS / REVISE verdict. It works on the output of any skill in this library, and on legal output produced by other tools or by a person. A PASS does not replace attorney review.
+
+**Quality-check sequencing.** Use the narrowest check that fits the risk:
+
+- Run `source-validation` when factual or legal claims need source support classified. It does not independently verify current law.
+- Run `citation-integrity-check` when citations, pin cites, quotations, binding/persuasive status, jurisdiction mismatch, or outdated-authority risk are at issue.
+- Run `assumption-audit` when a draft may rely on hidden assumptions, missing facts, missing documents, client-role ambiguity, jurisdiction gaps, or deadline gaps.
+- Run `hallucination-red-team` when the draft came from a model or contains unsupported facts, unsupported legal claims, or model-suggested authority.
+- Run `privilege-confidentiality-check` before external sharing or when privileged communications, confidential facts, sensitive identifiers, or redactions are involved.
+- Run `output-format-compliance-check` when a draft must match a memo, email, demand letter, risk table, contract review matrix, chronology, checklist, client update, or research-summary format.
+- Run `legal-prose-polish` only after substantive support and safety issues are visible; it tightens prose without changing legal meaning.
+- Run `attorney-review-gate` as the final gate for high-risk output before attorney review. A "ready for attorney review" status is not approval to send, file, or rely on the draft.
 
 ## Briefing a business stakeholder
 

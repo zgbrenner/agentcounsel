@@ -17,12 +17,15 @@
     "review panel"
   ],
   "quality_checks": [
-    "attorney-review",
-    "confidentiality-privilege",
+    "assumption-audit",
+    "attorney-review-gate",
+    "citation-integrity-check",
+    "hallucination-red-team",
     "jurisdiction-deadline-gates",
-    "legal-prose-quality",
-    "red-team-verifier",
-    "source-validation"
+    "legal-prose-polish",
+    "output-format-compliance-check",
+    "privilege-confidentiality-check",
+    "source-validation-check"
   ],
   "examples": [
     {
@@ -162,13 +165,14 @@
       "deadline_gate": false,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
         "skills/ai-governance/model-risk-triage/SKILL.md",
@@ -199,13 +203,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
@@ -237,13 +243,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
         "skills/ai-governance/ai-use-case-intake/SKILL.md",
@@ -274,13 +282,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ai-governance/ai-use-case-intake/SKILL.md",
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
@@ -309,14 +319,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -345,14 +357,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
         "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
@@ -381,14 +395,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
@@ -417,14 +433,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -453,14 +471,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -489,14 +509,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -525,14 +547,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -561,14 +585,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -597,14 +623,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -633,14 +661,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -671,14 +701,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
         "skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md",
@@ -709,14 +741,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
         "skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md",
@@ -747,14 +781,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md",
         "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
@@ -785,14 +821,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
         "skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md",
@@ -823,14 +861,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
@@ -861,14 +901,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
         "skills/bankruptcy-restructuring/proof-of-claim-checklist/SKILL.md",
@@ -899,14 +941,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-diligence-request-list/SKILL.md",
         "skills/bankruptcy-restructuring/executory-contract-assumption-rejection-checklist/SKILL.md",
@@ -937,14 +981,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
         "skills/bankruptcy-restructuring/automatic-stay-issue-spotter/SKILL.md",
@@ -975,14 +1021,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/restructuring-term-sheet-review/SKILL.md",
         "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
@@ -1013,14 +1061,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
         "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
@@ -1051,14 +1101,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md",
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
@@ -1089,14 +1141,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md",
         "skills/bankruptcy-restructuring/plan-disclosure-statement-issue-spotter/SKILL.md",
@@ -1129,13 +1183,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/nda-review/SKILL.md",
         "skills/contracts/redline-summary/SKILL.md",
@@ -1167,13 +1223,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/contracts/redline-summary/SKILL.md"
@@ -1206,13 +1264,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/contracts/nda-review/SKILL.md",
@@ -1244,13 +1304,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/contracts/redline-summary/SKILL.md",
@@ -1280,13 +1342,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/contracts/nda-review/SKILL.md",
@@ -1317,13 +1381,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/corporate/written-consent/SKILL.md"
       ]
@@ -1352,13 +1418,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/corporate/diligence-issue-extraction/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
@@ -1389,14 +1457,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
@@ -1426,13 +1496,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/regulatory/compliance-gap-matrix/SKILL.md"
       ]
@@ -1460,14 +1532,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/corporate/diligence-issue-extraction/SKILL.md",
         "skills/corporate/closing-checklist/SKILL.md"
@@ -1496,13 +1570,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/corporate/board-minutes/SKILL.md"
       ]
@@ -1534,13 +1610,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/termination-risk/SKILL.md",
         "skills/employment/severance-review/SKILL.md"
@@ -1570,13 +1648,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/employee-policy-review/SKILL.md",
         "skills/employment/worker-classification/SKILL.md"
@@ -1606,14 +1686,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/termination-risk/SKILL.md",
         "skills/litigation/legal-hold/SKILL.md"
@@ -1643,14 +1725,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/termination-risk/SKILL.md",
         "skills/employment/wage-hour-qa/SKILL.md"
@@ -1680,14 +1764,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/employment/termination-risk/SKILL.md"
@@ -1717,14 +1803,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/worker-classification/SKILL.md",
         "skills/employment/protected-leave-review/SKILL.md",
@@ -1755,14 +1843,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/worker-classification/SKILL.md",
         "skills/legal-research/legal-research-memo/SKILL.md"
@@ -1792,14 +1882,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/employment/termination-risk/SKILL.md",
         "skills/employment/hiring-review/SKILL.md"
@@ -1828,14 +1920,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/divorce-intake-organizer/SKILL.md",
         "skills/family-law/discovery-tracker/SKILL.md",
@@ -1865,14 +1959,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/spousal-support-facts-intake/SKILL.md",
         "skills/family-law/asset-debt-schedule-builder/SKILL.md",
@@ -1902,14 +1998,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
         "skills/family-law/parenting-schedule-facts-organizer/SKILL.md",
@@ -1939,14 +2037,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/parenting-schedule-facts-organizer/SKILL.md",
         "skills/family-law/custody-order-review-checklist/SKILL.md",
@@ -1976,14 +2076,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/asset-debt-schedule-builder/SKILL.md",
         "skills/family-law/hearing-prep-checklist/SKILL.md"
@@ -2012,14 +2114,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/matter-intake/SKILL.md",
         "skills/family-law/asset-debt-schedule-builder/SKILL.md",
@@ -2049,14 +2153,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/matter-intake/SKILL.md",
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md"
@@ -2085,13 +2191,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/discovery-tracker/SKILL.md",
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md"
@@ -2120,14 +2228,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/divorce-intake-organizer/SKILL.md",
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
@@ -2157,13 +2267,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/custody-parenting-facts-chronology/SKILL.md",
         "skills/family-law/custody-order-review-checklist/SKILL.md"
@@ -2192,14 +2304,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/asset-debt-schedule-builder/SKILL.md",
         "skills/family-law/custody-order-review-checklist/SKILL.md",
@@ -2229,14 +2343,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/family-law/child-support-facts-intake/SKILL.md",
         "skills/family-law/asset-debt-schedule-builder/SKILL.md"
@@ -2267,14 +2383,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/financial-crime/sanctions-screening-review/SKILL.md",
         "skills/corporate/entity-compliance/SKILL.md",
@@ -2304,14 +2422,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/financial-crime/kyc-onboarding-review/SKILL.md",
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
@@ -2341,14 +2461,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/claims-chronology-builder/SKILL.md",
         "skills/insurance/insurer-insured-communications-review/SKILL.md",
@@ -2378,13 +2500,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/insurance-requirements-contract-review/SKILL.md",
         "skills/insurance/tender-letter-review/SKILL.md",
@@ -2414,13 +2538,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/coverage-issue-spotter/SKILL.md",
         "skills/insurance/bad-faith-risk-triage/SKILL.md",
@@ -2450,14 +2576,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/insurance-policy-summary/SKILL.md",
         "skills/insurance/coverage-position-outline/SKILL.md",
@@ -2487,14 +2615,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/coverage-issue-spotter/SKILL.md",
         "skills/insurance/insurance-policy-summary/SKILL.md",
@@ -2524,13 +2654,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/coverage-issue-spotter/SKILL.md",
         "skills/insurance/coverage-position-outline/SKILL.md",
@@ -2560,14 +2692,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/certificate-of-insurance-review/SKILL.md",
         "skills/insurance/tender-letter-review/SKILL.md",
@@ -2597,14 +2731,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/reservation-of-rights-review/SKILL.md",
         "skills/insurance/bad-faith-risk-triage/SKILL.md",
@@ -2634,13 +2770,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/insurance-policy-summary/SKILL.md",
         "skills/insurance/insurance-requirements-contract-review/SKILL.md",
@@ -2670,14 +2808,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/insurance-policy-summary/SKILL.md",
         "skills/insurance/coverage-issue-spotter/SKILL.md",
@@ -2707,14 +2847,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/claims-chronology-builder/SKILL.md",
         "skills/insurance/insurance-policy-summary/SKILL.md",
@@ -2744,14 +2886,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/insurance-requirements-contract-review/SKILL.md",
         "skills/insurance/certificate-of-insurance-review/SKILL.md",
@@ -2781,14 +2925,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/demand-letter/SKILL.md",
         "skills/ip/dmca-takedown/SKILL.md",
@@ -2820,14 +2966,17 @@
       "deadline_gate": false,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/ip/cease-and-desist-response/SKILL.md",
@@ -2857,13 +3006,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/claim-chart/SKILL.md",
         "skills/ip/invention-intake/SKILL.md",
@@ -2893,13 +3044,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ip/cease-and-desist-response/SKILL.md",
         "skills/ip/fto-triage/SKILL.md",
@@ -2932,14 +3085,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ip/fto-triage/SKILL.md"
       ]
@@ -2969,13 +3124,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md"
       ]
@@ -3004,16 +3161,287 @@
       "deadline_gate": false,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "confidentiality-privilege"
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ip/cease-and-desist-response/SKILL.md",
         "skills/ip/infringement-triage/SKILL.md",
         "skills/contracts/contract-risk-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/assumption-audit",
+      "title": "Assumption Audit",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/assumption-audit/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when extracting and auditing explicit assumptions, hidden assumptions, missing facts, missing documents, jurisdiction gaps, deadline gaps, client-role ambiguity, escalation items, business decision points, and professional-responsibility concerns in draft legal work product.",
+      "triggers": [
+        "A draft may have filled gaps silently or treated uncertain facts as established.",
+        "A document review, research memo, client update, demand letter, or risk matrix contains assumptions or missing-input notes.",
+        "The user asks what facts are still needed, what assumptions are built into the analysis, or what could change the conclusion.",
+        "A matter is moving from a draft output into attorney review or a matter workspace."
+      ],
+      "required_inputs": [
+        "The draft legal output to audit",
+        "The user-provided facts, source documents, and instructions available for comparison",
+        "The intended use, audience, jurisdiction, and client role if known"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/source-validation/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/red-team-verifier/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/attorney-review-gate",
+      "title": "Attorney Review Gate",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/attorney-review-gate/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when running a final quality gate before legal draft work product is sent, filed, relied upon, or delivered for attorney review, producing must-confirm facts, law, citations, client decisions, ethics flags, privilege flags, jurisdiction/deadline flags, and a ready-or-not-ready status.",
+      "triggers": [
+        "A high-risk legal output is about to be sent, filed, delivered, or relied upon.",
+        "A draft demand letter, client memo, research summary, risk assessment, contract review, or filing-bound draft needs final attorney-review triage.",
+        "Other quality checks have produced findings that need to be consolidated.",
+        "The user asks whether a draft is ready for attorney review."
+      ],
+      "required_inputs": [
+        "The final draft legal work product to gate",
+        "The source materials, citations, assumptions, and prior quality-check reports",
+        "The intended recipient, use, jurisdiction, and deadline context"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/citation-integrity-check",
+      "title": "Citation Integrity Check",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/citation-integrity-check/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when reviewing legal citations, authorities, quotations, and authority-backed propositions to classify citation source status, flag unverifiable or malformed authorities, and prepare attorney verification items without claiming automated legal citation verification.",
+      "triggers": [
+        "A draft contains cases, statutes, regulations, rules, agency guidance, quotations, treatises, articles, or legal-source URLs.",
+        "A user asks whether citations look real, complete, current, binding, persuasive, or properly used.",
+        "A research memo, rule summary, demand letter, brief section, or legal analysis includes legal authorities.",
+        "A source-validation or red-team pass has flagged citation concerns.",
+        "A draft may rely on model-suggested authorities that need attorney verification."
+      ],
+      "required_inputs": [
+        "The draft containing citations or authority-backed propositions",
+        "The cited authorities or source materials available for review",
+        "The jurisdiction, court, agency, or governing-law context if known"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": false,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/source-validation/SKILL.md",
+        "skills/legal-methodology/red-team-verifier/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/hallucination-red-team",
+      "title": "Hallucination Red-Team",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/hallucination-red-team/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when stress-testing draft legal work product for hallucination risk by separating factual claims, legal claims, cited authorities, user-provided information, model-generated information, unsupported claims, uncertainty, and safer revisions.",
+      "triggers": [
+        "A draft contains legal claims, factual claims, citations, quotations, or confident conclusions that may be unsupported.",
+        "A user asks for a hallucination check, unsupported-claim audit, or safer revised version.",
+        "A draft will be sent externally, filed, used in a client communication, or relied on for a high-risk decision.",
+        "A model produced the draft without a clear claim/source table."
+      ],
+      "required_inputs": [
+        "The complete draft legal output to red-team",
+        "The user-provided facts, source documents, and cited authorities",
+        "The intended use and audience of the output"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/red-team-verifier/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/legal-prose-polish",
+      "title": "Legal Prose Polish",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/legal-prose-polish/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when revising draft legal work product to remove AI-sounding filler, vague risk language, unsupported certainty, and style defects while preserving citations, defined terms, quotations, privilege labels, client instructions, and attorney-review warnings.",
+      "triggers": [
+        "A draft memo, email, demand letter, risk table, contract review, checklist, or client update sounds generic, padded, or AI-written.",
+        "A draft overuses phrases such as \"notably,\" \"moreover,\" \"it is important to note,\" \"delve,\" \"landscape,\" \"underscore,\" \"robust,\" or similar generic phrasing.",
+        "The user asks to make a legal draft clearer, tighter, more lawyerly, or less AI-sounding.",
+        "A draft contains conclusory or vague legal risk language that should be tied to facts, sources, or attorney-review caveats.",
+        "A draft is external-facing and needs clearer agency, responsibility, and tone before attorney review."
+      ],
+      "required_inputs": [
+        "The draft legal output to polish",
+        "The intended audience and use",
+        "Optional: the source documents, citations, defined terms, and client style preferences"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/output-format-compliance-check",
+      "title": "Output Format Compliance Check",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when checking whether draft legal work product matches the requested format, required sections, labels, tables, chronology, checklist, matrix, memo, email, demand letter, client update, or research-summary structure.",
+      "triggers": [
+        "A draft may not match the requested output format.",
+        "A draft should follow an AgentCounsel skill's Output Format but appears incomplete.",
+        "The user asks to check formatting, sections, table columns, chronology structure, checklist structure, or memo/email/demand-letter format.",
+        "A platform pack or one-off prompt output needs a deterministic structure check before attorney review."
+      ],
+      "required_inputs": [
+        "The draft output to check",
+        "The requested format or originating AgentCounsel skill",
+        "Any required sections, table columns, templates, or client formatting instructions"
+      ],
+      "jurisdiction_gate": false,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/legal-prose-polish/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md"
+      ]
+    },
+    {
+      "id": "legal-methodology/privilege-confidentiality-check",
+      "title": "Privilege and Confidentiality Check",
+      "route_type": "one-off skill",
+      "path": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
+      "practice_area": "legal-methodology",
+      "category": "verification",
+      "summary": "Use when reviewing draft legal work product for confidential client information, privileged communications, work-product labeling, redaction/anonymization needs, external-facing disclosure risk, and safer versions for the intended recipient.",
+      "triggers": [
+        "A draft may be sent outside the legal team, to a client, opposing party, regulator, court, vendor, or business stakeholder.",
+        "A draft contains client names, employee names, addresses, account numbers, emails, sensitive facts, privileged communications, or attorney mental impressions.",
+        "A matter workspace or output needs privilege/work-product labeling reviewed.",
+        "The user asks for a redacted, anonymized, or external-facing version."
+      ],
+      "required_inputs": [
+        "The draft output to review for privilege and confidentiality risk",
+        "The intended recipient and distribution plan",
+        "The matter context, client identity, and confidentiality instructions if known"
+      ],
+      "jurisdiction_gate": false,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/legal-prose-polish/SKILL.md"
       ]
     },
     {
@@ -3043,13 +3471,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-methodology/source-validation/SKILL.md",
         "skills/legal-methodology/risk-assessment/SKILL.md"
@@ -3080,13 +3509,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-research/legal-research-memo/SKILL.md",
         "skills/contracts/nda-review/SKILL.md",
@@ -3100,7 +3531,7 @@
       "path": "skills/legal-methodology/source-validation/SKILL.md",
       "practice_area": "legal-methodology",
       "category": "verification",
-      "summary": "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`.",
+      "summary": "Use when classifying whether cited sources, authorities, quotations, dates, and factual claims in draft legal work product are supported by materials available in the session, applying the source hierarchy in `core/source-and-citation-discipline.md`.",
       "triggers": [
         "A draft legal work product contains citations, quotations, authority references, or factual claims that need to be checked before the draft is finalized or passed to attorney review.",
         "A user asks to \"verify the sources,\" \"check the citations,\" \"confirm these quotes are real,\" or \"validate the authority in this draft.\"",
@@ -3118,15 +3549,18 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-methodology/red-team-verifier/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md",
         "skills/legal-research/legal-research-memo/SKILL.md"
       ]
     },
@@ -3155,13 +3589,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-research/legal-research-memo/SKILL.md",
         "skills/contracts/contract-risk-review/SKILL.md",
@@ -3190,13 +3626,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-ops/signature-routing-checklist/SKILL.md",
         "skills/corporate/board-minutes/SKILL.md",
@@ -3226,12 +3664,13 @@
       "deadline_gate": false,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "confidentiality-privilege"
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-ops/legal-meeting-briefing/SKILL.md",
         "skills/contracts/contract-risk-review/SKILL.md",
@@ -3262,13 +3701,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-ops/signature-routing-checklist/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
@@ -3301,13 +3742,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/brief-section-drafter/SKILL.md",
         "skills/legal-methodology/statutory-interpretation/SKILL.md",
@@ -3338,14 +3780,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/legal-research/legal-research-memo/SKILL.md",
         "skills/litigation/claim-chart/SKILL.md",
@@ -3376,13 +3821,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/brief-section-drafter/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
@@ -3413,14 +3860,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
@@ -3450,13 +3900,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
@@ -3486,14 +3938,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md"
@@ -3524,13 +3979,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/matter-intake/SKILL.md",
         "skills/litigation/demand-letter/SKILL.md",
@@ -3561,13 +4018,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/subpoena-triage/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
@@ -3597,14 +4055,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/claim-chart/SKILL.md",
         "skills/litigation/legal-hold/SKILL.md"
@@ -3634,14 +4094,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/matter-intake/SKILL.md",
         "skills/litigation/legal-hold/SKILL.md"
@@ -3669,13 +4131,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/data-room-index-review/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
@@ -3704,13 +4168,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
@@ -3739,13 +4205,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
@@ -3775,13 +4243,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
@@ -3810,13 +4280,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
         "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
@@ -3845,13 +4317,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
@@ -3880,13 +4354,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
@@ -3915,13 +4391,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
@@ -3951,13 +4429,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
@@ -3986,13 +4466,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
@@ -4024,13 +4506,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
@@ -4065,14 +4549,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md"
@@ -4102,13 +4588,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
@@ -4141,13 +4629,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
@@ -4179,13 +4669,15 @@
       "deadline_gate": false,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
         "skills/product-legal/launch-review/SKILL.md",
@@ -4216,13 +4708,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/product-legal/marketing-claims-review/SKILL.md",
         "skills/product-legal/ai-feature-review/SKILL.md",
@@ -4254,13 +4748,15 @@
       "deadline_gate": false,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/product-legal/launch-review/SKILL.md",
         "skills/product-legal/terms-of-service-review/SKILL.md",
@@ -4292,13 +4788,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/nda-review/SKILL.md",
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
@@ -4328,13 +4826,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/psa-review/SKILL.md",
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
@@ -4365,13 +4865,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/lease-abstract/SKILL.md",
         "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
@@ -4402,13 +4904,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/lease-abstract/SKILL.md",
         "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
@@ -4438,13 +4942,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
         "skills/real-estate/commercial-lease-review/SKILL.md",
@@ -4474,13 +4980,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/lease-abstract/SKILL.md",
         "skills/real-estate/commercial-lease-review/SKILL.md",
@@ -4510,13 +5018,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
         "skills/real-estate/closing-deliverables-tracker/SKILL.md",
@@ -4546,13 +5056,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/title-survey-objection-tracker/SKILL.md",
         "skills/real-estate/closing-deliverables-tracker/SKILL.md",
@@ -4582,13 +5094,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
         "skills/real-estate/psa-review/SKILL.md",
@@ -4618,13 +5132,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
         "skills/real-estate/commercial-lease-review/SKILL.md",
@@ -4655,13 +5171,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/regulatory/rule-change-summary/SKILL.md",
         "skills/regulatory/enforcement-risk-memo/SKILL.md",
@@ -4692,13 +5210,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/rule-change-summary/SKILL.md",
@@ -4729,14 +5249,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/rule-change-summary/SKILL.md",
@@ -4767,13 +5289,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/regulatory/enforcement-risk-memo/SKILL.md",
         "skills/regulatory/compliance-gap-matrix/SKILL.md"
@@ -4803,14 +5327,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
         "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
@@ -4841,14 +5368,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
         "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
@@ -4879,14 +5409,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
         "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
@@ -4917,14 +5450,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
         "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
@@ -4956,14 +5491,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
         "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
@@ -4994,14 +5531,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/risk-factor-review/SKILL.md",
         "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
@@ -5032,14 +5571,17 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
         "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
@@ -5070,14 +5612,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
         "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
@@ -5108,14 +5652,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
         "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
@@ -5146,14 +5692,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
         "skills/securities-capital-markets/risk-factor-review/SKILL.md",
@@ -5184,14 +5732,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
         "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
@@ -5223,14 +5773,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
         "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
@@ -5260,13 +5812,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/ai-governance/ai-use-case-intake/SKILL.md",
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
@@ -5296,10 +5849,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5331,13 +5884,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
         "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md",
@@ -5367,13 +5921,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/contracts/nda-review/SKILL.md"
@@ -5402,13 +5957,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/corporate/board-minutes/SKILL.md",
         "skills/corporate/diligence-issue-extraction/SKILL.md"
@@ -5439,13 +5995,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/matter-intake/SKILL.md",
         "skills/legal-methodology/red-team-verifier/SKILL.md"
@@ -5474,10 +6031,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5509,10 +6066,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5544,13 +6101,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/insurance/insurance-policy-summary/SKILL.md",
         "skills/insurance/coverage-issue-spotter/SKILL.md",
@@ -5580,10 +6138,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5615,13 +6173,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/matter-intake/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md"
@@ -5650,10 +6209,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5685,13 +6244,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md"
@@ -5720,10 +6280,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5755,10 +6315,10 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "source_validation_mandatory": false,
       "related_skills": [
@@ -5790,13 +6350,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/compliance-program-tracker/SKILL.md",
@@ -5826,13 +6387,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
         "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
@@ -5862,13 +6424,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/international-tax-issue-spotter/SKILL.md",
@@ -5898,13 +6461,14 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-planning-intake/SKILL.md",
         "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md",
@@ -5935,14 +6499,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/tax-document-organizer/SKILL.md",
@@ -5973,14 +6539,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/tax-document-organizer/SKILL.md",
@@ -6011,14 +6579,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/tax-document-organizer/SKILL.md",
@@ -6049,14 +6619,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/entity-tax-classification-checklist/SKILL.md",
@@ -6087,14 +6659,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/tax-document-organizer/SKILL.md",
@@ -6125,14 +6699,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-provision-review-checklist/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
@@ -6162,13 +6738,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
@@ -6199,14 +6777,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-document-organizer/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
@@ -6237,14 +6817,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-covenants-indemnities-review/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
@@ -6275,14 +6857,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/tax-provision-review-checklist/SKILL.md",
@@ -6312,13 +6896,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-planning-intake/SKILL.md",
         "skills/trusts-estates/probate-document-checklist/SKILL.md",
@@ -6348,14 +6934,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-document-summary/SKILL.md",
         "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
@@ -6385,14 +6973,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md",
         "skills/trusts-estates/estate-document-summary/SKILL.md",
@@ -6423,13 +7013,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-planning-intake/SKILL.md",
         "skills/trusts-estates/beneficiary-designation-review/SKILL.md",
@@ -6459,14 +7051,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/capacity-undue-influence-facts-organizer/SKILL.md",
         "skills/trusts-estates/estate-document-summary/SKILL.md",
@@ -6497,14 +7091,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-document-summary/SKILL.md",
         "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
@@ -6535,14 +7131,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-planning-intake/SKILL.md",
         "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
@@ -6573,14 +7171,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/trust-administration-tracker/SKILL.md",
         "skills/trusts-estates/estate-litigation-facts-chronology/SKILL.md",
@@ -6610,14 +7210,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/probate-document-checklist/SKILL.md",
         "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
@@ -6647,13 +7249,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",
         "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md",
@@ -6684,14 +7288,16 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/estate-document-summary/SKILL.md",
         "skills/trusts-estates/fiduciary-duty-issue-spotter/SKILL.md",
@@ -6721,13 +7327,15 @@
       "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
-      "source_validation_mandatory": true,
+      "source_validation_mandatory": false,
       "related_skills": [
         "skills/trusts-estates/beneficiary-designation-review/SKILL.md",
         "skills/trusts-estates/asset-liability-inventory-builder/SKILL.md",

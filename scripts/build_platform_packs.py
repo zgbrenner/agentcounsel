@@ -52,12 +52,15 @@ CORE_SAFETY_FILES = [
 CORE_CHECKLIST_FILE = "attorney-review-checklist.md"
 CORE_ALL = CORE_SAFETY_FILES + [CORE_CHECKLIST_FILE]
 QUALITY_CHECK_FILES = {
-    "attorney-review": "core/attorney-review-checklist.md",
-    "source-validation": "skills/legal-methodology/source-validation/SKILL.md",
-    "red-team-verifier": "skills/legal-methodology/red-team-verifier/SKILL.md",
+    "assumption-audit": "skills/legal-methodology/assumption-audit/SKILL.md",
+    "attorney-review-gate": "skills/legal-methodology/attorney-review-gate/SKILL.md",
+    "citation-integrity-check": "skills/legal-methodology/citation-integrity-check/SKILL.md",
+    "hallucination-red-team": "skills/legal-methodology/hallucination-red-team/SKILL.md",
+    "legal-prose-polish": "skills/legal-methodology/legal-prose-polish/SKILL.md",
+    "output-format-compliance-check": "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+    "privilege-confidentiality-check": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
+    "source-validation-check": "skills/legal-methodology/source-validation/SKILL.md",
     "jurisdiction-deadline-gates": "core/jurisdiction-and-deadline-gates.md",
-    "confidentiality-privilege": "core/confidentiality-and-privilege.md",
-    "legal-prose-quality": "core/output-format-rules.md",
 }
 
 # Every generated pack must carry the AgentCounsel safety framing.

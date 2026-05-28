@@ -2,7 +2,7 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
   "normalized_schema_version": "1.0",
-  "skill_count": 179,
+  "skill_count": 186,
   "platforms": [
     "chatgpt",
     "claude",
@@ -13,27 +13,39 @@
   ],
   "quality_checks": [
     {
-      "id": "attorney-review",
-      "path": "core/attorney-review-checklist.md"
+      "id": "assumption-audit",
+      "path": "skills/legal-methodology/assumption-audit/SKILL.md"
     },
     {
-      "id": "confidentiality-privilege",
-      "path": "core/confidentiality-and-privilege.md"
+      "id": "attorney-review-gate",
+      "path": "skills/legal-methodology/attorney-review-gate/SKILL.md"
+    },
+    {
+      "id": "citation-integrity-check",
+      "path": "skills/legal-methodology/citation-integrity-check/SKILL.md"
+    },
+    {
+      "id": "hallucination-red-team",
+      "path": "skills/legal-methodology/hallucination-red-team/SKILL.md"
     },
     {
       "id": "jurisdiction-deadline-gates",
       "path": "core/jurisdiction-and-deadline-gates.md"
     },
     {
-      "id": "legal-prose-quality",
-      "path": "core/output-format-rules.md"
+      "id": "legal-prose-polish",
+      "path": "skills/legal-methodology/legal-prose-polish/SKILL.md"
     },
     {
-      "id": "red-team-verifier",
-      "path": "skills/legal-methodology/red-team-verifier/SKILL.md"
+      "id": "output-format-compliance-check",
+      "path": "skills/legal-methodology/output-format-compliance-check/SKILL.md"
     },
     {
-      "id": "source-validation",
+      "id": "privilege-confidentiality-check",
+      "path": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md"
+    },
+    {
+      "id": "source-validation-check",
       "path": "skills/legal-methodology/source-validation/SKILL.md"
     }
   ],
@@ -48,7 +60,7 @@
     "financial-crime": 2,
     "insurance": 12,
     "ip": 7,
-    "legal-methodology": 4,
+    "legal-methodology": 11,
     "legal-ops": 3,
     "legal-research": 1,
     "litigation": 9,
@@ -72,12 +84,12 @@
     "review": 51,
     "summarization": 5,
     "triage": 12,
-    "verification": 4
+    "verification": 11
   },
   "risk_levels": {
     "low": 20,
-    "medium": 70,
-    "high": 86,
+    "medium": 73,
+    "high": 90,
     "critical": 3
   },
   "skills": [
@@ -108,11 +120,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": false,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -188,11 +201,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -268,11 +283,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -347,11 +364,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -424,12 +443,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -498,12 +519,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -572,12 +595,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -646,12 +671,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -720,12 +747,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -794,12 +823,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -868,12 +899,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -942,12 +975,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1016,12 +1051,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1090,12 +1127,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1167,12 +1206,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1250,12 +1291,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1332,12 +1375,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1414,12 +1459,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1496,12 +1543,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1579,12 +1628,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1661,12 +1712,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1743,12 +1796,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1825,12 +1880,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1908,12 +1965,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -1990,12 +2049,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2073,12 +2134,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2156,11 +2219,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2237,11 +2302,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2319,11 +2386,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2396,11 +2465,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2474,11 +2545,13 @@
       "requires_jurisdiction": false,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2553,11 +2626,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2627,11 +2702,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2704,12 +2781,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2780,11 +2859,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2851,12 +2932,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -2926,11 +3009,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3003,11 +3088,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3079,11 +3166,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3155,12 +3244,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3232,12 +3323,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3309,12 +3402,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3386,12 +3481,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3461,12 +3558,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3537,12 +3636,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3612,12 +3713,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3693,12 +3796,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3773,12 +3878,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3853,12 +3960,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -3934,12 +4043,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4014,12 +4125,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4094,12 +4207,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4174,11 +4289,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4253,12 +4370,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4333,11 +4452,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4412,12 +4533,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4492,12 +4615,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4573,12 +4698,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4657,12 +4784,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4740,12 +4869,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4820,11 +4951,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4899,11 +5032,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -4978,12 +5113,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5058,12 +5195,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5138,11 +5277,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5217,12 +5358,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5297,12 +5440,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5377,11 +5522,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5457,12 +5604,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5537,12 +5686,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5617,12 +5768,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5695,12 +5848,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5772,12 +5927,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": false,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5848,11 +6006,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5922,11 +6082,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -5999,12 +6161,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6075,11 +6239,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6150,10 +6316,12 @@
       "requires_jurisdiction": false,
       "requires_deadline_check": false,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "confidentiality-privilege"
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6201,6 +6369,559 @@
       ]
     },
     {
+      "id": "legal-methodology/assumption-audit",
+      "title": "Assumption Audit",
+      "path": "skills/legal-methodology/assumption-audit/SKILL.md",
+      "summary": "Use when extracting and auditing explicit assumptions, hidden assumptions, missing facts, missing documents, jurisdiction gaps, deadline gaps, client-role ambiguity, escalation items, business decision points, and professional-responsibility concerns in draft legal work product.",
+      "use_when": [
+        "A draft may have filled gaps silently or treated uncertain facts as established.",
+        "A document review, research memo, client update, demand letter, or risk matrix contains assumptions or missing-input notes.",
+        "The user asks what facts are still needed, what assumptions are built into the analysis, or what could change the conclusion.",
+        "A matter is moving from a draft output into attorney review or a matter workspace."
+      ],
+      "required_inputs": [
+        "The draft legal output to audit",
+        "The user-provided facts, source documents, and instructions available for comparison",
+        "The intended use, audience, jurisdiction, and client role if known"
+      ],
+      "expected_outputs": [
+        "Assumption audit table",
+        "Missing-information and escalation list"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "assumptions",
+        "legal-methodology",
+        "medium",
+        "missing-facts",
+        "quality-control",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Assumption Audit",
+      "description": "Use when extracting and auditing explicit assumptions, hidden assumptions, missing facts, missing documents, jurisdiction gaps, deadline gaps, client-role ambiguity, escalation items, business decision points, and professional-responsibility concerns in draft legal work product.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft legal output to audit",
+        "The user-provided facts, source documents, and instructions available for comparison",
+        "The intended use, audience, jurisdiction, and client role if known"
+      ],
+      "outputs": [
+        "Assumption audit table",
+        "Missing-information and escalation list"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/source-validation/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/red-team-verifier/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "assumptions",
+        "missing-facts",
+        "quality-control",
+        "verification"
+      ]
+    },
+    {
+      "id": "legal-methodology/attorney-review-gate",
+      "title": "Attorney Review Gate",
+      "path": "skills/legal-methodology/attorney-review-gate/SKILL.md",
+      "summary": "Use when running a final quality gate before legal draft work product is sent, filed, relied upon, or delivered for attorney review, producing must-confirm facts, law, citations, client decisions, ethics flags, privilege flags, jurisdiction/deadline flags, and a ready-or-not-ready status.",
+      "use_when": [
+        "A high-risk legal output is about to be sent, filed, delivered, or relied upon.",
+        "A draft demand letter, client memo, research summary, risk assessment, contract review, or filing-bound draft needs final attorney-review triage.",
+        "Other quality checks have produced findings that need to be consolidated.",
+        "The user asks whether a draft is ready for attorney review."
+      ],
+      "required_inputs": [
+        "The final draft legal work product to gate",
+        "The source materials, citations, assumptions, and prior quality-check reports",
+        "The intended recipient, use, jurisdiction, and deadline context"
+      ],
+      "expected_outputs": [
+        "Attorney review gate checklist",
+        "Ready for attorney review or not ready for attorney review status"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "attorney-review",
+        "final-check",
+        "high",
+        "legal-methodology",
+        "quality-control",
+        "review-gate",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Attorney Review Gate",
+      "description": "Use when running a final quality gate before legal draft work product is sent, filed, relied upon, or delivered for attorney review, producing must-confirm facts, law, citations, client decisions, ethics flags, privilege flags, jurisdiction/deadline flags, and a ready-or-not-ready status.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The final draft legal work product to gate",
+        "The source materials, citations, assumptions, and prior quality-check reports",
+        "The intended recipient, use, jurisdiction, and deadline context"
+      ],
+      "outputs": [
+        "Attorney review gate checklist",
+        "Ready for attorney review or not ready for attorney review status"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "attorney-review",
+        "review-gate",
+        "quality-control",
+        "final-check"
+      ]
+    },
+    {
+      "id": "legal-methodology/citation-integrity-check",
+      "title": "Citation Integrity Check",
+      "path": "skills/legal-methodology/citation-integrity-check/SKILL.md",
+      "summary": "Use when reviewing legal citations, authorities, quotations, and authority-backed propositions to classify citation source status, flag unverifiable or malformed authorities, and prepare attorney verification items without claiming automated legal citation verification.",
+      "use_when": [
+        "A draft contains cases, statutes, regulations, rules, agency guidance, quotations, treatises, articles, or legal-source URLs.",
+        "A user asks whether citations look real, complete, current, binding, persuasive, or properly used.",
+        "A research memo, rule summary, demand letter, brief section, or legal analysis includes legal authorities.",
+        "A source-validation or red-team pass has flagged citation concerns.",
+        "A draft may rely on model-suggested authorities that need attorney verification."
+      ],
+      "required_inputs": [
+        "The draft containing citations or authority-backed propositions",
+        "The cited authorities or source materials available for review",
+        "The jurisdiction, court, agency, or governing-law context if known"
+      ],
+      "expected_outputs": [
+        "Citation integrity table",
+        "Authority verification issue list"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": false,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "authority-check",
+        "citation-integrity",
+        "hallucination-control",
+        "high",
+        "legal-methodology",
+        "source-validation",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Citation Integrity Check",
+      "description": "Use when reviewing legal citations, authorities, quotations, and authority-backed propositions to classify citation source status, flag unverifiable or malformed authorities, and prepare attorney verification items without claiming automated legal citation verification.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft containing citations or authority-backed propositions",
+        "The cited authorities or source materials available for review",
+        "The jurisdiction, court, agency, or governing-law context if known"
+      ],
+      "outputs": [
+        "Citation integrity table",
+        "Authority verification issue list"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/source-validation/SKILL.md",
+        "skills/legal-methodology/red-team-verifier/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "citation-integrity",
+        "authority-check",
+        "source-validation",
+        "hallucination-control"
+      ]
+    },
+    {
+      "id": "legal-methodology/hallucination-red-team",
+      "title": "Hallucination Red-Team",
+      "path": "skills/legal-methodology/hallucination-red-team/SKILL.md",
+      "summary": "Use when stress-testing draft legal work product for hallucination risk by separating factual claims, legal claims, cited authorities, user-provided information, model-generated information, unsupported claims, uncertainty, and safer revisions.",
+      "use_when": [
+        "A draft contains legal claims, factual claims, citations, quotations, or confident conclusions that may be unsupported.",
+        "A user asks for a hallucination check, unsupported-claim audit, or safer revised version.",
+        "A draft will be sent externally, filed, used in a client communication, or relied on for a high-risk decision.",
+        "A model produced the draft without a clear claim/source table."
+      ],
+      "required_inputs": [
+        "The complete draft legal output to red-team",
+        "The user-provided facts, source documents, and cited authorities",
+        "The intended use and audience of the output"
+      ],
+      "expected_outputs": [
+        "Hallucination risk report",
+        "Safer revised version or not-ready finding"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "hallucination-check",
+        "high",
+        "legal-methodology",
+        "red-team",
+        "unsupported-claims",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Hallucination Red-Team",
+      "description": "Use when stress-testing draft legal work product for hallucination risk by separating factual claims, legal claims, cited authorities, user-provided information, model-generated information, unsupported claims, uncertainty, and safer revisions.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The complete draft legal output to red-team",
+        "The user-provided facts, source documents, and cited authorities",
+        "The intended use and audience of the output"
+      ],
+      "outputs": [
+        "Hallucination risk report",
+        "Safer revised version or not-ready finding"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/red-team-verifier/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "hallucination-check",
+        "red-team",
+        "unsupported-claims",
+        "verification"
+      ]
+    },
+    {
+      "id": "legal-methodology/legal-prose-polish",
+      "title": "Legal Prose Polish",
+      "path": "skills/legal-methodology/legal-prose-polish/SKILL.md",
+      "summary": "Use when revising draft legal work product to remove AI-sounding filler, vague risk language, unsupported certainty, and style defects while preserving citations, defined terms, quotations, privilege labels, client instructions, and attorney-review warnings.",
+      "use_when": [
+        "A draft memo, email, demand letter, risk table, contract review, checklist, or client update sounds generic, padded, or AI-written.",
+        "A draft overuses phrases such as \"notably,\" \"moreover,\" \"it is important to note,\" \"delve,\" \"landscape,\" \"underscore,\" \"robust,\" or similar generic phrasing.",
+        "The user asks to make a legal draft clearer, tighter, more lawyerly, or less AI-sounding.",
+        "A draft contains conclusory or vague legal risk language that should be tied to facts, sources, or attorney-review caveats.",
+        "A draft is external-facing and needs clearer agency, responsibility, and tone before attorney review."
+      ],
+      "required_inputs": [
+        "The draft legal output to polish",
+        "The intended audience and use",
+        "Optional: the source documents, citations, defined terms, and client style preferences"
+      ],
+      "expected_outputs": [
+        "Legal prose polish report",
+        "Safer revised draft or marked revision plan"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "anti-slop",
+        "legal-methodology",
+        "legal-writing",
+        "medium",
+        "prose-polish",
+        "quality-control",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Legal Prose Polish",
+      "description": "Use when revising draft legal work product to remove AI-sounding filler, vague risk language, unsupported certainty, and style defects while preserving citations, defined terms, quotations, privilege labels, client instructions, and attorney-review warnings.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft legal output to polish",
+        "The intended audience and use",
+        "Optional: the source documents, citations, defined terms, and client style preferences"
+      ],
+      "outputs": [
+        "Legal prose polish report",
+        "Safer revised draft or marked revision plan"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "prose-polish",
+        "quality-control",
+        "legal-writing",
+        "anti-slop"
+      ]
+    },
+    {
+      "id": "legal-methodology/output-format-compliance-check",
+      "title": "Output Format Compliance Check",
+      "path": "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+      "summary": "Use when checking whether draft legal work product matches the requested format, required sections, labels, tables, chronology, checklist, matrix, memo, email, demand letter, client update, or research-summary structure.",
+      "use_when": [
+        "A draft may not match the requested output format.",
+        "A draft should follow an AgentCounsel skill's Output Format but appears incomplete.",
+        "The user asks to check formatting, sections, table columns, chronology structure, checklist structure, or memo/email/demand-letter format.",
+        "A platform pack or one-off prompt output needs a deterministic structure check before attorney review."
+      ],
+      "required_inputs": [
+        "The draft output to check",
+        "The requested format or originating AgentCounsel skill",
+        "Any required sections, table columns, templates, or client formatting instructions"
+      ],
+      "expected_outputs": [
+        "Output format compliance report",
+        "Corrected skeleton or missing-section checklist"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": false,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "format-check",
+        "legal-methodology",
+        "medium",
+        "output-format",
+        "quality-control",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Output Format Compliance Check",
+      "description": "Use when checking whether draft legal work product matches the requested format, required sections, labels, tables, chronology, checklist, matrix, memo, email, demand letter, client update, or research-summary structure.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft output to check",
+        "The requested format or originating AgentCounsel skill",
+        "Any required sections, table columns, templates, or client formatting instructions"
+      ],
+      "outputs": [
+        "Output format compliance report",
+        "Corrected skeleton or missing-section checklist"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/legal-prose-polish/SKILL.md",
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "output-format",
+        "format-check",
+        "quality-control",
+        "verification"
+      ]
+    },
+    {
+      "id": "legal-methodology/privilege-confidentiality-check",
+      "title": "Privilege and Confidentiality Check",
+      "path": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
+      "summary": "Use when reviewing draft legal work product for confidential client information, privileged communications, work-product labeling, redaction/anonymization needs, external-facing disclosure risk, and safer versions for the intended recipient.",
+      "use_when": [
+        "A draft may be sent outside the legal team, to a client, opposing party, regulator, court, vendor, or business stakeholder.",
+        "A draft contains client names, employee names, addresses, account numbers, emails, sensitive facts, privileged communications, or attorney mental impressions.",
+        "A matter workspace or output needs privilege/work-product labeling reviewed.",
+        "The user asks for a redacted, anonymized, or external-facing version."
+      ],
+      "required_inputs": [
+        "The draft output to review for privilege and confidentiality risk",
+        "The intended recipient and distribution plan",
+        "The matter context, client identity, and confidentiality instructions if known"
+      ],
+      "expected_outputs": [
+        "Privilege and confidentiality risk report",
+        "Safer external-facing version or redaction plan"
+      ],
+      "category": "verification",
+      "requires_jurisdiction": false,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "confidentiality",
+        "high",
+        "legal-methodology",
+        "privilege",
+        "quality-control",
+        "redaction",
+        "verification"
+      ],
+      "eval_status": "covered_no_candidate",
+      "name": "Privilege and Confidentiality Check",
+      "description": "Use when reviewing draft legal work product for confidential client information, privileged communications, work-product labeling, redaction/anonymization needs, external-facing disclosure risk, and safer versions for the intended recipient.",
+      "practice_area": "legal-methodology",
+      "task_type": "verification",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft output to review for privilege and confidentiality risk",
+        "The intended recipient and distribution plan",
+        "The matter context, client identity, and confidentiality instructions if known"
+      ],
+      "outputs": [
+        "Privilege and confidentiality risk report",
+        "Safer external-facing version or redaction plan"
+      ],
+      "related_skills": [
+        "skills/legal-methodology/attorney-review-gate/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md",
+        "skills/legal-methodology/legal-prose-polish/SKILL.md"
+      ],
+      "tags": [
+        "legal-methodology",
+        "privilege",
+        "confidentiality",
+        "redaction",
+        "quality-control"
+      ]
+    },
+    {
       "id": "legal-methodology/red-team-verifier",
       "title": "Red-Team Verifier",
       "path": "skills/legal-methodology/red-team-verifier/SKILL.md",
@@ -6227,11 +6948,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6302,11 +7024,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6356,7 +7080,7 @@
       "id": "legal-methodology/source-validation",
       "title": "Source Validation",
       "path": "skills/legal-methodology/source-validation/SKILL.md",
-      "summary": "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`.",
+      "summary": "Use when classifying whether cited sources, authorities, quotations, dates, and factual claims in draft legal work product are supported by materials available in the session, applying the source hierarchy in `core/source-and-citation-discipline.md`.",
       "use_when": [
         "A draft legal work product contains citations, quotations, authority references, or factual claims that need to be checked before the draft is finalized or passed to attorney review.",
         "A user asks to \"verify the sources,\" \"check the citations,\" \"confirm these quotes are real,\" or \"validate the authority in this draft.\"",
@@ -6371,17 +7095,20 @@
         "The claims, quotations, and dates to validate"
       ],
       "expected_outputs": [
-        "Source validation table flagging unverifiable or inaccurate citations for attorney review"
+        "Claim table classifying support status for factual and legal claims",
+        "Source reference table",
+        "Unsupported claims and contradictions list"
       ],
       "category": "verification",
       "requires_jurisdiction": false,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6400,7 +7127,7 @@
       ],
       "eval_status": "covered_no_candidate",
       "name": "Source Validation",
-      "description": "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`.",
+      "description": "Use when classifying whether cited sources, authorities, quotations, dates, and factual claims in draft legal work product are supported by materials available in the session, applying the source hierarchy in `core/source-and-citation-discipline.md`.",
       "practice_area": "legal-methodology",
       "task_type": "verification",
       "jurisdictions": [],
@@ -6412,10 +7139,14 @@
         "The claims, quotations, and dates to validate"
       ],
       "outputs": [
-        "Source validation table flagging unverifiable or inaccurate citations for attorney review"
+        "Claim table classifying support status for factual and legal claims",
+        "Source reference table",
+        "Unsupported claims and contradictions list"
       ],
       "related_skills": [
         "skills/legal-methodology/red-team-verifier/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md",
+        "skills/legal-methodology/assumption-audit/SKILL.md",
         "skills/legal-research/legal-research-memo/SKILL.md"
       ],
       "tags": [
@@ -6450,11 +7181,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6524,11 +7257,13 @@
       "requires_jurisdiction": false,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6603,10 +7338,11 @@
       "requires_jurisdiction": false,
       "requires_deadline_check": false,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "confidentiality-privilege"
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6683,11 +7419,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6763,11 +7501,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6840,12 +7579,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6916,11 +7658,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -6992,12 +7736,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7067,11 +7814,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7142,12 +7891,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7219,11 +7971,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7295,11 +8049,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7367,12 +8122,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7443,12 +8200,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7517,11 +8276,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7593,11 +8354,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7669,11 +8432,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7745,11 +8510,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7820,11 +8587,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7897,11 +8666,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -7973,11 +8744,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8050,11 +8823,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8128,11 +8903,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8203,11 +8980,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8281,11 +9060,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8362,12 +9143,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8437,11 +9220,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8516,11 +9301,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8595,11 +9382,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": false,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8673,11 +9462,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8752,11 +9543,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": false,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8831,11 +9624,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8908,11 +9703,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -8987,11 +9784,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9067,11 +9866,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9145,11 +9946,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9223,11 +10026,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9302,11 +10107,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9380,11 +10187,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9458,11 +10267,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9536,11 +10347,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9614,11 +10427,13 @@
       "requires_jurisdiction": false,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9693,11 +10508,13 @@
       "requires_jurisdiction": false,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9773,12 +10590,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9849,11 +10668,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -9924,12 +10745,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10002,12 +10826,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10080,12 +10907,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10158,12 +10988,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10237,12 +11069,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10315,12 +11149,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10393,12 +11229,15 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10471,12 +11310,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10549,12 +11390,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10627,12 +11470,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10705,12 +11550,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10784,12 +11631,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10860,11 +11709,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -10935,10 +11785,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11009,11 +11859,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11084,11 +11935,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11158,11 +12010,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11236,11 +12089,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11313,10 +12167,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11387,10 +12241,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11461,11 +12315,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11536,10 +12391,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11610,11 +12465,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11684,10 +12540,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11758,11 +12614,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11832,10 +12689,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11906,10 +12763,10 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
+        "attorney-review-gate",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -11980,11 +12837,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12055,11 +12913,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12130,11 +12989,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12205,11 +13065,12 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12283,12 +13144,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12364,12 +13227,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12445,12 +13310,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12527,12 +13394,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12610,12 +13479,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12692,12 +13563,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12773,11 +13646,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12853,12 +13728,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -12935,12 +13812,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13017,12 +13896,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13098,11 +13979,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13177,12 +14060,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13257,12 +14142,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13338,11 +14225,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13418,12 +14307,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13499,12 +14390,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13581,12 +14474,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13663,12 +14558,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13745,12 +14642,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13825,11 +14724,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13906,12 +14807,14 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
@@ -13987,11 +14890,13 @@
       "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
-        "attorney-review",
-        "legal-prose-quality",
-        "source-validation",
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
       ],
       "compatible_platforms": [
         "chatgpt",
