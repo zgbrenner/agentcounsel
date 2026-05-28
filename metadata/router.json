@@ -39,9 +39,9 @@
         "jurisdiction or governing law if relevant"
       ],
       "quality_checks": [
-        "attorney-review",
-        "source-validation",
-        "legal-prose-quality"
+        "attorney-review-gate",
+        "source-validation-check",
+        "legal-prose-polish"
       ]
     },
     {
@@ -60,9 +60,10 @@
         "client objective and authorized tone"
       ],
       "quality_checks": [
-        "attorney-review",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "hallucination-red-team",
+        "privilege-confidentiality-check",
         "jurisdiction-deadline-gates"
       ]
     },
@@ -78,8 +79,9 @@
         "jurisdiction"
       ],
       "quality_checks": [
-        "attorney-review",
-        "source-validation",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
         "jurisdiction-deadline-gates"
       ]
     },
@@ -96,9 +98,11 @@
         "settlement authority"
       ],
       "quality_checks": [
-        "attorney-review",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
+        "privilege-confidentiality-check",
         "jurisdiction-deadline-gates"
       ]
     },
@@ -114,9 +118,10 @@
         "client fallback positions or playbook"
       ],
       "quality_checks": [
-        "attorney-review",
-        "source-validation",
-        "legal-prose-quality"
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "legal-prose-polish"
       ]
     },
     {
@@ -131,11 +136,12 @@
         "planned termination date"
       ],
       "quality_checks": [
-        "attorney-review",
-        "source-validation",
-        "red-team-verifier",
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
-        "confidentiality-privilege"
+        "privilege-confidentiality-check"
       ]
     }
   ],

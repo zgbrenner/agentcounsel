@@ -47,6 +47,9 @@ jobs:
       - name: Run skill eval candidates (static, --strict)
         run: python scripts/run_evals.py --strict --quiet
 
+      - name: Check eval coverage report is up to date
+        run: python scripts/generate_eval_report.py --check
+
       - name: Check skill-improvement reports are up to date
         run: python scripts/generate_skill_improvement_prompts.py --check
 

@@ -46,6 +46,10 @@ Skills are scored with the eight-dimension `SKILL_QUALITY_RUBRIC.md`.
 evals/
   README.md                  - this file
   SKILL_QUALITY_RUBRIC.md    - 1-5 scoring rubric for skill quality
+  RUBRICS.md                 - reusable rubrics for skills, router, packs, and quality checks
+  benchmarks/                - richer fictional benchmark cases
+  router/                    - vague-request router evals
+  static/                    - metadata, router, and pack integrity eval definitions
   shared/
     assertions.md            - recurring quality and safety assertions
   skills/
@@ -104,6 +108,9 @@ python scripts/run_evals.py                 # run all eval files
 python scripts/run_evals.py <skill-slug>    # run one skill's eval
 python scripts/run_evals.py --strict        # required candidates must pass
 python scripts/run_evals.py --quiet         # rollup only, no per-case detail
+python scripts/run_evals.py --markdown-report reports/eval-run.md
+python scripts/generate_eval_report.py      # write reports/eval-coverage.md
+python scripts/generate_eval_report.py --check
 ```
 
 The runner reads candidate skill outputs from `evals/outputs/<slug>/<case-id>.md`
@@ -124,6 +131,19 @@ candidate file under `evals/outputs/` and every applicable assertion must
 pass; failure exits 1. The CI pipeline runs `--strict --quiet` after
 `check_evals.py`. See `outputs/README.md` for the file convention and how
 to add a candidate.
+
+### 2a. Benchmark, router, and static suites
+
+`benchmarks/*.eval.yaml` uses a richer case schema with `eval_id`, `skill_id`,
+practice area, category, risk level, source materials, required quality checks,
+rubrics, pass/fail criteria, known limitations, and an `eval_status`.
+
+`router/*.eval.yaml` records expected routing behavior for vague requests:
+primary skill, missing facts, gates, quality checks, and attorney escalation.
+
+`static/*.eval.yaml` documents deterministic metadata, router, and pack checks.
+`scripts/check_evals.py` enforces those checks against `metadata/index.json`,
+`metadata/router.json`, and `metadata/packs.json`.
 
 ### 3. Manual review pass (exercises the skills)
 
@@ -196,6 +216,11 @@ Each entry in `cases` (all keys required):
 lists, duplicate case IDs, a `skill_path` that does not resolve to a file, a
 `skill` that does not match the file name, and any `shared_assertions` ID not
 defined in `shared/assertions.md`.
+
+Benchmark cases use the schema documented in `../docs/EVALS.md`. Their
+statuses are `unrun`, `manual-ready`, `automated-static`, and `scored`.
+Do not mark a benchmark as `scored` unless there is an actual candidate-output
+score or recorded manual score.
 
 ## Adding a new skill eval
 

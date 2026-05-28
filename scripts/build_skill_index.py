@@ -77,9 +77,9 @@ QUALITY_CHECKS = {
     "jurisdiction-deadline-gates": "core/jurisdiction-and-deadline-gates.md",
 }
 EVAL_STATUSES = {
-    "covered_with_candidate",
-    "covered_no_candidate",
-    "missing",
+    "scored",
+    "manual-eval-ready",
+    "untested",
 }
 
 ROUTING_EXAMPLES = [
@@ -94,9 +94,9 @@ ROUTING_EXAMPLES = [
             "jurisdiction or governing law if relevant",
         ],
         "quality_checks": [
-            "attorney-review",
-            "source-validation",
-            "legal-prose-quality",
+            "attorney-review-gate",
+            "source-validation-check",
+            "legal-prose-polish",
         ],
     },
     {
@@ -115,9 +115,10 @@ ROUTING_EXAMPLES = [
             "client objective and authorized tone",
         ],
         "quality_checks": [
-            "attorney-review",
-            "source-validation",
-            "red-team-verifier",
+            "attorney-review-gate",
+            "source-validation-check",
+            "hallucination-red-team",
+            "privilege-confidentiality-check",
             "jurisdiction-deadline-gates",
         ],
     },
@@ -133,8 +134,9 @@ ROUTING_EXAMPLES = [
             "jurisdiction",
         ],
         "quality_checks": [
-            "attorney-review",
-            "source-validation",
+            "attorney-review-gate",
+            "citation-integrity-check",
+            "source-validation-check",
             "jurisdiction-deadline-gates",
         ],
     },
@@ -151,9 +153,11 @@ ROUTING_EXAMPLES = [
             "settlement authority",
         ],
         "quality_checks": [
-            "attorney-review",
-            "source-validation",
-            "red-team-verifier",
+            "attorney-review-gate",
+            "citation-integrity-check",
+            "source-validation-check",
+            "hallucination-red-team",
+            "privilege-confidentiality-check",
             "jurisdiction-deadline-gates",
         ],
     },
@@ -169,9 +173,10 @@ ROUTING_EXAMPLES = [
             "client fallback positions or playbook",
         ],
         "quality_checks": [
-            "attorney-review",
-            "source-validation",
-            "legal-prose-quality",
+            "attorney-review-gate",
+            "source-validation-check",
+            "assumption-audit",
+            "legal-prose-polish",
         ],
     },
     {
@@ -186,11 +191,12 @@ ROUTING_EXAMPLES = [
             "planned termination date",
         ],
         "quality_checks": [
-            "attorney-review",
-            "source-validation",
-            "red-team-verifier",
+            "attorney-review-gate",
+            "source-validation-check",
+            "assumption-audit",
+            "hallucination-red-team",
             "jurisdiction-deadline-gates",
-            "confidentiality-privilege",
+            "privilege-confidentiality-check",
         ],
     },
 ]
@@ -396,7 +402,7 @@ def skill_record(skill_dir: Path) -> dict:
         body or "", ["jurisdiction", "governing law", "venue", "forum"])
     requires_deadline_check = _mentions(
         body or "", ["deadline", "due date", "effective date", "response date"])
-    eval_status = eval_coverage_status(slug)
+    eval_status = eval_coverage_status(area, slug)
     record = {
         "id": skill_id,
         "title": meta.get("name"),
@@ -492,14 +498,21 @@ def pack_tags(meta: dict, area: str) -> list[str]:
     return sorted({t for t in tags if isinstance(t, str) and t.strip()})
 
 
-def eval_coverage_status(slug: str) -> str:
-    eval_file = EVALS_ROOT / "skills" / f"{slug}.eval.yaml"
-    if not eval_file.is_file():
-        return "missing"
-    output_dir = EVALS_ROOT / "outputs" / slug
-    if output_dir.is_dir() and any(output_dir.glob("*.md")):
-        return "covered_with_candidate"
-    return "covered_no_candidate"
+def eval_coverage_status(area: str, slug: str) -> str:
+    eval_candidates = [
+        EVALS_ROOT / "skills" / f"{slug}.eval.yaml",
+        EVALS_ROOT / "skills" / f"{area}-{slug}.eval.yaml",
+    ]
+    if not any(path.is_file() for path in eval_candidates):
+        return "untested"
+    output_dirs = [
+        EVALS_ROOT / "outputs" / slug,
+        EVALS_ROOT / "outputs" / f"{area}-{slug}",
+    ]
+    if any(output_dir.is_dir() and any(output_dir.glob("*.md"))
+           for output_dir in output_dirs):
+        return "scored"
+    return "manual-eval-ready"
 
 
 def build_index() -> dict:

@@ -172,6 +172,11 @@ The full safety model — the threat model, what AgentCounsel deliberately does 
 
 AgentCounsel runs out-of-the-box without configuration. To improve output quality for a practice group adopting the library across multiple matters, you can populate a practice-group profile at `practice-profiles/<area>.md`. The profile gives ~20 skills access to the group's standing positions, escalation thresholds, and output preferences.
 
+Eval coverage is tracked through lightweight, no-API checks in `evals/` and
+`reports/eval-coverage.md`. These evals test structure, routing, metadata,
+packs, quality checks, and candidate-output safety signals; they do not verify
+legal correctness or replace attorney review.
+
 See [`CONFIGURING.md`](CONFIGURING.md) for the full configuration guide. The short version:
 
 1. Run the cold-start interview for the practice area (`skills/setup/<area>-cold-start-interview/SKILL.md`) with a supervising attorney, or edit the profile template directly.

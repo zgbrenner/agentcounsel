@@ -31,6 +31,7 @@ Run it from anywhere; the script locates the repository root relative to its own
 - `description` is trigger-rich and begins with `Use when`; `practice_area` matches the directory area; `task_type` and `risk_level` use the allowed values; `related_skills` entries resolve to real skills. The full standard is in `docs/SKILL_METADATA_STANDARD.md`.
 - `metadata/index.json` and `metadata/router.json` exist and match the canonical skills. If either is stale, run `python scripts/build_skill_index.py` to regenerate them.
 - Normalized generated metadata has unique skill IDs, existing skill paths, valid risk levels, valid compatible-platform IDs, valid recommended quality-check IDs, and valid eval coverage statuses.
+- Eval framework validation covers skill eval schemas, benchmark schemas, router eval schemas, static metadata/pack/router integrity evals, valid skill IDs, valid quality-check IDs, and current eval coverage reports.
 
 **Safety and content**
 

@@ -212,7 +212,7 @@ plugin compatibility:
 | `recommended_quality_checks` | Derived list of AgentCounsel quality-check IDs such as `attorney-review-gate`, `assumption-audit`, `citation-integrity-check`, `source-validation-check`, `hallucination-red-team`, `privilege-confidentiality-check`, `legal-prose-polish`, `output-format-compliance-check`, and `jurisdiction-deadline-gates`. |
 | `compatible_platforms` | File-based platform surfaces currently supported by generated packs and adapters. |
 | `pack_tags` | Search and pack-building tags derived from practice area, task type, risk level, and frontmatter `tags`. |
-| `eval_status` | Eval coverage status based on `evals/skills/<slug>.eval.yaml` and candidate outputs under `evals/outputs/<slug>/`. |
+| `eval_status` | Eval coverage status based on `evals/skills/<slug>.eval.yaml` and candidate outputs under `evals/outputs/<slug>/`: `untested`, `manual-eval-ready`, or `scored`. |
 
 Do not hand-edit generated metadata. If a derived field looks wrong, fix the
 skill body/frontmatter or the generator and re-run the script.
@@ -228,7 +228,9 @@ controlled set, `requires_attorney_review` is not a boolean, `inputs`,
 to a real skill. Validation also fails if `metadata/index.json` or
 `metadata/router.json` is missing or out of date, if normalized skill IDs are
 duplicated, if a normalized path does not exist, if a compatible platform or
-quality-check ID is invalid, or if an eval coverage status is invalid.
+quality-check ID is invalid, or if an eval coverage status is invalid. Eval
+coverage labels describe repository test coverage only; they do not claim legal
+correctness.
 
 ## Adding or changing a skill
 
