@@ -191,3 +191,77 @@ cases:
       - attorney review gate.
     expected_attorney_escalation: Attorney must review before reliance.
     eval_status: manual-ready
+  - eval_id: router-011
+    title: Open a multi-month acquisition matter
+    request: Open a new acquisition that will run for months with diligence, drafts, and deadlines.
+    expected_primary_skill: setup/create-matter-workspace
+    expected_missing_facts:
+      - Deal type, side, and structure.
+      - Parties and jurisdiction.
+      - Key deadlines.
+      - Document set.
+      - Supervising attorney.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - citation-integrity-check
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - deadline gate.
+    expected_attorney_escalation: Multi-step and deadline-sensitive; create a matter workspace and escalate deadlines and authority to the supervising attorney.
+    eval_status: manual-ready
+  - eval_id: router-012
+    title: Multi-pass review of a contract before signing
+    request: Run a full multi-pass review of this negotiated contract before signing.
+    expected_primary_skill: legal-methodology/attorney-review-gate
+    expected_missing_facts:
+      - Final contract text.
+      - Client role and priorities.
+      - Client fallback positions.
+      - Governing law.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - privilege-confidentiality-check
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - review panel; passes are not autonomous agents or lawyers.
+      - attorney gatekeeper gate.
+    expected_attorney_escalation: Use review-panels/contract-review-panel.md; final output remains attorney-supervised draft work product.
+    eval_status: manual-ready
+  - eval_id: router-013
+    title: Repeatable NDA review recipe
+    request: We review NDAs the same way every week; give me a repeatable recipe.
+    expected_primary_skill: contracts/nda-review
+    expected_missing_facts:
+      - Full NDA text.
+      - Client role as disclosing, receiving, or mutual.
+      - Transaction context.
+      - Client risk tolerance.
+    expected_quality_checks:
+      - source-validation-check
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - playbook selection gate.
+    expected_attorney_escalation: Use playbooks/nda-review.md; attorney review required before signing.
+    eval_status: manual-ready
+  - eval_id: router-014
+    title: Check a memo for invented or unsupported citations
+    request: Just check this finished memo for invented or unsupported citations.
+    expected_primary_skill: legal-methodology/citation-integrity-check
+    expected_missing_facts:
+      - The draft to review.
+      - The sources relied upon.
+      - Jurisdiction if authorities are jurisdiction-specific.
+    expected_quality_checks:
+      - citation-integrity-check
+      - source-validation-check
+      - hallucination-red-team
+    expected_gates:
+      - source validation gate.
+    expected_attorney_escalation: Quality check only; attorney must verify every authority before reliance.
+    eval_status: manual-ready

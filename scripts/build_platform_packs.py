@@ -66,6 +66,21 @@ QUALITY_CHECK_FILES = {
 # Every generated pack must carry the AgentCounsel safety framing.
 REQUIRED_SAFETY_PHRASES = ["draft legal work product", "attorney review"]
 
+# Canonical multi-file matter workspace template assets. Packs whose workflow
+# type justifies a workspace (they reference a matter pack, matter workspace,
+# playbook, or review panel) also carry the source/citation and attorney-review
+# templates so the quality layer has something to attach to.
+WORKSPACE_TEMPLATE_DIR = "matter-workspaces/_template"
+WORKSPACE_SOURCE_CITATION_TEMPLATES = [
+    "matter-workspaces/_template/source_log.md",
+    "matter-workspaces/_template/citation_map.md",
+    "matter-workspaces/_template/unsupported_claims.md",
+    "matter-workspaces/_template/assumptions.md",
+]
+WORKSPACE_ATTORNEY_REVIEW_TEMPLATES = [
+    "matter-workspaces/_template/attorney_review.md",
+]
+
 AREA_NAMES = {
     "legal-research": "Legal Research",
     "litigation": "Litigation",
@@ -259,7 +274,19 @@ def build_pack_registry(areas: dict) -> dict:
         templates = area_template_paths(info)
         matter_packs = files_referencing_area(REPO_ROOT / "matter-packs", area)
         workspaces = files_referencing_area(REPO_ROOT / "matter-workspaces", area)
+        playbooks = files_referencing_area(REPO_ROOT / "playbooks", area)
+        review_panels = files_referencing_area(REPO_ROOT / "review-panels", area)
         quality_checks = quality_checks_for_skills(info["skills"], skill_meta)
+        # Only carry workspace tooling where the workflow type justifies it.
+        workspace_justified = bool(
+            matter_packs or workspaces or playbooks or review_panels
+        )
+        source_citation_templates = (
+            list(WORKSPACE_SOURCE_CITATION_TEMPLATES) if workspace_justified else []
+        )
+        attorney_review_templates = (
+            list(WORKSPACE_ATTORNEY_REVIEW_TEMPLATES) if workspace_justified else []
+        )
         common = {
             "practice_area": area,
             "practice_area_name": area_name(area),
@@ -270,6 +297,10 @@ def build_pack_registry(areas: dict) -> dict:
             "included_quality_checks": quality_checks,
             "included_matter_packs": matter_packs,
             "included_matter_workspace_templates": workspaces,
+            "included_playbooks": playbooks,
+            "included_review_panels": review_panels,
+            "included_source_citation_templates": source_citation_templates,
+            "included_attorney_review_templates": attorney_review_templates,
             "safety_disclaimer": safety,
             "attorney_review_requirements": [
                 "A licensed attorney must review and adopt all outputs before reliance.",
@@ -309,6 +340,10 @@ def build_pack_registry(areas: dict) -> dict:
         "included_quality_checks": sorted(QUALITY_CHECK_FILES),
         "included_matter_packs": [],
         "included_matter_workspace_templates": [],
+        "included_playbooks": [],
+        "included_review_panels": [],
+        "included_source_citation_templates": [],
+        "included_attorney_review_templates": [],
         "setup_instructions": "Copy the generated AGENTS.md, CLAUDE.md, or .cursorrules file into a repository root.",
         "safety_disclaimer": safety,
         "attorney_review_requirements": [
@@ -367,6 +402,18 @@ def validate_pack_registry(registry: dict, check_outputs: bool = False) -> list[
         for path in pack.get("included_matter_workspace_templates", []):
             if not (REPO_ROOT / path).is_file():
                 problems.append(f"{pid}: matter workspace missing: {path}")
+        for path in pack.get("included_playbooks", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: playbook missing: {path}")
+        for path in pack.get("included_review_panels", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: review panel missing: {path}")
+        for path in pack.get("included_source_citation_templates", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: source/citation template missing: {path}")
+        for path in pack.get("included_attorney_review_templates", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: attorney-review template missing: {path}")
         for check_id in pack.get("included_quality_checks", []):
             if check_id not in valid_checks:
                 problems.append(f"{pid}: unknown quality check: {check_id}")

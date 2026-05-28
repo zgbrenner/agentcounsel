@@ -2,11 +2,24 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema_version": "1.0",
   "routing_order": [
-    "matter workspace for multi-step or deadline-sensitive matters",
+    "matter workspace for multi-step, document-heavy, high-risk, ongoing, jurisdiction-sensitive, deadline-sensitive, or source/citation-heavy matters",
+    "review panel for a structured multi-pass supervised review of a draft or document",
+    "playbook for a recurring task type that needs default questions, risk-tolerance settings, and required quality checks",
     "matter pack for recurring multi-skill matter types",
     "practice-area pack for repeated work in one practice area",
     "one-off skill for a self-contained task",
     "quality check for review, source validation, or red-team passes"
+  ],
+  "workspace_triggers": [
+    "multi-step",
+    "document-heavy",
+    "high-risk",
+    "ongoing",
+    "jurisdiction-sensitive",
+    "deadline-sensitive",
+    "source/citation-heavy",
+    "likely to require multiple quality checks",
+    "likely to require attorney escalation"
   ],
   "route_types": [
     "one-off skill",
@@ -142,6 +155,94 @@
         "hallucination-red-team",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check"
+      ]
+    },
+    {
+      "request": "Open a new acquisition that will run for months with diligence, drafts, and deadlines",
+      "route_type": "matter workspace",
+      "route_to": "matter-workspaces/_template/",
+      "why": "Multi-step, document-heavy, deadline-sensitive, and ongoing — the matter needs a single organizing workspace before any one-off skill. Initialize with scripts/init_matter_workspace.py.",
+      "missing_facts": [
+        "deal type, side, and structure",
+        "parties and jurisdiction",
+        "key deadlines",
+        "document set",
+        "supervising attorney"
+      ],
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "privilege-confidentiality-check",
+        "jurisdiction-deadline-gates"
+      ]
+    },
+    {
+      "request": "Run a full multi-pass review of this negotiated contract before signing",
+      "route_type": "review panel",
+      "route_to": "review-panels/contract-review-panel.md",
+      "why": "High-risk draft needing several review lenses (issue spotter, source/citation, client-position, business-risk) before the attorney gatekeeper. Review passes are not autonomous agents or lawyers — the output stays attorney-supervised draft work product.",
+      "missing_facts": [
+        "final contract text",
+        "client role and priorities",
+        "client fallback positions",
+        "governing law"
+      ],
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "privilege-confidentiality-check",
+        "legal-prose-polish"
+      ]
+    },
+    {
+      "request": "We review NDAs the same way every week — give me a repeatable recipe",
+      "route_type": "playbook",
+      "route_to": "playbooks/nda-review.md",
+      "why": "A recurring task type benefits from a playbook's default client-position questions, risk-tolerance settings, required source materials, and required quality checks, anchored on skills/contracts/nda-review/SKILL.md.",
+      "missing_facts": [
+        "full NDA text",
+        "client role: disclosing, receiving, or mutual",
+        "transaction context",
+        "client risk tolerance"
+      ],
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "legal-prose-polish"
+      ]
+    },
+    {
+      "request": "We handle the same kind of contract work in this practice area repeatedly",
+      "route_type": "practice-area pack",
+      "route_to": "practice-profiles/contracts.md",
+      "why": "Repeated work in one practice area is best configured with the practice profile and the platform pack generated for that area, rather than re-selecting individual skills each time.",
+      "missing_facts": [
+        "practice area",
+        "team configuration and house positions",
+        "platform in use"
+      ],
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check"
+      ]
+    },
+    {
+      "request": "Just check this finished memo for invented or unsupported citations",
+      "route_type": "quality check",
+      "route_to": "skills/legal-methodology/citation-integrity-check/SKILL.md",
+      "why": "A self-contained review pass over an existing draft — no new matter or workspace needed. Pair with source-validation-check and hallucination-red-team for authority-heavy drafts.",
+      "missing_facts": [
+        "the draft to review",
+        "the sources relied upon",
+        "jurisdiction if authorities are jurisdiction-specific"
+      ],
+      "quality_checks": [
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team"
       ]
     }
   ],

@@ -87,6 +87,17 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/regulatory-matter.md"
       ],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -135,6 +146,17 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/regulatory-matter.md"
       ],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -182,6 +204,17 @@
         "matter-workspaces/litigation-matter.md",
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/regulatory-matter.md"
+      ],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -244,6 +277,19 @@
         "matter-workspaces/litigation-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/litigation-demand-letter.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -304,6 +350,19 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/litigation-matter.md",
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [
+        "playbooks/litigation-demand-letter.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -366,6 +425,19 @@
         "matter-workspaces/litigation-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/litigation-demand-letter.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -422,6 +494,20 @@
         "matter-workspaces/contract-review-matter.md",
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [
+        "playbooks/commercial-contract-review.md",
+        "playbooks/nda-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -480,6 +566,20 @@
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/commercial-contract-review.md",
+        "playbooks/nda-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -536,6 +636,20 @@
         "matter-workspaces/contract-review-matter.md",
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [
+        "playbooks/commercial-contract-review.md",
+        "playbooks/nda-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -595,6 +709,19 @@
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/corporate-governance-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -652,6 +779,19 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [
+        "playbooks/corporate-governance-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -711,6 +851,19 @@
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/corporate-governance-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -767,6 +920,19 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/employment-matter.md",
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [
+        "playbooks/employment-termination-analysis.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -825,6 +991,19 @@
         "matter-workspaces/employment-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/employment-termination-analysis.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -882,6 +1061,19 @@
         "matter-workspaces/employment-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/employment-termination-analysis.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -933,6 +1125,19 @@
         "matter-workspaces/contract-review-matter.md",
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [
+        "playbooks/privacy-dpa-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -986,6 +1191,19 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/privacy-dpa-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1038,6 +1256,19 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [
+        "playbooks/privacy-dpa-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1081,6 +1312,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1124,6 +1359,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1167,6 +1406,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1213,6 +1456,19 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/regulatory-matter.md"
+      ],
+      "included_playbooks": [
+        "playbooks/regulatory-rule-change-summary.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -1261,6 +1517,19 @@
         "matter-workspaces/README.md",
         "matter-workspaces/regulatory-matter.md"
       ],
+      "included_playbooks": [
+        "playbooks/regulatory-rule-change-summary.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1308,6 +1577,19 @@
         "matter-workspaces/README.md",
         "matter-workspaces/regulatory-matter.md"
       ],
+      "included_playbooks": [
+        "playbooks/regulatory-rule-change-summary.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1351,6 +1633,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1394,6 +1680,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1437,6 +1727,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1494,6 +1788,17 @@
         "matter-packs/insurance.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1551,6 +1856,17 @@
         "matter-packs/insurance.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1608,6 +1924,17 @@
         "matter-packs/insurance.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1658,6 +1985,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1708,6 +2039,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1758,6 +2093,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1811,6 +2150,34 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/employment-matter.md"
+      ],
+      "included_playbooks": [
+        "playbooks/commercial-contract-review.md",
+        "playbooks/corporate-governance-review.md",
+        "playbooks/employment-termination-analysis.md",
+        "playbooks/litigation-demand-letter.md",
+        "playbooks/nda-review.md",
+        "playbooks/privacy-dpa-review.md",
+        "playbooks/regulatory-rule-change-summary.md",
+        "playbooks/securities-disclosure-review.md"
+      ],
+      "included_review_panels": [
+        "review-panels/citation-source-red-team-panel.md",
+        "review-panels/contract-review-panel.md",
+        "review-panels/deal-diligence-review-panel.md",
+        "review-panels/external-communication-review-panel.md",
+        "review-panels/litigation-risk-panel.md",
+        "review-panels/README.md",
+        "review-panels/regulatory-risk-panel.md"
+      ],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -1866,6 +2233,34 @@
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/employment-matter.md"
       ],
+      "included_playbooks": [
+        "playbooks/commercial-contract-review.md",
+        "playbooks/corporate-governance-review.md",
+        "playbooks/employment-termination-analysis.md",
+        "playbooks/litigation-demand-letter.md",
+        "playbooks/nda-review.md",
+        "playbooks/privacy-dpa-review.md",
+        "playbooks/regulatory-rule-change-summary.md",
+        "playbooks/securities-disclosure-review.md"
+      ],
+      "included_review_panels": [
+        "review-panels/citation-source-red-team-panel.md",
+        "review-panels/contract-review-panel.md",
+        "review-panels/deal-diligence-review-panel.md",
+        "review-panels/external-communication-review-panel.md",
+        "review-panels/litigation-risk-panel.md",
+        "review-panels/README.md",
+        "review-panels/regulatory-risk-panel.md"
+      ],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -1919,6 +2314,34 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/employment-matter.md"
+      ],
+      "included_playbooks": [
+        "playbooks/commercial-contract-review.md",
+        "playbooks/corporate-governance-review.md",
+        "playbooks/employment-termination-analysis.md",
+        "playbooks/litigation-demand-letter.md",
+        "playbooks/nda-review.md",
+        "playbooks/privacy-dpa-review.md",
+        "playbooks/regulatory-rule-change-summary.md",
+        "playbooks/securities-disclosure-review.md"
+      ],
+      "included_review_panels": [
+        "review-panels/citation-source-red-team-panel.md",
+        "review-panels/contract-review-panel.md",
+        "review-panels/deal-diligence-review-panel.md",
+        "review-panels/external-communication-review-panel.md",
+        "review-panels/litigation-risk-panel.md",
+        "review-panels/README.md",
+        "review-panels/regulatory-risk-panel.md"
+      ],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -1979,6 +2402,17 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2037,6 +2471,17 @@
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md"
+      ],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
       ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
@@ -2097,6 +2542,17 @@
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md"
       ],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2149,6 +2605,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2201,6 +2661,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2253,6 +2717,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2309,6 +2777,17 @@
         "matter-packs/bankruptcy-restructuring.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2365,6 +2844,17 @@
         "matter-packs/bankruptcy-restructuring.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2421,6 +2911,17 @@
         "matter-packs/bankruptcy-restructuring.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2476,6 +2977,17 @@
         "matter-packs/family-law.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2531,6 +3043,17 @@
         "matter-packs/family-law.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2586,6 +3109,17 @@
         "matter-packs/family-law.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2628,6 +3162,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2670,6 +3208,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2712,6 +3254,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2755,6 +3301,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2798,6 +3348,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2841,6 +3395,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2895,6 +3453,17 @@
         "matter-packs/m-and-a.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -2949,6 +3518,17 @@
         "matter-packs/m-and-a.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3003,6 +3583,17 @@
         "matter-packs/m-and-a.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3054,6 +3645,17 @@
         "matter-packs/real-estate.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3105,6 +3707,17 @@
         "matter-packs/real-estate.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3156,6 +3769,17 @@
         "matter-packs/real-estate.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3211,6 +3835,19 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [
+        "playbooks/securities-disclosure-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3266,6 +3903,19 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [
+        "playbooks/securities-disclosure-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3321,6 +3971,19 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [
+        "playbooks/securities-disclosure-review.md"
+      ],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3375,6 +4038,17 @@
         "matter-packs/tax.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3429,6 +4103,17 @@
         "matter-packs/tax.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3483,6 +4168,17 @@
         "matter-packs/tax.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3539,6 +4235,17 @@
         "matter-packs/trusts-estates.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3595,6 +4302,17 @@
         "matter-packs/trusts-estates.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3651,6 +4369,17 @@
         "matter-packs/trusts-estates.md"
       ],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3690,6 +4419,10 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
+      "included_playbooks": [],
+      "included_review_panels": [],
+      "included_source_citation_templates": [],
+      "included_attorney_review_templates": [],
       "setup_instructions": "Copy the generated AGENTS.md, CLAUDE.md, or .cursorrules file into a repository root.",
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [

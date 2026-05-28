@@ -11,3 +11,8 @@ dist/
 # Generated static skill catalog (site/generate.mjs) — built and deployed
 # by .github/workflows/deploy-pages.yml on every push to main.
 site/public/
+
+# Populated matter workspaces created by scripts/init_matter_workspace.py.
+# These hold confidential, potentially privileged client material and must
+# never be committed. The blank template lives in matter-workspaces/_template/.
+matters/

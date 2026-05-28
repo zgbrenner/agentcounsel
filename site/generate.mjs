@@ -445,6 +445,18 @@ ${REVIEW_NOTICE}
 </ul>
 </section>
 
+<section>
+<h2>Beyond a single skill</h2>
+<p>Most tasks are one skill. When the work is larger, four surfaces organize it — all plain Markdown, no backend:</p>
+<ul class="quicklinks">
+<li><strong>Matter workspaces</strong> — a scaffold for one matter (parties, facts, sources, deadlines, outputs, attorney review). Choose a workspace over a single skill when the work is multi-step, document-heavy, high-risk, ongoing, jurisdiction- or deadline-sensitive, or source/citation-heavy. Initialize with <code>py scripts/init_matter_workspace.py "&lt;matter name&gt;" --practice-area &lt;area&gt;</code> from the canonical template at <code>matter-workspaces/_template/</code>.</li>
+<li><strong>Playbooks</strong> — repeatable recipes for a recurring task type (NDA review, demand letter, DPA review), adding default client-position questions, risk-tolerance settings, required sources, and required quality checks on top of a skill.</li>
+<li><strong>Review panels</strong> — a supervised multi-pass review of a draft (issue spotter, source/citation, client-position, privilege, business-risk), ending with the attorney gatekeeper. The passes are structured review passes, not autonomous agents and not lawyers; the output stays attorney-supervised draft work product.</li>
+<li><strong>Matter packs</strong> — ordered sequences of skills for a recurring matter type.</li>
+</ul>
+<p>See <code>WORKFLOW_ROUTER.md</code>, <code>docs/MATTER_WORKSPACES.md</code>, <code>docs/PLAYBOOKS.md</code>, and <code>docs/REVIEW_PANELS.md</code> for when to choose each.</p>
+</section>
+
 <section id="practice-areas">
 <h2>Practice areas</h2>
 <div class="grid">
