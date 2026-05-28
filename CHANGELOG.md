@@ -6,6 +6,44 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-27 — First public release
+
+AgentCounsel's first public release: a polished, open, Markdown-native legal
+skills library with a workflow router, platform packs, a quality layer, an eval
+system, matter workspaces, playbooks, review panels, a static site, and full
+onboarding and contributor documentation. Every output remains draft legal work
+product for attorney review. The granular entries below (carried over from the
+development cycle that produced this release) detail the changes; the summary
+gives the shape of the release.
+
+### Release summary
+
+- **Metadata, router, and packs:** normalized `metadata/index.json`,
+  `metadata/router.json`, and `metadata/packs.json`; an upgraded
+  `WORKFLOW_ROUTER.md`; and generated per-platform packs (ChatGPT, Claude,
+  Gemini, Cursor, Codex, repo agents) with pack-registry validation.
+- **Quality layer:** nine cross-cutting checks (source validation, citation
+  integrity, assumption audit, hallucination red-team, privilege/confidentiality,
+  legal prose polish, output-format compliance, jurisdiction/deadline gates, and
+  the attorney-review gate), with source/citation classification workflows.
+- **Evals and benchmarks:** 186 eval files (509 cases) plus router,
+  static-integrity, and benchmark suites; a static, no-API eval runner; and the
+  generated `reports/eval-coverage.md`. The evals check structure and safety
+  signals, not legal correctness.
+- **Matter workspaces:** six single-file templates, a canonical multi-file
+  template (`matter-workspaces/_template/`), and `scripts/init_matter_workspace.py`.
+- **Playbooks and review panels:** eight playbooks (recurring task recipes) and
+  six review panels (supervised multi-pass reviews); both Markdown-native and
+  attorney-supervised.
+- **Site and onboarding docs:** a static catalog site; a rewritten `README.md`;
+  a per-platform `QUICKSTART.md`; and `docs/CHOOSE_YOUR_WORKFLOW.md`,
+  `docs/CLI.md`, `docs/AGENT_COMMANDS.md`, `docs/WORKFLOW_MAP.md`, and
+  `docs/PROJECT_STATUS.md`.
+- **Validation improvements:** deterministic checks for workspace/playbook/panel
+  integrity, source/citation classification alignment, required docs, doc/script
+  references, router references, and pack-manifest references — all standard
+  library, no network calls.
+
 ### Added
 
 - A **platformization / polish phase** that makes AgentCounsel approachable as a usable open-source tool, not just a repository. (1) New onboarding and decision docs: `docs/CHOOSE_YOUR_WORKFLOW.md` (a decision guide with worked examples for choosing among one-off skill, quality check, practice-area pack, matter pack, matter workspace, playbook, and review panel), `docs/CLI.md` (every script and `site/generate.mjs` — purpose, example, failure modes, whether it mutates files, and supported flags), `docs/AGENT_COMMANDS.md` (repo-agent guidance: the pre-commit validation sequence, what to run after editing skills/packs/evals/site/workspaces, the generated files that must be refreshed, and the files agents should not touch), `docs/WORKFLOW_MAP.md` (a Mermaid map plus a text legend and component-to-directory table relating core rules, skills, quality checks, packs, workspaces, playbooks, review panels, and evals), and `docs/PROJECT_STATUS.md` (an honest maturity snapshot: stable, manual-review-required, experimental, future concepts, and what AgentCounsel intentionally does not do). (2) `QUICKSTART.md` rewritten with concrete per-platform paths for ChatGPT Projects, Claude Projects / Claude Code, Cursor / Codex repo agents, Gemini, and local Markdown-only use — each covering what to install, which pack, how to start a matter, when to run quality checks, the attorney-review gate, and what not to do. (3) `README.md` gains a "Choose your workflow" surface table, an updated repository map (playbooks, review panels, multi-file workspace template), and links to the new docs. (4) `CONTRIBUTING.md` gains how-to sections for metadata, quality checks, evals, playbooks, review panels, and packs, the full validation command list, the legal-safety requirements, and the third-party attribution / no-GPL-AGPL rules. (5) Three new GitHub issue templates — pack/platform compatibility, eval/benchmark, and documentation — and an expanded PR template (new artifact types, the full validation sequence, and an attribution checkbox). (6) Static site improvements: a new "How it works" page surfacing skills, packs, the quality layer, evals, matter workspaces, playbooks, review panels, platform compatibility, the workflow router, and contributing; an "At a glance" facts panel on every skill page (practice area, category, risk level, recommended quality checks, eval coverage, compatible platforms, related skills) sourced from `metadata/index.json`; and expandable per-pack detail on the packs page (included skills, quality checks, playbooks, review panels, attorney-review requirements, and setup) with playbook/panel columns. (7) New deterministic checks in `scripts/validate_repo.py`: required top-level docs exist, and command docs reference only scripts that exist (`site/generate.mjs` included). No auth, database, payments, backend, hosted SaaS, or chat UI was added; the project stays Markdown-native, static, and offline-friendly.
