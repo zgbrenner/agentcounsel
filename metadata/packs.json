@@ -274,8 +274,8 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
-        "matter-workspaces/litigation-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/litigation-matter.md"
       ],
       "included_playbooks": [
         "playbooks/litigation-demand-letter.md"
@@ -348,8 +348,8 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
-        "matter-workspaces/litigation-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/litigation-matter.md"
       ],
       "included_playbooks": [
         "playbooks/litigation-demand-letter.md"
@@ -422,8 +422,8 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
-        "matter-workspaces/litigation-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/litigation-matter.md"
       ],
       "included_playbooks": [
         "playbooks/litigation-demand-letter.md"
@@ -491,9 +491,9 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
-        "matter-workspaces/corporate-transaction-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/corporate-transaction-matter.md"
       ],
       "included_playbooks": [
         "playbooks/commercial-contract-review.md",
@@ -562,9 +562,9 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
-        "matter-workspaces/corporate-transaction-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/corporate-transaction-matter.md"
       ],
       "included_playbooks": [
         "playbooks/commercial-contract-review.md",
@@ -633,9 +633,9 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
-        "matter-workspaces/corporate-transaction-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/corporate-transaction-matter.md"
       ],
       "included_playbooks": [
         "playbooks/commercial-contract-review.md",
@@ -706,8 +706,8 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
-        "matter-workspaces/corporate-transaction-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/corporate-transaction-matter.md"
       ],
       "included_playbooks": [
         "playbooks/corporate-governance-review.md"
@@ -777,8 +777,8 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
-        "matter-workspaces/corporate-transaction-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/corporate-transaction-matter.md"
       ],
       "included_playbooks": [
         "playbooks/corporate-governance-review.md"
@@ -848,8 +848,8 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
-        "matter-workspaces/corporate-transaction-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/corporate-transaction-matter.md"
       ],
       "included_playbooks": [
         "playbooks/corporate-governance-review.md"
@@ -918,8 +918,8 @@
         "matter-packs/tax.md"
       ],
       "included_matter_workspace_templates": [
-        "matter-workspaces/employment-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/employment-matter.md"
       ],
       "included_playbooks": [
         "playbooks/employment-termination-analysis.md"
@@ -988,8 +988,8 @@
         "matter-packs/tax.md"
       ],
       "included_matter_workspace_templates": [
-        "matter-workspaces/employment-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/employment-matter.md"
       ],
       "included_playbooks": [
         "playbooks/employment-termination-analysis.md"
@@ -1058,8 +1058,8 @@
         "matter-packs/tax.md"
       ],
       "included_matter_workspace_templates": [
-        "matter-workspaces/employment-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/README.md",
+        "matter-workspaces/employment-matter.md"
       ],
       "included_playbooks": [
         "playbooks/employment-termination-analysis.md"
@@ -1122,9 +1122,9 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
-        "matter-workspaces/privacy-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/privacy-matter.md"
       ],
       "included_playbooks": [
         "playbooks/privacy-dpa-review.md"
@@ -1187,9 +1187,9 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
-        "matter-workspaces/privacy-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/privacy-matter.md"
       ],
       "included_playbooks": [
         "playbooks/privacy-dpa-review.md"
@@ -1252,9 +1252,9 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
-        "matter-workspaces/privacy-matter.md",
-        "matter-workspaces/README.md"
+        "matter-workspaces/privacy-matter.md"
       ],
       "included_playbooks": [
         "playbooks/privacy-dpa-review.md"
@@ -2162,12 +2162,12 @@
         "playbooks/securities-disclosure-review.md"
       ],
       "included_review_panels": [
+        "review-panels/README.md",
         "review-panels/citation-source-red-team-panel.md",
         "review-panels/contract-review-panel.md",
         "review-panels/deal-diligence-review-panel.md",
         "review-panels/external-communication-review-panel.md",
         "review-panels/litigation-risk-panel.md",
-        "review-panels/README.md",
         "review-panels/regulatory-risk-panel.md"
       ],
       "included_source_citation_templates": [
@@ -2244,12 +2244,12 @@
         "playbooks/securities-disclosure-review.md"
       ],
       "included_review_panels": [
+        "review-panels/README.md",
         "review-panels/citation-source-red-team-panel.md",
         "review-panels/contract-review-panel.md",
         "review-panels/deal-diligence-review-panel.md",
         "review-panels/external-communication-review-panel.md",
         "review-panels/litigation-risk-panel.md",
-        "review-panels/README.md",
         "review-panels/regulatory-risk-panel.md"
       ],
       "included_source_citation_templates": [
@@ -2326,12 +2326,12 @@
         "playbooks/securities-disclosure-review.md"
       ],
       "included_review_panels": [
+        "review-panels/README.md",
         "review-panels/citation-source-red-team-panel.md",
         "review-panels/contract-review-panel.md",
         "review-panels/deal-diligence-review-panel.md",
         "review-panels/external-communication-review-panel.md",
         "review-panels/litigation-risk-panel.md",
-        "review-panels/README.md",
         "review-panels/regulatory-risk-panel.md"
       ],
       "included_source_citation_templates": [
