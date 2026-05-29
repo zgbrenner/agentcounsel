@@ -81,6 +81,17 @@ The script validates structure and consistency — not legal accuracy. It cannot
 - After editing `SKILLS_INDEX.md` or `WORKFLOW_ROUTER.md`.
 - After running `python scripts/sync_plugin_skills.py` to regenerate the plugin bundle (see `PLUGIN_SYNC.md`).
 
+## Companion: legal-prose pass
+
+`scripts/check_legal_prose.py` is a separate, conservative quality pass over the
+repository-owned work-product samples (`examples/` outputs and `evals/outputs/`).
+It checks form and safety framing only — not legal accuracy. It **fails the
+build** on legal-advice or false-certainty framing (for example "this clause is
+enforceable", "there is no risk", "you must sign") and on any work-product
+sample missing visible attorney-review framing; it **warns** (advisory) on
+generic AI "slop" and vague prose, which fail only under `--strict`. CI runs it
+in its default (non-strict) mode. See [`docs/CLI.md`](docs/CLI.md) for details.
+
 ## Note
 
 `scripts/validate_repo.py` and this file (`VALIDATION.md`) are excluded from the forbidden-phrase scans, because they necessarily describe the phrases being checked for.

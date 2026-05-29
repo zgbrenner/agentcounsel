@@ -47,6 +47,9 @@ jobs:
       - name: Run skill eval candidates (static, --strict)
         run: python scripts/run_evals.py --strict --quiet
 
+      - name: Check legal prose of repository-owned work-product samples
+        run: python scripts/check_legal_prose.py
+
       - name: Check eval coverage report is up to date
         run: python scripts/generate_eval_report.py --check
 

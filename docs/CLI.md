@@ -20,6 +20,7 @@ derived artifact from the canonical files.
 | `scripts/build_skill_index.py` | Yes (writes metadata) | `--check` |
 | `scripts/build_platform_packs.py` | Yes (writes `dist/`, `metadata/packs.json`) | `--check` |
 | `scripts/check_evals.py` | No | — |
+| `scripts/check_legal_prose.py` | No | `--strict`, `--quiet`, `--path` |
 | `scripts/run_evals.py` | No | `--strict`, `--quiet`, `--markdown-report`, `<slug>` |
 | `scripts/generate_eval_report.py` | Yes (writes report) | `--check` |
 | `scripts/sync_plugin_skills.py` | Yes (writes plugin bundle) | `--check` |
@@ -91,6 +92,31 @@ benchmark, and static evals) and run the deterministic metadata-integrity checks
 **Common failure modes.** A new eval file with a missing required key, a
 `skill`/filename mismatch, an `expected_primary_skill` that is not a real skill
 ID, or an invalid `eval_status`.
+
+---
+
+## scripts/check_legal_prose.py
+
+**Purpose.** A conservative legal-prose pass over the *work-product samples* the
+repository owns — the illustrative outputs under `examples/` and the eval
+candidate outputs under `evals/outputs/`. It checks form and safety framing
+only, never legal accuracy. **Errors** (which fail the build) flag legal-advice
+or false-certainty framing (for example "this clause is enforceable", "there is
+no risk", "you must sign") and any work-product sample missing visible
+attorney-review framing. **Warnings** (advisory) flag generic AI "slop" and
+vague prose. It is written to leave legitimate content alone: placeholders such
+as `[verify jurisdiction]`, required "attorney must review" framing, and the
+"qualified tax professional review" framing tax samples use are never flagged.
+
+**Example.** `py scripts/check_legal_prose.py` · `py scripts/check_legal_prose.py --strict` (warnings fail too) · `py scripts/check_legal_prose.py --path examples/dpa-review-example.md`
+
+**Mutates files?** No. Read-only.
+
+**Common failure modes.** A sample output that states a legal conclusion instead
+of flagging it for verification, or that omits draft/attorney-review framing.
+Fix the sample's wording; do not weaken the check. A file that intentionally
+demonstrates weak prose (a "before / after" polish example) is exempt from the
+warning checks via `STYLE_EXEMPT` in the script.
 
 ---
 
