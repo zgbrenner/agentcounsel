@@ -141,6 +141,8 @@ metadata/           Generated machine-readable index, router, and pack
                     manifests (built by scripts/, never hand-edited).
 reports/            Generated eval-coverage and skill-quality reports.
 site/               Generated static catalog of the skills.
+dist/               Generated platform install packs (gitignored; built by
+                    scripts/build_platform_packs.py).
 examples/           Illustrative sample skill outputs.
 docs/               Extended guides and reference docs.
 SKILLS_INDEX.md     Full catalog of every skill.
