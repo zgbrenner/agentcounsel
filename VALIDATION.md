@@ -47,6 +47,7 @@ Run it from anywhere; the script locates the repository root relative to its own
 - Every skill path referenced in `SKILLS_INDEX.md`, `WORKFLOW_ROUTER.md`, and `COMMANDS.md` points to a real `SKILL.md`.
 - Adapter index files point back to the canonical root files.
 - `adapters/claude-code-plugin/plugin.json` is valid JSON and has `name`, `version`, and `description`.
+- The distribution manifests (`adapters/claude-code-plugin/plugin.json`, `gemini-extension.json`, `site/package.json`) all declare a `version` matching the latest released version in `CHANGELOG.md`, so a release bump cannot silently drift.
 
 **Plugin bundle**
 

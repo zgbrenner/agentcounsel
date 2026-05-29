@@ -373,6 +373,59 @@ def check_plugin_manifest() -> None:
             err(f"adapters/claude-code-plugin/plugin.json: missing '{field}'")
 
 
+# --- Check: release version is consistent ---------------------------------
+
+# Distribution manifests whose "version" an end user's plugin/extension
+# manager reads. They must match the latest released version in CHANGELOG.md
+# so a release bump can never silently drift (see the v0.2.0 drift fixed in
+# PR #74). CHANGELOG.md is the single source of truth.
+VERSIONED_MANIFESTS = (
+    "adapters/claude-code-plugin/plugin.json",
+    "gemini-extension.json",
+    "site/package.json",
+)
+
+
+def latest_changelog_version() -> str | None:
+    """Return the most recent released version in CHANGELOG.md.
+
+    The first `## [X.Y.Z]` heading that is not `[Unreleased]` is the current
+    release. Returns None if CHANGELOG.md is missing or has no released entry.
+    """
+    changelog = REPO_ROOT / "CHANGELOG.md"
+    if not changelog.is_file():
+        return None
+    for match in re.finditer(
+        r"^## \[(.+?)\]", changelog.read_text(encoding="utf-8"), re.MULTILINE
+    ):
+        tag = match.group(1)
+        if tag.lower() != "unreleased":
+            return tag
+    return None
+
+
+def check_release_version_consistency() -> None:
+    release = latest_changelog_version()
+    if release is None:
+        err("CHANGELOG.md: no released version heading found (expected '## [X.Y.Z]')")
+        return
+    for name in VERSIONED_MANIFESTS:
+        manifest = REPO_ROOT / name
+        if not manifest.is_file():
+            err(f"{name}: file not found")
+            continue
+        try:
+            version = json.loads(manifest.read_text(encoding="utf-8")).get("version")
+        except json.JSONDecodeError as exc:
+            err(f"{name}: invalid JSON ({exc})")
+            continue
+        if version != release:
+            err(
+                f"{name}: version '{version}' does not match the latest "
+                f"CHANGELOG.md release '{release}' — bump it or update the changelog"
+            )
+
+
 # --- Check: standardized skill frontmatter --------------------------------
 
 def check_skill_frontmatter(skill_dirs: list[Path]) -> None:
@@ -956,6 +1009,7 @@ def main() -> int:
     check_index_paths("COMMANDS.md")
     check_adapters()
     check_plugin_manifest()
+    check_release_version_consistency()
     check_plugin_bundle()
     check_skill_frontmatter(canonical)
     check_skill_index()

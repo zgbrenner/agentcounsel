@@ -121,6 +121,8 @@ connectors/         External-source verification integrations (e.g., CourtListen
 metadata/           Generated machine-readable skill index (index.json).
 docs/               The metadata standard, the safety model, the FAQ, and the practice-area registry.
 scripts/            Standard-library Python helpers (validation, index, packs).
+dist/               Generated platform install packs (gitignored; built by
+                    scripts/build_platform_packs.py).
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
 COMMANDS.md         Slash-style command shorthands mapped to skills.
