@@ -406,6 +406,10 @@ When a skill's output needs to go to a non-lawyer decision-maker — a product o
 - **A possible IP infringement** -> `infringement-triage` for a first-pass factor triage; `fto-triage` for patent freedom-to-operate against specific patents; `trademark-clearance-triage` for clearing a proposed new mark.
 - **Compliance work** -> `compliance-gap-matrix` for a one-time, point-in-time requirement-to-control gap analysis; `compliance-program-tracker` for ongoing tracking with an audit calendar and evidence management.
 - **A vendor** -> `vendor-agreement-status` to inventory all agreements in place with the vendor; `contract-risk-review` (or `nda-review` / `sow-review` / `dpa-review`) to review one of those agreements for risk.
+- **An acquisition with competition exposure** -> run the deal-side M&A skills (`purchase-agreement-issue-list`, `acquisition-diligence-request-list`, `loi-term-sheet-review`) and pair them with `merger-antitrust-issue-spotter` for the antitrust theories-of-harm and filing-question analysis, and `gun-jumping-clean-team-checklist` for pre-closing conduct.
+- **A new processing activity or AI feature that handles personal data** -> run `pia-generation` for the privacy impact assessment alongside the AI-governance triage (`model-risk-triage`, `ai-use-case-intake`) or `ai-feature-review`; the privacy and AI passes complement each other and neither replaces the other.
+- **Deal tax exposure** -> pair the M&A diligence and purchase-agreement skills with the tax skills `transaction-tax-diligence-request-list` and `tax-covenants-indemnities-review` for the tax workstream.
+- **Worker classification** -> `worker-classification` for the employment-law analysis; pair with `employment-tax-worker-classification-intake` for the payroll-tax facts.
 
 ## When nothing matches
 

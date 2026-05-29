@@ -165,7 +165,8 @@
       "related_skills": [
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
         "skills/ai-governance/model-risk-triage/SKILL.md",
-        "skills/ai-governance/employee-ai-policy/SKILL.md"
+        "skills/ai-governance/employee-ai-policy/SKILL.md",
+        "skills/privacy/pia-generation/SKILL.md"
       ],
       "tags": [
         "ai-governance",
@@ -410,7 +411,8 @@
       "related_skills": [
         "skills/ai-governance/ai-use-case-intake/SKILL.md",
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
-        "skills/product-legal/ai-feature-review/SKILL.md"
+        "skills/product-legal/ai-feature-review/SKILL.md",
+        "skills/privacy/pia-generation/SKILL.md"
       ],
       "tags": [
         "ai-governance",
@@ -1020,7 +1022,9 @@
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
-        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md"
+        "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md"
       ],
       "tags": [
         "antitrust",
@@ -3679,7 +3683,8 @@
       ],
       "related_skills": [
         "skills/employment/termination-risk/SKILL.md",
-        "skills/employment/hiring-review/SKILL.md"
+        "skills/employment/hiring-review/SKILL.md",
+        "skills/tax/employment-tax-worker-classification-intake/SKILL.md"
       ],
       "tags": [
         "employment",
@@ -5405,7 +5410,8 @@
       "related_skills": [
         "skills/insurance/certificate-of-insurance-review/SKILL.md",
         "skills/insurance/tender-letter-review/SKILL.md",
-        "skills/insurance/insurance-policy-summary/SKILL.md"
+        "skills/insurance/insurance-policy-summary/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
       ],
       "tags": [
         "insurance",
@@ -6282,7 +6288,8 @@
         "Compatibility and disclosure issues for attorney review"
       ],
       "related_skills": [
-        "skills/contracts/contract-risk-review/SKILL.md"
+        "skills/contracts/contract-risk-review/SKILL.md",
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md"
       ],
       "tags": [
         "ip",
@@ -8321,7 +8328,10 @@
       "related_skills": [
         "skills/m-and-a/data-room-index-review/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
-        "skills/m-and-a/loi-term-sheet-review/SKILL.md"
+        "skills/m-and-a/loi-term-sheet-review/SKILL.md",
+        "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
+        "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
+        "skills/ip/open-source-license-review/SKILL.md"
       ],
       "tags": [
         "m-and-a",
@@ -8711,7 +8721,8 @@
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
-        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md"
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
+        "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md"
       ],
       "tags": [
         "m-and-a",
@@ -8869,7 +8880,9 @@
       "related_skills": [
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
-        "skills/m-and-a/loi-term-sheet-review/SKILL.md"
+        "skills/m-and-a/loi-term-sheet-review/SKILL.md",
+        "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
+        "skills/tax/tax-covenants-indemnities-review/SKILL.md"
       ],
       "tags": [
         "m-and-a",
@@ -9024,7 +9037,8 @@
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
-        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md"
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md"
       ],
       "tags": [
         "m-and-a",
@@ -9264,7 +9278,9 @@
       "related_skills": [
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
-        "skills/privacy/dsar-workflow/SKILL.md"
+        "skills/privacy/dsar-workflow/SKILL.md",
+        "skills/ai-governance/model-risk-triage/SKILL.md",
+        "skills/product-legal/ai-feature-review/SKILL.md"
       ],
       "tags": [
         "privacy",
@@ -9427,7 +9443,8 @@
       "related_skills": [
         "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
         "skills/product-legal/launch-review/SKILL.md",
-        "skills/ai-governance/model-risk-triage/SKILL.md"
+        "skills/ai-governance/model-risk-triage/SKILL.md",
+        "skills/privacy/pia-generation/SKILL.md"
       ],
       "tags": [
         "product-legal",
@@ -13611,7 +13628,8 @@
       "related_skills": [
         "skills/tax/tax-provision-review-checklist/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
-        "skills/tax/tax-issue-intake/SKILL.md"
+        "skills/tax/tax-issue-intake/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md"
       ],
       "tags": [
         "tax",
@@ -13944,7 +13962,8 @@
       "related_skills": [
         "skills/tax/tax-issue-intake/SKILL.md",
         "skills/tax/tax-provision-review-checklist/SKILL.md",
-        "skills/tax/tax-covenants-indemnities-review/SKILL.md"
+        "skills/tax/tax-covenants-indemnities-review/SKILL.md",
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md"
       ],
       "tags": [
         "tax",

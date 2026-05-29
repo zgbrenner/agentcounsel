@@ -6,6 +6,18 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Changed
+
+- Added cross-practice `related_skills` links so a skill points to adjacent
+  workflows in other practice areas, not just its own: antitrust merger
+  issue-spotting ↔ M&A deal skills, privacy PIA ↔ AI-governance and product AI
+  reviews, deal-tax diligence/covenants ↔ M&A diligence and purchase-agreement
+  review, employment ↔ tax worker classification, IP open-source review ↔ M&A
+  diligence, and insurance/M&A consent reviews → contract risk review.
+  Regenerated `metadata/index.json` and `metadata/router.json` accordingly.
+- Surfaced the headline cross-practice pairings in `WORKFLOW_ROUTER.md`'s
+  "When several skills could apply" section.
+
 ## [0.2.0] - 2026-05-27 — First public release
 
 AgentCounsel's first public release: a polished, open, Markdown-native legal

@@ -16,6 +16,8 @@ related_skills:
   - skills/privacy/privacy-policy-gap-review/SKILL.md
   - skills/privacy/dpa-review/SKILL.md
   - skills/privacy/dsar-workflow/SKILL.md
+  - skills/ai-governance/model-risk-triage/SKILL.md
+  - skills/product-legal/ai-feature-review/SKILL.md
 tags:
   - privacy
   - pia

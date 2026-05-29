@@ -17,6 +17,7 @@ related_skills:
   - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
   - skills/m-and-a/closing-deliverables-tracker/SKILL.md
   - skills/m-and-a/acquisition-diligence-request-list/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
 tags:
   - m-and-a
   - consents
