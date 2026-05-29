@@ -19,6 +19,7 @@ related_skills:
   - skills/insurance/certificate-of-insurance-review/SKILL.md
   - skills/insurance/tender-letter-review/SKILL.md
   - skills/insurance/insurance-policy-summary/SKILL.md
+  - skills/contracts/contract-risk-review/SKILL.md
 tags:
   - insurance
   - contract-review

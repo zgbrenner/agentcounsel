@@ -15,6 +15,7 @@ outputs:
   - "Compatibility and disclosure issues for attorney review"
 related_skills:
   - skills/contracts/contract-risk-review/SKILL.md
+  - skills/m-and-a/acquisition-diligence-request-list/SKILL.md
 tags:
   - ip
   - open-source

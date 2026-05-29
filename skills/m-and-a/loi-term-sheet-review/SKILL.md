@@ -18,6 +18,7 @@ related_skills:
   - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
   - skills/m-and-a/acquisition-diligence-request-list/SKILL.md
   - skills/m-and-a/indemnity-escrow-risk-review/SKILL.md
+  - skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md
 tags:
   - m-and-a
   - letter-of-intent
