@@ -151,6 +151,10 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Build a claim chart" / "map claim elements to the evidence" | `skills/litigation/claim-chart/SKILL.md` |
 | "Draft a section of a brief" | `skills/litigation/brief-section-drafter/SKILL.md` |
 | "Research this legal question and write a memo" | `skills/legal-research/legal-research-memo/SKILL.md` |
+| "Scope the research first" / "plan a research roadmap" / "what should we research before we start" | `skills/legal-research/research-plan/SKILL.md` |
+| "Brief this case" / "give me a structured brief of this opinion" | `skills/legal-research/case-brief/SKILL.md` |
+| "Synthesize a rule across these cases" / "what's the rule across this set of authorities" | `skills/legal-research/authority-synthesis/SKILL.md` |
+| "Trace the regulatory history of this CFR section" / "what did this regulation say on this date" | `skills/legal-research/regulatory-history-tracer/SKILL.md` |
 
 ### Employment
 

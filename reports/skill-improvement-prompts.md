@@ -18,7 +18,7 @@ For a manual review pass, work through `reports/skill-quality-checklist.md` alon
 
 ## Skills by practice area
 
-- [Legal Research](#legal-research) — 1 skill
+- [Legal Research](#legal-research) — 5 skills
 - [Litigation](#litigation) — 9 skills
 - [Contracts](#contracts) — 5 skills
 - [Corporate](#corporate) — 6 skills
@@ -46,6 +46,182 @@ For a manual review pass, work through `reports/skill-quality-checklist.md` alon
 
 ## Legal Research
 
+### Authority Synthesis
+
+- **Skill file:** `skills/legal-research/authority-synthesis/SKILL.md`
+- **Practice area:** Legal Research
+- **Current description:** Use when synthesizing a rule statement from multiple judicial opinions (and, where relevant, statutory or secondary sources) for a single Question Presented, producing a structured synthesis with explicit majority-and-minority handling, a temporal-confidence pass for older authority, and a Holding / Relevance / Weight block per authority — capped at the smallest set that supports the rule.
+- **Structure check:** all 8 required sections present.
+
+````text
+You are improving a single skill in AgentCounsel, an open, Markdown-native
+library of legal workflows for AI agents and the attorneys who supervise
+them. Every skill is a SKILL.md file that produces draft legal work product
+for attorney review — never a final legal opinion.
+
+TARGET SKILL
+- Skill path: skills/legal-research/authority-synthesis/SKILL.md
+- Current skill name: Authority Synthesis
+- Practice area: Legal Research
+- Current description: Use when synthesizing a rule statement from multiple judicial opinions (and, where relevant, statutory or secondary sources) for a single Question Presented, producing a structured synthesis with explicit majority-and-minority handling, a temporal-confidence pass for older authority, and a Holding / Relevance / Weight block per authority — capped at the smallest set that supports the rule.
+- Core purpose (must not change): Synthesize a **rule statement** from multiple authorities for a single Question Presented.
+
+CONTEXT TO READ FIRST
+- Read skills/legal-research/authority-synthesis/SKILL.md in full.
+- Read the shared operating rules in core/ — they apply to every skill.
+- Read any references/ folder in the same practice area, and any files in
+  this skill's templates/ folder, so your edits stay consistent with them.
+
+TASK
+Revise the target skill file in place so it is clearer, tighter, and more
+reliable to execute. Improve only this one skill. Do not touch other files
+except to keep cross-references accurate.
+
+IMPROVEMENT GOALS
+- Make it faster and less ambiguous for an agent to decide whether this
+  skill applies to a given request.
+- Make the skill produce a more consistent, better-organized, attorney-ready
+  result every time it runs.
+- Make the safety posture unmistakable: the output is draft work product for
+  attorney review, built only on sources the user actually supplied.
+
+SPECIFIC REQUIREMENTS
+1. Strengthen trigger clarity. Sharpen "Use When" and "Do Not Use When" so
+   the skill's scope is unambiguous and each trigger is concrete and
+   testable. Resolve any overlap with neighboring skills by naming them and
+   their paths.
+2. Strengthen required inputs. Make "Required Inputs" complete and specific:
+   every input the workflow depends on must be listed, and optional-but-
+   recommended inputs marked as such. State explicitly that when a required
+   input is missing the skill stops and requests it, and never reconstructs
+   or assumes the missing material.
+3. Improve the workflow steps. Make every step in "Workflow" concrete,
+   ordered, and checkable. Remove vague or redundant steps and merge
+   duplicates. Ensure every deliverable promised by "Output Format" is
+   produced by a step, and that no step produces something the output never
+   reports.
+4. Improve the output format. Make "Output Format" match the workflow
+   exactly — every deliverable section named, ordered, and described. Require
+   visible placeholders for missing information instead of invented content,
+   and define any rating or triage label where it is used.
+5. Strengthen attorney-review and source-discipline language. Reinforce
+   "Legal Safety Rules" and the "Attorney Verification Checklist": attorney
+   review is always required; never invent legal authority, citations,
+   quotations, facts, market data, or deadlines; keep fact, assumption, law,
+   analysis, and verification items separate; flag every point of
+   uncertainty rather than resolving it silently.
+
+REQUIRED CONSTRAINTS
+- Do NOT change the core purpose of this skill. It must still do exactly the
+  job stated under "Core purpose" above. Reorganizing, tightening, and
+  clarifying are welcome; repurposing the skill is not.
+- Preserve the AgentCounsel skill structure. Keep the YAML frontmatter with
+  a non-empty `name` and `description`, and keep these H2 sections in this
+  exact order: Purpose, Use When, Required Inputs, Do Not Use When, Legal
+  Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
+- Keep `description` a single line that still begins by describing when to
+  use the skill.
+- Keep the skill Markdown-only: no build steps, no runtime, no new
+  dependencies.
+- Do not add jurisdiction-specific legal rules or legal conclusions. The
+  skill supplies process and structure, not the law itself.
+- Keep relative paths to shared references/ material and to templates/
+  accurate; do not break links.
+
+WHEN YOU ARE DONE
+- Run `python scripts/validate_repo.py` and confirm it passes.
+- Summarize what you changed, section by section, and why each change makes
+  the skill clearer or safer.
+````
+
+### Case Brief
+
+- **Skill file:** `skills/legal-research/case-brief/SKILL.md`
+- **Practice area:** Legal Research
+- **Current description:** Use when producing a structured brief of a single judicial opinion for attorney review, extracting the facts, procedural posture, issue, holding, reasoning, rule, and weight in a fixed template — with every slot tied to a specific passage in the provided opinion and the case verified against `connectors/courtlistener.md` where applicable.
+- **Structure check:** all 8 required sections present.
+
+````text
+You are improving a single skill in AgentCounsel, an open, Markdown-native
+library of legal workflows for AI agents and the attorneys who supervise
+them. Every skill is a SKILL.md file that produces draft legal work product
+for attorney review — never a final legal opinion.
+
+TARGET SKILL
+- Skill path: skills/legal-research/case-brief/SKILL.md
+- Current skill name: Case Brief
+- Practice area: Legal Research
+- Current description: Use when producing a structured brief of a single judicial opinion for attorney review, extracting the facts, procedural posture, issue, holding, reasoning, rule, and weight in a fixed template — with every slot tied to a specific passage in the provided opinion and the case verified against `connectors/courtlistener.md` where applicable.
+- Core purpose (must not change): Produce a structured, attorney-ready brief of a single judicial opinion.
+
+CONTEXT TO READ FIRST
+- Read skills/legal-research/case-brief/SKILL.md in full.
+- Read the shared operating rules in core/ — they apply to every skill.
+- Read any references/ folder in the same practice area, and any files in
+  this skill's templates/ folder, so your edits stay consistent with them.
+
+TASK
+Revise the target skill file in place so it is clearer, tighter, and more
+reliable to execute. Improve only this one skill. Do not touch other files
+except to keep cross-references accurate.
+
+IMPROVEMENT GOALS
+- Make it faster and less ambiguous for an agent to decide whether this
+  skill applies to a given request.
+- Make the skill produce a more consistent, better-organized, attorney-ready
+  result every time it runs.
+- Make the safety posture unmistakable: the output is draft work product for
+  attorney review, built only on sources the user actually supplied.
+
+SPECIFIC REQUIREMENTS
+1. Strengthen trigger clarity. Sharpen "Use When" and "Do Not Use When" so
+   the skill's scope is unambiguous and each trigger is concrete and
+   testable. Resolve any overlap with neighboring skills by naming them and
+   their paths.
+2. Strengthen required inputs. Make "Required Inputs" complete and specific:
+   every input the workflow depends on must be listed, and optional-but-
+   recommended inputs marked as such. State explicitly that when a required
+   input is missing the skill stops and requests it, and never reconstructs
+   or assumes the missing material.
+3. Improve the workflow steps. Make every step in "Workflow" concrete,
+   ordered, and checkable. Remove vague or redundant steps and merge
+   duplicates. Ensure every deliverable promised by "Output Format" is
+   produced by a step, and that no step produces something the output never
+   reports.
+4. Improve the output format. Make "Output Format" match the workflow
+   exactly — every deliverable section named, ordered, and described. Require
+   visible placeholders for missing information instead of invented content,
+   and define any rating or triage label where it is used.
+5. Strengthen attorney-review and source-discipline language. Reinforce
+   "Legal Safety Rules" and the "Attorney Verification Checklist": attorney
+   review is always required; never invent legal authority, citations,
+   quotations, facts, market data, or deadlines; keep fact, assumption, law,
+   analysis, and verification items separate; flag every point of
+   uncertainty rather than resolving it silently.
+
+REQUIRED CONSTRAINTS
+- Do NOT change the core purpose of this skill. It must still do exactly the
+  job stated under "Core purpose" above. Reorganizing, tightening, and
+  clarifying are welcome; repurposing the skill is not.
+- Preserve the AgentCounsel skill structure. Keep the YAML frontmatter with
+  a non-empty `name` and `description`, and keep these H2 sections in this
+  exact order: Purpose, Use When, Required Inputs, Do Not Use When, Legal
+  Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
+- Keep `description` a single line that still begins by describing when to
+  use the skill.
+- Keep the skill Markdown-only: no build steps, no runtime, no new
+  dependencies.
+- Do not add jurisdiction-specific legal rules or legal conclusions. The
+  skill supplies process and structure, not the law itself.
+- Keep relative paths to shared references/ material and to templates/
+  accurate; do not break links.
+
+WHEN YOU ARE DONE
+- Run `python scripts/validate_repo.py` and confirm it passes.
+- Summarize what you changed, section by section, and why each change makes
+  the skill clearer or safer.
+````
+
 ### Legal Research Memo
 
 - **Skill file:** `skills/legal-research/legal-research-memo/SKILL.md`
@@ -68,6 +244,182 @@ TARGET SKILL
 
 CONTEXT TO READ FIRST
 - Read skills/legal-research/legal-research-memo/SKILL.md in full.
+- Read the shared operating rules in core/ — they apply to every skill.
+- Read any references/ folder in the same practice area, and any files in
+  this skill's templates/ folder, so your edits stay consistent with them.
+
+TASK
+Revise the target skill file in place so it is clearer, tighter, and more
+reliable to execute. Improve only this one skill. Do not touch other files
+except to keep cross-references accurate.
+
+IMPROVEMENT GOALS
+- Make it faster and less ambiguous for an agent to decide whether this
+  skill applies to a given request.
+- Make the skill produce a more consistent, better-organized, attorney-ready
+  result every time it runs.
+- Make the safety posture unmistakable: the output is draft work product for
+  attorney review, built only on sources the user actually supplied.
+
+SPECIFIC REQUIREMENTS
+1. Strengthen trigger clarity. Sharpen "Use When" and "Do Not Use When" so
+   the skill's scope is unambiguous and each trigger is concrete and
+   testable. Resolve any overlap with neighboring skills by naming them and
+   their paths.
+2. Strengthen required inputs. Make "Required Inputs" complete and specific:
+   every input the workflow depends on must be listed, and optional-but-
+   recommended inputs marked as such. State explicitly that when a required
+   input is missing the skill stops and requests it, and never reconstructs
+   or assumes the missing material.
+3. Improve the workflow steps. Make every step in "Workflow" concrete,
+   ordered, and checkable. Remove vague or redundant steps and merge
+   duplicates. Ensure every deliverable promised by "Output Format" is
+   produced by a step, and that no step produces something the output never
+   reports.
+4. Improve the output format. Make "Output Format" match the workflow
+   exactly — every deliverable section named, ordered, and described. Require
+   visible placeholders for missing information instead of invented content,
+   and define any rating or triage label where it is used.
+5. Strengthen attorney-review and source-discipline language. Reinforce
+   "Legal Safety Rules" and the "Attorney Verification Checklist": attorney
+   review is always required; never invent legal authority, citations,
+   quotations, facts, market data, or deadlines; keep fact, assumption, law,
+   analysis, and verification items separate; flag every point of
+   uncertainty rather than resolving it silently.
+
+REQUIRED CONSTRAINTS
+- Do NOT change the core purpose of this skill. It must still do exactly the
+  job stated under "Core purpose" above. Reorganizing, tightening, and
+  clarifying are welcome; repurposing the skill is not.
+- Preserve the AgentCounsel skill structure. Keep the YAML frontmatter with
+  a non-empty `name` and `description`, and keep these H2 sections in this
+  exact order: Purpose, Use When, Required Inputs, Do Not Use When, Legal
+  Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
+- Keep `description` a single line that still begins by describing when to
+  use the skill.
+- Keep the skill Markdown-only: no build steps, no runtime, no new
+  dependencies.
+- Do not add jurisdiction-specific legal rules or legal conclusions. The
+  skill supplies process and structure, not the law itself.
+- Keep relative paths to shared references/ material and to templates/
+  accurate; do not break links.
+
+WHEN YOU ARE DONE
+- Run `python scripts/validate_repo.py` and confirm it passes.
+- Summarize what you changed, section by section, and why each change makes
+  the skill clearer or safer.
+````
+
+### Regulatory History Tracer
+
+- **Skill file:** `skills/legal-research/regulatory-history-tracer/SKILL.md`
+- **Practice area:** Legal Research
+- **Current description:** Use when tracing the amendment history of a specific CFR section — what the text said on a given date, which Federal Register rulemakings amended it, and what version was in effect at a specific point in time — producing a date-stable history table for attorney review, verified through `connectors/ecfr.md` and `connectors/federal-register.md`.
+- **Structure check:** all 8 required sections present.
+
+````text
+You are improving a single skill in AgentCounsel, an open, Markdown-native
+library of legal workflows for AI agents and the attorneys who supervise
+them. Every skill is a SKILL.md file that produces draft legal work product
+for attorney review — never a final legal opinion.
+
+TARGET SKILL
+- Skill path: skills/legal-research/regulatory-history-tracer/SKILL.md
+- Current skill name: Regulatory History Tracer
+- Practice area: Legal Research
+- Current description: Use when tracing the amendment history of a specific CFR section — what the text said on a given date, which Federal Register rulemakings amended it, and what version was in effect at a specific point in time — producing a date-stable history table for attorney review, verified through `connectors/ecfr.md` and `connectors/federal-register.md`.
+- Core purpose (must not change): Trace the amendment history of a specific federal regulation — typically a single CFR section — to produce a date-stable history table the attorney can rely on.
+
+CONTEXT TO READ FIRST
+- Read skills/legal-research/regulatory-history-tracer/SKILL.md in full.
+- Read the shared operating rules in core/ — they apply to every skill.
+- Read any references/ folder in the same practice area, and any files in
+  this skill's templates/ folder, so your edits stay consistent with them.
+
+TASK
+Revise the target skill file in place so it is clearer, tighter, and more
+reliable to execute. Improve only this one skill. Do not touch other files
+except to keep cross-references accurate.
+
+IMPROVEMENT GOALS
+- Make it faster and less ambiguous for an agent to decide whether this
+  skill applies to a given request.
+- Make the skill produce a more consistent, better-organized, attorney-ready
+  result every time it runs.
+- Make the safety posture unmistakable: the output is draft work product for
+  attorney review, built only on sources the user actually supplied.
+
+SPECIFIC REQUIREMENTS
+1. Strengthen trigger clarity. Sharpen "Use When" and "Do Not Use When" so
+   the skill's scope is unambiguous and each trigger is concrete and
+   testable. Resolve any overlap with neighboring skills by naming them and
+   their paths.
+2. Strengthen required inputs. Make "Required Inputs" complete and specific:
+   every input the workflow depends on must be listed, and optional-but-
+   recommended inputs marked as such. State explicitly that when a required
+   input is missing the skill stops and requests it, and never reconstructs
+   or assumes the missing material.
+3. Improve the workflow steps. Make every step in "Workflow" concrete,
+   ordered, and checkable. Remove vague or redundant steps and merge
+   duplicates. Ensure every deliverable promised by "Output Format" is
+   produced by a step, and that no step produces something the output never
+   reports.
+4. Improve the output format. Make "Output Format" match the workflow
+   exactly — every deliverable section named, ordered, and described. Require
+   visible placeholders for missing information instead of invented content,
+   and define any rating or triage label where it is used.
+5. Strengthen attorney-review and source-discipline language. Reinforce
+   "Legal Safety Rules" and the "Attorney Verification Checklist": attorney
+   review is always required; never invent legal authority, citations,
+   quotations, facts, market data, or deadlines; keep fact, assumption, law,
+   analysis, and verification items separate; flag every point of
+   uncertainty rather than resolving it silently.
+
+REQUIRED CONSTRAINTS
+- Do NOT change the core purpose of this skill. It must still do exactly the
+  job stated under "Core purpose" above. Reorganizing, tightening, and
+  clarifying are welcome; repurposing the skill is not.
+- Preserve the AgentCounsel skill structure. Keep the YAML frontmatter with
+  a non-empty `name` and `description`, and keep these H2 sections in this
+  exact order: Purpose, Use When, Required Inputs, Do Not Use When, Legal
+  Safety Rules, Workflow, Output Format, Attorney Verification Checklist.
+- Keep `description` a single line that still begins by describing when to
+  use the skill.
+- Keep the skill Markdown-only: no build steps, no runtime, no new
+  dependencies.
+- Do not add jurisdiction-specific legal rules or legal conclusions. The
+  skill supplies process and structure, not the law itself.
+- Keep relative paths to shared references/ material and to templates/
+  accurate; do not break links.
+
+WHEN YOU ARE DONE
+- Run `python scripts/validate_repo.py` and confirm it passes.
+- Summarize what you changed, section by section, and why each change makes
+  the skill clearer or safer.
+````
+
+### Research Plan
+
+- **Skill file:** `skills/legal-research/research-plan/SKILL.md`
+- **Practice area:** Legal Research
+- **Current description:** Use when scoping a legal-research task before any research is conducted, producing a research roadmap of statute leads, case-law areas, search terms, and source-hierarchy targets — with no citations and no analysis — so the attorney can approve the scope before authority is gathered.
+- **Structure check:** all 8 required sections present.
+
+````text
+You are improving a single skill in AgentCounsel, an open, Markdown-native
+library of legal workflows for AI agents and the attorneys who supervise
+them. Every skill is a SKILL.md file that produces draft legal work product
+for attorney review — never a final legal opinion.
+
+TARGET SKILL
+- Skill path: skills/legal-research/research-plan/SKILL.md
+- Current skill name: Research Plan
+- Practice area: Legal Research
+- Current description: Use when scoping a legal-research task before any research is conducted, producing a research roadmap of statute leads, case-law areas, search terms, and source-hierarchy targets — with no citations and no analysis — so the attorney can approve the scope before authority is gathered.
+- Core purpose (must not change): Produce a structured **research roadmap** that converts a vague legal question into a scoped, attorney-approvable plan — *before* any authority is gathered.
+
+CONTEXT TO READ FIRST
+- Read skills/legal-research/research-plan/SKILL.md in full.
 - Read the shared operating rules in core/ — they apply to every skill.
 - Read any references/ folder in the same practice area, and any files in
   this skill's templates/ folder, so your edits stay consistent with them.

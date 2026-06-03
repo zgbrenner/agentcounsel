@@ -13,7 +13,11 @@ A complete catalog of every skill in the library. The canonical source of truth 
 
 | Practice Area | Skill | Path | Best Used For | Typical Inputs | Output Type |
 |---|---|---|---|---|---|
+| Legal Research | Research Plan | `skills/legal-research/research-plan/SKILL.md` | Scoping a research task into a roadmap before any authority is gathered (leads only, no citations) | Legal question, known facts, jurisdiction, constraints | Research-plan roadmap |
 | Legal Research | Legal Research Memo | `skills/legal-research/legal-research-memo/SKILL.md` | Structuring a research question into a reviewable memo | Research question, known facts, jurisdiction, any provided authority | Research memo draft |
+| Legal Research | Case Brief | `skills/legal-research/case-brief/SKILL.md` | Producing a structured brief of a single judicial opinion with Holding / Relevance / Weight | Opinion text, matter context, jurisdiction | Case brief |
+| Legal Research | Authority Synthesis | `skills/legal-research/authority-synthesis/SKILL.md` | Synthesizing a rule statement from multiple authorities with majority / minority split and temporal-confidence pass | Question Presented, authority set, jurisdiction, relevant date | Rule-synthesis worksheet |
+| Legal Research | Regulatory History Tracer | `skills/legal-research/regulatory-history-tracer/SKILL.md` | Tracing a CFR section's amendment history with date-stable snapshots and Federal Register references | CFR citation, relevant date or date range, matter context | Regulatory history table |
 | Litigation | Matter Intake | `skills/litigation/matter-intake/SKILL.md` | Capturing a new dispute matter in a structured form | Parties, dispute description, posture, known dates | Intake summary |
 | Litigation | Litigation Chronology | `skills/litigation/litigation-chronology/SKILL.md` | Building a sourced factual timeline from documents | Documents, records, correspondence | Chronology table |
 | Litigation | Demand Letter | `skills/litigation/demand-letter/SKILL.md` | Drafting a demand letter outline and draft | Facts, client position, relief sought | Demand letter draft |
@@ -208,7 +212,7 @@ Many commercial skills — across **contracts**, **product legal**, **privacy**,
 
 ## Practice areas at a glance
 
-- **Legal Research** — turning questions into structured, verifiable memos.
+- **Legal Research** — research planning, research memos, case briefs, multi-authority rule synthesis, and regulatory amendment-history tracing.
 - **Litigation** — intake, chronology, demand letters, subpoena triage, deposition preparation, legal holds, privilege-log review, claim charts, and brief drafting.
 - **Contracts** — NDAs, commercial contracts, redlines, and statements of work.
 - **Corporate** — board minutes, written consents, closing checklists, due-diligence issue extraction, material-contract schedules, and entity compliance.

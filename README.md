@@ -56,7 +56,7 @@ AgentCounsel has **186 skills**: 153 across **20 practice areas**, plus 33 cross
 
 | Practice area | Skills | Covers |
 |---|--:|---|
-| Legal Research | 1 | Turning research questions into structured, verifiable memos. |
+| Legal Research | 5 | Research planning (roadmap before authority gathering), structured IRAC memos, case briefs, multi-authority rule synthesis, and CFR amendment-history tracing. |
 | Litigation | 9 | Matter intake, chronologies, demand letters, subpoena triage, depositions, legal holds, privilege logs, claim charts, brief drafting. |
 | Contracts | 5 | NDAs, commercial contracts, redlines, statements of work, vendor agreement status. |
 | Corporate | 6 | Board minutes, written consents, closing checklists, diligence review, material-contract schedules, entity compliance. |

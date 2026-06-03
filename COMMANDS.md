@@ -42,7 +42,11 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
+| `/research:plan` | `skills/legal-research/research-plan/SKILL.md` | "scope the research", "plan a research roadmap", "what should we research" | Legal question, known facts, jurisdiction, constraints | Research-plan roadmap (leads only, no citations) | `/research:memo`, `/method:source-validation` |
 | `/research:memo` | `skills/legal-research/legal-research-memo/SKILL.md` | "research this question", "write a research memo" | Research question, known facts, jurisdiction, any authority | Research memo draft | `/method:statutory-interpretation`, `/method:source-validation` |
+| `/research:case-brief` | `skills/legal-research/case-brief/SKILL.md` | "brief this case", "structured brief of this opinion" | Opinion text, matter context, jurisdiction | Case brief with Holding / Relevance / Weight | `/research:synthesis`, `/method:source-validation` |
+| `/research:synthesis` | `skills/legal-research/authority-synthesis/SKILL.md` | "synthesize a rule across these cases", "rule across this set of authorities" | Question Presented, authority set, jurisdiction, relevant date | Rule-synthesis worksheet with majority / minority split | `/research:case-brief`, `/research:memo` |
+| `/research:reg-history` | `skills/legal-research/regulatory-history-tracer/SKILL.md` | "regulatory history of this CFR section", "what did this regulation say on this date" | CFR citation, relevant date or range, matter context | Regulatory history table with FR amendment references | `/regulatory:rule-change-summary`, `/regulatory:compliance-gap-matrix` |
 
 ## Corporate
 
