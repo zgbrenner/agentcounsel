@@ -1,7 +1,7 @@
 # AgentCounsel v0.2.0 — First Public Release
 
 **Release date:** 2026-05-27
-**License:** Apache-2.0
+**License:** MIT
 
 > AgentCounsel produces **draft legal work product for attorney review** — not
 > legal advice, not an AI lawyer, and not a substitute for a licensed attorney.
@@ -147,9 +147,8 @@ client data.
 
 ## License and attribution
 
-MIT License — see [`LICENSE`](LICENSE). (The v0.2.0 release went out under
-Apache-2.0; the project has since relicensed to MIT.) Attribution for content
-adapted from prior Apache-2.0 open-source work — which remains under its original
-terms — is recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+MIT License — see [`LICENSE`](LICENSE). Attribution for content adapted from
+other open-source projects — which remains under those projects' original terms
+— is recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 AgentCounsel is an independent open-source project and is not affiliated with,
 endorsed by, or sponsored by Anthropic, OpenAI, or Google.
