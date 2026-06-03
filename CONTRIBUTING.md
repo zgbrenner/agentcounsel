@@ -117,13 +117,13 @@ These come from `core/` and are not negotiable.
 ## Third-party attribution and license rules
 
 - Do **not** copy code, prompts, schemas, examples, or prose from another project
-  unless its license is compatible with Apache-2.0. Prefer borrowing structure,
-  patterns, and ideas over text.
+  unless its license is compatible with MIT redistribution. Prefer borrowing
+  structure, patterns, and ideas over text.
 - Do **not** use GPL- or AGPL-licensed material unless the project owner has
   explicitly changed the license strategy.
 - If you directly adapt anything from a permissively licensed source, record the
   attribution per [`docs/THIRD_PARTY_ATTRIBUTION_POLICY.md`](docs/THIRD_PARTY_ATTRIBUTION_POLICY.md)
-  and preserve it in [`NOTICE`](NOTICE).
+  and preserve it in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Reviews
 
@@ -131,4 +131,4 @@ Maintainers review contributions for safety, structure, accuracy of framing, and
 
 ## License
 
-By contributing, you agree that your contributions are licensed under the repository's Apache License 2.0. If a contribution adapts content from another project, keep that project's license compatible with Apache-2.0 and preserve its attribution in `NOTICE`.
+By contributing, you agree that your contributions are licensed under the repository's MIT License. If a contribution adapts content from another project, keep that project's license compatible with MIT redistribution and preserve its attribution in `THIRD_PARTY_NOTICES.md`.

@@ -147,7 +147,9 @@ client data.
 
 ## License and attribution
 
-Apache License 2.0 — see [`LICENSE`](LICENSE). Attribution for content adapted from
-prior Apache-2.0 open-source work is recorded in [`NOTICE`](NOTICE). AgentCounsel is
-an independent open-source project and is not affiliated with, endorsed by, or
-sponsored by Anthropic, OpenAI, or Google.
+MIT License — see [`LICENSE`](LICENSE). (The v0.2.0 release went out under
+Apache-2.0; the project has since relicensed to MIT.) Attribution for content
+adapted from prior Apache-2.0 open-source work — which remains under its original
+terms — is recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+AgentCounsel is an independent open-source project and is not affiliated with,
+endorsed by, or sponsored by Anthropic, OpenAI, or Google.

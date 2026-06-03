@@ -86,7 +86,7 @@ Total target: ~3 minutes. Times are guides.
 
 - Show the site: Home → How it works → Skills → Packs.
 - Close with the framing line: "Markdown-native, portable across AI tools,
-  Apache-2.0, and supervised end to end. Draft work product for attorney review —
+  MIT-licensed, and supervised end to end. Draft work product for attorney review —
   not legal advice."
 
 ## Recording tips
