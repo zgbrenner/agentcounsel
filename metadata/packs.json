@@ -57,7 +57,11 @@
       "practice_area_name": "Legal Research",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
-        "skills/legal-research/legal-research-memo/SKILL.md"
+        "skills/legal-research/authority-synthesis/SKILL.md",
+        "skills/legal-research/case-brief/SKILL.md",
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/regulatory-history-tracer/SKILL.md",
+        "skills/legal-research/research-plan/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -116,7 +120,11 @@
       "practice_area_name": "Legal Research",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
-        "skills/legal-research/legal-research-memo/SKILL.md"
+        "skills/legal-research/authority-synthesis/SKILL.md",
+        "skills/legal-research/case-brief/SKILL.md",
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/regulatory-history-tracer/SKILL.md",
+        "skills/legal-research/research-plan/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -175,7 +183,11 @@
       "practice_area_name": "Legal Research",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
-        "skills/legal-research/legal-research-memo/SKILL.md"
+        "skills/legal-research/authority-synthesis/SKILL.md",
+        "skills/legal-research/case-brief/SKILL.md",
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/regulatory-history-tracer/SKILL.md",
+        "skills/legal-research/research-plan/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",

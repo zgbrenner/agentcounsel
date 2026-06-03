@@ -2,7 +2,7 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
   "normalized_schema_version": "1.0",
-  "skill_count": 186,
+  "skill_count": 190,
   "platforms": [
     "chatgpt",
     "claude",
@@ -87,8 +87,8 @@
     "verification": 11
   },
   "risk_levels": {
-    "low": 20,
-    "medium": 73,
+    "low": 21,
+    "medium": 76,
     "high": 90,
     "critical": 3
   },
@@ -7483,6 +7483,164 @@
       ]
     },
     {
+      "id": "legal-research/authority-synthesis",
+      "title": "Authority Synthesis",
+      "path": "skills/legal-research/authority-synthesis/SKILL.md",
+      "summary": "Use when synthesizing a rule statement from multiple judicial opinions (and, where relevant, statutory or secondary sources) for a single Question Presented, producing a structured synthesis with explicit majority-and-minority handling, a temporal-confidence pass for older authority, and a Holding / Relevance / Weight block per authority — capped at the smallest set that supports the rule.",
+      "use_when": [
+        "A Question Presented has surfaced multiple authorities (cases, statutes, regulations, secondary sources) and the rule across them must be stated before the result is written into a memo.",
+        "A legal-research-memo Discussion section requires a rule statement and the rule is not stated in one authority but emerges from several.",
+        "A litigation team has a set of cases on a doctrine and needs the rule synthesized before drafting a brief section.",
+        "An advisory matter requires a rule statement that fairly accounts for split authority.",
+        "A workflow has produced multiple case briefs (via case-brief) and the next step is to synthesize their holdings into a rule."
+      ],
+      "required_inputs": [
+        "The Question Presented the synthesis answers",
+        "The set of authorities (cases, statutes, regulations, secondary sources) to be synthesized",
+        "The applicable jurisdiction",
+        "The relevant date for the analysis"
+      ],
+      "expected_outputs": [
+        "Rule-synthesis worksheet with authority blocks, majority / minority split, and temporal-confidence flag, for attorney review"
+      ],
+      "category": "research",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": false,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "authority-synthesis",
+        "case-law",
+        "citations",
+        "legal-research",
+        "medium",
+        "research",
+        "rule-synthesis"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Authority Synthesis",
+      "description": "Use when synthesizing a rule statement from multiple judicial opinions (and, where relevant, statutory or secondary sources) for a single Question Presented, producing a structured synthesis with explicit majority-and-minority handling, a temporal-confidence pass for older authority, and a Holding / Relevance / Weight block per authority — capped at the smallest set that supports the rule.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The Question Presented the synthesis answers",
+        "The set of authorities (cases, statutes, regulations, secondary sources) to be synthesized",
+        "The applicable jurisdiction",
+        "The relevant date for the analysis"
+      ],
+      "outputs": [
+        "Rule-synthesis worksheet with authority blocks, majority / minority split, and temporal-confidence flag, for attorney review"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/case-brief/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "authority-synthesis",
+        "rule-synthesis",
+        "case-law",
+        "citations"
+      ]
+    },
+    {
+      "id": "legal-research/case-brief",
+      "title": "Case Brief",
+      "path": "skills/legal-research/case-brief/SKILL.md",
+      "summary": "Use when producing a structured brief of a single judicial opinion for attorney review, extracting the facts, procedural posture, issue, holding, reasoning, rule, and weight in a fixed template — with every slot tied to a specific passage in the provided opinion and the case verified against `connectors/courtlistener.md` where applicable.",
+      "use_when": [
+        "A specific case has been identified for review and needs a structured brief before being integrated into a memo, brief, or chart.",
+        "A user provides an opinion and asks \"what does this case say?\" or \"is this case relevant to X?\"",
+        "A research workflow has surfaced 1–N cases and each needs to be briefed in the same shape before authority synthesis.",
+        "A litigation team needs a structured handoff brief for a case the attorney must read before relying on it.",
+        "A student or new lawyer needs a worked, pinpoint-cited brief of a case to learn how to read judicial opinions."
+      ],
+      "required_inputs": [
+        "The opinion text (or a verified link to it)",
+        "The matter or research question the brief supports",
+        "The applicable jurisdiction",
+        "Why the case is being briefed (relevance to the matter)"
+      ],
+      "expected_outputs": [
+        "Structured case brief with Holding / Relevance / Weight per case, for attorney review"
+      ],
+      "category": "research",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": false,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "case-brief",
+        "case-law",
+        "citations",
+        "irac",
+        "legal-research",
+        "medium",
+        "research"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Case Brief",
+      "description": "Use when producing a structured brief of a single judicial opinion for attorney review, extracting the facts, procedural posture, issue, holding, reasoning, rule, and weight in a fixed template — with every slot tied to a specific passage in the provided opinion and the case verified against `connectors/courtlistener.md` where applicable.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The opinion text (or a verified link to it)",
+        "The matter or research question the brief supports",
+        "The applicable jurisdiction",
+        "Why the case is being briefed (relevance to the matter)"
+      ],
+      "outputs": [
+        "Structured case brief with Holding / Relevance / Weight per case, for attorney review"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/authority-synthesis/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "case-brief",
+        "case-law",
+        "citations",
+        "irac"
+      ]
+    },
+    {
       "id": "legal-research/legal-research-memo",
       "title": "Legal Research Memo",
       "path": "skills/legal-research/legal-research-memo/SKILL.md",
@@ -7560,6 +7718,164 @@
         "irac",
         "legal-analysis",
         "citations"
+      ]
+    },
+    {
+      "id": "legal-research/regulatory-history-tracer",
+      "title": "Regulatory History Tracer",
+      "path": "skills/legal-research/regulatory-history-tracer/SKILL.md",
+      "summary": "Use when tracing the amendment history of a specific CFR section — what the text said on a given date, which Federal Register rulemakings amended it, and what version was in effect at a specific point in time — producing a date-stable history table for attorney review, verified through `connectors/ecfr.md` and `connectors/federal-register.md`.",
+      "use_when": [
+        "A matter turns on what a regulation said on a specific date — the date of the conduct, the date of a transaction, a filing date, the effective date of a different rule.",
+        "A litigation team needs to know which version of a CFR section governed during a contested period.",
+        "A regulatory advice matter requires a side-by-side of past, current, and proposed versions of a section.",
+        "A compliance assessment requires knowing which Federal Register documents amended a CFR section in a given window.",
+        "A research workflow has identified a CFR citation but the version, effective date, and history must be locked down before the citation is used."
+      ],
+      "required_inputs": [
+        "The CFR citation to trace (e.g., 17 C.F.R. § 240.10b-5)",
+        "The relevant date or date range",
+        "The matter or research question this trace supports",
+        "Any specific question about the amendment history"
+      ],
+      "expected_outputs": [
+        "Date-stable regulatory history table with version snapshots and FR amendment references, for attorney review"
+      ],
+      "category": "research",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "cfr",
+        "citations",
+        "federal-register",
+        "legal-research",
+        "medium",
+        "regulatory-history",
+        "research"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Regulatory History Tracer",
+      "description": "Use when tracing the amendment history of a specific CFR section — what the text said on a given date, which Federal Register rulemakings amended it, and what version was in effect at a specific point in time — producing a date-stable history table for attorney review, verified through `connectors/ecfr.md` and `connectors/federal-register.md`.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The CFR citation to trace (e.g., 17 C.F.R. § 240.10b-5)",
+        "The relevant date or date range",
+        "The matter or research question this trace supports",
+        "Any specific question about the amendment history"
+      ],
+      "outputs": [
+        "Date-stable regulatory history table with version snapshots and FR amendment references, for attorney review"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/regulatory/rule-change-summary/SKILL.md",
+        "skills/regulatory/enforcement-risk-memo/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "regulatory-history",
+        "cfr",
+        "federal-register",
+        "citations"
+      ]
+    },
+    {
+      "id": "legal-research/research-plan",
+      "title": "Research Plan",
+      "path": "skills/legal-research/research-plan/SKILL.md",
+      "summary": "Use when scoping a legal-research task before any research is conducted, producing a research roadmap of statute leads, case-law areas, search terms, and source-hierarchy targets — with no citations and no analysis — so the attorney can approve the scope before authority is gathered.",
+      "use_when": [
+        "A user asks to \"research X\" without a specific Question Presented, and the scope needs to be settled before research begins.",
+        "A research task is broad or open-ended, and the attorney needs a written plan to approve scope, budget, or jurisdiction coverage.",
+        "The matter involves multiple jurisdictions, overlapping doctrines, or a long time horizon, and the research strategy must be visible before resources are spent.",
+        "A new research engagement begins and the supervising attorney wants to see leads, search terms, and source-hierarchy targets before the work starts.",
+        "A research task has been started and produced too much off-scope material; restart with an attorney-approved plan."
+      ],
+      "required_inputs": [
+        "The legal question or task to be researched",
+        "Known facts",
+        "Applicable jurisdiction",
+        "Any authority already provided",
+        "Time and scope constraints"
+      ],
+      "expected_outputs": [
+        "Research-plan roadmap (leads only — no citations) for attorney approval before research begins"
+      ],
+      "category": "research",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": false,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "issue-framing",
+        "legal-research",
+        "low",
+        "research",
+        "research-planning",
+        "scoping"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Research Plan",
+      "description": "Use when scoping a legal-research task before any research is conducted, producing a research roadmap of statute leads, case-law areas, search terms, and source-hierarchy targets — with no citations and no analysis — so the attorney can approve the scope before authority is gathered.",
+      "practice_area": "legal-research",
+      "task_type": "research",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The legal question or task to be researched",
+        "Known facts",
+        "Applicable jurisdiction",
+        "Any authority already provided",
+        "Time and scope constraints"
+      ],
+      "outputs": [
+        "Research-plan roadmap (leads only — no citations) for attorney approval before research begins"
+      ],
+      "related_skills": [
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-methodology/statutory-interpretation/SKILL.md",
+        "skills/legal-methodology/source-validation/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "research-planning",
+        "scoping",
+        "issue-framing"
       ]
     },
     {
