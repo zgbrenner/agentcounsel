@@ -1,6 +1,6 @@
 # Third-Party Attribution Policy
 
-AgentCounsel is Apache-2.0 and Markdown-native. Open-source projects may
+AgentCounsel is MIT-licensed and Markdown-native. Open-source projects may
 influence AgentCounsel, but external code, prose, examples, schemas, prompts,
 and templates must not be copied or closely adapted unless the license allows
 that reuse and the source is attributed.
@@ -14,8 +14,8 @@ smallest place that gives future maintainers context:
 |---|---|
 | General inspiration only | `docs/OSS_BORROWING_MAP.md` |
 | Architecture or implementation pattern adapted without copying protectable expression | Relevant design doc or PR description |
-| Code, prose, schema, prompt, template, eval case, or example copied or closely adapted | `NOTICE`, plus a source note in the affected file when useful |
-| Third-party dependency added to tooling or a future app | Dependency manifest, `NOTICE` when required, and the implementation PR description |
+| Code, prose, schema, prompt, template, eval case, or example copied or closely adapted | `THIRD_PARTY_NOTICES.md`, plus a source note in the affected file when useful |
+| Third-party dependency added to tooling or a future app | Dependency manifest, `THIRD_PARTY_NOTICES.md` when required, and the implementation PR description |
 
 ## Copy, Adapt, Or Cite As Inspiration
 
@@ -32,12 +32,12 @@ repository:
 ## License Compatibility Rules
 
 AgentCounsel currently accepts direct reuse only from sources that are
-compatible with Apache-2.0 distribution.
+compatible with MIT redistribution.
 
 | Source license | Default treatment |
 |---|---|
-| Apache-2.0 | Compatible. Preserve notices and attribution. |
-| MIT / BSD / ISC | Generally compatible. Preserve copyright and license notices. |
+| MIT / BSD / ISC | Compatible. Preserve copyright and license notices. |
+| Apache-2.0 | Compatible (the borrowed material continues to carry Apache-2.0 terms, including the §4 attribution and NOTICE preservation requirements). Preserve notices and attribution in `THIRD_PARTY_NOTICES.md`. |
 | CC0 | Compatible for public-domain-style content, but still record attribution when it materially influenced the project. |
 | CC-BY | Usually compatible for documentation/content with attribution; review before mixing with code. |
 | CC-BY-SA | Inspiration only unless the project adopts a share-alike-compatible strategy for the affected material. |
@@ -59,7 +59,7 @@ inspiration, not direct reuse.
 
 ## Required Attribution Format
 
-When material is copied or closely adapted, add an entry to `NOTICE` in this
+When material is copied or closely adapted, add an entry to `THIRD_PARTY_NOTICES.md` in this
 format:
 
 ```text
@@ -78,5 +78,5 @@ notice with the attribution entry or in the copied file as appropriate.
 ## Current Documentation-Only PRs
 
 If a PR only documents OSS influence and does not copy or directly adapt
-external material, do not update `NOTICE`. State in the PR summary that no
+external material, do not update `THIRD_PARTY_NOTICES.md`. State in the PR summary that no
 third-party material was copied or directly adapted.

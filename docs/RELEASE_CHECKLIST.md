@@ -56,11 +56,11 @@ commit the result, and re-run.
 
 ## 4. License and attribution
 
-- [ ] `LICENSE` is present and Apache-2.0.
-- [ ] `NOTICE` lists attribution for any adapted Apache-2.0 source material.
+- [ ] `LICENSE` is present and MIT.
+- [ ] `THIRD_PARTY_NOTICES.md` lists attribution for any adapted third-party source material (including upstream Apache-2.0 projects whose terms continue to apply to the borrowed content).
 - [ ] No GPL/AGPL material was introduced (per `CONTRIBUTING.md` and
       `docs/THIRD_PARTY_ATTRIBUTION_POLICY.md`).
-- [ ] Any directly adapted third-party content is attributed in `NOTICE`.
+- [ ] Any directly adapted third-party content is attributed in `THIRD_PARTY_NOTICES.md`.
 
 ## 5. GitHub topics
 
