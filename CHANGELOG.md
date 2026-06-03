@@ -17,6 +17,19 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
   Regenerated `metadata/index.json` and `metadata/router.json` accordingly.
 - Surfaced the headline cross-practice pairings in `WORKFLOW_ROUTER.md`'s
   "When several skills could apply" section.
+- **Relicensed from Apache-2.0 to MIT.** `LICENSE` now carries the MIT
+  License text. The repository's `NOTICE` file has been removed and the
+  upstream Apache-2.0 attributions it carried (for `agnostic-skills-for-legal`
+  and its lineage, plus `anthropics/financial-services` and
+  `anthropics/knowledge-work-plugins`) have been preserved in a new
+  `THIRD_PARTY_NOTICES.md`. The borrowed content from those projects continues
+  to be governed by Apache-2.0, including the §4 attribution requirement;
+  AgentCounsel's own additions are now MIT. License references and the
+  attribution path were updated across `README.md`, `CONTRIBUTING.md`,
+  `RELEASE_NOTES.md`, `adapters/claude-code-plugin/plugin.json`,
+  `site/package.json`, `docs/FAQ.md`, `docs/RELEASE_CHECKLIST.md`,
+  `docs/DEMO_SCRIPT.md`, `docs/LAUNCH_POST.md`,
+  `docs/THIRD_PARTY_ATTRIBUTION_POLICY.md`, and `docs/OSS_BORROWING_MAP.md`.
 
 ## [0.2.0] - 2026-05-27 — First public release
 

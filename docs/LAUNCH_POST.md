@@ -18,7 +18,7 @@ and that attorney review is required.
 > hallucination red-team) and an attorney-review gate on every output.
 >
 > 186 skills · 20 practice areas · packs for ChatGPT, Claude, Gemini, Cursor &
-> Codex · plain Markdown, no backend, no lock-in. Apache-2.0.
+> Codex · plain Markdown, no backend, no lock-in. MIT.
 >
 > [repo link]
 
@@ -63,14 +63,14 @@ What's in this release:
 - **Portability across AI tools** via generated platform packs, plus a static
   catalog site and full onboarding docs.
 
-It's Apache-2.0, pre-1.0, and honest about its maturity — see PROJECT_STATUS.md
+It's MIT-licensed, pre-1.0, and honest about its maturity — see PROJECT_STATUS.md
 for what's stable vs. experimental. Contributions, issues, and skeptical legal
 eyes are all welcome.
 
 If you build legal-AI tooling, supervise people who use it, or just want to see
 what disciplined, reviewable AI legal workflows look like — take a look.
 
-[repo link] · Apache-2.0 · feedback welcome
+[repo link] · MIT · feedback welcome
 
 ---
 

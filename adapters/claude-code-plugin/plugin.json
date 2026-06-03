@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "description": "A curated starter bundle of AgentCounsel legal skills: structured workflows that produce draft legal work product for attorney review. Not legal advice.",
   "author": "AgentCounsel contributors",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "keywords": [
     "legal",
     "legal-skills",

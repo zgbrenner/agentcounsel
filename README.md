@@ -2,7 +2,7 @@
 
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
 [![Skills](https://img.shields.io/badge/skills-186-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
@@ -249,7 +249,7 @@ For the bigger picture, see [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) (
 
 ## License
 
-Apache License 2.0 — see [`LICENSE`](LICENSE). Attribution for content adapted from other open-source projects is recorded in [`NOTICE`](NOTICE). AgentCounsel is an independent open-source project and is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.
+MIT License — see [`LICENSE`](LICENSE). Attribution for content adapted from other open-source projects (which remain under their original Apache-2.0 terms) is recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). AgentCounsel is an independent open-source project and is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.
 
 ## Disclaimer
 
