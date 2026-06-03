@@ -18,6 +18,7 @@ related_skills:
   - skills/ai-governance/ai-use-case-intake/SKILL.md
   - skills/ai-governance/ai-vendor-terms-review/SKILL.md
   - skills/product-legal/ai-feature-review/SKILL.md
+  - skills/privacy/pia-generation/SKILL.md
 tags:
   - ai-governance
   - ai
