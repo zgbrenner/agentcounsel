@@ -1,0 +1,39 @@
+suite: workspace-platform-static-integrity
+description: Static eval definitions for matter-workspace, playbook, and review-panel integrity, enforced deterministically by scripts/validate_repo.py and scripts/build_platform_packs.py without network calls or model APIs.
+cases:
+  - eval_id: ws-static-001
+    title: Canonical matter workspace template is complete
+    check_type: workspace-integrity
+    target: matter-workspaces/_template/
+    expected_result: The multi-file template contains matter_profile.md, facts.md, open_questions.md, source_log.md, citation_map.md, unsupported_claims.md, assumptions.md, tasks.md, skills_used.md, attorney_review.md, matter_status.md, and the documents/, outputs/, and quality_checks/ folders.
+    eval_status: automated-static
+  - eval_id: ws-static-002
+    title: Source and citation templates match quality-layer classifications
+    check_type: workspace-integrity
+    target: matter-workspaces/_template/source_log.md
+    expected_result: source_log.md and citation_map.md carry the full quality-layer classification vocabulary (source-supported, source-mentioned but insufficient, unsupported, contradicted by source, legal authority required, attorney judgment required, user-provided authority, model-suggested authority requiring verification, unsupported or unverifiable authority); unsupported_claims.md and assumptions.md carry the relevant subset.
+    eval_status: automated-static
+  - eval_id: ws-static-003
+    title: Playbooks carry all required sections
+    check_type: playbook-integrity
+    target: playbooks/
+    expected_result: At least 8 playbooks exist, each with the 12 required H2 sections in order, ending with Final Attorney-Review Gate.
+    eval_status: automated-static
+  - eval_id: ws-static-004
+    title: Review panels carry all required sections and supervision framing
+    check_type: panel-integrity
+    target: review-panels/
+    expected_result: At least 6 review panels exist, each with the 10 required H2 sections in order, and each states that review passes are not autonomous agents or lawyers.
+    eval_status: automated-static
+  - eval_id: ws-static-005
+    title: Router recommends workspaces, playbooks, and review panels
+    check_type: router-integrity
+    target: metadata/router.json
+    expected_result: The router exposes route_types and routing_order including matter workspace, review panel, and playbook, and every example route_to pointing at a workspace, playbook, review panel, or practice profile resolves to an existing file or directory.
+    eval_status: automated-static
+  - eval_id: ws-static-006
+    title: Packs include workspace, playbook, and review-panel assets where justified
+    check_type: pack-integrity
+    target: metadata/packs.json
+    expected_result: Packs whose workflow type justifies it include playbooks, review panels, source/citation templates, and attorney-review templates, and every referenced asset resolves in the repository.
+    eval_status: automated-static

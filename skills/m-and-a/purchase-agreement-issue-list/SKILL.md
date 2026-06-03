@@ -18,6 +18,8 @@ related_skills:
   - skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md
   - skills/m-and-a/indemnity-escrow-risk-review/SKILL.md
   - skills/m-and-a/loi-term-sheet-review/SKILL.md
+  - skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md
+  - skills/tax/tax-covenants-indemnities-review/SKILL.md
 tags:
   - m-and-a
   - purchase-agreement

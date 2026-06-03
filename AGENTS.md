@@ -124,12 +124,27 @@ skills/             Canonical skill library, grouped by practice area.
 connectors/         External-source integrations skills can consult to
                     verify citation placeholders (Markdown only — no
                     runtime). See connectors/README.md for the contract.
+overlays/           Industry/jurisdiction overlays that tune existing
+                    skills for a context. See overlays/README.md.
 practice-profiles/  Per-practice-area configuration for a legal team.
+playbooks/          Workflow recipes that sequence skills for a recurring
+                    task type. See playbooks/README.md.
+matter-packs/       Workflow bundles — a recommended sequence of skills
+                    for a matter type. See matter-packs/README.md.
+review-panels/      Supervised multi-pass review workflows.
+                    See review-panels/README.md.
 matter-workspaces/  Single-file scaffolds for organizing one matter.
 adapters/           Thin per-environment integration files.
 evals/              Lightweight, non-legal quality checks for skills.
 scripts/            Validation and build tooling (Python stdlib only).
+metadata/           Generated machine-readable index, router, and pack
+                    manifests (built by scripts/, never hand-edited).
+reports/            Generated eval-coverage and skill-quality reports.
 site/               Generated static catalog of the skills.
+dist/               Generated platform install packs (gitignored; built by
+                    scripts/build_platform_packs.py).
+examples/           Illustrative sample skill outputs.
+docs/               Extended guides and reference docs.
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill.
 COMMANDS.md         Slash-style command shorthands.

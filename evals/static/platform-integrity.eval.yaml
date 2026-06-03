@@ -1,0 +1,51 @@
+suite: platform-static-integrity
+description: Static eval definitions for metadata, router, and pack integrity checks enforced by scripts/check_evals.py without network calls or model APIs.
+cases:
+  - eval_id: static-001
+    title: High-risk skills require attorney review gate
+    check_type: metadata-quality-check
+    target: metadata/index.json
+    expected_result: Every high or critical risk skill recommends attorney-review-gate.
+    eval_status: automated-static
+  - eval_id: static-002
+    title: Research skills require citation and source validation
+    check_type: metadata-quality-check
+    target: metadata/index.json
+    expected_result: Every research skill recommends citation-integrity-check and source-validation-check.
+    eval_status: automated-static
+  - eval_id: static-003
+    title: Drafting skills require prose and format checks
+    check_type: metadata-quality-check
+    target: metadata/index.json
+    expected_result: Every drafting skill recommends legal-prose-polish and output-format-compliance-check.
+    eval_status: automated-static
+  - eval_id: static-004
+    title: External-facing skills require privilege confidentiality checks
+    check_type: metadata-quality-check
+    target: metadata/index.json
+    expected_result: External-facing communication and enforcement skills recommend privilege-confidentiality-check.
+    eval_status: automated-static
+  - eval_id: static-005
+    title: Pack manifests reference existing files
+    check_type: pack-integrity
+    target: metadata/packs.json
+    expected_result: Every pack file reference resolves in the repository.
+    eval_status: automated-static
+  - eval_id: static-006
+    title: Packs include core safety rules
+    check_type: pack-integrity
+    target: metadata/packs.json
+    expected_result: Every pack includes core safety rule references.
+    eval_status: automated-static
+  - eval_id: static-007
+    title: Pack quality checks exist in metadata
+    check_type: pack-integrity
+    target: metadata/packs.json
+    expected_result: Every included quality check ID appears in metadata/index.json quality_checks.
+    eval_status: automated-static
+  - eval_id: static-008
+    title: Router entries reference valid skills
+    check_type: router-integrity
+    target: metadata/router.json
+    expected_result: Every router skill entry points to a valid skill ID in metadata/index.json.
+    eval_status: automated-static

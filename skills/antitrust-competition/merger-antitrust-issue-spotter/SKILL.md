@@ -17,6 +17,8 @@ related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
   - skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md
+  - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
+  - skills/m-and-a/acquisition-diligence-request-list/SKILL.md
 tags:
   - antitrust
   - competition

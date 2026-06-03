@@ -15,6 +15,7 @@ safety language is missing from a pack. See README.md.
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -30,6 +31,9 @@ CORE_DIR = REPO_ROOT / "core"
 PROFILES_DIR = REPO_ROOT / "practice-profiles"
 COMMANDS_FILE = REPO_ROOT / "COMMANDS.md"
 DIST = REPO_ROOT / "dist"
+PACKS_METADATA = REPO_ROOT / "metadata" / "packs.json"
+PACK_SCHEMA_VERSION = "1.0"
+PACK_SOURCE_DATE = "2026-05-28"
 
 REQUIRED_SECTIONS = [
     "Purpose", "Use When", "Required Inputs", "Do Not Use When",
@@ -47,9 +51,35 @@ CORE_SAFETY_FILES = [
 ]
 CORE_CHECKLIST_FILE = "attorney-review-checklist.md"
 CORE_ALL = CORE_SAFETY_FILES + [CORE_CHECKLIST_FILE]
+QUALITY_CHECK_FILES = {
+    "assumption-audit": "skills/legal-methodology/assumption-audit/SKILL.md",
+    "attorney-review-gate": "skills/legal-methodology/attorney-review-gate/SKILL.md",
+    "citation-integrity-check": "skills/legal-methodology/citation-integrity-check/SKILL.md",
+    "hallucination-red-team": "skills/legal-methodology/hallucination-red-team/SKILL.md",
+    "legal-prose-polish": "skills/legal-methodology/legal-prose-polish/SKILL.md",
+    "output-format-compliance-check": "skills/legal-methodology/output-format-compliance-check/SKILL.md",
+    "privilege-confidentiality-check": "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
+    "source-validation-check": "skills/legal-methodology/source-validation/SKILL.md",
+    "jurisdiction-deadline-gates": "core/jurisdiction-and-deadline-gates.md",
+}
 
 # Every generated pack must carry the AgentCounsel safety framing.
 REQUIRED_SAFETY_PHRASES = ["draft legal work product", "attorney review"]
+
+# Canonical multi-file matter workspace template assets. Packs whose workflow
+# type justifies a workspace (they reference a matter pack, matter workspace,
+# playbook, or review panel) also carry the source/citation and attorney-review
+# templates so the quality layer has something to attach to.
+WORKSPACE_TEMPLATE_DIR = "matter-workspaces/_template"
+WORKSPACE_SOURCE_CITATION_TEMPLATES = [
+    "matter-workspaces/_template/source_log.md",
+    "matter-workspaces/_template/citation_map.md",
+    "matter-workspaces/_template/unsupported_claims.md",
+    "matter-workspaces/_template/assumptions.md",
+]
+WORKSPACE_ATTORNEY_REVIEW_TEMPLATES = [
+    "matter-workspaces/_template/attorney_review.md",
+]
 
 AREA_NAMES = {
     "legal-research": "Legal Research",
@@ -177,6 +207,226 @@ def load_areas() -> dict:
         if skills:
             areas[area] = {"skills": skills, "references": references}
     return areas
+
+
+def load_skill_metadata_by_path() -> dict:
+    try:
+        import build_skill_index
+    except Exception:
+        return {}
+    return {s["path"]: s for s in build_skill_index.build_index()["skills"]}
+
+
+def area_template_paths(area_info: dict) -> list[str]:
+    paths: list[str] = []
+    for sk in area_info["skills"]:
+        for tname, _ in sk["templates"]:
+            paths.append(
+                f"skills/{sk['area']}/{sk['slug']}/templates/{tname}")
+    for rname, _ in area_info["references"]:
+        paths.append(f"skills/{area_info['skills'][0]['area']}/references/{rname}")
+    return sorted(paths)
+
+
+def markdown_title(path: Path) -> str:
+    if not path.is_file():
+        return path.stem.replace("-", " ").title()
+    m = re.search(r"^#\s+(.+)$", path.read_text(encoding="utf-8"), re.M)
+    return m.group(1).strip() if m else path.stem.replace("-", " ").title()
+
+
+def files_referencing_area(base: Path, area: str) -> list[str]:
+    found: list[str] = []
+    if not base.is_dir():
+        return found
+    pattern = f"skills/{area}/"
+    for path in sorted(base.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        if pattern in text:
+            found.append(path.relative_to(REPO_ROOT).as_posix())
+    return found
+
+
+def quality_checks_for_skills(skills: list, skill_meta: dict) -> list[str]:
+    checks: list[str] = []
+    for sk in skills:
+        record = skill_meta.get(sk["path"], {})
+        for q in record.get("recommended_quality_checks", []):
+            if q not in checks:
+                checks.append(q)
+    return checks
+
+
+def build_pack_registry(areas: dict) -> dict:
+    skill_meta = load_skill_metadata_by_path()
+    order = ordered_areas(areas)
+    packs: list[dict] = []
+    core_rules = [f"core/{name}" for name in CORE_ALL]
+    safety = (
+        "Every AgentCounsel pack produces draft legal work product for review "
+        "by a licensed attorney. It is not legal advice, and it does not "
+        "replace attorney verification."
+    )
+
+    for area in order:
+        info = areas[area]
+        skills = [s["path"] for s in info["skills"]]
+        templates = area_template_paths(info)
+        matter_packs = files_referencing_area(REPO_ROOT / "matter-packs", area)
+        workspaces = files_referencing_area(REPO_ROOT / "matter-workspaces", area)
+        playbooks = files_referencing_area(REPO_ROOT / "playbooks", area)
+        review_panels = files_referencing_area(REPO_ROOT / "review-panels", area)
+        quality_checks = quality_checks_for_skills(info["skills"], skill_meta)
+        # Only carry workspace tooling where the workflow type justifies it.
+        workspace_justified = bool(
+            matter_packs or workspaces or playbooks or review_panels
+        )
+        source_citation_templates = (
+            list(WORKSPACE_SOURCE_CITATION_TEMPLATES) if workspace_justified else []
+        )
+        attorney_review_templates = (
+            list(WORKSPACE_ATTORNEY_REVIEW_TEMPLATES) if workspace_justified else []
+        )
+        common = {
+            "practice_area": area,
+            "practice_area_name": area_name(area),
+            "use_case": "practice-area legal workflow pack",
+            "included_skills": skills,
+            "included_core_rules": core_rules,
+            "included_templates": templates,
+            "included_quality_checks": quality_checks,
+            "included_matter_packs": matter_packs,
+            "included_matter_workspace_templates": workspaces,
+            "included_playbooks": playbooks,
+            "included_review_panels": review_panels,
+            "included_source_citation_templates": source_citation_templates,
+            "included_attorney_review_templates": attorney_review_templates,
+            "safety_disclaimer": safety,
+            "attorney_review_requirements": [
+                "A licensed attorney must review and adopt all outputs before reliance.",
+                "The agent must not invent legal authority, citations, quotations, facts, or deadlines.",
+                "Jurisdiction, governing law, posture, and deadlines must be supplied or flagged as unknown.",
+            ],
+            "version": PACK_SCHEMA_VERSION,
+            "date": PACK_SOURCE_DATE,
+        }
+        pack_defs = [
+            ("chatgpt", f"chatgpt/{area}.md",
+             "Upload the Markdown pack to a ChatGPT Project and add the generated project instructions."),
+            ("claude", f"claude/{area}.zip",
+             "Unzip into Claude Project knowledge or a plugin-style workspace and follow CLAUDE.md."),
+            ("gemini", f"gemini/{area}.zip",
+             "Add the notebook source files to Gemini and follow notebook-instructions.md."),
+        ]
+        for platform, output, setup in pack_defs:
+            packs.append({
+                "pack_id": f"{platform}/{area}",
+                "platform": platform,
+                "output": output,
+                "setup_instructions": setup,
+                **common,
+            })
+
+    packs.append({
+        "pack_id": "repo-agents/global",
+        "platform": "codex-cursor-claude-code",
+        "practice_area": "all",
+        "practice_area_name": "All Practice Areas",
+        "use_case": "repo-agent instruction files",
+        "output": "repo-agents/",
+        "included_skills": [],
+        "included_core_rules": core_rules,
+        "included_templates": [],
+        "included_quality_checks": sorted(QUALITY_CHECK_FILES),
+        "included_matter_packs": [],
+        "included_matter_workspace_templates": [],
+        "included_playbooks": [],
+        "included_review_panels": [],
+        "included_source_citation_templates": [],
+        "included_attorney_review_templates": [],
+        "setup_instructions": "Copy the generated AGENTS.md, CLAUDE.md, or .cursorrules file into a repository root.",
+        "safety_disclaimer": safety,
+        "attorney_review_requirements": [
+            "Repo agents must route to the narrowest relevant skill.",
+            "All legal outputs remain draft work product for attorney review.",
+        ],
+        "version": PACK_SCHEMA_VERSION,
+        "date": PACK_SOURCE_DATE,
+    })
+
+    return {
+        "generated_by": "scripts/build_platform_packs.py",
+        "schema_version": PACK_SCHEMA_VERSION,
+        "date": PACK_SOURCE_DATE,
+        "platforms": ["chatgpt", "claude", "gemini", "cursor", "codex"],
+        "quality_checks": [
+            {"id": key, "path": value}
+            for key, value in sorted(QUALITY_CHECK_FILES.items())
+        ],
+        "packs": packs,
+    }
+
+
+def render_pack_registry(areas: dict) -> str:
+    return json.dumps(build_pack_registry(areas), indent=2) + "\n"
+
+
+def validate_pack_registry(registry: dict, check_outputs: bool = False) -> list[str]:
+    problems: list[str] = []
+    valid_checks = set(QUALITY_CHECK_FILES)
+    for check_id, path in QUALITY_CHECK_FILES.items():
+        if not (REPO_ROOT / path).exists():
+            problems.append(f"quality check '{check_id}' target missing: {path}")
+    for pack in registry.get("packs", []):
+        pid = pack.get("pack_id", "<missing>")
+        for field in (
+            "pack_id", "platform", "practice_area", "included_skills",
+            "included_core_rules", "included_quality_checks",
+            "setup_instructions", "safety_disclaimer",
+            "attorney_review_requirements", "version", "date",
+        ):
+            if field not in pack:
+                problems.append(f"{pid}: missing manifest field '{field}'")
+        for path in pack.get("included_skills", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: skill path missing: {path}")
+        for path in pack.get("included_core_rules", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: core rule missing: {path}")
+        for path in pack.get("included_templates", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: template/reference missing: {path}")
+        for path in pack.get("included_matter_packs", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: matter pack missing: {path}")
+        for path in pack.get("included_matter_workspace_templates", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: matter workspace missing: {path}")
+        for path in pack.get("included_playbooks", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: playbook missing: {path}")
+        for path in pack.get("included_review_panels", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: review panel missing: {path}")
+        for path in pack.get("included_source_citation_templates", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: source/citation template missing: {path}")
+        for path in pack.get("included_attorney_review_templates", []):
+            if not (REPO_ROOT / path).is_file():
+                problems.append(f"{pid}: attorney-review template missing: {path}")
+        for check_id in pack.get("included_quality_checks", []):
+            if check_id not in valid_checks:
+                problems.append(f"{pid}: unknown quality check: {check_id}")
+        if "draft legal work product" not in pack.get("safety_disclaimer", "").lower():
+            problems.append(f"{pid}: safety disclaimer missing draft-work-product posture")
+        if check_outputs:
+            output = pack.get("output", "")
+            if output.endswith("/"):
+                if not (DIST / output).is_dir():
+                    problems.append(f"{pid}: generated output folder missing: {output}")
+            elif output and not (DIST / output).is_file():
+                problems.append(f"{pid}: generated output file missing: {output}")
+    return problems
 
 
 def ordered_areas(areas: dict) -> list[str]:
@@ -603,7 +853,34 @@ def check_not_empty(label: str, members: list) -> None:
 
 # --- main ------------------------------------------------------------------
 
-def main() -> int:
+def run_check() -> int:
+    if not SKILLS_DIR.is_dir():
+        print("skills/ directory not found", file=sys.stderr)
+        return 1
+    areas = load_areas()
+    expected = render_pack_registry(areas)
+    if not PACKS_METADATA.is_file():
+        print(f"MISSING: {PACKS_METADATA.relative_to(REPO_ROOT).as_posix()} "
+              "has not been generated.")
+        print("Run 'python scripts/build_platform_packs.py'.")
+        return 1
+    if PACKS_METADATA.read_text(encoding="utf-8") != expected:
+        print(f"STALE: {PACKS_METADATA.relative_to(REPO_ROOT).as_posix()} "
+              "is out of date.")
+        print("Run 'python scripts/build_platform_packs.py'.")
+        return 1
+    problems = validate_pack_registry(build_pack_registry(areas))
+    if problems:
+        print("Pack manifest validation failed:")
+        for problem in problems:
+            print(f"  x {problem}")
+        return 1
+    print(f"{PACKS_METADATA.relative_to(REPO_ROOT).as_posix()} is up to date "
+          f"({len(areas)} practice areas).")
+    return 0
+
+
+def run_write() -> int:
     if not SKILLS_DIR.is_dir():
         print("skills/ directory not found", file=sys.stderr)
         return 1
@@ -613,8 +890,15 @@ def main() -> int:
     if not areas:
         err("no practice areas with skills were found under skills/")
 
+    PACKS_METADATA.parent.mkdir(parents=True, exist_ok=True)
+    pack_registry = build_pack_registry(areas)
+    PACKS_METADATA.write_text(
+        json.dumps(pack_registry, indent=2) + "\n", encoding="utf-8")
+    errors.extend(validate_pack_registry(pack_registry))
+
     shutil.rmtree(DIST, ignore_errors=True)
     DIST.mkdir(parents=True, exist_ok=True)
+    write_text("packs.json", json.dumps(pack_registry, indent=2) + "\n")
 
     order = ordered_areas(areas)
     index_areas = []
@@ -738,6 +1022,7 @@ def main() -> int:
     manifest = {
         "generated": generated,
         "generator": "scripts/build_platform_packs.py",
+        "pack_registry": "metadata/packs.json",
         "file_count": len(files),
         "files": files,
     }
@@ -746,8 +1031,11 @@ def main() -> int:
 
     print(f"AgentCounsel platform packs -> {DIST}")
     print(f"  {len(index_areas)} practice areas, {total_skills} skills")
+    print(f"  wrote {PACKS_METADATA.relative_to(REPO_ROOT).as_posix()}")
     print(f"  {len(files) + 1} files written "
           f"(chatgpt, claude, gemini, repo-agents, indexes)")
+
+    errors.extend(validate_pack_registry(pack_registry, check_outputs=True))
 
     if errors:
         print()
@@ -757,6 +1045,17 @@ def main() -> int:
         return 1
     print("  all build-validation checks passed")
     return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Build AgentCounsel platform packs and pack manifests.")
+    parser.add_argument(
+        "--check", action="store_true",
+        help="Verify metadata/packs.json is current and valid; do not write "
+             "dist/ or metadata files.")
+    args = parser.parse_args()
+    return run_check() if args.check else run_write()
 
 
 def skill_packs_index(index_areas: list) -> str:
@@ -782,7 +1081,7 @@ def skill_packs_index(index_areas: list) -> str:
         "- `repo-agents/CLAUDE.md` — Claude Code instructions.",
         "- `repo-agents/.cursorrules` — Cursor project rules.",
         "- `repo-agents/README.md` — generic repo-agent install guide.",
-        "- `index.json`, `manifest.json` — machine-readable indexes.\n",
+        "- `packs.json`, `index.json`, `manifest.json` — machine-readable indexes.\n",
         "## How to install\n",
         "**ChatGPT Projects.** Create a Project per practice area and upload "
         "that area's `chatgpt/<area>.md` file. Use "

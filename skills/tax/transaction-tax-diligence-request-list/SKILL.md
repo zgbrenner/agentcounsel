@@ -20,6 +20,7 @@ related_skills:
   - skills/tax/tax-issue-intake/SKILL.md
   - skills/tax/tax-provision-review-checklist/SKILL.md
   - skills/tax/tax-covenants-indemnities-review/SKILL.md
+  - skills/m-and-a/acquisition-diligence-request-list/SKILL.md
 tags:
   - tax
   - attorney-review

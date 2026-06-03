@@ -1,69 +1,98 @@
 # Quick Start
 
-This guide takes you from zero to your first AgentCounsel skill run in about five minutes. It assumes you already have access to an AI assistant (ChatGPT, Claude, Gemini, or a coding agent).
+From zero to your first AgentCounsel skill run in about five minutes. Pick the
+path for the tool you use — ChatGPT, Claude, Cursor/Codex, Gemini, or plain
+Markdown.
 
-> Everything AgentCounsel produces is **draft legal work product for attorney review** — not legal advice. A licensed attorney must review the output before it is relied upon.
+> Everything AgentCounsel produces is **draft legal work product for attorney
+> review** — not legal advice, and not a substitute for a licensed attorney. A
+> qualified lawyer must review every output before it is relied upon.
 
 ## The idea in one minute
 
-A **skill** is a single Markdown file (`SKILL.md`) that describes a legal workflow: what it is for, what inputs it needs, the steps to follow, the structure of the output, and what an attorney must verify. You give the skill file to an AI assistant as context, provide your inputs, and the assistant produces a structured draft. You — or a supervising attorney — then review it.
+- A **skill** (`skills/<area>/<slug>/SKILL.md`) is one Markdown file describing a
+  legal workflow: what it is for, the inputs it needs, the steps, the output
+  structure, and what an attorney must verify. You give it to an AI assistant as
+  context, provide inputs, and review the structured draft it produces.
+- A **pack** bundles every skill in a practice area plus the safety rules and
+  commands into one uploadable file — the fastest way to start.
+- For larger work there are also **matter workspaces**, **playbooks**, **review
+  panels**, **matter packs**, and **quality checks**. See
+  [`docs/CHOOSE_YOUR_WORKFLOW.md`](docs/CHOOSE_YOUR_WORKFLOW.md) to decide which.
 
-A **pack** consolidates every skill in a practice area — plus the global safety rules and slash commands — into one file you can upload to your AI tool's project or workspace. Installing a pack is the fastest way to get started; using individual skill files gives you more control.
+Not sure which surface fits your task? Read
+[`docs/CHOOSE_YOUR_WORKFLOW.md`](docs/CHOOSE_YOUR_WORKFLOW.md) first. The common
+steps in every path are the same: **pick a pack or skill → provide Required
+Inputs → review against the Attorney Verification Checklist.**
 
-## Step 1 — Install a practice-area pack (recommended)
+---
 
-Open the [AgentCounsel packs page](https://zgbrenner.github.io/agentcounsel/packs/) and pick the practice area you work in (Contracts, Litigation, Employment, Privacy, M&A, etc.). Each row has direct downloads for ChatGPT (`.md`), Claude (`.zip`), and Gemini (`.zip`). Repo-agent users (Cursor, Codex, Claude Code) use the `AGENTS.md` / `CLAUDE.md` files in the repo-agents section instead.
+## Pick your platform
 
-Upload the file to a new project in your AI tool. In the project's custom instructions, paste:
+### ChatGPT Projects
 
-> *"Follow the AgentCounsel pack in the project files. Apply the global safety rules to every task. Use the practice profile and the skill that matches the request. Produce draft legal work product for attorney review — not legal advice."*
+1. **Get the pack.** Open the [packs page](https://zgbrenner.github.io/agentcounsel/packs/) and download your practice area's ChatGPT pack (`.md`).
+2. **Install.** Create a ChatGPT Project, upload the `.md` to its files, and in the Project instructions paste: *"Follow the AgentCounsel pack in the project files. Apply the global safety rules to every task. Use the practice profile and the skill that matches the request. Produce draft legal work product for attorney review — not legal advice."*
+3. **Start a matter (optional).** For a multi-document, multi-deadline engagement, ask the project to set up a matter workspace (see [`docs/MATTER_WORKSPACES.md`](docs/MATTER_WORKSPACES.md)), or initialize one locally with `py scripts/init_matter_workspace.py`.
+4. **Run a skill.** Describe the task in plain language; ChatGPT routes to the matching skill. Provide the Required Inputs it asks for.
+5. **Quality checks.** For anything that cites authority or leaves the building, ask it to run the quality checks (source validation, citation integrity, hallucination red-team). See [`docs/QUALITY_LAYER.md`](docs/QUALITY_LAYER.md).
+6. **Attorney review gate.** Always finish with the Attorney Verification Checklist before relying on, sending, or filing anything.
+7. **What not to do.** Do not treat the output as final or as legal advice; do not paste real privileged client data into a consumer account you have not cleared for confidential material.
 
-The pack is regenerated on every push to `main`, so you're always installing the current version.
+### Claude Projects / Claude Code plugin
 
-## Step 2 — Pick the right skill (within the pack)
+1. **Get the pack.** Download your practice area's Claude pack (`.zip`) from the [packs page](https://zgbrenner.github.io/agentcounsel/packs/). For Claude Code, use the plugin bundle in [`adapters/claude-code-plugin/`](adapters/claude-code-plugin/).
+2. **Install.** Unzip into a Claude Project's knowledge (or use the plugin bundle), and paste the same operating instruction shown for ChatGPT.
+3. **Start a matter (optional).** Same as above — set up a matter workspace for multi-step work.
+4. **Run a skill.** Describe the task; Claude routes to the matching skill and gathers Required Inputs.
+5. **Quality checks.** Run the relevant `skills/legal-methodology/` checks on authority-heavy or external drafts.
+6. **Attorney review gate.** Complete the Attorney Verification Checklist before reliance.
+7. **What not to do.** Do not hand-edit the generated plugin bundle; regenerate it with `py scripts/sync_plugin_skills.py`. Do not rely on output without attorney review.
 
-A pack contains every skill in the practice area. You name a task in plain language; the AI routes to the matching skill using the `COMMANDS.md` content that ships inside the pack.
+### Cursor / Codex (repo agents)
 
-Example: in a Contracts pack, you say *"Review this NDA — the client is the receiving party, this is for a stand-alone commercial NDA."* The AI routes to the `nda-review` skill and follows its workflow. If you prefer the short form, the same pack lets you say `/contracts:nda` directly.
+1. **Get the instructions.** Use [`AGENTS.md`](AGENTS.md) (Codex and most repo agents) or [`CLAUDE.md`](CLAUDE.md) (Claude Code); the packs page also serves a ready-made `.cursorrules`. See [`docs/PLUGIN_COMPATIBILITY.md`](docs/PLUGIN_COMPATIBILITY.md).
+2. **Install.** Vendor `skills/` and `core/` into your project (or work in a checkout) and copy the instruction file to the project root. The agent loads the operating model and routes to the narrowest skill.
+3. **Start a matter (optional).** Run `py scripts/init_matter_workspace.py "<matter name>" --practice-area <area>` to scaffold a workspace under `matters/` (git-ignored).
+4. **Run a skill.** Ask for the task; the agent opens the single narrowest `SKILL.md` and follows it. See [`docs/AGENT_COMMANDS.md`](docs/AGENT_COMMANDS.md) for the commands to run after edits.
+5. **Quality checks.** Run the quality-layer skills, and `py scripts/validate_repo.py` if you edited library files.
+6. **Attorney review gate.** The agent hands off the Attorney Verification Checklist unchecked — a person completes it.
+7. **What not to do.** Do not let the agent edit `skills/`/`core/` unless the task is explicitly to change the library; do not commit anything under `matters/`.
 
-If you want to browse before you choose, [`SKILLS_INDEX.md`](SKILLS_INDEX.md) lists every skill by practice area, [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) maps tasks to skills, and [`COMMANDS.md`](COMMANDS.md) lists the slash commands.
+### Gemini
 
-## Step 3 — Provide the Required Inputs
+1. **Get the pack.** Download your practice area's Gemini pack (`.zip`), or install the repo as a Gemini CLI extension via [`adapters/gemini/`](adapters/gemini/) (`gemini-extension.json` + `GEMINI.md`).
+2. **Install.** Add the unzipped contents as sources in a Gemini notebook/workspace, or let the CLI extension load the operating model automatically.
+3. **Start a matter (optional).** Set up a matter workspace for multi-step engagements.
+4. **Run a skill.** Tell Gemini to follow the AgentCounsel pack and apply the safety rules; provide the Required Inputs for the matching skill.
+5. **Quality checks.** Run source validation and citation integrity on anything that cites law.
+6. **Attorney review gate.** Finish with the Attorney Verification Checklist before reliance.
+7. **What not to do.** Do not rely on routing if the practice area is ambiguous — name the skill, or check [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md).
 
-Every skill declares its **Required Inputs** — usually the document, your client's role, the business context, the jurisdiction. The AI will ask for them; provide them in the chat. If you're missing an input, say so — the skill will tell you what's missing and stop rather than guess.
+### Local / Markdown-only (no AI tool required)
 
-## Step 4 — Review the output against the Attorney Verification Checklist
+1. **Get the files.** Clone the repository, or copy the single `SKILL.md` (and its `templates/`) you need.
+2. **Read the rules.** Read [`core/`](core/) once — the operating rules every skill inherits.
+3. **Start a matter (optional).** `py scripts/init_matter_workspace.py "<matter name>"` scaffolds a workspace from [`matter-workspaces/_template/`](matter-workspaces/_template/). Everything is plain Markdown you can fill in by hand.
+4. **Run a skill.** Follow the chosen skill's Workflow and produce its Output Format — with any model, or as a structured worksheet for a person.
+5. **Quality checks.** The quality-layer skills under [`skills/legal-methodology/`](skills/legal-methodology/) are themselves Markdown workflows you can apply by hand.
+6. **Attorney review gate.** Complete the Attorney Verification Checklist before reliance.
+7. **What not to do.** Do not delete the visible placeholders (`[CONFIRM: ...]`, `[verify jurisdiction]`) without resolving them — each is a task for a person.
 
-Every skill ends with an **Attorney Verification Checklist**. Work through it. The draft will contain visible placeholders — `[CONFIRM: ...]`, `[verify jurisdiction]`, `[ATTORNEY TO CONFIRM: ...]` — wherever the skill could not be certain. Each one is a task for a person, not a defect to ignore.
-
-**Do not rely on, send, or file the output until a qualified, licensed attorney has reviewed it.**
-
-## Step 5 — See what "good" looks like
-
-The [`examples/`](examples/) directory has complete sample outputs (with fictional facts) for a contract review, a litigation chronology, a DPA review, a product launch review, and a red-team verification. Read one before your first run so you know what to expect.
-
-## Alternative: use individual skill files
-
-If you prefer to work skill-by-skill rather than installing a whole pack:
-
-1. Route the task with [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) or browse [`SKILLS_INDEX.md`](SKILLS_INDEX.md).
-2. Open the chosen `SKILL.md`. Check its Use When / Required Inputs / Legal Safety Rules sections.
-3. Paste the contents of [`core/`](core/) (or at minimum [`core/source-and-citation-discipline.md`](core/source-and-citation-discipline.md)) plus the `SKILL.md` into your AI assistant, then provide your inputs.
-4. Each platform's deeper setup guide lives in [`adapters/`](adapters/) — Claude Code plugin, Claude Cowork, Gemini CLI extension, Codex, generic Markdown.
-
-If your practice group has populated a profile at `practice-profiles/<area>.md`, include it alongside the skill — about 20 skills consume it to benchmark against the group's standing positions. See [`CONFIGURING.md`](CONFIGURING.md) for details.
+---
 
 ## A worked example: reviewing an NDA
 
-1. **Route.** `WORKFLOW_ROUTER.md` → "Review this NDA" → `skills/contracts/nda-review/SKILL.md`. (In a Contracts pack, just say "review this NDA" in chat.)
+1. **Route.** `WORKFLOW_ROUTER.md` → "Review this NDA" → `skills/contracts/nda-review/SKILL.md`. (In a Contracts pack, just say "review this NDA" in chat. If you review NDAs the same way every week, use [`playbooks/nda-review.md`](playbooks/nda-review.md).)
 2. **Read.** Required Inputs: the NDA text, your client's role (disclosing, receiving, or mutual), and the business context.
 3. **Run.** With a pack: state the task and provide the NDA + role. With files: paste `core/` + the skill + the NDA text into your assistant.
 4. **Get back.** A triage rating, a key-terms table, a risk table, prioritized redline points, and an Attorney Verification Checklist.
-5. **Review.** Resolve every `[CONFIRM: ...]` placeholder; have an attorney confirm the triage rating and redline priorities before negotiating or signing.
+5. **Quality + review.** Run citation/source checks if any authority is cited; resolve every `[CONFIRM: ...]` placeholder; have an attorney confirm the triage rating and redline priorities before negotiating or signing.
 
 ## Where to go next
 
-- [`README.md`](README.md) — what AgentCounsel is, who it is for, and how it is organized.
-- [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md) — the safety model and how to use AgentCounsel with confidential material.
+- [`README.md`](README.md) — what AgentCounsel is, who it is for, how it is organized.
+- [`docs/CHOOSE_YOUR_WORKFLOW.md`](docs/CHOOSE_YOUR_WORKFLOW.md) — choosing among skills, packs, workspaces, playbooks, panels, and quality checks.
+- [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md) — the safety model and using AgentCounsel with confidential material.
+- [`docs/QUALITY_LAYER.md`](docs/QUALITY_LAYER.md) — the quality checks and when to run them.
 - [`docs/FAQ.md`](docs/FAQ.md) — common questions.
-- [`core/`](core/) — the operating rules every skill inherits. Read these once; they apply everywhere.

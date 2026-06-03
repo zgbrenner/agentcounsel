@@ -17,6 +17,9 @@ related_skills:
   - skills/m-and-a/data-room-index-review/SKILL.md
   - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
   - skills/m-and-a/loi-term-sheet-review/SKILL.md
+  - skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md
+  - skills/tax/transaction-tax-diligence-request-list/SKILL.md
+  - skills/ip/open-source-license-review/SKILL.md
 tags:
   - m-and-a
   - due-diligence

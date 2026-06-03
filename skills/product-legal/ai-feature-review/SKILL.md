@@ -17,6 +17,7 @@ related_skills:
   - skills/ai-governance/ai-vendor-terms-review/SKILL.md
   - skills/product-legal/launch-review/SKILL.md
   - skills/ai-governance/model-risk-triage/SKILL.md
+  - skills/privacy/pia-generation/SKILL.md
 tags:
   - product-legal
   - ai

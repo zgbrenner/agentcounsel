@@ -2,7 +2,14 @@
 
 ## What Is a Matter Workspace?
 
-A matter workspace is a single-file structured scaffold for organizing **one specific legal matter**. It is the working file where an agent or team tracks that matter's parties, facts, key documents, deadlines, open action items, and the draft work product produced during the engagement.
+A matter workspace is a structured scaffold for organizing **one specific legal matter**. It is the working file (or folder) where an agent or team tracks that matter's parties, facts, key documents, deadlines, open action items, and the draft work product produced during the engagement.
+
+There are two formats:
+
+- **Single-file workspaces** (`matter-workspaces/*-matter.md`, below) — quick to open and read; best for a focused matter handled in one or two sittings.
+- **The canonical multi-file template** (`matter-workspaces/_template/`) — best for a document-heavy, multi-step, source/citation-intensive, or long-running matter where facts, sources, assumptions, tasks, outputs, and quality checks each deserve their own tracked file. See `matter-workspaces/_template/README.md`, `docs/MATTER_WORKSPACES.md`, and the `scripts/init_matter_workspace.py` initializer.
+
+Pick the format that fits the matter; do not maintain both for the same matter.
 
 A matter workspace is distinct from a skill and distinct from a skill template:
 

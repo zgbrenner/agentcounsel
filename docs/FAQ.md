@@ -24,7 +24,7 @@ Practicing lawyers and in-house legal teams; legal operations and knowledge-mana
 
 ### Is it affiliated with Anthropic, OpenAI, or Google?
 
-No. AgentCounsel is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by any AI vendor. It works *with* their tools but is not a product of any of them. Attribution for adapted open-source content is in [`NOTICE`](../NOTICE).
+No. AgentCounsel is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by any AI vendor. It works *with* their tools but is not a product of any of them. Attribution for adapted open-source content is in [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
 
 ## Using it
 
@@ -38,7 +38,7 @@ No. AgentCounsel is plain Markdown with no runtime and no dependencies. You copy
 
 ### Does it cost anything?
 
-The library is free and open source under the Apache License 2.0. You pay only for whatever AI service you choose to run the skills on.
+The library is free and open source under the MIT License. You pay only for whatever AI service you choose to run the skills on.
 
 ### How do I pick the right skill?
 
@@ -82,7 +82,7 @@ No. It changes how the work is *drafted and structured*, not who is *responsible
 
 ### Can I embed AgentCounsel in my own product?
 
-Yes, within the Apache License 2.0. Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions. Preserve the license and the attributions in [`NOTICE`](../NOTICE). Do not represent the output as legal advice.
+Yes, within the MIT License. Vendor the `skills/` and `core/` directories into your project and reference them from your agent's instructions. Preserve the license and the upstream attributions in [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md). Do not represent the output as legal advice.
 
 ### How do I add or improve a skill?
 

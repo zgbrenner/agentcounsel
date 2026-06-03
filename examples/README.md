@@ -24,6 +24,20 @@ Notice the visible placeholders — `[CONFIRM: ...]`, `[verify jurisdiction]`, `
 | [`product-launch-review-example.md`](product-launch-review-example.md) | [Launch Review](../skills/product-legal/launch-review/SKILL.md) — pre-launch legal issue-spotting for a product feature. |
 | [`red-team-verifier-example.md`](red-team-verifier-example.md) | [Red-Team Verifier](../skills/legal-methodology/red-team-verifier/SKILL.md) — a final quality-control pass on a draft. |
 
+## Quality-layer examples
+
+The [`quality-layer/`](quality-layer/) subdirectory shows how the reusable
+legal-methodology quality checks operate after a primary skill has produced a
+draft. These examples are fictional and illustrative; they do not verify
+current law or replace attorney review.
+
+| Example | Quality check it demonstrates |
+|---|---|
+| [`quality-layer/contract-review-prose-polish.md`](quality-layer/contract-review-prose-polish.md) | [Legal Prose Polish](../skills/legal-methodology/legal-prose-polish/SKILL.md) — a before/after polish pass for a contract-review issue. |
+| [`quality-layer/research-memo-source-validation.md`](quality-layer/research-memo-source-validation.md) | [Source Validation](../skills/legal-methodology/source-validation/SKILL.md) — a claim-support table for a fictional research memo. |
+| [`quality-layer/demand-letter-hallucination-red-team.md`](quality-layer/demand-letter-hallucination-red-team.md) | [Hallucination Red-Team](../skills/legal-methodology/hallucination-red-team/SKILL.md) — unsupported legal claims in a draft demand letter. |
+| [`quality-layer/attorney-review-gate-checklist.md`](quality-layer/attorney-review-gate-checklist.md) | [Attorney Review Gate](../skills/legal-methodology/attorney-review-gate/SKILL.md) — final readiness triage for a high-risk output. |
+
 ## Real Estate worked examples
 
 The [`real-estate/`](real-estate/) subdirectory holds fuller worked examples, each as a **request-and-output pair** — a `sample-request.md` (the fictional request and the materials provided with it) and a `sample-output.md` (the deliverable the skill produces from that request). The disclaimer is carried at the top of each `sample-output.md`.

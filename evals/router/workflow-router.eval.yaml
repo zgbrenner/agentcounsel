@@ -1,0 +1,267 @@
+suite: workflow-router-vague-requests
+description: Router evals for vague user requests. These are static manual-ready cases that validate expected routing targets, missing facts, gates, quality checks, and attorney escalation triggers.
+cases:
+  - eval_id: router-001
+    title: Review this NDA
+    request: Review this NDA.
+    expected_primary_skill: contracts/nda-review
+    expected_missing_facts:
+      - Client role as disclosing, receiving, or mutual.
+      - Governing law if material.
+      - Transaction context and playbook.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate if governing law matters.
+    expected_attorney_escalation: Attorney review required before signing or sending comments.
+    eval_status: manual-ready
+  - eval_id: router-002
+    title: Respond to opposing counsel
+    request: Help me respond to opposing counsel.
+    expected_primary_skill: litigation/matter-intake
+    expected_missing_facts:
+      - Communication from opposing counsel.
+      - Matter posture.
+      - Jurisdiction and venue.
+      - Response deadline.
+      - Authorized tone and client objective.
+    expected_quality_checks:
+      - privilege-confidentiality-check
+      - source-validation-check
+      - hallucination-red-team
+      - attorney-review-gate
+    expected_gates:
+      - deadline gate.
+      - privilege gate.
+    expected_attorney_escalation: Attorney approval required before any external response.
+    eval_status: manual-ready
+  - eval_id: router-003
+    title: Summarize new privacy rule
+    request: Summarize this new privacy rule.
+    expected_primary_skill: regulatory/rule-change-summary
+    expected_missing_facts:
+      - Official rule source.
+      - Issuing authority.
+      - Effective date.
+      - Affected business process.
+    expected_quality_checks:
+      - citation-integrity-check
+      - source-validation-check
+      - assumption-audit
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - effective-date gate.
+    expected_attorney_escalation: Attorney must verify source authority and current law.
+    eval_status: manual-ready
+  - eval_id: router-004
+    title: Draft demand letter
+    request: Draft a demand letter.
+    expected_primary_skill: litigation/demand-letter
+    expected_missing_facts:
+      - Parties.
+      - Factual chronology.
+      - Counsel-approved claim theory.
+      - Jurisdiction.
+      - Response deadline and settlement authority.
+    expected_quality_checks:
+      - source-validation-check
+      - citation-integrity-check
+      - hallucination-red-team
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - deadline gate.
+      - jurisdiction gate.
+    expected_attorney_escalation: Attorney approval required before sending.
+    eval_status: manual-ready
+  - eval_id: router-005
+    title: Contract risk
+    request: Check this contract for risk.
+    expected_primary_skill: contracts/contract-risk-review
+    expected_missing_facts:
+      - Contract text.
+      - Client role.
+      - Deal context.
+      - Governing law.
+      - Client fallback positions.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate if governing law affects risk.
+    expected_attorney_escalation: Attorney review required before negotiation or signature.
+    eval_status: manual-ready
+  - eval_id: router-006
+    title: California termination
+    request: I need help with a California employee termination.
+    expected_primary_skill: employment/termination-risk
+    expected_missing_facts:
+      - Employee role and tenure.
+      - Reason for termination.
+      - Leave, accommodation, complaint, retaliation, wage, and protected-class facts.
+      - Planned termination date.
+    expected_quality_checks:
+      - assumption-audit
+      - source-validation-check
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - California jurisdiction gate.
+      - deadline and final-pay timing gate.
+    expected_attorney_escalation: Attorney review required before employment action.
+    eval_status: manual-ready
+  - eval_id: router-007
+    title: Startup clause reuse
+    request: Can I use this clause in my startup contract?
+    expected_primary_skill: contracts/contract-risk-review
+    expected_missing_facts:
+      - Clause text.
+      - Contract type.
+      - Client role.
+      - Governing law.
+      - Business objective.
+    expected_quality_checks:
+      - assumption-audit
+      - source-validation-check
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+    expected_attorney_escalation: Attorney must approve clause use and legal fit.
+    eval_status: manual-ready
+  - eval_id: router-008
+    title: Board consent risks
+    request: Find the risks in this board consent.
+    expected_primary_skill: corporate/written-consent
+    expected_missing_facts:
+      - Entity type and jurisdiction.
+      - Governing documents.
+      - Transaction context.
+      - Approval threshold.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - output-format-compliance-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction and entity-governance gate.
+    expected_attorney_escalation: Attorney must verify authority and approval sufficiency.
+    eval_status: manual-ready
+  - eval_id: router-009
+    title: Client update conversion
+    request: Turn this into a client update.
+    expected_primary_skill: legal-ops/templated-legal-response
+    expected_missing_facts:
+      - Audience.
+      - Approved message.
+      - Confidentiality limits.
+      - Source draft or notes.
+    expected_quality_checks:
+      - privilege-confidentiality-check
+      - legal-prose-polish
+      - output-format-compliance-check
+      - attorney-review-gate
+    expected_gates:
+      - privilege and confidentiality gate.
+    expected_attorney_escalation: Attorney approval required before sending client communication.
+    eval_status: manual-ready
+  - eval_id: router-010
+    title: Safe to rely on memo
+    request: Check whether this memo is safe to rely on.
+    expected_primary_skill: legal-methodology/attorney-review-gate
+    expected_missing_facts:
+      - Memo text.
+      - Source materials.
+      - Cited authorities.
+      - Intended reliance decision.
+    expected_quality_checks:
+      - citation-integrity-check
+      - source-validation-check
+      - assumption-audit
+      - hallucination-red-team
+      - attorney-review-gate
+    expected_gates:
+      - source validation gate.
+      - attorney review gate.
+    expected_attorney_escalation: Attorney must review before reliance.
+    eval_status: manual-ready
+  - eval_id: router-011
+    title: Open a multi-month acquisition matter
+    request: Open a new acquisition that will run for months with diligence, drafts, and deadlines.
+    expected_primary_skill: setup/create-matter-workspace
+    expected_missing_facts:
+      - Deal type, side, and structure.
+      - Parties and jurisdiction.
+      - Key deadlines.
+      - Document set.
+      - Supervising attorney.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - citation-integrity-check
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - deadline gate.
+    expected_attorney_escalation: Multi-step and deadline-sensitive; create a matter workspace and escalate deadlines and authority to the supervising attorney.
+    eval_status: manual-ready
+  - eval_id: router-012
+    title: Multi-pass review of a contract before signing
+    request: Run a full multi-pass review of this negotiated contract before signing.
+    expected_primary_skill: legal-methodology/attorney-review-gate
+    expected_missing_facts:
+      - Final contract text.
+      - Client role and priorities.
+      - Client fallback positions.
+      - Governing law.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - privilege-confidentiality-check
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - review panel; passes are not autonomous agents or lawyers.
+      - attorney gatekeeper gate.
+    expected_attorney_escalation: Use review-panels/contract-review-panel.md; final output remains attorney-supervised draft work product.
+    eval_status: manual-ready
+  - eval_id: router-013
+    title: Repeatable NDA review recipe
+    request: We review NDAs the same way every week; give me a repeatable recipe.
+    expected_primary_skill: contracts/nda-review
+    expected_missing_facts:
+      - Full NDA text.
+      - Client role as disclosing, receiving, or mutual.
+      - Transaction context.
+      - Client risk tolerance.
+    expected_quality_checks:
+      - source-validation-check
+      - legal-prose-polish
+      - attorney-review-gate
+    expected_gates:
+      - playbook selection gate.
+    expected_attorney_escalation: Use playbooks/nda-review.md; attorney review required before signing.
+    eval_status: manual-ready
+  - eval_id: router-014
+    title: Check a memo for invented or unsupported citations
+    request: Just check this finished memo for invented or unsupported citations.
+    expected_primary_skill: legal-methodology/citation-integrity-check
+    expected_missing_facts:
+      - The draft to review.
+      - The sources relied upon.
+      - Jurisdiction if authorities are jurisdiction-specific.
+    expected_quality_checks:
+      - citation-integrity-check
+      - source-validation-check
+      - hallucination-red-team
+    expected_gates:
+      - source validation gate.
+    expected_attorney_escalation: Quality check only; attorney must verify every authority before reliance.
+    eval_status: manual-ready

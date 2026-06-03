@@ -2,11 +2,12 @@
 
 **An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.**
 
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-183-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-186-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
+[![Site](https://github.com/zgbrenner/agentcounsel/actions/workflows/deploy-pages.yml/badge.svg)](https://zgbrenner.github.io/agentcounsel/)
 
 AgentCounsel is a collection of standalone **legal skills**. Each skill is a structured workflow that helps an AI agent — or a lawyer — produce **draft legal work product for attorney review**. The skills supply discipline and structure: how to scope a task, what inputs to gather, how to organize the output, and what a supervising attorney must verify before anything is relied upon.
 
@@ -51,7 +52,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **183 skills**: 157 across **20 practice areas**, plus 26 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
+AgentCounsel has **186 skills**: 153 across **20 practice areas**, plus 33 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -79,12 +80,28 @@ AgentCounsel has **183 skills**: 157 across **20 practice areas**, plus 26 cross
 Three **cross-cutting skill groups** support work in every practice area:
 
 - **Setup** (19 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
-- **Legal Methodology** (4 skills) — red-team verification, statutory interpretation, risk assessment, and source validation.
+- **Legal Methodology** (11 skills) — source validation, citation integrity, assumption audit, hallucination red-team, attorney-review gate, privilege/confidentiality review, legal prose polish, output-format compliance, statutory interpretation, risk assessment, and red-team verification.
 - **Legal Operations** (3 skills) — templated legal responses, meeting briefings, and signature-routing checks.
 
 The four-tier taxonomy that classifies these areas and groups — and the model for expanding it — is recorded in [`docs/PRACTICE_AREAS.md`](docs/PRACTICE_AREAS.md).
 
 See [`SKILLS_INDEX.md`](SKILLS_INDEX.md) for the full catalog and [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) to route from a task to a skill.
+
+## Choose your workflow
+
+Most tasks are one skill. When the work is larger, AgentCounsel gives you several surfaces:
+
+| Surface | Use it when |
+|---|---|
+| **One-off skill** | A single, self-contained task and one draft output. |
+| **Quality check** | Reviewing an existing draft — source validation, citation integrity, prose polish, red-team. |
+| **Practice-area pack** | Repeated work in one practice area, installed into your AI tool. |
+| **Matter pack** | A recurring matter *type* that runs an ordered sequence of skills. |
+| **Matter workspace** | A multi-step, document-heavy, deadline- or source-sensitive, ongoing matter. |
+| **Playbook** | A recurring task type you run the same way every time (e.g., NDA review). |
+| **Review panel** | A high-risk draft that needs several supervised review passes before reliance. |
+
+Full decision guide with worked examples: **[docs/CHOOSE_YOUR_WORKFLOW.md](docs/CHOOSE_YOUR_WORKFLOW.md)**. Every surface ends in attorney review.
 
 ## How it is organized
 
@@ -93,14 +110,19 @@ core/               Operating rules every skill inherits (read these first).
 skills/             The canonical skill library, grouped by practice area.
 examples/           Illustrative sample outputs, with fictional facts.
 practice-profiles/  Per-practice-area configuration profiles for a legal team.
-matter-workspaces/  Single-file scaffolds for organizing one specific matter.
+matter-workspaces/  Scaffolds for organizing one matter — single-file templates
+                    plus the canonical multi-file _template/.
 matter-packs/       Workflow bundles — recommended skill sequences per matter type.
+playbooks/          Repeatable recipes for recurring task types (NDA review, etc.).
+review-panels/      Supervised multi-pass review workflows for a draft.
 overlays/           Industry and sector overlays that tune skills for a context.
 adapters/           Thin integration files for specific environments.
 connectors/         External-source verification integrations (e.g., CourtListener).
 metadata/           Generated machine-readable skill index (index.json).
 docs/               The metadata standard, the safety model, the FAQ, and the practice-area registry.
 scripts/            Standard-library Python helpers (validation, index, packs).
+dist/               Generated platform install packs (gitignored; built by
+                    scripts/build_platform_packs.py).
 SKILLS_INDEX.md     Full catalog of every skill.
 WORKFLOW_ROUTER.md  "I need to do X" -> which skill to use.
 COMMANDS.md         Slash-style command shorthands mapped to skills.
@@ -172,6 +194,11 @@ The full safety model — the threat model, what AgentCounsel deliberately does 
 
 AgentCounsel runs out-of-the-box without configuration. To improve output quality for a practice group adopting the library across multiple matters, you can populate a practice-group profile at `practice-profiles/<area>.md`. The profile gives ~20 skills access to the group's standing positions, escalation thresholds, and output preferences.
 
+Eval coverage is tracked through lightweight, no-API checks in `evals/` and
+`reports/eval-coverage.md`. These evals test structure, routing, metadata,
+packs, quality checks, and candidate-output safety signals; they do not verify
+legal correctness or replace attorney review.
+
 See [`CONFIGURING.md`](CONFIGURING.md) for the full configuration guide. The short version:
 
 1. Run the cold-start interview for the practice area (`skills/setup/<area>-cold-start-interview/SKILL.md`) with a supervising attorney, or edit the profile template directly.
@@ -183,13 +210,13 @@ Configuration is opt-in. Skipping it costs you benchmarking-against-standing-pos
 Two optional layers let a legal team adapt the library without changing any skill:
 
 - **[`practice-profiles/`](practice-profiles/)** — one profile per practice area capturing the team's jurisdictions, escalation thresholds, standard positions, review requirements, and prohibited assumptions. The **Setup** cold-start interview skills fill a profile in.
-- **[`matter-workspaces/`](matter-workspaces/)** — single-file scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, and an index of the draft work product produced by skills.
+- **[`matter-workspaces/`](matter-workspaces/)** — scaffolds for organizing one specific matter: parties, documents, deadlines (always flagged for attorney verification), open items, sources, and an index of the draft work product produced by skills. Single-file templates plus a canonical multi-file template at `matter-workspaces/_template/`, which `python scripts/init_matter_workspace.py` instantiates. See [`docs/MATTER_WORKSPACES.md`](docs/MATTER_WORKSPACES.md).
 
 Both are plain Markdown and add no backend, runtime, or vendor dependency.
 
 ## Examples
 
-The [`examples/`](examples/) directory contains illustrative sample outputs — a contract review, a litigation chronology, a DPA review, a product launch review, and a red-team verification. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter.
+The [`examples/`](examples/) directory contains illustrative sample outputs — including primary skill outputs and quality-layer passes such as source validation, prose polish, hallucination red-team, and attorney-review gating. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter.
 
 ## Validation and continuous integration
 
@@ -206,15 +233,23 @@ python scripts/sync_plugin_skills.py --check   # plugin bundle is in sync
 python scripts/validate_repo.py                # full repository validation
 ```
 
-Other standard-library helpers in `scripts/` build the machine-readable skill index (`build_skill_index.py`), the per-platform install packs (`build_platform_packs.py`), and the browsable static catalog under [`site/`](site/). See [`VALIDATION.md`](VALIDATION.md) for the full list of checks.
+Other standard-library helpers in `scripts/` build the machine-readable skill index (`build_skill_index.py`), the per-platform install packs (`build_platform_packs.py`), the matter-workspace initializer (`init_matter_workspace.py`), and the browsable static catalog under [`site/`](site/). Every script is documented in [`docs/CLI.md`](docs/CLI.md); the recommended commands to run after each kind of edit are in [`docs/AGENT_COMMANDS.md`](docs/AGENT_COMMANDS.md). See [`VALIDATION.md`](VALIDATION.md) for the full list of checks.
+
+Platform pack manifests and plugin-compatibility guidance are documented in
+[`docs/PLUGIN_COMPATIBILITY.md`](docs/PLUGIN_COMPATIBILITY.md). The generated
+metadata files `metadata/index.json`, `metadata/router.json`, and
+`metadata/packs.json` are the machine-readable surfaces for skills, routing,
+and platform packs.
 
 ## Contributing
 
-New skills and improvements are welcome. AgentCounsel is Markdown-first and safety-first — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules, [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md) for the frontmatter standard, and [`SECURITY.md`](SECURITY.md) for security guidance. Questions are answered in [`docs/FAQ.md`](docs/FAQ.md).
+New skills and improvements are welcome. AgentCounsel is Markdown-first and safety-first — see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules (including how to add skills, quality checks, evals, playbooks, review panels, and packs), [`docs/SKILL_METADATA_STANDARD.md`](docs/SKILL_METADATA_STANDARD.md) for the frontmatter standard, and [`SECURITY.md`](SECURITY.md) for security guidance. Questions are answered in [`docs/FAQ.md`](docs/FAQ.md).
+
+For the bigger picture, see [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) (an honest maturity snapshot — what is stable, what needs manual review, what is experimental) and [`docs/WORKFLOW_MAP.md`](docs/WORKFLOW_MAP.md) (how core rules, skills, quality checks, packs, workspaces, playbooks, review panels, and evals fit together).
 
 ## License
 
-Apache License 2.0 — see [`LICENSE`](LICENSE). Attribution for content adapted from other open-source projects is recorded in [`NOTICE`](NOTICE). AgentCounsel is an independent open-source project and is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.
+MIT License — see [`LICENSE`](LICENSE). Attribution for content adapted from other open-source projects (which remain under their original Apache-2.0 terms) is recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). AgentCounsel is an independent open-source project and is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.
 
 ## Disclaimer
 

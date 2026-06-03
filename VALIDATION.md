@@ -6,6 +6,8 @@ AgentCounsel ships a lightweight validation script, `scripts/validate_repo.py`, 
 
 ```
 python scripts/validate_repo.py
+python scripts/build_skill_index.py --check
+python scripts/build_platform_packs.py --check
 ```
 
 Run it from anywhere; the script locates the repository root relative to its own location. It prints a report and exits with status `0` if all checks pass, or `1` if any error is found. Warnings are advisory and do not affect the exit code.
@@ -27,12 +29,15 @@ Run it from anywhere; the script locates the repository root relative to its own
 
 - Every canonical skill under `skills/` declares valid standardized frontmatter — all eleven fields (`name`, `description`, `practice_area`, `task_type`, `jurisdictions`, `risk_level`, `requires_attorney_review`, `inputs`, `outputs`, `related_skills`, `tags`), each with the correct type.
 - `description` is trigger-rich and begins with `Use when`; `practice_area` matches the directory area; `task_type` and `risk_level` use the allowed values; `related_skills` entries resolve to real skills. The full standard is in `docs/SKILL_METADATA_STANDARD.md`.
-- `metadata/index.json` exists and matches the canonical skills. If it is stale, run `python scripts/build_skill_index.py` to regenerate it.
+- `metadata/index.json` and `metadata/router.json` exist and match the canonical skills. If either is stale, run `python scripts/build_skill_index.py` to regenerate them.
+- Normalized generated metadata has unique skill IDs, existing skill paths, valid risk levels, valid compatible-platform IDs, valid recommended quality-check IDs, and valid eval coverage statuses.
+- Eval framework validation covers skill eval schemas, benchmark schemas, router eval schemas, static metadata/pack/router integrity evals, valid skill IDs, valid quality-check IDs, and current eval coverage reports.
 
 **Safety and content**
 
 - No file describes AgentCounsel as providing legal advice. Outputs must be described as draft legal work product for attorney review.
 - Every `SKILL.md` references the source/citation discipline core rule (`core/source-and-citation-discipline.md`) or carries equivalent language against inventing legal authority or citations.
+- Quality-layer docs and citation/source-validation skills must not imply that AgentCounsel independently verifies current law, guarantees citation correctness, or provides automated legal citation verification.
 - No file contains the forbidden framing that this project is a ChatGPT Project instructions or package repository.
 - No substantive file contains a leftover placeholder marker (such as a TODO or FIXME note, or lorem ipsum filler text).
 
@@ -42,11 +47,20 @@ Run it from anywhere; the script locates the repository root relative to its own
 - Every skill path referenced in `SKILLS_INDEX.md`, `WORKFLOW_ROUTER.md`, and `COMMANDS.md` points to a real `SKILL.md`.
 - Adapter index files point back to the canonical root files.
 - `adapters/claude-code-plugin/plugin.json` is valid JSON and has `name`, `version`, and `description`.
+- The distribution manifests (`adapters/claude-code-plugin/plugin.json`, `gemini-extension.json`, `site/package.json`) all declare a `version` matching the latest released version in `CHANGELOG.md`, so a release bump cannot silently drift.
 
 **Plugin bundle**
 
 - Every expected plugin skill is present — the eight curated skills plus the hand-maintained `legal-core`.
 - Each curated plugin skill under `adapters/claude-code-plugin/skills/` matches its canonical source in `/skills`, including templates. If they differ, the validator reports drift; run `python scripts/sync_plugin_skills.py` to regenerate the bundle. See `PLUGIN_SYNC.md`.
+
+**Platform pack registry**
+
+- `metadata/packs.json` exists and matches `scripts/build_platform_packs.py`.
+- Every pack manifest has a pack ID, platform, practice area or use case, included skills, included core rules, quality checks, setup instructions, safety disclaimer, attorney-review requirements, version, and date.
+- Every referenced skill, core rule, template, matter pack, matter-workspace template, and quality-check target exists.
+- High-risk generated metadata must recommend the attorney-review gate and assumption audit; high-risk authority-heavy skills must also recommend citation integrity.
+- Generated pack manifests preserve the draft-work-product and attorney-review posture.
 
 **Warnings (advisory)**
 
@@ -62,9 +76,21 @@ The script validates structure and consistency — not legal accuracy. It cannot
 
 - Before opening or updating a pull request.
 - After adding, renaming, or moving a skill, template, or adapter file.
-- After editing a skill's frontmatter — then run `python scripts/build_skill_index.py` to regenerate `metadata/index.json` (see `docs/SKILL_METADATA_STANDARD.md`).
+- After editing a skill's frontmatter — then run `python scripts/build_skill_index.py` to regenerate `metadata/index.json` and `metadata/router.json` (see `docs/SKILL_METADATA_STANDARD.md`).
+- After changing platform pack inputs — then run `python scripts/build_platform_packs.py` to regenerate `metadata/packs.json` and `dist/` locally.
 - After editing `SKILLS_INDEX.md` or `WORKFLOW_ROUTER.md`.
 - After running `python scripts/sync_plugin_skills.py` to regenerate the plugin bundle (see `PLUGIN_SYNC.md`).
+
+## Companion: legal-prose pass
+
+`scripts/check_legal_prose.py` is a separate, conservative quality pass over the
+repository-owned work-product samples (`examples/` outputs and `evals/outputs/`).
+It checks form and safety framing only — not legal accuracy. It **fails the
+build** on legal-advice or false-certainty framing (for example "this clause is
+enforceable", "there is no risk", "you must sign") and on any work-product
+sample missing visible attorney-review framing; it **warns** (advisory) on
+generic AI "slop" and vague prose, which fail only under `--strict`. CI runs it
+in its default (non-strict) mode. See [`docs/CLI.md`](docs/CLI.md) for details.
 
 ## Note
 

@@ -69,6 +69,9 @@ EXPECTED_DIRS = [
     "connectors",
     "practice-profiles",
     "matter-workspaces",
+    "matter-workspaces/_template",
+    "playbooks",
+    "review-panels",
     "overlays",
     "skills/setup",
     "skills/legal-methodology",
@@ -238,6 +241,53 @@ def check_content_scans() -> None:
             err(f"{rel(path)}: leftover placeholder marker '{match.group(0)}'")
 
 
+# --- Check: quality-layer overclaims --------------------------------------
+
+_QUALITY_LIMIT_FILES = [
+    "docs/QUALITY_LAYER.md",
+    "docs/SOURCE_VALIDATION.md",
+    "docs/CITATION_INTEGRITY.md",
+    "docs/ATTORNEY_REVIEW_GATE.md",
+    "skills/legal-methodology/source-validation/SKILL.md",
+    "skills/legal-methodology/citation-integrity-check/SKILL.md",
+]
+
+_OVERCLAIM_PATTERNS = [
+    re.compile(r"\bguarantees?\s+(legal\s+)?(correctness|accuracy|citation)", re.I),
+    re.compile(r"\bcertif(?:y|ies)\s+(legal\s+)?(correctness|accuracy|citation)", re.I),
+    re.compile(r"\bindependently\s+verif(?:y|ies)\s+(current\s+)?law", re.I),
+    re.compile(r"\bautomatically\s+verif(?:y|ies)\s+(current\s+)?law", re.I),
+    re.compile(r"\bautomated\s+legal\s+citation\s+verification\b", re.I),
+]
+
+_LIMITING_LANGUAGE = re.compile(
+    r"\b(not|does\s+not|do\s+not|cannot|no|never|without|unless)\b",
+    re.I,
+)
+
+
+def check_quality_layer_overclaims() -> None:
+    """Quality-layer docs must not imply automated legal verification.
+
+    AgentCounsel can classify source support and citation risk, but it does
+    not independently verify current law or certify citation correctness.
+    """
+    for relpath in _QUALITY_LIMIT_FILES:
+        path = REPO_ROOT / relpath
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        sentences = re.split(r"(?<=[.!?])\s+", text)
+        for sentence in sentences:
+            for pat in _OVERCLAIM_PATTERNS:
+                if not pat.search(sentence):
+                    continue
+                if _LIMITING_LANGUAGE.search(sentence):
+                    continue
+                err(f"{relpath}: possible quality-layer overclaim "
+                    f"('{sentence.strip()}')")
+
+
 # --- Check: relative links resolve ----------------------------------------
 
 LINK_PAT = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -321,6 +371,59 @@ def check_plugin_manifest() -> None:
     for field in ("name", "version", "description"):
         if not data.get(field):
             err(f"adapters/claude-code-plugin/plugin.json: missing '{field}'")
+
+
+# --- Check: release version is consistent ---------------------------------
+
+# Distribution manifests whose "version" an end user's plugin/extension
+# manager reads. They must match the latest released version in CHANGELOG.md
+# so a release bump can never silently drift (see the v0.2.0 drift fixed in
+# PR #74). CHANGELOG.md is the single source of truth.
+VERSIONED_MANIFESTS = (
+    "adapters/claude-code-plugin/plugin.json",
+    "gemini-extension.json",
+    "site/package.json",
+)
+
+
+def latest_changelog_version() -> str | None:
+    """Return the most recent released version in CHANGELOG.md.
+
+    The first `## [X.Y.Z]` heading that is not `[Unreleased]` is the current
+    release. Returns None if CHANGELOG.md is missing or has no released entry.
+    """
+    changelog = REPO_ROOT / "CHANGELOG.md"
+    if not changelog.is_file():
+        return None
+    for match in re.finditer(
+        r"^## \[(.+?)\]", changelog.read_text(encoding="utf-8"), re.MULTILINE
+    ):
+        tag = match.group(1)
+        if tag.lower() != "unreleased":
+            return tag
+    return None
+
+
+def check_release_version_consistency() -> None:
+    release = latest_changelog_version()
+    if release is None:
+        err("CHANGELOG.md: no released version heading found (expected '## [X.Y.Z]')")
+        return
+    for name in VERSIONED_MANIFESTS:
+        manifest = REPO_ROOT / name
+        if not manifest.is_file():
+            err(f"{name}: file not found")
+            continue
+        try:
+            version = json.loads(manifest.read_text(encoding="utf-8")).get("version")
+        except json.JSONDecodeError as exc:
+            err(f"{name}: invalid JSON ({exc})")
+            continue
+        if version != release:
+            err(
+                f"{name}: version '{version}' does not match the latest "
+                f"CHANGELOG.md release '{release}' — bump it or update the changelog"
+            )
 
 
 # --- Check: standardized skill frontmatter --------------------------------
@@ -640,6 +743,245 @@ def check_profile_references_consistent(skill_dirs: list[Path]) -> None:
                 )
 
 
+# --- Check: normalized metadata and router --------------------------------
+
+def check_normalized_metadata() -> None:
+    """Validate derived metadata fields and the generated router artifact."""
+    try:
+        import build_skill_index as index
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run normalized metadata checks (import failed: {exc})")
+        return
+
+    router_path = REPO_ROOT / "metadata" / "router.json"
+    if not router_path.is_file():
+        err("metadata/router.json is missing â€” run: "
+            "python scripts/build_skill_index.py")
+    elif router_path.read_text(encoding="utf-8") != index.render_router():
+        err("metadata/router.json is out of date â€” run: "
+            "python scripts/build_skill_index.py")
+
+    for msg in index.validate_normalized_index():
+        err(f"normalized metadata: {msg}")
+
+
+# --- Check: platform pack registry ----------------------------------------
+
+def check_pack_registry() -> None:
+    """metadata/packs.json must match the platform pack generator and
+    reference only existing source files."""
+    try:
+        import build_platform_packs as packs
+    except Exception as exc:  # pragma: no cover - defensive
+        warn(f"could not run pack registry checks (import failed: {exc})")
+        return
+
+    path = REPO_ROOT / "metadata" / "packs.json"
+    if not path.is_file():
+        err("metadata/packs.json is missing â€” run: "
+            "python scripts/build_platform_packs.py")
+        return
+    areas = packs.load_areas()
+    if path.read_text(encoding="utf-8") != packs.render_pack_registry(areas):
+        err("metadata/packs.json is out of date â€” run: "
+            "python scripts/build_platform_packs.py")
+    for msg in packs.validate_pack_registry(packs.build_pack_registry(areas)):
+        err(f"pack registry: {msg}")
+
+
+# --- Check: matter workspace template, playbooks, review panels ------------
+
+# Canonical multi-file matter workspace template contents.
+WORKSPACE_TEMPLATE_FILES = [
+    "matter_profile.md", "facts.md", "open_questions.md", "source_log.md",
+    "citation_map.md", "unsupported_claims.md", "assumptions.md", "tasks.md",
+    "skills_used.md", "attorney_review.md", "matter_status.md",
+    "documents/README.md", "outputs/README.md", "quality_checks/README.md",
+]
+
+# Required H2 sections for every playbook, in order.
+PLAYBOOK_SECTIONS = [
+    "## When to Use", "## Required Inputs", "## Default Client-Position Questions",
+    "## Risk Tolerance Settings", "## Required Source Materials",
+    "## Recommended Primary Skills", "## Required Quality Checks",
+    "## Attorney Escalation Triggers", "## Expected Outputs",
+    "## Source and Citation Expectations", "## Common Failure Modes",
+    "## Final Attorney-Review Gate",
+]
+
+# Required H2 sections for every review panel, in order.
+PANEL_SECTIONS = [
+    "## When to Use", "## Inputs", "## Review Passes", "## Sequence",
+    "## Required Quality Checks", "## Attorney Escalation Triggers",
+    "## Expected Outputs", "## Safety and Supervision Model",
+    "## Common Failure Modes", "## Final Attorney-Review Gate",
+]
+
+# Quality-layer source classification labels the tracking templates must carry.
+CLASSIFICATION_LABELS = [
+    "source-supported", "source-mentioned but insufficient", "unsupported",
+    "contradicted by source", "legal authority required",
+    "attorney judgment required", "user-provided authority",
+    "model-suggested authority requiring verification",
+    "unsupported or unverifiable authority",
+]
+
+
+def _h2_sections(text: str) -> list[str]:
+    return [ln.strip() for ln in text.splitlines() if ln.startswith("## ")]
+
+
+def _check_required_sections(path: Path, required: list[str], label: str) -> None:
+    text = path.read_text(encoding="utf-8")
+    present = _h2_sections(text)
+    for section in required:
+        if section not in present:
+            err(f"{rel(path)}: {label} missing required section '{section}'")
+    # Order check: the required sections must appear in the given order.
+    indexed = [present.index(s) for s in required if s in present]
+    if indexed != sorted(indexed):
+        err(f"{rel(path)}: {label} sections are out of order")
+
+
+def check_matter_workspace_template() -> None:
+    """The canonical multi-file matter workspace template must be complete and
+    its source/citation tracking templates must carry the quality-layer
+    classification vocabulary."""
+    base = REPO_ROOT / "matter-workspaces" / "_template"
+    if not base.is_dir():
+        err("matter-workspaces/_template/ is missing (canonical workspace template)")
+        return
+    for name in WORKSPACE_TEMPLATE_FILES:
+        if not (base / name).is_file():
+            err(f"matter-workspaces/_template/{name}: workspace template file missing")
+    # Source/citation tracking templates must match the quality-layer labels.
+    for name in ("source_log.md", "citation_map.md", "unsupported_claims.md",
+                 "assumptions.md"):
+        path = base / name
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        if name in ("source_log.md", "citation_map.md"):
+            # These carry the full classification vocabulary.
+            for lbl in CLASSIFICATION_LABELS:
+                if lbl not in text:
+                    err(f"matter-workspaces/_template/{name}: missing "
+                        f"quality-layer classification label '{lbl}'")
+        else:
+            # unsupported_claims / assumptions carry the relevant subset; require
+            # at least three recognized labels so they stay aligned with the layer.
+            found = sum(1 for lbl in CLASSIFICATION_LABELS if lbl in text)
+            if found < 3:
+                err(f"matter-workspaces/_template/{name}: too few quality-layer "
+                    f"classification labels ({found}); expected at least 3")
+        # Every tracking template must reference the classification idea.
+        if "classification" not in text.lower():
+            err(f"matter-workspaces/_template/{name}: no classification vocabulary")
+
+
+def check_playbooks() -> None:
+    """Every playbook (excluding the README) must carry the required sections."""
+    base = REPO_ROOT / "playbooks"
+    if not base.is_dir():
+        err("playbooks/ directory is missing")
+        return
+    files = [p for p in sorted(base.glob("*.md")) if p.name != "README.md"]
+    if len(files) < 8:
+        err(f"playbooks/: expected at least 8 playbooks, found {len(files)}")
+    for path in files:
+        _check_required_sections(path, PLAYBOOK_SECTIONS, "playbook")
+
+
+def check_review_panels() -> None:
+    """Every review panel (excluding the README) must carry the required
+    sections and state that passes are not autonomous agents or lawyers."""
+    base = REPO_ROOT / "review-panels"
+    if not base.is_dir():
+        err("review-panels/ directory is missing")
+        return
+    files = [p for p in sorted(base.glob("*.md")) if p.name != "README.md"]
+    if len(files) < 6:
+        err(f"review-panels/: expected at least 6 panels, found {len(files)}")
+    for path in files:
+        _check_required_sections(path, PANEL_SECTIONS, "review panel")
+        text = path.read_text(encoding="utf-8").lower()
+        if "not" not in text or ("autonomous" not in text and "lawyer" not in text):
+            err(f"{rel(path)}: review panel must state passes are not "
+                "autonomous agents or lawyers")
+
+
+def check_router_workspace_references() -> None:
+    """Router examples that point at a workspace, playbook, or review panel must
+    reference files/dirs that exist."""
+    router_path = REPO_ROOT / "metadata" / "router.json"
+    if not router_path.is_file():
+        return
+    try:
+        data = json.loads(router_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        err(f"metadata/router.json: invalid JSON ({exc})")
+        return
+    for example in data.get("examples", []):
+        target = example.get("route_to", "")
+        if not target:
+            continue
+        if target.startswith(("matter-workspaces/", "playbooks/",
+                              "review-panels/", "practice-profiles/")):
+            if not (REPO_ROOT / target).exists():
+                err(f"metadata/router.json: example route_to does not exist: {target}")
+
+
+# --- Check: required docs and doc/script references ------------------------
+
+# Top-level docs a new user / contributor relies on. Missing one is an error.
+REQUIRED_DOCS = [
+    "README.md",
+    "QUICKSTART.md",
+    "CONTRIBUTING.md",
+    "WORKFLOW_ROUTER.md",
+    "docs/CHOOSE_YOUR_WORKFLOW.md",
+    "docs/CLI.md",
+    "docs/AGENT_COMMANDS.md",
+    "docs/WORKFLOW_MAP.md",
+    "docs/PROJECT_STATUS.md",
+    "docs/MATTER_WORKSPACES.md",
+    "docs/PLAYBOOKS.md",
+    "docs/REVIEW_PANELS.md",
+    "docs/QUALITY_LAYER.md",
+    "docs/SAFETY_MODEL.md",
+]
+
+# Docs that document how to run the tooling. Every scripts/<name>.py they name
+# must exist, so command guidance never points at a missing script.
+DOC_COMMAND_FILES = [
+    "README.md", "QUICKSTART.md", "CONTRIBUTING.md",
+    "docs/CLI.md", "docs/AGENT_COMMANDS.md",
+]
+_SCRIPT_REF_PAT = re.compile(r"scripts/([A-Za-z0-9_]+\.py)")
+
+
+def check_required_docs() -> None:
+    """Required top-level and docs/ files must exist."""
+    for rel_path in REQUIRED_DOCS:
+        if not (REPO_ROOT / rel_path).is_file():
+            err(f"required doc missing: {rel_path}")
+
+
+def check_doc_script_references() -> None:
+    """Every scripts/<name>.py referenced in command docs must exist, and a
+    referenced 'node site/generate.mjs' must point at a real file."""
+    for rel_path in DOC_COMMAND_FILES:
+        path = REPO_ROOT / rel_path
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for script in sorted(set(_SCRIPT_REF_PAT.findall(text))):
+            if not (REPO_ROOT / "scripts" / script).is_file():
+                err(f"{rel_path}: references missing script 'scripts/{script}'")
+        if "site/generate.mjs" in text and not (REPO_ROOT / "site" / "generate.mjs").is_file():
+            err(f"{rel_path}: references missing 'site/generate.mjs'")
+
+
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
@@ -660,19 +1002,29 @@ def main() -> int:
     check_overlays()
     check_citation_discipline(canonical)
     check_content_scans()
+    check_quality_layer_overclaims()
     check_links()
     check_index_paths("SKILLS_INDEX.md")
     check_index_paths("WORKFLOW_ROUTER.md")
     check_index_paths("COMMANDS.md")
     check_adapters()
     check_plugin_manifest()
+    check_release_version_consistency()
     check_plugin_bundle()
     check_skill_frontmatter(canonical)
     check_skill_index()
+    check_normalized_metadata()
+    check_pack_registry()
     check_index_coverage(canonical)
     check_related_skills_wired(canonical)
     check_readme_counts(canonical)
     check_profile_references_consistent(canonical)
+    check_matter_workspace_template()
+    check_playbooks()
+    check_review_panels()
+    check_router_workspace_references()
+    check_required_docs()
+    check_doc_script_references()
 
     if warnings:
         print(f"Warnings ({len(warnings)}):")

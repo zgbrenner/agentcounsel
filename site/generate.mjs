@@ -57,7 +57,7 @@ const AREA_META = {
   'insurance': { name: 'Insurance', blurb: 'Insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation and recovery tracking, and renewal and placement diligence checklists.' },
   'trusts-estates': { name: 'Trusts & Estates', blurb: 'Estate-planning intake, estate-document summaries, probate document checklists, trust administration and post-death task tracking, fiduciary-duty issue-spotting, beneficiary-designation review, asset and liability inventories, capacity and undue-influence facts organization, estate-litigation chronologies, trust-funding checklists, and estate-tax issue intake.' },
   'family-law': { name: 'Family Law', blurb: 'Family-law matter and divorce intake, custody and parenting facts chronologies and schedule organization, custody-order review, child-support and spousal-support facts intake, asset/debt schedules, settlement-agreement issue-spotting, discovery tracking, hearing preparation, and domestic-violence safety referral.' },
-  'legal-methodology': { name: 'Legal Methodology', blurb: 'Cross-cutting analytical disciplines: red-team verification, statutory interpretation, risk assessment, and source validation.' },
+  'legal-methodology': { name: 'Legal Methodology', blurb: 'Cross-cutting analytical disciplines: source validation, citation integrity, assumption audit, hallucination red-team, attorney-review gating, privilege/confidentiality, legal prose, and format compliance.' },
   'legal-ops': { name: 'Legal Operations', blurb: 'Templated legal responses, meeting briefings, and signature-routing checks.' },
   'setup': { name: 'Setup', blurb: 'Cold-start interviews that configure AgentCounsel for a practice group.' },
 };
@@ -334,6 +334,55 @@ function loadSkills() {
   return skills;
 }
 
+function loadSkillMeta() {
+  const indexPath = join(REPO_ROOT, 'metadata', 'index.json');
+  if (!existsSync(indexPath)) return {};
+  const meta = JSON.parse(readFileSync(indexPath, 'utf8'));
+  const byPath = {};
+  for (const s of meta.skills || []) {
+    if (s.path) byPath[s.path] = s;
+  }
+  return byPath;
+}
+
+const EVAL_STATUS_LABELS = {
+  'scored': 'Scored eval',
+  'automated-static': 'Automated (static) eval',
+  'manual-ready': 'Manual eval ready',
+  'manual-eval-ready': 'Manual eval ready',
+  'unrun': 'Eval not yet run',
+};
+
+function skillFactsPanel(m) {
+  if (!m) return '';
+  const rows = [];
+  const row = (label, value) => {
+    if (value) rows.push(`<tr><th scope="row">${esc(label)}</th><td>${value}</td></tr>`);
+  };
+  row('Practice area', esc(areaName(m.practice_area || '')));
+  row('Category', esc(m.category || ''));
+  row('Risk level', m.risk_level ? `<span class="risk risk-${esc(m.risk_level)}">${esc(m.risk_level)}</span>` : '');
+  const qc = (m.recommended_quality_checks || []).map((q) => `<code>${esc(q)}</code>`).join(' ');
+  row('Recommended quality checks', qc);
+  row('Eval coverage', esc(EVAL_STATUS_LABELS[m.eval_status] || m.eval_status || ''));
+  row('Compatible platforms', esc((m.compatible_platforms || []).join(', ')));
+  const rel = (m.related_skills || [])
+    .map((p) => {
+      const mm = p.match(/^skills\/([^/]+)\/([^/]+)\/SKILL\.md$/);
+      return mm ? `<a href="../../skills/${mm[1]}/${mm[2]}.html">${esc(mm[2].replace(/-/g, ' '))}</a>` : esc(p);
+    })
+    .join(', ');
+  row('Related skills', rel);
+  if (!rows.length) return '';
+  return `<div class="skill-facts">
+<h2>At a glance</h2>
+<table class="facts-table"><tbody>
+${rows.join('\n')}
+</tbody></table>
+</div>
+`;
+}
+
 function useWhenBullets(skill) {
   const sec = skill.sections['Use When'] || '';
   return sec.split('\n')
@@ -355,9 +404,11 @@ function page({ title, depth, desc, body }) {
 <link rel="stylesheet" href="${r}style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <a class="brand" href="${r}index.html">AgentCounsel</a>
   <nav class="site-nav">
+    <a href="${r}concepts/index.html">How it works</a>
     <a href="${r}skill-index.html">Skill index</a>
     <a href="${r}index.html#practice-areas">Practice areas</a>
     <a href="${r}packs/index.html">Packs</a>
@@ -365,14 +416,35 @@ function page({ title, depth, desc, body }) {
     <a href="${r}llms.txt">llms.txt</a>
   </nav>
 </header>
-<main>
+<main id="main-content">
 ${body}
 </main>
 <footer class="site-footer">
-<p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
-<strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
-and not a substitute for a qualified lawyer. This catalog is generated as static HTML from the
-repository's <code>skills/</code> directory.</p>
+  <div class="site-footer-inner">
+    <div>
+      <p class="site-footer-title">AgentCounsel</p>
+      <p>AgentCounsel is an open, Markdown-native legal skills library. Every output is
+      <strong>draft legal work product for review by a licensed attorney</strong> — not legal advice,
+      and not a substitute for a qualified lawyer.</p>
+    </div>
+    <div>
+      <p class="site-footer-heading">Catalog</p>
+      <ul class="site-footer-links">
+        <li><a href="${r}index.html">Home</a></li>
+        <li><a href="${r}skill-index.html">Skill index</a></li>
+        <li><a href="${r}index.html#practice-areas">Practice areas</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer-heading">Reference</p>
+      <ul class="site-footer-links">
+        <li><a href="${r}concepts/index.html">How it works</a></li>
+        <li><a href="${r}packs/index.html">Packs</a></li>
+        <li><a href="${r}platforms/index.html">Platform setup</a></li>
+        <li><a href="${r}llms.txt">llms.txt</a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
 <script src="${r}app.js"></script>
 </body>
@@ -422,6 +494,18 @@ ${REVIEW_NOTICE}
 <li><a href="#practice-areas">Jump to a practice area</a> — skills grouped by area of law.</li>
 <li><a href="platforms/index.html">Platform setup</a> — how to use AgentCounsel in ChatGPT, Claude, Gemini, repo agents, or a one-off prompt.</li>
 </ul>
+</section>
+
+<section>
+<h2>Beyond a single skill</h2>
+<p>Most tasks are one skill. When the work is larger, four surfaces organize it — all plain Markdown, no backend:</p>
+<ul class="quicklinks">
+<li><strong>Matter workspaces</strong> — a scaffold for one matter (parties, facts, sources, deadlines, outputs, attorney review). Choose a workspace over a single skill when the work is multi-step, document-heavy, high-risk, ongoing, jurisdiction- or deadline-sensitive, or source/citation-heavy. Initialize with <code>py scripts/init_matter_workspace.py "&lt;matter name&gt;" --practice-area &lt;area&gt;</code> from the canonical template at <code>matter-workspaces/_template/</code>.</li>
+<li><strong>Playbooks</strong> — repeatable recipes for a recurring task type (NDA review, demand letter, DPA review), adding default client-position questions, risk-tolerance settings, required sources, and required quality checks on top of a skill.</li>
+<li><strong>Review panels</strong> — a supervised multi-pass review of a draft (issue spotter, source/citation, client-position, privilege, business-risk), ending with the attorney gatekeeper. The passes are structured review passes, not autonomous agents and not lawyers; the output stays attorney-supervised draft work product.</li>
+<li><strong>Matter packs</strong> — ordered sequences of skills for a recurring matter type.</li>
+</ul>
+<p>See <code>WORKFLOW_ROUTER.md</code>, <code>docs/MATTER_WORKSPACES.md</code>, <code>docs/PLAYBOOKS.md</code>, and <code>docs/REVIEW_PANELS.md</code> for when to choose each.</p>
 </section>
 
 <section id="practice-areas">
@@ -569,7 +653,7 @@ ${mdToHtml(ex.output)}
   });
 }
 
-function buildSkillPage(skill, example) {
+function buildSkillPage(skill, example, meta) {
   const a = skill.area;
   let sections = '';
   for (const name of SECTION_ORDER) {
@@ -623,7 +707,7 @@ ${summaryLines.join('\n')}
 <p>${inline(skill.description)}</p>
 </div>
 
-${summaryBlock}${exampleBlock}
+${summaryBlock}${skillFactsPanel(meta)}${exampleBlock}
 ${sections}<section class="skill-section" id="raw-skill">
 <h2>Full raw SKILL.md</h2>
 <pre id="raw" class="raw">${esc(skill.raw)}</pre>
@@ -751,24 +835,71 @@ function buildPacksPage() {
   const indexPath = join(REPO_ROOT, 'metadata', 'index.json');
   if (!existsSync(indexPath)) return null;
   const meta = JSON.parse(readFileSync(indexPath, 'utf8'));
+  const packsMetaPath = join(REPO_ROOT, 'metadata', 'packs.json');
+  const packsMeta = existsSync(packsMetaPath)
+    ? JSON.parse(readFileSync(packsMetaPath, 'utf8'))
+    : null;
   const areas = {};
   for (const s of meta.skills || []) {
     const a = s.practice_area;
     if (!a) continue;
     (areas[a] = areas[a] || []).push(s);
   }
+  const packByArea = {};
+  if (packsMeta && Array.isArray(packsMeta.packs)) {
+    for (const p of packsMeta.packs) {
+      if (!p.practice_area || !p.platform || p.practice_area === 'all') continue;
+      (packByArea[p.practice_area] = packByArea[p.practice_area] || {})[p.platform] = p;
+    }
+  }
 
+  const baseName = (p) => {
+    const mm = String(p).match(/([^/]+)\.md$/);
+    return mm ? mm[1] : String(p).replace(/\/$/, '').split('/').pop();
+  };
   let rows = '';
+  let details = '';
   for (const a of AREA_ORDER) {
     const list = areas[a] || [];
     if (!list.length) continue;
+    const manifest = packByArea[a] || {};
+    const anyPack = Object.values(manifest)[0] || {};
+    const platforms = Object.keys(manifest).sort().join(', ') || 'chatgpt, claude, gemini';
+    const checks = [...new Set(Object.values(manifest).flatMap((p) => p.included_quality_checks || []))];
+    const playbooks = [...new Set(Object.values(manifest).flatMap((p) => p.included_playbooks || []))];
+    const panels = [...new Set(Object.values(manifest).flatMap((p) => p.included_review_panels || []))];
+    const reqs = anyPack.attorney_review_requirements || [];
     rows += `<tr>
 <td>${esc(areaName(a))}</td>
 <td class="count">${list.length}</td>
-<td><a href="chatgpt/${a}.md">ChatGPT pack (.md)</a></td>
-<td><a href="claude/${a}.zip">Claude pack (.zip)</a></td>
-<td><a href="gemini/${a}.zip">Gemini pack (.zip)</a></td>
+<td>${esc(platforms)}</td>
+<td class="count">${checks.length || '—'}</td>
+<td class="count">${playbooks.length || '—'}</td>
+<td class="count">${panels.length || '—'}</td>
+<td><a href="chatgpt/${a}.md">ChatGPT (.md)</a> · <a href="claude/${a}.zip">Claude (.zip)</a> · <a href="gemini/${a}.zip">Gemini (.zip)</a></td>
 </tr>\n`;
+
+    const skillSlug = (s) => {
+      const mm = String(s.path || s.id || '').match(/skills\/[^/]+\/([^/]+)/) || String(s.id || '').match(/[^/]+\/(.+)$/);
+      return mm ? mm[1] : slugify(s.title || s.name || '');
+    };
+    const skillItems = list.map((s) => `<li><a href="../skills/${a}/${skillSlug(s)}.html">${esc(s.title || s.name || s.id)}</a></li>`).join('');
+    const checkItems = checks.map((c) => `<code>${esc(c)}</code>`).join(' ') || '—';
+    const pbItems = playbooks.map((p) => `<code>${esc(baseName(p))}</code>`).join(' ') || '—';
+    const panelItems = panels.map((p) => `<code>${esc(baseName(p))}</code>`).join(' ') || '—';
+    const reqItems = reqs.map((r) => `<li>${esc(r)}</li>`).join('') || '<li>A licensed attorney must review and adopt all outputs before reliance.</li>';
+    details += `<details class="pack-detail">
+<summary><strong>${esc(areaName(a))}</strong> — ${list.length} skills · platforms: ${esc(platforms)}</summary>
+<p><span class="label">Use case:</span> practice-area legal workflow pack. Upload one file; the agent routes to the matching skill.</p>
+<p><span class="label">Included quality checks:</span> ${checkItems}</p>
+<p><span class="label">Included playbooks:</span> ${pbItems}</p>
+<p><span class="label">Included review panels:</span> ${panelItems}</p>
+<p><span class="label">Attorney-review requirements:</span></p>
+<ul>${reqItems}</ul>
+<p><span class="label">Setup:</span> ${esc(anyPack.setup_instructions || 'Upload the pack to your AI tool and apply the global safety rules.')}</p>
+<p><span class="label">Included skills:</span></p>
+<ul class="pack-skill-list">${skillItems}</ul>
+</details>\n`;
   }
 
   const body = `<nav class="breadcrumb"><a href="../index.html">Home</a> / <span>Packs</span></nav>
@@ -779,12 +910,18 @@ ${REVIEW_NOTICE}
 
 <section>
 <h2>Downloads</h2>
+<p>The generated <a href="packs.json">pack manifest</a> lists each pack's platform, included skills, core rules, templates, quality checks, matter-pack references, workspace templates, setup instructions, and attorney-review requirements.</p>
 <table class="index-table">
-<thead><tr><th>Practice area</th><th>Skills</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead>
+<thead><tr><th>Practice area</th><th>Skills</th><th>Platforms</th><th>Quality checks</th><th>Playbooks</th><th>Panels</th><th>Downloads</th></tr></thead>
 <tbody>
 ${rows}</tbody>
 </table>
 </section>
+
+<section>
+<h2>What each pack includes</h2>
+<p>Expand a practice area to see its included skills, quality checks, playbooks, review panels, attorney-review requirements, and setup instructions. The authoritative manifest is <a href="packs.json">packs.json</a>.</p>
+${details}</section>
 
 <section>
 <h2>Repo agents (Cursor, Codex, Claude Code)</h2>
@@ -842,6 +979,71 @@ ${rows}</tbody>
   return page({
     title: 'Packs', depth: 1,
     desc: 'Pre-built AgentCounsel platform packs — one file per practice area for ChatGPT, Claude, Gemini, and repo agents.',
+    body,
+  });
+}
+
+const REPO_BLOB = 'https://github.com/zgbrenner/agentcounsel/blob/main';
+
+function buildConceptsPage() {
+  const body = `<nav class="breadcrumb"><a href="../index.html">Home</a> / <span>How it works</span></nav>
+<h1>How AgentCounsel works</h1>
+<p class="lead">AgentCounsel is a Markdown-native legal skills library. Most tasks are a single skill; larger work uses packs, matter workspaces, playbooks, review panels, and a quality layer. Everything is plain Markdown — no backend, no account, no lock-in.</p>
+
+${REVIEW_NOTICE}
+
+<section>
+<h2>Skills</h2>
+<p>Each <a href="../skill-index.html">skill</a> is one workflow with a fixed structure (Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist). Browse by <a href="../index.html#practice-areas">practice area</a>.</p>
+</section>
+
+<section>
+<h2>Packs</h2>
+<p><a href="../packs/index.html">Practice-area packs</a> bundle every skill in an area — plus the safety rules and commands — into one file you upload to ChatGPT, Claude, or Gemini, with repo-agent variants for Cursor, Codex, and Claude Code. Packs are available for multiple AI tools.</p>
+</section>
+
+<section>
+<h2>Quality layer</h2>
+<p>Cross-cutting quality checks review a draft before it is relied upon: source validation, citation integrity, assumption audit, hallucination red-team, privilege/confidentiality review, prose polish, output-format compliance, and the attorney-review gate. See <a href="${REPO_BLOB}/docs/QUALITY_LAYER.md">docs/QUALITY_LAYER.md</a>.</p>
+</section>
+
+<section>
+<h2>Evals and benchmarks</h2>
+<p>Lightweight, no-API evals check structure, routing, metadata, packs, and candidate-output safety signals. They <strong>do not verify legal correctness</strong> and do not replace attorney review. See <a href="${REPO_BLOB}/docs/EVALS.md">docs/EVALS.md</a> and the <a href="${REPO_BLOB}/reports/eval-coverage.md">coverage report</a>.</p>
+</section>
+
+<section>
+<h2>Matter workspaces</h2>
+<p>A <a href="${REPO_BLOB}/docs/MATTER_WORKSPACES.md">matter workspace</a> organizes one matter — parties, facts, sources, deadlines, outputs, and attorney review — as plain Markdown. Start one with <code>py scripts/init_matter_workspace.py</code> from the canonical multi-file template. Choose a workspace over a single skill when the work is multi-step, document-heavy, or deadline-sensitive.</p>
+</section>
+
+<section>
+<h2>Playbooks</h2>
+<p><a href="${REPO_BLOB}/docs/PLAYBOOKS.md">Playbooks</a> are repeatable recipes for recurring task types (NDA review, demand letter, DPA review) — default questions, risk-tolerance settings, required sources, and required quality checks on top of a skill.</p>
+</section>
+
+<section>
+<h2>Review panels</h2>
+<p><a href="${REPO_BLOB}/docs/REVIEW_PANELS.md">Review panels</a> run a draft through several supervised review passes (issue spotter, source/citation, client-position, privilege, business-risk) ending with the attorney gatekeeper. The passes are review passes — not autonomous agents and not lawyers.</p>
+</section>
+
+<section>
+<h2>Platform compatibility</h2>
+<p>AgentCounsel runs in ChatGPT, Claude, Gemini, Cursor, Codex, Claude Code, and plain Markdown. See <a href="../platforms/index.html">platform setup</a> and <a href="${REPO_BLOB}/docs/PLUGIN_COMPATIBILITY.md">docs/PLUGIN_COMPATIBILITY.md</a>.</p>
+</section>
+
+<section>
+<h2>Workflow router</h2>
+<p>Not sure which surface to use? The <a href="${REPO_BLOB}/WORKFLOW_ROUTER.md">workflow router</a> maps "I need to do X" to the right skill or surface, and <a href="${REPO_BLOB}/docs/CHOOSE_YOUR_WORKFLOW.md">docs/CHOOSE_YOUR_WORKFLOW.md</a> is a decision guide with worked examples.</p>
+</section>
+
+<section>
+<h2>Contributing</h2>
+<p>AgentCounsel is open source under Apache-2.0. See <a href="${REPO_BLOB}/CONTRIBUTING.md">CONTRIBUTING.md</a> for how to add skills, quality checks, evals, playbooks, review panels, and packs — and the safety rules that are not negotiable.</p>
+</section>`;
+  return page({
+    title: 'How it works', depth: 1,
+    desc: 'How AgentCounsel works — skills, packs, the quality layer, evals, matter workspaces, playbooks, and review panels. Every output is draft work product for attorney review.',
     body,
   });
 }
@@ -939,6 +1141,7 @@ function main() {
   }
   const skills = loadSkills();
   skills.sort((a, b) => a.name.localeCompare(b.name));
+  const metaByPath = loadSkillMeta();
   const byArea = {};
   for (const s of skills) (byArea[s.area] = byArea[s.area] || []).push(s);
   for (const area of Object.keys(byArea)) {
@@ -972,7 +1175,7 @@ function main() {
   const examples = loadExamples(skills);
   for (const s of skills) {
     const ex = examples[s.area + '/' + s.slug];
-    write('skills/' + s.area + '/' + s.slug + '.html', buildSkillPage(s, ex));
+    write('skills/' + s.area + '/' + s.slug + '.html', buildSkillPage(s, ex, metaByPath[s.path]));
     count++;
   }
   for (const s of skills) {
@@ -982,6 +1185,8 @@ function main() {
     count++;
   }
 
+  write('concepts/index.html', buildConceptsPage());
+  count++;
   write('platforms/index.html', buildPlatformIndex());
   count++;
   for (const p of PLATFORMS) {

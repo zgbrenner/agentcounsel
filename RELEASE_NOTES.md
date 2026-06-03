@@ -1,84 +1,155 @@
-# AgentCounsel v0.1.0 — First Public Release
+# AgentCounsel v0.2.0 — First Public Release
 
-> **This file is the archived release-notes snapshot for v0.1.0 (the first public release on 2026-05-21). It records what shipped at that point in time and is intentionally not updated as the library evolves. For the **current** scope of the library — practice areas, skill counts, and design — see [`README.md`](README.md). For the development history that has accumulated since v0.1.0, see [`CHANGELOG.md`](CHANGELOG.md).**
-
-**Release date:** 2026-05-21
+**Release date:** 2026-05-27
 **License:** Apache-2.0
 
-AgentCounsel v0.1.0 is the first public release of an open, Markdown-native library of **legal skills** for AI agents and the legal professionals who supervise them. A skill is a structured workflow that helps an AI agent — or a lawyer — produce **draft legal work product for attorney review**.
+> AgentCounsel produces **draft legal work product for attorney review** — not
+> legal advice, not an AI lawyer, and not a substitute for a licensed attorney.
+> Every output is a draft a qualified, licensed legal professional must review
+> before it is relied upon. Using the library does not create an attorney–client
+> relationship.
 
-> AgentCounsel does not provide legal advice. Every output is a draft that a qualified, licensed legal professional must review before it is relied upon. Using the library does not create an attorney–client relationship.
+These are the release notes for the first public release. This file describes the
+current release; the full development history, including the earlier internal
+`0.1.0` and `0.0.1` milestones, is in [`CHANGELOG.md`](CHANGELOG.md).
 
-This document is the curated summary of the release. The granular development history is in [`CHANGELOG.md`](CHANGELOG.md).
+## What AgentCounsel is
 
-## What's in the release
+AgentCounsel is an open, **Markdown-native** library of **legal skills** for AI
+agents and the legal professionals who supervise them. A skill is a structured
+workflow — what to scope, what inputs to gather, how to organize the output, and
+what an attorney must verify — that helps produce draft legal work product. There
+is no runtime, no backend, no account, and no vendor lock-in: the library is plain
+Markdown that works wherever an agent or person can read text.
 
-### A complete skill library
+## What's included in v0.2.0
 
-**66 skills** — 57 across **12 practice areas**, plus 9 cross-cutting skills in two supporting groups:
+- **186 skills** across **20 practice areas** (legal research, litigation,
+  contracts, corporate, employment, privacy, product legal, regulatory, AI
+  governance, IP, financial crime/AML, real estate, M&A, antitrust/competition,
+  securities/capital markets, tax, bankruptcy/restructuring, insurance,
+  trusts & estates, family law), plus three cross-cutting groups (Setup, Legal
+  Methodology, Legal Operations). Every skill follows the same eight-section
+  structure and carries standardized, agent-readable YAML frontmatter.
+- **Structured metadata and a workflow router.** Generated `metadata/index.json`,
+  `metadata/router.json`, and `metadata/packs.json`, plus `WORKFLOW_ROUTER.md`,
+  map a task to the right skill or surface.
+- **Platform packs** for ChatGPT, Claude, Gemini, Cursor, Codex, and repo agents,
+  generated per practice area, with plugin-compatibility guidance in
+  [`docs/PLUGIN_COMPATIBILITY.md`](docs/PLUGIN_COMPATIBILITY.md).
+- **A quality layer** of nine cross-cutting checks: source validation, citation
+  integrity, assumption audit, hallucination red-team, privilege/confidentiality
+  review, legal prose polish, output-format compliance, jurisdiction/deadline
+  gates, and the attorney-review gate. See [`docs/QUALITY_LAYER.md`](docs/QUALITY_LAYER.md).
+- **Source and citation workflows** with a shared classification vocabulary
+  (source-supported, unsupported, contradicted, authority-requiring-verification,
+  and more). These organize and label sources for attorney verification; they do
+  **not** perform automated legal verification.
+- **An eval and benchmark system**: 186 eval files (509 cases), plus router,
+  static-integrity, and benchmark suites, run by standard-library scripts with no
+  network calls or API keys. Coverage is summarized in
+  [`reports/eval-coverage.md`](reports/eval-coverage.md). The evals check
+  structure, routing, metadata, packs, and candidate-output safety signals — they
+  do **not** verify legal correctness.
+- **Matter workspaces**: six single-file templates plus a canonical multi-file
+  template (`matter-workspaces/_template/`) and a `scripts/init_matter_workspace.py`
+  initializer. See [`docs/MATTER_WORKSPACES.md`](docs/MATTER_WORKSPACES.md).
+- **Eight playbooks** (recurring task recipes) and **six review panels**
+  (supervised multi-pass reviews). See [`docs/PLAYBOOKS.md`](docs/PLAYBOOKS.md)
+  and [`docs/REVIEW_PANELS.md`](docs/REVIEW_PANELS.md).
+- **A static site** catalog of every skill, pack, and concept, generated by a
+  zero-dependency Node script.
+- **Onboarding and contributor docs**: a rewritten `README.md`, a per-platform
+  [`QUICKSTART.md`](QUICKSTART.md), [`docs/CHOOSE_YOUR_WORKFLOW.md`](docs/CHOOSE_YOUR_WORKFLOW.md),
+  [`docs/CLI.md`](docs/CLI.md), [`docs/AGENT_COMMANDS.md`](docs/AGENT_COMMANDS.md),
+  [`docs/WORKFLOW_MAP.md`](docs/WORKFLOW_MAP.md), [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md),
+  a strengthened `CONTRIBUTING.md`, and issue/PR templates.
 
-- **Legal Research** — structured, verifiable research memos.
-- **Litigation** — matter intake, chronologies, demand letters, subpoena triage, deposition prep, legal holds, privilege-log review, claim charts, brief drafting.
-- **Contracts** — NDA review, contract risk review, redline summaries, SOW review, vendor agreement status.
-- **Corporate** — board minutes, written consents, closing checklists, diligence issue extraction, material-contract schedules, entity compliance.
-- **Employment** — termination risk, worker classification, hiring review, wage-and-hour triage, internal investigations, protected leave, severance, policy review.
-- **Privacy** — DPA review, data subject requests, privacy-policy gap review, privacy impact assessments.
-- **Product Legal** — launch review, marketing-claims review, terms-of-service review, AI-feature review.
-- **Regulatory** — enforcement-risk memos, rule-change summaries, compliance-gap matrices, compliance-program tracking.
-- **AI Governance** — AI use-case intake, AI vendor terms review, model-risk triage, employee AI policy.
-- **Intellectual Property** — trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, open-source licensing.
-- **Financial Crime / AML** — KYC onboarding review, sanctions / PEP / adverse-media screening review.
-- **Legal Operations** — templated legal responses, meeting briefings, signature routing.
+## Supported platforms
 
-Two cross-cutting groups support every practice area: **Setup** (cold-start interviews and a matter-workspace builder) and **Legal Methodology** (red-team verification, statutory interpretation, risk assessment, source validation).
+ChatGPT (Projects), Claude (Projects and the Claude Code plugin bundle), Gemini
+(CLI extension or notebook), Cursor and Codex (repo agents via `AGENTS.md`), and
+plain Markdown with no AI tool at all. See [`QUICKSTART.md`](QUICKSTART.md) for a
+path for each.
 
-Every skill follows the same structure — Purpose, Use When, Required Inputs, Do Not Use When, Legal Safety Rules, Workflow, Output Format, Attorney Verification Checklist — and carries standardized, agent-readable YAML frontmatter.
+## Safety model
 
-### A safety-first design
+Every skill inherits the operating rules in [`core/`](core/):
 
-Every skill inherits the operating rules in [`core/`](core/): draft work product only, attorney review always required, never invent legal authority or deadlines, separate facts from analysis, preserve confidentiality, and flag uncertainty with visible placeholders. The full design is documented in [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md).
+- **Draft work product only** — attorney review is always required.
+- **Never invent** legal authority, citations, quotations, facts, or deadlines.
+- **Never compute a deadline** — every date is flagged for attorney verification.
+- **Identify the gates** — jurisdiction, governing law, posture, and the relevant
+  date — or flag them unknown.
+- **Separate** facts, assumptions, law, analysis, and verification items.
+- **Preserve** confidentiality and privilege; use fictional examples only.
+- **Flag uncertainty** with visible placeholders instead of guessing.
 
-### Works on every major surface
+The full model — threat model, what AgentCounsel deliberately does not do, and how
+to use it with confidential material — is in
+[`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md).
 
-AgentCounsel is plain Markdown, so it runs anywhere an agent or person can read a file. The release includes adapters and build tooling for **ChatGPT, Claude, Gemini, Codex and other repo agents, Cursor**, and generic Markdown workflows. `scripts/build_platform_packs.py` generates ready-to-install packs per platform.
+## What is experimental
 
-### Team configuration layers
+AgentCounsel is **pre-1.0**; content and structure may still change. The newer
+surfaces are settling and should be treated as experimental: the multi-file matter
+workspace template and `init_matter_workspace.py`, the playbooks and review panels,
+and the external-source connectors. Eval coverage is uneven across practice areas.
+See [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) for an honest maturity
+breakdown.
 
-Optional, plain-Markdown layers let a legal team adapt the library without changing any skill: **practice profiles** (`practice-profiles/`) capture a practice group's jurisdictions and standard positions, and **matter workspaces** (`matter-workspaces/`) organize a single matter end to end.
+## What is not included
 
-### Documentation and onboarding
+- **No legal advice, and no jurisdiction-specific law.** Skills supply process and
+  structure; the attorney supplies and verifies the law of each jurisdiction.
+- **No automated legal verification.** Source and citation workflows organize and
+  label authorities for attorney verification; they do not confirm that any
+  authority is good law.
+- **No deadline computation.** Dates are flagged, never calculated.
+- **No auth, database, payments, hosted backend, hosted SaaS, or chat UI.** The
+  library is static, offline-friendly, and Markdown-native by design.
+- **Not an AI lawyer and not an autonomous legal agent.** Review passes and
+  workflows are supervised; a licensed attorney reviews and adopts every output.
 
-This release adds a rewritten [`README.md`](README.md), a [`QUICKSTART.md`](QUICKSTART.md) walkthrough, a [`docs/FAQ.md`](docs/FAQ.md), a [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md), and an [`examples/`](examples/) directory of illustrative sample outputs (with entirely fictional facts) for contract review, litigation chronology, DPA review, product launch review, and red-team verification.
+## Validation status
 
-### Quality tooling
+All checks pass on this release (Python standard library and one Node script only;
+no network calls, no API keys):
 
-- `scripts/validate_repo.py` — structural, metadata, link, and safety-framing validation (standard library only).
-- `scripts/build_skill_index.py` — generates the machine-readable `metadata/index.json`.
-- `scripts/sync_plugin_skills.py` — regenerates the Claude Code plugin bundle.
-- `scripts/build_platform_packs.py` — generates per-platform install packs.
-- A lightweight eval framework in `evals/`.
-- GitHub Actions CI runs the full validation suite on every change.
+```
+py scripts/validate_repo.py
+py scripts/build_skill_index.py --check
+py scripts/build_platform_packs.py --check
+py scripts/check_evals.py
+py scripts/run_evals.py --strict --quiet
+py scripts/generate_eval_report.py --check
+py scripts/sync_plugin_skills.py --check
+py scripts/generate_skill_improvement_prompts.py --check
+py scripts/generate_cold_start_interviews.py --check
+node site/generate.mjs
+```
+
+GitHub Actions runs the same validation on every pull request and push to `main`.
 
 ## Getting started
 
-1. Read [`QUICKSTART.md`](QUICKSTART.md) — your first skill run in about five minutes.
-2. Skim [`README.md`](README.md) for what the library is and how it is organized.
-3. Read [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md) before using it on real work.
-4. Browse [`examples/`](examples/) to see what a finished draft looks like.
-
-## Known limitations
-
-AgentCounsel is **pre-1.0**. Content and structure may still change between releases.
-
-- Skills supply **process and structure, not the law of any jurisdiction**. You must supply current law and verify it.
-- Skills do not compute or assert deadlines — they flag them for attorney verification.
-- The validator checks structure and consistency, not legal accuracy.
-- Every output is a draft. **Attorney review is mandatory and is not optional.**
+1. Read [`QUICKSTART.md`](QUICKSTART.md) — a path for your platform in about five minutes.
+2. Use [`docs/CHOOSE_YOUR_WORKFLOW.md`](docs/CHOOSE_YOUR_WORKFLOW.md) to pick a skill, pack, workspace, playbook, review panel, or quality check.
+3. Read [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md) before using AgentCounsel on real work.
+4. Browse [`examples/`](examples/) to see what a finished draft looks like (fictional facts only).
 
 ## Reporting issues
 
-Bugs and skill requests: open an issue using a template in `.github/ISSUE_TEMPLATE/`. Security or safety concerns: follow [`SECURITY.md`](SECURITY.md) — privately, and without confidential or real client data.
+Open an issue using a template in `.github/ISSUE_TEMPLATE/` (bug, skill request,
+pack/platform, eval/benchmark, or documentation). For security or safety concerns,
+follow [`SECURITY.md`](SECURITY.md) — privately, and without confidential or real
+client data.
 
 ## License and attribution
 
-Apache License 2.0 — see [`LICENSE`](LICENSE). AgentCounsel adapts legal-workflow ideas from prior Apache-2.0 open-source work; attribution is recorded in [`NOTICE`](NOTICE). AgentCounsel is an independent project and is not affiliated with, endorsed by, or sponsored by any AI vendor.
+MIT License — see [`LICENSE`](LICENSE). (The v0.2.0 release went out under
+Apache-2.0; the project has since relicensed to MIT.) Attribution for content
+adapted from prior Apache-2.0 open-source work — which remains under its original
+terms — is recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+AgentCounsel is an independent open-source project and is not affiliated with,
+endorsed by, or sponsored by Anthropic, OpenAI, or Google.

@@ -35,11 +35,23 @@ jobs:
       - name: Validate repository
         run: python scripts/validate_repo.py
 
+      - name: Check skill metadata and router are up to date
+        run: python scripts/build_skill_index.py --check
+
+      - name: Check platform pack manifest is up to date
+        run: python scripts/build_platform_packs.py --check
+
       - name: Validate skill eval framework
         run: python scripts/check_evals.py
 
       - name: Run skill eval candidates (static, --strict)
         run: python scripts/run_evals.py --strict --quiet
+
+      - name: Check legal prose of repository-owned work-product samples
+        run: python scripts/check_legal_prose.py
+
+      - name: Check eval coverage report is up to date
+        run: python scripts/generate_eval_report.py --check
 
       - name: Check skill-improvement reports are up to date
         run: python scripts/generate_skill_improvement_prompts.py --check

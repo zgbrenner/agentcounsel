@@ -15,6 +15,7 @@ outputs:
 related_skills:
   - skills/employment/termination-risk/SKILL.md
   - skills/employment/hiring-review/SKILL.md
+  - skills/tax/employment-tax-worker-classification-intake/SKILL.md
 tags:
   - employment
   - worker-classification

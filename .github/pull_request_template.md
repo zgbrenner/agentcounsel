@@ -8,6 +8,10 @@
 
 - [ ] New skill
 - [ ] Skill or template improvement
+- [ ] Quality check / eval / benchmark
+- [ ] Playbook or review panel
+- [ ] Matter workspace template or matter pack
+- [ ] Pack / platform compatibility
 - [ ] Adapter change
 - [ ] Tooling or CI
 - [ ] Documentation
@@ -27,7 +31,9 @@ Confirm each item, or mark it not applicable.
 - [ ] Each new or changed skill includes an Attorney Verification Checklist.
 - [ ] No confidential, privileged, or real client information was added; templates and examples use fictional placeholders only.
 - [ ] `python scripts/validate_repo.py` passes.
+- [ ] The full validation sequence in [`docs/AGENT_COMMANDS.md`](../docs/AGENT_COMMANDS.md) passes, and any regenerated files (metadata, packs, reports, site) are committed.
 - [ ] If a curated canonical skill changed, the plugin bundle was re-synced with `python scripts/sync_plugin_skills.py` (or this does not apply).
+- [ ] Any directly adapted third-party content is license-compatible (no GPL/AGPL) and attributed per `docs/THIRD_PARTY_ATTRIBUTION_POLICY.md` (or this does not apply).
 
 ## Notes for reviewers
 

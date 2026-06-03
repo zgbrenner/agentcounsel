@@ -1,6 +1,6 @@
 ---
 name: Source Validation
-description: "Use when checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed, applying the source hierarchy in `core/source-and-citation-discipline.md`."
+description: "Use when classifying whether cited sources, authorities, quotations, dates, and factual claims in draft legal work product are supported by materials available in the session, applying the source hierarchy in `core/source-and-citation-discipline.md`."
 practice_area: legal-methodology
 task_type: verification
 jurisdictions: []
@@ -11,9 +11,13 @@ inputs:
   - "The cited sources, authorities, and underlying record"
   - "The claims, quotations, and dates to validate"
 outputs:
-  - "Source validation table flagging unverifiable or inaccurate citations for attorney review"
+  - "Claim table classifying support status for factual and legal claims"
+  - "Source reference table"
+  - "Unsupported claims and contradictions list"
 related_skills:
   - skills/legal-methodology/red-team-verifier/SKILL.md
+  - skills/legal-methodology/citation-integrity-check/SKILL.md
+  - skills/legal-methodology/assumption-audit/SKILL.md
   - skills/legal-research/legal-research-memo/SKILL.md
 tags:
   - legal-methodology
@@ -25,6 +29,8 @@ tags:
 # Source Validation
 
 ## Purpose
+
+This source-validation check now uses a claim-by-claim support taxonomy. For each material factual or legal claim, classify support as **source-supported**, **source-mentioned but insufficient**, **unsupported**, **contradicted by source**, **legal authority required**, or **attorney judgment required**. These classifications organize attorney review; they do not independently verify current law or certify that a legal conclusion is correct.
 
 Apply a systematic method for checking that every cited source, authority, quotation, date, and factual claim in a draft legal work product actually exists and says what is claimed. The skill enumerates every citation and claim in the draft, classifies each by source tier using the hierarchy in `core/source-and-citation-discipline.md`, and marks each as verified, unverified, or unverifiable. It produces a source-by-source validation table and a list of unresolved items that must be checked before the draft is relied upon.
 
@@ -80,6 +86,8 @@ If the draft is not provided, stop and request it. If source documents are not p
 
    Assign each item a unique number for tracking. If the draft is long, work section by section and flag the section with each entry.
 
+   For every material factual or legal claim, also assign one source-support status: **Source-supported**, **Source-mentioned but insufficient**, **Unsupported**, **Contradicted by source**, **Legal authority required**, or **Attorney judgment required**. Use "source-supported" only when an available source directly supports the claim as stated, subject to attorney review.
+
 3. **Classify each item by source tier.** Apply the hierarchy from `core/source-and-citation-discipline.md`:
    - **Tier 1 — User-provided document.** The claim or quotation is traceable to a document the user supplied in this session. This is the highest-trust tier; verify by checking the text of the provided document.
    - **Tier 2 — Independently researched and verified.** The claim was located through a research step and confirmed to exist and to say what is claimed, through a source retrieved in this session. Identify the verification step.
@@ -131,16 +139,31 @@ Deliver a Source Validation Report with the following sections:
 
 1. **Report Header** — Draft title or description; date of validation; count of items (total | verified | unverified | unverifiable | defective); overall status (Cleared for attorney review / Unresolved items present — see below).
 2. **Scope and Limitations** — Whether source documents were provided; any limitations on what could be verified in this session; explicit statement that model background knowledge was not used as a verification source.
-3. **Source Validation Table** — One row per enumerated item:
+3. **Claim Table** — One row per material claim:
+
+   | # | Claim | Claim type | Source cited or needed | Support status | Revision needed |
+   |---|-------|------------|------------------------|----------------|-----------------|
+
+   Support status is one of: Source-supported | Source-mentioned but insufficient | Unsupported | Contradicted by source | Legal authority required | Attorney judgment required.
+
+4. **Source Reference Table** — One row per source:
+
+   | Source | Source type | Provided by | Claims supported | Limits / notes |
+   |--------|-------------|-------------|------------------|----------------|
+
+5. **Source Validation Table** — One row per enumerated item:
 
    | # | Item Type | Claim / Citation as Stated | Asserted Source | Source Tier | Status | Notes |
    |---|-----------|---------------------------|-----------------|-------------|--------|-------|
 
    Status values: Verified — Tier 1 | Verified — Tier 2 | Unverified | Unverifiable in this session | Defective (incomplete / malformed)
 
-4. **Unresolved Items List** — A numbered list of all unverified, unverifiable, and defective items, each stating: what needs to be checked, by what method, and who is responsible (attorney / legal researcher / client).
-5. **Date and Deadline Flags** — A separate list of all date claims flagged `[deadline verification required]` or lacking a confirmed source.
-6. **Overall Status Statement** — Either: "No unresolved items. Draft cleared for attorney review, subject to attorney verification checklist." Or: "Unresolved items present. Draft must not be relied upon until all unresolved items are confirmed."
+6. **Unsupported Claims List** — Every unsupported or insufficiently supported claim, with required action.
+7. **Contradictions List** — Every claim contradicted by available source material.
+8. **Recommended Revisions** — Safer wording, placeholders, or deletion recommendations for unresolved claims.
+9. **Unresolved Items List** — A numbered list of all unverified, unverifiable, and defective items, each stating: what needs to be checked, by what method, and who is responsible (attorney / legal researcher / client).
+10. **Date and Deadline Flags** — A separate list of all date claims flagged `[deadline verification required]` or lacking a confirmed source.
+11. **Overall Status Statement** — Either: "No unresolved items. Draft cleared for attorney review, subject to attorney verification checklist." Or: "Unresolved items present. Draft must not be relied upon until all unresolved items are confirmed."
 
 Label the report: **Draft legal work product for attorney review. Not legal advice.**
 
