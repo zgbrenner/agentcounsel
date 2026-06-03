@@ -42,7 +42,7 @@ The library is free and open source under the MIT License. You pay only for what
 
 ### How do I pick the right skill?
 
-Use [`WORKFLOW_ROUTER.md`](../WORKFLOW_ROUTER.md) to go from a task ("review this NDA") to a skill. Browse everything in [`SKILLS_INDEX.md`](../SKILLS_INDEX.md). Short command names are in [`COMMANDS.md`](../COMMANDS.md). The three files are different views of the same 66 skills.
+Use [`WORKFLOW_ROUTER.md`](../WORKFLOW_ROUTER.md) to go from a task ("review this NDA") to a skill. Browse everything in [`SKILLS_INDEX.md`](../SKILLS_INDEX.md). Short command names are in [`COMMANDS.md`](../COMMANDS.md). The three files are different views of the same 190 skills.
 
 ### What if no skill matches my task?
 

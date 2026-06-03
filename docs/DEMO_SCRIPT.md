@@ -79,7 +79,7 @@ Total target: ~3 minutes. Times are guides.
   py scripts/run_evals.py --strict --quiet
   ```
 
-- Briefly show `reports/eval-coverage.md`. Say: "186 eval files, run with no API
+- Briefly show `reports/eval-coverage.md`. Say: "190 eval files, run with no API
   keys. They check structure and safety signals — not legal correctness."
 
 ## 3:00 — Site navigation + close (15s)
