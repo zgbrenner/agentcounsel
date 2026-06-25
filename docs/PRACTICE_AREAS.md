@@ -42,20 +42,26 @@ met.
 
 | Area | Tier | Maturity | Practice profile | Cold-start interview | Eval coverage |
 |---|---|---|---|---|---|
-| `legal-research` | 1 — Core | stable | No | No | 0 of 1 skills |
-| `litigation` | 1 — Core | stable | Yes | Yes | 3 of 9 skills |
-| `contracts` | 1 — Core | stable | Yes | Yes | 2 of 5 skills |
-| `corporate` | 1 — Core | stable | Yes | Yes | 0 of 6 skills |
-| `employment` | 1 — Core | stable | Yes | No | 0 of 8 skills |
-| `ip` | 1 — Core | stable | Yes | No | 0 of 7 skills |
-| `privacy` | 1 — Core | stable | Yes | Yes | 1 of 4 skills |
-| `product-legal` | 2 — Advanced / specialized | stable | Yes | No | 1 of 4 skills |
-| `regulatory` | 2 — Advanced / specialized | stable | Yes | No | 1 of 4 skills |
-| `ai-governance` | 2 — Advanced / specialized | stable | Yes | No | 0 of 4 skills |
-| `financial-crime` | 2 — Advanced / specialized | stable | No | No | 0 of 2 skills |
-| `real-estate` | 2 — Advanced / specialized | experimental | Yes | No | 9 of 9 skills |
-| `m-and-a` | 2 — Advanced / specialized | experimental | Yes | No | 10 of 10 skills |
-| `family-law` | 2 — Advanced / specialized | experimental | Yes | No | 12 of 12 skills |
+| `legal-research` | 1 — Core | stable | No | No | 5 of 5 skills |
+| `litigation` | 1 — Core | stable | Yes | Yes | 9 of 9 skills |
+| `contracts` | 1 — Core | stable | Yes | Yes | 5 of 5 skills |
+| `corporate` | 1 — Core | stable | Yes | Yes | 6 of 6 skills |
+| `employment` | 1 — Core | stable | Yes | Yes | 8 of 8 skills |
+| `ip` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
+| `privacy` | 1 — Core | stable | Yes | Yes | 4 of 4 skills |
+| `product-legal` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
+| `regulatory` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
+| `ai-governance` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
+| `financial-crime` | 2 — Advanced / specialized | stable | No | No | 2 of 2 skills |
+| `real-estate` | 2 — Advanced / specialized | experimental | Yes | Yes | 9 of 9 skills |
+| `m-and-a` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
+| `family-law` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
+| `antitrust-competition` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
+| `securities-capital-markets` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
+| `tax` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
+| `bankruptcy-restructuring` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
+| `insurance` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
+| `trusts-estates` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
 
 ## Cross-cutting support groups — Tier 4
 
@@ -64,9 +70,9 @@ cold-start interviews do not apply to them.
 
 | Group | Tier | Maturity | Eval coverage |
 |---|---|---|---|
-| `legal-methodology` | 4 — Cross-cutting support | stable | 0 of 4 skills |
-| `legal-ops` | 4 — Cross-cutting support | stable | 0 of 3 skills |
-| `setup` | 4 — Cross-cutting support | stable | 0 of 5 skills |
+| `legal-methodology` | 4 — Cross-cutting support | stable | 11 of 11 skills |
+| `legal-ops` | 4 — Cross-cutting support | stable | 3 of 3 skills |
+| `setup` | 4 — Cross-cutting support | stable | 19 of 19 skills |
 
 ## Industry / regulatory overlays — Tier 3
 
@@ -80,15 +86,19 @@ templates are in place; see `overlays/README.md`.
 
 ## Coverage gaps in the released baseline
 
-The columns above record real gaps, carried forward from v0.1.0:
+The columns above record the remaining gaps:
 
 - **Practice profiles** are missing for `legal-research` and `financial-crime`.
-- **Cold-start interviews** exist for only four areas (`contracts`,
-  `corporate`, `litigation`, `privacy`).
-- **Evals** cover all 9 `real-estate` skills and all 10 `m-and-a` skills, but only 8 of the 66 v0.1.0 baseline skills.
+- **Cold-start interviews** are missing for the same two areas (`legal-research`
+  and `financial-crime`); each of the other 18 practice areas has one under
+  `skills/setup/`.
+- **Evals** now cover every skill — all 190 skills have a skill eval file
+  (`reports/eval-coverage.md` reports 0 skills without coverage); the v0.1.0
+  baseline of 8 covered skills has been fully closed.
 
-These gaps do not block use of the released areas, but closing them is part of
-bringing each area to the standard the expansion plan sets for new areas.
+The remaining profile and cold-start gaps do not block use of the released
+areas, but closing them is part of bringing each area to the standard the
+expansion plan sets for new areas.
 
 ## How to update this registry
 

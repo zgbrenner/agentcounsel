@@ -66,8 +66,9 @@ scaffolding and are skipped.
 
 ## Status
 
-The overlay mechanism is in place; **no sector overlays have been built yet.**
-The expansion plan identifies these candidates:
-`healthcare-life-sciences`, `fintech-payments`, an `environmental & ESG`
-overlay, `entertainment-media-sports`, and `education-law`. Each will be added
-as a folder here when its wave begins.
+The overlay mechanism is in place, and the first sector overlay — `healthcare`
+— has been built under this scaffold (see `overlays/healthcare/OVERLAY.md`); it
+remains `experimental` until configured for a specific organization. The
+expansion plan identifies further candidates: `fintech-payments`, an
+`environmental & ESG` overlay, `entertainment-media-sports`, and `education-law`.
+Each will be added as a folder here when its wave begins.
