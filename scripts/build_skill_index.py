@@ -36,21 +36,9 @@ EVALS_ROOT = REPO_ROOT / "evals"
 # Directory names under skills/<area>/ that hold shared reference material.
 NON_SKILL_DIRS = {"references"}
 
-# The standardized frontmatter fields every canonical skill must declare,
-# in canonical order. See docs/SKILL_METADATA_STANDARD.md.
-REQUIRED_FIELDS = [
-    "name",
-    "description",
-    "practice_area",
-    "task_type",
-    "jurisdictions",
-    "risk_level",
-    "requires_attorney_review",
-    "inputs",
-    "outputs",
-    "related_skills",
-    "tags",
-]
+# The standardized frontmatter fields every canonical skill must declare, in
+# canonical order, are defined once in _shared. See docs/SKILL_METADATA_STANDARD.md.
+from _shared import REQUIRED_FIELDS
 
 SCALAR_FIELDS = {
     "name", "description", "practice_area", "task_type",

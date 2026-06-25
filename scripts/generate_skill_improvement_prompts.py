@@ -43,19 +43,9 @@ CHECKLIST_REPORT = REPORTS_DIR / "skill-quality-checklist.md"
 # not a skill. They have no SKILL.md and are not catalogued as skills.
 NON_SKILL_DIRS = {"references"}
 
-# Required H2 sections for every canonical skill, in order. Mirrors
-# scripts/validate_repo.py so the prompts ask for the same structure the
-# validator enforces.
-REQUIRED_SECTIONS = [
-    "Purpose",
-    "Use When",
-    "Required Inputs",
-    "Do Not Use When",
-    "Legal Safety Rules",
-    "Workflow",
-    "Output Format",
-    "Attorney Verification Checklist",
-]
+# Required H2 sections (bare titles), defined once in _shared, so the prompts
+# ask for the same structure validate_repo enforces.
+from _shared import REQUIRED_SECTIONS
 
 # Practice-area directory name -> display name. Anything not listed falls
 # back to a derived title and is grouped after the known areas.

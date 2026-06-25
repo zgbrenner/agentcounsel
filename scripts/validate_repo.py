@@ -42,17 +42,10 @@ def rel(path: Path) -> str:
     return path.relative_to(REPO_ROOT).as_posix()
 
 
-# Required H2 sections for every canonical skill, in order.
-REQUIRED_SECTIONS = [
-    "## Purpose",
-    "## Use When",
-    "## Required Inputs",
-    "## Do Not Use When",
-    "## Legal Safety Rules",
-    "## Workflow",
-    "## Output Format",
-    "## Attorney Verification Checklist",
-]
+# Required H2 sections for every canonical skill, in order. The bare titles are
+# defined once in _shared; validate_repo enforces the heading form and order.
+from _shared import REQUIRED_SECTIONS as _SECTION_TITLES
+REQUIRED_SECTIONS = ["## " + title for title in _SECTION_TITLES]
 
 # Content-scan file types.
 TEXT_SUFFIXES = {".md", ".json", ".py", ".txt"}

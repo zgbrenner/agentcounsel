@@ -35,11 +35,8 @@ PACKS_METADATA = REPO_ROOT / "metadata" / "packs.json"
 PACK_SCHEMA_VERSION = "1.0"
 PACK_SOURCE_DATE = "2026-05-28"
 
-REQUIRED_SECTIONS = [
-    "Purpose", "Use When", "Required Inputs", "Do Not Use When",
-    "Legal Safety Rules", "Workflow", "Output Format",
-    "Attorney Verification Checklist",
-]
+# The required H2 sections (bare titles) are defined once in _shared.
+from _shared import REQUIRED_SECTIONS
 
 # core/ files, split into the always-on rules and the review checklist.
 CORE_SAFETY_FILES = [
@@ -190,6 +187,11 @@ def load_areas() -> dict:
                 if required not in sk["section_names"]:
                     err(f"skill {sk['path']} is missing required section "
                         f"'## {required}'")
+            required_present = [s for s in sk["section_names"]
+                                if s in REQUIRED_SECTIONS]
+            if (set(required_present) == set(REQUIRED_SECTIONS)
+                    and required_present != REQUIRED_SECTIONS):
+                err(f"skill {sk['path']} has its required sections out of order")
             templates = []
             tdir = sd / "templates"
             if tdir.is_dir():
