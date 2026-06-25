@@ -94,7 +94,7 @@ If the request text and date received are not provided, stop and request them. D
    - Opt-out of sale, sharing, or targeted advertising
    - Withdrawal of consent
    - Other: `[DESCRIBE]`
-   
+
    A single request may invoke multiple rights. If the request is ambiguous, note the ambiguity and flag whether clarification from the requester is appropriate (seek attorney guidance on whether clarifying questions are permitted under applicable law `[CONFIRM]`).
 
 3. **Screen for adverse context.** Before proceeding with the standard response workflow, assess whether any of the following conditions are present based on the inputs provided:

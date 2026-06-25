@@ -98,7 +98,7 @@ If a disclosure document or answers to the above questions are not provided, sto
    - **Pursue** — the disclosure passes all six screens without obvious disqualifying signals and warrants engagement of patent counsel for a formal patentability search and opinion.
    - **Investigate** — the disclosure raises one or more signals that require clarification or specialist input before a patentability search is warranted.
    - **Decline** — the disclosure shows clear and obvious barriers that make patent protection unlikely or inappropriate, in the screen's preliminary assessment.
-   
+
    If any disclosure-timing concern was identified in Screen 4, add a prominent **TIME-SENSITIVE** flag to the verdict regardless of the overall verdict category.
 
 10. **List open questions.** Enumerate all factual gaps, ambiguities, or points requiring confirmation that could affect the screen result.

@@ -30,6 +30,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Validate repository
+        run: |
+          python scripts/validate_repo.py
+          python scripts/check_evals.py
+
       - name: Build platform packs
         run: |
           python scripts/build_platform_packs.py

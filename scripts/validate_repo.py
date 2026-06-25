@@ -205,6 +205,20 @@ def check_skill(skill_dir: Path, require_sections: bool) -> None:
 
 # --- Check: forbidden phrasing --------------------------------------------
 
+def check_whitespace() -> None:
+    """Flag trailing whitespace and missing final newlines in text files so
+    the drift the audit found cannot silently recur. Same file set as the
+    other content scans; generated output under dist/ is skipped."""
+    for path in iter_text_files():
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for i, line in enumerate(text.split("\n"), 1):
+            if line != line.rstrip():
+                err(f"{rel(path)}:{i}: trailing whitespace")
+                break  # one report per file is enough
+        if text and not text.endswith("\n"):
+            err(f"{rel(path)}: missing final newline")
+
+
 def check_content_scans() -> None:
     forbidden = ["chatgpt project instructions", "chatgpt project package"]
     advice_pat = re.compile(
@@ -1001,6 +1015,7 @@ def main() -> int:
     check_overlays()
     check_citation_discipline(canonical)
     check_content_scans()
+    check_whitespace()
     check_quality_layer_overclaims()
     check_links()
     check_index_paths("SKILLS_INDEX.md")
