@@ -64,6 +64,7 @@ When information is missing, always prefer an explicit placeholder to a guess.
 - `[Confirm local rule]` — a procedural or local-rule point that must be checked against the specific court, agency, or jurisdiction.
 - `[citation needed]` — a legal proposition that requires supporting authority.
 - `[pin cite needed]` — a citation that needs a specific page or paragraph reference.
+- `[VERIFY-CITE: ...]` — a specific citation has been drafted but not confirmed to exist; the authority must be verified (for example, through a case-law connector — see `connectors/`) before it is relied upon. Once the cited authority is confirmed to exist, replace it with `[ATTORNEY TO CONFIRM: ...]` for the proposition it is cited to support.
 - `[verify jurisdiction]` — a point whose answer depends on a jurisdiction that is not yet confirmed.
 - `[deadline verification required]` — any date or deadline; the agent never computes one, and an attorney must confirm it.
 

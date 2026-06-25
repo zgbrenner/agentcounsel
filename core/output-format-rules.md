@@ -32,15 +32,8 @@ Mark every gap with a visible placeholder rather than filling it. Use the genera
 - `[CONFIRM: ...]` — information the user or attorney must supply.
 - `[VERIFY: ...]` — authority or a factual claim that must be checked.
 - `[ATTORNEY TO CONFIRM: ...]` — a point of legal judgment.
-- `[Attorney to insert authority]` — a stated legal proposition with no verified authority behind it.
-- `[Verify current law]` — a point that depends on law that may have changed.
-- `[Confirm local rule]` — a procedural or local-rule point to check against the specific forum.
-- `[citation needed]` — a legal proposition that needs supporting authority.
-- `[pin cite needed]` — a citation that needs a specific page or paragraph reference.
-- `[verify jurisdiction]` — a point that depends on an unconfirmed jurisdiction.
-- `[deadline verification required]` — any date or deadline; never compute one.
 
-Never silently resolve a gap. See `core/source-and-citation-discipline.md` for the placeholder vocabulary.
+For citation- and authority-specific placeholders (`[Attorney to insert authority]`, `[Verify current law]`, `[Confirm local rule]`, `[citation needed]`, `[pin cite needed]`, `[VERIFY-CITE: ...]`, `[verify jurisdiction]`, `[deadline verification required]`), use the single canonical list in `core/source-and-citation-discipline.md`, which defines each form. Never silently resolve a gap.
 
 ## Standard deliverable skeleton
 
