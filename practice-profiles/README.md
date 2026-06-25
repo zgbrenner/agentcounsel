@@ -97,6 +97,7 @@ Every practice-area profile has a matching cold-start interview skill under `ski
 | `practice-profiles/insurance.md` | `skills/setup/insurance-cold-start-interview/SKILL.md` |
 | `practice-profiles/family-law.md` | `skills/setup/family-law-cold-start-interview/SKILL.md` |
 | `practice-profiles/product-legal.md` | `skills/setup/product-legal-cold-start-interview/SKILL.md` |
+| `practice-profiles/financial-crime.md` | `skills/setup/financial-crime-cold-start-interview/SKILL.md` |
 
 The four hand-authored interviews — contracts, litigation, privacy, corporate — are maintained as standalone Markdown files. The remaining fourteen are generated from `scripts/generate_cold_start_interviews.py`; edit the per-area question bank in that script (not the SKILL.md output) and rerun the generator to refresh them.
 

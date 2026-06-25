@@ -24,7 +24,7 @@ Markdown that works wherever an agent or person can read text.
 
 ## What's included in v0.2.0
 
-- **190 skills** across **20 practice areas** (legal research, litigation,
+- **191 skills** across **20 practice areas** (legal research, litigation,
   contracts, corporate, employment, privacy, product legal, regulatory, AI
   governance, IP, financial crime/AML, real estate, M&A, antitrust/competition,
   securities/capital markets, tax, bankruptcy/restructuring, insurance,

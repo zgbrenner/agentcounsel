@@ -359,6 +359,7 @@ The Family Law skills produce **draft work product for a qualified, licensed att
 | "Configure the insurance practice" / "set up our insurance profile" | `skills/setup/insurance-cold-start-interview/SKILL.md` |
 | "Configure the family-law practice" / "set up our family-law profile" | `skills/setup/family-law-cold-start-interview/SKILL.md` |
 | "Configure the product-legal practice" / "set up our product-legal profile" | `skills/setup/product-legal-cold-start-interview/SKILL.md` |
+| "Configure the financial-crime practice" / "set up our AML profile" | `skills/setup/financial-crime-cold-start-interview/SKILL.md` |
 | "Set up a workspace for this matter" / "create a matter file" / "organize this matter" | `skills/setup/create-matter-workspace/SKILL.md` |
 
 The cold-start interviews fill in a profile under `practice-profiles/`; `create-matter-workspace` sets up a single matter file under `matter-workspaces/` (see "Before you start" above). See also `COMMANDS.md` for command shorthands and `matter-workspaces/` for per-matter scaffolds.

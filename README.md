@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-190-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-191-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 [![Site](https://github.com/zgbrenner/agentcounsel/actions/workflows/deploy-pages.yml/badge.svg)](https://zgbrenner.github.io/agentcounsel/)
@@ -52,7 +52,7 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **190 skills**: 157 across **20 practice areas**, plus 33 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
+AgentCounsel has **191 skills**: 157 across **20 practice areas**, plus 34 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -79,7 +79,7 @@ AgentCounsel has **190 skills**: 157 across **20 practice areas**, plus 33 cross
 
 Three **cross-cutting skill groups** support work in every practice area:
 
-- **Setup** (19 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
+- **Setup** (20 skills) — cold-start interviews that configure AgentCounsel for a practice group, plus a matter-workspace builder.
 - **Legal Methodology** (11 skills) — source validation, citation integrity, assumption audit, hallucination red-team, attorney-review gate, privilege/confidentiality review, legal prose polish, output-format compliance, statutory interpretation, risk assessment, and red-team verification.
 - **Legal Operations** (3 skills) — templated legal responses, meeting briefings, and signature-routing checks.
 

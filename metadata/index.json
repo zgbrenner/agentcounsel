@@ -2,7 +2,7 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
   "normalized_schema_version": "1.0",
-  "skill_count": 190,
+  "skill_count": 191,
   "platforms": [
     "chatgpt",
     "claude",
@@ -70,7 +70,7 @@
     "real-estate": 9,
     "regulatory": 4,
     "securities-capital-markets": 12,
-    "setup": 19,
+    "setup": 20,
     "tax": 10,
     "trusts-estates": 12
   },
@@ -79,7 +79,7 @@
     "drafting": 21,
     "extraction": 23,
     "intake": 18,
-    "interview": 18,
+    "interview": 19,
     "research": 5,
     "review": 51,
     "summarization": 5,
@@ -87,7 +87,7 @@
     "verification": 11
   },
   "risk_levels": {
-    "low": 21,
+    "low": 22,
     "medium": 76,
     "high": 90,
     "critical": 3
@@ -12845,6 +12845,80 @@
         "practice-profile",
         "configuration",
         "family-law"
+      ]
+    },
+    {
+      "id": "setup/financial-crime-cold-start-interview",
+      "title": "Financial Crime / AML Cold-Start Interview",
+      "path": "skills/setup/financial-crime-cold-start-interview/SKILL.md",
+      "summary": "Use when a financial-crime practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "use_when": [
+        "A team is adopting AgentCounsel and needs to configure practice-profiles/financial-crime.md for the first time.",
+        "A financial-crime practice group is being onboarded to the library and no current profile exists.",
+        "The library is being stood up for the first time and the financial-crime area is included in scope.",
+        "A practice group wishes to revisit or rebuild its profile from scratch rather than make incremental updates."
+      ],
+      "required_inputs": [
+        "Access to a financial-crime attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "expected_outputs": [
+        "Filled financial-crime practice profile draft for attorney review"
+      ],
+      "category": "interview",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "cold-start",
+        "configuration",
+        "financial-crime",
+        "interview",
+        "low",
+        "practice-profile",
+        "setup"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Financial Crime / AML Cold-Start Interview",
+      "description": "Use when a financial-crime practice group is adopting AgentCounsel and needs to configure its practice profile by answering a structured interview covering jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions.",
+      "practice_area": "setup",
+      "task_type": "interview",
+      "jurisdictions": [],
+      "risk_level": "low",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Access to a financial-crime attorney or authorized designee",
+        "The practice group's jurisdictions and client context",
+        "Standard positions, escalation thresholds, and review requirements"
+      ],
+      "outputs": [
+        "Filled financial-crime practice profile draft for attorney review"
+      ],
+      "related_skills": [
+        "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+        "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/regulatory/compliance-gap-matrix/SKILL.md"
+      ],
+      "tags": [
+        "setup",
+        "cold-start",
+        "practice-profile",
+        "configuration",
+        "financial-crime"
       ]
     },
     {

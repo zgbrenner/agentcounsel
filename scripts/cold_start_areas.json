@@ -1025,5 +1025,78 @@
       "Advertising substantiation requirements references are current.",
       "Feature-launch checklist references are current and tied to the client's product process."
     ]
+  },
+  "financial-crime": {
+    "display_name": "Financial Crime / AML",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+      "skills/financial-crime/sanctions-screening-review/SKILL.md",
+      "skills/regulatory/compliance-gap-matrix/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions does the group support KYC, customer due diligence, and sanctions / PEP / adverse-media screening work most frequently?",
+        "Which regulated entities does the group work with, and which supervisory regimes govern their AML programs?",
+        "Are there jurisdictions, list sources, or sanctions regimes the group treats as in scope for screening, and how is that coverage tracked?",
+        "Are there cross-border relationships — foreign UBOs, offshore structures, non-resident applicants — that the group routinely encounters and must account for?",
+        "Are there jurisdictions or sanctions regimes the group treats as out of scope entirely, requiring escalation or specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group support primarily a financial institution's compliance function, a corporate client's onboarding team, outside counsel, or a mix? Confirm the default posture.",
+        "What types of financial-crime matters does the group handle most frequently — onboarding KYC, periodic refresh, beneficial-ownership analysis, sanctions / PEP / adverse-media alert adjudication, or others?",
+        "How is the team structured — compliance officers, onboarding analysts, supervising attorneys, paralegals, non-attorney professionals whose work must be supervised?",
+        "Are there applicant categories — high-risk customers, PEPs, complex ownership structures, correspondent relationships — that require enhanced due diligence or additional sign-off?",
+        "How does the group coordinate with the firm's compliance function, MLRO or BSA officer, and any external screening providers?"
+      ],
+      "escalation": [
+        "Which KYC findings automatically require escalation — opaque or undisclosed beneficial ownership, missing source-of-funds evidence, expired or unverifiable identity documents, high-risk-jurisdiction exposure?",
+        "Which screening outcomes require mandatory escalation — a possible or likely true sanctions match, a confirmed PEP designation, significant adverse media — regardless of the screening context?",
+        "Is there a customer risk-rating outcome (for example, a high rating, or a recommendation to decline or apply enhanced due diligence) that always triggers escalation, and to whom?",
+        "What is the escalation path when a suspicious-activity concern or potential reporting obligation surfaces during a review?",
+        "Who is the designated escalation contact for financial-crime matters — the MLRO, BSA officer, or supervising attorney — and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should financial-crime work product default to a structured KYC onboarding file, a screening / alert-adjudication review, a compliance-facing summary, or several layered?",
+        "What format does the group use for the customer risk rating and disposition recommendation — factor table, narrative, or both?",
+        "Are there house style rules for confidence classifications, risk ratings, escalation flags, or open questions in financial-crime work product?",
+        "Does the group produce document-inventory tables, beneficial-ownership charts, or alert-disposition tables, and if so, in what format?",
+        "Are there particular deliverable types — onboarding files, screening reviews, escalation packets — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative KYC/AML rules grid or CDD policy, including the required-document matrix and risk-rating methodology, and where is it stored?",
+        "Is there a separately maintained high-risk-jurisdiction list, and how is it kept current?",
+        "What document governs the group's screening or alert-disposition policy, including match thresholds and false-positive criteria?",
+        "Does the group maintain a beneficial-ownership / control verification standard, and is it tied to specific applicant types?",
+        "Are there enhanced-due-diligence procedures or escalation playbooks the group treats as authoritative, and is any of them under revision or pending update?"
+      ],
+      "standard_positions": [
+        "What is the group's default customer due diligence posture by applicant type, and what triggers a step up to enhanced due diligence?",
+        "What is the group's default beneficial-ownership threshold and control standard for identifying UBOs and controllers?",
+        "What is the group's default source-of-funds / source-of-wealth evidence expectation across risk levels?",
+        "What is the group's default approach to disposition recommendations — clear, request documents, escalate to enhanced due diligence, or recommend decline — and what drives each?",
+        "What is the group's default posture on screening: which list sources are screened, how possible matches are handled, and how false positives are documented?"
+      ],
+      "review_requirements": [
+        "At what stage of a financial-crime matter does attorney or compliance review of work product become mandatory — intake, before any risk rating, before any disposition recommendation, before any escalation, or at other defined stages?",
+        "Are there work-product types for which review is always required regardless of matter size — for example, any sanctions match, any high-risk rating, any recommendation to decline, any enhanced-due-diligence file?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, MLRO or BSA officer, compliance lead?",
+        "What is the expected turnaround for standard onboarding or screening review, and how are urgent reviews (potential sanctions exposure, time-sensitive onboarding) handled?",
+        "Is there a formal sign-off step — required signature, approval, or logged confirmation — before a customer is onboarded, an alert is dispositioned, or an escalation packet is transmitted?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts, postures, or conclusions agents must never assume without explicit confirmation — that an applicant is cleared, that a risk rating is low, that beneficial ownership is complete, that a screening alert is a false positive, that source of funds is adequately evidenced?",
+        "Are there scenarios — a possible sanctions match, a confirmed PEP, a suspicious-activity concern — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types or applicant populations (high-risk customers, complex ownership structures, correspondent relationships) where agents must never proceed beyond intake without direct compliance or attorney involvement?",
+        "Are there prior incidents, regulator findings, or lessons learned that should be encoded as explicit prohibitions for agents working on financial-crime matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction and sanctions-regime coverage for KYC and screening work is accurately recorded `[verify jurisdiction]`.",
+      "KYC/AML rules grid, CDD policy, and high-risk-jurisdiction list references are current and version-controlled `[Verify current law]`.",
+      "Beneficial-ownership thresholds and the customer risk-rating methodology reflect the group's current considered posture, not a provisional one.",
+      "Screening / alert-disposition thresholds and false-positive criteria reflect the firm's current policy, and every possible or likely true sanctions match is routed to compliance and counsel.",
+      "Any reporting, response, or refresh dates surfaced during a review are marked `[deadline verification required]` and are computed by the attorney or compliance function, not by an agent."
+    ]
   }
 }

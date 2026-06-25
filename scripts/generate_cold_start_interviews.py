@@ -60,6 +60,7 @@ AREA_PROSE: dict[str, tuple[str, str]] = {
     "insurance":                ("an", "insurance"),
     "family-law":               ("a",  "family-law"),
     "product-legal":            ("a",  "product-legal"),
+    "financial-crime":          ("a",  "financial-crime"),
 }
 
 
