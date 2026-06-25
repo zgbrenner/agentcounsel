@@ -111,17 +111,14 @@ Also out of scope (this skill does not): determine the tax consequences of a pro
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; no
-   tax-consequence or enforceability determination; qualified tax professional
-   review required.
-2. **Gates table** — transaction type, jurisdictions, the user's role and
+1. **Gates table** — transaction type, jurisdictions, the user's role and
    perspective, review purpose.
-3. **Key tax terms table** — source-cited summary of the tax provisions.
-4. **Tax Provision Review Checklist** — per the pattern in
+2. **Key tax terms table** — source-cited summary of the tax provisions.
+3. **Tax Provision Review Checklist** — per the pattern in
    `skills/tax/references/output-patterns.md`, with a risk matrix.
-5. **Missing provisions** — expected tax provisions marked `not found`.
-6. **Negotiation points** — direction of change only, from the user's side.
-7. **Tax-professional verification checklist** and **assumptions**.
+4. **Missing provisions** — expected tax provisions marked `not found`.
+5. **Negotiation points** — direction of change only, from the user's side.
+6. **Tax-professional verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

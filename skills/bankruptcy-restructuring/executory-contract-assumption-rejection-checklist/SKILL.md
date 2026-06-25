@@ -37,7 +37,7 @@ contract status table, a cure/default tracker, and an assumption/rejection
 issue list, so a qualified attorney can evaluate assumption, rejection, and
 assignment. This skill organizes facts and spots issues; it never concludes
 whether a contract is executory or whether it may be assumed, rejected, or
-assigned.
+assigned. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -113,18 +113,16 @@ Also out of scope (this skill does not): conclude whether a contract or lease is
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   assumption/rejection/assignment determination; attorney review required.
-2. **Gates table** — contract identity, debtor and counterparty roles, the
+1. **Gates table** — contract identity, debtor and counterparty roles, the
    user's role, case reference.
-3. **Contract status table** — contract | parties | key terms | source |
+2. **Contract status table** — contract | parties | key terms | source |
    status.
-4. **Cure/default tracker** — default or cure item | amount as stated | source
+3. **Cure/default tracker** — default or cure item | amount as stated | source
    | note.
-5. **Assumption/rejection issue list** — issues framed as questions for the
+4. **Assumption/rejection issue list** — issues framed as questions for the
    attorney.
-6. **Missing facts** and **attorney verification checklist**.
-7. **Assumptions and unresolved items**.
+5. **Missing facts** and **attorney verification checklist**.
+6. **Assumptions and unresolved items**.
 
 The contract status table and trackers follow the **Executory Contract
 Assumption/Rejection Tracker** structure in

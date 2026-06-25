@@ -112,17 +112,14 @@ Also out of scope (this skill does not): calculate gain or loss, basis, or holdi
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; no
-   gain/loss calculation; no filing-ready schedule; qualified tax professional
-   review required.
-2. **Gates table** — taxpayer/entity type, jurisdictions, tax period, role,
+1. **Gates table** — taxpayer/entity type, jurisdictions, tax period, role,
    accounts (masked).
-3. **Crypto / Digital Asset Tax Intake Matrix** — per the pattern in
+2. **Crypto / Digital Asset Tax Intake Matrix** — per the pattern in
    `skills/tax/references/output-patterns.md`, one row per activity category.
-4. **Missing records list** and **document request list**.
-5. **Uncertainty flags**.
-6. **Tax-professional verification questions**.
-7. **Assumptions and unresolved items**.
+3. **Missing records list** and **document request list**.
+4. **Uncertainty flags**.
+5. **Tax-professional verification questions**.
+6. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

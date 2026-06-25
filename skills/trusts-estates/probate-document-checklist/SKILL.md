@@ -35,7 +35,7 @@ Build a probate document checklist and missing-document list — with a status,
 source, and responsible party for each item — so a qualified attorney can
 assemble and review the probate record. This skill organizes what a probate
 matter requires; it does not prepare filing-ready probate forms and calculates
-no deadlines.
+no deadlines. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -102,15 +102,13 @@ Also out of scope (this skill does not): prepare filing-ready probate forms, pet
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not a
-   filing-ready form; no deadline calculation; attorney review required.
-2. **Gates table** — decedent, the user's role, jurisdiction, estate status,
+1. **Gates table** — decedent, the user's role, jurisdiction, estate status,
    review purpose.
-3. **Probate document checklist** — document | status | source | responsible
+2. **Probate document checklist** — document | status | source | responsible
    party | note.
-4. **Missing document list** — documents expected but `not provided`.
-5. **Dates as provided** — each marked `[deadline verification required]`.
-6. **Attorney verification items** and **assumptions**.
+3. **Missing document list** — documents expected but `not provided`.
+4. **Dates as provided** — each marked `[deadline verification required]`.
+5. **Attorney verification items** and **assumptions**.
 
 The checklist follows the **Probate Document Checklist** structure in
 `skills/trusts-estates/references/output-patterns.md`.

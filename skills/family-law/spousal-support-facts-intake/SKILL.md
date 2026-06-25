@@ -88,13 +88,12 @@ Also out of scope (this skill does not): calculate or estimate spousal support o
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no support calculation; no entitlement determination; no income or earning-capacity determination; no deadline computed; attorney review required.
-2. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
-3. **Gates table** — jurisdiction, parties, case stage, with status and source.
-4. **Spousal support facts intake table** — category | fact (as stated, user-supplied) | source | status.
-5. **Missing documents** — documents to obtain, grouped by category, marked `not provided`.
-6. **Questions for counsel** — statutory-factor inputs, income and earning-capacity questions, and duration questions for the attorney.
-7. **Attorney verification checklist** and **assumptions**.
+1. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
+2. **Gates table** — jurisdiction, parties, case stage, with status and source.
+3. **Spousal support facts intake table** — category | fact (as stated, user-supplied) | source | status.
+4. **Missing documents** — documents to obtain, grouped by category, marked `not provided`.
+5. **Questions for counsel** — statutory-factor inputs, income and earning-capacity questions, and duration questions for the attorney.
+6. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

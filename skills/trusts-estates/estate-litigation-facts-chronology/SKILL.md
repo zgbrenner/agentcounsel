@@ -35,7 +35,7 @@ Build a source-cited factual chronology for a will contest, trust contest,
 fiduciary dispute, accounting dispute, beneficiary dispute, or capacity /
 undue-influence matter, so a qualified attorney can work from an organized
 timeline. This skill organizes facts; it assesses no merits and predicts no
-outcome.
+outcome. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -103,14 +103,12 @@ Also out of scope (this skill does not): assess the merits of any claim or defen
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no merits
-   assessment; attorney review required.
-2. **Gates table** — the user's role, jurisdiction, dispute type, documents
+1. **Gates table** — the user's role, jurisdiction, dispute type, documents
    reviewed.
-3. **Factual chronology** — date | event | actor | source | disputed/undisputed
+2. **Factual chronology** — date | event | actor | source | disputed/undisputed
    if provided | relevance.
-4. **Missing facts** and **follow-up items**.
-5. **Attorney verification questions** and **assumptions**.
+3. **Missing facts** and **follow-up items**.
+4. **Attorney verification questions** and **assumptions**.
 
 The factual chronology follows the **Estate Litigation Chronology** structure
 in `skills/trusts-estates/references/output-patterns.md`.

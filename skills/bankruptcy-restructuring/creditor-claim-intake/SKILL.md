@@ -36,7 +36,7 @@ Organize a creditor's facts and documents for a potential bankruptcy claim into
 a structured, source-cited claim facts table — with a document request list,
 missing facts, dispute flags, and verification questions — so a qualified
 attorney can evaluate the claim. This skill organizes facts; it determines no
-claim validity, priority, allowance, or secured status.
+claim validity, priority, allowance, or secured status. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -111,16 +111,14 @@ Also out of scope (this skill does not): determine whether a claim is valid, all
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no claim
-   determination; attorney review required.
-2. **Gates table** — debtor, creditor, the user's role, basis of claim, case
+1. **Gates table** — debtor, creditor, the user's role, basis of claim, case
    reference.
-3. **Claim facts table** — fact | source | status, covering basis, amount as
+2. **Claim facts table** — fact | source | status, covering basis, amount as
    stated, characterization as asserted, collateral, guaranties, offsets, and
    payments.
-4. **Dispute flags** — disputes and inconsistencies framed as questions.
-5. **Missing facts** and **document request list**.
-6. **Attorney verification questions** and **assumptions**.
+3. **Dispute flags** — disputes and inconsistencies framed as questions.
+4. **Missing facts** and **document request list**.
+5. **Attorney verification questions** and **assumptions**.
 
 The claim facts table follows the **Creditor Claim Facts Table** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.

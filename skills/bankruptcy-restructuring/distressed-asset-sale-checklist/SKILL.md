@@ -36,7 +36,7 @@ Build a checklist for a bankruptcy or distressed asset sale — a sale checklist
 a diligence request list, a contract/cure tracker, and a closing-deliverables
 tracker — so a qualified attorney can run and review the sale process. This
 skill organizes the process and the documents; it concludes nothing on whether
-assets may be sold free and clear or whether sale procedures are sufficient.
+assets may be sold free and clear or whether sale procedures are sufficient. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -113,15 +113,13 @@ Also out of scope (this skill does not): conclude that assets may be sold free a
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   free-and-clear or sale-sufficiency conclusion; attorney review required.
-2. **Gates table** — asset, sale process, the user's role, jurisdiction.
-3. **Sale checklist** — process step | status | source | note.
-4. **Diligence request list** — request | workstream | priority | owner.
-5. **Contract/cure tracker** — contract | cure amount as provided | status |
+1. **Gates table** — asset, sale process, the user's role, jurisdiction.
+2. **Sale checklist** — process step | status | source | note.
+3. **Diligence request list** — request | workstream | priority | owner.
+4. **Contract/cure tracker** — contract | cure amount as provided | status |
    source.
-6. **Closing-deliverables tracker** — deliverable | responsible party | status.
-7. **Missing information** and **attorney verification items**.
+5. **Closing-deliverables tracker** — deliverable | responsible party | status.
+6. **Missing information** and **attorney verification items**.
 
 The sale checklist and trackers follow the **Distressed Asset Sale Checklist**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.

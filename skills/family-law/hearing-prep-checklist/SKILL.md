@@ -84,13 +84,12 @@ Also out of scope (this skill does not): invent court deadlines, filing requirem
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no court deadline or local rule supplied; no hearing strategy; no outcome prediction; attorney review required.
-2. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
-3. **Gates table** — hearing type, issues to be heard, parties and roles, jurisdiction, with status and source.
-4. **Hearing-prep checklist** — task | category | source | owner | status | deadline (user-provided only) | attorney verification item.
-5. **Open questions for counsel** — preparation gaps, evidentiary questions, and procedural confirmations.
-6. **Missing facts** — tasks, documents, and statuses marked `not provided` / `ambiguous`.
-7. **Attorney verification checklist** and **assumptions**.
+1. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
+2. **Gates table** — hearing type, issues to be heard, parties and roles, jurisdiction, with status and source.
+3. **Hearing-prep checklist** — task | category | source | owner | status | deadline (user-provided only) | attorney verification item.
+4. **Open questions for counsel** — preparation gaps, evidentiary questions, and procedural confirmations.
+5. **Missing facts** — tasks, documents, and statuses marked `not provided` / `ambiguous`.
+6. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

@@ -89,16 +89,15 @@ Also out of scope (this skill does not): decide whether a claim is covered; conc
 
 ## Output Format
 
-1. **Capability and reliance notice** — outline only; not legal advice; not a coverage opinion or denial; no coverage conclusion; attorney review required.
-2. **Gates table** — policy type, user's role, claim type, claim stage, jurisdiction, with status and source.
-3. **Facts** — source-cited material facts; disputed and missing facts flagged.
-4. **Policy provisions** — source-cited insuring agreements, definitions, exclusions, endorsements, and conditions in play.
-5. **Potential coverage grants** — candidate | insuring-agreement provision (source) | fact in play (source) | question for the attorney. The outline as a whole follows the Coverage Position Outline pattern in `skills/insurance/references/output-patterns.md`.
-6. **Potentially applicable exclusions and endorsements** — candidate | provision (source) | fact in play (source) | question for the attorney.
-7. **Conditions** — condition | provision (source) | claim fact (source) | open question.
-8. **Posture** — reservation / denial / defense posture as it stands, with no recommendation.
-9. **Open issues and recommended questions for counsel.**
-10. **Attorney verification checklist** and **assumptions** — every coverage decision is reserved to the attorney.
+1. **Gates table** — policy type, user's role, claim type, claim stage, jurisdiction, with status and source.
+2. **Facts** — source-cited material facts; disputed and missing facts flagged.
+3. **Policy provisions** — source-cited insuring agreements, definitions, exclusions, endorsements, and conditions in play.
+4. **Potential coverage grants** — candidate | insuring-agreement provision (source) | fact in play (source) | question for the attorney. The outline as a whole follows the Coverage Position Outline pattern in `skills/insurance/references/output-patterns.md`.
+5. **Potentially applicable exclusions and endorsements** — candidate | provision (source) | fact in play (source) | question for the attorney.
+6. **Conditions** — condition | provision (source) | claim fact (source) | open question.
+7. **Posture** — reservation / denial / defense posture as it stands, with no recommendation.
+8. **Open issues and recommended questions for counsel.**
+9. **Attorney verification checklist** and **assumptions** — every coverage decision is reserved to the attorney.
 
 ## Attorney Verification Checklist
 

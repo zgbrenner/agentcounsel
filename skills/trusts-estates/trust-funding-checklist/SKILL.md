@@ -35,7 +35,7 @@ Build a checklist for funding, or reviewing the funding of, a trust — a
 source-cited tracker of which assets have been transferred, with the funding
 evidence and missing items — so a qualified attorney can review trust funding.
 This skill organizes funding status; it prepares no transfer documents and
-determines no tax consequences.
+determines no tax consequences. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -101,15 +101,13 @@ Also out of scope (this skill does not): prepare deeds, assignments, or transfer
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   transfer document; no tax determination; attorney review required.
-2. **Gates table** — the user's role, jurisdiction, review purpose, trust
+1. **Gates table** — the user's role, jurisdiction, review purpose, trust
    instrument.
-3. **Trust funding checklist** — asset | intended for trust | funding evidence |
+2. **Trust funding checklist** — asset | intended for trust | funding evidence |
    responsible party | status | source.
-4. **Source table** — funding item | source.
-5. **Missing items** — assets with missing or ambiguous funding evidence.
-6. **Attorney verification questions** and **assumptions**.
+3. **Source table** — funding item | source.
+4. **Missing items** — assets with missing or ambiguous funding evidence.
+5. **Attorney verification questions** and **assumptions**.
 
 The funding checklist follows the **Trust Funding Checklist** structure in
 `skills/trusts-estates/references/output-patterns.md`.

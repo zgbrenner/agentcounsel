@@ -86,14 +86,13 @@ Also out of scope (this skill does not): conclude whether the agreement is fair,
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no fairness, enforceability, adequacy, or tax conclusion; no deadline computed; attorney review required.
-2. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
-3. **Gates table** — parties and roles, matter type, jurisdiction, case stage, with status and source.
-4. **Key terms table** — term | plain-language summary | section reference.
-5. **Issue list** — issue | section | neutral description | why it is an open question for counsel.
-6. **Ambiguity list** — ambiguous term | section | the readings it is open to.
-7. **Missing provisions** — provisions referenced or implied but absent, marked `not found`.
-8. **Attorney verification checklist** and **assumptions**.
+1. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
+2. **Gates table** — parties and roles, matter type, jurisdiction, case stage, with status and source.
+3. **Key terms table** — term | plain-language summary | section reference.
+4. **Issue list** — issue | section | neutral description | why it is an open question for counsel.
+5. **Ambiguity list** — ambiguous term | section | the readings it is open to.
+6. **Missing provisions** — provisions referenced or implied but absent, marked `not found`.
+7. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

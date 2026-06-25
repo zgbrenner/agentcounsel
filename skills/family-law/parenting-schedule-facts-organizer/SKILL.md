@@ -86,13 +86,12 @@ Also out of scope (this skill does not): recommend a parenting schedule or paren
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no recommended schedule; no parenting-time allocation; no best-interests conclusion; no deadline computed; attorney review required.
-2. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
-3. **Gates table** — parties and roles, children involved, jurisdiction, with status and source.
-4. **Parenting schedule facts table** — category | current | proposed (if provided) | source | status.
-5. **Conflict/ambiguity list** — conflicts between schedules, unclear arrangements, and gaps, marked `ambiguous` / `not provided`.
-6. **Logistics checklist** — open practical questions for the attorney and the parties.
-7. **Attorney verification questions** and **assumptions**.
+1. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
+2. **Gates table** — parties and roles, children involved, jurisdiction, with status and source.
+3. **Parenting schedule facts table** — category | current | proposed (if provided) | source | status.
+4. **Conflict/ambiguity list** — conflicts between schedules, unclear arrangements, and gaps, marked `ambiguous` / `not provided`.
+5. **Logistics checklist** — open practical questions for the attorney and the parties.
+6. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 

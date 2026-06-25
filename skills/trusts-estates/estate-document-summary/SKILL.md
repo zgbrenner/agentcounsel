@@ -36,7 +36,7 @@ Produce a source-cited summary of a will, trust, codicil, trust amendment,
 power of attorney, advance directive, or related estate document — a key terms
 table, an ambiguity list, and verification items — so a qualified attorney can
 review the instrument. This skill summarizes what the document says; it
-concludes nothing about validity, capacity, or enforceability.
+concludes nothing about validity, capacity, or enforceability. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -109,15 +109,13 @@ Also out of scope (this skill does not): conclude whether a document is valid, p
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   validity or capacity determination; attorney review required.
-2. **Gates table** — document(s) summarized, the user's role, review purpose,
+1. **Gates table** — document(s) summarized, the user's role, review purpose,
    governing law as stated.
-3. **Document summary** — a short, plain-language overview.
-4. **Key terms table** — provision | what it says | article/section | source.
-5. **Ambiguity list** — ambiguous or conflicting provisions, with sources.
-6. **Execution facts as provided** — recorded, not assessed.
-7. **Missing document list** and **attorney verification checklist**.
+2. **Document summary** — a short, plain-language overview.
+3. **Key terms table** — provision | what it says | article/section | source.
+4. **Ambiguity list** — ambiguous or conflicting provisions, with sources.
+5. **Execution facts as provided** — recorded, not assessed.
+6. **Missing document list** and **attorney verification checklist**.
 
 The key terms table follows the **Estate Document Summary Table** structure in
 `skills/trusts-estates/references/output-patterns.md`.

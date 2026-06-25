@@ -87,13 +87,12 @@ Also out of scope (this skill does not): recommend custody, legal or physical, o
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no custody recommendation; no parenting-time allocation; no fitness assessment; no deadline computed; attorney review required.
-2. **Safety note** — any indication of danger flagged and routed, or a plain statement that none surfaced.
-3. **Gates table** — parties and roles, children involved, jurisdiction, case stage, with status and source.
-4. **Custody/parenting chronology** — date | event (neutral) | source | actor | child-related relevance (neutral) | disputed/undisputed status (if provided) | follow-up.
-5. **Missing or ambiguous facts** — undated events, conflicting dates, and gaps, marked `not found` / `unknown` / `ambiguous`.
-6. **Follow-up items** — documents and dates to obtain to complete the timeline.
-7. **Attorney verification questions** and **assumptions**.
+1. **Safety note** — any indication of danger flagged and routed, or a plain statement that none surfaced.
+2. **Gates table** — parties and roles, children involved, jurisdiction, case stage, with status and source.
+3. **Custody/parenting chronology** — date | event (neutral) | source | actor | child-related relevance (neutral) | disputed/undisputed status (if provided) | follow-up.
+4. **Missing or ambiguous facts** — undated events, conflicting dates, and gaps, marked `not found` / `unknown` / `ambiguous`.
+5. **Follow-up items** — documents and dates to obtain to complete the timeline.
+6. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 

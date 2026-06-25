@@ -109,16 +109,14 @@ Also out of scope (this skill does not): interpret a document's tax content, det
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; sensitive
-   identifiers minimized; qualified tax professional review required.
-2. **Gates table** — taxpayer/entity type, jurisdictions, periods covered,
+1. **Gates table** — taxpayer/entity type, jurisdictions, periods covered,
    review purpose.
-3. **Tax Document Inventory** — per the pattern in
+2. **Tax Document Inventory** — per the pattern in
    `skills/tax/references/output-patterns.md`, with masked references.
-4. **Missing document list** — documents expected but `not provided`.
-5. **Uncertainty flags** — partial, illegible, or ambiguous items.
-6. **Reviewer notes** — what a reviewer should check, with source references.
-7. **Assumptions and unresolved items**.
+3. **Missing document list** — documents expected but `not provided`.
+4. **Uncertainty flags** — partial, illegible, or ambiguous items.
+5. **Reviewer notes** — what a reviewer should check, with source references.
+6. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

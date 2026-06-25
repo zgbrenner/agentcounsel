@@ -37,7 +37,7 @@ offer, workout term sheet, lender proposal, plan support term sheet, or
 restructuring transaction summary into a source-cited key terms table, an issue
 list, a risk matrix, and negotiation points, so a qualified attorney can
 evaluate the document from the user's perspective. This skill extracts and
-organizes terms; it concludes nothing on enforceability or legal sufficiency.
+organizes terms; it concludes nothing on enforceability or legal sufficiency. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -114,16 +114,14 @@ Also out of scope (this skill does not): conclude whether a document or any term
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   enforceability or sufficiency determination; attorney review required.
-2. **Gates table** — transaction type, parties, the user's role and
+1. **Gates table** — transaction type, parties, the user's role and
    perspective, document reference.
-3. **Key terms table** — source-cited summary of the restructuring terms.
-4. **Issue list and risk matrix** — issue | trigger | source | concern for the
+2. **Key terms table** — source-cited summary of the restructuring terms.
+3. **Issue list and risk matrix** — issue | trigger | source | concern for the
    user's side | risk (High/Medium/Low) | attorney follow-up.
-5. **Missing terms** — expected terms marked `not found`.
-6. **Negotiation points** — direction of change only, from the user's side.
-7. **Attorney verification checklist** and **assumptions**.
+4. **Missing terms** — expected terms marked `not found`.
+5. **Negotiation points** — direction of change only, from the user's side.
+6. **Attorney verification checklist** and **assumptions**.
 
 The key terms table and issue list follow the **Restructuring Term Sheet Issue
 List** structure in

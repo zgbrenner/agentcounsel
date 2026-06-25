@@ -95,14 +95,13 @@ Also out of scope (this skill does not): conclude that bad faith did or did not 
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no bad-faith or claim-handling conclusion; attorney review required.
-2. **Gates table** — policy type, user's role, claim type, claim stage, jurisdiction, with status and source.
-3. **Risk-theme list** — theme | factual trigger | source | why an attorney would examine it | jurisdiction-specific question for counsel. Follows the Bad Faith Risk Triage Matrix pattern in `skills/insurance/references/output-patterns.md`.
-4. **Chronology gaps** — gaps and unexplained periods in the claim-handling timeline.
-5. **Communication issues** — clarity, consistency, and responsiveness issues drawn from the documents.
-6. **Missing documents** — claim-file documents not provided that bear on the themes.
-7. **Questions for counsel** — including the jurisdiction-specific standards the attorney must supply.
-8. **Attorney verification questions** and **assumptions** — no bad-faith conclusion is drawn.
+1. **Gates table** — policy type, user's role, claim type, claim stage, jurisdiction, with status and source.
+2. **Risk-theme list** — theme | factual trigger | source | why an attorney would examine it | jurisdiction-specific question for counsel. Follows the Bad Faith Risk Triage Matrix pattern in `skills/insurance/references/output-patterns.md`.
+3. **Chronology gaps** — gaps and unexplained periods in the claim-handling timeline.
+4. **Communication issues** — clarity, consistency, and responsiveness issues drawn from the documents.
+5. **Missing documents** — claim-file documents not provided that bear on the themes.
+6. **Questions for counsel** — including the jurisdiction-specific standards the attorney must supply.
+7. **Attorney verification questions** and **assumptions** — no bad-faith conclusion is drawn.
 
 ## Attorney Verification Checklist
 

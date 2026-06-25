@@ -123,18 +123,16 @@ Also out of scope (this skill does not): provide tax advice; compute tax, gain, 
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; qualified
-   tax professional review required.
-2. **Gates table** — taxpayer/entity type, jurisdiction(s), tax year/period,
+1. **Gates table** — taxpayer/entity type, jurisdiction(s), tax year/period,
    transaction/activity, role, review purpose (with `not provided` where
    missing).
-3. **Intake summary** — a short, plain-language overview of the matter.
-4. **Source-cited fact register** — fact | source | status.
-5. **Tax Issue Intake Matrix** — per the pattern in
+2. **Intake summary** — a short, plain-language overview of the matter.
+3. **Source-cited fact register** — fact | source | status.
+4. **Tax Issue Intake Matrix** — per the pattern in
    `skills/tax/references/output-patterns.md`; issues framed as questions.
-6. **Missing information list** and **document request list**.
-7. **Tax-professional verification questions**.
-8. **Assumptions and unresolved items**.
+5. **Missing information list** and **document request list**.
+6. **Tax-professional verification questions**.
+7. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

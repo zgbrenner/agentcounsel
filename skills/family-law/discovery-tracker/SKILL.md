@@ -84,13 +84,12 @@ Also out of scope (this skill does not): draft or invent discovery objections, p
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no objections drafted; no deadline computed; no discovery strategy; attorney review required.
-2. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
-3. **Gates table** — parties and roles, case stage, jurisdiction, with status and source.
-4. **Discovery tracker** — request/instrument | propounding party | responding party | response status | source | deadline (user-provided only) | deficiency | follow-up | attorney verification item.
-5. **Follow-up and meet-and-confer items** — outstanding responses, deficiencies, and follow-ups.
-6. **Missing facts** — items, statuses, parties, and dates marked `not provided` / `ambiguous`.
-7. **Attorney verification checklist** and **assumptions**.
+1. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
+2. **Gates table** — parties and roles, case stage, jurisdiction, with status and source.
+3. **Discovery tracker** — request/instrument | propounding party | responding party | response status | source | deadline (user-provided only) | deficiency | follow-up | attorney verification item.
+4. **Follow-up and meet-and-confer items** — outstanding responses, deficiencies, and follow-ups.
+5. **Missing facts** — items, statuses, parties, and dates marked `not provided` / `ambiguous`.
+6. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

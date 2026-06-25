@@ -113,16 +113,14 @@ Also out of scope (this skill does not): determine an entity's tax classificatio
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; not a
-   classification decision; qualified tax counsel review required.
-2. **Gates table** — entity type, jurisdiction of formation, ownership summary,
+1. **Gates table** — entity type, jurisdiction of formation, ownership summary,
    role, review purpose.
-3. **Entity Tax Classification Facts Table** — per the pattern in
+2. **Entity Tax Classification Facts Table** — per the pattern in
    `skills/tax/references/output-patterns.md`.
-4. **Documents to review** — what tax counsel should examine.
-5. **Possible classification questions for tax counsel** — questions only.
-6. **Missing facts and uncertainty flags**.
-7. **Assumptions and unresolved items**.
+3. **Documents to review** — what tax counsel should examine.
+4. **Possible classification questions for tax counsel** — questions only.
+5. **Missing facts and uncertainty flags**.
+6. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

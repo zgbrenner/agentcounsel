@@ -84,14 +84,13 @@ Also out of scope (this skill does not): confirm that coverage exists, is in for
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; a certificate is not proof of coverage; attorney review required.
-2. **Gates table** — certificate(s), contract requirements available?, user's role, relationship, with status and source.
-3. **Certificate summary** — 3-5 sentences: what the certificate(s) evidence at a glance.
-4. **COI comparison table** — requirement (or expected element) | certificate/endorsement shows | source | match status | note. If no contract requirements were provided, extract the certificate contents and state that nothing was compared against. Follows the Certificate of Insurance Comparison Table pattern in `skills/insurance/references/output-patterns.md`.
-5. **Missing endorsement list** — endorsements required or expected but not attached/referenced.
-6. **Mismatch list** — limit, date, party, or policy-type discrepancies.
-7. **Disclaimer and limitations** — the certificate's own disclaimer language and what it limits.
-8. **Attorney verification checklist** and **assumptions**.
+1. **Gates table** — certificate(s), contract requirements available?, user's role, relationship, with status and source.
+2. **Certificate summary** — 3-5 sentences: what the certificate(s) evidence at a glance.
+3. **COI comparison table** — requirement (or expected element) | certificate/endorsement shows | source | match status | note. If no contract requirements were provided, extract the certificate contents and state that nothing was compared against. Follows the Certificate of Insurance Comparison Table pattern in `skills/insurance/references/output-patterns.md`.
+4. **Missing endorsement list** — endorsements required or expected but not attached/referenced.
+5. **Mismatch list** — limit, date, party, or policy-type discrepancies.
+6. **Disclaimer and limitations** — the certificate's own disclaimer language and what it limits.
+7. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

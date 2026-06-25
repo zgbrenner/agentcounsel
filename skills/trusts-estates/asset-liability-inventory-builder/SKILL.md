@@ -35,7 +35,7 @@ Build a structured, source-cited inventory of estate or trust assets and
 liabilities — with owner/title, source, and any user-supplied value for each
 item — so a qualified attorney can review the estate's composition. This skill
 organizes what was provided; it does not value assets and reaches no legal
-conclusion.
+conclusion. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -104,15 +104,13 @@ Also out of scope (this skill does not): value or appraise an asset (it records 
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   valuation or ownership determination; attorney review required.
-2. **Gates table** — the user's role, jurisdiction, estate/trust status, review
+1. **Gates table** — the user's role, jurisdiction, estate/trust status, review
    purpose.
-3. **Asset and liability inventory** — item | type | owner/title as provided |
+2. **Asset and liability inventory** — item | type | owner/title as provided |
    value as provided by user | beneficiary/titling note | source | status.
-4. **Ambiguous or unverified assets** — items needing confirmation.
-5. **Missing facts** and **attorney verification items**.
-6. **Assumptions and unresolved items**.
+3. **Ambiguous or unverified assets** — items needing confirmation.
+4. **Missing facts** and **attorney verification items**.
+5. **Assumptions and unresolved items**.
 
 The inventory table follows the **Asset / Liability Inventory** structure in
 `skills/trusts-estates/references/output-patterns.md`.

@@ -93,14 +93,13 @@ Also out of scope (this skill does not): approve any communication for sending; 
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not approval to send; attorney review required.
-2. **Gates table** — policy/claim context, user's role, claim stage, review purpose, jurisdiction, with status and source.
-3. **Communication issue list** — issue | communication reference | description | category (clarity/consistency/tone/posture/privilege/claim-handling/information-request/escalation) | why it matters | attorney follow-up. Follows the Insurer / Insured Communications Review Table pattern in `skills/insurance/references/output-patterns.md`.
-4. **Source table** — source-cited extraction of the communication content the issue list relies on.
-5. **Suggested attorney-review edits** — direction-only suggestions and draft wording, clearly labeled draft-only.
-6. **Missing facts** — facts a communication relies on but the record does not show.
-7. **Escalation flags** — issues to route to an attorney, supervisor, or coverage counsel.
-8. **Attorney verification checklist** and **assumptions** — no communication is approved for sending.
+1. **Gates table** — policy/claim context, user's role, claim stage, review purpose, jurisdiction, with status and source.
+2. **Communication issue list** — issue | communication reference | description | category (clarity/consistency/tone/posture/privilege/claim-handling/information-request/escalation) | why it matters | attorney follow-up. Follows the Insurer / Insured Communications Review Table pattern in `skills/insurance/references/output-patterns.md`.
+3. **Source table** — source-cited extraction of the communication content the issue list relies on.
+4. **Suggested attorney-review edits** — direction-only suggestions and draft wording, clearly labeled draft-only.
+5. **Missing facts** — facts a communication relies on but the record does not show.
+6. **Escalation flags** — issues to route to an attorney, supervisor, or coverage counsel.
+7. **Attorney verification checklist** and **assumptions** — no communication is approved for sending.
 
 ## Attorney Verification Checklist
 

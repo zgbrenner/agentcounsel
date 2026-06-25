@@ -85,15 +85,14 @@ Also out of scope (this skill does not): conclude that coverage exists or is exc
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no conclusion that coverage exists; attorney review required.
-2. **Gates table** — policy type, user's role, policy period, review purpose, jurisdiction, document set, each with status and source.
-3. **Policy overview** — 3-5 sentences: policy type, named insured, period, and the coverage parts at a glance.
-4. **Key terms table** — term | value as written | source (page/form/endorsement). The key terms, coverage parts, exclusions/conditions, and endorsements tables follow the Insurance Policy Summary Table pattern in `skills/insurance/references/output-patterns.md`.
-5. **Coverage parts table** — coverage part | insuring agreement (plain language) | limits/sublimits | deductible or SIR | granting form | source.
-6. **Exclusions and conditions inventory** — item | type (exclusion/condition/definition) | plain-language summary | source.
-7. **Endorsements table** — endorsement number | effect (adds/deletes/modifies) | form amended | source.
-8. **Missing or ambiguous items** — expected items marked `not found`, and `ambiguous` items.
-9. **Attorney verification checklist** and **assumptions**.
+1. **Gates table** — policy type, user's role, policy period, review purpose, jurisdiction, document set, each with status and source.
+2. **Policy overview** — 3-5 sentences: policy type, named insured, period, and the coverage parts at a glance.
+3. **Key terms table** — term | value as written | source (page/form/endorsement). The key terms, coverage parts, exclusions/conditions, and endorsements tables follow the Insurance Policy Summary Table pattern in `skills/insurance/references/output-patterns.md`.
+4. **Coverage parts table** — coverage part | insuring agreement (plain language) | limits/sublimits | deductible or SIR | granting form | source.
+5. **Exclusions and conditions inventory** — item | type (exclusion/condition/definition) | plain-language summary | source.
+6. **Endorsements table** — endorsement number | effect (adds/deletes/modifies) | form amended | source.
+7. **Missing or ambiguous items** — expected items marked `not found`, and `ambiguous` items.
+8. **Attorney verification checklist** and **assumptions**.
 
 Use placeholders such as `[CONFIRM: policy type]` wherever information is missing. Do not fill gaps with invented content.
 

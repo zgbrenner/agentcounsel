@@ -36,7 +36,7 @@ Capture the facts of a bankruptcy or restructuring matter into a structured,
 source-cited working paper — a matter summary, a fact register, risk themes,
 missing facts, a document request list, and verification questions — so a
 qualified, licensed attorney can evaluate the matter. This skill organizes
-facts and spots issues; it determines no legal rights, deadlines, or outcomes.
+facts and spots issues; it determines no legal rights, deadlines, or outcomes. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -117,16 +117,14 @@ Also out of scope (this skill does not): provide bankruptcy legal advice; determ
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; attorney
-   review required.
-2. **Gates table** — parties, the user's role and posture, case status,
+1. **Gates table** — parties, the user's role and posture, case status,
    chapter/case type, court (with `not provided` where missing).
-3. **Matter summary** — a short, plain-language overview.
-4. **Source-cited fact register** — fact | source | status.
-5. **Risk themes** — issues framed as questions for the attorney.
-6. **Dates as provided** — each marked `[deadline verification required]`.
-7. **Missing information** and **document request list**.
-8. **Attorney verification questions** and **assumptions**.
+2. **Matter summary** — a short, plain-language overview.
+3. **Source-cited fact register** — fact | source | status.
+4. **Risk themes** — issues framed as questions for the attorney.
+5. **Dates as provided** — each marked `[deadline verification required]`.
+6. **Missing information** and **document request list**.
+7. **Attorney verification questions** and **assumptions**.
 
 The fact register and risk themes follow the **Bankruptcy Matter Intake
 Matrix** structure in
