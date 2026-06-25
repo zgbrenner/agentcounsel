@@ -1,6 +1,6 @@
 ---
 name: Comfort and Backup Request Tracker
-description: "Use when assembling the comfort-letter backup request universe for a securities offering — to produce a draft tracker of each factual assertion in the offering document (financial figures, percentages and ratios, share counts, operational metrics, market-position claims, customer/employee counts, regulatory/litigation/IP claims, ESG/cybersecurity/AI claims) keyed to source, requested support, and proposed comfort treatment for attorney and accountant review — without concluding what level of comfort can be provided or approving any disclosure."
+description: "Use when assembling the comfort-letter backup universe for a securities offering to produce a draft tracker keying each offering-document assertion to its source, support, and proposed comfort treatment for attorney and accountant review, without concluding comfort coverage."
 practice_area: securities-capital-markets
 task_type: drafting
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Assertion Sweep Inventory"
+  - "Comfort-Treatment Classification Matrix"
+  - "Bring-Down Architecture Table and Backup-Package Inventory"
+  - "Open issues and attorney/accountant verification questions"
 related_skills:
   - skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md
   - skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - comfort-backup-request-tracker
+  - comfort-letter
+  - offering-document
+  - backup-support
+  - bring-down
 ---
 
 # Comfort and Backup Request Tracker

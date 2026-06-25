@@ -1,6 +1,6 @@
 ---
 name: Pricing Algorithm Risk Triage
-description: "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, optimizer, or pricing-as-a-service deployment — to produce a draft data-flow map, hub-and-spoke risk assessment (vendor-driven coordination), signaling-risk flags, override/audit-posture review, vendor-diligence questions, and jurisdiction-specific framework questions (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance) for attorney review — without concluding concerted practice, hub-and-spoke conspiracy, signaling violation, or approving deployment."
+description: "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, or pricing-as-a-service deployment to organize a draft data-flow map, hub-and-spoke and signaling-risk flags, and framework questions for attorney review, without concluding concerted practice or approving deployment."
 practice_area: antitrust-competition
 task_type: triage
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Data Flow Map"
+  - "Hub-and-Spoke Risk Assessment and Signaling-Risk Flags"
+  - "Override and Audit Posture and Vendor Diligence Questions"
+  - "Attorney verification questions and escalation triggers"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - pricing-algorithm-risk-triage
+  - algorithmic-pricing
+  - hub-and-spoke
+  - signaling
+  - vendor-diligence
 ---
 
 # Pricing Algorithm Risk Triage

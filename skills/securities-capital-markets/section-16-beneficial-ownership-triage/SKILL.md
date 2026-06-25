@@ -1,6 +1,6 @@
 ---
 name: Section 16 and Beneficial Ownership Triage
-description: "Use when triaging Section 16 and beneficial-ownership reporting facts (Forms 3/4/5 universe, Schedule 13D vs. 13G analysis, group-formation indicators, derivative securities, voting/investment power) — to produce a draft reporting-person fact map and threshold-trigger flag list for attorney review — without concluding insider status, beneficial ownership, group formation, or any reporting obligation or deadline."
+description: "Use when triaging Section 16 and beneficial-ownership facts (Forms 3/4/5, Schedule 13D vs. 13G, group-formation indicators, derivatives) into a draft reporting-person fact map and threshold-trigger flags for attorney review, without concluding insider status, beneficial ownership, or any reporting obligation."
 practice_area: securities-capital-markets
 task_type: analysis
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Section 16 Universe Map and Transaction Inventory"
+  - "Beneficial-Ownership Holdings Table with threshold flag"
+  - "Schedule 13D vs. 13G Eligibility Facts and Group-Formation Fact Map"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/insider-trading-policy-review/SKILL.md
   - skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - section-16-beneficial-ownership-triage
+  - section-16
+  - beneficial-ownership
+  - schedule-13d-13g
+  - group-formation
 ---
 
 # Section 16 and Beneficial Ownership Triage

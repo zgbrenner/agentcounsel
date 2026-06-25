@@ -1,6 +1,6 @@
 ---
 name: Information Sharing Clean Team Review
-description: "Use when reviewing a proposed or in-progress exchange of competitively sensitive information between actual or potential competitors (M&A diligence, JV, benchmarking, trade association, supply-chain reasonableness) — to produce a draft information-item matrix, per-item sensitivity flag, clean-team design summary, spillover/carryover flags, control-gap notes, and jurisdiction-specific framework questions for attorney review — without authorizing any exchange or concluding lawfulness."
+description: "Use when reviewing a proposed exchange of competitively sensitive information between actual or potential competitors to organize a draft information-item matrix, per-item sensitivity flags, and clean-team design notes for attorney review, without authorizing any exchange or concluding lawfulness."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Information-Item Matrix"
+  - "Sensitivity Assessment"
+  - "Clean-Team Design Summary and Spillover/Carryover Flags"
+  - "Attorney verification questions and escalation triggers"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - information-sharing-clean-team-review
+  - information-exchange
+  - clean-team
+  - sensitivity-flag
+  - spillover
 ---
 
 # Information Sharing Clean Team Review

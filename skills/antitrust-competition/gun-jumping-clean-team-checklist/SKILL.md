@@ -1,6 +1,6 @@
 ---
 name: Gun Jumping Clean Team Checklist
-description: "Use when assessing pre-closing coordination between signed-but-not-yet-closed merger parties — to produce a draft pre-closing covenant inventory, actual-conduct-vs-covenants deviation log, information-sharing log, clean-team design summary, external-communications inventory, and integration-planning guardrail list for attorney review — without concluding HSR/Article 7 compliance or approving any pre-closing conduct."
+description: "Use when assessing pre-closing coordination between signed-but-not-closed merger parties to organize a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrails for attorney review, without concluding HSR/Article 7 compliance or approving conduct."
 practice_area: antitrust-competition
 task_type: verification
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Pre-Closing Covenant Inventory"
+  - "Actual Conduct vs. Covenants deviation table"
+  - "Information-Sharing Log and Clean-Team Design Summary"
+  - "Integration-Planning Guardrail List and attorney verification questions"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - gun-jumping-clean-team-checklist
+  - gun-jumping
+  - clean-team
+  - pre-closing
+  - merger-integration
 ---
 
 # Gun Jumping Clean Team Checklist

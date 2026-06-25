@@ -1,6 +1,6 @@
 ---
 name: Competitor Collaboration Review
-description: "Use when reviewing a proposed or existing collaboration between actual or potential competitors (JV, R&D pact, joint purchasing, benchmarking, standard-setting, joint bidding) to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity-question table, spillover-effect flags, and jurisdiction-specific safe-harbor questions for attorney review — without applying any safe harbor, deciding per se vs. rule-of-reason, or approving the collaboration."
+description: "Use when reviewing a collaboration between actual or potential competitors (JV, R&D, joint purchasing, standard-setting, joint bidding) to organize a draft hardcore-restraint flag list, information-flow matrix, and ancillarity questions for attorney review, without applying a safe harbor or approving it."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Hardcore-Restraint Flags"
+  - "Information-Flow Matrix"
+  - "Ancillarity Test Pass and Spillover-Effect Flags"
+  - "Safe-harbor questions and attorney verification questions"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - competitor-collaboration-review
+  - horizontal-collaboration
+  - joint-venture
+  - hardcore-restraints
+  - ancillarity
 ---
 
 # Competitor Collaboration Review

@@ -1,6 +1,6 @@
 ---
 name: Antitrust Risk Intake
-description: "Use when intaking facts about proposed or existing conduct with potential competition-law exposure into a structured triage matrix that buckets each conduct item, flags any time-critical track, and routes to the relevant deep-dive antitrust skill — without classifying conduct, defining markets, or assessing legality, reportability, or enforcement likelihood."
+description: "Use when intaking facts about conduct with potential competition-law exposure into a draft triage matrix that buckets each conduct item, flags time-critical tracks, and routes to deep-dive skills for attorney review, without classifying conduct or assessing legality."
 practice_area: antitrust-competition
 task_type: intake
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Conduct Inventory"
+  - "Triage Matrix with recommended deep-dive skill"
+  - "Time-Critical Track and Recommended Next Steps"
+  - "Attorney verification questions and escalation triggers"
 related_skills:
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
   - skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - antitrust-risk-intake
+  - intake
+  - triage
+  - issue-spotting
+  - routing
 ---
 
 # Antitrust Risk Intake

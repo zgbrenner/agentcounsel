@@ -1,6 +1,6 @@
 ---
 name: Insider Trading Policy Review
-description: "Use when reviewing a company's insider-trading policy — to produce a draft gap matrix against current SEC rule architecture for covered persons, MNPI definition, trading windows, blackout periods, pre-clearance, Rule 10b5-1 plan provisions, gifts/pledges/hedging/margin restrictions, restricted/watch lists, training, escalation, enforcement, and recordkeeping for attorney review — without asserting which rule version is current or concluding policy adequacy `[verify current SEC rule version at time of review]`."
+description: "Use when reviewing a company's insider-trading policy to produce a draft gap matrix against the SEC framework (covered persons, MNPI, trading windows, pre-clearance, Rule 10b5-1, restrictions) for attorney review, without asserting the current rule version or concluding adequacy."
 practice_area: securities-capital-markets
 task_type: review
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Policy Structure Inventory"
+  - "Covered-Persons, MNPI, Trading-Window, and Rule 10b5-1 passes"
+  - "Rule-Version-Drift Audit and Drafting-Suggestion List"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md
   - skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - insider-trading-policy-review
+  - insider-trading
+  - rule-10b5-1
+  - policy-gap
+  - mnpi
 ---
 
 # Insider Trading Policy Review

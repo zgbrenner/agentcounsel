@@ -1,6 +1,6 @@
 ---
 name: Private Placement Checklist
-description: "Use when organizing a Reg D 506(b) or 506(c) (or §4(a)(2)) private placement workflow — to produce a draft pre-closing diligence checklist covering accredited-investor verification posture, investor-questionnaire and purchaser-rep status, bad-actor diligence universe, transfer-restriction and legend posture, Form D triggers, and state-by-state notice-filing map for attorney review — without concluding exemption availability or approving any sale."
+description: "Use when organizing a Reg D 506(b)/(c) or Section 4(a)(2) private placement into a draft pre-closing checklist covering investor verification, bad-actor diligence, legends, Form D triggers, and blue-sky filings for attorney review, without concluding exemption availability or approving any sale."
 practice_area: securities-capital-markets
 task_type: drafting
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Exemption-Condition Tracker"
+  - "Investor-Onboarding Tracker and Bad-Actor Diligence Workstream"
+  - "Transfer-Restriction, Form D, and Closing-Mechanics Workstreams"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md
   - skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - private-placement-checklist
+  - private-placement
+  - reg-d
+  - accredited-investor
+  - bad-actor
 ---
 
 # Private Placement Checklist

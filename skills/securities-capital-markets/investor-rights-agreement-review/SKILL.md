@@ -1,6 +1,6 @@
 ---
 name: Investor Rights Agreement Review
-description: "Use when reviewing an investor rights agreement, side letter, or related governance instrument (information / inspection / observer / preemptive / pro-rata / ROFR / co-sale / drag-along / protective provisions / registration rights / transfer restrictions / MFN / confidentiality / termination) — to produce a draft term-by-term risk-and-issue matrix from the client's role (issuer, lead investor, follow-on, founder), with side-letter conflict flags, for attorney review — without concluding enforceability or approving the agreement."
+description: "Use when reviewing an investor rights agreement, side letter, or governance instrument to produce a draft term-by-term risk matrix from the client's role, with side-letter conflict flags, for attorney review, without concluding enforceability or approving the agreement."
 practice_area: securities-capital-markets
 task_type: review
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Agreement Structure Inventory"
+  - "Term-by-Term Risk Matrix"
+  - "Side-Letter Conflict Map and Client-Role-Specific Issue Summary"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/private-placement-checklist/SKILL.md
   - skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - investor-rights-agreement-review
+  - investor-rights
+  - governance-rights
+  - side-letter
+  - registration-rights
 ---
 
 # Investor Rights Agreement Review

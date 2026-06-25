@@ -426,7 +426,7 @@
       "id": "antitrust-competition/antitrust-compliance-policy-review",
       "title": "Antitrust Compliance Policy Review",
       "path": "skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md",
-      "summary": "Use when reviewing a company's antitrust compliance policy and supporting program (training, dawn-raid protocol, document-creation guidance, reporting and discipline) — to produce a draft topic-coverage matrix, jurisdiction-coverage matrix, training/reporting/enforcement assessment, dawn-raid-protocol assessment, audience-fit notes, and drafting-suggestion list for attorney review — without attesting compliance, approving the policy, or representing it meets any jurisdiction's legal requirements.",
+      "summary": "Use when reviewing a company's antitrust compliance policy and program to organize a draft topic-coverage matrix, jurisdiction-coverage matrix, and drafting-suggestion list for attorney review, without attesting compliance, approving the policy, or representing it meets any jurisdiction's requirements.",
       "use_when": [
         "The user requests antitrust compliance policy review support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -438,8 +438,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Topic-Coverage Matrix",
+        "Jurisdiction-Coverage Matrix",
+        "Training/Reporting/Enforcement and Dawn-Raid Protocol assessments",
+        "Drafting-Suggestion List and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -465,14 +467,17 @@
       "pack_tags": [
         "antitrust",
         "antitrust-competition",
-        "antitrust-compliance-policy-review",
         "competition",
+        "compliance-policy",
+        "dawn-raid",
         "high",
-        "review"
+        "policy-gap",
+        "review",
+        "training"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Antitrust Compliance Policy Review",
-      "description": "Use when reviewing a company's antitrust compliance policy and supporting program (training, dawn-raid protocol, document-creation guidance, reporting and discipline) — to produce a draft topic-coverage matrix, jurisdiction-coverage matrix, training/reporting/enforcement assessment, dawn-raid-protocol assessment, audience-fit notes, and drafting-suggestion list for attorney review — without attesting compliance, approving the policy, or representing it meets any jurisdiction's legal requirements.",
+      "description": "Use when reviewing a company's antitrust compliance policy and program to organize a draft topic-coverage matrix, jurisdiction-coverage matrix, and drafting-suggestion list for attorney review, without attesting compliance, approving the policy, or representing it meets any jurisdiction's requirements.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -484,8 +489,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Topic-Coverage Matrix",
+        "Jurisdiction-Coverage Matrix",
+        "Training/Reporting/Enforcement and Dawn-Raid Protocol assessments",
+        "Drafting-Suggestion List and attorney verification questions"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -495,14 +502,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "antitrust-compliance-policy-review"
+        "compliance-policy",
+        "dawn-raid",
+        "training",
+        "policy-gap"
       ]
     },
     {
       "id": "antitrust-competition/antitrust-risk-intake",
       "title": "Antitrust Risk Intake",
       "path": "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
-      "summary": "Use when intaking facts about proposed or existing conduct with potential competition-law exposure into a structured triage matrix that buckets each conduct item, flags any time-critical track, and routes to the relevant deep-dive antitrust skill — without classifying conduct, defining markets, or assessing legality, reportability, or enforcement likelihood.",
+      "summary": "Use when intaking facts about conduct with potential competition-law exposure into a draft triage matrix that buckets each conduct item, flags time-critical tracks, and routes to deep-dive skills for attorney review, without classifying conduct or assessing legality.",
       "use_when": [
         "The user requests antitrust risk intake support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -514,8 +524,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Conduct Inventory",
+        "Triage Matrix with recommended deep-dive skill",
+        "Time-Critical Track and Recommended Next Steps",
+        "Attorney verification questions and escalation triggers"
       ],
       "category": "intake",
       "requires_jurisdiction": true,
@@ -541,14 +553,16 @@
       "pack_tags": [
         "antitrust",
         "antitrust-competition",
-        "antitrust-risk-intake",
         "competition",
         "high",
-        "intake"
+        "intake",
+        "issue-spotting",
+        "routing",
+        "triage"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Antitrust Risk Intake",
-      "description": "Use when intaking facts about proposed or existing conduct with potential competition-law exposure into a structured triage matrix that buckets each conduct item, flags any time-critical track, and routes to the relevant deep-dive antitrust skill — without classifying conduct, defining markets, or assessing legality, reportability, or enforcement likelihood.",
+      "description": "Use when intaking facts about conduct with potential competition-law exposure into a draft triage matrix that buckets each conduct item, flags time-critical tracks, and routes to deep-dive skills for attorney review, without classifying conduct or assessing legality.",
       "practice_area": "antitrust-competition",
       "task_type": "intake",
       "jurisdictions": [],
@@ -560,8 +574,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Conduct Inventory",
+        "Triage Matrix with recommended deep-dive skill",
+        "Time-Critical Track and Recommended Next Steps",
+        "Attorney verification questions and escalation triggers"
       ],
       "related_skills": [
         "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
@@ -571,14 +587,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "antitrust-risk-intake"
+        "intake",
+        "triage",
+        "issue-spotting",
+        "routing"
       ]
     },
     {
       "id": "antitrust-competition/competitor-collaboration-review",
       "title": "Competitor Collaboration Review",
       "path": "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
-      "summary": "Use when reviewing a proposed or existing collaboration between actual or potential competitors (JV, R&D pact, joint purchasing, benchmarking, standard-setting, joint bidding) to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity-question table, spillover-effect flags, and jurisdiction-specific safe-harbor questions for attorney review — without applying any safe harbor, deciding per se vs. rule-of-reason, or approving the collaboration.",
+      "summary": "Use when reviewing a collaboration between actual or potential competitors (JV, R&D, joint purchasing, standard-setting, joint bidding) to organize a draft hardcore-restraint flag list, information-flow matrix, and ancillarity questions for attorney review, without applying a safe harbor or approving it.",
       "use_when": [
         "The user requests competitor collaboration review support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -590,8 +609,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Hardcore-Restraint Flags",
+        "Information-Flow Matrix",
+        "Ancillarity Test Pass and Spillover-Effect Flags",
+        "Safe-harbor questions and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -615,16 +636,19 @@
         "generic-md"
       ],
       "pack_tags": [
+        "ancillarity",
         "antitrust",
         "antitrust-competition",
         "competition",
-        "competitor-collaboration-review",
+        "hardcore-restraints",
         "high",
+        "horizontal-collaboration",
+        "joint-venture",
         "review"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Competitor Collaboration Review",
-      "description": "Use when reviewing a proposed or existing collaboration between actual or potential competitors (JV, R&D pact, joint purchasing, benchmarking, standard-setting, joint bidding) to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity-question table, spillover-effect flags, and jurisdiction-specific safe-harbor questions for attorney review — without applying any safe harbor, deciding per se vs. rule-of-reason, or approving the collaboration.",
+      "description": "Use when reviewing a collaboration between actual or potential competitors (JV, R&D, joint purchasing, standard-setting, joint bidding) to organize a draft hardcore-restraint flag list, information-flow matrix, and ancillarity questions for attorney review, without applying a safe harbor or approving it.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -636,8 +660,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Hardcore-Restraint Flags",
+        "Information-Flow Matrix",
+        "Ancillarity Test Pass and Spillover-Effect Flags",
+        "Safe-harbor questions and attorney verification questions"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -647,14 +673,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "competitor-collaboration-review"
+        "horizontal-collaboration",
+        "joint-venture",
+        "hardcore-restraints",
+        "ancillarity"
       ]
     },
     {
       "id": "antitrust-competition/distribution-restraints-review",
       "title": "Distribution Restraints Review",
       "path": "skills/antitrust-competition/distribution-restraints-review/SKILL.md",
-      "summary": "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales or marketplace bans, dual pricing, selective distribution, tying) to produce a draft restraint inventory with per-jurisdiction character flags (hardcore candidates, online-sales callouts, dual-distribution issues, state-law and sector overlays) for attorney review — without concluding enforceability, VBER applicability, or market power.",
+      "summary": "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales bans, dual pricing) to organize a draft restraint inventory with per-jurisdiction character flags for attorney review, without concluding enforceability or market power.",
       "use_when": [
         "The user requests distribution restraints review support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -666,8 +695,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Restraint Inventory",
+        "Restraint Character Flags by jurisdiction",
+        "Online Sales / Dual Pricing Flags",
+        "Attorney verification questions and escalation triggers"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -694,13 +725,16 @@
         "antitrust",
         "antitrust-competition",
         "competition",
-        "distribution-restraints-review",
+        "distribution",
         "high",
-        "review"
+        "online-sales",
+        "review",
+        "rpm-map",
+        "vertical-restraints"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Distribution Restraints Review",
-      "description": "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales or marketplace bans, dual pricing, selective distribution, tying) to produce a draft restraint inventory with per-jurisdiction character flags (hardcore candidates, online-sales callouts, dual-distribution issues, state-law and sector overlays) for attorney review — without concluding enforceability, VBER applicability, or market power.",
+      "description": "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales bans, dual pricing) to organize a draft restraint inventory with per-jurisdiction character flags for attorney review, without concluding enforceability or market power.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -712,8 +746,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Restraint Inventory",
+        "Restraint Character Flags by jurisdiction",
+        "Online Sales / Dual Pricing Flags",
+        "Attorney verification questions and escalation triggers"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -723,14 +759,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "distribution-restraints-review"
+        "vertical-restraints",
+        "rpm-map",
+        "online-sales",
+        "distribution"
       ]
     },
     {
       "id": "antitrust-competition/exclusivity-mfn-pricing-review",
       "title": "Exclusivity MFN Pricing Review",
       "path": "skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md",
-      "summary": "Use when reviewing exclusivity, MFN/parity, loyalty discount, rebate, or requirements provisions to produce a draft restraint-classification matrix, foreclosure-relevant facts table, narrow-vs-wide MFN map, loyalty/rebate structure analysis, and jurisdiction-specific framework questions (Sherman §1/§2, Article 101/102, UK CA98) for attorney review — without finding dominance, foreclosure, or legality.",
+      "summary": "Use when reviewing exclusivity, MFN/parity, loyalty, rebate, or requirements provisions to organize a draft restraint classification, foreclosure-relevant facts, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality.",
       "use_when": [
         "The user requests exclusivity mfn pricing review support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -742,8 +781,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Restraint Inventory and classification matrix",
+        "Foreclosure-Relevant Facts Table",
+        "MFN/Parity Matrix and Loyalty/Rebate Structure Analysis",
+        "Attorney verification questions and escalation triggers"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -770,13 +811,16 @@
         "antitrust",
         "antitrust-competition",
         "competition",
-        "exclusivity-mfn-pricing-review",
+        "exclusivity",
+        "foreclosure",
         "high",
-        "review"
+        "mfn",
+        "review",
+        "vertical-restraints"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Exclusivity MFN Pricing Review",
-      "description": "Use when reviewing exclusivity, MFN/parity, loyalty discount, rebate, or requirements provisions to produce a draft restraint-classification matrix, foreclosure-relevant facts table, narrow-vs-wide MFN map, loyalty/rebate structure analysis, and jurisdiction-specific framework questions (Sherman §1/§2, Article 101/102, UK CA98) for attorney review — without finding dominance, foreclosure, or legality.",
+      "description": "Use when reviewing exclusivity, MFN/parity, loyalty, rebate, or requirements provisions to organize a draft restraint classification, foreclosure-relevant facts, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -788,8 +832,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Restraint Inventory and classification matrix",
+        "Foreclosure-Relevant Facts Table",
+        "MFN/Parity Matrix and Loyalty/Rebate Structure Analysis",
+        "Attorney verification questions and escalation triggers"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -799,14 +845,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "exclusivity-mfn-pricing-review"
+        "vertical-restraints",
+        "exclusivity",
+        "mfn",
+        "foreclosure"
       ]
     },
     {
       "id": "antitrust-competition/gun-jumping-clean-team-checklist",
       "title": "Gun Jumping Clean Team Checklist",
       "path": "skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md",
-      "summary": "Use when assessing pre-closing coordination between signed-but-not-yet-closed merger parties — to produce a draft pre-closing covenant inventory, actual-conduct-vs-covenants deviation log, information-sharing log, clean-team design summary, external-communications inventory, and integration-planning guardrail list for attorney review — without concluding HSR/Article 7 compliance or approving any pre-closing conduct.",
+      "summary": "Use when assessing pre-closing coordination between signed-but-not-closed merger parties to organize a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrails for attorney review, without concluding HSR/Article 7 compliance or approving conduct.",
       "use_when": [
         "The user requests gun jumping clean team checklist support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -818,8 +867,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Pre-Closing Covenant Inventory",
+        "Actual Conduct vs. Covenants deviation table",
+        "Information-Sharing Log and Clean-Team Design Summary",
+        "Integration-Planning Guardrail List and attorney verification questions"
       ],
       "category": "verification",
       "requires_jurisdiction": true,
@@ -845,14 +896,17 @@
       "pack_tags": [
         "antitrust",
         "antitrust-competition",
+        "clean-team",
         "competition",
-        "gun-jumping-clean-team-checklist",
+        "gun-jumping",
         "high",
+        "merger-integration",
+        "pre-closing",
         "verification"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Gun Jumping Clean Team Checklist",
-      "description": "Use when assessing pre-closing coordination between signed-but-not-yet-closed merger parties — to produce a draft pre-closing covenant inventory, actual-conduct-vs-covenants deviation log, information-sharing log, clean-team design summary, external-communications inventory, and integration-planning guardrail list for attorney review — without concluding HSR/Article 7 compliance or approving any pre-closing conduct.",
+      "description": "Use when assessing pre-closing coordination between signed-but-not-closed merger parties to organize a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrails for attorney review, without concluding HSR/Article 7 compliance or approving conduct.",
       "practice_area": "antitrust-competition",
       "task_type": "verification",
       "jurisdictions": [],
@@ -864,8 +918,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Pre-Closing Covenant Inventory",
+        "Actual Conduct vs. Covenants deviation table",
+        "Information-Sharing Log and Clean-Team Design Summary",
+        "Integration-Planning Guardrail List and attorney verification questions"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -875,14 +931,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "gun-jumping-clean-team-checklist"
+        "gun-jumping",
+        "clean-team",
+        "pre-closing",
+        "merger-integration"
       ]
     },
     {
       "id": "antitrust-competition/information-sharing-clean-team-review",
       "title": "Information Sharing Clean Team Review",
       "path": "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
-      "summary": "Use when reviewing a proposed or in-progress exchange of competitively sensitive information between actual or potential competitors (M&A diligence, JV, benchmarking, trade association, supply-chain reasonableness) — to produce a draft information-item matrix, per-item sensitivity flag, clean-team design summary, spillover/carryover flags, control-gap notes, and jurisdiction-specific framework questions for attorney review — without authorizing any exchange or concluding lawfulness.",
+      "summary": "Use when reviewing a proposed exchange of competitively sensitive information between actual or potential competitors to organize a draft information-item matrix, per-item sensitivity flags, and clean-team design notes for attorney review, without authorizing any exchange or concluding lawfulness.",
       "use_when": [
         "The user requests information sharing clean team review support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -894,8 +953,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Information-Item Matrix",
+        "Sensitivity Assessment",
+        "Clean-Team Design Summary and Spillover/Carryover Flags",
+        "Attorney verification questions and escalation triggers"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -921,14 +982,17 @@
       "pack_tags": [
         "antitrust",
         "antitrust-competition",
+        "clean-team",
         "competition",
         "high",
-        "information-sharing-clean-team-review",
-        "review"
+        "information-exchange",
+        "review",
+        "sensitivity-flag",
+        "spillover"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Information Sharing Clean Team Review",
-      "description": "Use when reviewing a proposed or in-progress exchange of competitively sensitive information between actual or potential competitors (M&A diligence, JV, benchmarking, trade association, supply-chain reasonableness) — to produce a draft information-item matrix, per-item sensitivity flag, clean-team design summary, spillover/carryover flags, control-gap notes, and jurisdiction-specific framework questions for attorney review — without authorizing any exchange or concluding lawfulness.",
+      "description": "Use when reviewing a proposed exchange of competitively sensitive information between actual or potential competitors to organize a draft information-item matrix, per-item sensitivity flags, and clean-team design notes for attorney review, without authorizing any exchange or concluding lawfulness.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -940,8 +1004,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Information-Item Matrix",
+        "Sensitivity Assessment",
+        "Clean-Team Design Summary and Spillover/Carryover Flags",
+        "Attorney verification questions and escalation triggers"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -951,14 +1017,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "information-sharing-clean-team-review"
+        "information-exchange",
+        "clean-team",
+        "sensitivity-flag",
+        "spillover"
       ]
     },
     {
       "id": "antitrust-competition/merger-antitrust-issue-spotter",
       "title": "Merger Antitrust Issue Spotter",
       "path": "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
-      "summary": "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction — to produce a draft horizontal-overlap matrix, vertical-relationship matrix, potential/nascent-competition flags, adjacent-overlap (data/IP/labor/innovation) flags, per-jurisdiction filing-question list, diligence-request list, and pre-closing integration guardrails for attorney review — without defining markets, reaching reportability conclusions, predicting clearance, or evaluating competitive effects.",
+      "summary": "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction to organize draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence lists, and integration guardrails for attorney review, without defining markets or predicting clearance.",
       "use_when": [
         "The user requests merger antitrust issue spotter support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -970,8 +1039,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Horizontal Overlap Matrix and Vertical Relationship Matrix",
+        "Potential/Nascent and Adjacent Overlap Flags",
+        "Filing-Question List and Diligence Request List",
+        "Integration Guardrails and attorney verification questions"
       ],
       "category": "analysis",
       "requires_jurisdiction": true,
@@ -999,12 +1070,15 @@
         "antitrust",
         "antitrust-competition",
         "competition",
+        "filing-questions",
         "high",
-        "merger-antitrust-issue-spotter"
+        "horizontal-overlap",
+        "merger-review",
+        "vertical-foreclosure"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Merger Antitrust Issue Spotter",
-      "description": "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction — to produce a draft horizontal-overlap matrix, vertical-relationship matrix, potential/nascent-competition flags, adjacent-overlap (data/IP/labor/innovation) flags, per-jurisdiction filing-question list, diligence-request list, and pre-closing integration guardrails for attorney review — without defining markets, reaching reportability conclusions, predicting clearance, or evaluating competitive effects.",
+      "description": "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction to organize draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence lists, and integration guardrails for attorney review, without defining markets or predicting clearance.",
       "practice_area": "antitrust-competition",
       "task_type": "analysis",
       "jurisdictions": [],
@@ -1016,8 +1090,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Horizontal Overlap Matrix and Vertical Relationship Matrix",
+        "Potential/Nascent and Adjacent Overlap Flags",
+        "Filing-Question List and Diligence Request List",
+        "Integration Guardrails and attorney verification questions"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -1029,14 +1105,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "merger-antitrust-issue-spotter"
+        "merger-review",
+        "horizontal-overlap",
+        "vertical-foreclosure",
+        "filing-questions"
       ]
     },
     {
       "id": "antitrust-competition/pricing-algorithm-risk-triage",
       "title": "Pricing Algorithm Risk Triage",
       "path": "skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md",
-      "summary": "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, optimizer, or pricing-as-a-service deployment — to produce a draft data-flow map, hub-and-spoke risk assessment (vendor-driven coordination), signaling-risk flags, override/audit-posture review, vendor-diligence questions, and jurisdiction-specific framework questions (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance) for attorney review — without concluding concerted practice, hub-and-spoke conspiracy, signaling violation, or approving deployment.",
+      "summary": "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, or pricing-as-a-service deployment to organize a draft data-flow map, hub-and-spoke and signaling-risk flags, and framework questions for attorney review, without concluding concerted practice or approving deployment.",
       "use_when": [
         "The user requests pricing algorithm risk triage support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -1048,8 +1127,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Data Flow Map",
+        "Hub-and-Spoke Risk Assessment and Signaling-Risk Flags",
+        "Override and Audit Posture and Vendor Diligence Questions",
+        "Attorney verification questions and escalation triggers"
       ],
       "category": "triage",
       "requires_jurisdiction": true,
@@ -1073,16 +1154,19 @@
         "generic-md"
       ],
       "pack_tags": [
+        "algorithmic-pricing",
         "antitrust",
         "antitrust-competition",
         "competition",
         "high",
-        "pricing-algorithm-risk-triage",
-        "triage"
+        "hub-and-spoke",
+        "signaling",
+        "triage",
+        "vendor-diligence"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Pricing Algorithm Risk Triage",
-      "description": "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, optimizer, or pricing-as-a-service deployment — to produce a draft data-flow map, hub-and-spoke risk assessment (vendor-driven coordination), signaling-risk flags, override/audit-posture review, vendor-diligence questions, and jurisdiction-specific framework questions (Sherman §1, Article 101, UK CMA/DMCC algorithm guidance) for attorney review — without concluding concerted practice, hub-and-spoke conspiracy, signaling violation, or approving deployment.",
+      "description": "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, or pricing-as-a-service deployment to organize a draft data-flow map, hub-and-spoke and signaling-risk flags, and framework questions for attorney review, without concluding concerted practice or approving deployment.",
       "practice_area": "antitrust-competition",
       "task_type": "triage",
       "jurisdictions": [],
@@ -1094,8 +1178,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Data Flow Map",
+        "Hub-and-Spoke Risk Assessment and Signaling-Risk Flags",
+        "Override and Audit Posture and Vendor Diligence Questions",
+        "Attorney verification questions and escalation triggers"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -1105,14 +1191,17 @@
       "tags": [
         "antitrust",
         "competition",
-        "pricing-algorithm-risk-triage"
+        "algorithmic-pricing",
+        "hub-and-spoke",
+        "signaling",
+        "vendor-diligence"
       ]
     },
     {
       "id": "antitrust-competition/trade-association-meeting-review",
       "title": "Trade Association Meeting Review",
       "path": "skills/antitrust-competition/trade-association-meeting-review/SKILL.md",
-      "summary": "Use when reviewing a trade-association meeting (agenda, minutes, attendee list, recordings) for antitrust risk — to produce a draft attendee competitive-relationship map, per-agenda-item risk matrix, high-risk discussion excerpts, output-product inventory, standard-setting and boycott flags, and side-meeting/informal-contact inventory for attorney review — without approving attendance, output products, or concluding lawfulness of any discussion.",
+      "summary": "Use when reviewing a trade-association meeting (agenda, minutes, attendees, recordings) for antitrust risk to organize a draft attendee relationship map, per-agenda-item risk matrix, and output-product and boycott flags for attorney review, without approving attendance or concluding lawfulness.",
       "use_when": [
         "The user requests trade association meeting review support.",
         "Antitrust/competition issues need issue spotting and workflow organization.",
@@ -1124,8 +1213,10 @@
         "Review stage and urgency"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Attendee Map",
+        "Agenda-Topic Risk Matrix and High-Risk Discussion Excerpts",
+        "Output-Product Inventory with standard-setting and boycott flags",
+        "Side-meeting inventory and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -1151,14 +1242,17 @@
       "pack_tags": [
         "antitrust",
         "antitrust-competition",
+        "boycott",
         "competition",
         "high",
+        "information-exchange",
         "review",
-        "trade-association-meeting-review"
+        "standard-setting",
+        "trade-association"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Trade Association Meeting Review",
-      "description": "Use when reviewing a trade-association meeting (agenda, minutes, attendee list, recordings) for antitrust risk — to produce a draft attendee competitive-relationship map, per-agenda-item risk matrix, high-risk discussion excerpts, output-product inventory, standard-setting and boycott flags, and side-meeting/informal-contact inventory for attorney review — without approving attendance, output products, or concluding lawfulness of any discussion.",
+      "description": "Use when reviewing a trade-association meeting (agenda, minutes, attendees, recordings) for antitrust risk to organize a draft attendee relationship map, per-agenda-item risk matrix, and output-product and boycott flags for attorney review, without approving attendance or concluding lawfulness.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -1170,8 +1264,10 @@
         "Review stage and urgency"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Attendee Map",
+        "Agenda-Topic Risk Matrix and High-Risk Discussion Excerpts",
+        "Output-Product Inventory with standard-setting and boycott flags",
+        "Side-meeting inventory and attorney verification questions"
       ],
       "related_skills": [
         "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
@@ -1181,7 +1277,10 @@
       "tags": [
         "antitrust",
         "competition",
-        "trade-association-meeting-review"
+        "trade-association",
+        "information-exchange",
+        "standard-setting",
+        "boycott"
       ]
     },
     {
@@ -11061,7 +11160,7 @@
       "id": "securities-capital-markets/capital-markets-closing-checklist",
       "title": "Capital Markets Closing Checklist",
       "path": "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
-      "summary": "Use when organizing the closing universe for a public or private capital-markets transaction (IPO, follow-on, secondary, debt issuance, registered direct, private placement) — to produce a draft closing-workstream tracker covering issuer/underwriter approvals, purchase/underwriting agreement bring-down, legal opinions (validity, exemption, 10b-5 disclosure letter), officer/secretary certificates, comfort letter and bring-down, lock-ups, transfer agent/DTC/legend matters, listing/FINRA items, blue-sky/Form D items, funds flow, and post-closing filings for attorney review — without approving closing or any closing condition.",
+      "summary": "Use when organizing the closing universe for a public or private capital-markets transaction into a draft closing-workstream tracker covering approvals, agreement bring-down, opinions, certificates, comfort, lock-ups, and post-closing filings for attorney review, without approving closing or any closing condition.",
       "use_when": [
         "A capital-markets transaction is in execution and the deal team needs the closing workstream organized.",
         "An issuer is preparing for an IPO, follow-on, registered direct, ATM, block trade, debt issuance, or private placement and the closing-condition universe needs to be tracked.",
@@ -11075,8 +11174,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Transaction Overview Snapshot and Issuer-Side Approvals Workstream",
+        "Purchase/Underwriting Agreement Workstream and Legal-Opinion Universe",
+        "Comfort, Certificates, Lock-Ups, and Post-Closing Workstreams",
+        "Open issues and attorney verification questions"
       ],
       "category": "drafting",
       "requires_jurisdiction": true,
@@ -11102,15 +11203,18 @@
       ],
       "pack_tags": [
         "capital-markets",
-        "capital-markets-closing-checklist",
+        "closing-checklist",
         "drafting",
         "high",
+        "legal-opinions",
+        "lock-ups",
         "securities",
-        "securities-capital-markets"
+        "securities-capital-markets",
+        "underwriting"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Capital Markets Closing Checklist",
-      "description": "Use when organizing the closing universe for a public or private capital-markets transaction (IPO, follow-on, secondary, debt issuance, registered direct, private placement) — to produce a draft closing-workstream tracker covering issuer/underwriter approvals, purchase/underwriting agreement bring-down, legal opinions (validity, exemption, 10b-5 disclosure letter), officer/secretary certificates, comfort letter and bring-down, lock-ups, transfer agent/DTC/legend matters, listing/FINRA items, blue-sky/Form D items, funds flow, and post-closing filings for attorney review — without approving closing or any closing condition.",
+      "description": "Use when organizing the closing universe for a public or private capital-markets transaction into a draft closing-workstream tracker covering approvals, agreement bring-down, opinions, certificates, comfort, lock-ups, and post-closing filings for attorney review, without approving closing or any closing condition.",
       "practice_area": "securities-capital-markets",
       "task_type": "drafting",
       "jurisdictions": [],
@@ -11124,8 +11228,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Transaction Overview Snapshot and Issuer-Side Approvals Workstream",
+        "Purchase/Underwriting Agreement Workstream and Legal-Opinion Universe",
+        "Comfort, Certificates, Lock-Ups, and Post-Closing Workstreams",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
@@ -11135,14 +11241,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "capital-markets-closing-checklist"
+        "closing-checklist",
+        "underwriting",
+        "legal-opinions",
+        "lock-ups"
       ]
     },
     {
       "id": "securities-capital-markets/comfort-backup-request-tracker",
       "title": "Comfort and Backup Request Tracker",
       "path": "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
-      "summary": "Use when assembling the comfort-letter backup request universe for a securities offering — to produce a draft tracker of each factual assertion in the offering document (financial figures, percentages and ratios, share counts, operational metrics, market-position claims, customer/employee counts, regulatory/litigation/IP claims, ESG/cybersecurity/AI claims) keyed to source, requested support, and proposed comfort treatment for attorney and accountant review — without concluding what level of comfort can be provided or approving any disclosure.",
+      "summary": "Use when assembling the comfort-letter backup universe for a securities offering to produce a draft tracker keying each offering-document assertion to its source, support, and proposed comfort treatment for attorney and accountant review, without concluding comfort coverage.",
       "use_when": [
         "A securities offering is being prepared and the deal team needs the comfort-backup universe organized for the accountants and counsel.",
         "An offering document is in late-stage draft and the comfort-letter scope needs to be agreed.",
@@ -11156,8 +11265,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Assertion Sweep Inventory",
+        "Comfort-Treatment Classification Matrix",
+        "Bring-Down Architecture Table and Backup-Package Inventory",
+        "Open issues and attorney/accountant verification questions"
       ],
       "category": "drafting",
       "requires_jurisdiction": true,
@@ -11182,16 +11293,19 @@
         "generic-md"
       ],
       "pack_tags": [
+        "backup-support",
+        "bring-down",
         "capital-markets",
-        "comfort-backup-request-tracker",
+        "comfort-letter",
         "drafting",
         "high",
+        "offering-document",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Comfort and Backup Request Tracker",
-      "description": "Use when assembling the comfort-letter backup request universe for a securities offering — to produce a draft tracker of each factual assertion in the offering document (financial figures, percentages and ratios, share counts, operational metrics, market-position claims, customer/employee counts, regulatory/litigation/IP claims, ESG/cybersecurity/AI claims) keyed to source, requested support, and proposed comfort treatment for attorney and accountant review — without concluding what level of comfort can be provided or approving any disclosure.",
+      "description": "Use when assembling the comfort-letter backup universe for a securities offering to produce a draft tracker keying each offering-document assertion to its source, support, and proposed comfort treatment for attorney and accountant review, without concluding comfort coverage.",
       "practice_area": "securities-capital-markets",
       "task_type": "drafting",
       "jurisdictions": [],
@@ -11205,8 +11319,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Assertion Sweep Inventory",
+        "Comfort-Treatment Classification Matrix",
+        "Bring-Down Architecture Table and Backup-Package Inventory",
+        "Open issues and attorney/accountant verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
@@ -11216,14 +11332,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "comfort-backup-request-tracker"
+        "comfort-letter",
+        "offering-document",
+        "backup-support",
+        "bring-down"
       ]
     },
     {
       "id": "securities-capital-markets/form-d-blue-sky-tracker",
       "title": "Form D and Blue Sky Tracker",
       "path": "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
-      "summary": "Use when, after a Reg D triggering fact (typically first sale in a 506(b) or 506(c) offering), organizing the Form D and state notice-filing universe — to produce a draft state-by-state tracker capturing each state of sale, the user-supplied notice fee, consent-to-service-of-process status, EDGAR/coordinated-review/EFD posture, and amendment triggers for attorney review — without computing any filing deadline or asserting filing completeness.",
+      "summary": "Use when a Reg D triggering fact requires organizing the Form D and state notice-filing universe into a draft state-by-state tracker capturing each state of sale, fees, consent status, and amendment triggers for attorney review, without computing any filing deadline.",
       "use_when": [
         "A Reg D 506(b) or 506(c) offering has a first sale, an additional sale, or is closing, and the Form D / blue-sky workstream needs to be tracked.",
         "An issuer with an ongoing Reg D offering has a potential amendment trigger and the trigger needs to be inventoried.",
@@ -11237,8 +11356,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Federal Triggering-Fact Inventory and Form D Content Field Matrix",
+        "State-of-Sale Matrix with variation flags",
+        "Amendment-Trigger Inventory",
+        "Open issues and attorney verification questions"
       ],
       "category": "drafting",
       "requires_jurisdiction": true,
@@ -11263,16 +11384,19 @@
         "generic-md"
       ],
       "pack_tags": [
+        "blue-sky",
         "capital-markets",
         "drafting",
-        "form-d-blue-sky-tracker",
+        "form-d",
         "high",
+        "notice-filing",
+        "reg-d",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Form D and Blue Sky Tracker",
-      "description": "Use when, after a Reg D triggering fact (typically first sale in a 506(b) or 506(c) offering), organizing the Form D and state notice-filing universe — to produce a draft state-by-state tracker capturing each state of sale, the user-supplied notice fee, consent-to-service-of-process status, EDGAR/coordinated-review/EFD posture, and amendment triggers for attorney review — without computing any filing deadline or asserting filing completeness.",
+      "description": "Use when a Reg D triggering fact requires organizing the Form D and state notice-filing universe into a draft state-by-state tracker capturing each state of sale, fees, consent status, and amendment triggers for attorney review, without computing any filing deadline.",
       "practice_area": "securities-capital-markets",
       "task_type": "drafting",
       "jurisdictions": [],
@@ -11286,8 +11410,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Federal Triggering-Fact Inventory and Form D Content Field Matrix",
+        "State-of-Sale Matrix with variation flags",
+        "Amendment-Trigger Inventory",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
@@ -11297,14 +11423,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "form-d-blue-sky-tracker"
+        "form-d",
+        "blue-sky",
+        "reg-d",
+        "notice-filing"
       ]
     },
     {
       "id": "securities-capital-markets/insider-trading-policy-review",
       "title": "Insider Trading Policy Review",
       "path": "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
-      "summary": "Use when reviewing a company's insider-trading policy — to produce a draft gap matrix against current SEC rule architecture for covered persons, MNPI definition, trading windows, blackout periods, pre-clearance, Rule 10b5-1 plan provisions, gifts/pledges/hedging/margin restrictions, restricted/watch lists, training, escalation, enforcement, and recordkeeping for attorney review — without asserting which rule version is current or concluding policy adequacy `[verify current SEC rule version at time of review]`.",
+      "summary": "Use when reviewing a company's insider-trading policy to produce a draft gap matrix against the SEC framework (covered persons, MNPI, trading windows, pre-clearance, Rule 10b5-1, restrictions) for attorney review, without asserting the current rule version or concluding adequacy.",
       "use_when": [
         "A company's insider-trading policy is being reviewed for periodic refresh, an incident response, or in connection with a transaction.",
         "A new public-company candidate is preparing its first insider-trading policy and counsel needs the framework elements organized.",
@@ -11318,8 +11447,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Policy Structure Inventory",
+        "Covered-Persons, MNPI, Trading-Window, and Rule 10b5-1 passes",
+        "Rule-Version-Drift Audit and Drafting-Suggestion List",
+        "Open issues and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -11345,14 +11476,17 @@
       "pack_tags": [
         "capital-markets",
         "high",
-        "insider-trading-policy-review",
+        "insider-trading",
+        "mnpi",
+        "policy-gap",
         "review",
+        "rule-10b5-1",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Insider Trading Policy Review",
-      "description": "Use when reviewing a company's insider-trading policy — to produce a draft gap matrix against current SEC rule architecture for covered persons, MNPI definition, trading windows, blackout periods, pre-clearance, Rule 10b5-1 plan provisions, gifts/pledges/hedging/margin restrictions, restricted/watch lists, training, escalation, enforcement, and recordkeeping for attorney review — without asserting which rule version is current or concluding policy adequacy `[verify current SEC rule version at time of review]`.",
+      "description": "Use when reviewing a company's insider-trading policy to produce a draft gap matrix against the SEC framework (covered persons, MNPI, trading windows, pre-clearance, Rule 10b5-1, restrictions) for attorney review, without asserting the current rule version or concluding adequacy.",
       "practice_area": "securities-capital-markets",
       "task_type": "review",
       "jurisdictions": [],
@@ -11366,8 +11500,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Policy Structure Inventory",
+        "Covered-Persons, MNPI, Trading-Window, and Rule 10b5-1 passes",
+        "Rule-Version-Drift Audit and Drafting-Suggestion List",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
@@ -11377,14 +11513,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "insider-trading-policy-review"
+        "insider-trading",
+        "rule-10b5-1",
+        "policy-gap",
+        "mnpi"
       ]
     },
     {
       "id": "securities-capital-markets/investor-rights-agreement-review",
       "title": "Investor Rights Agreement Review",
       "path": "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md",
-      "summary": "Use when reviewing an investor rights agreement, side letter, or related governance instrument (information / inspection / observer / preemptive / pro-rata / ROFR / co-sale / drag-along / protective provisions / registration rights / transfer restrictions / MFN / confidentiality / termination) — to produce a draft term-by-term risk-and-issue matrix from the client's role (issuer, lead investor, follow-on, founder), with side-letter conflict flags, for attorney review — without concluding enforceability or approving the agreement.",
+      "summary": "Use when reviewing an investor rights agreement, side letter, or governance instrument to produce a draft term-by-term risk matrix from the client's role, with side-letter conflict flags, for attorney review, without concluding enforceability or approving the agreement.",
       "use_when": [
         "A new IRA is in draft as part of a financing round and the deal team needs term-by-term issues surfaced from the client's role.",
         "A follow-on financing is amending an existing IRA and the user needs the amendment surfaced against the prior version.",
@@ -11399,8 +11538,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Agreement Structure Inventory",
+        "Term-by-Term Risk Matrix",
+        "Side-Letter Conflict Map and Client-Role-Specific Issue Summary",
+        "Open issues and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -11425,15 +11566,18 @@
       ],
       "pack_tags": [
         "capital-markets",
+        "governance-rights",
         "high",
-        "investor-rights-agreement-review",
+        "investor-rights",
+        "registration-rights",
         "review",
         "securities",
-        "securities-capital-markets"
+        "securities-capital-markets",
+        "side-letter"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Investor Rights Agreement Review",
-      "description": "Use when reviewing an investor rights agreement, side letter, or related governance instrument (information / inspection / observer / preemptive / pro-rata / ROFR / co-sale / drag-along / protective provisions / registration rights / transfer restrictions / MFN / confidentiality / termination) — to produce a draft term-by-term risk-and-issue matrix from the client's role (issuer, lead investor, follow-on, founder), with side-letter conflict flags, for attorney review — without concluding enforceability or approving the agreement.",
+      "description": "Use when reviewing an investor rights agreement, side letter, or governance instrument to produce a draft term-by-term risk matrix from the client's role, with side-letter conflict flags, for attorney review, without concluding enforceability or approving the agreement.",
       "practice_area": "securities-capital-markets",
       "task_type": "review",
       "jurisdictions": [],
@@ -11447,8 +11591,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Agreement Structure Inventory",
+        "Term-by-Term Risk Matrix",
+        "Side-Letter Conflict Map and Client-Role-Specific Issue Summary",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
@@ -11458,14 +11604,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "investor-rights-agreement-review"
+        "investor-rights",
+        "governance-rights",
+        "side-letter",
+        "registration-rights"
       ]
     },
     {
       "id": "securities-capital-markets/offering-document-disclosure-review",
       "title": "Offering Document Disclosure Review",
       "path": "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
-      "summary": "Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness — to produce a draft section-by-section disclosure-gap matrix covering business description, risk factors, use of proceeds, MD&A consistency, related-party transactions, material developments not yet disclosed, forward-looking-statement framing, and selling-stockholder posture for attorney review — without concluding adequacy of disclosure or approving the filing.",
+      "summary": "Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness to produce a draft section-by-section disclosure-gap matrix with consistency flags for attorney review, without concluding adequacy of disclosure or approving the filing.",
       "use_when": [
         "An offering document is in draft and the deal team needs a structured disclosure-gap pass before counsel deep-dives.",
         "A prior offering document is being updated for a new offering, and the user needs section-by-section \"what changed\" / \"what's missing\" surfaced.",
@@ -11479,8 +11628,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Section Inventory and Risk-Factor Pass Summary",
+        "Material-Developments-Not-Yet-Disclosed Matrix",
+        "MD&A Consistency Pass and Cross-Filing Consistency Flags",
+        "Open issues and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -11505,15 +11656,18 @@
       ],
       "pack_tags": [
         "capital-markets",
+        "disclosure-gap",
+        "disclosure-review",
         "high",
-        "offering-document-disclosure-review",
+        "mdna-consistency",
+        "offering-document",
         "review",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Offering Document Disclosure Review",
-      "description": "Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness — to produce a draft section-by-section disclosure-gap matrix covering business description, risk factors, use of proceeds, MD&A consistency, related-party transactions, material developments not yet disclosed, forward-looking-statement framing, and selling-stockholder posture for attorney review — without concluding adequacy of disclosure or approving the filing.",
+      "description": "Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness to produce a draft section-by-section disclosure-gap matrix with consistency flags for attorney review, without concluding adequacy of disclosure or approving the filing.",
       "practice_area": "securities-capital-markets",
       "task_type": "review",
       "jurisdictions": [],
@@ -11527,8 +11681,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Section Inventory and Risk-Factor Pass Summary",
+        "Material-Developments-Not-Yet-Disclosed Matrix",
+        "MD&A Consistency Pass and Cross-Filing Consistency Flags",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/risk-factor-review/SKILL.md",
@@ -11538,14 +11694,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "offering-document-disclosure-review"
+        "offering-document",
+        "disclosure-review",
+        "mdna-consistency",
+        "disclosure-gap"
       ]
     },
     {
       "id": "securities-capital-markets/private-placement-checklist",
       "title": "Private Placement Checklist",
       "path": "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
-      "summary": "Use when organizing a Reg D 506(b) or 506(c) (or §4(a)(2)) private placement workflow — to produce a draft pre-closing diligence checklist covering accredited-investor verification posture, investor-questionnaire and purchaser-rep status, bad-actor diligence universe, transfer-restriction and legend posture, Form D triggers, and state-by-state notice-filing map for attorney review — without concluding exemption availability or approving any sale.",
+      "summary": "Use when organizing a Reg D 506(b)/(c) or Section 4(a)(2) private placement into a draft pre-closing checklist covering investor verification, bad-actor diligence, legends, Form D triggers, and blue-sky filings for attorney review, without concluding exemption availability or approving any sale.",
       "use_when": [
         "A private placement is contemplated or in progress and the deal team needs the pre-closing workstream organized.",
         "Counsel has selected a candidate exemption path (typically 506(b) or 506(c)) and the diligence and documentation universe needs to be tracked.",
@@ -11559,8 +11718,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Exemption-Condition Tracker",
+        "Investor-Onboarding Tracker and Bad-Actor Diligence Workstream",
+        "Transfer-Restriction, Form D, and Closing-Mechanics Workstreams",
+        "Open issues and attorney verification questions"
       ],
       "category": "drafting",
       "requires_jurisdiction": true,
@@ -11585,16 +11746,19 @@
         "generic-md"
       ],
       "pack_tags": [
+        "accredited-investor",
+        "bad-actor",
         "capital-markets",
         "drafting",
         "high",
-        "private-placement-checklist",
+        "private-placement",
+        "reg-d",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Private Placement Checklist",
-      "description": "Use when organizing a Reg D 506(b) or 506(c) (or §4(a)(2)) private placement workflow — to produce a draft pre-closing diligence checklist covering accredited-investor verification posture, investor-questionnaire and purchaser-rep status, bad-actor diligence universe, transfer-restriction and legend posture, Form D triggers, and state-by-state notice-filing map for attorney review — without concluding exemption availability or approving any sale.",
+      "description": "Use when organizing a Reg D 506(b)/(c) or Section 4(a)(2) private placement into a draft pre-closing checklist covering investor verification, bad-actor diligence, legends, Form D triggers, and blue-sky filings for attorney review, without concluding exemption availability or approving any sale.",
       "practice_area": "securities-capital-markets",
       "task_type": "drafting",
       "jurisdictions": [],
@@ -11608,8 +11772,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Exemption-Condition Tracker",
+        "Investor-Onboarding Tracker and Bad-Actor Diligence Workstream",
+        "Transfer-Restriction, Form D, and Closing-Mechanics Workstreams",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
@@ -11619,14 +11785,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "private-placement-checklist"
+        "private-placement",
+        "reg-d",
+        "accredited-investor",
+        "bad-actor"
       ]
     },
     {
       "id": "securities-capital-markets/public-company-reporting-calendar-intake",
       "title": "Public Company Reporting Calendar Intake",
       "path": "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
-      "summary": "Use when intaking a public company's reporting cadence (filer status, fiscal year end, exchange/listing, recurring forms, committee/board cadence, earnings-release process, proxy/annual-meeting timing, 8-K trigger inventory, Section 16 workflow, insider-trading windows, 10b5-1 process, beneficial-ownership monitoring) — to produce a draft calendar-fact map for attorney review — without computing any filing deadline or asserting compliance with any reporting requirement.",
+      "summary": "Use when intaking a public company's reporting cadence (filer status, fiscal year, recurring forms, governance, earnings, 8-K triggers, Section 16, 10b5-1) into a draft calendar-fact map for attorney review, without computing any filing deadline or asserting compliance.",
       "use_when": [
         "A new general counsel, compliance officer, or outside-counsel team is taking on a public-company reporting calendar and needs the cadence facts organized.",
         "An issuer is changing fiscal year, exchange listing, or filer status and needs a fresh intake.",
@@ -11640,8 +11809,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Filer-Profile Snapshot and Recurring-Form Inventory",
+        "8-K Trigger Inventory and Governance Cadence",
+        "Insider-Trading Window, 10b5-1, and Section 16 Workflow notes",
+        "Open issues and attorney verification questions"
       ],
       "category": "intake",
       "requires_jurisdiction": true,
@@ -11665,16 +11836,18 @@
         "generic-md"
       ],
       "pack_tags": [
+        "8-k-triggers",
         "capital-markets",
+        "filer-status",
         "high",
         "intake",
-        "public-company-reporting-calendar-intake",
+        "reporting-calendar",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Public Company Reporting Calendar Intake",
-      "description": "Use when intaking a public company's reporting cadence (filer status, fiscal year end, exchange/listing, recurring forms, committee/board cadence, earnings-release process, proxy/annual-meeting timing, 8-K trigger inventory, Section 16 workflow, insider-trading windows, 10b5-1 process, beneficial-ownership monitoring) — to produce a draft calendar-fact map for attorney review — without computing any filing deadline or asserting compliance with any reporting requirement.",
+      "description": "Use when intaking a public company's reporting cadence (filer status, fiscal year, recurring forms, governance, earnings, 8-K triggers, Section 16, 10b5-1) into a draft calendar-fact map for attorney review, without computing any filing deadline or asserting compliance.",
       "practice_area": "securities-capital-markets",
       "task_type": "intake",
       "jurisdictions": [],
@@ -11688,8 +11861,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Filer-Profile Snapshot and Recurring-Form Inventory",
+        "8-K Trigger Inventory and Governance Cadence",
+        "Insider-Trading Window, 10b5-1, and Section 16 Workflow notes",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
@@ -11699,14 +11874,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "public-company-reporting-calendar-intake"
+        "reporting-calendar",
+        "intake",
+        "8-k-triggers",
+        "filer-status"
       ]
     },
     {
       "id": "securities-capital-markets/risk-factor-review",
       "title": "Risk Factor Review",
       "path": "skills/securities-capital-markets/risk-factor-review/SKILL.md",
-      "summary": "Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM — to produce a draft specificity-vs-boilerplate matrix, MD&A and other-filing consistency notes, duplication and known-trend flags, and category-coverage gaps (cybersecurity / AI / privacy / supply chain / customer concentration / regulatory / litigation / liquidity) for attorney review — without concluding adequacy of risk-factor disclosure.",
+      "summary": "Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM to produce a draft specificity-vs-boilerplate matrix, consistency notes, and category-coverage gaps for attorney review, without concluding adequacy of disclosure.",
       "use_when": [
         "An S-1, 10-K, 10-Q, S-4, proxy, prospectus supplement, PPM, or OM is being prepared and the risk-factor section needs a structured pass.",
         "A prior risk-factor section is being updated for a new period and the user needs \"what changed, what's stale\" surfaced.",
@@ -11720,8 +11898,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Risk-Factor Inventory",
+        "Specificity-vs-Boilerplate Matrix",
+        "Known-Trend Integration Matrix and Category-Coverage Gap Matrix",
+        "Open issues and attorney verification questions"
       ],
       "category": "review",
       "requires_jurisdiction": true,
@@ -11745,16 +11925,19 @@
         "generic-md"
       ],
       "pack_tags": [
+        "boilerplate",
         "capital-markets",
+        "category-coverage",
+        "disclosure-review",
         "high",
         "review",
-        "risk-factor-review",
+        "risk-factors",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Risk Factor Review",
-      "description": "Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM — to produce a draft specificity-vs-boilerplate matrix, MD&A and other-filing consistency notes, duplication and known-trend flags, and category-coverage gaps (cybersecurity / AI / privacy / supply chain / customer concentration / regulatory / litigation / liquidity) for attorney review — without concluding adequacy of risk-factor disclosure.",
+      "description": "Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM to produce a draft specificity-vs-boilerplate matrix, consistency notes, and category-coverage gaps for attorney review, without concluding adequacy of disclosure.",
       "practice_area": "securities-capital-markets",
       "task_type": "review",
       "jurisdictions": [],
@@ -11768,8 +11951,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Risk-Factor Inventory",
+        "Specificity-vs-Boilerplate Matrix",
+        "Known-Trend Integration Matrix and Category-Coverage Gap Matrix",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
@@ -11779,14 +11964,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "risk-factor-review"
+        "risk-factors",
+        "disclosure-review",
+        "boilerplate",
+        "category-coverage"
       ]
     },
     {
       "id": "securities-capital-markets/sec-filing-consistency-check",
       "title": "SEC Filing Consistency Check",
       "path": "skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md",
-      "summary": "Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, prospectus supplement, Form D) for cross-filing consistency — to produce a draft cross-reference matrix covering business descriptions, risk factors, MD&A narrative, financial-statement figures cited outside the financials, share counts, executive/director information, related-party disclosures, material-contract references, forward-looking-statement framing, and defined-term usage for attorney review — without concluding adequacy or correctness of any filing.",
+      "summary": "Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, Form D) for cross-filing consistency to produce a draft cross-reference matrix flagging numerical, narrative, and defined-term discrepancies for attorney review, without concluding adequacy or correctness.",
       "use_when": [
         "A new filing is being prepared and the deal team needs a structured consistency pass against recent periodic filings.",
         "A restatement, amendment, or correction is being considered and the user needs to inventory affected cross-references.",
@@ -11800,8 +11988,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Cross-Filing Item Map",
+        "Numerical Consistency Pass and Narrative Consistency Pass",
+        "Defined-Term Audit and Discrepancy-Classification Summary",
+        "Open issues and attorney verification questions"
       ],
       "category": "analysis",
       "requires_jurisdiction": true,
@@ -11827,14 +12017,17 @@
       "pack_tags": [
         "analysis",
         "capital-markets",
+        "cross-reference",
+        "defined-terms",
+        "filing-consistency",
         "high",
-        "sec-filing-consistency-check",
+        "numerical-discrepancy",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "SEC Filing Consistency Check",
-      "description": "Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, prospectus supplement, Form D) for cross-filing consistency — to produce a draft cross-reference matrix covering business descriptions, risk factors, MD&A narrative, financial-statement figures cited outside the financials, share counts, executive/director information, related-party disclosures, material-contract references, forward-looking-statement framing, and defined-term usage for attorney review — without concluding adequacy or correctness of any filing.",
+      "description": "Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, Form D) for cross-filing consistency to produce a draft cross-reference matrix flagging numerical, narrative, and defined-term discrepancies for attorney review, without concluding adequacy or correctness.",
       "practice_area": "securities-capital-markets",
       "task_type": "analysis",
       "jurisdictions": [],
@@ -11848,8 +12041,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Cross-Filing Item Map",
+        "Numerical Consistency Pass and Narrative Consistency Pass",
+        "Defined-Term Audit and Discrepancy-Classification Summary",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
@@ -11859,14 +12054,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "sec-filing-consistency-check"
+        "filing-consistency",
+        "cross-reference",
+        "numerical-discrepancy",
+        "defined-terms"
       ]
     },
     {
       "id": "securities-capital-markets/section-16-beneficial-ownership-triage",
       "title": "Section 16 and Beneficial Ownership Triage",
       "path": "skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md",
-      "summary": "Use when triaging Section 16 and beneficial-ownership reporting facts (Forms 3/4/5 universe, Schedule 13D vs. 13G analysis, group-formation indicators, derivative securities, voting/investment power) — to produce a draft reporting-person fact map and threshold-trigger flag list for attorney review — without concluding insider status, beneficial ownership, group formation, or any reporting obligation or deadline.",
+      "summary": "Use when triaging Section 16 and beneficial-ownership facts (Forms 3/4/5, Schedule 13D vs. 13G, group-formation indicators, derivatives) into a draft reporting-person fact map and threshold-trigger flags for attorney review, without concluding insider status, beneficial ownership, or any reporting obligation.",
       "use_when": [
         "A potential reporting person (insider candidate, 5%+ beneficial owner, group candidate) needs the underlying facts organized for attorney analysis.",
         "A transaction triggers a question about new Section 16 designation, a new 13D/13G filing, or a group-formation analysis.",
@@ -11880,8 +12078,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Section 16 Universe Map and Transaction Inventory",
+        "Beneficial-Ownership Holdings Table with threshold flag",
+        "Schedule 13D vs. 13G Eligibility Facts and Group-Formation Fact Map",
+        "Open issues and attorney verification questions"
       ],
       "category": "analysis",
       "requires_jurisdiction": true,
@@ -11906,15 +12106,18 @@
       ],
       "pack_tags": [
         "analysis",
+        "beneficial-ownership",
         "capital-markets",
+        "group-formation",
         "high",
-        "section-16-beneficial-ownership-triage",
+        "schedule-13d-13g",
+        "section-16",
         "securities",
         "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Section 16 and Beneficial Ownership Triage",
-      "description": "Use when triaging Section 16 and beneficial-ownership reporting facts (Forms 3/4/5 universe, Schedule 13D vs. 13G analysis, group-formation indicators, derivative securities, voting/investment power) — to produce a draft reporting-person fact map and threshold-trigger flag list for attorney review — without concluding insider status, beneficial ownership, group formation, or any reporting obligation or deadline.",
+      "description": "Use when triaging Section 16 and beneficial-ownership facts (Forms 3/4/5, Schedule 13D vs. 13G, group-formation indicators, derivatives) into a draft reporting-person fact map and threshold-trigger flags for attorney review, without concluding insider status, beneficial ownership, or any reporting obligation.",
       "practice_area": "securities-capital-markets",
       "task_type": "analysis",
       "jurisdictions": [],
@@ -11928,8 +12131,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Section 16 Universe Map and Transaction Inventory",
+        "Beneficial-Ownership Holdings Table with threshold flag",
+        "Schedule 13D vs. 13G Eligibility Facts and Group-Formation Fact Map",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
@@ -11939,14 +12144,17 @@
       "tags": [
         "securities",
         "capital-markets",
-        "section-16-beneficial-ownership-triage"
+        "section-16",
+        "beneficial-ownership",
+        "schedule-13d-13g",
+        "group-formation"
       ]
     },
     {
       "id": "securities-capital-markets/securities-exemption-issue-spotter",
       "title": "Securities Exemption Issue Spotter",
       "path": "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
-      "summary": "Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, §4(a)(2)) for a contemplated private offering — to produce a draft decision-tree-driven issue map with the facts needed to evaluate each candidate path (general-solicitation posture, accredited-investor mix, integration lookback, bad-actor universe, state-by-state blue-sky map) for attorney review — without concluding which exemption applies or that any exemption is available.",
+      "summary": "Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, Section 4(a)(2)) for a contemplated private offering into a draft decision-tree issue map for attorney review, without concluding which exemption is available.",
       "use_when": [
         "The user is contemplating or in-progress on a private offering and needs candidate exemption paths surfaced.",
         "The user has heard \"we'll do a Reg D offering\" and counsel needs the underlying facts organized to confirm whether 506(b) or 506(c) is the right path — or whether another path is in play.",
@@ -11961,8 +12169,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "expected_outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Offering Facts Inventory",
+        "Candidate-Path Matrix",
+        "Integration-Analysis Facts, Bad-Actor Universe, and State Blue-Sky Map",
+        "Open issues and attorney verification questions"
       ],
       "category": "analysis",
       "requires_jurisdiction": true,
@@ -11988,14 +12198,17 @@
       "pack_tags": [
         "analysis",
         "capital-markets",
+        "exemption",
+        "general-solicitation",
         "high",
+        "integration",
+        "issue-spotting",
         "securities",
-        "securities-capital-markets",
-        "securities-exemption-issue-spotter"
+        "securities-capital-markets"
       ],
       "eval_status": "manual-eval-ready",
       "name": "Securities Exemption Issue Spotter",
-      "description": "Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, §4(a)(2)) for a contemplated private offering — to produce a draft decision-tree-driven issue map with the facts needed to evaluate each candidate path (general-solicitation posture, accredited-investor mix, integration lookback, bad-actor universe, state-by-state blue-sky map) for attorney review — without concluding which exemption applies or that any exemption is available.",
+      "description": "Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, Section 4(a)(2)) for a contemplated private offering into a draft decision-tree issue map for attorney review, without concluding which exemption is available.",
       "practice_area": "securities-capital-markets",
       "task_type": "analysis",
       "jurisdictions": [],
@@ -12009,8 +12222,10 @@
         "Full document set or source excerpts, where relevant"
       ],
       "outputs": [
-        "Structured, source-cited draft deliverable",
-        "Missing-information and attorney-verification list"
+        "Offering Facts Inventory",
+        "Candidate-Path Matrix",
+        "Integration-Analysis Facts, Bad-Actor Universe, and State Blue-Sky Map",
+        "Open issues and attorney verification questions"
       ],
       "related_skills": [
         "skills/securities-capital-markets/private-placement-checklist/SKILL.md",
@@ -12020,7 +12235,10 @@
       "tags": [
         "securities",
         "capital-markets",
-        "securities-exemption-issue-spotter"
+        "exemption",
+        "issue-spotting",
+        "general-solicitation",
+        "integration"
       ]
     },
     {
