@@ -16,6 +16,7 @@ related_skills:
   - skills/contracts/contract-risk-review/SKILL.md
   - skills/corporate/material-contract-schedule/SKILL.md
   - skills/corporate/closing-checklist/SKILL.md
+  - skills/m-and-a/acquisition-diligence-request-list/SKILL.md
 tags:
   - corporate
   - due-diligence

@@ -1541,7 +1541,9 @@
       "related_skills": [
         "skills/corporate/diligence-issue-extraction/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
-        "skills/contracts/contract-risk-review/SKILL.md"
+        "skills/contracts/contract-risk-review/SKILL.md",
+        "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
+        "skills/real-estate/closing-deliverables-tracker/SKILL.md"
       ]
     },
     {
@@ -1581,7 +1583,8 @@
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
-        "skills/corporate/closing-checklist/SKILL.md"
+        "skills/corporate/closing-checklist/SKILL.md",
+        "skills/m-and-a/acquisition-diligence-request-list/SKILL.md"
       ]
     },
     {
@@ -4454,7 +4457,8 @@
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
-        "skills/m-and-a/post-closing-obligations-tracker/SKILL.md"
+        "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
+        "skills/corporate/closing-checklist/SKILL.md"
       ]
     },
     {

@@ -17,6 +17,7 @@ related_skills:
   - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
   - skills/m-and-a/third-party-consents-assignment-review/SKILL.md
   - skills/m-and-a/post-closing-obligations-tracker/SKILL.md
+  - skills/corporate/closing-checklist/SKILL.md
 tags:
   - m-and-a
   - closing
