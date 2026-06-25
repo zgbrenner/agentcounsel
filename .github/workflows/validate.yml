@@ -35,6 +35,9 @@ jobs:
       - name: Validate repository
         run: python scripts/validate_repo.py
 
+      - name: Run tooling unit tests
+        run: python -m unittest discover -s tests
+
       - name: Check skill metadata and router are up to date
         run: python scripts/build_skill_index.py --check
 
