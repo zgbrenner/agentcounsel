@@ -82,6 +82,7 @@ templates are in place; see `overlays/README.md`.
 | Overlay | Maturity | Status |
 |---|---|---|
 | `healthcare` | `experimental` | First overlay built under the overlays/ scaffold. Tunes privacy, contracts, employment, regulatory, and AI-governance skills for HIPAA, HITECH, state-law overlays (CMIA, HB 300, MHMDA, SHIELD), 42 CFR Part 2, GINA, and reproductive-health frameworks. `[ORGANIZATION TO FILL]` placeholders in `profile.md` until configured for a specific organization. See `overlays/healthcare/OVERLAY.md`. |
+| `fintech-payments` | `experimental` | Tunes contracts, privacy, regulatory, financial-crime, and product-legal skills for a payments / fintech context — money-transmission/MSB, card-network rules, BSA/AML, sanctions, consumer-financial-protection, and digital-asset regimes, each described generically and flagged for jurisdiction verification. `[ORGANIZATION TO FILL]` placeholders in `profile.md` until configured. See `overlays/fintech-payments/OVERLAY.md`. |
 | *(other candidates)* | — | Listed in `reports/practice-area-expansion-plan.md`. |
 
 ## Coverage gaps in the released baseline
