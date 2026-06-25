@@ -154,3 +154,98 @@ def parse_eval_yaml(text: str):
         raise EvalParseError(
             f"line {lineno}: could not parse (check indentation and structure)")
     return data
+
+
+# --- SKILL.md frontmatter parser -------------------------------------------
+#
+# The single implementation of the AgentCounsel frontmatter subset (top-level
+# scalars and simple block lists), shared by every script that reads a
+# SKILL.md. Three shapes are exposed so each caller keeps its existing return
+# contract: split_frontmatter (lines), split_frontmatter_text (string), and
+# load_frontmatter (dict).
+
+
+def split_frontmatter(text: str):
+    """Return (frontmatter_lines, body) or (None, None) if absent/unterminated."""
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return None, None
+    for i in range(1, len(lines)):
+        if lines[i].strip() == "---":
+            return lines[1:i], "\n".join(lines[i + 1:])
+    return None, None
+
+
+def _unquote(value: str) -> str:
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+        inner = value[1:-1]
+        if value[0] == '"':
+            inner = inner.replace('\\"', '"').replace("\\\\", "\\")
+        else:
+            inner = inner.replace("''", "'")
+        return inner
+    return value
+
+
+def _scalar(value: str):
+    value = value.strip()
+    if value == "[]":
+        return []
+    if value == "true":
+        return True
+    if value == "false":
+        return False
+    return _unquote(value)
+
+
+def parse_frontmatter(fm_lines: list[str]) -> dict:
+    """Parse the AgentCounsel frontmatter subset (a list of lines) into a dict."""
+    meta: dict = {}
+    i, n = 0, len(fm_lines)
+    while i < n:
+        line = fm_lines[i]
+        if not line.strip() or line.lstrip().startswith("#"):
+            i += 1
+            continue
+        match = re.match(r"^([A-Za-z_][A-Za-z0-9_]*):(.*)$", line)
+        if not match:
+            i += 1
+            continue
+        key, rest = match.group(1), match.group(2).strip()
+        if rest:
+            meta[key] = _scalar(rest)
+            i += 1
+            continue
+        # A bare "key:" introduces a block list.
+        items: list[str] = []
+        i += 1
+        while i < n:
+            item = re.match(r"^\s+-\s?(.*)$", fm_lines[i])
+            if item:
+                items.append(_unquote(item.group(1)))
+                i += 1
+            elif fm_lines[i].strip() == "":
+                i += 1
+            else:
+                break
+        meta[key] = items
+    return meta
+
+
+def split_frontmatter_text(text: str):
+    """split_frontmatter as a single frontmatter string, with the ("", text)
+    fallback the text-based callers expect when frontmatter is absent."""
+    fm_lines, body = split_frontmatter(text)
+    if fm_lines is None:
+        return "", text
+    return "\n".join(fm_lines), body
+
+
+def load_frontmatter(text: str):
+    """Parse frontmatter into (dict, body), with the ({}, text) fallback the
+    dict-based callers expect when frontmatter is absent."""
+    fm_lines, body = split_frontmatter(text)
+    if fm_lines is None:
+        return {}, text
+    return parse_frontmatter(fm_lines), body

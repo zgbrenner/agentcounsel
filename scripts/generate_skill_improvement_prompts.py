@@ -80,15 +80,7 @@ def rel(path: Path) -> str:
         return str(path)
 
 
-def parse_frontmatter(text: str) -> tuple[str, str]:
-    """Return (frontmatter_text, body). Empty frontmatter if absent."""
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return "", text
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return "\n".join(lines[1:i]), "\n".join(lines[i + 1:])
-    return "", text
+from _shared import split_frontmatter_text
 
 
 def frontmatter_value(fm_text: str, field: str) -> str:
@@ -152,7 +144,7 @@ class SkillRecord:
         self.area = area_display_name(self.area_key)
 
         text = (skill_dir / "SKILL.md").read_text(encoding="utf-8")
-        fm_text, body = parse_frontmatter(text)
+        fm_text, body = split_frontmatter_text(text)
 
         self.name = frontmatter_value(fm_text, "name") or derive_name(skill_dir)
         self.description = (

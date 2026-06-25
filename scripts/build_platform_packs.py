@@ -114,19 +114,12 @@ def area_name(area: str) -> str:
 
 # --- parsing ---------------------------------------------------------------
 
-def parse_frontmatter(text: str):
-    lines = text.split("\n")
-    if not lines or lines[0].strip() != "---":
-        return "", text
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return "\n".join(lines[1:i]), "\n".join(lines[i + 1:])
-    return "", text
+from _shared import split_frontmatter_text
 
 
 def parse_skill(md_path: Path) -> dict:
     raw = md_path.read_text(encoding="utf-8")
-    fm, body = parse_frontmatter(raw)
+    fm, body = split_frontmatter_text(raw)
     name = ""
     description = ""
     nm = re.search(r"^name:\s*(.+)$", fm, re.M)

@@ -73,15 +73,7 @@ EXPECTED_DIRS = [
 ]
 
 
-def parse_frontmatter(text: str):
-    """Return (frontmatter_lines, body) or (None, None) if absent/unterminated."""
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return None, None
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return lines[1:i], "\n".join(lines[i + 1:])
-    return None, None
+from _shared import split_frontmatter
 
 
 def strip_code(text: str) -> str:
@@ -174,7 +166,7 @@ def check_skill(skill_dir: Path, require_sections: bool) -> None:
         err(f"{rel(skill_dir)}: missing SKILL.md")
         return
     text = md.read_text(encoding="utf-8")
-    frontmatter, body = parse_frontmatter(text)
+    frontmatter, body = split_frontmatter(text)
     if frontmatter is None:
         err(f"{rel(md)}: missing or unterminated YAML frontmatter "
             f"(file must start with '---' and have a closing '---')")
@@ -540,7 +532,7 @@ def check_related_skills_wired(skill_dirs: list[Path]) -> None:
         if len(skills) < 4:
             continue
         for skill_dir in skills:
-            fm, _ = parse_frontmatter((skill_dir / "SKILL.md")
+            fm, _ = split_frontmatter((skill_dir / "SKILL.md")
                                       .read_text(encoding="utf-8"))
             if fm is None:
                 continue
