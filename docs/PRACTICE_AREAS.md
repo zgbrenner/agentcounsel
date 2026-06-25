@@ -52,7 +52,7 @@ met.
 | `product-legal` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
 | `regulatory` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
 | `ai-governance` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
-| `financial-crime` | 2 — Advanced / specialized | stable | No | No | 2 of 2 skills |
+| `financial-crime` | 2 — Advanced / specialized | stable | Yes | No | 2 of 2 skills |
 | `real-estate` | 2 — Advanced / specialized | experimental | Yes | Yes | 9 of 9 skills |
 | `m-and-a` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
 | `family-law` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
@@ -88,9 +88,9 @@ templates are in place; see `overlays/README.md`.
 
 The columns above record the remaining gaps:
 
-- **Practice profiles** are missing for `legal-research` and `financial-crime`.
-- **Cold-start interviews** are missing for the same two areas (`legal-research`
-  and `financial-crime`); each of the other 18 practice areas has one under
+- **Practice profiles** are missing for `legal-research`.
+- **Cold-start interviews** are missing for `legal-research` and
+  `financial-crime`; each of the other 18 practice areas has one under
   `skills/setup/`.
 - **Evals** now cover every skill — all 190 skills have a skill eval file
   (`reports/eval-coverage.md` reports 0 skills without coverage); the v0.1.0
