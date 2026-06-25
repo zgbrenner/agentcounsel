@@ -212,7 +212,9 @@ def load_areas() -> dict:
 def load_skill_metadata_by_path() -> dict:
     try:
         import build_skill_index
-    except Exception:
+    except Exception as exc:
+        print(f"warning: could not import build_skill_index for metadata "
+              f"enrichment ({exc}); proceeding without enrichment", file=sys.stderr)
         return {}
     return {s["path"]: s for s in build_skill_index.build_index()["skills"]}
 

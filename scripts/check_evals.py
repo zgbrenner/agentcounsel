@@ -13,6 +13,7 @@ schema is documented in evals/README.md.
 
 from __future__ import annotations
 
+import argparse
 import re
 import sys
 import json
@@ -586,6 +587,10 @@ def check_static_metadata_integrity(index_data: dict, router_data: dict, packs_d
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
+    argparse.ArgumentParser(
+        description="Validate the AgentCounsel eval framework under evals/ "
+                    "(static, stdlib-only, no network). Exit 0 if all checks pass.",
+    ).parse_args()
     print("AgentCounsel eval-framework validation")
 
     if not EVALS_DIR.is_dir():

@@ -63,6 +63,10 @@ def find_canonical(name: str) -> Path | None:
         return None
     matches = [m for m in sorted(CANONICAL_ROOT.glob(f"*/{name}"))
                if (m / "SKILL.md").is_file()]
+    if len(matches) > 1:
+        print(f"  warning: skill name '{name}' matches {len(matches)} folders "
+              f"({', '.join(rel(m) for m in matches)}); using {rel(matches[0])}",
+              file=sys.stderr)
     return matches[0] if matches else None
 
 

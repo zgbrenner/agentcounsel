@@ -13,6 +13,7 @@ affect the exit code. See VALIDATION.md for details.
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -755,10 +756,10 @@ def check_normalized_metadata() -> None:
 
     router_path = REPO_ROOT / "metadata" / "router.json"
     if not router_path.is_file():
-        err("metadata/router.json is missing â€” run: "
+        err("metadata/router.json is missing — run: "
             "python scripts/build_skill_index.py")
     elif router_path.read_text(encoding="utf-8") != index.render_router():
-        err("metadata/router.json is out of date â€” run: "
+        err("metadata/router.json is out of date — run: "
             "python scripts/build_skill_index.py")
 
     for msg in index.validate_normalized_index():
@@ -778,12 +779,12 @@ def check_pack_registry() -> None:
 
     path = REPO_ROOT / "metadata" / "packs.json"
     if not path.is_file():
-        err("metadata/packs.json is missing â€” run: "
+        err("metadata/packs.json is missing — run: "
             "python scripts/build_platform_packs.py")
         return
     areas = packs.load_areas()
     if path.read_text(encoding="utf-8") != packs.render_pack_registry(areas):
-        err("metadata/packs.json is out of date â€” run: "
+        err("metadata/packs.json is out of date — run: "
             "python scripts/build_platform_packs.py")
     for msg in packs.validate_pack_registry(packs.build_pack_registry(areas)):
         err(f"pack registry: {msg}")
@@ -985,6 +986,11 @@ def check_doc_script_references() -> None:
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
+    argparse.ArgumentParser(
+        description="Validate AgentCounsel repository structure, safety framing, "
+                    "and link integrity (stdlib-only). Exit 0 if all checks pass. "
+                    "See VALIDATION.md.",
+    ).parse_args()
     canonical = canonical_skill_dirs()
     plugin = plugin_skill_dirs()
 
