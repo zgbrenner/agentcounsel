@@ -139,7 +139,8 @@ evals/              Lightweight, non-legal quality checks for skills.
 scripts/            Validation and build tooling (Python stdlib only).
 metadata/           Generated machine-readable index, router, and pack
                     manifests (built by scripts/, never hand-edited).
-reports/            Generated eval-coverage and skill-quality reports.
+reports/            Generated eval-coverage and skill-quality reports, plus
+                    the hand-maintained practice-area expansion plan.
 site/               Generated static catalog of the skills.
 dist/               Generated platform install packs (gitignored; built by
                     scripts/build_platform_packs.py).

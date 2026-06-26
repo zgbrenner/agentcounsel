@@ -36,7 +36,7 @@ Organize the facts for responding to a preference demand into a source-cited
 transfer timeline and defense-facts checklist, with missing documents,
 response-planning issues, and verification questions, so a qualified attorney
 can evaluate the demand and a response. This skill organizes facts; it
-determines no preference liability and no available defense.
+determines no preference liability and no available defense. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -111,15 +111,13 @@ Also out of scope (this skill does not): determine whether a transfer is avoidab
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   preference or defense determination; attorney review required.
-2. **Gates table** — debtor, creditor, the user's role, demand reference.
-3. **Transfer timeline** — date as stated | amount as stated | source | note.
-4. **Defense-facts checklist** — defense theme | facts provided | facts missing
+1. **Gates table** — debtor, creditor, the user's role, demand reference.
+2. **Transfer timeline** — date as stated | amount as stated | source | note.
+3. **Defense-facts checklist** — defense theme | facts provided | facts missing
    | source.
-5. **Response-planning issues** — open questions for the attorney.
-6. **Missing documents** and **attorney verification questions**.
-7. **Assumptions and unresolved items**.
+4. **Response-planning issues** — open questions for the attorney.
+5. **Missing documents** and **attorney verification questions**.
+6. **Assumptions and unresolved items**.
 
 The transfer timeline follows the **Preference Demand Response Timeline**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.

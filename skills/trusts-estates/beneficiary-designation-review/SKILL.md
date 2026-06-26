@@ -35,7 +35,7 @@ Review beneficiary designations, account titling, and transfer-on-death or
 payable-on-death forms into a source-cited designation table and an
 inconsistency list, so a qualified attorney can evaluate them against estate
 intent. This skill organizes the designations and flags inconsistencies; it
-concludes nothing about legal effect or beneficiary entitlement.
+concludes nothing about legal effect or beneficiary entitlement. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -105,16 +105,14 @@ Also out of scope (this skill does not): conclude the legal effect of a designat
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   legal-effect or entitlement determination; attorney review required.
-2. **Gates table** — the user's role, jurisdiction, review purpose, documents
+1. **Gates table** — the user's role, jurisdiction, review purpose, documents
    reviewed.
-3. **Beneficiary designation table** — account/asset | named beneficiary |
+2. **Beneficiary designation table** — account/asset | named beneficiary |
    contingent beneficiary | percentage | ownership | form date | source.
-4. **Inconsistency list** — inconsistencies with estate intent (where provided),
+3. **Inconsistency list** — inconsistencies with estate intent (where provided),
    framed as questions; never resolved.
-5. **Missing documents** — forms and designations `not provided`.
-6. **Attorney verification checklist** and **assumptions**.
+4. **Missing documents** — forms and designations `not provided`.
+5. **Attorney verification checklist** and **assumptions**.
 
 The designation table follows the **Beneficiary Designation Review Table**
 structure in `skills/trusts-estates/references/output-patterns.md`.

@@ -89,14 +89,13 @@ Also out of scope (this skill does not): give family-law advice; recommend a leg
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no strategy, custody, support, or property conclusion; no deadline computed; attorney review required.
-2. **Safety/escalation flags** — placed first if any safety concern is raised; otherwise a plain statement that none was raised, with the escalation routing noted.
-3. **Gates table** — parties and roles, matter type, case stage, jurisdiction, with status and source.
-4. **Intake summary** — parties, children, relationship status, and existing orders, with identifiers masked and dates flagged.
-5. **Issue map** — issue | category | neutral description | source | status.
-6. **Missing facts** — gates, dates, and facts marked `not provided` / `unknown` / `ambiguous`.
-7. **Document request list** — documents to obtain, grouped by category.
-8. **Attorney verification questions** and **assumptions**.
+1. **Safety/escalation flags** — placed first if any safety concern is raised; otherwise a plain statement that none was raised, with the escalation routing noted.
+2. **Gates table** — parties and roles, matter type, case stage, jurisdiction, with status and source.
+3. **Intake summary** — parties, children, relationship status, and existing orders, with identifiers masked and dates flagged.
+4. **Issue map** — issue | category | neutral description | source | status.
+5. **Missing facts** — gates, dates, and facts marked `not provided` / `unknown` / `ambiguous`.
+6. **Document request list** — documents to obtain, grouped by category.
+7. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 

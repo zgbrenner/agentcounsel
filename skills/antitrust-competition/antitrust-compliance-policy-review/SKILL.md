@@ -1,6 +1,6 @@
 ---
 name: Antitrust Compliance Policy Review
-description: "Use when reviewing a company's antitrust compliance policy and supporting program (training, dawn-raid protocol, document-creation guidance, reporting and discipline) — to produce a draft topic-coverage matrix, jurisdiction-coverage matrix, training/reporting/enforcement assessment, dawn-raid-protocol assessment, audience-fit notes, and drafting-suggestion list for attorney review — without attesting compliance, approving the policy, or representing it meets any jurisdiction's legal requirements."
+description: "Use when reviewing a company's antitrust compliance policy and program to organize a draft topic-coverage matrix, jurisdiction-coverage matrix, and drafting-suggestion list for attorney review, without attesting compliance, approving the policy, or representing it meets any jurisdiction's requirements."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Topic-Coverage Matrix"
+  - "Jurisdiction-Coverage Matrix"
+  - "Training/Reporting/Enforcement and Dawn-Raid Protocol assessments"
+  - "Drafting-Suggestion List and attorney verification questions"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - antitrust-compliance-policy-review
+  - compliance-policy
+  - dawn-raid
+  - training
+  - policy-gap
 ---
 
 # Antitrust Compliance Policy Review

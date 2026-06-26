@@ -46,38 +46,7 @@ SHARED_ASSERTIONS = [
 ]
 
 
-def parse_frontmatter(text: str) -> tuple[dict, str]:
-    """Return (frontmatter dict, body). Best-effort YAML parsing — handles
-    the SKILL.md subset only (top-level scalars + simple lists).
-    """
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return {}, text
-    fm_end = None
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            fm_end = i
-            break
-    if fm_end is None:
-        return {}, text
-    fm: dict = {}
-    current_key = None
-    for line in lines[1:fm_end]:
-        if not line.strip():
-            continue
-        m = re.match(r"^(\w[\w_]*)\s*:\s*(.*)$", line)
-        if m and not line.startswith(" "):
-            key, rest = m.group(1), m.group(2)
-            current_key = key
-            if rest.strip() == "" or rest.strip() == "[]":
-                fm[key] = [] if rest.strip() == "[]" else ""
-            else:
-                fm[key] = rest.strip().strip('"')
-        elif line.lstrip().startswith("- ") and current_key:
-            if not isinstance(fm.get(current_key), list):
-                fm[current_key] = []
-            fm[current_key].append(line.lstrip()[2:].strip().strip('"'))
-    return fm, "\n".join(lines[fm_end + 1:])
+from _shared import load_frontmatter
 
 
 def extract_section(body: str, heading: str) -> list[str]:
@@ -112,7 +81,7 @@ def yaml_str(s: str) -> str:
 
 
 def render_eval(skill_dir: Path) -> str:
-    fm, body = parse_frontmatter((skill_dir / "SKILL.md")
+    fm, body = load_frontmatter((skill_dir / "SKILL.md")
                                  .read_text(encoding="utf-8"))
     slug = skill_dir.name
     rel = skill_dir.relative_to(REPO_ROOT).as_posix() + "/SKILL.md"

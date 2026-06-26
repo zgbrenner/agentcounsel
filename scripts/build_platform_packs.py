@@ -35,11 +35,8 @@ PACKS_METADATA = REPO_ROOT / "metadata" / "packs.json"
 PACK_SCHEMA_VERSION = "1.0"
 PACK_SOURCE_DATE = "2026-05-28"
 
-REQUIRED_SECTIONS = [
-    "Purpose", "Use When", "Required Inputs", "Do Not Use When",
-    "Legal Safety Rules", "Workflow", "Output Format",
-    "Attorney Verification Checklist",
-]
+# The required H2 sections (bare titles) are defined once in _shared.
+from _shared import REQUIRED_SECTIONS
 
 # core/ files, split into the always-on rules and the review checklist.
 CORE_SAFETY_FILES = [
@@ -117,19 +114,12 @@ def area_name(area: str) -> str:
 
 # --- parsing ---------------------------------------------------------------
 
-def parse_frontmatter(text: str):
-    lines = text.split("\n")
-    if not lines or lines[0].strip() != "---":
-        return "", text
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return "\n".join(lines[1:i]), "\n".join(lines[i + 1:])
-    return "", text
+from _shared import split_frontmatter_text
 
 
 def parse_skill(md_path: Path) -> dict:
     raw = md_path.read_text(encoding="utf-8")
-    fm, body = parse_frontmatter(raw)
+    fm, body = split_frontmatter_text(raw)
     name = ""
     description = ""
     nm = re.search(r"^name:\s*(.+)$", fm, re.M)
@@ -190,6 +180,11 @@ def load_areas() -> dict:
                 if required not in sk["section_names"]:
                     err(f"skill {sk['path']} is missing required section "
                         f"'## {required}'")
+            required_present = [s for s in sk["section_names"]
+                                if s in REQUIRED_SECTIONS]
+            if (set(required_present) == set(REQUIRED_SECTIONS)
+                    and required_present != REQUIRED_SECTIONS):
+                err(f"skill {sk['path']} has its required sections out of order")
             templates = []
             tdir = sd / "templates"
             if tdir.is_dir():
@@ -212,7 +207,9 @@ def load_areas() -> dict:
 def load_skill_metadata_by_path() -> dict:
     try:
         import build_skill_index
-    except Exception:
+    except Exception as exc:
+        print(f"warning: could not import build_skill_index for metadata "
+              f"enrichment ({exc}); proceeding without enrichment", file=sys.stderr)
         return {}
     return {s["path"]: s for s in build_skill_index.build_index()["skills"]}
 

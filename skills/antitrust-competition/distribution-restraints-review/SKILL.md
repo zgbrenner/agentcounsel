@@ -1,6 +1,6 @@
 ---
 name: Distribution Restraints Review
-description: "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales or marketplace bans, dual pricing, selective distribution, tying) to produce a draft restraint inventory with per-jurisdiction character flags (hardcore candidates, online-sales callouts, dual-distribution issues, state-law and sector overlays) for attorney review — without concluding enforceability, VBER applicability, or market power."
+description: "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales bans, dual pricing) to organize a draft restraint inventory with per-jurisdiction character flags for attorney review, without concluding enforceability or market power."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Restraint Inventory"
+  - "Restraint Character Flags by jurisdiction"
+  - "Online Sales / Dual Pricing Flags"
+  - "Attorney verification questions and escalation triggers"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - distribution-restraints-review
+  - vertical-restraints
+  - rpm-map
+  - online-sales
+  - distribution
 ---
 
 # Distribution Restraints Review

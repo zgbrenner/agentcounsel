@@ -36,7 +36,7 @@ Capture the facts of an estate-planning matter into a structured, source-cited
 working paper — an intake summary, a planning issue map, missing facts, a
 document request list, and verification questions — so a qualified, licensed
 attorney can plan the engagement. This skill organizes facts and spots issues;
-it recommends no estate plan and gives no advice.
+it recommends no estate plan and gives no advice. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -117,15 +117,13 @@ Also out of scope (this skill does not): provide estate-planning, tax, or probat
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not an
-   estate plan; attorney review required.
-2. **Gates table** — client and role, jurisdiction, planning goals, review
+1. **Gates table** — client and role, jurisdiction, planning goals, review
    purpose (with `not provided` where missing).
-3. **Intake summary** — a short, plain-language overview.
-4. **Source-cited fact register** — fact | source | status.
-5. **Planning issue map** — issues framed as questions for the attorney.
-6. **Missing information** and **document request list**.
-7. **Attorney verification questions** and **assumptions**.
+2. **Intake summary** — a short, plain-language overview.
+3. **Source-cited fact register** — fact | source | status.
+4. **Planning issue map** — issues framed as questions for the attorney.
+5. **Missing information** and **document request list**.
+6. **Attorney verification questions** and **assumptions**.
 
 The planning issue map follows the **Estate Planning Intake Matrix** structure
 in `skills/trusts-estates/references/output-patterns.md`.

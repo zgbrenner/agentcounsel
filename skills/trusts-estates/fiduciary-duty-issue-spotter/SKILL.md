@@ -36,7 +36,7 @@ Issue-spot potential fiduciary-duty questions from provided facts and documents
 into a source-cited issue matrix, with missing facts, escalation items, and
 verification questions, so a qualified attorney can evaluate fiduciary conduct.
 This skill spots issues and organizes facts; it concludes no breach, no
-liability, and no compliance.
+liability, and no compliance. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -108,15 +108,13 @@ Also out of scope (this skill does not): conclude whether a fiduciary breached a
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   breach, liability, or compliance determination; attorney review required.
-2. **Gates table** — the fiduciary, the user's role, jurisdiction, matter type.
-3. **Source-cited facts** — fact | source | status.
-4. **Fiduciary-duty issue matrix** — # | issue area | factual trigger | source
+1. **Gates table** — the fiduciary, the user's role, jurisdiction, matter type.
+2. **Source-cited facts** — fact | source | status.
+3. **Fiduciary-duty issue matrix** — # | issue area | factual trigger | source
    | open question for the attorney.
-5. **Escalation items** — issues to route for prominent attorney attention.
-6. **Missing facts** and **attorney verification questions**.
-7. **Assumptions and unresolved items**.
+4. **Escalation items** — issues to route for prominent attorney attention.
+5. **Missing facts** and **attorney verification questions**.
+6. **Assumptions and unresolved items**.
 
 The issue matrix follows the **Fiduciary Duty Issue Matrix** structure in
 `skills/trusts-estates/references/output-patterns.md`.

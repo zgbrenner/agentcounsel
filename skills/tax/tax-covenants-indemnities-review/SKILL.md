@@ -110,18 +110,15 @@ Also out of scope (this skill does not): determine whether a covenant or indemni
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; no
-   enforceability, treatment, or adequacy determination; tax counsel review
-   required.
-2. **Gates table** — transaction type, jurisdictions, the user's role and
+1. **Gates table** — transaction type, jurisdictions, the user's role and
    perspective, review purpose.
-3. **Covenant/indemnity architecture summary** — how the provisions allocate
+2. **Covenant/indemnity architecture summary** — how the provisions allocate
    tax risk.
-4. **Tax Covenant / Indemnity Review Table** — per the pattern in
+3. **Tax Covenant / Indemnity Review Table** — per the pattern in
    `skills/tax/references/output-patterns.md`.
-5. **Issue list** and **source table**.
-6. **Negotiation points** — direction of change only, from the user's side.
-7. **Tax-counsel verification checklist** and **assumptions**.
+4. **Issue list** and **source table**.
+5. **Negotiation points** — direction of change only, from the user's side.
+6. **Tax-counsel verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

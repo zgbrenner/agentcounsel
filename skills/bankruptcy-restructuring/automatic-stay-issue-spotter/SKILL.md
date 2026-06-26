@@ -36,7 +36,7 @@ Issue-spot automatic stay concerns from user-provided facts into a source-cited
 stay-risk fact map and action inventory, with escalation flags and verification
 questions, so a qualified attorney can evaluate the automatic stay. This skill
 spots issues and organizes facts; it never concludes whether the stay applies
-or whether an action is permitted.
+or whether an action is permitted. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -113,16 +113,14 @@ Also out of scope (this skill does not): conclude whether the automatic stay app
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no stay
-   determination; attorney review required.
-2. **Gates table** — debtor, the user's role, case status, petition date as
+1. **Gates table** — debtor, the user's role, case status, petition date as
    provided.
-3. **Action inventory** — action | timing as stated | source.
-4. **Stay-risk fact map** — action | facts that bear on stay concerns | open
+2. **Action inventory** — action | timing as stated | source.
+3. **Stay-risk fact map** — action | facts that bear on stay concerns | open
    question for the attorney.
-5. **Escalation flags** — actions to route for immediate attorney attention.
-6. **Missing facts** and **attorney verification questions**.
-7. **Assumptions and unresolved items**.
+4. **Escalation flags** — actions to route for immediate attorney attention.
+5. **Missing facts** and **attorney verification questions**.
+6. **Assumptions and unresolved items**.
 
 The stay-risk fact map follows the **Automatic Stay Issue-Spotting Matrix**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.

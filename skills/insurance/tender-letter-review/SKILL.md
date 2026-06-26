@@ -86,14 +86,13 @@ Also out of scope (this skill does not): conclude that a tender is timely, valid
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no validity, timeliness, or sufficiency conclusion; attorney review required before sending.
-2. **Gates table** — asserted basis, user's role, claim, duties tendered, jurisdiction, with status and source.
-3. **Tender summary** — 3-5 sentences: what is tendered, to whom, on what asserted basis.
-4. **Tender completeness checklist** — element | present / not found / ambiguous | source | note. Follows the Tender Completeness Checklist pattern in `skills/insurance/references/output-patterns.md`.
-5. **Missing documents** — supporting documents not included, with what each would support.
-6. **Risk flags** — issue | description | source | attorney follow-up.
-7. **Proposed attorney-review revisions** — direction-only suggestions, clearly draft.
-8. **Attorney verification questions** and **assumptions**.
+1. **Gates table** — asserted basis, user's role, claim, duties tendered, jurisdiction, with status and source.
+2. **Tender summary** — 3-5 sentences: what is tendered, to whom, on what asserted basis.
+3. **Tender completeness checklist** — element | present / not found / ambiguous | source | note. Follows the Tender Completeness Checklist pattern in `skills/insurance/references/output-patterns.md`.
+4. **Missing documents** — supporting documents not included, with what each would support.
+5. **Risk flags** — issue | description | source | attorney follow-up.
+6. **Proposed attorney-review revisions** — direction-only suggestions, clearly draft.
+7. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 

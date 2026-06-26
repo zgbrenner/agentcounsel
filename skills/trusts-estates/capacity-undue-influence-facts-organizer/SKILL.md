@@ -35,7 +35,7 @@ Organize the facts relevant to capacity and undue-influence questions into a
 source-cited chronology, a source table, and red-flag themes, so a qualified
 attorney can evaluate them. This skill organizes facts and surfaces themes; it
 determines no capacity, no undue influence, no fraud, no duress, and no
-validity.
+validity. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -109,17 +109,14 @@ Also out of scope (this skill does not): determine whether a person had capacity
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not a
-   medical judgment; no capacity or undue-influence determination; attorney
-   review required.
-2. **Gates table** — the user's role, jurisdiction, matter type, records
+1. **Gates table** — the user's role, jurisdiction, matter type, records
    reviewed.
-3. **Facts chronology** — date | event | actor | source | disputed/undisputed
+2. **Facts chronology** — date | event | actor | source | disputed/undisputed
    if provided.
-4. **Source table** — fact | source | status.
-5. **Red-flag themes** — themes framed as questions for the attorney.
-6. **Missing facts** and **attorney verification questions**.
-7. **Assumptions and unresolved items**.
+3. **Source table** — fact | source | status.
+4. **Red-flag themes** — themes framed as questions for the attorney.
+5. **Missing facts** and **attorney verification questions**.
+6. **Assumptions and unresolved items**.
 
 The facts chronology follows the **Capacity / Undue Influence Facts Organizer**
 structure in `skills/trusts-estates/references/output-patterns.md`.

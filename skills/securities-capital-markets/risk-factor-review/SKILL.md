@@ -1,6 +1,6 @@
 ---
 name: Risk Factor Review
-description: "Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM — to produce a draft specificity-vs-boilerplate matrix, MD&A and other-filing consistency notes, duplication and known-trend flags, and category-coverage gaps (cybersecurity / AI / privacy / supply chain / customer concentration / regulatory / litigation / liquidity) for attorney review — without concluding adequacy of risk-factor disclosure."
+description: "Use when reviewing the risk-factor section of an S-1, 10-K, 10-Q, S-4, proxy, PPM, or OM to produce a draft specificity-vs-boilerplate matrix, consistency notes, and category-coverage gaps for attorney review, without concluding adequacy of disclosure."
 practice_area: securities-capital-markets
 task_type: review
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Risk-Factor Inventory"
+  - "Specificity-vs-Boilerplate Matrix"
+  - "Known-Trend Integration Matrix and Category-Coverage Gap Matrix"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md
   - skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - risk-factor-review
+  - risk-factors
+  - disclosure-review
+  - boilerplate
+  - category-coverage
 ---
 
 # Risk Factor Review

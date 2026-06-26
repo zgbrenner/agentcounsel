@@ -85,14 +85,13 @@ Also out of scope (this skill does not): conclude that a reservation is legally 
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no sufficiency or effectiveness conclusion; attorney review required.
-2. **Gates table** — policy type, user's role, claim, jurisdiction, with status and source.
-3. **Letter summary** — 3-5 sentences: what the letter is, what it reserves, and the defense position stated.
-4. **Issue list** — issue | letter reference | description | why it matters | attorney follow-up. The issue list and provision-reference table follow the Reservation of Rights Review Table pattern in `skills/insurance/references/output-patterns.md`.
-5. **Provision-reference table** — letter reference | provision cited | policy location | match status (matches / not found / ambiguous).
-6. **Ambiguity and consistency list** — vague reservations, contradictions, and unsupported factual assertions.
-7. **Missing facts** — facts the letter relies on but the record does not show, marked `not provided`/`unknown`.
-8. **Attorney verification checklist** and **assumptions**.
+1. **Gates table** — policy type, user's role, claim, jurisdiction, with status and source.
+2. **Letter summary** — 3-5 sentences: what the letter is, what it reserves, and the defense position stated.
+3. **Issue list** — issue | letter reference | description | why it matters | attorney follow-up. The issue list and provision-reference table follow the Reservation of Rights Review Table pattern in `skills/insurance/references/output-patterns.md`.
+4. **Provision-reference table** — letter reference | provision cited | policy location | match status (matches / not found / ambiguous).
+5. **Ambiguity and consistency list** — vague reservations, contradictions, and unsupported factual assertions.
+6. **Missing facts** — facts the letter relies on but the record does not show, marked `not provided`/`unknown`.
+7. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

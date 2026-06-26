@@ -1,6 +1,6 @@
 ---
 name: SEC Filing Consistency Check
-description: "Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, prospectus supplement, Form D) for cross-filing consistency — to produce a draft cross-reference matrix covering business descriptions, risk factors, MD&A narrative, financial-statement figures cited outside the financials, share counts, executive/director information, related-party disclosures, material-contract references, forward-looking-statement framing, and defined-term usage for attorney review — without concluding adequacy or correctness of any filing."
+description: "Use when checking a set of SEC filings (10-K, 10-Q, 8-K, S-1/3/4, proxy, Form D) for cross-filing consistency to produce a draft cross-reference matrix flagging numerical, narrative, and defined-term discrepancies for attorney review, without concluding adequacy or correctness."
 practice_area: securities-capital-markets
 task_type: analysis
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Cross-Filing Item Map"
+  - "Numerical Consistency Pass and Narrative Consistency Pass"
+  - "Defined-Term Audit and Discrepancy-Classification Summary"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md
   - skills/securities-capital-markets/risk-factor-review/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - sec-filing-consistency-check
+  - filing-consistency
+  - cross-reference
+  - numerical-discrepancy
+  - defined-terms
 ---
 
 # SEC Filing Consistency Check

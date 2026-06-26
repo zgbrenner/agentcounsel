@@ -36,21 +36,9 @@ EVALS_ROOT = REPO_ROOT / "evals"
 # Directory names under skills/<area>/ that hold shared reference material.
 NON_SKILL_DIRS = {"references"}
 
-# The standardized frontmatter fields every canonical skill must declare,
-# in canonical order. See docs/SKILL_METADATA_STANDARD.md.
-REQUIRED_FIELDS = [
-    "name",
-    "description",
-    "practice_area",
-    "task_type",
-    "jurisdictions",
-    "risk_level",
-    "requires_attorney_review",
-    "inputs",
-    "outputs",
-    "related_skills",
-    "tags",
-]
+# The standardized frontmatter fields every canonical skill must declare, in
+# canonical order, are defined once in _shared. See docs/SKILL_METADATA_STANDARD.md.
+from _shared import REQUIRED_FIELDS, split_frontmatter, parse_frontmatter
 
 SCALAR_FIELDS = {
     "name", "description", "practice_area", "task_type",
@@ -328,72 +316,7 @@ def rel(path: Path) -> str:
 # third-party YAML library (the repository is standard-library only).
 
 
-def split_frontmatter(text: str):
-    """Return (frontmatter_lines, body) or (None, None) if absent."""
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return None, None
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return lines[1:i], "\n".join(lines[i + 1:])
-    return None, None
-
-
-def _unquote(value: str) -> str:
-    value = value.strip()
-    if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
-        inner = value[1:-1]
-        if value[0] == '"':
-            inner = inner.replace('\\"', '"').replace("\\\\", "\\")
-        else:
-            inner = inner.replace("''", "'")
-        return inner
-    return value
-
-
-def _scalar(value: str):
-    value = value.strip()
-    if value == "[]":
-        return []
-    if value == "true":
-        return True
-    if value == "false":
-        return False
-    return _unquote(value)
-
-
-def parse_frontmatter(fm_lines: list[str]) -> dict:
-    """Parse the AgentCounsel frontmatter subset into a dict."""
-    meta: dict = {}
-    i, n = 0, len(fm_lines)
-    while i < n:
-        line = fm_lines[i]
-        if not line.strip() or line.lstrip().startswith("#"):
-            i += 1
-            continue
-        match = re.match(r"^([A-Za-z_][A-Za-z0-9_]*):(.*)$", line)
-        if not match:
-            i += 1
-            continue
-        key, rest = match.group(1), match.group(2).strip()
-        if rest:
-            meta[key] = _scalar(rest)
-            i += 1
-            continue
-        # A bare "key:" introduces a block list.
-        items: list[str] = []
-        i += 1
-        while i < n:
-            item = re.match(r"^\s+-\s?(.*)$", fm_lines[i])
-            if item:
-                items.append(_unquote(item.group(1)))
-                i += 1
-            elif fm_lines[i].strip() == "":
-                i += 1
-            else:
-                break
-        meta[key] = items
-    return meta
+# split_frontmatter, parse_frontmatter and their helpers now live in _shared.
 
 
 # --- Validation ------------------------------------------------------------

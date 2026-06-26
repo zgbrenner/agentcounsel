@@ -13,6 +13,7 @@ affect the exit code. See VALIDATION.md for details.
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -41,17 +42,10 @@ def rel(path: Path) -> str:
     return path.relative_to(REPO_ROOT).as_posix()
 
 
-# Required H2 sections for every canonical skill, in order.
-REQUIRED_SECTIONS = [
-    "## Purpose",
-    "## Use When",
-    "## Required Inputs",
-    "## Do Not Use When",
-    "## Legal Safety Rules",
-    "## Workflow",
-    "## Output Format",
-    "## Attorney Verification Checklist",
-]
+# Required H2 sections for every canonical skill, in order. The bare titles are
+# defined once in _shared; validate_repo enforces the heading form and order.
+from _shared import REQUIRED_SECTIONS as _SECTION_TITLES
+REQUIRED_SECTIONS = ["## " + title for title in _SECTION_TITLES]
 
 # Content-scan file types.
 TEXT_SUFFIXES = {".md", ".json", ".py", ".txt"}
@@ -79,15 +73,7 @@ EXPECTED_DIRS = [
 ]
 
 
-def parse_frontmatter(text: str):
-    """Return (frontmatter_lines, body) or (None, None) if absent/unterminated."""
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return None, None
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return lines[1:i], "\n".join(lines[i + 1:])
-    return None, None
+from _shared import split_frontmatter
 
 
 def strip_code(text: str) -> str:
@@ -180,7 +166,7 @@ def check_skill(skill_dir: Path, require_sections: bool) -> None:
         err(f"{rel(skill_dir)}: missing SKILL.md")
         return
     text = md.read_text(encoding="utf-8")
-    frontmatter, body = parse_frontmatter(text)
+    frontmatter, body = split_frontmatter(text)
     if frontmatter is None:
         err(f"{rel(md)}: missing or unterminated YAML frontmatter "
             f"(file must start with '---' and have a closing '---')")
@@ -210,6 +196,20 @@ def check_skill(skill_dir: Path, require_sections: bool) -> None:
 
 
 # --- Check: forbidden phrasing --------------------------------------------
+
+def check_whitespace() -> None:
+    """Flag trailing whitespace and missing final newlines in text files so
+    the drift the audit found cannot silently recur. Same file set as the
+    other content scans; generated output under dist/ is skipped."""
+    for path in iter_text_files():
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for i, line in enumerate(text.split("\n"), 1):
+            if line != line.rstrip():
+                err(f"{rel(path)}:{i}: trailing whitespace")
+                break  # one report per file is enough
+        if text and not text.endswith("\n"):
+            err(f"{rel(path)}: missing final newline")
+
 
 def check_content_scans() -> None:
     forbidden = ["chatgpt project instructions", "chatgpt project package"]
@@ -532,7 +532,7 @@ def check_related_skills_wired(skill_dirs: list[Path]) -> None:
         if len(skills) < 4:
             continue
         for skill_dir in skills:
-            fm, _ = parse_frontmatter((skill_dir / "SKILL.md")
+            fm, _ = split_frontmatter((skill_dir / "SKILL.md")
                                       .read_text(encoding="utf-8"))
             if fm is None:
                 continue
@@ -755,10 +755,10 @@ def check_normalized_metadata() -> None:
 
     router_path = REPO_ROOT / "metadata" / "router.json"
     if not router_path.is_file():
-        err("metadata/router.json is missing â€” run: "
+        err("metadata/router.json is missing — run: "
             "python scripts/build_skill_index.py")
     elif router_path.read_text(encoding="utf-8") != index.render_router():
-        err("metadata/router.json is out of date â€” run: "
+        err("metadata/router.json is out of date — run: "
             "python scripts/build_skill_index.py")
 
     for msg in index.validate_normalized_index():
@@ -778,12 +778,12 @@ def check_pack_registry() -> None:
 
     path = REPO_ROOT / "metadata" / "packs.json"
     if not path.is_file():
-        err("metadata/packs.json is missing â€” run: "
+        err("metadata/packs.json is missing — run: "
             "python scripts/build_platform_packs.py")
         return
     areas = packs.load_areas()
     if path.read_text(encoding="utf-8") != packs.render_pack_registry(areas):
-        err("metadata/packs.json is out of date â€” run: "
+        err("metadata/packs.json is out of date — run: "
             "python scripts/build_platform_packs.py")
     for msg in packs.validate_pack_registry(packs.build_pack_registry(areas)):
         err(f"pack registry: {msg}")
@@ -985,6 +985,11 @@ def check_doc_script_references() -> None:
 # --- Main ------------------------------------------------------------------
 
 def main() -> int:
+    argparse.ArgumentParser(
+        description="Validate AgentCounsel repository structure, safety framing, "
+                    "and link integrity (stdlib-only). Exit 0 if all checks pass. "
+                    "See VALIDATION.md.",
+    ).parse_args()
     canonical = canonical_skill_dirs()
     plugin = plugin_skill_dirs()
 
@@ -1002,6 +1007,7 @@ def main() -> int:
     check_overlays()
     check_citation_discipline(canonical)
     check_content_scans()
+    check_whitespace()
     check_quality_layer_overclaims()
     check_links()
     check_index_paths("SKILLS_INDEX.md")

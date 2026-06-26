@@ -1,0 +1,4 @@
+# Default reviewer for the whole repository.
+# The canonical library (skills/, core/) and the validation tooling are the
+# most safety-sensitive areas; route every change to the maintainer.
+* @zgbrenner

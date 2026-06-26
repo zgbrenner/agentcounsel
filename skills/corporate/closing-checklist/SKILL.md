@@ -17,6 +17,8 @@ related_skills:
   - skills/corporate/diligence-issue-extraction/SKILL.md
   - skills/corporate/material-contract-schedule/SKILL.md
   - skills/contracts/contract-risk-review/SKILL.md
+  - skills/m-and-a/closing-deliverables-tracker/SKILL.md
+  - skills/real-estate/closing-deliverables-tracker/SKILL.md
 tags:
   - corporate
   - m-and-a

@@ -36,7 +36,7 @@ Issue-spot a Chapter 11 plan and disclosure statement into a source-cited
 treatment table, an issue list, and a consistency-issues list, so a qualified
 attorney can evaluate the documents. This skill spots issues and organizes the
 provisions; it concludes nothing on confirmability, the adequacy of disclosure,
-priority compliance, or the voting outcome.
+priority compliance, or the voting outcome. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -115,18 +115,15 @@ Also out of scope (this skill does not): conclude whether a plan is confirmable,
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   confirmability, adequacy, or compliance determination; attorney review
-   required.
-2. **Gates table** — documents reviewed, the user's role, case reference.
-3. **Treatment table** — class | classification as written | treatment as
+1. **Gates table** — documents reviewed, the user's role, case reference.
+2. **Treatment table** — class | classification as written | treatment as
    written | source.
-4. **Issue list** — issues across voting, releases, contracts, claims,
+3. **Issue list** — issues across voting, releases, contracts, claims,
    governance, and equity, framed as questions.
-5. **Consistency issues** — inconsistencies between the plan and the disclosure
+4. **Consistency issues** — inconsistencies between the plan and the disclosure
    statement, with sources.
-6. **Missing facts** and **attorney verification questions**.
-7. **Assumptions and unresolved items**.
+5. **Missing facts** and **attorney verification questions**.
+6. **Assumptions and unresolved items**.
 
 The treatment table and issue list follow the **Plan / Disclosure Statement
 Issue Tracker** structure in

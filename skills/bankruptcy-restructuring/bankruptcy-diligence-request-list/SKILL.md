@@ -36,7 +36,7 @@ Generate a bankruptcy or distressed-transaction diligence request list,
 organized by workstream with priority, rationale, owner, and follow-up, so
 attorney-supervised diligence can request, track, and escalate the right
 documents. This skill scopes and organizes diligence requests; it determines no
-legal exposure and no claim value.
+legal exposure and no claim value. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -110,16 +110,14 @@ Also out of scope (this skill does not): determine legal exposure, claim value, 
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not an
-   exposure estimate; attorney review required.
-2. **Gates table** — transaction/matter type and stage, the user's role, case
+1. **Gates table** — transaction/matter type and stage, the user's role, case
    status, jurisdiction, workstreams in scope.
-3. **Diligence request list** — organized by workstream, with columns: #,
+2. **Diligence request list** — organized by workstream, with columns: #,
    workstream, request, priority, rationale, owner, source/basis, follow-up.
-4. **Follow-up tracker** — request | documents received | open follow-up |
+3. **Follow-up tracker** — request | documents received | open follow-up |
    status.
-5. **Missing information list** and **attorney verification questions**.
-6. **Assumptions and unresolved items**.
+4. **Missing information list** and **attorney verification questions**.
+5. **Assumptions and unresolved items**.
 
 The request list follows the **Bankruptcy Diligence Request List** structure in
 `skills/bankruptcy-restructuring/references/output-patterns.md`.

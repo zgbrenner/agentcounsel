@@ -36,7 +36,7 @@ source-cited facts-to-verify table so qualified employment and tax counsel can
 evaluate worker classification and employment-tax treatment. This skill
 captures facts and themes; it makes no classification or withholding
 conclusion. It coordinates with, and does not replace, employment-law analysis
-(see `skills/employment/worker-classification/SKILL.md`).
+(see `skills/employment/worker-classification/SKILL.md`). It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -111,16 +111,14 @@ Also out of scope (this skill does not): determine worker classification (employ
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax or employment-law
-   advice; no classification decision; qualified counsel review required.
-2. **Gates table** — taxpayer/entity type, jurisdictions, tax period, role,
+1. **Gates table** — taxpayer/entity type, jurisdictions, tax period, role,
    worker populations.
-3. **Employment Tax Worker Classification Intake Table** — per the pattern in
+2. **Employment Tax Worker Classification Intake Table** — per the pattern in
    `skills/tax/references/output-patterns.md`.
-4. **Risk themes** — factual patterns for counsel to examine (not conclusions).
-5. **Missing documents list**.
-6. **Questions for employment and tax counsel**.
-7. **Assumptions and unresolved items**.
+3. **Risk themes** — factual patterns for counsel to examine (not conclusions).
+4. **Missing documents list**.
+5. **Questions for employment and tax counsel**.
+6. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

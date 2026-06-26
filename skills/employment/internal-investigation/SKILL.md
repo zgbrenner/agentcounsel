@@ -108,7 +108,7 @@ If the allegation summary is not provided, stop and request it before proceeding
    - **HR summary**: factual findings and policy conclusions relevant to HR action; exclude privileged legal strategy, outside-counsel communications, and attorney mental impressions.
    - **Leadership/board summary**: executive-level findings and any governance or organizational implications; exclude privileged legal analysis and attorney communications.
    - **Outside-counsel summary**: complete privileged record including legal analysis, strategy considerations, and open evidentiary questions.
-   
+
    Label each summary with its intended audience and its privilege status. Do not generate summaries without attorney authorization for distribution.
 
 9. **Apply the distribution-discipline warning.** At the header of every summary, include a prominent notice: each summary inherits the privilege status of the underlying investigation; distributing it beyond the privilege circle — including to business personnel without a need to know — can waive attorney-client privilege and work-product protection over the entire investigation record. Distribution must be authorized by the supervising attorney. `[ATTORNEY TO CONFIRM: distribution list and privilege waiver risk]`

@@ -17,7 +17,7 @@ and that attorney review is required.
 > workflows, with a built-in quality layer (source validation, citation integrity,
 > hallucination red-team) and an attorney-review gate on every output.
 >
-> 190 skills · 20 practice areas · packs for ChatGPT, Claude, Gemini, Cursor &
+> 191 skills · 20 practice areas · packs for ChatGPT, Claude, Gemini, Cursor &
 > Codex · plain Markdown, no backend, no lock-in. MIT.
 >
 > [repo link]
@@ -45,7 +45,7 @@ adopts the work before it is relied upon.
 
 What's in this release:
 
-- **190 skills across 20 practice areas** — contracts, litigation, privacy,
+- **191 skills across 20 practice areas** — contracts, litigation, privacy,
   employment, corporate, M&A, securities, tax, IP, regulatory, and more — each with
   the same eight-section structure and machine-readable metadata.
 - **A quality layer.** Nine cross-cutting checks — source validation, citation
@@ -55,7 +55,7 @@ What's in this release:
   do **not** verify the law automatically.
 - **Source and citation discipline by default.** Skills never invent authority or
   compute deadlines; gaps become visible placeholders for an attorney to resolve.
-- **An eval system.** 190 eval files and 500+ cases, run by standard-library
+- **An eval system.** 191 eval files and 500+ cases, run by standard-library
   scripts with no API keys. They check structure, routing, and safety signals —
   not legal correctness.
 - **Matter workspaces, playbooks, and review panels** for multi-step,

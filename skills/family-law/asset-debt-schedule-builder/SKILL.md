@@ -87,14 +87,13 @@ Also out of scope (this skill does not): characterize property as marital, commu
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no property characterization; no valuation; no division; no deadline computed; attorney review required.
-2. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
-3. **Gates table** — parties and roles, matter type, jurisdiction, with status and source.
-4. **Asset schedule** — item | category | source | owner/title (as provided) | value (user-provided only) | disputed/undisputed status | notes.
-5. **Debt schedule** — item | category | source | obligor/title (as provided) | amount (user-provided only) | disputed/undisputed status | notes.
-6. **Unknown / ambiguous items** — undocumented items, conflicting figures, and items marked `not provided` / `ambiguous`.
-7. **Missing facts** — documents, values, and titling information to obtain.
-8. **Attorney verification checklist** and **assumptions**.
+1. **Safety note** — any safety concern flagged and routed, or a plain statement that none was raised.
+2. **Gates table** — parties and roles, matter type, jurisdiction, with status and source.
+3. **Asset schedule** — item | category | source | owner/title (as provided) | value (user-provided only) | disputed/undisputed status | notes.
+4. **Debt schedule** — item | category | source | obligor/title (as provided) | amount (user-provided only) | disputed/undisputed status | notes.
+5. **Unknown / ambiguous items** — undocumented items, conflicting figures, and items marked `not provided` / `ambiguous`.
+6. **Missing facts** — documents, values, and titling information to obtain.
+7. **Attorney verification checklist** and **assumptions**.
 
 ## Attorney Verification Checklist
 

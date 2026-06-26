@@ -1,6 +1,6 @@
 ---
 name: Securities Exemption Issue Spotter
-description: "Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, §4(a)(2)) for a contemplated private offering — to produce a draft decision-tree-driven issue map with the facts needed to evaluate each candidate path (general-solicitation posture, accredited-investor mix, integration lookback, bad-actor universe, state-by-state blue-sky map) for attorney review — without concluding which exemption applies or that any exemption is available."
+description: "Use when surfacing candidate exemption pathways (Reg D 506(b)/(c), Reg S, Reg A+, Reg CF, Rule 147/147A, Section 4(a)(2)) for a contemplated private offering into a draft decision-tree issue map for attorney review, without concluding which exemption is available."
 practice_area: securities-capital-markets
 task_type: analysis
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Offering Facts Inventory"
+  - "Candidate-Path Matrix"
+  - "Integration-Analysis Facts, Bad-Actor Universe, and State Blue-Sky Map"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/private-placement-checklist/SKILL.md
   - skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - securities-exemption-issue-spotter
+  - exemption
+  - issue-spotting
+  - general-solicitation
+  - integration
 ---
 
 # Securities Exemption Issue Spotter

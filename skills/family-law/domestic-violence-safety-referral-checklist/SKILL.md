@@ -89,14 +89,13 @@ Also out of scope (this skill does not): create a safety plan or safety strategy
 ## Output Format
 
 1. **Immediate safety notice** — if any immediate danger is indicated, prominent guidance, placed first, to contact local emergency services and a qualified local domestic violence crisis resource, and a licensed attorney. If none is indicated, a plain statement to that effect and a note that the user can still reach a qualified local resource.
-2. **Capability and reliance notice** — draft only; not legal advice; not a safety plan; does not decide whether abuse occurred; attorney review required.
-3. **Gates table** — parties and roles, jurisdiction, children involved, with status and source.
-4. **Safety/escalation flags** — the concerns raised, recorded neutrally, with the escalation routing for each.
-5. **Existing orders and incidents** — protective orders and described incidents, as stated, with sources and dates flagged.
-6. **Document checklist** — records the attorney may wish to review, framed as "if already available."
-7. **Attorney / local-resource referral checklist** — the referrals to make.
-8. **Missing facts** — facts the attorney will need, marked `not provided`.
-9. **Attorney verification questions** and **assumptions**.
+2. **Gates table** — parties and roles, jurisdiction, children involved, with status and source.
+3. **Safety/escalation flags** — the concerns raised, recorded neutrally, with the escalation routing for each.
+4. **Existing orders and incidents** — protective orders and described incidents, as stated, with sources and dates flagged.
+5. **Document checklist** — records the attorney may wish to review, framed as "if already available."
+6. **Attorney / local-resource referral checklist** — the referrals to make.
+7. **Missing facts** — facts the attorney will need, marked `not provided`.
+8. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 

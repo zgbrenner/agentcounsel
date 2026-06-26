@@ -1,6 +1,6 @@
 ---
 name: Offering Document Disclosure Review
-description: "Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness — to produce a draft section-by-section disclosure-gap matrix covering business description, risk factors, use of proceeds, MD&A consistency, related-party transactions, material developments not yet disclosed, forward-looking-statement framing, and selling-stockholder posture for attorney review — without concluding adequacy of disclosure or approving the filing."
+description: "Use when reviewing an offering document (S-1, S-3, S-4, prospectus supplement, PPM, OM) for disclosure completeness to produce a draft section-by-section disclosure-gap matrix with consistency flags for attorney review, without concluding adequacy of disclosure or approving the filing."
 practice_area: securities-capital-markets
 task_type: review
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Section Inventory and Risk-Factor Pass Summary"
+  - "Material-Developments-Not-Yet-Disclosed Matrix"
+  - "MD&A Consistency Pass and Cross-Filing Consistency Flags"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/risk-factor-review/SKILL.md
   - skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - offering-document-disclosure-review
+  - offering-document
+  - disclosure-review
+  - mdna-consistency
+  - disclosure-gap
 ---
 
 # Offering Document Disclosure Review

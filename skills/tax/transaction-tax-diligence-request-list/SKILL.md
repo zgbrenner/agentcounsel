@@ -110,17 +110,15 @@ Also out of scope (this skill does not): calculate tax exposure, liability, or a
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; not an
-   exposure estimate; qualified tax professional review required.
-2. **Gates table** — transaction type and stage, jurisdictions, role,
+1. **Gates table** — transaction type and stage, jurisdictions, role,
    workstreams in scope.
-3. **Transaction Tax Diligence Request List** — per the pattern in
+2. **Transaction Tax Diligence Request List** — per the pattern in
    `skills/tax/references/output-patterns.md`, organized by workstream with
    priority, rationale, owner, source/basis, and follow-up.
-4. **Follow-up tracker** — request | documents received | open follow-up |
+3. **Follow-up tracker** — request | documents received | open follow-up |
    status.
-5. **Missing information list** and **tax-professional questions**.
-6. **Assumptions and unresolved items**.
+4. **Missing information list** and **tax-professional questions**.
+5. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

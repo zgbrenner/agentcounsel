@@ -43,19 +43,9 @@ CHECKLIST_REPORT = REPORTS_DIR / "skill-quality-checklist.md"
 # not a skill. They have no SKILL.md and are not catalogued as skills.
 NON_SKILL_DIRS = {"references"}
 
-# Required H2 sections for every canonical skill, in order. Mirrors
-# scripts/validate_repo.py so the prompts ask for the same structure the
-# validator enforces.
-REQUIRED_SECTIONS = [
-    "Purpose",
-    "Use When",
-    "Required Inputs",
-    "Do Not Use When",
-    "Legal Safety Rules",
-    "Workflow",
-    "Output Format",
-    "Attorney Verification Checklist",
-]
+# Required H2 sections (bare titles), defined once in _shared, so the prompts
+# ask for the same structure validate_repo enforces.
+from _shared import REQUIRED_SECTIONS
 
 # Practice-area directory name -> display name. Anything not listed falls
 # back to a derived title and is grouped after the known areas.
@@ -90,15 +80,7 @@ def rel(path: Path) -> str:
         return str(path)
 
 
-def parse_frontmatter(text: str) -> tuple[str, str]:
-    """Return (frontmatter_text, body). Empty frontmatter if absent."""
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return "", text
-    for i in range(1, len(lines)):
-        if lines[i].strip() == "---":
-            return "\n".join(lines[1:i]), "\n".join(lines[i + 1:])
-    return "", text
+from _shared import split_frontmatter_text
 
 
 def frontmatter_value(fm_text: str, field: str) -> str:
@@ -162,7 +144,7 @@ class SkillRecord:
         self.area = area_display_name(self.area_key)
 
         text = (skill_dir / "SKILL.md").read_text(encoding="utf-8")
-        fm_text, body = parse_frontmatter(text)
+        fm_text, body = split_frontmatter_text(text)
 
         self.name = frontmatter_value(fm_text, "name") or derive_name(skill_dir)
         self.description = (

@@ -1,6 +1,6 @@
 ---
 name: Merger Antitrust Issue Spotter
-description: "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction — to produce a draft horizontal-overlap matrix, vertical-relationship matrix, potential/nascent-competition flags, adjacent-overlap (data/IP/labor/innovation) flags, per-jurisdiction filing-question list, diligence-request list, and pre-closing integration guardrails for attorney review — without defining markets, reaching reportability conclusions, predicting clearance, or evaluating competitive effects."
+description: "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction to organize draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence lists, and integration guardrails for attorney review, without defining markets or predicting clearance."
 practice_area: antitrust-competition
 task_type: analysis
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Horizontal Overlap Matrix and Vertical Relationship Matrix"
+  - "Potential/Nascent and Adjacent Overlap Flags"
+  - "Filing-Question List and Diligence Request List"
+  - "Integration Guardrails and attorney verification questions"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - merger-antitrust-issue-spotter
+  - merger-review
+  - horizontal-overlap
+  - vertical-foreclosure
+  - filing-questions
 ---
 
 # Merger Antitrust Issue Spotter

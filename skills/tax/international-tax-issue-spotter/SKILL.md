@@ -114,16 +114,14 @@ Also out of scope (this skill does not): conclude treaty benefits or withholding
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; no
-   cross-border treatment conclusion; tax counsel review required.
-2. **Gates table** — structure, jurisdictions, the user's role, tax period,
+1. **Gates table** — structure, jurisdictions, the user's role, tax period,
    review purpose.
-3. **International Tax Issue Map** — per the pattern in
+2. **International Tax Issue Map** — per the pattern in
    `skills/tax/references/output-patterns.md`; issues framed as questions.
-4. **Jurisdictions-involved summary**.
-5. **Missing facts list** and **document request list**.
-6. **Tax-counsel questions**.
-7. **Assumptions and unresolved items**.
+3. **Jurisdictions-involved summary**.
+4. **Missing facts list** and **document request list**.
+5. **Tax-counsel questions**.
+6. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

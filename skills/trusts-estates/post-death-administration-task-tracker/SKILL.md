@@ -35,7 +35,7 @@ Build a source-cited post-death administration task tracker — with a source,
 owner, status, dependency, and uncertainty flag for each task — so a qualified
 attorney can supervise estate or trust administration after a death. This skill
 organizes and tracks tasks; it calculates no deadlines and approves no
-distributions.
+distributions. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -108,16 +108,14 @@ Also out of scope (this skill does not): calculate probate, tax, or notice deadl
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   deadline calculation; no distribution approval; attorney review required.
-2. **Gates table** — decedent, the user's role, jurisdiction, estate/trust
+1. **Gates table** — decedent, the user's role, jurisdiction, estate/trust
    status, review purpose.
-3. **Post-death administration task tracker** — task | source | owner | status
+2. **Post-death administration task tracker** — task | source | owner | status
    | dependency | uncertainty flag.
-4. **Dates as provided** — each marked `[deadline verification required]`, with
+3. **Dates as provided** — each marked `[deadline verification required]`, with
    near-term dates flagged.
-5. **Missing information** and **attorney verification items**.
-6. **Assumptions and unresolved items**.
+4. **Missing information** and **attorney verification items**.
+5. **Assumptions and unresolved items**.
 
 The task tracker follows the **Post-Death Administration Task Tracker**
 structure in `skills/trusts-estates/references/output-patterns.md`.

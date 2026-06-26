@@ -109,17 +109,15 @@ Also out of scope (this skill does not): conclude nexus, taxability, a registrat
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not tax advice; no nexus or
-   taxability conclusion; qualified tax professional review required.
-2. **Gates table** — jurisdictions, taxpayer/entity type, product/service type,
+1. **Gates table** — jurisdictions, taxpayer/entity type, product/service type,
    tax period, role.
-3. **Sales / Use Tax Nexus Fact Map** — per the pattern in
+2. **Sales / Use Tax Nexus Fact Map** — per the pattern in
    `skills/tax/references/output-patterns.md`, one row per jurisdiction.
-4. **Jurisdiction tracker** — jurisdiction | facts captured | open questions |
+3. **Jurisdiction tracker** — jurisdiction | facts captured | open questions |
    status.
-5. **Missing facts list** and **document request list**.
-6. **Tax-professional questions**.
-7. **Assumptions and unresolved items**.
+4. **Missing facts list** and **document request list**.
+5. **Tax-professional questions**.
+6. **Assumptions and unresolved items**.
 
 ## Attorney Verification Checklist
 

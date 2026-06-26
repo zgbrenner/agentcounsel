@@ -36,7 +36,7 @@ Build a proof-of-claim preparation checklist and supporting-document tracker so
 a qualified attorney can prepare and review a proof of claim. This skill
 organizes what a proof of claim preparation requires; it does not prepare a
 filing-ready proof of claim and does not calculate a bar date or filing
-deadline.
+deadline. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -114,16 +114,14 @@ Also out of scope (this skill does not): prepare a filing-ready proof of claim o
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not a
-   filing-ready claim; no bar-date calculation; attorney review required.
-2. **Gates table** — claimant, debtor/case information, basis of claim, the
+1. **Gates table** — claimant, debtor/case information, basis of claim, the
    user's role.
-3. **Proof-of-claim preparation checklist** — item | status | source | note.
-4. **Supporting-document tracker** — checklist item | document | provided? |
+2. **Proof-of-claim preparation checklist** — item | status | source | note.
+3. **Supporting-document tracker** — checklist item | document | provided? |
    redaction needed?
-5. **Bar date as provided** — marked `[deadline verification required]`.
-6. **Missing information list**.
-7. **Attorney verification items** and **assumptions**.
+4. **Bar date as provided** — marked `[deadline verification required]`.
+5. **Missing information list**.
+6. **Attorney verification items** and **assumptions**.
 
 The preparation checklist follows the **Proof of Claim Preparation Checklist**
 structure in `skills/bankruptcy-restructuring/references/output-patterns.md`.

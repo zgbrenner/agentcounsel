@@ -1,6 +1,6 @@
 ---
 name: Exclusivity MFN Pricing Review
-description: "Use when reviewing exclusivity, MFN/parity, loyalty discount, rebate, or requirements provisions to produce a draft restraint-classification matrix, foreclosure-relevant facts table, narrow-vs-wide MFN map, loyalty/rebate structure analysis, and jurisdiction-specific framework questions (Sherman §1/§2, Article 101/102, UK CA98) for attorney review — without finding dominance, foreclosure, or legality."
+description: "Use when reviewing exclusivity, MFN/parity, loyalty, rebate, or requirements provisions to organize a draft restraint classification, foreclosure-relevant facts, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Restraint Inventory and classification matrix"
+  - "Foreclosure-Relevant Facts Table"
+  - "MFN/Parity Matrix and Loyalty/Rebate Structure Analysis"
+  - "Attorney verification questions and escalation triggers"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - exclusivity-mfn-pricing-review
+  - vertical-restraints
+  - exclusivity
+  - mfn
+  - foreclosure
 ---
 
 # Exclusivity MFN Pricing Review

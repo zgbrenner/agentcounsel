@@ -85,13 +85,12 @@ Also out of scope (this skill does not): recommend a custody outcome, a parentin
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no custody recommendation; no enforceability or best-interests conclusion; no deadline computed; attorney review required.
-2. **Safety note** — any safety provision or concern flagged and routed, or a plain statement that none surfaced.
-3. **Gates table** — parties and roles, children involved, existing/proposed, jurisdiction, with status and source.
-4. **Order-clarity checklist** — topic | clear / unclear / not addressed | section reference | neutral note.
-5. **Ambiguity table** — ambiguous term | section | the readings it is open to.
-6. **Missing details** — administration details not specified, marked `not found`.
-7. **Attorney verification questions** and **assumptions**.
+1. **Safety note** — any safety provision or concern flagged and routed, or a plain statement that none surfaced.
+2. **Gates table** — parties and roles, children involved, existing/proposed, jurisdiction, with status and source.
+3. **Order-clarity checklist** — topic | clear / unclear / not addressed | section reference | neutral note.
+4. **Ambiguity table** — ambiguous term | section | the readings it is open to.
+5. **Missing details** — administration details not specified, marked `not found`.
+6. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 

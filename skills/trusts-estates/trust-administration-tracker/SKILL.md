@@ -36,7 +36,7 @@ Build a source-cited trust administration task tracker — with a source,
 responsible party, status, dependency, and missing facts for each task — so a
 qualified attorney can supervise the administration. This skill organizes and
 tracks tasks; it approves no distribution and determines no beneficiary
-entitlement.
+entitlement. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -111,17 +111,14 @@ Also out of scope (this skill does not): approve a distribution; determine benef
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   distribution approval; no entitlement determination; attorney review
-   required.
-2. **Gates table** — trustee, jurisdiction, trust status, the user's role,
+1. **Gates table** — trustee, jurisdiction, trust status, the user's role,
    review purpose.
-3. **Trust administration task tracker** — task | source | responsible party |
+2. **Trust administration task tracker** — task | source | responsible party |
    status | dependency | missing facts.
-4. **Open disputes** — open disputes framed as questions for the attorney.
-5. **Missing facts** and **dates as provided** (each
+3. **Open disputes** — open disputes framed as questions for the attorney.
+4. **Missing facts** and **dates as provided** (each
    `[deadline verification required]`).
-6. **Attorney verification items** and **assumptions**.
+5. **Attorney verification items** and **assumptions**.
 
 The administration task tracker follows the **Trust Administration Tracker**
 structure in `skills/trusts-estates/references/output-patterns.md`.

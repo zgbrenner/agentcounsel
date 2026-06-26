@@ -86,15 +86,14 @@ Also out of scope (this skill does not): determine whether a subrogation, contri
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no determination of recovery rights or value; attorney review required.
-2. **Gates table** — recovery types in scope, user's role, responsible parties, jurisdiction, with status and source.
-3. **Loss summary** — 3-5 sentences: the loss and the recovery theories in scope at a glance.
-4. **Recovery fact map** — recovery theory | responsible party | supporting facts (source) | contract/policy basis (source) | open question for the attorney. Follows the Subrogation / Recovery Tracker pattern in `skills/insurance/references/output-patterns.md`.
-5. **Source table** — source-cited extraction of the loss, payment, contract, and policy facts the map relies on.
-6. **Evidence preservation** — evidence, sites, and records to preserve, with preservation concerns flagged.
-7. **Notices and litigation status** — recovery notices and litigation posture, source-cited.
-8. **Missing facts and document request list** — facts and documents needed, marked `not provided`/`unknown`/`ambiguous`.
-9. **Attorney verification questions** and **assumptions** — no recovery right or value is determined.
+1. **Gates table** — recovery types in scope, user's role, responsible parties, jurisdiction, with status and source.
+2. **Loss summary** — 3-5 sentences: the loss and the recovery theories in scope at a glance.
+3. **Recovery fact map** — recovery theory | responsible party | supporting facts (source) | contract/policy basis (source) | open question for the attorney. Follows the Subrogation / Recovery Tracker pattern in `skills/insurance/references/output-patterns.md`.
+4. **Source table** — source-cited extraction of the loss, payment, contract, and policy facts the map relies on.
+5. **Evidence preservation** — evidence, sites, and records to preserve, with preservation concerns flagged.
+6. **Notices and litigation status** — recovery notices and litigation posture, source-cited.
+7. **Missing facts and document request list** — facts and documents needed, marked `not provided`/`unknown`/`ambiguous`.
+8. **Attorney verification questions** and **assumptions** — no recovery right or value is determined.
 
 ## Attorney Verification Checklist
 

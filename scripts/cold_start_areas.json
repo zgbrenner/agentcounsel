@@ -1,0 +1,1102 @@
+{
+  "employment": {
+    "display_name": "Employment",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/employment/termination-risk/SKILL.md",
+      "skills/employment/worker-classification/SKILL.md",
+      "skills/employment/employee-policy-review/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which countries, states, or provinces does the group advise on employment matters most frequently?",
+        "Does the group handle matters before federal administrative agencies, state labor boards, or other tribunals — and if so, which?",
+        "Are there jurisdictions where the group operates under special constraints, local-counsel requirements, or sector-specific employment regimes?",
+        "Are remote-work arrangements creating multi-jurisdictional employment relationships the group must account for, and which jurisdictions are most affected?",
+        "Are there jurisdictions the group treats as out of scope entirely, requiring escalation or outside counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily employers, employees, HR / people-operations functions, or a mix? Confirm the default representation posture.",
+        "What types of employment matters does the group handle most frequently — terminations, classifications, policy work, separation agreements, investigations, agency responses, or others?",
+        "How is the team structured — employment partners, associates, HR-law specialists, paralegals, non-attorney professionals whose work must be supervised?",
+        "Are there business units, client categories, or counterparty categories (executives, regulated employees, unionized workforces) that require special handling or additional sign-off?",
+        "How does the group coordinate with external HR advisors, benefits counsel, or specialist immigration / executive-compensation counsel?"
+      ],
+      "escalation": [
+        "What classification scenarios — independent contractor vs. employee, exempt vs. non-exempt, statutory employee, dual-status worker — automatically require attorney review?",
+        "Which protected-characteristic or protected-activity scenarios require mandatory escalation, regardless of matter size?",
+        "Is there a headcount or payroll threshold for WARN-Act-type analysis, and a named contact for that escalation?",
+        "Which restrictive-covenant questions are treated as requiring outside counsel or specialist review?",
+        "What is the escalation path when an agency charge, complaint, or formal inquiry is filed against a client?",
+        "Who is the designated escalation contact for escalated employment matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should employment work product default to HR-facing summaries in plain language, attorney-facing legal memos, or both layered?",
+        "What format does the group use for separation-agreement and severance-agreement review — issue table, redline, or narrative memo?",
+        "Are there house style rules for risk ratings, action items, or open questions in employment work product?",
+        "Does the group produce employee-handbook sections or policy updates, and if so, in what format?",
+        "Are there particular deliverable types — investigation memos, classification analyses, WARN-style projections — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative source of truth for the current employee handbook, offer-letter templates, and separation-agreement templates? Where are they stored?",
+        "Is there an authoritative classification-review checklist for independent-contractor and exempt-status engagements?",
+        "What document governs the group's internal HR-investigation protocol?",
+        "Does the group maintain a wage-and-hour compliance checklist, and is it tied to specific jurisdictions?",
+        "Is there a non-compete / restrictive-covenant playbook, and is any of it under revision or pending update?"
+      ],
+      "standard_positions": [
+        "Is at-will employment the default in every jurisdiction where the group works, or are there exceptions?",
+        "What is the group's default position on worker classification when a new engagement type arises — and what triggers a classification escalation?",
+        "What is the group's default position on arbitration agreements in offer letters and handbooks?",
+        "What review and revocation periods does the group treat as standard in separation agreements, and how are these handled across jurisdictions?",
+        "What is the group's default posture on non-competes — narrow and time-limited, broader, or never-without-attorney-sign-off — and how does that vary by jurisdiction?",
+        "What is the group's default investigation-documentation standard?"
+      ],
+      "review_requirements": [
+        "At what stage of an employment matter does attorney review of work product become mandatory — intake, before any external communication, before any termination decision, before any agency response, or at other defined stages?",
+        "Are there work-product types for which attorney review is always required regardless of matter size — for example, separation agreements, agency responses, or any matter touching a protected characteristic?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, practice group lead, general counsel?",
+        "What is the expected turnaround for standard employment review, and how are urgent reviews (imminent termination, agency deadline) handled?",
+        "Is there a formal sign-off step — required signature, approval stamp, or logged confirmation — before a separation agreement is sent or a policy is distributed?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts, postures, or legal conclusions that agents must never assume without explicit confirmation — for example, that employment is at-will, that a worker is properly classified, that a release covers all claims, or that a handbook is current?",
+        "Are there protected-activity / retaliation-risk scenarios where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types or workforce populations (executives, unionized employees, regulated employees) where agents must never proceed beyond intake without direct attorney involvement?",
+        "Are there prior incidents, agency findings, or lessons learned that should be encoded as explicit prohibitions for agents working on employment matters?"
+      ]
+    },
+    "checklist_extras": [
+      "At-will posture and any jurisdiction-specific exceptions are accurately recorded `[verify jurisdiction]`.",
+      "Worker-classification defaults are consistent with the group's current escalation posture and reflect any pending regulatory changes `[Verify current law]`.",
+      "Non-compete and restrictive-covenant positions reflect the current enforceability landscape across in-scope jurisdictions `[verify jurisdiction]`.",
+      "Separation-agreement review-period and revocation-period defaults are consistent with applicable statutory requirements `[verify jurisdiction]` and all related deadlines are marked `[deadline verification required]`.",
+      "Investigation-documentation standard and retaliation-risk assessment posture reflect the group's current considered practice, not a provisional one."
+    ]
+  },
+  "ip": {
+    "display_name": "Intellectual Property",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/ip/trademark-clearance-triage/SKILL.md",
+      "skills/ip/fto-triage/SKILL.md",
+      "skills/ip/open-source-license-review/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which countries or territories does the group prosecute, defend, or counsel on IP matters most frequently?",
+        "Does the group handle multi-jurisdictional filings (PCT, Madrid Protocol, EUTM, Hague System), and how is jurisdiction coverage allocated across the team?",
+        "Are there sector-specific regimes the group regularly engages with — FDA-regulated technologies, export-controlled subject matter, semiconductor or AI-specific IP regimes?",
+        "Are there jurisdictions where the group works only through specified foreign counsel, and how is that allocation tracked?",
+        "Are there jurisdictions the group treats as out of scope entirely, requiring routing to specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily IP owners, IP users (licensees, defendants), or both? Confirm the default representation posture.",
+        "What types of IP matters does the group handle most frequently — prosecution, litigation, counseling, clearance, licensing, open-source compliance, trade-secret protection?",
+        "How is the team structured — registered patent attorneys / agents, trademark specialists, copyright counsel, technology specialists, paralegals?",
+        "Are there client industries or technology areas that require special handling or additional sign-off — for example, life sciences, semiconductor, AI, software?",
+        "How does the group coordinate with patent agents, foreign counsel, and specialist counsel (e.g., antitrust counsel for SEP/F-RAND matters)?"
+      ],
+      "escalation": [
+        "Which engagement types automatically require attorney review before reliance — clearance opinions, FTO opinions, validity opinions, infringement opinions, non-infringement opinions?",
+        "Are there bar-date or statutory-deadline events (patent on-sale, public-use, priority filing windows) that always require escalation?",
+        "Which industry-specific scenarios — standard-essential patents, F/RAND obligations, biosimilar disputes — require mandatory specialist involvement?",
+        "What scenarios touching open-source license obligations require mandatory escalation — e.g., copyleft license uses, dual-license obligations, redistribution events?",
+        "Who is the designated escalation contact for IP matters above the group's thresholds, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should IP work product default to formal legal-opinion format, triage / first-pass analysis format, or both layered?",
+        "What is the group's tiered framework for opinions — full reasoned opinion, short reasoned opinion, no-opinion triage? Where do clearance triages fit?",
+        "Are there house style rules for marking preliminary findings, risk indicators, or open questions in IP work product?",
+        "Does the group produce portfolio dashboards or status reports, and if so, in what format?",
+        "Are there particular deliverable types — invention disclosures, opinion drafts, cease-and-desist responses — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative source of truth for IP strategy, clearance criteria, and opinion templates?",
+        "Is there a written open-source policy or compliance program, and where is it stored?",
+        "Does the group maintain a trademark watch program or a docketing system, and what document governs its operation?",
+        "Is there a trade-secret protection policy or program documentation the group references?",
+        "Are there sector-specific reference materials (FDA Orange Book, biosimilars patent dance procedures, semiconductor licensing standards) the group treats as authoritative?"
+      ],
+      "standard_positions": [
+        "What clearance threshold triggers a full opinion vs. a triage assessment? How does the group calibrate that threshold?",
+        "What is the group's default position on open-source license usage — permissive vs. copyleft, redistribution thresholds, attribution / source-disclosure obligations?",
+        "What is the group's default trademark-watch posture — proactive opposition, defensive watch only, hybrid?",
+        "What is the group's default trade-secret marking, access-control, and departure-process posture?",
+        "Are there technology areas where the group will not opine without specific specialist review, regardless of urgency?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review become mandatory — any clearance triage that escalates, any opinion, any FTO assessment, any cease-and-desist response, any DMCA notice or counter-notice?",
+        "Are there matter types for which attorney review is always required regardless of size — for example, any opinion, any matter touching SEP/F-RAND, any matter touching a registered IP right?",
+        "What is the designated reviewer's role — registered patent attorney, supervising counsel, practice group lead, outside counsel?",
+        "What is the expected turnaround for clearance triage vs. full opinion review, and how are urgent reviews handled?",
+        "Is there a formal sign-off step before an opinion is delivered, a clearance is communicated, or a response is sent externally?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — for example, that a mark is clear, that a patent claim is anticipated, that an FTO opinion remains current, that an open-source license obligation has been satisfied?",
+        "Are there scenarios where an agent must stop and escalate rather than reason through independently — SEP licensing, biosimilars, willfulness questions, ITC posture?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — opinion-of-counsel work, validity opinions, willfulness opinions?",
+        "Are there prior incidents — adverse opinions, sanctions, regulator inquiries — that should be encoded as explicit prohibitions for agents working on IP matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including PCT, Madrid, EUTM, Hague, and any sector-specific regimes — is accurately recorded.",
+      "Foreign-counsel allocation by jurisdiction has been confirmed.",
+      "Opinion-tier framework (full opinion / short opinion / triage / no-opinion) is consistent with the group's current malpractice and engagement-letter posture `[ATTORNEY TO CONFIRM]`.",
+      "Open-source compliance program references are current `[Verify current law]`.",
+      "Bar-date and priority-filing escalation triggers are accurately captured and all related deadlines are marked `[deadline verification required]`."
+    ]
+  },
+  "ai-governance": {
+    "display_name": "AI Governance",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/ai-governance/ai-use-case-intake/SKILL.md",
+      "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
+      "skills/ai-governance/model-risk-triage/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions are the client's AI systems deployed, trained, or made available — including but not limited to EU (AI Act), US (federal and state, e.g., Colorado, NYC bias audit, California ADMT), UK, China, Brazil, and others?",
+        "Does the group advise on sector-specific AI regimes — FDA, HIPAA, FCRA, FTC, financial services, education, employment?",
+        "Are there jurisdictions where the group's clients face heightened AI regulation (e.g., EU AI Act high-risk-system obligations) that require special handling?",
+        "Are there jurisdictions or sectors the group treats as out of scope, requiring specialist outside counsel?",
+        "Does the group maintain jurisdiction-by-jurisdiction tracking of AI regulatory developments, and where is it stored?"
+      ],
+      "client_context": [
+        "Who are the primary clients of the AI-governance group — product teams, AI engineering, vendor management, executives, board, external clients?",
+        "What types of AI-governance matters does the group handle most frequently — use-case intake, vendor terms review, feature reviews, incident response, policy work, regulatory advice?",
+        "How is the team structured, and how does it coordinate with privacy counsel, security counsel, and product counsel?",
+        "Are there model types (foundation models, fine-tuned models, retrieval-augmented systems, agentic systems) or use cases (employment decisions, biometric, child-facing, healthcare) that require special handling?",
+        "How does the group engage with the client's AI risk committee, ethics board, or analogous governance function?"
+      ],
+      "escalation": [
+        "Which use-case categories automatically require escalation — EU AI Act high-risk uses, biometric categorization or remote biometric identification, automated employment decisions, education decisions, lending decisions, child-directed systems?",
+        "What model events trigger escalation — base-model change, training-data source change, deployment to new region, deployment to consumer-facing context?",
+        "When does an AI incident (model failure, hallucination causing harm, prompt-injection-driven action, bias finding) require immediate attorney involvement?",
+        "What vendor-terms scenarios require escalation — vendor training rights on customer data, retention rights, indemnification gaps, sub-processor scope?",
+        "Who is the designated escalation contact for AI-governance matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should AI-governance work product default to AI impact assessment format, use-case intake checklist format, gap analysis, or memo format?",
+        "What level of detail does the practice group expect — executive summary only, full risk register, both layered?",
+        "Are there house style rules for risk ratings, mitigation recommendations, or open questions in AI work product?",
+        "Does the group produce model cards, AI system inventories, or AI registers, and if so, in what format?",
+        "Are there particular deliverable types — vendor terms review, feature launch review, incident memo — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative source of truth for the AI policy, AI principles, and risk-classification taxonomy?",
+        "Is there an authoritative AI use-case register or inventory? Where is it stored, and how is it kept current?",
+        "What document governs the group's vendor-evaluation criteria for AI vendors?",
+        "Is there an AI-incident response playbook, and what document governs it?",
+        "Are there sector-specific reference materials (e.g., FDA AI/ML guidance, HHS guidance on AI in healthcare) the group treats as authoritative?"
+      ],
+      "standard_positions": [
+        "What is the group's default posture on training-data sourcing — permissible sources, prohibited sources, due-diligence requirements?",
+        "What is the group's default consent posture for personalization, profiling, or training-data uses involving personal data?",
+        "What is the group's default human-in-the-loop posture for decision-supporting AI vs. decision-making AI?",
+        "What is the group's default logging, audit, and explainability posture for high-risk uses?",
+        "What is the group's default vendor-terms position on training rights, retention rights, and indemnification?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of AI work product become mandatory — at use-case intake, before any model deployment, before any vendor signing, before any high-risk deployment, before any consumer-facing launch?",
+        "Are there matter types for which attorney review is always required regardless of stage — any high-risk system, any biometric system, any automated employment or lending decision?",
+        "What is the designated reviewer's role — AI counsel, supervising attorney, AI risk committee chair, general counsel?",
+        "What is the expected turnaround for standard AI-governance review, and how are urgent reviews (incident, regulator inquiry) handled?",
+        "Is there a formal sign-off step before an AI feature is launched, a vendor agreement is signed, or an incident response is communicated externally?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that training data is lawfully sourced, that a model output is non-hallucinated, that a vendor's model card is current, that a use case is low-risk?",
+        "Are there AI-specific risks — bias, hallucination, prompt injection, data exfiltration, model inversion, IP leakage — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — incidents, regulator inquiries, high-risk deployments?",
+        "Are there prior incidents, regulator findings, or lessons learned that should be encoded as explicit prohibitions for agents working on AI-governance matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including EU AI Act, US state laws, sector-specific regimes — is accurately recorded `[Verify current law]`.",
+      "High-risk use-case definitions and escalation triggers are consistent with the EU AI Act framework and any other applicable framework `[verify jurisdiction]`.",
+      "Vendor-terms default positions reflect the current threat landscape (training rights, data retention, indemnification, sub-processor flow-down).",
+      "Incident-response posture is current and aligned with applicable breach-notification obligations `[verify jurisdiction]` and all incident deadlines are marked `[deadline verification required]`.",
+      "AI register / inventory is referenced and the maintenance owner is named."
+    ]
+  },
+  "m-and-a": {
+    "display_name": "M&A",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
+      "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+      "skills/m-and-a/closing-deliverables-tracker/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which countries, states, or provinces does the group form deal entities, perform diligence, and close transactions most frequently?",
+        "Does the group regularly engage cross-border deals, and which deal-side jurisdictions (target operations, regulatory reach) drive most of that work?",
+        "Are there merger-control regimes (HSR, EU, UK, China, India, Brazil) the group regularly files in, and which counsel handles each?",
+        "Does the group regularly engage with foreign-investment-screening regimes (CFIUS, EU FDI, UK NSIA, China security review)?",
+        "Are there sectors or jurisdictions the group treats as out of scope, requiring specialist counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily buy-side, sell-side, or both?",
+        "Are clients primarily financial sponsors, strategics, founders, family offices, or a mix? Confirm the default representation profile.",
+        "How is the team structured — partners, associates, deal coordinators, specialists embedded (tax, IP, antitrust, employment, environmental)?",
+        "Are there client industries or deal types that require special handling — regulated industries, public-company targets, distressed M&A, private-equity portfolio activity?",
+        "How does the group coordinate with specialist counsel (tax, IP, antitrust, environmental, employment) on deal teams?"
+      ],
+      "escalation": [
+        "Which deal characteristics automatically require escalation or specialist involvement — cross-border, public-company target, regulated industry, sanctioned-counterparty risk, antitrust filing, foreign-investment screening?",
+        "Are there transaction-size or deal-value thresholds that trigger escalation, and what are they?",
+        "When does a reps-and-warranties insurance question, a tax-structuring question, or an antitrust-clearance question require mandatory specialist involvement?",
+        "Which due-diligence findings (material liabilities, fraud indicia, customer concentration concerns) require partner-level escalation regardless of stage?",
+        "Who is the designated escalation contact for M&A matters above the group's thresholds, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should M&A work product default to diligence-report format, issues memo, redline + markup format, or closing-checklist format?",
+        "What level of detail does the practice group expect for diligence reports — executive summary, full issue-by-issue analysis, both layered?",
+        "Are there house style rules for risk ratings, deal-breaker flags, or negotiation-leverage notes in M&A work product?",
+        "Does the group produce closing certificates, closing memos, or integration plans in a standard format?",
+        "Are there particular deliverable types — reps & warranties analysis, MAE assessment, indemnification scorecard — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative form purchase agreement (or library of forms), and where is it stored?",
+        "Is there a reps and warranties schedule library, and how is it kept current?",
+        "What document governs the group's closing-checklist template?",
+        "Does the group maintain a diligence-request-list template, and is it tailored by deal type or sector?",
+        "Is there an integration-playbook reference, and where is it stored?"
+      ],
+      "standard_positions": [
+        "What is the group's default position on indemnification — caps, baskets, deductibles, exclusivity of remedy, sandbagging?",
+        "What is the group's default MAE / MAC definition framework?",
+        "What is the group's default reps & warranties insurance posture — required, preferred, situational?",
+        "What is the group's default position on specific performance, expense reimbursement, or termination fees?",
+        "What is the group's default preference between equity and asset structures, and what factors drive deviation?",
+        "What is the group's default approach to escrows, working-capital adjustments, and earnouts?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of M&A work product become mandatory — initial diligence summary, LOI, definitive agreement, closing certificates, post-closing integration?",
+        "Are there work-product types for which attorney review is always required regardless of stage — any definitive agreement, any reps & warranties policy, any HSR filing, any CFIUS filing?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, deal partner, general counsel, board?",
+        "What is the expected turnaround for definitive-agreement markups, and how are urgent reviews (signing readiness, closing-day issues) handled?",
+        "Is there a formal sign-off step before signing, before closing, or before delivering any closing certificate?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that an entity is in good standing, that quorum was duly met, that filings have been made, that consents are duly authorized, that reps survive in the form drafted?",
+        "Are there M&A-specific risks — fraud, undisclosed liabilities, customer concentration, regulatory non-compliance — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — public-company targets, distressed transactions, sanctioned-counterparty risk, hostile transactions?",
+        "Are there prior incidents — failed deals, post-closing claims, regulator inquiries — that should be encoded as explicit prohibitions for agents working on M&A matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including merger-control and foreign-investment-screening regimes — is accurately recorded.",
+      "Specialist-counsel allocation (tax, antitrust, IP, environmental, employment, regulatory) on deal teams is current.",
+      "Indemnification, MAE, and reps-and-warranties insurance defaults reflect the group's current market posture.",
+      "Closing checklists and reps schedules referenced are current.",
+      "Signing, closing, and filing deadlines are marked `[deadline verification required]` in any deliverable that depends on them."
+    ]
+  },
+  "tax": {
+    "display_name": "Tax",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/tax/tax-issue-intake/SKILL.md",
+      "skills/tax/international-tax-issue-spotter/SKILL.md",
+      "skills/tax/sales-use-tax-nexus-triage/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions does the group advise — US federal, US state and local (and which states are most common), international, treaty-based?",
+        "Does the group handle cross-border matters routinely, and which treaty relationships drive most of that work?",
+        "Are there sales-and-use, VAT/GST, transfer-pricing, or other transactional regimes the group regularly advises on?",
+        "Are there jurisdictions where the group works only through specified foreign tax counsel, and how is that allocation tracked?",
+        "Are there jurisdictions the group treats as out of scope, requiring specialist outside tax counsel?"
+      ],
+      "client_context": [
+        "What types of tax matters does the group handle most frequently — planning, controversy, transactional, compliance support, opinions?",
+        "Are clients primarily corporate, partnership/LLC, high-net-worth individual, tax-exempt, or a mix?",
+        "How is the team structured — tax partners, associates, LL.M.-tax specialists, transfer-pricing economists, CPAs supporting the team?",
+        "How does the group coordinate with accountants, transfer-pricing economists, and external tax preparers?",
+        "Are there client categories — financial sponsors, REITs, tax-exempt entities, multinationals — that require special handling?"
+      ],
+      "escalation": [
+        "Which tax matters automatically require escalation — cross-border structuring, transfer pricing, tax-exempt entity questions, IRS audit / agency inquiry, ruling requests, M&A tax structuring?",
+        "Are there transaction-value or tax-amount thresholds that trigger escalation, and what are they?",
+        "When does a tax position rise to a 'reportable transaction' or other disclosure-required posture that requires immediate review?",
+        "Which tax-opinion requests (will / should / would / more-likely-than-not) require partner-level review regardless of size?",
+        "Who is the designated escalation contact for tax matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should tax work product default to formal memo format, structuring deck, opinion letter, or controversy-defense memo?",
+        "What level of detail does the practice group expect — executive summary, full citation-supported analysis, both layered?",
+        "Are there house style rules for citation format, levels of assurance (will / should / more-likely-than-not), or 'wandering issues' flagging in tax work product?",
+        "Does the group produce structuring decks or step plans, and if so, in what format?",
+        "Are there particular deliverable types — opinion letters, ruling requests, controversy memos — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative tax-positions library, and where is it stored?",
+        "Is there a transfer-pricing policy or documentation framework, and how is it kept current?",
+        "What document governs the group's M&A tax-structuring playbook?",
+        "Are there controversy precedents (prior audit defense, prior IRS appeals, prior ruling requests) the group treats as authoritative for similar matters?",
+        "Is there a tax-elections checklist or treasury-checklist the group references?"
+      ],
+      "standard_positions": [
+        "What is the group's default assurance-level framework — when do matters warrant a will opinion, a should opinion, a more-likely-than-not opinion?",
+        "What is the group's default chain-of-authority approach — strict reliance on primary authority, layered approach, or other?",
+        "What is the group's default substance-over-form posture — strict, deferential, mixed?",
+        "What is the group's default position on reportable-transaction disclosure?",
+        "What is the group's default approach to tax-exempt entity matters, if applicable?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of tax work product become mandatory — initial issue spotting, opinion drafting, ruling submission, controversy filings?",
+        "Are there work-product types for which attorney review is always required regardless of size — any opinion, any IRS submission, any structuring memo on a multi-step plan, any tax position taken on a return?",
+        "What is the designated reviewer's role — handling attorney, supervising tax partner, LL.M. specialist, peer reviewer?",
+        "What is the expected turnaround for opinion review, and how are urgent reviews (filing deadlines, audit responses) handled?",
+        "Is there a formal sign-off step before an opinion is delivered, a ruling is submitted, or a tax position is communicated to the client?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that a tax position is sustained on audit, that an entity classification is current, that a treaty applies, that a ruling continues to bind, that an exemption is preserved?",
+        "Are there tax-specific risks — substance over form, economic substance, reportable transaction, anti-abuse — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — opinions, rulings, structuring on multi-step plans, controversy filings?",
+        "Are there prior incidents — adverse audit findings, IRS challenges, sanctions — that should be encoded as explicit prohibitions for agents working on tax matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — federal, state, local, international, treaty — is accurately recorded `[Verify current law]`.",
+      "Assurance-level framework (will / should / more-likely-than-not / reasonable basis) is current and tied to the group's engagement-letter and malpractice posture `[ATTORNEY TO CONFIRM]`.",
+      "Reportable-transaction disclosure framework reflects current IRS guidance `[Verify current law]`.",
+      "Tax-positions library references are current and version-controlled.",
+      "Statute-of-limitations and filing-deadline triggers in any related matters are marked `[deadline verification required]`."
+    ]
+  },
+  "trusts-estates": {
+    "display_name": "Trusts and Estates",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/trusts-estates/estate-planning-intake/SKILL.md",
+      "skills/trusts-estates/post-death-administration-task-tracker/SKILL.md",
+      "skills/trusts-estates/trust-administration-tracker/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which states or countries does the group regularly handle estate-planning and trust-administration matters?",
+        "Are there situs questions the group routinely encounters — trust situs, real-property situs, multi-state property, foreign-property holdings?",
+        "Does the group regularly handle non-resident-alien beneficiaries, international beneficiaries, or international estate-tax exposures?",
+        "Are there jurisdictions the group treats as out of scope (e.g., specialized offshore jurisdictions), requiring specialist counsel?",
+        "Does the group maintain jurisdiction-by-jurisdiction reference materials on estate, inheritance, GST, and gift-tax regimes?"
+      ],
+      "client_context": [
+        "What types of trusts-and-estates matters does the group handle most frequently — estate planning, trust administration, probate, contested matters, charitable structures?",
+        "Are clients primarily ultra-high-net-worth, high-net-worth, general estate-planning, family offices, or institutional fiduciaries?",
+        "How is the team structured — partners, associates, paralegals, trust officers, fiduciary administrators?",
+        "How does the group coordinate with corporate fiduciaries, tax advisors, accountants, and investment advisors?",
+        "Are there client categories — multi-generational families, blended families, special-needs beneficiaries, business-owning families — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — contested matters, capacity questions, undue-influence concerns, tax-driven structures, charitable-structure design, international situs?",
+        "Are there asset-value thresholds (total estate value, single-trust value, gift-tax-exposure value) that trigger escalation?",
+        "When does a fiduciary-conflict question — including a question about the group's own duties — require immediate review?",
+        "Which trust-administration events (significant distribution, modification, decanting, termination) require attorney review regardless of size?",
+        "Who is the designated escalation contact for trusts-and-estates matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should trusts-and-estates work product default to memo format, structured intake format, trust-administration tracker format, or document drafts?",
+        "What level of detail does the practice group expect — executive summary, full reasoning, both layered?",
+        "Are there house style rules for risk ratings, contested-matter flags, or open-items lists in trusts-and-estates work product?",
+        "Does the group produce funding checklists, trust-administration calendars, or estate-administration timelines in a standard format?",
+        "Are there particular deliverable types — estate-tax memos, fiduciary accounting reviews, trustee-decision memos — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative estate-planning intake instrument, and where is it stored?",
+        "Is there a trust-administration playbook or calendar template, and how is it kept current?",
+        "What document governs the group's standard testamentary-document library — wills, trusts, powers, healthcare directives?",
+        "Are there sample-document libraries for non-standard structures (dynasty trusts, GRATs, ILITs, charitable trusts) the group treats as authoritative?",
+        "Does the group maintain jurisdiction-specific reference materials for estate, gift, GST, and inheritance taxes?"
+      ],
+      "standard_positions": [
+        "What is the group's default capacity-assessment threshold, and how does it integrate medical or other evidence?",
+        "What is the group's default revocable-trust posture — revocable trust as core estate-planning tool, or will-based planning with trusts as supplements?",
+        "What is the group's default position on powers of appointment, decanting, and trust-modification mechanisms?",
+        "What is the group's default portability election posture?",
+        "What is the group's default approach to charitable structures (private foundations, donor-advised funds, charitable trusts)?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of estate-planning work product become mandatory — initial intake, draft document, signing, post-signing?",
+        "Are there work-product types for which attorney review is always required regardless of size — any will, any trust agreement, any tax election, any contested-matter filing, any fiduciary-conflict memo?",
+        "What is the designated reviewer's role — handling attorney, supervising partner, designated fiduciary attorney?",
+        "What is the expected turnaround for standard document review, and how are urgent reviews (terminal-illness drafting, deadline-driven elections) handled?",
+        "Is there a formal sign-off step before a document is finalized, an election is filed, or a trustee decision is communicated?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that capacity is intact, that no undue influence applies, that an estate is non-taxable, that a trust is properly funded, that a beneficiary designation is current?",
+        "Are there trusts-and-estates risks — capacity, undue influence, fiduciary breach, fraudulent transfer, tax-driven recharacterization — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — contested matters, will contests, trust contests, fiduciary-conflict matters?",
+        "Are there prior incidents — adverse judgments, fiduciary findings, malpractice claims — that should be encoded as explicit prohibitions for agents working on trusts-and-estates matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including situs and multi-state property — is accurately recorded `[verify jurisdiction]`.",
+      "Capacity-assessment threshold reflects the group's current considered posture, not a provisional one.",
+      "Tax-driven structures and elections are tied to current authority `[Verify current law]` and all related deadlines are marked `[deadline verification required]`.",
+      "Fiduciary-conflict protocols are accurately recorded and consistent with applicable professional-responsibility rules.",
+      "Confidentiality posture protects beneficiary information at the appropriate level."
+    ]
+  },
+  "real-estate": {
+    "display_name": "Real Estate",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/real-estate/psa-review/SKILL.md",
+      "skills/real-estate/commercial-lease-review/SKILL.md",
+      "skills/real-estate/title-survey-objection-tracker/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which states or countries does the group handle real-estate matters most frequently — commercial, residential, industrial, mixed?",
+        "Does the group regularly engage with multi-state portfolios, and which jurisdictions are most common?",
+        "Are there municipal regimes — rent control / RSO, transfer-tax rules, building-code regimes — that drive a meaningful share of the work?",
+        "Does the group regularly engage with foreign-jurisdiction property matters?",
+        "Are there sectors or jurisdictions the group treats as out of scope, requiring specialist counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily owners, tenants, lenders, developers, REITs, or a mix?",
+        "What types of real-estate matters does the group handle most frequently — acquisitions and dispositions, leasing, development, financing, title resolution, environmental, zoning?",
+        "How is the team structured — partners, associates, paralegals, title specialists, surveyors?",
+        "Are there asset types (multifamily, office, industrial, retail, hospitality, mixed-use) that require special handling?",
+        "How does the group coordinate with title insurance, lenders, environmental consultants, and zoning counsel?"
+      ],
+      "escalation": [
+        "Which findings automatically require escalation — title defect (encumbrance, easement, lien), zoning non-conformity, environmental issue (CERCLA, state superfund, brownfield), historic-preservation issue?",
+        "Are there deal-value thresholds that trigger escalation?",
+        "When does a rent-control / RSO question or a fair-housing question require immediate specialist involvement?",
+        "Which lender-required deliverables (SNDA, estoppel, non-disturbance) require partner-level review regardless of stage?",
+        "Who is the designated escalation contact for real-estate matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should real-estate work product default to issue-list format, redline format, closing-checklist format, or narrative memo?",
+        "What level of detail does the practice group expect for diligence reports — executive summary, full issue analysis, both layered?",
+        "Are there house style rules for risk ratings, deal-breaker flags, or open-items lists in real-estate work product?",
+        "Does the group produce lease abstracts, title-objection letters, or closing memos in a standard format?",
+        "Are there particular deliverable types — title objections, estoppel certificates, environmental memos — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative lease-template library, and where is it stored?",
+        "Is there a closing-checklist template, and how is it tailored by asset class or jurisdiction?",
+        "What document governs the group's title-objection or title-objection-letter framework?",
+        "Are there environmental-review checklists or guidance the group treats as authoritative?",
+        "Does the group maintain a jurisdiction-by-jurisdiction reference on transfer taxes, recording requirements, and local-rule peculiarities?"
+      ],
+      "standard_positions": [
+        "What is the group's default SNDA posture — required, preferred, negotiable?",
+        "What is the group's default estoppel content — minimum content, expanded content?",
+        "What is the group's default position on lender approval rights, particularly for transfers and leasing decisions?",
+        "What is the group's default position on permitted-use carveouts, exclusive-use clauses, and radius restrictions?",
+        "What is the group's default lien-priority posture and approach to subordination?",
+        "What is the group's default approach to environmental reps and indemnities?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of real-estate work product become mandatory — initial diligence summary, LOI, definitive agreement, closing certificates, post-closing matters?",
+        "Are there work-product types for which attorney review is always required regardless of size — any deed, any lease above a threshold, any title-objection letter, any environmental memo?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, partner, general counsel?",
+        "What is the expected turnaround for definitive-agreement and lease review, and how are urgent reviews (closing-day issues, title-clearance pressures) handled?",
+        "Is there a formal sign-off step before closing, before recording, or before delivering any closing certificate?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that title is clean, that zoning is conforming, that no environmental issues exist, that lender consent is given, that no easements affect use?",
+        "Are there real-estate risks — environmental, title, zoning, rent-control, fair-housing — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — environmental contamination, title disputes, zoning variance applications?",
+        "Are there prior incidents — failed closings, title disputes, environmental claims — that should be encoded as explicit prohibitions for agents working on real-estate matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including municipal regimes — is accurately recorded.",
+      "Title, environmental, and zoning escalation triggers are accurately recorded.",
+      "Lender-required deliverables (SNDA, estoppel, non-disturbance) defaults reflect current market practice.",
+      "Transfer-tax, recording, and filing deadlines are marked `[deadline verification required]` in any related deliverable.",
+      "Environmental-risk posture is current and tied to applicable CERCLA / state superfund / brownfield frameworks `[Verify current law]`."
+    ]
+  },
+  "securities-capital-markets": {
+    "display_name": "Securities and Capital Markets",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md",
+      "skills/securities-capital-markets/offering-document-disclosure-review/SKILL.md",
+      "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions does the group advise on securities matters — US (SEC, FINRA, state blue-sky), UK (LSE), Canada (TSX), Hong Kong, Singapore, others?",
+        "Does the group regularly engage with foreign listing exchanges or ADR programs?",
+        "Are there sector-specific securities regimes (banking, insurance, energy) the group regularly engages with?",
+        "Does the group regularly engage with private-placement regimes across multiple jurisdictions?",
+        "Are there jurisdictions or sectors the group treats as out of scope, requiring specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily issuers, underwriters, placement agents, investors, or a mix?",
+        "What types of securities matters does the group handle most frequently — public-company reporting, capital raises (IPO, follow-on, debt), M&A securities-side, private placements, advisory?",
+        "How is the team structured — partners, associates, capital-markets specialists, public-company-reporting specialists?",
+        "How does the group coordinate with auditors, financial printers, transfer agents, and stock exchanges?",
+        "Are there client categories — emerging-growth companies, smaller reporting companies, foreign private issuers, sponsors with multiple portfolio companies — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — material non-disclosure, Reg FD risk, insider-trading risk, Reg S-X audit issue, non-GAAP measure compliance, SEC inquiry, SEC investigation?",
+        "Are there transaction-size or registration-status thresholds that trigger escalation?",
+        "When does a materiality question, a disclosure question, or a Reg-FD question require immediate review?",
+        "Which deliverables (registration statement, periodic report, press release, Form 8-K) require partner-level review regardless of stage?",
+        "Who is the designated escalation contact for securities matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should securities work product default to memo format, disclosure-issue list format, redline format, or closing-checklist format?",
+        "What level of detail does the practice group expect — executive summary, full citation-supported analysis, both layered?",
+        "Are there house style rules for citation format, materiality flags, or open-items lists in securities work product?",
+        "Does the group produce comfort-letter backup requests, closing-checklist drafts, or D&O questionnaire summaries in standard formats?",
+        "Are there particular deliverable types — registration statements, periodic reports, press releases — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative library of registration-statement and periodic-report templates, and where is it stored?",
+        "Is there a comfort-letter backup or due-diligence template, and how is it kept current?",
+        "What document governs the group's closing-checklist template for offerings?",
+        "Are there D&O questionnaires, officer-and-director questionnaire templates, or other diligence instruments the group treats as authoritative?",
+        "Does the group maintain a sector-specific reference for offering disclosures, MD&A, or non-GAAP measure compliance?"
+      ],
+      "standard_positions": [
+        "What is the group's default materiality threshold framework, and how is it documented?",
+        "What is the group's default Reg FD posture — who has authority to speak with analysts, how is selective disclosure prevented, what are the contemporaneous-public-disclosure rules?",
+        "What is the group's default selective-disclosure protocol?",
+        "What is the group's default non-GAAP measure usage and reconciliation framework?",
+        "What is the group's default approach to insider-trading windows, blackout periods, and 10b5-1 plans?",
+        "What is the group's default approach to forward-looking-statement safe-harbor framing?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of securities work product become mandatory — drafting stage, financial-printer proof stage, filing stage, post-filing amendment stage?",
+        "Are there work-product types for which attorney review is always required regardless of size — any prospectus, any periodic report, any earnings release, any Form 8-K, any private-placement memo?",
+        "What is the designated reviewer's role — handling attorney, supervising securities partner, disclosure committee chair, general counsel?",
+        "What is the expected turnaround for periodic-report review, and how are urgent reviews (8-K events, earnings releases, market-moving developments) handled?",
+        "Is there a formal sign-off step — disclosure committee, officer certifications, attorney certification — before any filing or release?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that a transaction is exempt from registration, that materiality is settled, that selective disclosure does not occur, that audit comfort is reliable, that a press release is consistent with prior public disclosure?",
+        "Are there securities-specific risks — insider trading, Reg FD violation, material non-disclosure, ITC posture, foreign-issuer disclosure — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — any registration statement, any 8-K event, any private-placement memo, any securities-fraud claim?",
+        "Are there prior incidents — SEC inquiries, comment letters, restatements — that should be encoded as explicit prohibitions for agents working on securities matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including foreign exchanges and ADR programs — is accurately recorded.",
+      "Reporting calendar and filing deadlines are accurately captured and marked `[deadline verification required]` in any related deliverable.",
+      "Disclosure committee structure and Reg FD protocol reflect the group's current considered practice `[ATTORNEY TO CONFIRM]`.",
+      "Materiality, non-GAAP, and forward-looking-statement defaults reflect current SEC guidance `[Verify current law]`.",
+      "Insider-trading windows, blackout periods, and 10b5-1 plan defaults are current."
+    ]
+  },
+  "regulatory": {
+    "display_name": "Regulatory",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/regulatory/compliance-gap-matrix/SKILL.md",
+      "skills/regulatory/compliance-program-tracker/SKILL.md",
+      "skills/regulatory/enforcement-risk-memo/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions and before which agencies does the group regularly practice — US federal agencies (which ones), US state agencies, foreign regulators, multi-jurisdictional matters?",
+        "What sectors does the group regularly engage with — energy, telecom, healthcare, financial services, transportation, environment, consumer protection?",
+        "Are there sectors or agencies the group treats as out of scope, requiring specialist outside counsel?",
+        "Does the group maintain agency-specific or sector-specific reference materials, and where are they stored?",
+        "Does the group track foreign regulatory developments that affect US clients (e.g., EU regulatory parallels)?"
+      ],
+      "client_context": [
+        "Does the group represent primarily regulated entities, complainants, intervenors, or a mix?",
+        "What types of regulatory matters does the group handle most frequently — advisory, rulemaking participation, license / permit, enforcement defense, agency engagement?",
+        "How is the team structured — sector specialists, generalist regulatory counsel, paralegals, consultant relationships?",
+        "How does the group coordinate with sector technical experts, government-affairs counsel, lobbyists, and trade associations?",
+        "Are there client categories — public-utility holding companies, hospitals, banks, broker-dealers — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — regulatory inquiry, subpoena / CID, sanctions risk, license / permit revocation, rulemaking participation above threshold?",
+        "Are there sector-specific scenarios — bank examiner inquiry, FDA warning letter, FTC investigative demand — that require immediate review?",
+        "When does an agency engagement (informal meeting, settlement discussion, consent decree negotiation) require partner-level involvement?",
+        "Which rulemaking matters (notice-and-comment, hearing participation, ex parte) require attorney review regardless of size?",
+        "Who is the designated escalation contact for regulatory matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should regulatory work product default to memo format, agency-letter format, comment-letter format, or compliance-checklist format?",
+        "What level of detail does the practice group expect — executive summary, full reasoning with agency-precedent citations, both layered?",
+        "Are there house style rules for citation format (agency decisions, no-action letters, guidance documents), risk ratings, or open-items lists?",
+        "Does the group produce rulemaking-comment letters or compliance-program review memos in standard formats?",
+        "Are there particular deliverable types — agency responses, comment letters, enforcement-defense memos — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative library of agency-precedent references, and where is it stored?",
+        "Is there a regulatory-tracking system (rulemaking docket, enforcement actions, agency-guidance changes), and how is it kept current?",
+        "What document governs the group's comment-letter framework?",
+        "Are there compliance-program-review templates or audit-checklist templates the group treats as authoritative?",
+        "Does the group maintain agency-specific protocols for informal contacts, voluntary disclosures, and settlement engagement?"
+      ],
+      "standard_positions": [
+        "What is the group's default regulatory engagement posture — proactive engagement, reactive engagement, situational?",
+        "What is the group's default rulemaking-participation threshold — what types of rulemakings warrant a comment letter, and what types warrant a presence at hearings?",
+        "What is the group's default approach to voluntary disclosures — when warranted, what scope?",
+        "What is the group's default comment-letter framework — issue spotting, position taking, both?",
+        "What is the group's default compliance-program-review posture for new regulatory regimes?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of regulatory work product become mandatory — initial intake, draft comment letter, draft agency response, draft compliance-program update?",
+        "Are there work-product types for which attorney review is always required regardless of size — any agency filing, any rulemaking comment, any voluntary disclosure, any consent-decree negotiation?",
+        "What is the designated reviewer's role — handling attorney, supervising sector partner, regulatory specialist?",
+        "What is the expected turnaround for regulatory review, and how are urgent reviews (agency-deadline-driven, enforcement matters) handled?",
+        "Is there a formal sign-off step before any agency submission or rulemaking comment is filed?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that a regulation is current, that an interpretation is binding, that an exemption applies, that an enforcement action is unlikely, that an agency precedent is on point?",
+        "Are there regulatory risks — investigation, enforcement, license-revocation, criminal referral — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — agency investigations, consent-decree matters, enforcement defense?",
+        "Are there prior incidents — adverse enforcement actions, consent decrees, regulatory findings — that should be encoded as explicit prohibitions for agents working on regulatory matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Agency / jurisdiction coverage and sector specialization are accurately recorded.",
+      "Regulatory-tracking system reference is current and maintenance owner is named.",
+      "Voluntary-disclosure framework and rulemaking-participation thresholds reflect the group's current considered posture.",
+      "Agency deadlines (comment periods, response windows, hearing dates) are marked `[deadline verification required]` in any related deliverable.",
+      "Current-law verification is required for any analysis that turns on a regulation, agency interpretation, or guidance document `[Verify current law]`."
+    ]
+  },
+  "antitrust-competition": {
+    "display_name": "Antitrust / Competition",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
+      "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
+      "skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which competition regimes does the group regularly practice — US (DOJ, FTC, state AGs), EU, UK CMA, China SAMR, Brazil CADE, India CCI, others?",
+        "Does the group regularly handle multi-jurisdictional merger-clearance filings, and how is that allocation across jurisdictions tracked?",
+        "Are there sectors — financial services, agriculture, communications, healthcare, technology platforms — the group regularly engages with that have specialized competition frameworks?",
+        "Are there jurisdictions the group treats as out of scope, requiring specialist outside counsel?",
+        "Does the group maintain jurisdiction-by-jurisdiction reference materials on merger thresholds, dominance frameworks, and enforcement priorities?"
+      ],
+      "client_context": [
+        "Does the group represent primarily corporate clients (counseling), M&A clients (clearance), investigation targets (defense), private-litigation parties, or a mix?",
+        "What types of competition matters does the group handle most frequently — clearance, compliance counseling, investigation defense, private litigation, leniency / immunity work?",
+        "How is the team structured — competition partners, associates, economists embedded or external, support staff?",
+        "How does the group coordinate with foreign competition counsel, economic experts, and sector specialists?",
+        "Are there client categories — platform companies, holders of dominant positions, market participants under structural orders — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — investigation initiation, dawn-raid response, cartel suspicion, market-power / dominance analysis, multi-jurisdictional filing, gun-jumping concern?",
+        "Are there transaction-size thresholds (filing requirement triggers) that automatically require partner-level review?",
+        "When does an algorithm-related concern, a trade-association concern, or an information-exchange concern require immediate specialist involvement?",
+        "Which engagement types — leniency application, voluntary disclosure, consent-decree negotiation — require partner-level review regardless of size?",
+        "Who is the designated escalation contact for competition matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should competition work product default to memo format, issue-spotting matrix format, clearance-strategy format, or compliance-checklist format?",
+        "What level of detail does the practice group expect — executive summary, full economic-analysis-supported memo, both layered?",
+        "Are there house style rules for risk ratings, jurisdiction-by-jurisdiction breakdowns, or open-items lists in competition work product?",
+        "Does the group produce clearance-strategy decks or compliance-training materials in standard formats?",
+        "Are there particular deliverable types — clean-team agreements, gun-jumping protocols, leniency applications — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative clearance playbook, and where is it stored?",
+        "Is there a clean-team agreement template, and how is it kept current?",
+        "What document governs the group's trade-association attendance protocol?",
+        "Are there compliance-training materials or policy-template libraries the group treats as authoritative?",
+        "Does the group maintain a dawn-raid protocol with counsel contacts, evidence-preservation rules, and employee guidance?"
+      ],
+      "standard_positions": [
+        "What is the group's default clearance-strategy posture — pre-filing engagement, formal filing strategy, second-request preparedness?",
+        "What is the group's default leniency / immunity framework — when warranted, how scoped?",
+        "What is the group's default clean-team membership and information-segregation posture for diligence?",
+        "What is the group's default position on algorithm and AI-pricing matters?",
+        "What is the group's default trade-association attendance protocol and information-sharing framework?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of competition work product become mandatory — clearance-strategy stage, filing stage, response-to-second-request stage, settlement / consent-decree stage?",
+        "Are there work-product types for which attorney review is always required regardless of size — any HSR filing, any clearance opinion, any clean-team setup, any leniency application, any agency response?",
+        "What is the designated reviewer's role — handling attorney, supervising competition partner, multi-jurisdictional lead?",
+        "What is the expected turnaround for clearance-filing review, and how are urgent reviews (second-request responses, dawn-raid response, agency deadlines) handled?",
+        "Is there a formal sign-off step before any agency filing, leniency application, or consent-decree negotiation?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that conduct is not a cartel, that an agreement is rule-of-reason, that a market definition is settled, that a clearance is granted, that a safe harbor applies?",
+        "Are there competition-specific risks — cartel involvement, dawn-raid posture, second-request response — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — investigation defense, leniency applications, dawn-raid response, criminal antitrust referrals?",
+        "Are there prior incidents — adverse decisions, structural remedies, leniency declinations — that should be encoded as explicit prohibitions for agents working on competition matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including DOJ, FTC, EU, UK, China SAMR, and other regimes — is accurately recorded.",
+      "Filing-threshold framework and clearance-strategy defaults reflect current law `[Verify current law]`.",
+      "Clean-team agreement template and gun-jumping protocol references are current.",
+      "Dawn-raid protocol references are current and counsel-contact list is up to date.",
+      "Filing deadlines and waiting-period clocks are marked `[deadline verification required]` in any related deliverable."
+    ]
+  },
+  "bankruptcy-restructuring": {
+    "display_name": "Bankruptcy and Restructuring",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md",
+      "skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md",
+      "skills/bankruptcy-restructuring/creditor-claim-intake/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which bankruptcy courts (federal districts, divisions) does the group practice most frequently?",
+        "Does the group regularly engage with cross-border restructurings (Chapter 15, CCAA, UK schemes, others), and which regimes drive most of that work?",
+        "Does the group handle state-law restructuring tools — assignments for the benefit of creditors, receiverships — and in which jurisdictions?",
+        "Are there sector-specific bankruptcy regimes (healthcare, financial institution, municipal Chapter 9) the group regularly engages with?",
+        "Are there jurisdictions or sectors the group treats as out of scope, requiring specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily debtors, creditors (secured / unsecured / trade / equity / bondholder), committees, plan sponsors, or a mix?",
+        "What types of bankruptcy and restructuring matters does the group handle most frequently — pre-petition advisory, Chapter 11 / 7 / 15 cases, out-of-court restructurings, distressed-asset acquisitions, plan negotiation, litigation within bankruptcy?",
+        "How is the team structured — partners, associates, financial-restructuring specialists, claims-handling paralegals?",
+        "How does the group coordinate with financial advisors, investment bankers, claims agents, and trustees?",
+        "Are there client categories — first-lien holders, DIP lenders, equity sponsors, indenture trustees — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — petition filing, first-day motions, DIP / cash-collateral, plan negotiation, section 363 sale, preference / fraudulent transfer, substantive consolidation, cross-border filing?",
+        "Are there transaction-value or claim-amount thresholds that trigger escalation?",
+        "When does an avoidance-action analysis (preference, fraudulent transfer, equitable subordination, recharacterization) require partner-level involvement?",
+        "Which engagement types — committee representation, professional retention, fee-application work — require attorney review regardless of size?",
+        "Who is the designated escalation contact for bankruptcy matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should bankruptcy work product default to memo format, deadline-tracker format, claim-analysis format, or pleading-draft format?",
+        "What level of detail does the practice group expect — executive summary, full citation-supported analysis, both layered?",
+        "Are there house style rules for citation format, deadline flagging, or claim categorization in bankruptcy work product?",
+        "Does the group produce closing-checklist drafts, first-day-motion summaries, or claim-analysis dashboards in standard formats?",
+        "Are there particular deliverable types — first-day declarations, disclosure statements, plans of reorganization — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative bankruptcy-precedent library (first-day motions, plans, disclosure statements), and where is it stored?",
+        "Is there a deadline-tracker spreadsheet or system for bankruptcy cases, and how is it kept current?",
+        "What document governs the group's claim-analysis framework — categories, evidentiary standards, treatment recommendations?",
+        "Are there sample DIP / cash-collateral / 363-sale motion libraries the group treats as authoritative?",
+        "Does the group maintain a court-specific reference (local rules, judge preferences, district customs) for the bankruptcy courts where it appears?"
+      ],
+      "standard_positions": [
+        "What is the group's default cash-collateral / DIP posture — common protections demanded, common objections raised?",
+        "What is the group's default DIP-lender-protection framework — adequate protection, replacement liens, super-priority, carve-outs?",
+        "What is the group's default preference-defense framework — analyzing ordinary-course-of-business, new value, and contemporaneous-exchange defenses?",
+        "What is the group's default substantive-consolidation posture?",
+        "What is the group's default approach to plan-feasibility analysis and confirmation?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of bankruptcy work product become mandatory — pre-petition advisory, filing stage, first-day motion stage, plan / disclosure-statement stage, distribution stage?",
+        "Are there work-product types for which attorney review is always required regardless of size — any petition, any first-day motion, any plan, any preference complaint, any 363 motion?",
+        "What is the designated reviewer's role — handling attorney, supervising bankruptcy partner, specialty partner for cross-border or sector matters?",
+        "What is the expected turnaround for standard bankruptcy review, and how are urgent reviews (first-day filings, emergency motions) handled?",
+        "Is there a formal sign-off step before any court filing or distribution event?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that a deadline applies, that a claim is valid, that a transfer is non-preferential, that automatic stay protects, that an order has been entered?",
+        "Are there bankruptcy-specific risks — fraudulent-transfer, preference, equitable subordination, judicial-estoppel, stay-violation, fee-objection — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — committee work, cross-border filings, sector-specific bankruptcies (healthcare, financial institution)?",
+        "Are there prior incidents — adverse rulings, sanctions, professional-conduct findings — that should be encoded as explicit prohibitions for agents working on bankruptcy matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Court coverage and judge-specific local-rule references are accurately recorded.",
+      "Deadline-tracker reference is current and maintenance owner is named — every deadline in a related deliverable must be marked `[deadline verification required]`.",
+      "Cash-collateral / DIP / preference-defense defaults reflect the group's current considered practice.",
+      "Cross-border restructuring posture is current `[Verify current law]`.",
+      "Conflicts and retention frameworks reflect applicable professional-conduct rules `[ATTORNEY TO CONFIRM]`."
+    ]
+  },
+  "insurance": {
+    "display_name": "Insurance",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/insurance/insurance-policy-summary/SKILL.md",
+      "skills/insurance/coverage-issue-spotter/SKILL.md",
+      "skills/insurance/reservation-of-rights-review/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which states or countries does the group practice insurance law most frequently?",
+        "Does the group regularly engage with NAIC-uniform frameworks vs. state-specific regimes, and how is that allocation tracked?",
+        "Are there foreign insurance markets (Lloyd's, Bermuda, Cayman captives) the group regularly engages with?",
+        "Are there sectors of insurance — commercial, personal, reinsurance, surplus lines, captive — that drive most of the work?",
+        "Are there jurisdictions or sectors the group treats as out of scope, requiring specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily policyholders, carriers, brokers, reinsurers, or a mix?",
+        "What types of insurance matters does the group handle most frequently — coverage advisory, claims handling, policy review, reinsurance, regulatory, bad-faith litigation?",
+        "How is the team structured — partners, associates, claims specialists, policy-drafting specialists?",
+        "How does the group coordinate with insurance brokers, claims professionals, and reinsurance counterparties?",
+        "Are there client categories — Fortune 500 policyholders, individual policyholders, reinsurance markets — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — bad-faith concern, coverage denial, reservation of rights, settlement-authority question, reinsurance coverage dispute?",
+        "Are there claim-value thresholds or coverage-amount thresholds that trigger escalation?",
+        "When does a regulatory matter (market conduct, financial examination) require immediate specialist involvement?",
+        "Which engagement types — coverage opinions, ROR letters, declaratory-judgment posture — require partner-level review regardless of size?",
+        "Who is the designated escalation contact for insurance matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should insurance work product default to coverage-opinion format, claim-chronology format, policy-summary format, or memo format?",
+        "What level of detail does the practice group expect — executive summary, full citation-supported coverage analysis, both layered?",
+        "Are there house style rules for citation format (case law, regulatory guidance, policy provisions), coverage-determination flagging, or open-items lists in insurance work product?",
+        "Does the group produce ROR letters, certificate-of-insurance reviews, or claim chronologies in standard formats?",
+        "Are there particular deliverable types — coverage opinions, ROR letters, denial letters — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative policy library and policy-form reference, and where is it stored?",
+        "Is there an ROR letter template library, and how is it kept current?",
+        "What document governs the group's coverage-issue precedent library?",
+        "Are there reinsurance-precedent references the group treats as authoritative?",
+        "Does the group maintain a jurisdiction-by-jurisdiction reference on bad-faith law, claims-handling regulations, and direct-action statutes?"
+      ],
+      "standard_positions": [
+        "What is the group's default coverage-determination framework — when does a matter warrant a full coverage opinion vs. a coverage issue-spotting summary?",
+        "What is the group's default reservation-of-rights posture — when warranted, what scope?",
+        "What is the group's default bad-faith risk-assessment framework?",
+        "What is the group's default subrogation posture — preservation, pursuit, waiver thresholds?",
+        "What is the group's default position on additional-insured certificates and waivers of subrogation?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of insurance work product become mandatory — initial intake, draft coverage opinion, draft ROR letter, claims-handling decision, settlement authority?",
+        "Are there work-product types for which attorney review is always required regardless of size — any coverage opinion, any ROR letter, any claims-handling decision above a threshold, any settlement above a threshold?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, claim partner, coverage partner?",
+        "What is the expected turnaround for standard coverage review, and how are urgent reviews (claim deadlines, ROR-letter timing) handled?",
+        "Is there a formal sign-off step before any coverage opinion, ROR letter, or denial letter is delivered?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that coverage exists, that a duty to defend is owed, that bad faith does not apply, that subrogation is preserved, that an additional-insured certificate is current?",
+        "Are there insurance-specific risks — bad faith, coverage waiver, late notice, anti-stacking, anti-subrogation rules — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — coverage opinions, ROR letters, settlement authority, declaratory-judgment actions?",
+        "Are there prior incidents — bad-faith judgments, market-conduct findings — that should be encoded as explicit prohibitions for agents working on insurance matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including bad-faith law and direct-action statutes — is accurately recorded `[verify jurisdiction]`.",
+      "Coverage-opinion framework reflects the group's current considered posture `[ATTORNEY TO CONFIRM]`.",
+      "ROR letter template references are current and any related notice deadlines are marked `[deadline verification required]`.",
+      "Bad-faith risk-assessment framework reflects current law in in-scope jurisdictions `[Verify current law]`.",
+      "Subrogation and additional-insured defaults are current."
+    ]
+  },
+  "family-law": {
+    "display_name": "Family Law",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/family-law/matter-intake/SKILL.md",
+      "skills/family-law/divorce-intake-organizer/SKILL.md",
+      "skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which states or countries does the group practice family law most frequently?",
+        "Does the group regularly engage with UCCJEA (custody jurisdiction), UIFSA (support jurisdiction), or other interstate / international frameworks?",
+        "Does the group regularly engage with Hague Convention (international child-abduction) matters?",
+        "Are there sector-specific populations the group regularly engages with — military families, families with international ties — that require jurisdiction-specific knowledge?",
+        "Are there jurisdictions or matter types the group treats as out of scope, requiring specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group represent primarily one party in family-law matters (and which side, if any default), guardians ad litem, or both?",
+        "What types of family-law matters does the group handle most frequently — divorce, custody, support, premarital / postnuptial agreements, adoption, domestic-violence protective orders, paternity?",
+        "How is the team structured — partners, associates, paralegals, victim-advocate or social-work resources?",
+        "How does the group coordinate with custody evaluators, financial neutrals, mental-health professionals, and victim advocates?",
+        "Are there client categories — high-conflict, high-net-worth, families with domestic-violence indicators, blended families — that require special handling?"
+      ],
+      "escalation": [
+        "Which matters automatically require escalation — domestic-violence indicator, capacity concern, multi-state custody question, international child-removal risk, child-welfare report, abuse allegation?",
+        "Are there asset-value or income-level thresholds that trigger escalation to senior practitioners?",
+        "When does a safety concern (escalating threats, removal risk, weapon access) require immediate intervention?",
+        "Which engagement types — emergency custody petitions, protective-order responses, child-welfare-agency engagements — require attorney review regardless of stage?",
+        "Who is the designated escalation contact for family-law matters, and what is the expected turnaround? Are there safety-specific escalation pathways?"
+      ],
+      "output_style": [
+        "Should family-law work product default to memo format, intake-summary format, chronology format, or settlement-issues format?",
+        "What level of detail does the practice group expect — executive summary, full fact-and-issue analysis, both layered?",
+        "Are there house style rules for safety-flagging, contested-matter flagging, or open-items lists in family-law work product?",
+        "Does the group produce custody-schedule organizers, settlement-issue catalogues, or hearing-preparation outlines in standard formats?",
+        "Are there particular deliverable types — DV safety referrals, custody evaluations, asset-and-debt schedules — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative client-intake instrument, and where is it stored?",
+        "Is there a chronology-template library, and how is it kept current?",
+        "What document governs the group's jurisdiction-specific custody-rules reference?",
+        "Are there safety-screening protocols and victim-advocate-referral resources the group treats as authoritative?",
+        "Does the group maintain a financial-disclosure framework (asset / debt schedules, income-and-expense forms) tied to applicable court forms?"
+      ],
+      "standard_positions": [
+        "What is the group's default posture on emergency custody — what facts trigger an emergency petition, what defaults govern the response?",
+        "What is the group's default relocation posture — preferred process, custody-evaluation involvement, when contested?",
+        "What is the group's default abuse-screening protocol — at every intake, situational, or other?",
+        "What is the group's default approach to parenting coordinators, special masters, and other neutral roles?",
+        "What is the group's default approach to settlement vs. litigation framing in initial intake?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of family-law work product become mandatory — initial intake, any safety-screening output, any draft pleading, any settlement document?",
+        "Are there work-product types for which attorney review is always required regardless of stage — any filing, any custody arrangement, any settlement, any domestic-violence-related document?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, partner?",
+        "What is the expected turnaround for standard family-law review, and how are urgent reviews (emergency custody, protective-order responses) handled? What is the after-hours escalation pathway?",
+        "Is there a formal sign-off step before any filing, settlement, or court-ordered evaluation?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that custody is uncontested, that no DV is present, that all assets are disclosed, that a parenting plan is enforceable in another state?",
+        "Are there family-law-specific risks — domestic-violence escalation, child-removal risk, capacity concern, undisclosed asset, undue influence — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — protective-order matters, DV-indicator matters, child-welfare matters, capacity-concern matters?",
+        "Are there prior incidents — adverse outcomes, court findings, bar inquiries — that should be encoded as explicit prohibitions for agents working on family-law matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Safety-screening protocol is accurately recorded and an immediate-escalation pathway is named.",
+      "Jurisdiction coverage — including UCCJEA, UIFSA, and Hague — is accurately recorded.",
+      "Emergency-custody and protective-order escalation thresholds are accurately recorded and any associated deadlines are marked `[deadline verification required]`.",
+      "Confidentiality framework protects victim and child information at the appropriate level.",
+      "Mandatory-reporter obligations are accurately recorded `[verify jurisdiction]`."
+    ]
+  },
+  "product-legal": {
+    "display_name": "Product Legal",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/product-legal/launch-review/SKILL.md",
+      "skills/product-legal/terms-of-service-review/SKILL.md",
+      "skills/product-legal/marketing-claims-review/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions are the client's products available — US federal (FTC), US state (state AGs), EU, UK, Canada, others?",
+        "Does the group regularly engage with sector-specific consumer-protection regimes (children's privacy / COPPA, health-related claims / FDA, financial / CFPB, age-restricted products)?",
+        "Are there jurisdictions where the group's clients face heightened consumer-protection enforcement (e.g., California, NY, FTC priority areas)?",
+        "Are there jurisdictions or product categories the group treats as out of scope, requiring specialist outside counsel?",
+        "Does the group track foreign consumer-protection regimes (EU Digital Services Act, UK CMA, Australia ACL) that affect US clients?"
+      ],
+      "client_context": [
+        "Who are the primary clients of the product-legal group — product teams, engineering, design, marketing, executives, external clients?",
+        "What types of product-legal matters does the group handle most frequently — feature reviews, ToS / privacy-policy reviews, advertising-claim reviews, pricing-page reviews, subscription / cancellation flows, dark-pattern reviews?",
+        "How is the team structured, and how does it coordinate with privacy counsel, IP counsel, and external regulatory counsel?",
+        "Are there product categories (consumer financial products, health products, children's products, age-restricted products) that require special handling?",
+        "How does the group engage with the client's product-launch process, design-review process, or marketing-review process?"
+      ],
+      "escalation": [
+        "Which feature characteristics automatically require escalation — child-directed features, biometric features, financial features, health-related claims, dark-pattern indicators, UDAAP / FTC Act section 5 risk?",
+        "Which advertising claims automatically require escalation — health, financial, environmental / green claims, sponsorship / influencer disclosures, comparative claims, free-trial-to-paid conversions?",
+        "What pricing-page or subscription scenarios trigger escalation — auto-renewal without prominent disclosure, retention dark patterns, refund-policy disclosure, drip pricing?",
+        "When does a UX flow (cancellation, account deletion, consent, opt-out) require immediate specialist review?",
+        "Who is the designated escalation contact for product-legal matters, and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should product-legal work product default to feature-launch-checklist format, redline format, risk-matrix format, or memo format?",
+        "What level of detail does the practice group expect — executive summary, full UX-element-by-element review, both layered?",
+        "Are there house style rules for risk ratings, mitigation recommendations, or open-items lists in product-legal work product?",
+        "Does the group produce go / no-go recommendations or mitigation lists in a standard format?",
+        "Are there particular deliverable types — feature-launch checklists, ToS-update memos, advertising-claim memos — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative feature-launch playbook, and where is it stored?",
+        "Is there an advertising-substantiation requirements reference, and how is it kept current?",
+        "What document governs the group's subscription / UDAAP standards reference?",
+        "Are there dark-pattern criteria or design-review checklists the group treats as authoritative?",
+        "Does the group maintain a current-FTC-priority reference and a state-AG enforcement-priority reference?"
+      ],
+      "standard_positions": [
+        "What is the group's default dark-pattern posture — categories the group always flags, categories the group escalates?",
+        "What is the group's default consent posture — opt-in, opt-out, layered, just-in-time?",
+        "What is the group's default subscription / auto-renewal disclosure framework?",
+        "What is the group's default UDAAP / FTC Act section 5 risk threshold?",
+        "What is the group's default approach to advertising claims, substantiation, and disclosure?"
+      ],
+      "review_requirements": [
+        "At what stage does attorney review of product-legal work product become mandatory — design-review stage, pre-launch stage, post-launch monitoring, incident response?",
+        "Are there work-product types for which attorney review is always required regardless of stage — any feature launch above a complexity threshold, any ToS update, any advertising claim above a risk threshold, any pricing-page change?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, product partner, general counsel?",
+        "What is the expected turnaround for product-legal review, and how are urgent reviews (launch-day issues, FTC inquiries, viral product issues) handled?",
+        "Is there a formal sign-off step before any feature launch, any ToS update, or any advertising-campaign launch?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts agents must never assume without explicit confirmation — that a claim is substantiated, that consent is informed, that a disclosure is sufficient, that a feature is FTC-compliant, that a dark pattern is acceptable?",
+        "Are there product-legal risks — UDAAP, dark patterns, deceptive advertising, child-protection, fair lending — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types where agents must never proceed beyond intake without direct attorney involvement — FTC inquiries, state-AG inquiries, viral product incidents, child-protection matters?",
+        "Are there prior incidents — adverse FTC enforcement, state-AG settlements, consumer-complaint pattern findings — that should be encoded as explicit prohibitions for agents working on product-legal matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction coverage — including FTC, state AGs, and foreign consumer-protection regimes — is accurately recorded `[Verify current law]`.",
+      "Dark-pattern criteria and UDAAP-risk threshold reflect current FTC and state-AG enforcement guidance.",
+      "Subscription / auto-renewal disclosure framework reflects current state-by-state requirements `[verify jurisdiction]`.",
+      "Advertising substantiation requirements references are current.",
+      "Feature-launch checklist references are current and tied to the client's product process."
+    ]
+  },
+  "financial-crime": {
+    "display_name": "Financial Crime / AML",
+    "description_topics": "jurisdictions, client context, escalation thresholds, output preferences, source documents, standard positions, review requirements, and prohibited assumptions",
+    "related_skills": [
+      "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+      "skills/financial-crime/sanctions-screening-review/SKILL.md",
+      "skills/regulatory/compliance-gap-matrix/SKILL.md"
+    ],
+    "stage_questions": {
+      "jurisdictions": [
+        "In which jurisdictions does the group support KYC, customer due diligence, and sanctions / PEP / adverse-media screening work most frequently?",
+        "Which regulated entities does the group work with, and which supervisory regimes govern their AML programs?",
+        "Are there jurisdictions, list sources, or sanctions regimes the group treats as in scope for screening, and how is that coverage tracked?",
+        "Are there cross-border relationships — foreign UBOs, offshore structures, non-resident applicants — that the group routinely encounters and must account for?",
+        "Are there jurisdictions or sanctions regimes the group treats as out of scope entirely, requiring escalation or specialist outside counsel?"
+      ],
+      "client_context": [
+        "Does the group support primarily a financial institution's compliance function, a corporate client's onboarding team, outside counsel, or a mix? Confirm the default posture.",
+        "What types of financial-crime matters does the group handle most frequently — onboarding KYC, periodic refresh, beneficial-ownership analysis, sanctions / PEP / adverse-media alert adjudication, or others?",
+        "How is the team structured — compliance officers, onboarding analysts, supervising attorneys, paralegals, non-attorney professionals whose work must be supervised?",
+        "Are there applicant categories — high-risk customers, PEPs, complex ownership structures, correspondent relationships — that require enhanced due diligence or additional sign-off?",
+        "How does the group coordinate with the firm's compliance function, MLRO or BSA officer, and any external screening providers?"
+      ],
+      "escalation": [
+        "Which KYC findings automatically require escalation — opaque or undisclosed beneficial ownership, missing source-of-funds evidence, expired or unverifiable identity documents, high-risk-jurisdiction exposure?",
+        "Which screening outcomes require mandatory escalation — a possible or likely true sanctions match, a confirmed PEP designation, significant adverse media — regardless of the screening context?",
+        "Is there a customer risk-rating outcome (for example, a high rating, or a recommendation to decline or apply enhanced due diligence) that always triggers escalation, and to whom?",
+        "What is the escalation path when a suspicious-activity concern or potential reporting obligation surfaces during a review?",
+        "Who is the designated escalation contact for financial-crime matters — the MLRO, BSA officer, or supervising attorney — and what is the expected turnaround?"
+      ],
+      "output_style": [
+        "Should financial-crime work product default to a structured KYC onboarding file, a screening / alert-adjudication review, a compliance-facing summary, or several layered?",
+        "What format does the group use for the customer risk rating and disposition recommendation — factor table, narrative, or both?",
+        "Are there house style rules for confidence classifications, risk ratings, escalation flags, or open questions in financial-crime work product?",
+        "Does the group produce document-inventory tables, beneficial-ownership charts, or alert-disposition tables, and if so, in what format?",
+        "Are there particular deliverable types — onboarding files, screening reviews, escalation packets — for which the group has mandatory format requirements?"
+      ],
+      "source_documents": [
+        "What is the group's authoritative KYC/AML rules grid or CDD policy, including the required-document matrix and risk-rating methodology, and where is it stored?",
+        "Is there a separately maintained high-risk-jurisdiction list, and how is it kept current?",
+        "What document governs the group's screening or alert-disposition policy, including match thresholds and false-positive criteria?",
+        "Does the group maintain a beneficial-ownership / control verification standard, and is it tied to specific applicant types?",
+        "Are there enhanced-due-diligence procedures or escalation playbooks the group treats as authoritative, and is any of them under revision or pending update?"
+      ],
+      "standard_positions": [
+        "What is the group's default customer due diligence posture by applicant type, and what triggers a step up to enhanced due diligence?",
+        "What is the group's default beneficial-ownership threshold and control standard for identifying UBOs and controllers?",
+        "What is the group's default source-of-funds / source-of-wealth evidence expectation across risk levels?",
+        "What is the group's default approach to disposition recommendations — clear, request documents, escalate to enhanced due diligence, or recommend decline — and what drives each?",
+        "What is the group's default posture on screening: which list sources are screened, how possible matches are handled, and how false positives are documented?"
+      ],
+      "review_requirements": [
+        "At what stage of a financial-crime matter does attorney or compliance review of work product become mandatory — intake, before any risk rating, before any disposition recommendation, before any escalation, or at other defined stages?",
+        "Are there work-product types for which review is always required regardless of matter size — for example, any sanctions match, any high-risk rating, any recommendation to decline, any enhanced-due-diligence file?",
+        "What is the designated reviewer's role — handling attorney, supervising attorney, MLRO or BSA officer, compliance lead?",
+        "What is the expected turnaround for standard onboarding or screening review, and how are urgent reviews (potential sanctions exposure, time-sensitive onboarding) handled?",
+        "Is there a formal sign-off step — required signature, approval, or logged confirmation — before a customer is onboarded, an alert is dispositioned, or an escalation packet is transmitted?"
+      ],
+      "prohibited_assumptions": [
+        "Are there facts, postures, or conclusions agents must never assume without explicit confirmation — that an applicant is cleared, that a risk rating is low, that beneficial ownership is complete, that a screening alert is a false positive, that source of funds is adequately evidenced?",
+        "Are there scenarios — a possible sanctions match, a confirmed PEP, a suspicious-activity concern — where an agent must stop and escalate rather than reason through independently?",
+        "Are there matter types or applicant populations (high-risk customers, complex ownership structures, correspondent relationships) where agents must never proceed beyond intake without direct compliance or attorney involvement?",
+        "Are there prior incidents, regulator findings, or lessons learned that should be encoded as explicit prohibitions for agents working on financial-crime matters?"
+      ]
+    },
+    "checklist_extras": [
+      "Jurisdiction and sanctions-regime coverage for KYC and screening work is accurately recorded `[verify jurisdiction]`.",
+      "KYC/AML rules grid, CDD policy, and high-risk-jurisdiction list references are current and version-controlled `[Verify current law]`.",
+      "Beneficial-ownership thresholds and the customer risk-rating methodology reflect the group's current considered posture, not a provisional one.",
+      "Screening / alert-disposition thresholds and false-positive criteria reflect the firm's current policy, and every possible or likely true sanctions match is routed to compliance and counsel.",
+      "Any reporting, response, or refresh dates surfaced during a review are marked `[deadline verification required]` and are computed by the attorney or compliance function, not by an agent."
+    ]
+  }
+}

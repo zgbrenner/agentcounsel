@@ -36,7 +36,7 @@ Capture the facts of an estate, gift, generation-skipping transfer (GST), or
 inheritance tax matter into a source-cited issue map, with missing facts, a
 document request list, and verification questions, so a qualified tax
 professional or attorney can evaluate the issues. This skill organizes facts
-and spots issues; it calculates no tax and reaches no tax conclusion.
+and spots issues; it calculates no tax and reaches no tax conclusion. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -110,14 +110,12 @@ Also out of scope (this skill does not): calculate any tax, exemption, exclusion
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal or tax advice; no
-   tax calculated; qualified tax professional review required.
-2. **Gates table** — jurisdiction, decedent/donor, tax year or date of death,
+1. **Gates table** — jurisdiction, decedent/donor, tax year or date of death,
    review purpose.
-3. **Source-cited fact register** — fact | source | status.
-4. **Tax issue map** — issues framed as questions for the tax professional.
-5. **Missing facts** and **document request list**.
-6. **Tax-professional verification questions** and **assumptions**.
+2. **Source-cited fact register** — fact | source | status.
+3. **Tax issue map** — issues framed as questions for the tax professional.
+4. **Missing facts** and **document request list**.
+5. **Tax-professional verification questions** and **assumptions**.
 
 The tax issue map follows the **Estate Tax Issue Intake Matrix** structure in
 `skills/trusts-estates/references/output-patterns.md`.

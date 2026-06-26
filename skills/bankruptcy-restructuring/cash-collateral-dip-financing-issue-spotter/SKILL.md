@@ -36,7 +36,7 @@ Issue-spot a cash collateral or debtor-in-possession (DIP) financing document
 into a source-cited key terms table and issue list, with missing facts,
 business and legal questions, and a verification checklist, so a qualified
 attorney can evaluate the document. This skill extracts and organizes terms; it
-approves no financing terms and determines no lien validity or priority.
+approves no financing terms and determines no lien validity or priority. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -114,17 +114,15 @@ Also out of scope (this skill does not): approve any financing term; determine l
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   financing approval; no lien determination; attorney review required.
-2. **Gates table** — document, the user's role, lenders, collateral, case
+1. **Gates table** — document, the user's role, lenders, collateral, case
    reference.
-3. **Key terms table** — source-cited summary of the financing terms.
-4. **Issue list** — issues across collateral, liens, budget, covenants,
+2. **Key terms table** — source-cited summary of the financing terms.
+3. **Issue list** — issues across collateral, liens, budget, covenants,
    milestones, roll-ups, adequate protection, carveouts, defaults, releases,
    and fees, framed as questions.
-5. **Business and legal questions** — separated, for the attorney.
-6. **Missing facts** and **attorney verification checklist**.
-7. **Assumptions and unresolved items**.
+4. **Business and legal questions** — separated, for the attorney.
+5. **Missing facts** and **attorney verification checklist**.
+6. **Assumptions and unresolved items**.
 
 The key terms table and issue list follow the **DIP / Cash Collateral Issue
 Table** structure in

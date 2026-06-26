@@ -90,13 +90,12 @@ Also out of scope (this skill does not): recommend or compare carriers; bind, pl
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; not insurance advice; no carrier recommendation; attorney and broker review required.
-2. **Gates table** — renewal/placement context, lines in scope, user's role, jurisdictions, renewal/effective date, with status and source.
-3. **Diligence checklist** — organized by workstream; each item with a status field and, where applicable, a source. Follows the Renewal / Placement Diligence Checklist pattern in `skills/insurance/references/output-patterns.md`.
-4. **Document request list** — documents to obtain, with the workstream each supports.
-5. **Coverage gap questions** — gaps and structure questions for the attorney and broker, framed as questions.
-6. **Attorney and broker verification items** — what the attorney and the broker must each confirm; carrier selection, placement, and pricing are noted as broker/client decisions outside this checklist.
-7. **Assumptions** — no carrier recommendation, no placement, and no adequacy or compliance conclusion is given.
+1. **Gates table** — renewal/placement context, lines in scope, user's role, jurisdictions, renewal/effective date, with status and source.
+2. **Diligence checklist** — organized by workstream; each item with a status field and, where applicable, a source. Follows the Renewal / Placement Diligence Checklist pattern in `skills/insurance/references/output-patterns.md`.
+3. **Document request list** — documents to obtain, with the workstream each supports.
+4. **Coverage gap questions** — gaps and structure questions for the attorney and broker, framed as questions.
+5. **Attorney and broker verification items** — what the attorney and the broker must each confirm; carrier selection, placement, and pricing are noted as broker/client decisions outside this checklist.
+6. **Assumptions** — no carrier recommendation, no placement, and no adequacy or compliance conclusion is given.
 
 ## Attorney Verification Checklist
 

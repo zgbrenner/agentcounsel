@@ -1,6 +1,6 @@
 ---
 name: Trade Association Meeting Review
-description: "Use when reviewing a trade-association meeting (agenda, minutes, attendee list, recordings) for antitrust risk — to produce a draft attendee competitive-relationship map, per-agenda-item risk matrix, high-risk discussion excerpts, output-product inventory, standard-setting and boycott flags, and side-meeting/informal-contact inventory for attorney review — without approving attendance, output products, or concluding lawfulness of any discussion."
+description: "Use when reviewing a trade-association meeting (agenda, minutes, attendees, recordings) for antitrust risk to organize a draft attendee relationship map, per-agenda-item risk matrix, and output-product and boycott flags for attorney review, without approving attendance or concluding lawfulness."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -11,8 +11,10 @@ inputs:
   - "Relevant documents and source references"
   - "Review stage and urgency"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Attendee Map"
+  - "Agenda-Topic Risk Matrix and High-Risk Discussion Excerpts"
+  - "Output-Product Inventory with standard-setting and boycott flags"
+  - "Side-meeting inventory and attorney verification questions"
 related_skills:
   - skills/antitrust-competition/antitrust-risk-intake/SKILL.md
   - skills/antitrust-competition/competitor-collaboration-review/SKILL.md
@@ -20,7 +22,10 @@ related_skills:
 tags:
   - antitrust
   - competition
-  - trade-association-meeting-review
+  - trade-association
+  - information-exchange
+  - standard-setting
+  - boycott
 ---
 
 # Trade Association Meeting Review

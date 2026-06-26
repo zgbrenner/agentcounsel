@@ -1,6 +1,6 @@
 ---
 name: Public Company Reporting Calendar Intake
-description: "Use when intaking a public company's reporting cadence (filer status, fiscal year end, exchange/listing, recurring forms, committee/board cadence, earnings-release process, proxy/annual-meeting timing, 8-K trigger inventory, Section 16 workflow, insider-trading windows, 10b5-1 process, beneficial-ownership monitoring) — to produce a draft calendar-fact map for attorney review — without computing any filing deadline or asserting compliance with any reporting requirement."
+description: "Use when intaking a public company's reporting cadence (filer status, fiscal year, recurring forms, governance, earnings, 8-K triggers, Section 16, 10b5-1) into a draft calendar-fact map for attorney review, without computing any filing deadline or asserting compliance."
 practice_area: securities-capital-markets
 task_type: intake
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Filer-Profile Snapshot and Recurring-Form Inventory"
+  - "8-K Trigger Inventory and Governance Cadence"
+  - "Insider-Trading Window, 10b5-1, and Section 16 Workflow notes"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md
   - skills/securities-capital-markets/insider-trading-policy-review/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - public-company-reporting-calendar-intake
+  - reporting-calendar
+  - intake
+  - 8-k-triggers
+  - filer-status
 ---
 
 # Public Company Reporting Calendar Intake

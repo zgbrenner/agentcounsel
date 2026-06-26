@@ -1,6 +1,6 @@
 ---
 name: Form D and Blue Sky Tracker
-description: "Use when, after a Reg D triggering fact (typically first sale in a 506(b) or 506(c) offering), organizing the Form D and state notice-filing universe — to produce a draft state-by-state tracker capturing each state of sale, the user-supplied notice fee, consent-to-service-of-process status, EDGAR/coordinated-review/EFD posture, and amendment triggers for attorney review — without computing any filing deadline or asserting filing completeness."
+description: "Use when a Reg D triggering fact requires organizing the Form D and state notice-filing universe into a draft state-by-state tracker capturing each state of sale, fees, consent status, and amendment triggers for attorney review, without computing any filing deadline."
 practice_area: securities-capital-markets
 task_type: drafting
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Federal Triggering-Fact Inventory and Form D Content Field Matrix"
+  - "State-of-Sale Matrix with variation flags"
+  - "Amendment-Trigger Inventory"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/private-placement-checklist/SKILL.md
   - skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - form-d-blue-sky-tracker
+  - form-d
+  - blue-sky
+  - reg-d
+  - notice-filing
 ---
 
 # Form D and Blue Sky Tracker

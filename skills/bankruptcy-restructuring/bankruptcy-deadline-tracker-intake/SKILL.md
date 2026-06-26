@@ -36,7 +36,7 @@ Intake the bankruptcy dates and notices a user provides into a draft deadline
 tracker — with the source, responsible party, status, and an uncertainty flag
 for each entry — so a qualified attorney can verify every date. This skill
 records and organizes user-supplied dates; it does not calculate, infer, or
-confirm any deadline.
+confirm any deadline. It produces draft legal work product for attorney review — not legal advice.
 
 ## Use When
 
@@ -111,18 +111,16 @@ Also out of scope (this skill does not): calculate, infer, or confirm a bar date
 
 ## Output Format
 
-1. **Capability and reliance notice** — draft only; not legal advice; no
-   deadline calculated; every date requires attorney verification.
-2. **Gates table** — the user's role, case reference, document set.
-3. **Draft deadline tracker** — item | date as provided | source | responsible
+1. **Gates table** — the user's role, case reference, document set.
+2. **Draft deadline tracker** — item | date as provided | source | responsible
    party | status | uncertainty flag (`[deadline verification required]`).
-4. **User-supplied computed entries** — item | user's stated rule/basis |
+3. **User-supplied computed entries** — item | user's stated rule/basis |
    `[deadline verification required]` (only where the user supplied the
    calculation).
-5. **Near-term escalation flags** — dates to route for immediate attorney
+4. **Near-term escalation flags** — dates to route for immediate attorney
    attention.
-6. **Missing information list**.
-7. **Attorney verification items**.
+5. **Missing information list**.
+6. **Attorney verification items**.
 
 The draft deadline tracker follows the **Bankruptcy Deadline Tracker Intake
 Table** structure in

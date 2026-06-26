@@ -1,6 +1,6 @@
 ---
 name: Capital Markets Closing Checklist
-description: "Use when organizing the closing universe for a public or private capital-markets transaction (IPO, follow-on, secondary, debt issuance, registered direct, private placement) — to produce a draft closing-workstream tracker covering issuer/underwriter approvals, purchase/underwriting agreement bring-down, legal opinions (validity, exemption, 10b-5 disclosure letter), officer/secretary certificates, comfort letter and bring-down, lock-ups, transfer agent/DTC/legend matters, listing/FINRA items, blue-sky/Form D items, funds flow, and post-closing filings for attorney review — without approving closing or any closing condition."
+description: "Use when organizing the closing universe for a public or private capital-markets transaction into a draft closing-workstream tracker covering approvals, agreement bring-down, opinions, certificates, comfort, lock-ups, and post-closing filings for attorney review, without approving closing or any closing condition."
 practice_area: securities-capital-markets
 task_type: drafting
 jurisdictions: []
@@ -13,8 +13,10 @@ inputs:
   - "Security type and investor type, where relevant"
   - "Full document set or source excerpts, where relevant"
 outputs:
-  - "Structured, source-cited draft deliverable"
-  - "Missing-information and attorney-verification list"
+  - "Transaction Overview Snapshot and Issuer-Side Approvals Workstream"
+  - "Purchase/Underwriting Agreement Workstream and Legal-Opinion Universe"
+  - "Comfort, Certificates, Lock-Ups, and Post-Closing Workstreams"
+  - "Open issues and attorney verification questions"
 related_skills:
   - skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md
   - skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md
@@ -22,7 +24,10 @@ related_skills:
 tags:
   - securities
   - capital-markets
-  - capital-markets-closing-checklist
+  - closing-checklist
+  - underwriting
+  - legal-opinions
+  - lock-ups
 ---
 
 # Capital Markets Closing Checklist
