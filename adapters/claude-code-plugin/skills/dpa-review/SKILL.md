@@ -81,44 +81,48 @@ If the DPA text is missing, stop and request it. Never fabricate document terms 
 
 ## Workflow
 
+This skill draws on shared reference material: `skills/privacy/references/dpa-red-flags.md` (the DPA red-flag catalog) and `skills/contracts/references/negotiability-ratings.md` (the six-rating negotiability rubric). Consult them at the steps noted below.
+
 1. **Confirm inputs.** Verify that the DPA text has been provided and that the client's role is identified or can be flagged. Note whether the main commercial agreement is available. If the DPA text is missing, stop.
 
 2. **Identify the document and parties.** Note the document title, version or date if stated, and the party names. Identify how the document designates each party's role (controller, processor, sub-processor). Flag the role designations as `[CONFIRM: client role and counterparty role under applicable law]`.
 
 3. **Map the document structure.** List the sections and their subjects. Note any sections that appear to be missing relative to a standard DPA structure (scope, instructions, security, sub-processors, data subject rights, breach notification, audit, transfers, deletion, liability). Missing sections are automatic risk flags.
 
-4. **Assess scope and nature of processing.** Identify what personal data categories, data subjects, processing purposes, and processing activities are described. Flag vague or overbroad descriptions as risk items. Note whether the scope matches the commercial relationship as described by the user.
+4. **Red flags quick scan.** Run a fast first pass against the DPA red-flag catalog in `skills/privacy/references/dpa-red-flags.md`. Record each catalog pattern present, or note that none surfaced in the scan. This scan orients the deeper term-by-term review in the steps below; it does not replace it.
 
-5. **Sectoral-overlay check.** Before proceeding to the term-by-term review, assess whether the personal data categories or processing context identified in step 4 may trigger a sector-specific regulatory regime that overlays additional requirements on top of general data-protection law. Common sectors to consider include — but are not limited to — financial or banking data, health or medical data, children's or minors' data, and education records. This check is not exhaustive; the applicable sectors depend on the jurisdiction and factual context `[verify jurisdiction]`. Where a sectoral overlay may apply: (a) flag it prominently as `[CONFIRM: possible sectoral overlay — specialist review recommended]`; (b) note which data categories or processing activities trigger the concern; and (c) state that the sectoral requirements may change the analysis of several DPA terms reviewed in subsequent steps (e.g., security standards, breach notification timelines, deletion obligations). Do not assert which sectoral law applies or what it requires — those are attorney-verification items.
+5. **Assess scope and nature of processing.** Identify what personal data categories, data subjects, processing purposes, and processing activities are described. Flag vague or overbroad descriptions as risk items. Note whether the scope matches the commercial relationship as described by the user.
 
-6. **Review processing instructions.** Assess whether the processor is limited to acting on the controller's documented instructions, and what carve-outs exist (e.g., legal obligation processing). Flag any broad discretion granted to the processor.
+6. **Sectoral-overlay check.** Before proceeding to the term-by-term review, assess whether the personal data categories or processing context identified in step 5 may trigger a sector-specific regulatory regime that overlays additional requirements on top of general data-protection law. Common sectors to consider include — but are not limited to — financial or banking data, health or medical data, children's or minors' data, and education records. This check is not exhaustive; the applicable sectors depend on the jurisdiction and factual context `[verify jurisdiction]`. Where a sectoral overlay may apply: (a) flag it prominently as `[CONFIRM: possible sectoral overlay — specialist review recommended]`; (b) note which data categories or processing activities trigger the concern; and (c) state that the sectoral requirements may change the analysis of several DPA terms reviewed in subsequent steps (e.g., security standards, breach notification timelines, deletion obligations). Do not assert which sectoral law applies or what it requires — those are attorney-verification items.
 
-7. **Assess sub-processor provisions.** Identify: whether sub-processor use requires prior written approval or general authorization; the notice and objection mechanism; whether the processor must impose equivalent obligations on sub-processors; and whether a sub-processor list is referenced or provided. Flag gaps or weak controls.
+7. **Review processing instructions.** Assess whether the processor is limited to acting on the controller's documented instructions, and what carve-outs exist (e.g., legal obligation processing). Flag any broad discretion granted to the processor.
 
-8. **Review security measures.** Note what security obligations are specified — whether they reference a standard (e.g., ISO 27001, SOC 2) or are described in general terms only. Flag lack of specificity, absence of minimum standards, and whether security obligations are symmetric or asymmetric.
+8. **Assess sub-processor provisions.** Identify: whether sub-processor use requires prior written approval or general authorization; the notice and objection mechanism; whether the processor must impose equivalent obligations on sub-processors; and whether a sub-processor list is referenced or provided. Flag gaps or weak controls.
 
-9. **Review data subject rights assistance.** Assess whether the processor is obligated to assist the controller in responding to data subject requests, what the scope of that assistance is, and whether it is time-limited. Flag vague or absent assistance obligations.
+9. **Review security measures.** Note what security obligations are specified — whether they reference a standard (e.g., ISO 27001, SOC 2) or are described in general terms only. Flag lack of specificity, absence of minimum standards, and whether security obligations are symmetric or asymmetric.
 
-10. **Review breach notification.** Identify the notification trigger, the notification period, and the required content of notification. Mark any stated timeframe as `[CONFIRM: verify deadline under applicable law and contract]`. Flag absence of breach notification provisions.
+10. **Review data subject rights assistance.** Assess whether the processor is obligated to assist the controller in responding to data subject requests, what the scope of that assistance is, and whether it is time-limited. Flag vague or absent assistance obligations.
 
-11. **Review audit rights.** Identify whether the controller has the right to audit the processor, how audits are triggered and conducted, notice requirements, cost allocation, and whether third-party audit reports are accepted as a substitute. Flag provisions that significantly restrict audit rights.
+11. **Review breach notification.** Identify the notification trigger, the notification period, and the required content of notification. Mark any stated timeframe as `[CONFIRM: verify deadline under applicable law and contract]`. Flag absence of breach notification provisions.
 
-12. **Review cross-border transfer mechanism.** Identify how the DPA addresses transfers of personal data across borders (e.g., by reference to standard contractual clauses, binding corporate rules, adequacy decisions, or other mechanisms). Do not assess whether any mechanism is legally valid — flag for attorney review. Note if no transfer mechanism is addressed. Additionally:
+12. **Review audit rights.** Identify whether the controller has the right to audit the processor, how audits are triggered and conducted, notice requirements, cost allocation, and whether third-party audit reports are accepted as a substitute. Flag provisions that significantly restrict audit rights.
+
+13. **Review cross-border transfer mechanism.** Identify how the DPA addresses transfers of personal data across borders (e.g., by reference to standard contractual clauses, binding corporate rules, adequacy decisions, or other mechanisms). Do not assess whether any mechanism is legally valid — flag for attorney review. Note if no transfer mechanism is addressed. Additionally:
     - **TIA reference check.** If the transfer mechanism cited relies on SCCs or equivalent contractual mechanism, note whether the DPA references or attaches a Transfer Impact Assessment (TIA) or equivalent supplementary-measures analysis. Absence of a TIA reference where one is doctrinally expected is itself a flag `[verify jurisdiction]`.
     - **SCC-modification check.** If the DPA incorporates SCCs by reference, note whether the SCCs are referenced as-issued or with modifications. Material modification of SCC text is generally not permitted under the SCC terms themselves and is a flag for specialist review.
     - **Annex/Schedule completeness.** Standard SCC structure requires processing-description annexes (parties, categories of data, processing purposes, security measures). Note whether the DPA includes these annexes and whether each annex is completed (not left in template form).
 
-13. **Review deletion and return obligations.** Identify what happens to personal data on termination or expiration — whether the processor must return, delete, or certify destruction, within what timeframe, and with what exceptions (e.g., legal retention obligations). Flag absence or vagueness.
+14. **Review deletion and return obligations.** Identify what happens to personal data on termination or expiration — whether the processor must return, delete, or certify destruction, within what timeframe, and with what exceptions (e.g., legal retention obligations). Flag absence or vagueness.
 
-14. **Assess liability and indemnity interplay.** Identify liability caps, exclusions, and indemnity obligations in the DPA, and note any stated relationship to the main commercial agreement's liability regime. Flag conflicts, gaps, or provisions that may effectively remove the processor's liability for data breaches.
+15. **Assess liability and indemnity interplay.** Identify liability caps, exclusions, and indemnity obligations in the DPA, and note any stated relationship to the main commercial agreement's liability regime. Flag conflicts, gaps, or provisions that may effectively remove the processor's liability for data breaches.
 
-15. **Build the risk table.** Populate `templates/dpa-risk-table.md` with one row per identified issue, severity-rated High / Medium / Low.
+16. **Build the risk table.** Populate `templates/dpa-risk-table.md` with one row per identified issue, severity-rated High / Medium / Low. Cross-check the table against the quick-scan results from step 4: every catalog pattern recorded as present in `skills/privacy/references/dpa-red-flags.md` should appear as a row or be expressly noted as assessed and not material.
 
-16. **Draft prioritized issue list.** Organize findings: (1) High-severity issues requiring redline or walkaway consideration; (2) Medium-severity issues for negotiation; (3) Low-severity issues or minor drafting improvements.
+17. **Draft prioritized issue list.** Organize findings: (1) High-severity issues requiring redline or walkaway consideration; (2) Medium-severity issues for negotiation; (3) Low-severity issues or minor drafting improvements. For each material issue, assign one of the six negotiability ratings from `skills/contracts/references/negotiability-ratings.md` — Must Push, Strong Push, Business Call, Acceptable if Balanced, Low Priority, or Do Not Spend Leverage — with a one-line rationale, and use the matching Preferred position / Fallback position pair in `skills/privacy/references/dpa-red-flags.md` as a starting point for articulating the direction of change (attorney to confirm; not clause language).
 
-17. **List attorney verification items.** Enumerate every open legal question — applicable law, role confirmation, regulatory deadline, transfer mechanism validity, liability cap adequacy — that requires attorney judgment.
+18. **List attorney verification items.** Enumerate every open legal question — applicable law, role confirmation, regulatory deadline, transfer mechanism validity, liability cap adequacy — that requires attorney judgment.
 
-18. **Assemble output** and label it as draft legal work product for attorney review.
+19. **Assemble output** and label it as draft legal work product for attorney review.
 
 ## Output Format
 
@@ -126,11 +130,12 @@ Deliver the following, in order:
 
 1. **Summary** — one paragraph identifying the document, parties, client role (with `[CONFIRM]` if uncertain), and the top three to five risks.
 2. **Document Structure Map** — list of sections present and any standard sections that appear to be absent.
-3. **Risk Table** — completed `templates/dpa-risk-table.md`, with one row per issue.
-4. **Prioritized Issue List** — organized as High / Medium / Low, with plain-language description of each issue and its risk to the client.
-5. **Liability and Indemnity Note** — specific observations on the interplay between the DPA's liability provisions and the main agreement.
-6. **Attorney Verification Items** — see the Attorney Verification Checklist below.
-7. **Assumptions** — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).
+3. **Red Flags Quick Scan** — each red-flag pattern from `skills/privacy/references/dpa-red-flags.md` found in the DPA, or a note that none surfaced in the scan.
+4. **Risk Table** — completed `templates/dpa-risk-table.md`, with one row per issue.
+5. **Prioritized Issue List** — organized as High / Medium / Low, with plain-language description of each issue and its risk to the client, and a negotiability rating for each material issue drawn from `skills/contracts/references/negotiability-ratings.md`.
+6. **Liability and Indemnity Note** — specific observations on the interplay between the DPA's liability provisions and the main agreement.
+7. **Attorney Verification Items** — see the Attorney Verification Checklist below.
+8. **Assumptions** — explicit list of every assumption made in the review (about role, context, applicable framework, etc.).
 
 ### Optional: Business Stakeholder Summary
 
@@ -156,6 +161,7 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] Security obligations meet applicable legal minimums and the client's risk tolerance.
 - [ ] The liability cap in the DPA is appropriate relative to the potential exposure from a data breach or regulatory fine.
 - [ ] The DPA is consistent with the main commercial agreement; any conflicts have been identified and resolved.
+- [ ] The red-flag quick scan against `skills/privacy/references/dpa-red-flags.md` has been reviewed; each pattern recorded as present is reflected in the risk table or expressly assessed as not material, and each negotiability rating reflects the client's actual role, leverage, and standard positions.
 - [ ] All `[CONFIRM: ...]` placeholders in the risk table and issue list have been resolved before the review is relied upon.
 - [ ] No legal authority, regulatory requirement, or deadline has been asserted in this review without attorney verification.
 - [ ] Privilege and confidentiality designations are appropriate for the matter.
