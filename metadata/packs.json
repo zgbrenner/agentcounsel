@@ -273,6 +273,7 @@
         "skills/litigation/deposition-prep/templates/deposition-outline.md",
         "skills/litigation/legal-hold/templates/legal-hold-notice.md",
         "skills/litigation/litigation-chronology/templates/chronology-table.md",
+        "skills/litigation/matter-intake/templates/matter-intake-summary.md",
         "skills/litigation/privilege-log-review/templates/privilege-log-review-table.md",
         "skills/litigation/references/output-patterns.md"
       ],
@@ -347,6 +348,7 @@
         "skills/litigation/deposition-prep/templates/deposition-outline.md",
         "skills/litigation/legal-hold/templates/legal-hold-notice.md",
         "skills/litigation/litigation-chronology/templates/chronology-table.md",
+        "skills/litigation/matter-intake/templates/matter-intake-summary.md",
         "skills/litigation/privilege-log-review/templates/privilege-log-review-table.md",
         "skills/litigation/references/output-patterns.md"
       ],
@@ -421,6 +423,7 @@
         "skills/litigation/deposition-prep/templates/deposition-outline.md",
         "skills/litigation/legal-hold/templates/legal-hold-notice.md",
         "skills/litigation/litigation-chronology/templates/chronology-table.md",
+        "skills/litigation/matter-intake/templates/matter-intake-summary.md",
         "skills/litigation/privilege-log-review/templates/privilege-log-review-table.md",
         "skills/litigation/references/output-patterns.md"
       ],
@@ -917,6 +920,7 @@
       "included_templates": [
         "skills/employment/internal-investigation/templates/investigation-memo-outline.md",
         "skills/employment/references/output-patterns.md",
+        "skills/employment/references/severance-release-red-flags.md",
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
@@ -987,6 +991,7 @@
       "included_templates": [
         "skills/employment/internal-investigation/templates/investigation-memo-outline.md",
         "skills/employment/references/output-patterns.md",
+        "skills/employment/references/severance-release-red-flags.md",
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
@@ -1057,6 +1062,7 @@
       "included_templates": [
         "skills/employment/internal-investigation/templates/investigation-memo-outline.md",
         "skills/employment/references/output-patterns.md",
+        "skills/employment/references/severance-release-red-flags.md",
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
@@ -1125,7 +1131,8 @@
       ],
       "included_templates": [
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
-        "skills/privacy/pia-generation/templates/privacy-impact-assessment.md"
+        "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
+        "skills/privacy/references/dpa-red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -1193,7 +1200,8 @@
       ],
       "included_templates": [
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
-        "skills/privacy/pia-generation/templates/privacy-impact-assessment.md"
+        "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
+        "skills/privacy/references/dpa-red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -1261,7 +1269,8 @@
       ],
       "included_templates": [
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
-        "skills/privacy/pia-generation/templates/privacy-impact-assessment.md"
+        "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
+        "skills/privacy/references/dpa-red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -1324,7 +1333,10 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/product-legal/launch-review/templates/launch-issues-register.md",
+        "skills/product-legal/references/terms-of-service-red-flags.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -1371,7 +1383,10 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/product-legal/launch-review/templates/launch-issues-register.md",
+        "skills/product-legal/references/terms-of-service-red-flags.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -1418,7 +1433,10 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/product-legal/launch-review/templates/launch-issues-register.md",
+        "skills/product-legal/references/terms-of-service-red-flags.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -1465,7 +1483,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/regulatory/compliance-gap-matrix/templates/compliance-gap-matrix.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
@@ -1525,7 +1545,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/regulatory/compliance-gap-matrix/templates/compliance-gap-matrix.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
@@ -1585,7 +1607,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/regulatory/compliance-gap-matrix/templates/compliance-gap-matrix.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
@@ -1645,7 +1669,10 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/ai-governance/model-risk-triage/templates/model-risk-register.md",
+        "skills/ai-governance/references/ai-vendor-terms-red-flags.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -1692,7 +1719,10 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/ai-governance/model-risk-triage/templates/model-risk-register.md",
+        "skills/ai-governance/references/ai-vendor-terms-red-flags.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -1739,7 +1769,10 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/ai-governance/model-risk-triage/templates/model-risk-register.md",
+        "skills/ai-governance/references/ai-vendor-terms-red-flags.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -1994,6 +2027,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/ip/infringement-triage/templates/infringement-triage-memo.md",
         "skills/ip/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -2048,6 +2082,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/ip/infringement-triage/templates/infringement-triage-memo.md",
         "skills/ip/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -2102,6 +2137,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/ip/infringement-triage/templates/infringement-triage-memo.md",
         "skills/ip/references/output-patterns.md"
       ],
       "included_quality_checks": [

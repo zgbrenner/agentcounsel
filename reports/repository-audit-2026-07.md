@@ -138,24 +138,30 @@ starter evals, and index/router/commands entries.
 
 ## 5. Prioritized backlog (deferred — recommended order)
 
-1. **Extend the shared reference-library model beyond `contracts/`.** Highest
-   leverage in the repo. Build red-flag catalogs / negotiability-and-fallback
-   references for the contract-review skills outside `contracts`
-   (`ai-governance/ai-vendor-terms-review`, `privacy/dpa-review`,
-   `product-legal/terms-of-service-review`, `employment/severance-review`), and
-   grow the one-file `references/output-patterns.md` areas toward the
-   six-file `contracts/references/` depth.
-2. **Template extraction program.** Seven areas ship elaborate fixed output
-   tables inline but zero `templates/` (ip, product-legal, ai-governance,
-   regulatory, financial-crime, legal-ops, legal-methodology); several other
-   areas have intra-area holes (`litigation/matter-intake`,
-   `contracts/redline-summary`, `employment/severance-review`,
-   `legal-research/case-brief`).
-3. **Deepen the Tier-B workflows.** Bankruptcy and tax skills name the right
-   concepts but collapse the analysis into single workflow bullets (e.g.
-   `cash-collateral-dip-financing-issue-spotter` step 4,
-   `tax-covenants-indemnities-review` step 3); explode them to the per-topic
-   granularity of `m-and-a/purchase-agreement-issue-list`.
+1. **Extend the shared reference-library model beyond `contracts/`.**
+   *Done (second pass):* red-flag catalogs with preferred/fallback direction
+   lines now exist for all four priority targets —
+   `privacy/references/dpa-red-flags.md`,
+   `product-legal/references/terms-of-service-red-flags.md`,
+   `ai-governance/references/ai-vendor-terms-red-flags.md`,
+   `employment/references/severance-release-red-flags.md` — each wired into
+   its review skill with a quick-scan step, output section, and checklist
+   line. *Remaining:* grow the one-file `references/output-patterns.md` areas
+   (bankruptcy, insurance, m-and-a, tax, trusts-estates) toward the six-file
+   `contracts/references/` depth.
+2. **Template extraction program.** *Started (second pass):* templates
+   extracted and wired for `regulatory/compliance-gap-matrix`,
+   `ai-governance/model-risk-triage`, `product-legal/launch-review`,
+   `ip/infringement-triage`, and `litigation/matter-intake`. *Remaining:*
+   financial-crime, legal-ops, and the other intra-area holes
+   (`contracts/redline-summary`, `employment/severance-review`,
+   `legal-research/case-brief`, `privacy/dsar-workflow`).
+3. **Deepen the Tier-B workflows.** *Started (second pass):* the two named
+   worst offenders are done —
+   `cash-collateral-dip-financing-issue-spotter` (144 → 293 lines, 12
+   per-topic steps) and `tax-covenants-indemnities-review` (132 → 284 lines,
+   14 per-topic steps). *Remaining:* apply the same treatment to the other
+   bankruptcy and tax skills with single-bullet analyses.
 4. **"Explicitly carved-out sibling" skills.** Gaps that existing skills
    already point at: shareholder/member-meeting minutes (corporate),
    RIF/WARN + OWBPA group termination and standalone restrictive-covenant
