@@ -1,6 +1,6 @@
 ---
 name: Information Sharing Clean Team Review
-description: "Use when reviewing a proposed exchange of competitively sensitive information between actual or potential competitors to organize a draft information-item matrix, per-item sensitivity flags, and clean-team design notes for attorney review, without authorizing any exchange or concluding lawfulness."
+description: "Use when actual or potential competitors propose to exchange competitively sensitive data — M&A diligence requests, JV data flows, benchmarking submissions, a negotiation asking for cost or capacity data — to produce a draft information-item matrix with per-item sensitivity flags, clean-team design notes, and spillover/carryover flags for attorney review, without authorizing any exchange or concluding lawfulness."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for information sharing clean team review. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Review a proposed exchange of competitively sensitive information between actual or potential competitors — in M&A diligence, a JV, benchmarking, a trade association, or a supply negotiation — item by item. Each information item is inventoried with its granularity, age, frequency, recipients, and purpose; flagged high/medium/low sensitivity with a descriptive rationale; and tested against the clean-team design, control gaps, and carryover/spillover risks. The output is a **draft for attorney review**: the skill never authorizes any exchange and never concludes an exchange is lawful.
 
 ## Use When
 
-- The user requests information sharing clean team review support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- An M&A counterparty's diligence request list asks for current pricing, customer-level, or capacity data and the deal team wants to know what can go into the data room.
+- A clean-team agreement is being set up — or is already operating — and its membership, NDA scope, segregation, and carryover restrictions need testing.
+- A proposed JV or collaboration includes data-sharing annexes that would put competitor data into the parties' hands.
+- A benchmarking exercise, industry survey, or shared vendor/consultant would pool competitively sensitive inputs from competing companies.
+- A supplier-customer negotiation between parties who also compete drifts into requests for cost, capacity, or wage data.
+- Counsel asks which proposed data items are high-sensitivity and what controls the exchange currently lacks.
 
 ## Required Inputs
 
@@ -58,7 +61,7 @@ If jurisdiction, parties' competitive posture, the information categories, or th
 
 - The task requests a final legal opinion, filing decision, or legality approval.
 - The task asks the model to decide HSR/reportability, market-share thresholds, safe harbors, per se/rule-of-reason outcomes, or enforcement likelihood.
-- The requested output is `sharing competitively sensitive information`.
+- The requested output is `authorization to share competitively sensitive information`.
 
 Also out of scope (this skill does not): provide legal advice, final legality determinations, final market definition or market-power analysis, economic expert analysis, HSR/reportability conclusions, merger-clearance advice, enforceability conclusions, or conduct approvals.
 
@@ -70,6 +73,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never authorize, approve, or green-light any information exchange — every item, including low-sensitivity items, moves only on attorney sign-off.
+- Sensitivity flags are descriptive triage, not legal ratings; treat current/forward pricing, capacity, customer-specific terms, wage/hiring, bid, and future-plan data as high-sensitivity escalation items in every case.
 
 ## Workflow
 

@@ -1,6 +1,6 @@
 ---
 name: Trade Association Meeting Review
-description: "Use when reviewing a trade-association meeting (agenda, minutes, attendees, recordings) for antitrust risk to organize a draft attendee relationship map, per-agenda-item risk matrix, and output-product and boycott flags for attorney review, without approving attendance or concluding lawfulness."
+description: "Use when trade-association participation needs antitrust screening — an upcoming agenda to vet, minutes or notes from a past meeting, a benchmarking or statistics program, a question whether a working group is safe to join — to produce a draft attendee map, per-agenda-item risk matrix, output-product inventory, and boycott and standard-setting flags for attorney review, without approving attendance or concluding lawfulness."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for trade association meeting review. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Review trade-association activity — an upcoming agenda, the minutes or notes of a past meeting, attendee lists, and output products such as statistics and benchmarking reports — and organize the antitrust record: an attendee map by competitive relationship, a per-agenda-item risk matrix with the controls in place, verbatim excerpts of high-risk discussion, an output-product inventory, and separate standard-setting and boycott flags. The deliverable is **draft legal work product for attorney review**: the skill flags for counsel and never approves attendance, blesses a topic as safe, or concludes lawfulness.
 
 ## Use When
 
-- The user requests trade association meeting review support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- An employee asks whether they can attend an upcoming association meeting, and counsel wants the agenda and attendee list screened first.
+- The board or compliance asks whether the association's benchmarking or statistics program is safe to join, and its aggregation and recipient controls need review.
+- Minutes or notes from a past meeting record discussion of prices, capacity, customers, or "industry discipline," and the exposure needs to be documented.
+- A working group is drafting a standard, joint position, or model contract, raising standard-setting (F/RAND, patent-disclosure) questions.
+- Association communications contain language about members collectively declining to deal with a supplier, customer, or non-member.
+- Hallway, dinner, or side-meeting conversations at an association event may have touched competitively sensitive topics.
 
 ## Required Inputs
 
@@ -70,6 +73,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Hardcore-cartel indicators in the record — agreement on prices or output, market or customer allocation, bid coordination, collective boycott — stop the workflow: quote the language verbatim, mark it `[ATTORNEY TO CONFIRM — ESCALATE IMMEDIATELY]`, and route to counsel before any further drafting.
+- Never advise that attendance, an agenda item, or an output product is "safe"; every risk categorization is descriptive triage for counsel.
 
 ## Workflow
 

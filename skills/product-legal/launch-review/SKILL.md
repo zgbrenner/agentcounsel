@@ -61,6 +61,7 @@ If any of these inputs are missing, stop and request them before proceeding. Do 
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice, a compliance opinion, or a go/no-go decision.
 - Do not assert that the product is compliant or lawful. The output is an issues register, not a clearance memo.
 - Do not invent statutes, regulations, case law, agency guidance, or procedural deadlines. If a legal framework is relevant, name it and flag it for attorney verification.

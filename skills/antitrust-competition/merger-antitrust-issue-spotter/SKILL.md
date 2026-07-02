@@ -1,6 +1,6 @@
 ---
 name: Merger Antitrust Issue Spotter
-description: "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction to organize draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence lists, and integration guardrails for attorney review, without defining markets or predicting clearance."
+description: "Use when a contemplated or signed acquisition, merger, JV, or minority investment needs first-pass antitrust issue-spotting — an LOI with a competitor, diligence underway, the board asking where filings may be needed — to produce draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence-request lists, and integration guardrails for attorney review, without defining markets or predicting clearance."
 practice_area: antitrust-competition
 task_type: analysis
 jurisdictions: []
@@ -34,13 +34,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for merger antitrust issue spotter. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Issue-spot the antitrust dimensions of a contemplated or signed transaction and organize the facts counsel needs: horizontal-overlap and vertical-relationship matrices built from user-supplied market facts, potential/nascent-competition and adjacent-overlap flags (data, IP, labor markets, innovation pipelines), a per-regime filing-question list, a diligence request list, and pre-closing integration guardrails. All of it is **draft legal work product for attorney review** — market definition, reportability, and competitive effects remain attorney determinations, and the skill never defines a market or predicts clearance.
 
 ## Use When
 
-- The user requests merger antitrust issue spotter support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- A deal team has an LOI or term sheet with a competitor, supplier, customer, or adjacent player, and counsel needs the antitrust issues mapped before signing.
+- Diligence has begun and the overlaps — horizontal, vertical, potential-competition, data/IP/labor — need to be organized from the deal documents into matrices.
+- The board or deal lead asks in which jurisdictions the transaction might need to be filed, and counsel needs the questions framed per regime (HSR, EU EUMR, UK CMA, China SAMR, Brazil CADE, others).
+- Counsel needs a diligence request list targeted at the antitrust workstream — customer lists, win/loss data, internal share estimates, deal-rationale documents.
+- The parties are starting pre-closing integration planning, and the issue-spotter needs to feed the gun-jumping and information-sharing reviews.
+- A minority investment or JV raises partial-ownership and governance questions alongside a competitive overlap.
 
 ## Required Inputs
 
@@ -72,6 +75,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never define a product or geographic market, compute a share or HHI from partial data, or opine on competitive effects — record user-supplied market facts only and flag each determination `[ATTORNEY TO CONFIRM]`.
+- Reportability and filing decisions in every regime are attorney determinations; the filing-question list raises the jurisdictional questions and never answers them.
 
 ## Workflow
 

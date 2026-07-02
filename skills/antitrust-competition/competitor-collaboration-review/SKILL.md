@@ -1,6 +1,6 @@
 ---
 name: Competitor Collaboration Review
-description: "Use when reviewing a collaboration between actual or potential competitors (JV, R&D, joint purchasing, standard-setting, joint bidding) to organize a draft hardcore-restraint flag list, information-flow matrix, and ancillarity questions for attorney review, without applying a safe harbor or approving it."
+description: "Use when a proposed JV, co-development, co-marketing, joint purchasing, joint bidding, benchmarking, or standard-setting arrangement between actual or potential competitors needs antitrust screening, to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity questions, and per-jurisdiction safe-harbor questions for attorney review, without applying a safe harbor or approving the collaboration."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for competitor collaboration review. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Review a proposed or existing collaboration between actual or potential competitors — joint venture, R&D pact, joint purchasing, joint marketing or distribution, benchmarking, standard-setting, joint bidding, settlement collaboration — and organize what an antitrust attorney needs to assess it: verbatim hardcore-restraint flags, an information-flow matrix, ancillarity and spillover questions, and per-jurisdiction safe-harbor questions. The skill flags and asks; it never applies a safe harbor, resolves an ancillarity question, or approves the collaboration. The output is **draft legal work product for attorney review** only.
 
 ## Use When
 
-- The user requests competitor collaboration review support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- A business team proposes a JV, co-development, or co-marketing arrangement with a competitor and counsel needs the draft agreement flagged before signing.
+- Two competitors want to bid jointly on a tender or pool purchasing volume, and the arrangement needs hardcore-restraint and ancillarity screening.
+- A standard-setting or industry working-group arrangement raises F/RAND, patent-disclosure, membership, or coordination questions.
+- A draft collaboration agreement contains non-competes, exclusivity, or data-sharing annexes whose reach beyond the stated venture purpose needs to be mapped.
+- Counsel asks what competitively sensitive information would flow between the parties under a proposed collaboration, and under what controls.
+- An existing collaboration is being renewed or expanded and its restraints and information flows need a fresh review.
 
 ## Required Inputs
 
@@ -71,6 +74,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Quote every hardcore-restraint candidate (price-fixing, output restriction, customer or territory allocation, bid-rigging, group boycott) verbatim and escalate it — never explain a flag away or characterize the provision as benign.
+- Never state or imply that a safe harbor, block exemption, or ancillary-restraints doctrine applies; every such question is framed for counsel to answer.
 
 ## Workflow
 

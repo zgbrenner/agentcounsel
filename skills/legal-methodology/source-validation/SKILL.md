@@ -45,6 +45,13 @@ This skill does not and cannot substitute for independent legal research. It doe
 - A draft quotes from a source document (contract, filing, policy, statute) and the quotations need to be checked against the provided text.
 - The user wants a complete audit trail showing which sources in a draft are confirmed and which require additional verification.
 
+**Choosing among the verification skills:**
+
+- Use this skill for claim-by-claim classification of whether each claim in a draft is supported by the available sources.
+- Use `red-team-verifier` instead for the full adversarial pass over an entire deliverable — the superset that also covers reasoning, framing, jurisdiction, and completeness.
+- Use `hallucination-red-team` instead for a targeted hunt for fabricated or unsupported content in a draft.
+- Use `citation-integrity-check` instead when the review is limited to citations and quotations.
+
 ## Required Inputs
 
 - The complete draft to be validated (uploaded or pasted). Do not validate from a summary or paraphrase.

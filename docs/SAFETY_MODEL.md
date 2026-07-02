@@ -31,6 +31,7 @@ Each skill inherits the rules in [`core/`](../core/). These are the substance of
 | [`output-format-rules.md`](../core/output-format-rules.md) | Separate facts, assumptions, law, analysis, strategy, and verification items so a reviewer can see what rests on what. |
 | [`attorney-review-checklist.md`](../core/attorney-review-checklist.md) | Every deliverable ends with an explicit checklist for the supervising attorney. |
 | [`business-stakeholder-communication.md`](../core/business-stakeholder-communication.md) | When output goes to a non-lawyer, it is a plain-language summary that still routes decisions through counsel. |
+| [`capacity-and-vulnerable-parties.md`](../core/capacity-and-vulnerable-parties.md) | In individual-client and sensitive matters: never assess capacity, undue influence, or abuse; escalate safety concerns immediately; never predict outcomes about people; protect minors and the unrepresented. |
 
 Read these once. They apply to every skill in the library.
 

@@ -1,6 +1,6 @@
 ---
 name: Antitrust Risk Intake
-description: "Use when intaking facts about conduct with potential competition-law exposure into a draft triage matrix that buckets each conduct item, flags time-critical tracks, and routes to deep-dive skills for attorney review, without classifying conduct or assessing legality."
+description: "Use when facts with possible competition-law exposure first arrive — a sales email about a competitor contact, a proposed collaboration, a pricing move, a hotline report, or an agency inquiry — to produce a draft conduct inventory and triage matrix that buckets each item, flags any time-critical track, and routes each item to the matched antitrust deep-dive skill for attorney review, without classifying conduct or assessing legality."
 practice_area: antitrust-competition
 task_type: intake
 jurisdictions: []
@@ -32,13 +32,15 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for antitrust risk intake. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Take unstructured facts about conduct with possible competition-law exposure — a worried email, a proposed arrangement, a hotline report, an agency letter — and organize them into a conduct inventory and triage matrix that buckets each item, records preliminary risk indicators from the shared catalog, flags any time-critical track, and routes each item to the matched antitrust deep-dive skill. This is the front door of the antitrust-competition cluster, and its output is a **draft for attorney review**: every bucket and routing call is a workflow signal, never a legal classification or an assessment of legality.
 
 ## Use When
 
-- The user requests antitrust risk intake support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- A business team forwards an email thread about a competitor contact, meeting, or "understanding" and asks legal whether it is a problem.
+- Several loosely described conduct items arrive at once — a JV idea, a pricing move, a distributor complaint — and counsel needs them inventoried, bucketed, and routed before any deep-dive work.
+- A hotline report, internal-audit finding, or news of an industry investigation raises possible exposure and the facts need structured intake.
+- An agency letter, dawn-raid rumor, or pending merger notification makes it urgent to identify which track is time-critical.
+- Counsel asks "which antitrust skill do I run on this?" and the answer needs a documented triage matrix with fact gaps listed per recommended deep-dive.
 
 ## Required Inputs
 
@@ -68,6 +70,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Bucketing and routing recommendations are workflow signals only — never present a bucket as a legal classification of the conduct, or a routing call as a decision that forecloses another framework.
+- Time-critical indicators (active investigation, pending notification, dawn-raid risk, ongoing potentially problematic conduct) are escalated to counsel immediately, never queued as routine intake.
 
 ## Workflow
 

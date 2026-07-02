@@ -1,6 +1,6 @@
 ---
 name: Antitrust Compliance Policy Review
-description: "Use when reviewing a company's antitrust compliance policy and program to organize a draft topic-coverage matrix, jurisdiction-coverage matrix, and drafting-suggestion list for attorney review, without attesting compliance, approving the policy, or representing it meets any jurisdiction's requirements."
+description: "Use when a company's antitrust compliance policy, competition code-of-conduct section, or training program needs a gap review — after an incident, an acquisition, a regulatory development, or as a periodic refresh — to produce a draft topic-coverage and jurisdiction-coverage matrix, training/reporting and dawn-raid gap assessments, and a drafting-suggestion list for attorney review, without attesting compliance or approving the policy."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for antitrust compliance policy review. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Review a company's antitrust compliance policy and supporting program materials against the conduct patterns its people actually face, producing a topic-coverage matrix, a jurisdiction-coverage matrix, gap assessments for training, reporting, enforcement, dawn-raid protocol, and document-creation guidance, and a drafting-suggestion list. Coverage is tested against the shared antitrust risk-indicator catalog so the policy is measured against the company's real risk environment, not a generic checklist. Everything is a **draft for attorney review** — the skill never attests compliance, approves the policy, or represents that it meets any jurisdiction's requirements.
 
 ## Use When
 
-- The user requests antitrust compliance policy review support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- The GC asks for a gap review of the antitrust policy after an enforcement action, dawn raid, or internal-audit finding in the company or its industry.
+- An acquisition or new market entry adds jurisdictions (e.g., EU or UK operations) the current policy was never written to cover.
+- Compliance wants to know whether the policy actually addresses trade-association contacts, benchmarking, algorithmic pricing, or labor-market (no-poach / wage-fixing) conduct.
+- The policy is due for a periodic refresh and counsel wants a topic-by-topic and jurisdiction-by-jurisdiction coverage map before redrafting.
+- Sales or HR reports the policy is unusable for their teams, and role-specific audience-fit issues need to be documented.
+- The board or a regulator asks what the compliance program covers, and counsel needs an inventory of training, reporting-channel, discipline, and dawn-raid provisions with gaps flagged.
 
 ## Required Inputs
 
@@ -69,6 +72,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never attest that the policy is compliant, sufficient, or meets any jurisdiction's legal requirements — coverage findings are gap flags for counsel, not a certification of the program.
+- Drafting suggestions are proposed directions for attorney review, never approved policy language ready for adoption.
 
 ## Workflow
 

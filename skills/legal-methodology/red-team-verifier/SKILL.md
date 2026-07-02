@@ -44,6 +44,13 @@ It produces draft legal work product for attorney review. It is not legal advice
 - A high-stakes legal output is about to be sent, filed, or acted on and a final adversarial pass is wanted.
 - A draft has been revised and a targeted re-check of the changed sections is needed.
 
+**Choosing among the verification skills:**
+
+- Use this skill for the full adversarial pass over an entire deliverable — it is the superset, covering sourcing, reasoning, framing, jurisdiction, and completeness in one review.
+- Use `hallucination-red-team` instead for a targeted hunt for fabricated or unsupported content in a draft.
+- Use `citation-integrity-check` instead when the review is limited to citations and quotations.
+- Use `source-validation` instead for claim-by-claim classification of whether each claim in a draft is supported by the available sources.
+
 ## Required Inputs
 
 - The complete draft or output to be verified (uploaded or pasted). Do not verify from a description or summary alone.
