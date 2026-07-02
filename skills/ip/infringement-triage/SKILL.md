@@ -137,7 +137,7 @@ Optional input: the client's IP enforcement posture or policy, if available, whi
 
    State the signal, identify the one or two factors that most drive it, and conclude with: *This signal is a routing indicator based solely on the disclosed facts. It is not a finding that infringement has or has not occurred. Counsel must evaluate validity, apply the controlling legal standards under the governing jurisdiction, and determine the appropriate course of action* `[ATTORNEY TO CONFIRM]`.
 
-6. **Produce the "what cuts which way" summary table.** For each right analyzed, produce a table with columns: Factor | Direction | Key Disclosed Fact | Verification Needed. Populate one row per factor assessed. At the bottom of the table, include a bolded statement: **This table is a preliminary organizational tool. It is not a finding of infringement or non-infringement.**
+6. **Produce the "what cuts which way" summary table.** Using `templates/infringement-triage-memo.md`, for each right analyzed, produce a table with columns: Factor | Direction | Key Disclosed Fact | Verification Needed. Populate one row per factor assessed. At the bottom of the table, include a bolded statement: **This table is a preliminary organizational tool. It is not a finding of infringement or non-infringement.**
 
 7. **Recommend next steps by posture.** Calibrate next steps to the disclosed party posture.
 
@@ -149,11 +149,11 @@ Optional input: the client's IP enforcement posture or policy, if available, whi
 
 8. **List assumptions and flag missing information.** Enumerate every fact assumed in the analysis and every input that was not provided. Flag the impact of each gap on the reliability of the analysis.
 
-9. **Assemble the output** in the format below. Label the document as a draft infringement triage memo for attorney review.
+9. **Assemble the output** in the format below, using the skeleton in `templates/infringement-triage-memo.md`. Label the document as a draft infringement triage memo for attorney review.
 
 ## Output Format
 
-Deliver a document labeled:
+Deliver a document built on `templates/infringement-triage-memo.md`, labeled:
 
 > **DRAFT — INFRINGEMENT TRIAGE MEMO**
 > *Attorney review required before any enforcement action, demand, response, or change in conduct. This is not legal advice. This memo does not conclude whether infringement occurred.*

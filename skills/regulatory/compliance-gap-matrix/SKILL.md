@@ -96,7 +96,7 @@ If the requirement source is not provided, stop and request it. If control descr
 
 8. **Identify attorney-specific verification items.** Flag any gap or mapping where the legal interpretation of the requirement, the legal sufficiency of the control, or the legal consequences of the gap require attorney judgment beyond workflow analysis.
 
-9. **Assemble the matrix and narrative.** Produce the structured output below. Mark the entire document as a draft for attorney review.
+9. **Assemble the matrix and narrative.** Build the matrix using `templates/compliance-gap-matrix.md`, then produce the structured output below. Mark the entire document as a draft for attorney review.
 
 ## Output Format
 
@@ -110,7 +110,7 @@ Deliver the following sections in order:
 
 3. **Executive Summary** — Counts of Met / Partial / Gap / Unknown items; count of High/Medium/Low severity gaps; top three to five priority gaps identified for immediate attorney attention.
 
-4. **Compliance Gap Matrix** — Inline table with the following columns:
+4. **Compliance Gap Matrix** — from `templates/compliance-gap-matrix.md`; inline table with the following columns:
 
 | # | Requirement | Source ref | Current control | Status | Severity | Remediation (draft) | Owner (proposed) | Attorney note |
 |---|---|---|---|---|---|---|---|---|
