@@ -265,3 +265,335 @@ cases:
       - source validation gate.
     expected_attorney_escalation: Quality check only; attorney must verify every authority before reliance.
     eval_status: manual-ready
+  - eval_id: router-015
+    title: Competitor demands we stop using our product name
+    request: A lawyer for a competitor sent us a letter demanding we stop using our product name. What do we do?
+    expected_primary_skill: ip/cease-and-desist-response
+    expected_missing_facts:
+      - The cease-and-desist letter text.
+      - The accused product name and how it is used.
+      - Trademark registrations or prior-use facts on either side.
+      - Response deadline stated in the letter.
+      - Jurisdiction.
+    expected_quality_checks:
+      - source-validation-check
+      - citation-integrity-check
+      - hallucination-red-team
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - deadline gate.
+      - jurisdiction gate.
+      - privilege gate for an adversarial communication.
+    expected_attorney_escalation: Adversarial communication; attorney approval required before any response to the sender.
+    eval_status: manual-ready
+  - eval_id: router-016
+    title: Team wants to adopt a new AI tool
+    request: A team wants to start using a new AI tool for internal document summarization. Where do we start?
+    expected_primary_skill: ai-governance/ai-use-case-intake
+    expected_missing_facts:
+      - Description of the proposed AI use case and tool.
+      - Data types the tool will touch, including personal or confidential data.
+      - Intended users and decision impact.
+      - Vendor or in-house model details.
+    expected_quality_checks:
+      - source-validation-check
+      - privilege-confidentiality-check
+      - output-format-compliance-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate if AI or privacy rules apply.
+      - data-sensitivity gate.
+    expected_attorney_escalation: Intake triages and routes onward; attorney review required before any adoption approval.
+    eval_status: manual-ready
+  - eval_id: router-017
+    title: Legal review before a feature launch
+    request: We are launching a new product feature next month. What does legal need to look at?
+    expected_primary_skill: product-legal/launch-review
+    expected_missing_facts:
+      - Feature description and launch scope.
+      - Target markets and users.
+      - Data collected or processed.
+      - Marketing claims planned.
+      - Launch date.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate for target markets.
+      - launch-date deadline gate.
+    expected_attorney_escalation: Launch review spots issues and routes to specialist skills; attorney review required before launch.
+    eval_status: manual-ready
+  - eval_id: router-018
+    title: Sanctions screening hits on a new customer
+    request: Our screening tool flagged possible sanctions matches on a new customer. Help us work through the hits.
+    expected_primary_skill: financial-crime/sanctions-screening-review
+    expected_missing_facts:
+      - The screening hit details and list sources.
+      - Customer identifying information provided at onboarding.
+      - Applicable sanctions regimes and screening policy.
+      - Hold status of the transaction or relationship.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - hallucination-red-team
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction and sanctions-regime gate.
+      - escalation hold gate while matches are unresolved.
+    expected_attorney_escalation: Potential sanctions exposure; attorney and compliance escalation required before clearing or exiting the customer.
+    eval_status: manual-ready
+  - eval_id: router-019
+    title: Customer requests a copy of their data
+    request: A customer emailed asking for a copy of all the data we hold on them.
+    expected_primary_skill: privacy/dsar-workflow
+    expected_missing_facts:
+      - Requester identity and verification status.
+      - Applicable privacy law and jurisdiction.
+      - Date the request was received.
+      - Systems holding the requester data.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - statutory response deadline gate.
+    expected_attorney_escalation: Attorney review required before responding to the data subject.
+    eval_status: manual-ready
+  - eval_id: router-020
+    title: Pull key terms from an office lease
+    request: Pull the key terms out of this office lease for the business team.
+    expected_primary_skill: real-estate/lease-abstract
+    expected_missing_facts:
+      - Full lease text with all exhibits.
+      - Any amendments.
+      - Client role as landlord or tenant.
+      - Fields the business team needs.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - output-format-compliance-check
+      - attorney-review-gate
+    expected_gates:
+      - completeness gate for amendments and exhibits.
+    expected_attorney_escalation: Attorney review required before the abstract is relied on for lease decisions.
+    eval_status: manual-ready
+  - eval_id: router-021
+    title: Term sheet arrived for an acquisition
+    request: We just received a term sheet to acquire a target company. Flag what matters before we respond.
+    expected_primary_skill: m-and-a/loi-term-sheet-review
+    expected_missing_facts:
+      - The LOI or term sheet text.
+      - Client side as buyer or seller.
+      - Deal structure and headline terms.
+      - Exclusivity and binding provisions.
+      - Response timing.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - binding-terms gate.
+      - response deadline gate.
+    expected_attorney_escalation: Attorney review required before responding to or signing the term sheet.
+    eval_status: manual-ready
+  - eval_id: router-022
+    title: New divorce client intake
+    request: A new divorce client is coming in Thursday. Help me get organized for the intake.
+    expected_primary_skill: family-law/divorce-intake-organizer
+    expected_missing_facts:
+      - Parties and marriage timeline.
+      - Children and current parenting arrangements.
+      - Income, asset, and debt overview.
+      - Jurisdiction and any pending filings.
+      - Any safety concerns.
+    expected_quality_checks:
+      - assumption-audit
+      - privilege-confidentiality-check
+      - hallucination-red-team
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - domestic-violence safety referral gate if safety concerns appear.
+    expected_attorney_escalation: Any domestic-violence concern routes to the safety referral checklist and the attorney; no support calculations or custody recommendations.
+    eval_status: manual-ready
+  - eval_id: router-023
+    title: Pricing tool that ingests competitor prices
+    request: Our sales team wants to use a pricing tool that ingests competitor prices. Is that a problem?
+    expected_primary_skill: antitrust-competition/pricing-algorithm-risk-triage
+    expected_missing_facts:
+      - How the tool sets or recommends prices.
+      - Sources of competitor pricing data.
+      - Whether competitors use the same tool or vendor.
+      - Markets and jurisdictions affected.
+    expected_quality_checks:
+      - assumption-audit
+      - source-validation-check
+      - hallucination-red-team
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - competitor-coordination sensitivity gate.
+    expected_attorney_escalation: High-risk antitrust exposure; attorney review required before the tool is adopted.
+    eval_status: manual-ready
+  - eval_id: router-024
+    title: Checklist for a private capital raise
+    request: We are raising money from a small group of accredited investors. Build the checklist so we do not miss anything.
+    expected_primary_skill: securities-capital-markets/private-placement-checklist
+    expected_missing_facts:
+      - Offering structure and security type.
+      - Investor profile and count.
+      - Target exemption if counsel has identified one.
+      - Offering timeline and states involved.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - citation-integrity-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction and blue-sky gate.
+      - exemption determinations reserved to securities counsel.
+    expected_attorney_escalation: Securities attorney must make all exemption and registration determinations; the checklist is draft work product only.
+    eval_status: manual-ready
+  - eval_id: router-025
+    title: Map the tax issues in a new arrangement
+    request: We are restructuring how our subsidiaries bill each other and want to understand what tax issues that raises.
+    expected_primary_skill: tax/tax-issue-intake
+    expected_missing_facts:
+      - Entities and jurisdictions involved.
+      - Description of the current and proposed arrangement.
+      - Relevant agreements and financial documents.
+      - Tax positions or advice already received.
+    expected_quality_checks:
+      - assumption-audit
+      - source-validation-check
+      - citation-integrity-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - no-computation gate; no tax calculations or filing positions.
+    expected_attorney_escalation: Qualified tax counsel must review; no tax advice, computation, or filing positions.
+    eval_status: manual-ready
+  - eval_id: router-026
+    title: Trustee demands return of payments
+    request: A trustee sent us a letter demanding we return payments a bankrupt customer made to us last year.
+    expected_primary_skill: bankruptcy-restructuring/preference-demand-response-triage
+    expected_missing_facts:
+      - The demand letter and stated amounts.
+      - Payment history with the debtor.
+      - Invoices, terms, and course of dealing.
+      - Bankruptcy case details and deadlines.
+      - Any new-value or ordinary-course facts.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - hallucination-red-team
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - response deadline gate.
+      - no legal conclusions on defenses; triage only.
+    expected_attorney_escalation: Adversarial demand; attorney approval required before any response to the trustee.
+    eval_status: manual-ready
+  - eval_id: router-027
+    title: Carrier defending under reservation of rights
+    request: Our carrier just sent a letter saying they are defending under a reservation of rights. What should we look at?
+    expected_primary_skill: insurance/reservation-of-rights-review
+    expected_missing_facts:
+      - The reservation of rights letter.
+      - The policy and endorsements.
+      - The underlying claim or complaint.
+      - Tender and correspondence history.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - hallucination-red-team
+      - attorney-review-gate
+    expected_gates:
+      - no coverage-determination gate; issue spotting only.
+      - response and defense-counsel timing gate.
+    expected_attorney_escalation: Attorney review required; no coverage determinations or bad-faith conclusions.
+    eval_status: manual-ready
+  - eval_id: router-028
+    title: Summarize a will and trust after a death
+    request: My mother passed away and left a will and a trust. Summarize what these documents say.
+    expected_primary_skill: trusts-estates/estate-document-summary
+    expected_missing_facts:
+      - The will, trust, and any amendments or codicils.
+      - Date of death and jurisdiction.
+      - The requester role in the estate.
+      - Related beneficiary designations if relevant.
+    expected_quality_checks:
+      - source-validation-check
+      - assumption-audit
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - no entitlement or validity conclusions; summary only.
+    expected_attorney_escalation: Attorney review required; no beneficiary-entitlement or validity conclusions.
+    eval_status: manual-ready
+  - eval_id: router-029
+    title: Research whether a claim is recognized
+    request: Find out whether our state recognizes this kind of claim and write up what you find.
+    expected_primary_skill: legal-research/legal-research-memo
+    expected_missing_facts:
+      - The precise legal question.
+      - Jurisdiction and court level.
+      - The facts driving the question.
+      - Verified research sources available.
+    expected_quality_checks:
+      - citation-integrity-check
+      - source-validation-check
+      - hallucination-red-team
+      - attorney-review-gate
+    expected_gates:
+      - jurisdiction gate.
+      - source validation gate; no authority cited without verification.
+    expected_attorney_escalation: Attorney must verify every authority before reliance; unverified points remain placeholders.
+    eval_status: manual-ready
+  - eval_id: router-030
+    title: Closing checklist for an acquisition
+    request: We sign the acquisition next week. Build the closing checklist so nothing is missed at closing.
+    expected_primary_skill: m-and-a/closing-deliverables-tracker
+    expected_missing_facts:
+      - The purchase agreement and ancillary documents.
+      - Closing conditions and required consents.
+      - Signing and closing dates.
+      - Responsible parties for each deliverable.
+    expected_quality_checks:
+      - source-validation-check
+      - output-format-compliance-check
+      - privilege-confidentiality-check
+      - attorney-review-gate
+    expected_gates:
+      - closing deadline gate.
+      - route to the deal-specific M&A tracker over the general corporate closing checklist.
+    expected_attorney_escalation: Prefer m-and-a/closing-deliverables-tracker for an acquisition; corporate/closing-checklist is an acceptable adjacent route for a generic deal; attorney must verify conditions and deadlines before closing.
+    eval_status: manual-ready
+  - eval_id: router-031
+    title: AI feature that processes personal data
+    request: Product wants to ship an AI feature that personalizes recommendations using customer data. What reviews do we need?
+    expected_primary_skill: privacy/pia-generation
+    expected_missing_facts:
+      - Feature description and model details.
+      - Personal data categories and sources.
+      - Lawful basis and notice posture.
+      - Jurisdictions and applicable privacy or AI rules.
+      - Launch timeline.
+    expected_quality_checks:
+      - source-validation-check
+      - privilege-confidentiality-check
+      - output-format-compliance-check
+      - attorney-review-gate
+    expected_gates:
+      - cross-practice gate; run the privacy and AI-governance passes together, neither replaces the other.
+      - jurisdiction gate.
+    expected_attorney_escalation: Run pia-generation alongside ai-governance/ai-use-case-intake or product-legal/ai-feature-review per the router cross-practice guidance; attorney review required before launch.
+    eval_status: manual-ready

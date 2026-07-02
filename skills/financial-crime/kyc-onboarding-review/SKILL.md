@@ -18,6 +18,9 @@ outputs:
   - "Draft disposition recommendation with escalation and verification items"
 related_skills:
   - skills/financial-crime/sanctions-screening-review/SKILL.md
+  - skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md
+  - skills/financial-crime/edd-file-review/SKILL.md
+  - skills/financial-crime/aml-program-gap-review/SKILL.md
   - skills/corporate/entity-compliance/SKILL.md
   - skills/regulatory/compliance-gap-matrix/SKILL.md
 tags:
@@ -56,7 +59,7 @@ If the packet or the rules grid is missing, stop and request it. If documents ar
 
 ## Do Not Use When
 
-- The task is transaction monitoring or a suspicious-activity investigation on an existing customer — that is a separate, ongoing workflow.
+- The task is transaction monitoring or a suspicious-activity alert on an existing customer — use `transaction-monitoring-alert-triage`.
 - The firm's KYC/AML rules grid or CDD policy is not available and cannot be obtained — do not construct due diligence rules from model background knowledge alone.
 - The user wants an actual customer-acceptance decision or a final risk rating treated as authoritative — this skill produces a draft for the compliance function and counsel.
 - Live sanctions or PEP screening is requested — this skill does not access screening databases; it reviews results that are provided to it.
