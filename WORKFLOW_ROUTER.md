@@ -178,6 +178,9 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "We got a data subject access request" / "handle this DSAR" | `skills/privacy/dsar-workflow/SKILL.md` |
 | "Check our privacy policy for gaps" | `skills/privacy/privacy-policy-gap-review/SKILL.md` |
 | "Run a privacy impact assessment" / "do a PIA or DPIA" | `skills/privacy/pia-generation/SKILL.md` |
+| "We had a security incident" / "someone got into the system" / "do we have to notify anyone?" | `skills/privacy/breach-response-workflow/SKILL.md` |
+| "This vendor hosts data abroad" / "map our cross-border transfers" / "organize the TIA facts" | `skills/privacy/cross-border-transfer-review/SKILL.md` |
+| "Run privacy diligence on this vendor" / "the security questionnaire came back" | `skills/privacy/vendor-privacy-diligence/SKILL.md` |
 
 ### Product, marketing, and AI features
 
@@ -216,6 +219,9 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 |---|---|
 | "Run KYC on this new client" / "review this onboarding packet" | `skills/financial-crime/kyc-onboarding-review/SKILL.md` |
 | "Review these screening hits" / "adjudicate these sanctions or PEP matches" | `skills/financial-crime/sanctions-screening-review/SKILL.md` |
+| "A monitoring alert fired on this customer" / "triage this transaction alert" | `skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md` |
+| "Check our AML program against the required elements" / "gap-review our BSA program" | `skills/financial-crime/aml-program-gap-review/SKILL.md` |
+| "Review this EDD file" / "work up this high-risk customer's due-diligence file" | `skills/financial-crime/edd-file-review/SKILL.md` |
 
 ### Securities / capital markets
 
@@ -333,6 +339,7 @@ The Family Law skills produce **draft work product for a qualified, licensed att
 
 | The task sounds like... | Use this skill |
 |---|---|
+| "A business team just sent legal a request" / "triage this legal ticket" / "who should own this ask?" | `skills/legal-ops/legal-intake-triage/SKILL.md` |
 | "Draft a response to this data subject request / litigation hold / vendor question" | `skills/legal-ops/templated-legal-response/SKILL.md` |
 | "Prepare me for this meeting" / "build a meeting briefing" | `skills/legal-ops/legal-meeting-briefing/SKILL.md` |
 | "Is this ready to sign?" / "set up signing for this document" | `skills/legal-ops/signature-routing-checklist/SKILL.md` |

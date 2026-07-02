@@ -46,7 +46,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/research:memo` | `skills/legal-research/legal-research-memo/SKILL.md` | "research this question", "write a research memo" | Research question, known facts, jurisdiction, any authority | Research memo draft | `/method:statutory-interpretation`, `/method:source-validation` |
 | `/research:case-brief` | `skills/legal-research/case-brief/SKILL.md` | "brief this case", "structured brief of this opinion" | Opinion text, matter context, jurisdiction | Case brief with Holding / Relevance / Weight | `/research:synthesis`, `/method:source-validation` |
 | `/research:synthesis` | `skills/legal-research/authority-synthesis/SKILL.md` | "synthesize a rule across these cases", "rule across this set of authorities" | Question Presented, authority set, jurisdiction, relevant date | Rule-synthesis worksheet with majority / minority split | `/research:case-brief`, `/research:memo` |
-| `/research:reg-history` | `skills/legal-research/regulatory-history-tracer/SKILL.md` | "regulatory history of this CFR section", "what did this regulation say on this date" | CFR citation, relevant date or range, matter context | Regulatory history table with FR amendment references | `/regulatory:rule-change-summary`, `/regulatory:compliance-gap-matrix` |
+| `/research:reg-history` | `skills/legal-research/regulatory-history-tracer/SKILL.md` | "regulatory history of this CFR section", "what did this regulation say on this date" | CFR citation, relevant date or range, matter context | Regulatory history table with FR amendment references | `/regulatory:rule-change`, `/regulatory:gap-matrix` |
 
 ## Corporate
 
@@ -124,6 +124,9 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/privacy:dsar` | `skills/privacy/dsar-workflow/SKILL.md` | "handle this DSAR", "data subject access request" | The request, requester details | Request-handling record | `/privacy:policy-gap` |
 | `/privacy:policy-gap` | `skills/privacy/privacy-policy-gap-review/SKILL.md` | "check our privacy policy for gaps" | Privacy policy, described practices | Gap table and recommendations | `/privacy:pia` |
 | `/privacy:pia` | `skills/privacy/pia-generation/SKILL.md` | "run a PIA", "do a privacy impact assessment" | Activity description, data categories, data flows | PIA draft | `/privacy:dpa` |
+| `/privacy:breach-response` | `skills/privacy/breach-response-workflow/SKILL.md` | "we had a security incident", "do we have to notify anyone" | Incident description, trigger dates, affected data, privilege posture | Incident intake, notification-obligation inventory, chronology | `/litigation:legal-hold`, `/privacy:dpa` |
+| `/privacy:transfers` | `skills/privacy/cross-border-transfer-review/SKILL.md` | "map our cross-border transfers", "organize the TIA facts" | Transfer documents, parties and roles, origin/destination countries | Flow inventory, mechanism map, gap list | `/privacy:dpa`, `/privacy:vendor-diligence` |
+| `/privacy:vendor-diligence` | `skills/privacy/vendor-privacy-diligence/SKILL.md` | "run privacy diligence on this vendor", "the security questionnaire came back" | Vendor diligence materials, data scope, requirements baseline | Risk/gap table, follow-up questions, contract asks | `/privacy:dpa`, `/ai:vendor-terms` |
 
 ## Product Legal
 
@@ -170,11 +173,15 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 |---|---|---|---|---|---|
 | `/aml:kyc-onboarding` | `skills/financial-crime/kyc-onboarding-review/SKILL.md` | "run KYC on this client", "review this onboarding packet" | Onboarding packet, KYC/AML rules grid, screening results | KYC onboarding review and escalation packet | `/aml:screening` |
 | `/aml:screening` | `skills/financial-crime/sanctions-screening-review/SKILL.md` | "review these screening hits", "adjudicate these sanctions or PEP matches" | Screening results, party identifiers, disposition policy | Screening review with recommended dispositions | `/aml:kyc-onboarding` |
+| `/aml:alert-triage` | `skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md` | "a monitoring alert fired", "triage this transaction alert" | Alert data and rule fired, customer profile, expected-activity baseline | Alert triage draft with documentation-of-rationale items | `/aml:kyc-onboarding`, `/aml:edd` |
+| `/aml:program-gap` | `skills/financial-crime/aml-program-gap-review/SKILL.md` | "gap-review our AML program", "check our BSA program elements" | Program documents, the firm's policy or supplied framework | Program gap matrix and verification items | `/regulatory:gap-matrix` |
+| `/aml:edd` | `skills/financial-crime/edd-file-review/SKILL.md` | "review this EDD file", "work up this high-risk customer" | EDD file, the firm's EDD policy, screening results | EDD file review and escalation draft | `/aml:kyc-onboarding`, `/aml:screening` |
 
 ## Legal Operations
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
+| `/legal-ops:intake` | `skills/legal-ops/legal-intake-triage/SKILL.md` | "triage this legal ticket", "a business team sent legal a request" | The inbound request, requester context, urgency as stated | Intake record and routing recommendation | `/litigation:intake`, `/legal-ops:response` |
 | `/legal-ops:response` | `skills/legal-ops/templated-legal-response/SKILL.md` | "draft a response to this DSR / litigation hold / vendor question" | The inquiry, response template, customization facts | Draft response with escalation-gate result | `/privacy:dsar`, `/litigation:legal-hold` |
 | `/legal-ops:meeting-brief` | `skills/legal-ops/legal-meeting-briefing/SKILL.md` | "prepare me for this meeting", "build a meeting briefing" | Meeting context, background materials | Meeting briefing and action-item tracker | `/corporate:board-minutes` |
 | `/legal-ops:signature` | `skills/legal-ops/signature-routing-checklist/SKILL.md` | "is this ready to sign", "set up signing for this document" | The document, intended signers, approvals | Signature readiness review and routing plan | `/contracts:review` |
@@ -183,7 +190,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 Commands for configuring AgentCounsel and opening a matter. The cold-start interviews configure a practice group and produce a filled-in practice profile under `practice-profiles/`; `create-matter-workspace` sets up a single matter file under `matter-workspaces/`.
 
-Only the four hand-authored cold-start interviews (`/setup:contracts`, `/setup:litigation`, `/setup:privacy`, `/setup:corporate`) carry slash-style commands. The other fourteen cold-start interviews under `skills/setup/` are intentionally not slash-commandable — they are one-time administrative configuration flows run with a practice-group lead rather than ad-hoc legal tasks. Reach them directly via `skills/setup/<area>-cold-start-interview/SKILL.md`.
+Only the four hand-authored cold-start interviews (`/setup:contracts`, `/setup:litigation`, `/setup:privacy`, `/setup:corporate`) carry slash-style commands. The other fifteen cold-start interviews under `skills/setup/` are intentionally not slash-commandable — they are one-time administrative configuration flows run with a practice-group lead rather than ad-hoc legal tasks. Reach them directly via `skills/setup/<area>-cold-start-interview/SKILL.md`.
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -196,6 +203,8 @@ Only the four hand-authored cold-start interviews (`/setup:contracts`, `/setup:l
 ## Legal Methodology
 
 Cross-cutting analytical disciplines that support skills in any practice area.
+
+Only the four analytical-method skills below carry slash-style commands. The other seven quality-check skills under `skills/legal-methodology/` are intentionally not slash-commandable — they run as part of review workflows invoked by other skills and review panels rather than as standalone entry points. Reach them directly via `skills/legal-methodology/<skill>/SKILL.md`.
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
