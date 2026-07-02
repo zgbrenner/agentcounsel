@@ -97,7 +97,7 @@ If the model identification and intended use are not provided, stop and request 
 
 11. **Assess monitoring and incident response.** Identify whether a plan exists to monitor model outputs in production (accuracy drift, bias drift, unexpected outputs) and to respond to incidents. Flag if no monitoring plan is in place.
 
-12. **Assign risk tier and build the risk register.** For each dimension assessed, assign a risk level (Low / Medium / High) and an owner. Assign an overall risk tier.
+12. **Assign risk tier and build the risk register.** For each dimension assessed, assign a risk level (Low / Medium / High) and an owner. Assign an overall risk tier. Build the risk register using `templates/model-risk-register.md`.
 
 13. **Recommend controls.** For each High and Medium risk item, recommend a specific control or action (technical, process, contractual, legal, or governance).
 
@@ -113,7 +113,7 @@ Three to five sentences: model identity, intended use, overall risk tier, and th
 **2. Model Characterization**
 Table: Model name/version, provider/source, model type, training data (as documented), intended use per provider documentation, key documented limitations, and model card / documentation availability.
 
-**3. Risk Register**
+**3. Risk Register** — from `templates/model-risk-register.md`:
 
 | Risk Dimension | Finding | Risk Level | Recommended Control | Owner |
 |---|---|---|---|---|

@@ -95,7 +95,7 @@ If any of these inputs are missing, stop and request them before proceeding. Do 
 
 11. **Consumer protection.** Spot unfair, deceptive, or abusive acts or practices exposure, dark patterns, auto-renewal disclosure requirements, and any sector-specific consumer protection obligations.
 
-12. **Compile the issues register.** Assemble every flagged issue into the structured table described in the Output Format section. Assign severity (High / Medium / Low / Unknown), owner (practice area or specialist skill), and blocking status.
+12. **Compile the issues register.** Assemble every flagged issue into the structured table described in the Output Format section, using `templates/launch-issues-register.md`. Assign severity (High / Medium / Low / Unknown), owner (practice area or specialist skill), and blocking status.
 
 13. **Draft the go / hold / conditions recommendation.** Based on the issues register, draft a recommendation framed as follows: Go (no blocking issues identified), Hold (one or more blocking issues require resolution before launch), or Conditions (launch may proceed subject to specified conditions). Label this as a draft for attorney sign-off — it is not a legal clearance.
 
@@ -107,7 +107,7 @@ Deliver the following sections, in order, labeled as **DRAFT — FOR ATTORNEY RE
 
 1. **Review Summary**: product/feature name, launch date, target markets, review date, inputs received, and inputs missing or assumed.
 
-2. **Launch Issues Register**: a table with columns — Issue Description | Practice Area | Severity (High / Medium / Low / Unknown) | Recommended Owner / Skill | Blocking? (Yes / No / TBD) | Status.
+2. **Launch Issues Register**: from `templates/launch-issues-register.md` — a table with columns — Issue Description | Practice Area | Severity (High / Medium / Low / Unknown) | Recommended Owner / Skill | Blocking? (Yes / No / TBD) | Status.
 
 3. **Routing Map**: a brief list linking each High or blocking issue to the recommended next step (specialist attorney, sibling skill, or external counsel).
 

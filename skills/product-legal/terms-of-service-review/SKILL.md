@@ -72,39 +72,43 @@ If the ToS text is not provided, stop and request it. Do not fabricate terms or 
 
 ## Workflow
 
+This skill draws on shared reference material in `skills/product-legal/references/`: `terms-of-service-red-flags.md` (the ToS red-flag catalog, covering both operator-side risk and consumer-fairness exposure). Consult it at the steps noted below.
+
 1. **Confirm inputs.** Verify that the full ToS text and context are provided. List what was received and flag anything missing or assumed.
 
 2. **Identify document structure and scope.** Note the document's title, effective date, version, governing law clause, and the parties it governs. Identify whether it is B2C, B2B, or hybrid. Identify all documents incorporated by reference.
 
-3. **Acceptance mechanism and contract formation.** Assess how users accept the terms: clickwrap, browsewrap, sign-in-wrap, or electronic signature. Flag whether the acceptance mechanism is likely sufficient to form a binding agreement, and note any weaknesses (e.g., browsewrap with no conspicuous notice).
+3. **Red flags quick scan.** Run a fast first pass against the catalog in `skills/product-legal/references/terms-of-service-red-flags.md`. Record each red-flag pattern present — noting whether the exposure runs to the operator, to users, or both — or note that none surfaced in the scan. This scan orients the deeper review below; it does not replace it.
 
-4. **Scope of license and use rights.** Summarize the rights granted to users and the rights reserved by the operator. Flag overly broad operator rights, missing grant language, or ambiguity about what users may and may not do.
+4. **Acceptance mechanism and contract formation.** Assess how users accept the terms: clickwrap, browsewrap, sign-in-wrap, or electronic signature. Flag whether the acceptance mechanism is likely sufficient to form a binding agreement, and note any weaknesses (e.g., browsewrap with no conspicuous notice).
 
-5. **User content and intellectual property.** Review user content license provisions: what rights users grant, whether the license is exclusive, sublicensable, irrevocable, or royalty-free, and whether users retain ownership. Flag missing or overbroad provisions. Note any AI training use of user content.
+5. **Scope of license and use rights.** Summarize the rights granted to users and the rights reserved by the operator. Flag overly broad operator rights, missing grant language, or ambiguity about what users may and may not do.
 
-6. **Acceptable use policy.** Assess the prohibited conduct provisions. Flag: overly vague prohibitions, missing categories of prohibited conduct, inconsistency with the linked AUP if separate, and enforcement/termination rights tied to violations.
+6. **User content and intellectual property.** Review user content license provisions: what rights users grant, whether the license is exclusive, sublicensable, irrevocable, or royalty-free, and whether users retain ownership. Flag missing or overbroad provisions. Note any AI training use of user content.
 
-7. **Payment, subscription, and auto-renewal terms.** Review payment obligations, subscription pricing, auto-renewal mechanics, cancellation rights, and refund policies. Flag missing disclosures, compliance with auto-renewal statutes `[CONFIRM: applicable state/country auto-renewal laws]`, and ambiguous or one-sided terms.
+7. **Acceptable use policy.** Assess the prohibited conduct provisions. Flag: overly vague prohibitions, missing categories of prohibited conduct, inconsistency with the linked AUP if separate, and enforcement/termination rights tied to violations.
 
-8. **Disclaimers and warranty language.** Assess the warranty disclaimer: whether it is conspicuous (all-caps or equivalent), whether it covers the relevant services, and whether it is consistent with implied warranty obligations in applicable jurisdictions. Flag for consumer law analysis in B2C contexts.
+8. **Payment, subscription, and auto-renewal terms.** Review payment obligations, subscription pricing, auto-renewal mechanics, cancellation rights, and refund policies. Flag missing disclosures, compliance with auto-renewal statutes `[CONFIRM: applicable state/country auto-renewal laws]`, and ambiguous or one-sided terms.
 
-9. **Limitation of liability.** Review the limitation of liability clause: cap amount (if any), excluded categories, mutual or unilateral structure, and any carve-outs. Flag unconscionability risk in consumer contracts and jurisdictions that limit liability caps.
+9. **Disclaimers and warranty language.** Assess the warranty disclaimer: whether it is conspicuous (all-caps or equivalent), whether it covers the relevant services, and whether it is consistent with implied warranty obligations in applicable jurisdictions. Flag for consumer law analysis in B2C contexts.
 
-10. **Indemnification.** Assess who indemnifies whom, for what, and subject to what conditions. Flag one-sided indemnification obligations, missing notice requirements, and indemnification for IP infringement.
+10. **Limitation of liability.** Review the limitation of liability clause: cap amount (if any), excluded categories, mutual or unilateral structure, and any carve-outs. Flag unconscionability risk in consumer contracts and jurisdictions that limit liability caps.
 
-11. **Dispute resolution and class-action waiver.** Review arbitration clauses, class-action waivers, jury trial waivers, venue selection, and governing law. Flag enforceability concerns `[CONFIRM: applicable jurisdiction's arbitration and class-waiver law]`, unconscionability risks, and opt-out mechanisms.
+11. **Indemnification.** Assess who indemnifies whom, for what, and subject to what conditions. Flag one-sided indemnification obligations, missing notice requirements, and indemnification for IP infringement.
 
-12. **Termination.** Assess termination rights — for cause, for convenience, and by either party. Flag missing notice requirements, data return or deletion obligations on termination, and survival of obligations.
+12. **Dispute resolution and class-action waiver.** Review arbitration clauses, class-action waivers, jury trial waivers, venue selection, and governing law. Flag enforceability concerns `[CONFIRM: applicable jurisdiction's arbitration and class-waiver law]`, unconscionability risks, and opt-out mechanisms.
 
-13. **Modification and notice mechanism.** Review how the operator may amend the terms and how notice is given. Flag: unilateral amendment with no notice, inadequate notice periods, and whether continued use constitutes acceptance of material changes.
+13. **Termination.** Assess termination rights — for cause, for convenience, and by either party. Flag missing notice requirements, data return or deletion obligations on termination, and survival of obligations.
 
-14. **Consistency with linked policies.** Compare key provisions against the linked privacy policy and any other incorporated documents. Flag material inconsistencies (e.g., data use rights in the ToS that conflict with the privacy policy).
+14. **Modification and notice mechanism.** Review how the operator may amend the terms and how notice is given. Flag: unilateral amendment with no notice, inadequate notice periods, and whether continued use constitutes acceptance of material changes.
 
-15. **Compile the issues table.** Assemble all findings into the structured table described in the Output Format section.
+15. **Consistency with linked policies.** Compare key provisions against the linked privacy policy and any other incorporated documents. Flag material inconsistencies (e.g., data use rights in the ToS that conflict with the privacy policy).
 
-16. **Draft prioritized recommendations.** Rank issues as High / Medium / Low and provide a brief recommended action for each.
+16. **Compile the issues table.** Assemble all findings into the structured table described in the Output Format section. Cross-check the table against the quick-scan results from `skills/product-legal/references/terms-of-service-red-flags.md`: every red-flag pattern recorded in step 3 must appear as an issue or be expressly cleared with a stated reason.
 
-17. **List assumptions and open items.** State every assumption and every `[CONFIRM: ...]` item.
+17. **Draft prioritized recommendations.** Rank issues as High / Medium / Low and provide a brief recommended action for each. Where the catalog section for a flagged pattern includes **Preferred position / Fallback position** lines, use them to state the direction of the recommended change — direction only, not final clause language.
+
+18. **List assumptions and open items.** State every assumption and every `[CONFIRM: ...]` item.
 
 ## Output Format
 
@@ -114,15 +118,17 @@ Deliver the following sections, in order, labeled as **DRAFT — FOR ATTORNEY RE
 
 2. **Document Overview**: brief description of structure, acceptance mechanism, scope, and linked documents (noting which were and were not reviewed).
 
-3. **Issues Table** *(one row per provision area)*: a table with columns — Provision Area | Summary of Finding | Risk Level (High / Medium / Low) | Recommended Action | Open Questions / `[CONFIRM: ...]`.
+3. **Red Flags Quick Scan**: each red-flag pattern from `skills/product-legal/references/terms-of-service-red-flags.md` found in the ToS — noting whether the exposure runs to the operator, to users, or both — or a note that none surfaced in the scan.
 
-4. **Prioritized Recommendations**: a numbered list of High-priority issues with specific recommended drafting actions, framed as options for attorney review — not final language.
+4. **Issues Table** *(one row per provision area)*: a table with columns — Provision Area | Summary of Finding | Risk Level (High / Medium / Low) | Recommended Action | Open Questions / `[CONFIRM: ...]`.
 
-5. **Consistency Gaps**: a brief list of material inconsistencies between the ToS and any linked policies reviewed.
+5. **Prioritized Recommendations**: a numbered list of High-priority issues with specific recommended drafting actions, framed as options for attorney review — not final language.
 
-6. **Assumptions and Open Items**: numbered list of every assumption and `[CONFIRM: ...]` item.
+6. **Consistency Gaps**: a brief list of material inconsistencies between the ToS and any linked policies reviewed.
 
-7. **Attorney Verification Checklist**: checkbox items (see below).
+7. **Assumptions and Open Items**: numbered list of every assumption and `[CONFIRM: ...]` item.
+
+8. **Attorney Verification Checklist**: checkbox items (see below).
 
 ### Optional: Business Stakeholder Summary
 
@@ -145,6 +151,7 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] The limitation of liability and warranty disclaimer have been reviewed for conspicuousness and enforceability under applicable law.
 - [ ] User content IP provisions, including any AI training use, have been reviewed by IP counsel.
 - [ ] All inconsistencies between the ToS and the privacy policy have been resolved.
+- [ ] The red-flag quick scan against `skills/product-legal/references/terms-of-service-red-flags.md` has been reviewed; every flagged pattern is either reflected in the issues table or expressly cleared, and no flagged item asserts that a clause is enforceable or unenforceable.
 - [ ] No legal authority, statute, or regulation has been asserted without verification.
 - [ ] All assumptions and `[CONFIRM: ...]` items have been resolved.
 - [ ] This document is labeled as a draft and is not shared with third parties or used as legal sign-off on the ToS.

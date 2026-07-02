@@ -69,45 +69,50 @@ If the agreement text is not provided, stop and request it. Do not summarize, an
 
 ## Workflow
 
+This skill draws on shared employment reference material in `skills/employment/references/`: `severance-release-red-flags.md` (severance and release red-flag catalog, covering both the employee and employer perspectives). Consult it at the steps noted below.
+
 1. **Confirm inputs.** Verify that the agreement text, reviewing party, and jurisdiction are available. If the agreement text is missing, stop and request it. If jurisdiction or employee age is unknown, flag for attorney confirmation and proceed with the remaining review.
 
 2. **Identify the document structure.** Read through the full agreement and identify: the parties, the effective date, the recitals or context, and the overall organization of provisions. Note any defined terms that control the scope of key provisions.
 
-3. **Analyze consideration offered.** Identify what the employer is providing (severance pay amount and schedule, benefits continuation, equity treatment, outplacement, references, other). Note whether additional consideration beyond existing entitlements is provided, and flag for attorney assessment of whether it is adequate to support the release.
+3. **Red flags quick scan.** Run a fast first pass against the red-flag catalog in `skills/employment/references/severance-release-red-flags.md`, scanning from the reviewing party's perspective. Record each red-flag pattern present, or note that none surfaced in the scan. This scan orients the deeper review; it does not replace it.
 
-4. **Analyze the release of claims.** Identify: the scope of claims released (described claims, time period covered, released parties), explicit carve-outs (workers' compensation, EEOC charge rights, vested benefits), and any language purporting to release future claims, pending claims, or non-waivable claims. Flag all potentially non-waivable claim waivers for attorney review — do not conclude on their enforceability.
+4. **Analyze consideration offered.** Identify what the employer is providing (severance pay amount and schedule, benefits continuation, equity treatment, outplacement, references, other). Note whether additional consideration beyond existing entitlements is provided, and flag for attorney assessment of whether it is adequate to support the release. Check the consideration structure against Section 3 (Consideration Structure) of `skills/employment/references/severance-release-red-flags.md`.
 
-5. **Assess statutory disclosure and timing requirements.** Note whether the agreement includes recitations about review period, right to consult counsel, and revocation rights. Flag the adequacy of these provisions for attorney confirmation, noting that requirements vary by jurisdiction and by the employee's age and circumstances. Use `[CONFIRM: applicable periods and disclosures]`.
+5. **Analyze the release of claims.** Identify: the scope of claims released (described claims, time period covered, released parties), explicit carve-outs (workers' compensation, EEOC charge rights, vested benefits), and any language purporting to release future claims, pending claims, or non-waivable claims. Flag all potentially non-waivable claim waivers for attorney review — do not conclude on their enforceability. Check the release against Section 1 (Release Scope) of `skills/employment/references/severance-release-red-flags.md`.
 
-6. **Identify restrictive covenants.** Extract and summarize every non-compete, non-solicitation (customer and employee), non-disparagement, and confidentiality/non-disclosure provision. For each: note the scope (geographic, industry, duration, parties covered), any carve-outs, and remedies stated. Flag enforceability for attorney review — do not assert enforceability conclusions.
+6. **Assess statutory disclosure and timing requirements.** Note whether the agreement includes recitations about review period, right to consult counsel, and revocation rights. Flag the adequacy of these provisions for attorney confirmation, noting that requirements vary by jurisdiction and by the employee's age and circumstances. Use `[CONFIRM: applicable periods and disclosures]`. Check against Sections 2 (Age-Discrimination Waiver Formalities) and 10 (Process Patterns) of `skills/employment/references/severance-release-red-flags.md`.
 
-7. **Identify cooperation and return-of-property obligations.** Note any post-separation cooperation requirements (litigation support, government inquiries), duration, compensation, and reimbursement terms. Flag open-ended cooperation obligations for attorney assessment.
+7. **Identify restrictive covenants.** Extract and summarize every non-compete, non-solicitation (customer and employee), non-disparagement, and confidentiality/non-disclosure provision. For each: note the scope (geographic, industry, duration, parties covered), any carve-outs, and remedies stated. Flag enforceability for attorney review — do not assert enforceability conclusions. Check against Sections 4 (Restrictive Covenants) and 5 (Confidentiality and Non-Disparagement) of `skills/employment/references/severance-release-red-flags.md`.
 
-8. **Review confidentiality provisions.** Note what the employee is required to keep confidential, any exceptions (e.g., communications with government agencies, attorneys, tax advisors), and what obligations apply to the employer. Flag overly broad confidentiality provisions.
+8. **Identify cooperation and return-of-property obligations.** Note any post-separation cooperation requirements (litigation support, government inquiries), duration, compensation, and reimbursement terms. Flag open-ended cooperation obligations for attorney assessment. Check against Section 6 (Cooperation Obligations) of `skills/employment/references/severance-release-red-flags.md`.
 
-9. **Review reference and announcement provisions.** Identify what, if anything, the agreement says about employment references, the reason for departure stated internally or externally, and LinkedIn or other social media references to the separation.
+9. **Review confidentiality provisions.** Note what the employee is required to keep confidential, any exceptions (e.g., communications with government agencies, attorneys, tax advisors), and what obligations apply to the employer. Flag overly broad confidentiality provisions, checking against Section 5 (Confidentiality and Non-Disparagement) of `skills/employment/references/severance-release-red-flags.md`.
 
-10. **Identify tax allocation provisions.** Note how the agreement allocates the severance payment for tax purposes (e.g., wages, damages, attorneys' fees). Flag the allocation for review by a tax professional and counsel — do not assert tax treatment.
+10. **Review reference and announcement provisions.** Identify what, if anything, the agreement says about employment references, the reason for departure stated internally or externally, and LinkedIn or other social media references to the separation.
 
-11. **Assess missing or unusual provisions.** Note any provisions that are absent from the agreement that are commonly included (e.g., no mutual non-disparagement, no indemnification carve-out, no equity treatment clause) or that are unusual in scope. List them as potential negotiation points or gaps for attorney assessment.
+11. **Identify tax allocation provisions.** Note how the agreement allocates the severance payment for tax purposes (e.g., wages, damages, attorneys' fees). Flag the allocation for review by a tax professional and counsel — do not assert tax treatment. Check against Section 9 (Tax Treatment Hooks) of `skills/employment/references/severance-release-red-flags.md`, which routes tax questions to `skills/tax/tax-issue-intake/SKILL.md`.
 
-12. **Build the issues table.** Organize identified issues by provision, priority (High / Medium / Low), party burdened, and recommended attorney action.
+12. **Assess missing or unusual provisions.** Note any provisions that are absent from the agreement that are commonly included (e.g., no mutual non-disparagement, no indemnification carve-out, no equity treatment clause) or that are unusual in scope. List them as potential negotiation points or gaps for attorney assessment. Sections 7 (Benefits and Equity) and 8 (References and Rehire) of `skills/employment/references/severance-release-red-flags.md` list commonly missing protections.
 
-13. **Assemble the output.** Produce the full structured review labeled as a draft for attorney review.
+13. **Build the issues table.** Organize identified issues by provision, priority (High / Medium / Low), party burdened, and recommended attorney action.
+
+14. **Assemble the output.** Produce the full structured review labeled as a draft for attorney review.
 
 ## Output Format
 
 Deliver the following sections, clearly labeled:
 
 1. **Agreement Overview** — parties, effective date, structure, and defined terms of significance.
-2. **Consideration Summary** — what is being offered and by whom; flag adequacy question for attorney.
-3. **Release Analysis** — scope of claims released, carve-outs, and flagged concerns about non-waivable claims.
-4. **Statutory Disclosures & Timing** — summary of review period and revocation right language present in the document; `[CONFIRM: adequacy with counsel]`.
-5. **Restrictive Covenants Summary** — plain-language table of each covenant's scope, duration, and geographic reach; enforceability flagged for attorney.
-6. **Other Key Provisions** — cooperation, return of property, confidentiality, reference, tax allocation.
-7. **Issues Table** — structured table: Provision | Summary of Issue | Priority | Party Burdened | Attorney Action.
-8. **Open Items for Attorney Verification** — numbered list of unresolved legal questions.
-9. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
+2. **Red Flags Quick Scan** — each red-flag pattern from `skills/employment/references/severance-release-red-flags.md` found in the agreement, or a note that none surfaced in the scan.
+3. **Consideration Summary** — what is being offered and by whom; flag adequacy question for attorney.
+4. **Release Analysis** — scope of claims released, carve-outs, and flagged concerns about non-waivable claims.
+5. **Statutory Disclosures & Timing** — summary of review period and revocation right language present in the document; `[CONFIRM: adequacy with counsel]`.
+6. **Restrictive Covenants Summary** — plain-language table of each covenant's scope, duration, and geographic reach; enforceability flagged for attorney.
+7. **Other Key Provisions** — cooperation, return of property, confidentiality, reference, tax allocation.
+8. **Issues Table** — structured table: Provision | Summary of Issue | Priority | Party Burdened | Attorney Action.
+9. **Open Items for Attorney Verification** — numbered list of unresolved legal questions.
+10. **Assumptions** — explicit list of facts assumed in the absence of confirmed information.
 
 Use `[CONFIRM: ...]` throughout for any unverified legal or factual point. Label the complete output: *Draft legal work product for attorney review. Not legal advice.*
 
@@ -133,5 +138,6 @@ When the output will be used to brief a non-lawyer business stakeholder — a pr
 - [ ] Each restrictive covenant has been assessed for enforceability under applicable law.
 - [ ] Cooperation obligations have been reviewed for scope, duration, and compensation.
 - [ ] Tax allocation has been reviewed by a qualified tax professional and/or tax counsel.
+- [ ] The red-flag quick scan against `skills/employment/references/severance-release-red-flags.md` has been reviewed; each flagged pattern has been assessed and none has been silently dropped from the issues table.
 - [ ] All open items and `[CONFIRM]` placeholders have been resolved before the agreement is signed or presented.
 - [ ] No legal conclusions in this document have been relied upon without attorney review.

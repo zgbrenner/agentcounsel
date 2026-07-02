@@ -8,6 +8,28 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Four area red-flag catalogs**, extending the `contracts/references/`
+  shared-library model to the contract-review skills outside `contracts` (the
+  July 2026 audit's top backlog item). Each follows the contracts catalog's
+  entry format (Pattern / Why it matters / What to check / Most exposed) with
+  per-section preferred/fallback direction lines, and its review skill gains a
+  red-flags quick-scan workflow step, output section, and attorney-checklist
+  line:
+  - `skills/privacy/references/dpa-red-flags.md` → `dpa-review` (which now
+    also rates issues with the contracts negotiability vocabulary)
+  - `skills/product-legal/references/terms-of-service-red-flags.md` →
+    `terms-of-service-review`
+  - `skills/ai-governance/references/ai-vendor-terms-red-flags.md` →
+    `ai-vendor-terms-review`
+  - `skills/employment/references/severance-release-red-flags.md` →
+    `severance-review`
+- **Five output templates** extracted from inline table definitions and wired
+  into their skills' Workflow and Output Format:
+  `regulatory/compliance-gap-matrix`, `ai-governance/model-risk-triage`
+  (risk register), `product-legal/launch-review` (issues register),
+  `ip/infringement-triage` (triage memo), `litigation/matter-intake`
+  (intake summary) — the first templates in the regulatory, ai-governance,
+  product-legal, and ip areas.
 - **Seven new skills** filling the three most under-covered areas the July 2026
   repository audit identified (`reports/repository-audit-2026-07.md`):
   - `privacy/breach-response-workflow` — organizes a privacy/security incident
@@ -41,6 +63,20 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
   what this change addressed, and a prioritized backlog.
 
 ### Changed
+
+- **Two collapsed workflows exploded to per-topic depth** at the granularity
+  of `m-and-a/purchase-agreement-issue-list`:
+  `bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter`
+  (one bullet → 12 per-topic steps: priming liens, roll-ups, budget/variance,
+  adequate protection, carve-outs, waiver patterns, challenge periods,
+  defaults, releases) and `tax/tax-covenants-indemnities-review` (one bullet
+  → 14 per-topic steps: straddle allocation, transfer taxes, contests, filing
+  control, indemnity interplay, survival, caps/baskets, definitional hooks) —
+  with output formats and attorney checklists mirroring the new structure and
+  all never-compute / never-conclude safety framing preserved.
+- Updated the backlog in `reports/repository-audit-2026-07.md` to record this
+  second pass; regenerated `metadata/`, the plugin bundle (`dpa-review`
+  mirror), and platform packs.
 
 - **All 10 antitrust-competition skills de-boilerplated** — the byte-identical
   Purpose / Use When / description headers were rewritten per skill

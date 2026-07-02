@@ -101,11 +101,11 @@ If the client identity or a basic description of the dispute is not provided, st
 
     Both signals must carry the tag `[ATTORNEY TO CONFIRM: preliminary triage only — not a legal conclusion]` and a note that they may change materially as facts develop. If insufficient information was provided to form even a preliminary signal, record `[CONFIRM: insufficient information to assess — attorney to triage]` for each item.
 
-14. **Assemble the intake summary.** Organize all of the above into a structured document using the output format below. Label every section, mark all placeholders and confirmation items, and append the attorney verification checklist.
+14. **Assemble the intake summary.** Organize all of the above into a structured document using `templates/matter-intake-summary.md` and the output format below. Label every section, mark all placeholders and confirmation items, and append the attorney verification checklist.
 
 ## Output Format
 
-Deliver a structured Matter Intake Summary with the following sections:
+Deliver a structured Matter Intake Summary using `templates/matter-intake-summary.md`, with the following sections:
 
 1. **Matter Header** — Client name, matter name/description, date of intake, attorney/preparer.
 2. **Client and Client Role** — Full name, entity type, role in dispute, aliases.
