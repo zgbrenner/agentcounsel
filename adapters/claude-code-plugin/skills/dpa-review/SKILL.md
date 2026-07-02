@@ -16,6 +16,8 @@ outputs:
 related_skills:
   - skills/privacy/privacy-policy-gap-review/SKILL.md
   - skills/privacy/dsar-workflow/SKILL.md
+  - skills/privacy/vendor-privacy-diligence/SKILL.md
+  - skills/privacy/cross-border-transfer-review/SKILL.md
   - skills/contracts/contract-risk-review/SKILL.md
 tags:
   - privacy

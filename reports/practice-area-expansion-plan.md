@@ -1,13 +1,43 @@
 # Practice-Area Expansion Plan
 
-**Status:** Proposal for maintainer review. Nothing in this document has been
-implemented. It is a plan, not a change.
+**Status:** Substantially implemented. Most of what this document proposed has
+since been built — see the Implementation status section below for what
+shipped, what diverged, and what remains open. The document is retained for
+the four-tier taxonomy model and the rationale behind each placement decision,
+which continue to govern how new areas and overlays are added.
 
 > Current totals (practice areas, skill counts) are tracked in [`metadata/index.json`](../metadata/index.json) and summarized in [`README.md`](../README.md). Any specific figures below reflect the state at the time of writing.
 
 **Purpose:** Audit AgentCounsel's current practice-area taxonomy and propose a
 disciplined model for expanding it — adding the practice areas the library is
 missing without making the repository messy, duplicative, or inconsistent.
+
+---
+
+## Implementation status
+
+Where each recommendation in this plan stands as of this update. Where the
+implementation diverged from the plan, the divergence is stated plainly.
+
+| Recommendation | Current state |
+|---|---|
+| Wave 0 — overlay infrastructure (`overlays/` scaffold, `OVERLAY.md` template, `docs/PRACTICE_AREAS.md` registry) | Done. |
+| Wave 0 — fold `m-and-a` into `corporate` | **Diverged:** `m-and-a` was built as a standalone top-level area (10 skills) instead of being folded into `corporate`. |
+| Wave 0 — fold `consumer-protection` into `product-legal`; fold `personal-injury` into `litigation` | Open — the fold-in skills have not been added. |
+| Wave 1 — `real-estate` | Done (9 skills). |
+| Wave 2 — `insurance` | Done as a top-level area (12 skills). **Diverged on scope:** shipped broader than the coverage-only scope proposed here, including `insurance-requirements-contract-review`. |
+| Wave 2 — `tax` | Done (10 skills). |
+| Wave 2 — `bankruptcy-restructuring` | Done (12 skills). |
+| Wave 2 — `securities-capital-markets` | Done (12 skills). **Diverged on naming:** the directory kept the long name `securities-capital-markets` rather than the shorter `securities` suggested in Section 11. |
+| Wave 2 — `antitrust-competition` | Done (10 skills). |
+| Wave 2 — `government-contracts` | Open. |
+| Overlays — `healthcare`, `fintech-payments` | Done, under `overlays/`. |
+| Overlays — environmental & ESG, education | Being added in the current update. |
+| Overlay — `entertainment-media-sports` | Open. |
+| Wave 3 — mission-fit decision (Section 11) | Resolved in favor of covering individual-client work; the core operating rule `core/capacity-and-vulnerable-parties.md` now carries the vulnerable-party safety obligations. |
+| Wave 3 — `trusts-estates` | Done (12 skills). |
+| Wave 3 — `family-law` | Done (12 skills). |
+| Wave 3 — `immigration` | Open. |
 
 ---
 
@@ -18,6 +48,10 @@ AgentCounsel has 14 directories under `skills/`:
 `ai-governance`, `contracts`, `corporate`, `employment`, `financial-crime`,
 `ip`, `legal-methodology`, `legal-ops`, `legal-research`, `litigation`,
 `privacy`, `product-legal`, `regulatory`, `setup` — 66 skills in total.
+
+*(Historical: 14 areas and 66 skills were the totals at the time of writing.
+As of this update, `skills/` holds 23 directories and 191 skills — see
+Implementation status.)*
 
 Classified into the four-tier model proposed in Section 2:
 
@@ -228,6 +262,9 @@ duplicate skills the library already has. They are added as sub-specialty
 skills inside an existing area.
 
 ### m-and-a → fold into `corporate`
+
+*(Superseded: `m-and-a` was ultimately built as a standalone top-level area
+with 10 skills — see Implementation status.)*
 
 - **Recommendation:** Fold into `corporate`. Keep the directory name
   `corporate`; broaden its display name to "Corporate & M&A" in `README.md`
@@ -581,8 +618,12 @@ infrastructure change.
 ## 11. Naming conventions, corrections, and the mission-fit question
 
 - **`m-and-a`** — never created as a directory; folded into `corporate`.
+  *(Superseded: `skills/m-and-a/` was created as a standalone top-level area —
+  see Implementation status.)*
 - **`securities-capital-markets`** — if created, use the shorter directory
-  name `securities`; "capital markets" can be the display name.
+  name `securities`; "capital markets" can be the display name. *(Superseded:
+  the directory shipped under the long name `securities-capital-markets` —
+  see Implementation status.)*
 - **`environmental-energy-esg`** — do not ship as one directory. Split per
   Section 9.
 - **`insurance`** — scope the directory to insurance *coverage*; document the
@@ -600,7 +641,10 @@ commercial and in-house legal work. `immigration`, `trusts-estates`,
 practice. Adding them is reasonable, but it is a deliberate scope expansion
 that brings new safety obligations (capacity, vulnerable parties,
 unauthorized-practice exposure, conflicts). Decide this explicitly before
-Wave 3, rather than letting it happen skill by skill.
+Wave 3, rather than letting it happen skill by skill. *(Superseded: the
+decision was made in favor of covering individual-client work;
+`core/capacity-and-vulnerable-parties.md` now carries the resulting
+vulnerable-party safety obligations — see Implementation status.)*
 
 ---
 

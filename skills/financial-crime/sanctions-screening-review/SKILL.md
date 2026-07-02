@@ -17,6 +17,8 @@ outputs:
   - "Recommended dispositions, escalations, and verification items"
 related_skills:
   - skills/financial-crime/kyc-onboarding-review/SKILL.md
+  - skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md
+  - skills/financial-crime/edd-file-review/SKILL.md
   - skills/regulatory/compliance-gap-matrix/SKILL.md
   - skills/regulatory/enforcement-risk-memo/SKILL.md
 tags:

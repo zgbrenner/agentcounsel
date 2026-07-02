@@ -1,6 +1,6 @@
 ---
 name: Exclusivity MFN Pricing Review
-description: "Use when reviewing exclusivity, MFN/parity, loyalty, rebate, or requirements provisions to organize a draft restraint classification, foreclosure-relevant facts, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality."
+description: "Use when an agreement contains exclusivity, requirements, MFN/parity, loyalty-discount, rebate, or bundling provisions — a supply deal with a share-based rebate cliff, a platform demanding price parity — to produce a draft restraint classification, foreclosure-relevant facts table, MFN/parity matrix, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for exclusivity mfn pricing review. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Review exclusivity, requirements, MFN/parity, loyalty-discount, rebate, and bundling provisions and organize the facts an attorney needs for a foreclosure and abuse-of-dominance assessment: a restraint classification with verbatim mechanics, a foreclosure-relevant facts table built only from user-supplied market data, an MFN/parity matrix distinguishing narrow from wide clauses, and per-jurisdiction framework questions. The deliverable is **draft legal work product for attorney review**: the skill records and asks — it never concludes dominance, market power, foreclosure, or legality.
 
 ## Use When
 
-- The user requests exclusivity mfn pricing review support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- A sales team proposes an exclusive-dealing or requirements arrangement with a major customer, or a customer demands one from the company.
+- A platform or large buyer asks for an MFN or price-parity clause, and counsel needs the comparator scope (narrow vs. wide) and direction mapped.
+- A proposed rebate program conditions discounts on share-of-requirements, uses retroactive cliffs or thresholds, or bundles discounts across products.
+- A competitor complaint, customer pushback, or agency inquiry targets an existing exclusivity, MFN, or loyalty program.
+- A contract renewal reprices a loyalty or rebate structure and its triggers, thresholds, opt-outs, and termination mechanics need re-inventorying.
+- Counsel wants the foreclosure-relevant facts — covered share, contestable share, counterparties' alternatives, switching costs — organized before a framework or economic-expert assessment.
 
 ## Required Inputs
 
@@ -70,6 +73,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never conclude dominance, market power, or foreclosure — record foreclosure-relevant facts from user-supplied data only and route the assessment to counsel and, where implicated, economic experts.
+- Where loyalty or bundled structures raise below-cost questions, flag them for economic-expert review; never run or approximate a price-cost test.
 
 ## Workflow
 

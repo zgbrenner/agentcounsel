@@ -2,7 +2,7 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
   "normalized_schema_version": "1.0",
-  "skill_count": 191,
+  "skill_count": 198,
   "platforms": [
     "chatgpt",
     "claude",
@@ -57,15 +57,15 @@
     "corporate": 6,
     "employment": 8,
     "family-law": 12,
-    "financial-crime": 2,
+    "financial-crime": 5,
     "insurance": 12,
     "ip": 7,
     "legal-methodology": 11,
-    "legal-ops": 3,
+    "legal-ops": 4,
     "legal-research": 5,
     "litigation": 9,
     "m-and-a": 10,
-    "privacy": 4,
+    "privacy": 7,
     "product-legal": 4,
     "real-estate": 9,
     "regulatory": 4,
@@ -78,19 +78,19 @@
     "analysis": 26,
     "drafting": 21,
     "extraction": 23,
-    "intake": 18,
+    "intake": 19,
     "interview": 19,
     "research": 5,
-    "review": 51,
+    "review": 55,
     "summarization": 5,
-    "triage": 12,
+    "triage": 14,
     "verification": 11
   },
   "risk_levels": {
     "low": 22,
-    "medium": 76,
-    "high": 90,
-    "critical": 3
+    "medium": 78,
+    "high": 94,
+    "critical": 4
   },
   "skills": [
     {
@@ -118,7 +118,7 @@
       ],
       "category": "intake",
       "requires_jurisdiction": true,
-      "requires_deadline_check": false,
+      "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -426,11 +426,14 @@
       "id": "antitrust-competition/antitrust-compliance-policy-review",
       "title": "Antitrust Compliance Policy Review",
       "path": "skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md",
-      "summary": "Use when reviewing a company's antitrust compliance policy and program to organize a draft topic-coverage matrix, jurisdiction-coverage matrix, and drafting-suggestion list for attorney review, without attesting compliance, approving the policy, or representing it meets any jurisdiction's requirements.",
+      "summary": "Use when a company's antitrust compliance policy, competition code-of-conduct section, or training program needs a gap review — after an incident, an acquisition, a regulatory development, or as a periodic refresh — to produce a draft topic-coverage and jurisdiction-coverage matrix, training/reporting and dawn-raid gap assessments, and a drafting-suggestion list for attorney review, without attesting compliance or approving the policy.",
       "use_when": [
-        "The user requests antitrust compliance policy review support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "The GC asks for a gap review of the antitrust policy after an enforcement action, dawn raid, or internal-audit finding in the company or its industry.",
+        "An acquisition or new market entry adds jurisdictions (e.g., EU or UK operations) the current policy was never written to cover.",
+        "Compliance wants to know whether the policy actually addresses trade-association contacts, benchmarking, algorithmic pricing, or labor-market (no-poach / wage-fixing) conduct.",
+        "The policy is due for a periodic refresh and counsel wants a topic-by-topic and jurisdiction-by-jurisdiction coverage map before redrafting.",
+        "Sales or HR reports the policy is unusable for their teams, and role-specific audience-fit issues need to be documented.",
+        "The board or a regulator asks what the compliance program covers, and counsel needs an inventory of training, reporting-channel, discipline, and dawn-raid provisions with gaps flagged."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -477,7 +480,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Antitrust Compliance Policy Review",
-      "description": "Use when reviewing a company's antitrust compliance policy and program to organize a draft topic-coverage matrix, jurisdiction-coverage matrix, and drafting-suggestion list for attorney review, without attesting compliance, approving the policy, or representing it meets any jurisdiction's requirements.",
+      "description": "Use when a company's antitrust compliance policy, competition code-of-conduct section, or training program needs a gap review — after an incident, an acquisition, a regulatory development, or as a periodic refresh — to produce a draft topic-coverage and jurisdiction-coverage matrix, training/reporting and dawn-raid gap assessments, and a drafting-suggestion list for attorney review, without attesting compliance or approving the policy.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -512,11 +515,13 @@
       "id": "antitrust-competition/antitrust-risk-intake",
       "title": "Antitrust Risk Intake",
       "path": "skills/antitrust-competition/antitrust-risk-intake/SKILL.md",
-      "summary": "Use when intaking facts about conduct with potential competition-law exposure into a draft triage matrix that buckets each conduct item, flags time-critical tracks, and routes to deep-dive skills for attorney review, without classifying conduct or assessing legality.",
+      "summary": "Use when facts with possible competition-law exposure first arrive — a sales email about a competitor contact, a proposed collaboration, a pricing move, a hotline report, or an agency inquiry — to produce a draft conduct inventory and triage matrix that buckets each item, flags any time-critical track, and routes each item to the matched antitrust deep-dive skill for attorney review, without classifying conduct or assessing legality.",
       "use_when": [
-        "The user requests antitrust risk intake support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "A business team forwards an email thread about a competitor contact, meeting, or \"understanding\" and asks legal whether it is a problem.",
+        "Several loosely described conduct items arrive at once — a JV idea, a pricing move, a distributor complaint — and counsel needs them inventoried, bucketed, and routed before any deep-dive work.",
+        "A hotline report, internal-audit finding, or news of an industry investigation raises possible exposure and the facts need structured intake.",
+        "An agency letter, dawn-raid rumor, or pending merger notification makes it urgent to identify which track is time-critical.",
+        "Counsel asks \"which antitrust skill do I run on this?\" and the answer needs a documented triage matrix with fact gaps listed per recommended deep-dive."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -562,7 +567,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Antitrust Risk Intake",
-      "description": "Use when intaking facts about conduct with potential competition-law exposure into a draft triage matrix that buckets each conduct item, flags time-critical tracks, and routes to deep-dive skills for attorney review, without classifying conduct or assessing legality.",
+      "description": "Use when facts with possible competition-law exposure first arrive — a sales email about a competitor contact, a proposed collaboration, a pricing move, a hotline report, or an agency inquiry — to produce a draft conduct inventory and triage matrix that buckets each item, flags any time-critical track, and routes each item to the matched antitrust deep-dive skill for attorney review, without classifying conduct or assessing legality.",
       "practice_area": "antitrust-competition",
       "task_type": "intake",
       "jurisdictions": [],
@@ -597,11 +602,14 @@
       "id": "antitrust-competition/competitor-collaboration-review",
       "title": "Competitor Collaboration Review",
       "path": "skills/antitrust-competition/competitor-collaboration-review/SKILL.md",
-      "summary": "Use when reviewing a collaboration between actual or potential competitors (JV, R&D, joint purchasing, standard-setting, joint bidding) to organize a draft hardcore-restraint flag list, information-flow matrix, and ancillarity questions for attorney review, without applying a safe harbor or approving it.",
+      "summary": "Use when a proposed JV, co-development, co-marketing, joint purchasing, joint bidding, benchmarking, or standard-setting arrangement between actual or potential competitors needs antitrust screening, to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity questions, and per-jurisdiction safe-harbor questions for attorney review, without applying a safe harbor or approving the collaboration.",
       "use_when": [
-        "The user requests competitor collaboration review support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "A business team proposes a JV, co-development, or co-marketing arrangement with a competitor and counsel needs the draft agreement flagged before signing.",
+        "Two competitors want to bid jointly on a tender or pool purchasing volume, and the arrangement needs hardcore-restraint and ancillarity screening.",
+        "A standard-setting or industry working-group arrangement raises F/RAND, patent-disclosure, membership, or coordination questions.",
+        "A draft collaboration agreement contains non-competes, exclusivity, or data-sharing annexes whose reach beyond the stated venture purpose needs to be mapped.",
+        "Counsel asks what competitively sensitive information would flow between the parties under a proposed collaboration, and under what controls.",
+        "An existing collaboration is being renewed or expanded and its restraints and information flows need a fresh review."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -648,7 +656,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Competitor Collaboration Review",
-      "description": "Use when reviewing a collaboration between actual or potential competitors (JV, R&D, joint purchasing, standard-setting, joint bidding) to organize a draft hardcore-restraint flag list, information-flow matrix, and ancillarity questions for attorney review, without applying a safe harbor or approving it.",
+      "description": "Use when a proposed JV, co-development, co-marketing, joint purchasing, joint bidding, benchmarking, or standard-setting arrangement between actual or potential competitors needs antitrust screening, to produce a draft hardcore-restraint flag list, information-flow matrix, ancillarity questions, and per-jurisdiction safe-harbor questions for attorney review, without applying a safe harbor or approving the collaboration.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -683,11 +691,14 @@
       "id": "antitrust-competition/distribution-restraints-review",
       "title": "Distribution Restraints Review",
       "path": "skills/antitrust-competition/distribution-restraints-review/SKILL.md",
-      "summary": "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales bans, dual pricing) to organize a draft restraint inventory with per-jurisdiction character flags for attorney review, without concluding enforceability or market power.",
+      "summary": "Use when a distribution, dealer, franchise, or marketplace program contains resale-price (RPM/MAP), territory or customer, online-sales, marketplace-ban, dual-pricing, exclusivity, or selective-distribution restraints, to produce a draft restraint inventory with per-jurisdiction character flags, ancillarity notes, and active-enforcement callouts for attorney review, without concluding enforceability, legality, or market power.",
       "use_when": [
-        "The user requests distribution restraints review support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "Sales or channel teams propose a MAP policy, a minimum-price program, or consequences for discounting dealers, and counsel needs it screened before rollout.",
+        "A distribution or dealer agreement restricts online sales, bans specified marketplaces, or applies different wholesale prices to online vs. offline volume.",
+        "A supplier wants to assign exclusive territories or customer classes to distributors, or to tighten selective-distribution criteria that may exclude online-only or discount dealers.",
+        "A dealer complaint, termination dispute, or threat letter puts an existing restraint program under scrutiny.",
+        "The company sells direct and through dealers in the same market, and the dual-distribution information flows and channel protections need review.",
+        "An existing distribution program is expanding into new jurisdictions where the same restraints may be treated differently."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -734,7 +745,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Distribution Restraints Review",
-      "description": "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales bans, dual pricing) to organize a draft restraint inventory with per-jurisdiction character flags for attorney review, without concluding enforceability or market power.",
+      "description": "Use when a distribution, dealer, franchise, or marketplace program contains resale-price (RPM/MAP), territory or customer, online-sales, marketplace-ban, dual-pricing, exclusivity, or selective-distribution restraints, to produce a draft restraint inventory with per-jurisdiction character flags, ancillarity notes, and active-enforcement callouts for attorney review, without concluding enforceability, legality, or market power.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -769,11 +780,14 @@
       "id": "antitrust-competition/exclusivity-mfn-pricing-review",
       "title": "Exclusivity MFN Pricing Review",
       "path": "skills/antitrust-competition/exclusivity-mfn-pricing-review/SKILL.md",
-      "summary": "Use when reviewing exclusivity, MFN/parity, loyalty, rebate, or requirements provisions to organize a draft restraint classification, foreclosure-relevant facts, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality.",
+      "summary": "Use when an agreement contains exclusivity, requirements, MFN/parity, loyalty-discount, rebate, or bundling provisions — a supply deal with a share-based rebate cliff, a platform demanding price parity — to produce a draft restraint classification, foreclosure-relevant facts table, MFN/parity matrix, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality.",
       "use_when": [
-        "The user requests exclusivity mfn pricing review support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "A sales team proposes an exclusive-dealing or requirements arrangement with a major customer, or a customer demands one from the company.",
+        "A platform or large buyer asks for an MFN or price-parity clause, and counsel needs the comparator scope (narrow vs. wide) and direction mapped.",
+        "A proposed rebate program conditions discounts on share-of-requirements, uses retroactive cliffs or thresholds, or bundles discounts across products.",
+        "A competitor complaint, customer pushback, or agency inquiry targets an existing exclusivity, MFN, or loyalty program.",
+        "A contract renewal reprices a loyalty or rebate structure and its triggers, thresholds, opt-outs, and termination mechanics need re-inventorying.",
+        "Counsel wants the foreclosure-relevant facts — covered share, contestable share, counterparties' alternatives, switching costs — organized before a framework or economic-expert assessment."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -820,7 +834,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Exclusivity MFN Pricing Review",
-      "description": "Use when reviewing exclusivity, MFN/parity, loyalty, rebate, or requirements provisions to organize a draft restraint classification, foreclosure-relevant facts, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality.",
+      "description": "Use when an agreement contains exclusivity, requirements, MFN/parity, loyalty-discount, rebate, or bundling provisions — a supply deal with a share-based rebate cliff, a platform demanding price parity — to produce a draft restraint classification, foreclosure-relevant facts table, MFN/parity matrix, and per-jurisdiction framework questions for attorney review, without concluding dominance, foreclosure, or legality.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -855,11 +869,14 @@
       "id": "antitrust-competition/gun-jumping-clean-team-checklist",
       "title": "Gun Jumping Clean Team Checklist",
       "path": "skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md",
-      "summary": "Use when assessing pre-closing coordination between signed-but-not-closed merger parties to organize a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrails for attorney review, without concluding HSR/Article 7 compliance or approving conduct.",
+      "summary": "Use when merger parties between signing and closing are planning integration, sharing information, or proposing joint conduct — aligning pricing, joint customer calls, a co-branded announcement before the waiting period ends — to produce a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrail list for attorney review, without approving any pre-closing conduct or concluding HSR/Article 7 compliance.",
       "use_when": [
-        "The user requests gun jumping clean team checklist support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "The deal team wants to start integration planning, align pricing, or make joint customer calls before closing, and counsel needs the guardrails documented.",
+        "A signed deal is in the HSR or EU waiting period and someone asks what the parties may and may not do until clearance.",
+        "Diligence or integration workstreams are already exchanging pricing, customer, or capacity data, and the flows need to be logged against the clean-team protocol.",
+        "Counsel needs the purchase agreement's consent rights and operate-in-ordinary-course covenant screened for acquirer-control overreach.",
+        "A joint announcement, co-branded customer letter, or joint sales call is proposed — or has already happened — between signing and closing.",
+        "An extended review (second request, phase II) means pre-closing conduct discipline must hold for months and needs a documented checklist."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -906,7 +923,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Gun Jumping Clean Team Checklist",
-      "description": "Use when assessing pre-closing coordination between signed-but-not-closed merger parties to organize a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrails for attorney review, without concluding HSR/Article 7 compliance or approving conduct.",
+      "description": "Use when merger parties between signing and closing are planning integration, sharing information, or proposing joint conduct — aligning pricing, joint customer calls, a co-branded announcement before the waiting period ends — to produce a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrail list for attorney review, without approving any pre-closing conduct or concluding HSR/Article 7 compliance.",
       "practice_area": "antitrust-competition",
       "task_type": "verification",
       "jurisdictions": [],
@@ -941,11 +958,14 @@
       "id": "antitrust-competition/information-sharing-clean-team-review",
       "title": "Information Sharing Clean Team Review",
       "path": "skills/antitrust-competition/information-sharing-clean-team-review/SKILL.md",
-      "summary": "Use when reviewing a proposed exchange of competitively sensitive information between actual or potential competitors to organize a draft information-item matrix, per-item sensitivity flags, and clean-team design notes for attorney review, without authorizing any exchange or concluding lawfulness.",
+      "summary": "Use when actual or potential competitors propose to exchange competitively sensitive data — M&A diligence requests, JV data flows, benchmarking submissions, a negotiation asking for cost or capacity data — to produce a draft information-item matrix with per-item sensitivity flags, clean-team design notes, and spillover/carryover flags for attorney review, without authorizing any exchange or concluding lawfulness.",
       "use_when": [
-        "The user requests information sharing clean team review support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "An M&A counterparty's diligence request list asks for current pricing, customer-level, or capacity data and the deal team wants to know what can go into the data room.",
+        "A clean-team agreement is being set up — or is already operating — and its membership, NDA scope, segregation, and carryover restrictions need testing.",
+        "A proposed JV or collaboration includes data-sharing annexes that would put competitor data into the parties' hands.",
+        "A benchmarking exercise, industry survey, or shared vendor/consultant would pool competitively sensitive inputs from competing companies.",
+        "A supplier-customer negotiation between parties who also compete drifts into requests for cost, capacity, or wage data.",
+        "Counsel asks which proposed data items are high-sensitivity and what controls the exchange currently lacks."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -992,7 +1012,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Information Sharing Clean Team Review",
-      "description": "Use when reviewing a proposed exchange of competitively sensitive information between actual or potential competitors to organize a draft information-item matrix, per-item sensitivity flags, and clean-team design notes for attorney review, without authorizing any exchange or concluding lawfulness.",
+      "description": "Use when actual or potential competitors propose to exchange competitively sensitive data — M&A diligence requests, JV data flows, benchmarking submissions, a negotiation asking for cost or capacity data — to produce a draft information-item matrix with per-item sensitivity flags, clean-team design notes, and spillover/carryover flags for attorney review, without authorizing any exchange or concluding lawfulness.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -1027,11 +1047,14 @@
       "id": "antitrust-competition/merger-antitrust-issue-spotter",
       "title": "Merger Antitrust Issue Spotter",
       "path": "skills/antitrust-competition/merger-antitrust-issue-spotter/SKILL.md",
-      "summary": "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction to organize draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence lists, and integration guardrails for attorney review, without defining markets or predicting clearance.",
+      "summary": "Use when a contemplated or signed acquisition, merger, JV, or minority investment needs first-pass antitrust issue-spotting — an LOI with a competitor, diligence underway, the board asking where filings may be needed — to produce draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence-request lists, and integration guardrails for attorney review, without defining markets or predicting clearance.",
       "use_when": [
-        "The user requests merger antitrust issue spotter support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "A deal team has an LOI or term sheet with a competitor, supplier, customer, or adjacent player, and counsel needs the antitrust issues mapped before signing.",
+        "Diligence has begun and the overlaps — horizontal, vertical, potential-competition, data/IP/labor — need to be organized from the deal documents into matrices.",
+        "The board or deal lead asks in which jurisdictions the transaction might need to be filed, and counsel needs the questions framed per regime (HSR, EU EUMR, UK CMA, China SAMR, Brazil CADE, others).",
+        "Counsel needs a diligence request list targeted at the antitrust workstream — customer lists, win/loss data, internal share estimates, deal-rationale documents.",
+        "The parties are starting pre-closing integration planning, and the issue-spotter needs to feed the gun-jumping and information-sharing reviews.",
+        "A minority investment or JV raises partial-ownership and governance questions alongside a competitive overlap."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -1078,7 +1101,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Merger Antitrust Issue Spotter",
-      "description": "Use when issue-spotting antitrust theories of harm in a contemplated or signed transaction to organize draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence lists, and integration guardrails for attorney review, without defining markets or predicting clearance.",
+      "description": "Use when a contemplated or signed acquisition, merger, JV, or minority investment needs first-pass antitrust issue-spotting — an LOI with a competitor, diligence underway, the board asking where filings may be needed — to produce draft horizontal-overlap and vertical-relationship matrices, filing-question and diligence-request lists, and integration guardrails for attorney review, without defining markets or predicting clearance.",
       "practice_area": "antitrust-competition",
       "task_type": "analysis",
       "jurisdictions": [],
@@ -1115,11 +1138,14 @@
       "id": "antitrust-competition/pricing-algorithm-risk-triage",
       "title": "Pricing Algorithm Risk Triage",
       "path": "skills/antitrust-competition/pricing-algorithm-risk-triage/SKILL.md",
-      "summary": "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, or pricing-as-a-service deployment to organize a draft data-flow map, hub-and-spoke and signaling-risk flags, and framework questions for attorney review, without concluding concerted practice or approving deployment.",
+      "summary": "Use when the business deploys or evaluates a pricing recommender, dynamic-pricing engine, repricer, or pricing-as-a-service vendor — especially one that ingests competitor prices or serves competing customers — to produce a draft data-flow map, hub-and-spoke and signaling-risk flags, override/audit posture notes, and vendor-diligence questions for attorney review, without concluding concerted practice or approving deployment.",
       "use_when": [
-        "The user requests pricing algorithm risk triage support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "The business wants to adopt a third-party repricing or dynamic-pricing tool and asks legal to clear the vendor.",
+        "An existing pricing algorithm ingests scraped competitor prices, a vendor data feed, or pooled industry data, and counsel needs the data flows mapped.",
+        "The pricing vendor is known or suspected to serve direct competitors with the same engine or data, raising hub-and-spoke questions.",
+        "Pricing teams have stopped overriding the algorithm's recommendations, or overrides are not logged, and the governance posture needs documenting.",
+        "News of algorithmic-pricing enforcement or litigation in the industry prompts a review of the company's own deployments.",
+        "Procurement or vendor management needs a diligence question list for a pricing-software contract or renewal."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -1166,7 +1192,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Pricing Algorithm Risk Triage",
-      "description": "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, or pricing-as-a-service deployment to organize a draft data-flow map, hub-and-spoke and signaling-risk flags, and framework questions for attorney review, without concluding concerted practice or approving deployment.",
+      "description": "Use when the business deploys or evaluates a pricing recommender, dynamic-pricing engine, repricer, or pricing-as-a-service vendor — especially one that ingests competitor prices or serves competing customers — to produce a draft data-flow map, hub-and-spoke and signaling-risk flags, override/audit posture notes, and vendor-diligence questions for attorney review, without concluding concerted practice or approving deployment.",
       "practice_area": "antitrust-competition",
       "task_type": "triage",
       "jurisdictions": [],
@@ -1201,11 +1227,14 @@
       "id": "antitrust-competition/trade-association-meeting-review",
       "title": "Trade Association Meeting Review",
       "path": "skills/antitrust-competition/trade-association-meeting-review/SKILL.md",
-      "summary": "Use when reviewing a trade-association meeting (agenda, minutes, attendees, recordings) for antitrust risk to organize a draft attendee relationship map, per-agenda-item risk matrix, and output-product and boycott flags for attorney review, without approving attendance or concluding lawfulness.",
+      "summary": "Use when trade-association participation needs antitrust screening — an upcoming agenda to vet, minutes or notes from a past meeting, a benchmarking or statistics program, a question whether a working group is safe to join — to produce a draft attendee map, per-agenda-item risk matrix, output-product inventory, and boycott and standard-setting flags for attorney review, without approving attendance or concluding lawfulness.",
       "use_when": [
-        "The user requests trade association meeting review support.",
-        "Antitrust/competition issues need issue spotting and workflow organization.",
-        "Counsel needs a source-cited draft with explicit gaps and verification items."
+        "An employee asks whether they can attend an upcoming association meeting, and counsel wants the agenda and attendee list screened first.",
+        "The board or compliance asks whether the association's benchmarking or statistics program is safe to join, and its aggregation and recipient controls need review.",
+        "Minutes or notes from a past meeting record discussion of prices, capacity, customers, or \"industry discipline,\" and the exposure needs to be documented.",
+        "A working group is drafting a standard, joint position, or model contract, raising standard-setting (F/RAND, patent-disclosure) questions.",
+        "Association communications contain language about members collectively declining to deal with a supplier, customer, or non-member.",
+        "Hallway, dinner, or side-meeting conversations at an association event may have touched competitively sensitive topics."
       ],
       "required_inputs": [
         "Jurisdiction, market context, parties, role, and conduct/transaction facts",
@@ -1252,7 +1281,7 @@
       ],
       "eval_status": "manual-eval-ready",
       "name": "Trade Association Meeting Review",
-      "description": "Use when reviewing a trade-association meeting (agenda, minutes, attendees, recordings) for antitrust risk to organize a draft attendee relationship map, per-agenda-item risk matrix, and output-product and boycott flags for attorney review, without approving attendance or concluding lawfulness.",
+      "description": "Use when trade-association participation needs antitrust screening — an upcoming agenda to vet, minutes or notes from a past meeting, a benchmarking or statistics program, a question whether a working group is safe to join — to produce a draft attendee map, per-agenda-item risk matrix, output-product inventory, and boycott and standard-setting flags for attorney review, without approving attendance or concluding lawfulness.",
       "practice_area": "antitrust-competition",
       "task_type": "review",
       "jurisdictions": [],
@@ -4779,6 +4808,188 @@
       ]
     },
     {
+      "id": "financial-crime/aml-program-gap-review",
+      "title": "AML Program Gap Review",
+      "path": "skills/financial-crime/aml-program-gap-review/SKILL.md",
+      "summary": "Use when reviewing an AML/BSA or equivalent anti-money-laundering compliance program document set against the program elements the firm's own policy or a user-supplied regulatory framework defines, to inventory the program documents, map each required element to where the program addresses it, build a gap matrix, and package verification items for compliance and attorney review.",
+      "use_when": [
+        "A user says \"gap-check our AML program,\" \"map our BSA program against the pillars in our policy,\" or \"review these program documents against this framework.\"",
+        "A firm is preparing for an examination, an independent test, or an internal audit and needs its program documentation organized against a defined element structure first.",
+        "A compliance officer needs a structured first-pass coverage map before deciding where to remediate.",
+        "A program document set has grown across versions and owners and needs a documentation-coverage baseline."
+      ],
+      "required_inputs": [
+        "The AML compliance program document set (program policy, AML risk assessment, CDD/KYC procedures, monitoring and screening procedures, training materials or records, independent testing or audit reports, governance and officer-designation documents)",
+        "The framework defining the required program elements: the firm's own program policy or a user-supplied regulatory framework document",
+        "The jurisdiction and regulatory regime context for the program",
+        "Optional: prior examination, audit, or independent-testing findings"
+      ],
+      "expected_outputs": [
+        "Program document inventory and required-element register",
+        "Element-to-document coverage map",
+        "Gap matrix with documentation-status classifications",
+        "Attorney and compliance verification items"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "aml",
+        "bsa",
+        "compliance-program",
+        "financial-crime",
+        "gap-analysis",
+        "high",
+        "program-review",
+        "review"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "AML Program Gap Review",
+      "description": "Use when reviewing an AML/BSA or equivalent anti-money-laundering compliance program document set against the program elements the firm's own policy or a user-supplied regulatory framework defines, to inventory the program documents, map each required element to where the program addresses it, build a gap matrix, and package verification items for compliance and attorney review.",
+      "practice_area": "financial-crime",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The AML compliance program document set (program policy, AML risk assessment, CDD/KYC procedures, monitoring and screening procedures, training materials or records, independent testing or audit reports, governance and officer-designation documents)",
+        "The framework defining the required program elements: the firm's own program policy or a user-supplied regulatory framework document",
+        "The jurisdiction and regulatory regime context for the program",
+        "Optional: prior examination, audit, or independent-testing findings"
+      ],
+      "outputs": [
+        "Program document inventory and required-element register",
+        "Element-to-document coverage map",
+        "Gap matrix with documentation-status classifications",
+        "Attorney and compliance verification items"
+      ],
+      "related_skills": [
+        "skills/regulatory/compliance-gap-matrix/SKILL.md",
+        "skills/regulatory/compliance-program-tracker/SKILL.md",
+        "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md"
+      ],
+      "tags": [
+        "financial-crime",
+        "aml",
+        "bsa",
+        "compliance-program",
+        "gap-analysis",
+        "program-review"
+      ]
+    },
+    {
+      "id": "financial-crime/edd-file-review",
+      "title": "EDD File Review",
+      "path": "skills/financial-crime/edd-file-review/SKILL.md",
+      "summary": "Use when reviewing an enhanced-due-diligence file for a high-risk customer — a PEP, a high-risk-jurisdiction customer, a complex ownership structure, a cash-intensive business, or a correspondent relationship — to inventory the EDD file against the firm's EDD policy, organize source-of-wealth and source-of-funds documentation status, map the beneficial-ownership chain with its gaps, and package a draft escalation and disposition recommendation for the compliance officer.",
+      "use_when": [
+        "A user says \"review this EDD file,\" \"check whether this PEP file meets our EDD policy,\" or \"organize the source-of-wealth documentation for this high-risk client.\"",
+        "A customer has been escalated to enhanced due diligence — as a PEP, a high-risk-jurisdiction customer, a complex ownership structure, a cash-intensive business, or a correspondent relationship — and the assembled file needs a structured first-pass review before approval.",
+        "A periodic EDD refresh is due and the existing file must be checked against the firm's current EDD policy.",
+        "A kyc-onboarding-review run produced an escalate-to-EDD disposition and the resulting EDD file is now ready for review."
+      ],
+      "required_inputs": [
+        "The EDD file: source-of-wealth and source-of-funds evidence, ownership and control documents, screening results, relationship-purpose rationale, any site-visit or reference reports, and senior-management approvals",
+        "The firm's EDD policy or procedures, including the enhanced measures required by risk driver and the approval requirements",
+        "The customer context: the risk driver(s) that triggered EDD and the nature and purpose of the relationship",
+        "Optional: prior periodic reviews and their outcomes",
+        "Optional: transaction or expected-activity data for the relationship"
+      ],
+      "expected_outputs": [
+        "EDD policy-requirement register and file inventory with requirement-to-document map",
+        "Source-of-wealth and source-of-funds documentation status",
+        "Beneficial-ownership chain mapped as facts with gaps",
+        "Draft escalation and disposition recommendation with verification items"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "beneficial-ownership",
+        "edd",
+        "enhanced-due-diligence",
+        "financial-crime",
+        "high",
+        "high-risk-customer",
+        "pep",
+        "review",
+        "source-of-wealth"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "EDD File Review",
+      "description": "Use when reviewing an enhanced-due-diligence file for a high-risk customer — a PEP, a high-risk-jurisdiction customer, a complex ownership structure, a cash-intensive business, or a correspondent relationship — to inventory the EDD file against the firm's EDD policy, organize source-of-wealth and source-of-funds documentation status, map the beneficial-ownership chain with its gaps, and package a draft escalation and disposition recommendation for the compliance officer.",
+      "practice_area": "financial-crime",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The EDD file: source-of-wealth and source-of-funds evidence, ownership and control documents, screening results, relationship-purpose rationale, any site-visit or reference reports, and senior-management approvals",
+        "The firm's EDD policy or procedures, including the enhanced measures required by risk driver and the approval requirements",
+        "The customer context: the risk driver(s) that triggered EDD and the nature and purpose of the relationship",
+        "Optional: prior periodic reviews and their outcomes",
+        "Optional: transaction or expected-activity data for the relationship"
+      ],
+      "outputs": [
+        "EDD policy-requirement register and file inventory with requirement-to-document map",
+        "Source-of-wealth and source-of-funds documentation status",
+        "Beneficial-ownership chain mapped as facts with gaps",
+        "Draft escalation and disposition recommendation with verification items"
+      ],
+      "related_skills": [
+        "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+        "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md",
+        "skills/corporate/entity-compliance/SKILL.md"
+      ],
+      "tags": [
+        "financial-crime",
+        "edd",
+        "enhanced-due-diligence",
+        "pep",
+        "beneficial-ownership",
+        "source-of-wealth",
+        "high-risk-customer"
+      ]
+    },
+    {
       "id": "financial-crime/kyc-onboarding-review",
       "title": "KYC Onboarding Review",
       "path": "skills/financial-crime/kyc-onboarding-review/SKILL.md",
@@ -4854,6 +5065,9 @@
       ],
       "related_skills": [
         "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md",
+        "skills/financial-crime/edd-file-review/SKILL.md",
+        "skills/financial-crime/aml-program-gap-review/SKILL.md",
         "skills/corporate/entity-compliance/SKILL.md",
         "skills/regulatory/compliance-gap-matrix/SKILL.md"
       ],
@@ -4939,6 +5153,8 @@
       ],
       "related_skills": [
         "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md",
+        "skills/financial-crime/edd-file-review/SKILL.md",
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/enforcement-risk-memo/SKILL.md"
       ],
@@ -4949,6 +5165,99 @@
         "pep",
         "adverse-media",
         "alert-adjudication"
+      ]
+    },
+    {
+      "id": "financial-crime/transaction-monitoring-alert-triage",
+      "title": "Transaction Monitoring Alert Triage",
+      "path": "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md",
+      "summary": "Use when triaging a transaction-monitoring alert or small alert batch on an existing customer to inventory the alert and the rule that fired, compare the customer's expected-activity baseline against observed activity, structure the escalate / close / request-more-information analysis, and package a documentation-of-rationale draft for the compliance officer's disposition decision.",
+      "use_when": [
+        "A user says \"triage this transaction-monitoring alert,\" \"work through these TM alerts,\" or \"help me document this alert review.\"",
+        "A monitoring rule or scenario has fired on an existing customer and a first-pass, structured review is needed before the compliance officer dispositions the alert.",
+        "An analyst needs the customer's expected-activity baseline organized against observed activity so the disposition rationale can be documented.",
+        "A small batch of related alerts on the same customer needs to be organized into one coherent triage file."
+      ],
+      "required_inputs": [
+        "The alert record(s): alert identifier, the monitoring rule or scenario that fired, its stated parameters or thresholds, and the triggering transactions",
+        "The customer profile: KYC file, current risk rating, expected-activity or anticipated-transaction baseline, and relationship context",
+        "Transaction data for the review window, including dates, amounts, channels, and counterparties as recorded",
+        "The firm's alert-triage or investigation procedure, including disposition options and escalation criteria",
+        "Optional: prior alerts on this customer and their dispositions",
+        "Optional: sanctions, PEP, and adverse-media screening results for the customer and alert counterparties"
+      ],
+      "expected_outputs": [
+        "Alert and rule inventory with the triggering transactions",
+        "Expected-versus-observed activity comparison",
+        "Structured disposition analysis with a recommended disposition (escalate / close / request more information) for the compliance officer's decision",
+        "Documentation-of-rationale packet with escalation and verification items"
+      ],
+      "category": "triage",
+      "requires_jurisdiction": false,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "alert-triage",
+        "aml",
+        "disposition",
+        "financial-crime",
+        "high",
+        "suspicious-activity",
+        "transaction-monitoring",
+        "triage"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Transaction Monitoring Alert Triage",
+      "description": "Use when triaging a transaction-monitoring alert or small alert batch on an existing customer to inventory the alert and the rule that fired, compare the customer's expected-activity baseline against observed activity, structure the escalate / close / request-more-information analysis, and package a documentation-of-rationale draft for the compliance officer's disposition decision.",
+      "practice_area": "financial-crime",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The alert record(s): alert identifier, the monitoring rule or scenario that fired, its stated parameters or thresholds, and the triggering transactions",
+        "The customer profile: KYC file, current risk rating, expected-activity or anticipated-transaction baseline, and relationship context",
+        "Transaction data for the review window, including dates, amounts, channels, and counterparties as recorded",
+        "The firm's alert-triage or investigation procedure, including disposition options and escalation criteria",
+        "Optional: prior alerts on this customer and their dispositions",
+        "Optional: sanctions, PEP, and adverse-media screening results for the customer and alert counterparties"
+      ],
+      "outputs": [
+        "Alert and rule inventory with the triggering transactions",
+        "Expected-versus-observed activity comparison",
+        "Structured disposition analysis with a recommended disposition (escalate / close / request more information) for the compliance officer's decision",
+        "Documentation-of-rationale packet with escalation and verification items"
+      ],
+      "related_skills": [
+        "skills/financial-crime/kyc-onboarding-review/SKILL.md",
+        "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/financial-crime/edd-file-review/SKILL.md",
+        "skills/regulatory/enforcement-risk-memo/SKILL.md"
+      ],
+      "tags": [
+        "financial-crime",
+        "aml",
+        "transaction-monitoring",
+        "alert-triage",
+        "suspicious-activity",
+        "disposition"
       ]
     },
     {
@@ -6644,7 +6953,11 @@
         "A user asks whether citations look real, complete, current, binding, persuasive, or properly used.",
         "A research memo, rule summary, demand letter, brief section, or legal analysis includes legal authorities.",
         "A source-validation or red-team pass has flagged citation concerns.",
-        "A draft may rely on model-suggested authorities that need attorney verification."
+        "A draft may rely on model-suggested authorities that need attorney verification.",
+        "Use this skill when the review is limited to citations and quotations.",
+        "Use red-team-verifier instead for the full adversarial pass over an entire deliverable — the superset that also covers reasoning, framing, jurisdiction, and completeness.",
+        "Use hallucination-red-team instead for a targeted hunt for fabricated or unsupported content in a draft.",
+        "Use source-validation instead for claim-by-claim classification of whether each claim in a draft is supported by the available sources."
       ],
       "required_inputs": [
         "The draft containing citations or authority-backed propositions",
@@ -6724,7 +7037,11 @@
         "A draft contains legal claims, factual claims, citations, quotations, or confident conclusions that may be unsupported.",
         "A user asks for a hallucination check, unsupported-claim audit, or safer revised version.",
         "A draft will be sent externally, filed, used in a client communication, or relied on for a high-risk decision.",
-        "A model produced the draft without a clear claim/source table."
+        "A model produced the draft without a clear claim/source table.",
+        "Use this skill for a targeted hunt for fabricated or unsupported content in a draft.",
+        "Use red-team-verifier instead for the full adversarial pass over an entire deliverable — the superset that also covers reasoning, framing, jurisdiction, and completeness.",
+        "Use citation-integrity-check instead when the review is limited to citations and quotations.",
+        "Use source-validation instead for claim-by-claim classification of whether each claim in a draft is supported by the available sources."
       ],
       "required_inputs": [
         "The complete draft legal output to red-team",
@@ -7043,7 +7360,11 @@
         "The user asks whether a draft is ready for — or has been adequately prepared for — attorney review.",
         "Any AgentCounsel skill has produced a draft and a defect check is warranted before it is finalized or relied upon.",
         "A high-stakes legal output is about to be sent, filed, or acted on and a final adversarial pass is wanted.",
-        "A draft has been revised and a targeted re-check of the changed sections is needed."
+        "A draft has been revised and a targeted re-check of the changed sections is needed.",
+        "Use this skill for the full adversarial pass over an entire deliverable — it is the superset, covering sourcing, reasoning, framing, jurisdiction, and completeness in one review.",
+        "Use hallucination-red-team instead for a targeted hunt for fabricated or unsupported content in a draft.",
+        "Use citation-integrity-check instead when the review is limited to citations and quotations.",
+        "Use source-validation instead for claim-by-claim classification of whether each claim in a draft is supported by the available sources."
       ],
       "required_inputs": [
         "The legal draft or AI output to verify",
@@ -7196,7 +7517,11 @@
         "The Red-Team Verifier (or any review process) has flagged specific citations or claims as unverified and a dedicated source check is needed.",
         "A legal research memo, brief section, or analysis contains cases, statutes, regulations, or secondary sources that were gathered during research and need to be confirmed before attorney reliance.",
         "A draft quotes from a source document (contract, filing, policy, statute) and the quotations need to be checked against the provided text.",
-        "The user wants a complete audit trail showing which sources in a draft are confirmed and which require additional verification."
+        "The user wants a complete audit trail showing which sources in a draft are confirmed and which require additional verification.",
+        "Use this skill for claim-by-claim classification of whether each claim in a draft is supported by the available sources.",
+        "Use red-team-verifier instead for the full adversarial pass over an entire deliverable — the superset that also covers reasoning, framing, jurisdiction, and completeness.",
+        "Use hallucination-red-team instead for a targeted hunt for fabricated or unsupported content in a draft.",
+        "Use citation-integrity-check instead when the review is limited to citations and quotations."
       ],
       "required_inputs": [
         "The draft legal work product to check",
@@ -7209,7 +7534,7 @@
         "Unsupported claims and contradictions list"
       ],
       "category": "verification",
-      "requires_jurisdiction": false,
+      "requires_jurisdiction": true,
       "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
@@ -7340,6 +7665,98 @@
         "statutory-interpretation",
         "construction",
         "provision-analysis"
+      ]
+    },
+    {
+      "id": "legal-ops/legal-intake-triage",
+      "title": "Legal Intake Triage",
+      "path": "skills/legal-ops/legal-intake-triage/SKILL.md",
+      "summary": "Use when an inbound business request reaches the legal team — an email, ticket, form submission, or chat ask — to produce a structured intake triage that classifies the request, captures urgency as stated, surfaces conflict-check and confidentiality questions, and proposes a routing recommendation for the legal team to decide.",
+      "use_when": [
+        "An inbound request reaches the legal team by email, ticket, intake form, or chat — \"can legal look at this?\", \"we need a contract reviewed\", \"is this okay to send?\", \"who handles this?\"",
+        "A legal ops or triage owner needs a consistent, structured first-pass record before a request is assigned.",
+        "A request's practice area, urgency, or right owner is unclear and a classification pass would help the team route it.",
+        "The team wants every inbound ask logged in the matter system with the same fields every time.",
+        "A request has bounced between owners and needs a clean intake record before anyone works it."
+      ],
+      "required_inputs": [
+        "The inbound request as received (email, ticket, form submission, or chat message)",
+        "The requester's name, team or business unit, and role, as available",
+        "The urgency and any dates or deadlines exactly as the requester stated them",
+        "Optional: documents the requester attached or referenced",
+        "Optional: the legal team's routing conventions or intake-form fields"
+      ],
+      "expected_outputs": [
+        "Structured intake triage record ready to paste into a matter system",
+        "Request classification against the library's practice areas",
+        "Proposed routing recommendation (skill or workflow; self-serve template, lawyer review, or escalation) for the legal team to decide",
+        "Conflict-check and confidentiality flags framed as questions",
+        "Open items, questions for the requester, and assumptions"
+      ],
+      "category": "triage",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "intake",
+        "legal-front-door",
+        "legal-ops",
+        "matter-system",
+        "medium",
+        "routing",
+        "triage"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Legal Intake Triage",
+      "description": "Use when an inbound business request reaches the legal team — an email, ticket, form submission, or chat ask — to produce a structured intake triage that classifies the request, captures urgency as stated, surfaces conflict-check and confidentiality questions, and proposes a routing recommendation for the legal team to decide.",
+      "practice_area": "legal-ops",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The inbound request as received (email, ticket, form submission, or chat message)",
+        "The requester's name, team or business unit, and role, as available",
+        "The urgency and any dates or deadlines exactly as the requester stated them",
+        "Optional: documents the requester attached or referenced",
+        "Optional: the legal team's routing conventions or intake-form fields"
+      ],
+      "outputs": [
+        "Structured intake triage record ready to paste into a matter system",
+        "Request classification against the library's practice areas",
+        "Proposed routing recommendation (skill or workflow; self-serve template, lawyer review, or escalation) for the legal team to decide",
+        "Conflict-check and confidentiality flags framed as questions",
+        "Open items, questions for the requester, and assumptions"
+      ],
+      "related_skills": [
+        "skills/litigation/matter-intake/SKILL.md",
+        "skills/legal-ops/templated-legal-response/SKILL.md",
+        "skills/legal-ops/legal-meeting-briefing/SKILL.md",
+        "skills/setup/create-matter-workspace/SKILL.md"
+      ],
+      "tags": [
+        "legal-ops",
+        "intake",
+        "triage",
+        "routing",
+        "legal-front-door",
+        "matter-system"
       ]
     },
     {
@@ -9468,6 +9885,206 @@
       ]
     },
     {
+      "id": "privacy/breach-response-workflow",
+      "title": "Breach Response Workflow",
+      "path": "skills/privacy/breach-response-workflow/SKILL.md",
+      "summary": "Use when a privacy or security incident is suspected or confirmed — unauthorized access, ransomware, a lost device, a misdirected disclosure, an exposed database, or a vendor-reported incident — and counsel needs the incident organized: an incident-facts intake, a reportability question set, a notification-obligation inventory, contractual notice mapping, a working chronology, and an evidence-preservation checklist.",
+      "use_when": [
+        "A security, IT, or engineering team reports suspected or confirmed unauthorized access to systems or data.",
+        "A ransomware, extortion, or data-theft event has occurred or is suspected.",
+        "A device has been lost or stolen, an email or file has been misdirected, or a database, bucket, or endpoint has been found exposed.",
+        "A vendor, processor, or sub-processor has notified the organization of an incident affecting data processed on its behalf.",
+        "Counsel has asked for the incident organized: a facts intake, a chronology, a notification-obligation inventory, and a preservation checklist.",
+        "The organization needs contractual incident-notice obligations pulled from its DPAs, vendor contracts, and customer contracts after an incident.",
+        "An incident-response tabletop or post-incident review needs the same structured working file built from a hypothetical or historical fact pattern (use fictional or anonymized facts only)."
+      ],
+      "required_inputs": [
+        "A description of the incident as currently understood: what happened, how it was discovered, and its containment status",
+        "The discovery date and any other trigger dates, as user-supplied facts",
+        "The data elements, data subject populations, and systems believed to be affected",
+        "The privilege posture: whether the investigation is being conducted at the direction of counsel",
+        "Optional: DPAs, vendor contracts, and customer contracts containing incident-notice obligations",
+        "Optional: the cyber-insurance policy or a summary of its notice provisions",
+        "Optional: the incident response plan and any forensic or investigation reports produced so far"
+      ],
+      "expected_outputs": [
+        "Incident-facts intake record with every fact labeled by source",
+        "Reportability question set framed for counsel, with no conclusions drawn",
+        "Notification-obligation inventory with every entry flagged [ATTORNEY TO CONFIRM]",
+        "Contractual notice-obligation map drawn from provided agreements",
+        "Working chronology of user-supplied events with a trigger-date and clock register",
+        "Evidence-preservation checklist for counsel review"
+      ],
+      "category": "intake",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "breach-notification",
+        "breach-response",
+        "critical",
+        "evidence-preservation",
+        "incident-response",
+        "intake",
+        "privacy",
+        "privilege"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Breach Response Workflow",
+      "description": "Use when a privacy or security incident is suspected or confirmed — unauthorized access, ransomware, a lost device, a misdirected disclosure, an exposed database, or a vendor-reported incident — and counsel needs the incident organized: an incident-facts intake, a reportability question set, a notification-obligation inventory, contractual notice mapping, a working chronology, and an evidence-preservation checklist.",
+      "practice_area": "privacy",
+      "task_type": "intake",
+      "jurisdictions": [],
+      "risk_level": "critical",
+      "requires_attorney_review": true,
+      "inputs": [
+        "A description of the incident as currently understood: what happened, how it was discovered, and its containment status",
+        "The discovery date and any other trigger dates, as user-supplied facts",
+        "The data elements, data subject populations, and systems believed to be affected",
+        "The privilege posture: whether the investigation is being conducted at the direction of counsel",
+        "Optional: DPAs, vendor contracts, and customer contracts containing incident-notice obligations",
+        "Optional: the cyber-insurance policy or a summary of its notice provisions",
+        "Optional: the incident response plan and any forensic or investigation reports produced so far"
+      ],
+      "outputs": [
+        "Incident-facts intake record with every fact labeled by source",
+        "Reportability question set framed for counsel, with no conclusions drawn",
+        "Notification-obligation inventory with every entry flagged [ATTORNEY TO CONFIRM]",
+        "Contractual notice-obligation map drawn from provided agreements",
+        "Working chronology of user-supplied events with a trigger-date and clock register",
+        "Evidence-preservation checklist for counsel review"
+      ],
+      "related_skills": [
+        "skills/privacy/dsar-workflow/SKILL.md",
+        "skills/privacy/dpa-review/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md",
+        "skills/litigation/legal-hold/SKILL.md",
+        "skills/litigation/litigation-chronology/SKILL.md"
+      ],
+      "tags": [
+        "privacy",
+        "breach-response",
+        "incident-response",
+        "breach-notification",
+        "evidence-preservation",
+        "privilege"
+      ]
+    },
+    {
+      "id": "privacy/cross-border-transfer-review",
+      "title": "Cross-Border Transfer Review",
+      "path": "skills/privacy/cross-border-transfer-review/SKILL.md",
+      "summary": "Use when reviewing a proposed or existing cross-border transfer of personal data — a new vendor hosted abroad, an intercompany data flow, an offshore support model, or a transfer-clause exhibit — to inventory the data flows, map the claimed transfer mechanisms, organize a transfer-impact-assessment fact pattern, flag onward transfers and sub-processor chains, and produce a gap list for attorney review.",
+      "use_when": [
+        "A new vendor, hosting arrangement, or support model would move personal data to another country, and counsel needs the flows and claimed mechanisms organized before assessing them.",
+        "An intercompany or intragroup data flow (shared HR systems, centralized CRM, global analytics) crosses borders and needs a structured review.",
+        "A DPA's transfer exhibit, standard-contractual-clauses-style annexes, or an equivalent transfer addendum has been provided and the team needs the flows, roles, and annex completeness inventoried.",
+        "Counsel has asked for the fact pattern for a transfer impact assessment — data categories, destination, importer commitments, supplementary measures — organized for attorney completion.",
+        "An existing transfer is being re-reviewed after a change: a new destination, a new sub-processor, a changed mechanism, or an updated annex.",
+        "Diligence on a vendor or transaction surfaced cross-border flows that need mapping before contract or closing."
+      ],
+      "required_inputs": [
+        "The documents describing the transfer: DPAs, transfer-clause exhibits and annexes, intercompany agreements, vendor contracts, or data-flow diagrams",
+        "The exporter and importer entities and their claimed roles for each flow",
+        "The origin and destination countries for each flow, as stated in the documents or by the user",
+        "The business purpose of the transfer and the client's posture (exporter, importer, or both)",
+        "Optional: any existing transfer impact assessment or supplementary-measures analysis",
+        "Optional: sub-processor lists and onward-transfer disclosures"
+      ],
+      "expected_outputs": [
+        "Data-flow inventory with parties, roles, categories, purposes, and destinations",
+        "Transfer-mechanism map recording what the provided materials claim to rely on, flagged [verify current law]",
+        "Transfer-impact-assessment fact pattern organized for attorney completion",
+        "Onward-transfer and sub-processor chain map",
+        "Gap list and attorney verification items"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "cross-border-transfers",
+        "data-protection",
+        "data-transfers",
+        "high",
+        "privacy",
+        "review",
+        "sccs",
+        "transfer-impact-assessment"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Cross-Border Transfer Review",
+      "description": "Use when reviewing a proposed or existing cross-border transfer of personal data — a new vendor hosted abroad, an intercompany data flow, an offshore support model, or a transfer-clause exhibit — to inventory the data flows, map the claimed transfer mechanisms, organize a transfer-impact-assessment fact pattern, flag onward transfers and sub-processor chains, and produce a gap list for attorney review.",
+      "practice_area": "privacy",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The documents describing the transfer: DPAs, transfer-clause exhibits and annexes, intercompany agreements, vendor contracts, or data-flow diagrams",
+        "The exporter and importer entities and their claimed roles for each flow",
+        "The origin and destination countries for each flow, as stated in the documents or by the user",
+        "The business purpose of the transfer and the client's posture (exporter, importer, or both)",
+        "Optional: any existing transfer impact assessment or supplementary-measures analysis",
+        "Optional: sub-processor lists and onward-transfer disclosures"
+      ],
+      "outputs": [
+        "Data-flow inventory with parties, roles, categories, purposes, and destinations",
+        "Transfer-mechanism map recording what the provided materials claim to rely on, flagged [verify current law]",
+        "Transfer-impact-assessment fact pattern organized for attorney completion",
+        "Onward-transfer and sub-processor chain map",
+        "Gap list and attorney verification items"
+      ],
+      "related_skills": [
+        "skills/privacy/dpa-review/SKILL.md",
+        "skills/privacy/pia-generation/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md",
+        "skills/product-legal/launch-review/SKILL.md"
+      ],
+      "tags": [
+        "privacy",
+        "cross-border-transfers",
+        "data-transfers",
+        "transfer-impact-assessment",
+        "sccs",
+        "data-protection"
+      ]
+    },
+    {
       "id": "privacy/dpa-review",
       "title": "DPA Review",
       "path": "skills/privacy/dpa-review/SKILL.md",
@@ -9538,6 +10155,8 @@
       "related_skills": [
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md",
+        "skills/privacy/cross-border-transfer-review/SKILL.md",
         "skills/contracts/contract-risk-review/SKILL.md"
       ],
       "tags": [
@@ -9792,6 +10411,104 @@
       ]
     },
     {
+      "id": "privacy/vendor-privacy-diligence",
+      "title": "Vendor Privacy Diligence",
+      "path": "skills/privacy/vendor-privacy-diligence/SKILL.md",
+      "summary": "Use when running pre-contract or renewal privacy diligence on a vendor, processor, or sub-processor — a security questionnaire has come back, a new tool is proposed, or procurement asks for a privacy read — to inventory the vendor's claimed privacy posture, map data categories and purposes against the client's requirements, build a risk and gap table, and package follow-up questions and contract-term asks for attorney review.",
+      "use_when": [
+        "Procurement or a business team proposes a new vendor or tool that will process personal data, and counsel wants a privacy read before contracting.",
+        "A vendor's completed security or privacy questionnaire has come back and needs to be organized against the client's requirements.",
+        "A vendor is being re-reviewed at renewal, after an incident, after an acquisition, or because its role or the data scope has expanded.",
+        "A processor proposes a new sub-processor and the client's approval workflow requires a diligence pass.",
+        "Counsel wants a follow-up question list and contract-term asks assembled before DPA negotiation begins.",
+        "Diligence on a transaction surfaced a target's key vendors and the privacy posture of each needs a first-pass organization."
+      ],
+      "required_inputs": [
+        "The vendor diligence materials: completed questionnaires, certifications and audit summaries, privacy notices, sub-processor lists, security summaries, or data-flow descriptions",
+        "What the vendor will process: the data categories, data subject groups, and processing purposes, as stated by the user or the documents",
+        "The client's requirements baseline: internal vendor-privacy standards, a diligence checklist, or the requirements stated inline",
+        "The engagement context: what the vendor is being hired to do and the client's role (controller, processor, or both)",
+        "Optional: the draft contract or DPA if one is already in circulation",
+        "Optional: the vendor's prior diligence file if this is a renewal or re-review"
+      ],
+      "expected_outputs": [
+        "Vendor privacy-posture inventory with every claim attributed to its source",
+        "Data-scope map: categories, subjects, and purposes against the client's requirements",
+        "Risk and gap table with prioritized findings",
+        "Follow-up question list for the vendor",
+        "Contract-term asks routed into the DPA review"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "data-protection",
+        "medium",
+        "privacy",
+        "procurement",
+        "review",
+        "sub-processors",
+        "third-party-risk",
+        "vendor-diligence"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Vendor Privacy Diligence",
+      "description": "Use when running pre-contract or renewal privacy diligence on a vendor, processor, or sub-processor — a security questionnaire has come back, a new tool is proposed, or procurement asks for a privacy read — to inventory the vendor's claimed privacy posture, map data categories and purposes against the client's requirements, build a risk and gap table, and package follow-up questions and contract-term asks for attorney review.",
+      "practice_area": "privacy",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The vendor diligence materials: completed questionnaires, certifications and audit summaries, privacy notices, sub-processor lists, security summaries, or data-flow descriptions",
+        "What the vendor will process: the data categories, data subject groups, and processing purposes, as stated by the user or the documents",
+        "The client's requirements baseline: internal vendor-privacy standards, a diligence checklist, or the requirements stated inline",
+        "The engagement context: what the vendor is being hired to do and the client's role (controller, processor, or both)",
+        "Optional: the draft contract or DPA if one is already in circulation",
+        "Optional: the vendor's prior diligence file if this is a renewal or re-review"
+      ],
+      "outputs": [
+        "Vendor privacy-posture inventory with every claim attributed to its source",
+        "Data-scope map: categories, subjects, and purposes against the client's requirements",
+        "Risk and gap table with prioritized findings",
+        "Follow-up question list for the vendor",
+        "Contract-term asks routed into the DPA review"
+      ],
+      "related_skills": [
+        "skills/privacy/dpa-review/SKILL.md",
+        "skills/privacy/cross-border-transfer-review/SKILL.md",
+        "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/pia-generation/SKILL.md",
+        "skills/ai-governance/ai-vendor-terms-review/SKILL.md",
+        "skills/contracts/vendor-agreement-status/SKILL.md"
+      ],
+      "tags": [
+        "privacy",
+        "vendor-diligence",
+        "sub-processors",
+        "data-protection",
+        "procurement",
+        "third-party-risk"
+      ]
+    },
+    {
       "id": "product-legal/ai-feature-review",
       "title": "AI Feature Review",
       "path": "skills/product-legal/ai-feature-review/SKILL.md",
@@ -9815,7 +10532,7 @@
       ],
       "category": "review",
       "requires_jurisdiction": true,
-      "requires_deadline_check": false,
+      "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -9977,7 +10694,7 @@
       ],
       "category": "review",
       "requires_jurisdiction": true,
-      "requires_deadline_check": false,
+      "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",

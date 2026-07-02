@@ -41,6 +41,13 @@ This is a structured citation integrity workflow. It is not automated legal cita
 - A source-validation or red-team pass has flagged citation concerns.
 - A draft may rely on model-suggested authorities that need attorney verification.
 
+**Choosing among the verification skills:**
+
+- Use this skill when the review is limited to citations and quotations.
+- Use `red-team-verifier` instead for the full adversarial pass over an entire deliverable — the superset that also covers reasoning, framing, jurisdiction, and completeness.
+- Use `hallucination-red-team` instead for a targeted hunt for fabricated or unsupported content in a draft.
+- Use `source-validation` instead for claim-by-claim classification of whether each claim in a draft is supported by the available sources.
+
 ## Required Inputs
 
 - The complete draft containing citations.

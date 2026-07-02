@@ -40,6 +40,13 @@ This focused hallucination pass complements the broader Red-Team Verifier. It do
 - A draft will be sent externally, filed, used in a client communication, or relied on for a high-risk decision.
 - A model produced the draft without a clear claim/source table.
 
+**Choosing among the verification skills:**
+
+- Use this skill for a targeted hunt for fabricated or unsupported content in a draft.
+- Use `red-team-verifier` instead for the full adversarial pass over an entire deliverable — the superset that also covers reasoning, framing, jurisdiction, and completeness.
+- Use `citation-integrity-check` instead when the review is limited to citations and quotations.
+- Use `source-validation` instead for claim-by-claim classification of whether each claim in a draft is supported by the available sources.
+
 ## Required Inputs
 
 - The complete draft to red-team.
@@ -57,6 +64,7 @@ If the draft is missing, stop and request it. If sources are missing, continue o
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Produce draft legal work product for attorney review. This is not legal advice.
 - Do not claim the absence of hallucinations. State only what was checked and what remains unresolved.
 - Do not invent sources, facts, citations, or safer substitute law.

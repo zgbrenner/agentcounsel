@@ -84,6 +84,7 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/bankruptcy-matter.md",
         "matter-workspaces/contract-review-matter.md",
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/employment-matter.md",
@@ -147,6 +148,7 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/bankruptcy-matter.md",
         "matter-workspaces/contract-review-matter.md",
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/employment-matter.md",
@@ -210,6 +212,7 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
+        "matter-workspaces/bankruptcy-matter.md",
         "matter-workspaces/contract-review-matter.md",
         "matter-workspaces/corporate-transaction-matter.md",
         "matter-workspaces/employment-matter.md",
@@ -1104,10 +1107,13 @@
       "practice_area_name": "Privacy",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/cross-border-transfer-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
         "skills/privacy/pia-generation/SKILL.md",
-        "skills/privacy/privacy-policy-gap-review/SKILL.md"
+        "skills/privacy/privacy-policy-gap-review/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -1123,13 +1129,13 @@
       ],
       "included_quality_checks": [
         "attorney-review-gate",
+        "citation-integrity-check",
         "source-validation-check",
         "assumption-audit",
-        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
         "output-format-compliance-check",
-        "hallucination-red-team",
         "legal-prose-polish"
       ],
       "included_matter_packs": [],
@@ -1169,10 +1175,13 @@
       "practice_area_name": "Privacy",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/cross-border-transfer-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
         "skills/privacy/pia-generation/SKILL.md",
-        "skills/privacy/privacy-policy-gap-review/SKILL.md"
+        "skills/privacy/privacy-policy-gap-review/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -1188,13 +1197,13 @@
       ],
       "included_quality_checks": [
         "attorney-review-gate",
+        "citation-integrity-check",
         "source-validation-check",
         "assumption-audit",
-        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
         "output-format-compliance-check",
-        "hallucination-red-team",
         "legal-prose-polish"
       ],
       "included_matter_packs": [],
@@ -1234,10 +1243,13 @@
       "practice_area_name": "Privacy",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/cross-border-transfer-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
         "skills/privacy/pia-generation/SKILL.md",
-        "skills/privacy/privacy-policy-gap-review/SKILL.md"
+        "skills/privacy/privacy-policy-gap-review/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -1253,13 +1265,13 @@
       ],
       "included_quality_checks": [
         "attorney-review-gate",
+        "citation-integrity-check",
         "source-validation-check",
         "assumption-audit",
-        "citation-integrity-check",
+        "hallucination-red-team",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
         "output-format-compliance-check",
-        "hallucination-red-team",
         "legal-prose-polish"
       ],
       "included_matter_packs": [],
@@ -2791,7 +2803,10 @@
       "included_matter_packs": [
         "matter-packs/bankruptcy-restructuring.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/bankruptcy-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -2858,7 +2873,10 @@
       "included_matter_packs": [
         "matter-packs/bankruptcy-restructuring.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/bankruptcy-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -2925,7 +2943,10 @@
       "included_matter_packs": [
         "matter-packs/bankruptcy-restructuring.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/bankruptcy-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -2991,7 +3012,10 @@
       "included_matter_packs": [
         "matter-packs/family-law.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/family-law-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -3057,7 +3081,10 @@
       "included_matter_packs": [
         "matter-packs/family-law.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/family-law-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -3123,7 +3150,10 @@
       "included_matter_packs": [
         "matter-packs/family-law.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/family-law-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -3153,8 +3183,11 @@
       "practice_area_name": "Financial Crime",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/financial-crime/aml-program-gap-review/SKILL.md",
+        "skills/financial-crime/edd-file-review/SKILL.md",
         "skills/financial-crime/kyc-onboarding-review/SKILL.md",
-        "skills/financial-crime/sanctions-screening-review/SKILL.md"
+        "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -3199,8 +3232,11 @@
       "practice_area_name": "Financial Crime",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/financial-crime/aml-program-gap-review/SKILL.md",
+        "skills/financial-crime/edd-file-review/SKILL.md",
         "skills/financial-crime/kyc-onboarding-review/SKILL.md",
-        "skills/financial-crime/sanctions-screening-review/SKILL.md"
+        "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -3245,8 +3281,11 @@
       "practice_area_name": "Financial Crime",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/financial-crime/aml-program-gap-review/SKILL.md",
+        "skills/financial-crime/edd-file-review/SKILL.md",
         "skills/financial-crime/kyc-onboarding-review/SKILL.md",
-        "skills/financial-crime/sanctions-screening-review/SKILL.md"
+        "skills/financial-crime/sanctions-screening-review/SKILL.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -3291,6 +3330,7 @@
       "practice_area_name": "Legal Ops",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/legal-ops/legal-intake-triage/SKILL.md",
         "skills/legal-ops/legal-meeting-briefing/SKILL.md",
         "skills/legal-ops/signature-routing-checklist/SKILL.md",
         "skills/legal-ops/templated-legal-response/SKILL.md"
@@ -3338,6 +3378,7 @@
       "practice_area_name": "Legal Ops",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/legal-ops/legal-intake-triage/SKILL.md",
         "skills/legal-ops/legal-meeting-briefing/SKILL.md",
         "skills/legal-ops/signature-routing-checklist/SKILL.md",
         "skills/legal-ops/templated-legal-response/SKILL.md"
@@ -3385,6 +3426,7 @@
       "practice_area_name": "Legal Ops",
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
+        "skills/legal-ops/legal-intake-triage/SKILL.md",
         "skills/legal-ops/legal-meeting-briefing/SKILL.md",
         "skills/legal-ops/signature-routing-checklist/SKILL.md",
         "skills/legal-ops/templated-legal-response/SKILL.md"
@@ -4249,7 +4291,10 @@
       "included_matter_packs": [
         "matter-packs/trusts-estates.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/trusts-estates-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -4316,7 +4361,10 @@
       "included_matter_packs": [
         "matter-packs/trusts-estates.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/trusts-estates-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [
@@ -4383,7 +4431,10 @@
       "included_matter_packs": [
         "matter-packs/trusts-estates.md"
       ],
-      "included_matter_workspace_templates": [],
+      "included_matter_workspace_templates": [
+        "matter-workspaces/README.md",
+        "matter-workspaces/trusts-estates-matter.md"
+      ],
       "included_playbooks": [],
       "included_review_panels": [],
       "included_source_citation_templates": [

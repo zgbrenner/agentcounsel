@@ -1,6 +1,6 @@
 ---
 name: Distribution Restraints Review
-description: "Use when reviewing distribution, dealer, franchise, or marketplace arrangements (RPM/MAP, territory or customer restrictions, online-sales bans, dual pricing) to organize a draft restraint inventory with per-jurisdiction character flags for attorney review, without concluding enforceability or market power."
+description: "Use when a distribution, dealer, franchise, or marketplace program contains resale-price (RPM/MAP), territory or customer, online-sales, marketplace-ban, dual-pricing, exclusivity, or selective-distribution restraints, to produce a draft restraint inventory with per-jurisdiction character flags, ancillarity notes, and active-enforcement callouts for attorney review, without concluding enforceability, legality, or market power."
 practice_area: antitrust-competition
 task_type: review
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for distribution restraints review. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Review distribution, dealer, franchise, reseller, and marketplace arrangements for vertical-restraint exposure — RPM and MAP programs, territory and customer restrictions, online-sales and marketplace limits, dual pricing, selective-distribution criteria, exclusivity, and tying — and organize a restraint inventory with per-jurisdiction character flags, ancillarity and rationale notes, and separate callouts for active-enforcement areas such as online-sales bans and dual pricing. The deliverable is **draft legal work product for attorney review**: restraint character (hardcore vs. rule-of-reason vs. mixed) is recorded as a question for counsel per jurisdiction, and the skill never concludes enforceability, legality, or market power.
 
 ## Use When
 
-- The user requests distribution restraints review support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- Sales or channel teams propose a MAP policy, a minimum-price program, or consequences for discounting dealers, and counsel needs it screened before rollout.
+- A distribution or dealer agreement restricts online sales, bans specified marketplaces, or applies different wholesale prices to online vs. offline volume.
+- A supplier wants to assign exclusive territories or customer classes to distributors, or to tighten selective-distribution criteria that may exclude online-only or discount dealers.
+- A dealer complaint, termination dispute, or threat letter puts an existing restraint program under scrutiny.
+- The company sells direct and through dealers in the same market, and the dual-distribution information flows and channel protections need review.
+- An existing distribution program is expanding into new jurisdictions where the same restraints may be treated differently.
 
 ## Required Inputs
 
@@ -69,6 +72,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never characterize a restraint as per se illegal, hardcore, exempt, or lawful — restraint-character mapping is a per-jurisdiction question for counsel, recorded as candidate frameworks only.
+- Supplier-side and buyer-side market-position facts are user-supplied only; never invent, compute, or extrapolate a share, foreclosure figure, or market definition.
 
 ## Workflow
 

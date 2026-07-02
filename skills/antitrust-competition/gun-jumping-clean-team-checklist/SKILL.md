@@ -1,6 +1,6 @@
 ---
 name: Gun Jumping Clean Team Checklist
-description: "Use when assessing pre-closing coordination between signed-but-not-closed merger parties to organize a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrails for attorney review, without concluding HSR/Article 7 compliance or approving conduct."
+description: "Use when merger parties between signing and closing are planning integration, sharing information, or proposing joint conduct — aligning pricing, joint customer calls, a co-branded announcement before the waiting period ends — to produce a draft covenant inventory, conduct-vs-covenant deviation log, information-sharing log, and integration guardrail list for attorney review, without approving any pre-closing conduct or concluding HSR/Article 7 compliance."
 practice_area: antitrust-competition
 task_type: verification
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for gun jumping clean team checklist. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Check pre-closing conduct between signed-but-not-closed merger parties against the purchase agreement's covenants and gun-jumping discipline: inventory the pre-closing covenants and consent rights, log actual conduct against them, map every information flow with its control posture, test the clean-team design, and build the integration-planning guardrail list. The deliverable is a **draft for attorney review** — every deviation, high-sensitivity information flow, joint communication, and guardrail item is an escalation trigger for counsel, and the skill never concludes HSR/Article 7 compliance or approves any pre-closing step.
 
 ## Use When
 
-- The user requests gun jumping clean team checklist support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- The deal team wants to start integration planning, align pricing, or make joint customer calls before closing, and counsel needs the guardrails documented.
+- A signed deal is in the HSR or EU waiting period and someone asks what the parties may and may not do until clearance.
+- Diligence or integration workstreams are already exchanging pricing, customer, or capacity data, and the flows need to be logged against the clean-team protocol.
+- Counsel needs the purchase agreement's consent rights and operate-in-ordinary-course covenant screened for acquirer-control overreach.
+- A joint announcement, co-branded customer letter, or joint sales call is proposed — or has already happened — between signing and closing.
+- An extended review (second request, phase II) means pre-closing conduct discipline must hold for months and needs a documented checklist.
 
 ## Required Inputs
 
@@ -60,7 +63,7 @@ If jurisdiction, transaction structure, procedural posture, or the pre-closing c
 
 - The task requests a final legal opinion, filing decision, or legality approval.
 - The task asks the model to decide HSR/reportability, market-share thresholds, safe harbors, per se/rule-of-reason outcomes, or enforcement likelihood.
-- The requested output is `pre-closing conduct`.
+- The requested output is `approval of pre-closing conduct or information flows`.
 
 Also out of scope (this skill does not): provide legal advice, final legality determinations, final market definition or market-power analysis, economic expert analysis, HSR/reportability conclusions, merger-clearance advice, enforceability conclusions, or conduct approvals.
 
@@ -72,6 +75,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never green-light any pre-closing coordination, integration step, joint communication, or information flow — every proposed or observed item is an escalation-to-counsel entry, and silence is never clearance.
+- Never assume or compute waiting-period, standstill, or clearance status; the notification posture in every jurisdiction is user-supplied and flagged `[verify jurisdiction]` / `[deadline verification required]`.
 
 ## Workflow
 

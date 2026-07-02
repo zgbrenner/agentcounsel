@@ -75,7 +75,9 @@ The practice area the skill belongs to. It **must exactly match the
 directory area** — the folder name directly under `skills/`. Current
 values: `legal-research`, `litigation`, `contracts`, `corporate`,
 `employment`, `privacy`, `product-legal`, `regulatory`, `ai-governance`,
-`ip`, `financial-crime`, `real-estate`, `m-and-a`, `legal-ops`, `setup`, `legal-methodology`.
+`ip`, `financial-crime`, `real-estate`, `m-and-a`, `antitrust-competition`,
+`securities-capital-markets`, `tax`, `bankruptcy-restructuring`, `insurance`,
+`trusts-estates`, `family-law`, `legal-ops`, `setup`, `legal-methodology`.
 
 ### `task_type`
 

@@ -6,7 +6,67 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Added
+
+- **Seven new skills** filling the three most under-covered areas the July 2026
+  repository audit identified (`reports/repository-audit-2026-07.md`):
+  - `privacy/breach-response-workflow` — organizes a privacy/security incident
+    for counsel; notification clocks are flagged, never computed.
+  - `privacy/cross-border-transfer-review` — data-flow inventory, claimed
+    transfer-mechanism map, and TIA fact pattern for attorney completion.
+  - `privacy/vendor-privacy-diligence` — pre-contract/renewal vendor privacy
+    diligence feeding contract-term asks into `dpa-review`.
+  - `financial-crime/transaction-monitoring-alert-triage` — fills the gap
+    `kyc-onboarding-review` previously routed away.
+  - `financial-crime/aml-program-gap-review` and
+    `financial-crime/edd-file-review`.
+  - `legal-ops/legal-intake-triage` — the legal front-door: classify, gate,
+    and route an inbound business request.
+  Each ships with starter evals and index/router/commands entries.
+- **New core operating rule `core/capacity-and-vulnerable-parties.md`** —
+  capacity, undue influence, safety escalation, minors, unrepresented parties,
+  and no outcome predictions about people, binding every skill in the
+  individual-client areas; wired into `docs/SAFETY_MODEL.md`.
+- **Two new overlays** — `overlays/education-law/` and
+  `overlays/environmental-esg/` (OVERLAY.md + profile.md each).
+- **`connectors/sec-edgar.md`** — SEC EDGAR connector for the securities,
+  m-and-a, and corporate verification surface.
+- **Three new matter workspaces** — `bankruptcy-matter.md` (bar-date register,
+  stay touchpoints), `family-law-matter.md` (safety screening first), and
+  `trusts-estates-matter.md` (capacity observations as facts only), aligned
+  with the new core rule.
+- **17 new router eval cases** — routing coverage extended from 8 practice
+  areas to all of them, plus cross-practice disambiguation cases.
+- **`reports/repository-audit-2026-07.md`** — the full audit record: findings,
+  what this change addressed, and a prioritized backlog.
+
 ### Changed
+
+- **All 10 antitrust-competition skills de-boilerplated** — the byte-identical
+  Purpose / Use When / description headers were rewritten per skill
+  (trigger-rich, document-specific), and skill-specific safety bullets added
+  (gun-jumping, pricing-algorithm, trade-association cartel escalation).
+- **Six thin practice profiles rewritten to the full template standard** —
+  `securities-capital-markets` (was a 9-line stub), `antitrust-competition`,
+  `tax`, `bankruptcy-restructuring`, `trusts-estates`, and `insurance` now
+  carry the full fill-in tables (jurisdictions, escalation thresholds,
+  standard positions, prohibited assumptions) at ~190 lines each.
+- **Verification-skill boundaries sharpened** — `red-team-verifier`,
+  `hallucination-red-team`, `citation-integrity-check`, and
+  `source-validation` each now state when to use it versus a sibling.
+- **Safety boilerplate standardized** — the bolded
+  `core/source-and-citation-discipline.md` rule added to the six skills that
+  lacked it (all four product-legal skills, `ai-governance/ai-use-case-intake`,
+  `legal-methodology/hallucination-red-team`).
+- **Stale planning/standards docs corrected** — the expansion plan is
+  re-labeled substantially implemented with an implementation-status table and
+  superseded-passage annotations; `docs/SKILL_METADATA_STANDARD.md` gains the
+  seven missing practice areas; count and release-name fixes in `COMMANDS.md`,
+  `CONFIGURING.md`, `docs/PRACTICE_AREAS.md`, `docs/PLATFORM_GAP_ANALYSIS.md`,
+  `docs/IMPLEMENTATION_SEQUENCE.md`, and `practice-profiles/README.md`.
+- Regenerated `metadata/index.json`, `metadata/router.json`,
+  `metadata/packs.json`, the plugin bundle, and the eval-coverage and
+  skill-improvement reports for the 198-skill library.
 
 - Added cross-practice `related_skills` links so a skill points to adjacent
   workflows in other practice areas, not just its own: antitrust merger

@@ -1,6 +1,6 @@
 ---
 name: Pricing Algorithm Risk Triage
-description: "Use when triaging antitrust risk in a pricing recommender, dynamic-pricing engine, or pricing-as-a-service deployment to organize a draft data-flow map, hub-and-spoke and signaling-risk flags, and framework questions for attorney review, without concluding concerted practice or approving deployment."
+description: "Use when the business deploys or evaluates a pricing recommender, dynamic-pricing engine, repricer, or pricing-as-a-service vendor — especially one that ingests competitor prices or serves competing customers — to produce a draft data-flow map, hub-and-spoke and signaling-risk flags, override/audit posture notes, and vendor-diligence questions for attorney review, without concluding concerted practice or approving deployment."
 practice_area: antitrust-competition
 task_type: triage
 jurisdictions: []
@@ -32,13 +32,16 @@ tags:
 
 ## Purpose
 
-Produce a structured **draft for attorney review** for pricing algorithm risk triage. Organize source-grounded facts, gaps, and review questions without legal conclusions.
+Triage the antitrust exposure of a pricing recommender, dynamic-pricing engine, repricer, optimizer, or pricing-as-a-service deployment. The skill maps every data input and output — tracing which inputs reach competitor data directly, through a shared vendor, or through a pool — flags hub-and-spoke and signaling risks, tests the override and audit posture, and generates vendor-diligence and per-jurisdiction framework questions. Every flag is descriptive triage in a **draft for attorney review**: the skill never concludes concerted practice and never approves a deployment.
 
 ## Use When
 
-- The user requests pricing algorithm risk triage support.
-- Antitrust/competition issues need issue spotting and workflow organization.
-- Counsel needs a source-cited draft with explicit gaps and verification items.
+- The business wants to adopt a third-party repricing or dynamic-pricing tool and asks legal to clear the vendor.
+- An existing pricing algorithm ingests scraped competitor prices, a vendor data feed, or pooled industry data, and counsel needs the data flows mapped.
+- The pricing vendor is known or suspected to serve direct competitors with the same engine or data, raising hub-and-spoke questions.
+- Pricing teams have stopped overriding the algorithm's recommendations, or overrides are not logged, and the governance posture needs documenting.
+- News of algorithmic-pricing enforcement or litigation in the industry prompts a review of the company's own deployments.
+- Procurement or vendor management needs a diligence question list for a pricing-software contract or renewal.
 
 ## Required Inputs
 
@@ -70,6 +73,8 @@ Also out of scope (this skill does not): provide legal advice, final legality de
 - Use placeholders such as `[CONFIRM: ...]`, `[VERIFY: ...]`, and `[ATTORNEY TO CONFIRM: ...]`.
 - Do not compute deadlines; label dates `[deadline verification required]`.
 - Require attorney review before reliance, competitor communications, pricing actions, information exchange, trade-association participation, filing decisions, signing, closing, integration, or policy adoption.
+- Never characterize observed pricing conduct or algorithm behavior as collusion, concerted practice, or conscious parallelism — and never as lawful independent conduct; every flag is descriptive and routed to counsel.
+- Never suggest changes that would make algorithmic conduct less detectable or structure data flows around enforcement scrutiny; mitigation design is an attorney-led task.
 
 ## Workflow
 

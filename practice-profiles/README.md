@@ -103,10 +103,9 @@ The four hand-authored interviews — contracts, litigation, privacy, corporate 
 
 ### Practice-Area Skill Dirs That Do Not Have a Profile
 
-Two skill directories under `skills/` do not have a corresponding practice profile in this directory and are not represented in the interview table above:
+One skill directory under `skills/` does not have a corresponding practice profile in this directory and is not represented in the interview table above:
 
 - `skills/legal-research/` — a single cross-cutting research skill (`legal-research-memo`) that runs independently of any practice group's positions or playbooks. The skill is configured by the supervising attorney at the matter level, not by a group-level profile.
-- `skills/financial-crime/` — KYC and sanctions / PEP / adverse-media review skills. These are sector-specific compliance workflows whose configuration depends on the regulated entity's program rather than on a litigation- or contracts-style practice-group profile, and the cluster has not yet been authored for profile-driven use.
 
 Two other top-level skill directories — `skills/legal-methodology/` and `skills/legal-ops/` — are cross-cutting supporting groups that intentionally do not carry practice profiles either; they are configured per-matter rather than per-practice.
 
@@ -142,4 +141,5 @@ This design is intentional. The library has no backend and no runtime. Configura
 | `bankruptcy-restructuring.md` | Bankruptcy and restructuring — cases, claims, plans, distressed M&A |
 | `antitrust-competition.md` | Antitrust / competition — clearance, counseling, investigation defense |
 | `family-law.md` | Family law — matter intake, custody, support, settlements, safety screening |
+| `financial-crime.md` | Financial crime — KYC onboarding, sanctions / PEP / adverse-media screening |
 

@@ -47,8 +47,9 @@ A connector verification is never sufficient on its own. Every verified authorit
 | [courtlistener.md](courtlistener.md) | [Free Law Project — CourtListener](https://www.courtlistener.com) | US federal case law (SCOTUS, federal appellate, federal district); selective state supreme court coverage | Free, no API key required for many endpoints (5,000 req/hr) |
 | [federal-register.md](federal-register.md) | [Federal Register](https://www.federalregister.gov) (NARA) | US Federal Register documents since 1994 — final rules, proposed rules, notices, presidential documents; pre-publication Public Inspection | Free, no API key, fully public |
 | [ecfr.md](ecfr.md) | [eCFR](https://www.ecfr.gov) (NARA / GPO) | Currently codified Code of Federal Regulations and date-versioned historical snapshots back to roughly 2017 | Free, no API key, fully public |
+| [sec-edgar.md](sec-edgar.md) | [SEC EDGAR](https://www.sec.gov/edgar) (U.S. Securities and Exchange Commission) | SEC filings — full-text search of filings since roughly 2001; filing metadata, accession numbers, and as-filed documents back to EDGAR's early-1990s phase-in | Free, no API key; fair-access guidance (declared User-Agent, modest request rate) |
 
-This list grows as additional connectors are added. Future candidates include state-court aggregators, additional regulatory and securities feeds, and jurisdiction-specific official registers.
+This list grows as additional connectors are added. Future candidates include state-court aggregators, additional regulatory feeds, and jurisdiction-specific official registers.
 
 ## What this directory does not do
 
