@@ -13,7 +13,7 @@ A populated `practice-profiles/<area>.md` file gives ~20 of AgentCounsel's skill
 - **Attorney Review Requirements** — which deliverables require which level of reviewer.
 - **Prohibited Assumptions** — what the agent must never assume and must always confirm.
 
-Skills that consume the profile are listed in `practice-profiles/README.md`. The other ~160 skills are unaffected by the profile's presence.
+Skills that consume the profile are listed in `practice-profiles/README.md`. The other ~170 skills are unaffected by the profile's presence.
 
 ## How to configure
 

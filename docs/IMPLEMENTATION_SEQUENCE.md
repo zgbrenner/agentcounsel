@@ -3,6 +3,11 @@
 This sequence consolidates related work into small PRs that extend the current
 AgentCounsel systems instead of replacing them.
 
+> **Note:** this sequence has been largely executed. PRs 2, 3, 5, and 6 have
+> shipped — see the per-PR status lines below, which also record where the
+> landed artifacts differ from the file names originally proposed. PRs 1 and 4
+> remain open.
+
 ## PR 1: Generated Platform Registry
 
 Create a generated platform registry that exposes the systems AgentCounsel
@@ -33,6 +38,9 @@ Borrowing inputs:
 
 ## PR 2: Router And Pack Manifest Improvements
 
+Status: shipped — `metadata/router.json` and `metadata/packs.json` are
+generated and checked in.
+
 Make routing and pack outputs easier for agents and platforms to consume.
 
 Affected files:
@@ -61,6 +69,9 @@ Borrowing inputs:
   Cursor publishes reusable specs under clear terms.
 
 ## PR 3: Legal Prose And Citation Quality Checks
+
+Status: shipped — `scripts/check_legal_prose.py` exists and covers the scope
+below.
 
 Add automated quality checks for repository-owned outputs without introducing a
 model dependency.
@@ -121,6 +132,10 @@ Borrowing inputs:
 
 ## PR 5: Review Panels And Workspace Validation
 
+Status: shipped — landed as the top-level `review-panels/` directory and
+`docs/REVIEW_PANELS.md` rather than the `core/legal-review-panel.md` file
+proposed below.
+
 Make attorney review state more structured across skills, matter workspaces,
 and evals.
 
@@ -150,6 +165,9 @@ Borrowing inputs:
 - Do not import multi-agent debate machinery into the core Markdown library.
 
 ## PR 6: Optional Local App Path Design
+
+Status: shipped — landed as `docs/LOCAL_PLATFORM_PATH.md` rather than the
+`docs/LOCAL_APP_PATH.md` file proposed below.
 
 Design, but do not immediately build, an optional local/self-hosted app that
 consumes the generated registry and Markdown library.
