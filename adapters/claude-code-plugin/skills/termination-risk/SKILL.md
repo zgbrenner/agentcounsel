@@ -16,6 +16,7 @@ related_skills:
   - skills/employment/worker-classification/SKILL.md
   - skills/employment/protected-leave-review/SKILL.md
   - skills/employment/severance-review/SKILL.md
+  - skills/employment/reduction-in-force-review/SKILL.md
 tags:
   - employment
   - termination

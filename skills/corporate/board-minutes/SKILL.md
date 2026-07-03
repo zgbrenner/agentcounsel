@@ -14,6 +14,7 @@ outputs:
   - "Draft minutes of the board or committee meeting for attorney review"
 related_skills:
   - skills/corporate/written-consent/SKILL.md
+  - skills/corporate/shareholder-meeting-minutes/SKILL.md
 tags:
   - corporate
   - governance
@@ -56,7 +57,7 @@ If any required input is missing, stop and request it. Do not fabricate attendan
 - The user wants an agenda or standalone board resolutions drafted from scratch as a separate task, not as part of a minutes document — use the appropriate agenda or resolution drafting skill.
 - The user is asking whether a particular action was validly approved — that is a legal determination for the attorney, not a drafting task.
 - A quorum was not present at the meeting (see Workflow, Step 4 — Quorum Hard Stop).
-- The minutes are for a member or shareholder meeting rather than a board or committee meeting.
+- The minutes are for a member or shareholder meeting rather than a board or committee meeting — use `shareholder-meeting-minutes` instead.
 
 ## Legal Safety Rules
 

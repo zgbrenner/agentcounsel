@@ -16,6 +16,7 @@ outputs:
 related_skills:
   - skills/legal-research/legal-research-memo/SKILL.md
   - skills/legal-research/case-brief/SKILL.md
+  - skills/legal-research/negative-treatment-check/SKILL.md
   - skills/legal-methodology/source-validation/SKILL.md
 tags:
   - legal-research

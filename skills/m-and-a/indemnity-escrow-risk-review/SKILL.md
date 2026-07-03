@@ -17,6 +17,7 @@ related_skills:
   - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
   - skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md
   - skills/m-and-a/loi-term-sheet-review/SKILL.md
+  - skills/m-and-a/rw-insurance-review/SKILL.md
 tags:
   - m-and-a
   - indemnification
