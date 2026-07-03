@@ -35,6 +35,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/litigation:deposition-prep` | `skills/litigation/deposition-prep/SKILL.md` | "prepare for a deposition", "build a deposition outline" | Case theory, witness, documents | Deposition outline | `/litigation:chronology` |
 | `/litigation:legal-hold` | `skills/litigation/legal-hold/SKILL.md` | "issue a litigation hold", "preserve documents" | Matter, preservation scope, custodians, systems | Legal hold notice | `/litigation:intake` |
 | `/litigation:privilege-log` | `skills/litigation/privilege-log-review/SKILL.md` | "review our privilege log" | Privilege log, forum and jurisdiction | Privilege log review report | `/method:source-validation` |
+| `/litigation:discovery-response` | `skills/litigation/discovery-response-workflow/SKILL.md` | "organize our discovery responses", "respond to these interrogatories / RFAs" | Written discovery served, matter context, response deadline | Response tracker with objection and privilege candidates | `/litigation:privilege-log`, `/litigation:legal-hold` |
 | `/litigation:claim-chart` | `skills/litigation/claim-chart/SKILL.md` | "build a claim chart", "map claim elements to evidence" | Patent or pleaded claim, evidence, jurisdiction | Claim / element chart | `/ip:infringement` |
 | `/litigation:brief` | `skills/litigation/brief-section-drafter/SKILL.md` | "draft a section of a brief" | Case theory, section type, record, house style | Brief section draft | `/research:memo`, `/method:source-validation` |
 
@@ -47,6 +48,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/research:case-brief` | `skills/legal-research/case-brief/SKILL.md` | "brief this case", "structured brief of this opinion" | Opinion text, matter context, jurisdiction | Case brief with Holding / Relevance / Weight | `/research:synthesis`, `/method:source-validation` |
 | `/research:synthesis` | `skills/legal-research/authority-synthesis/SKILL.md` | "synthesize a rule across these cases", "rule across this set of authorities" | Question Presented, authority set, jurisdiction, relevant date | Rule-synthesis worksheet with majority / minority split | `/research:case-brief`, `/research:memo` |
 | `/research:reg-history` | `skills/legal-research/regulatory-history-tracer/SKILL.md` | "regulatory history of this CFR section", "what did this regulation say on this date" | CFR citation, relevant date or range, matter context | Regulatory history table with FR amendment references | `/regulatory:rule-change`, `/regulatory:gap-matrix` |
+| `/research:treatment-check` | `skills/legal-research/negative-treatment-check/SKILL.md` | "is this case still good law", "check these authorities for negative treatment" | Draft or citation list, any citator reports, verification connector | Treatment-verification table and plan | `/research:synthesis`, `/method:source-validation` |
 
 ## Corporate
 
@@ -54,6 +56,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 |---|---|---|---|---|---|
 | `/corporate:board-minutes` | `skills/corporate/board-minutes/SKILL.md` | "draft board minutes" | Meeting details, attendance, materials | Draft minutes | `/corporate:written-consent` |
 | `/corporate:written-consent` | `skills/corporate/written-consent/SKILL.md` | "draft a written consent", "action by written consent" | The action, signatories, effective date | Draft written consent | `/corporate:board-minutes` |
+| `/corporate:shareholder-minutes` | `skills/corporate/shareholder-meeting-minutes/SKILL.md` | "draft shareholder meeting minutes", "annual / special meeting minutes" | Notice, agenda, proxy materials, attendance, vote tallies | Draft meeting minutes | `/corporate:board-minutes` |
 | `/corporate:closing-checklist` | `skills/corporate/closing-checklist/SKILL.md` | "build a closing checklist" | Transaction agreement, deal context, diligence findings | Closing checklist | `/corporate:diligence` |
 | `/corporate:diligence` | `skills/corporate/diligence-issue-extraction/SKILL.md` | "pull issues from these diligence documents" | Target documents, deal context, materiality threshold | Diligence issues memo | `/corporate:material-contracts` |
 | `/corporate:material-contracts` | `skills/corporate/material-contract-schedule/SKILL.md` | "build the material contracts schedule" | "Material Contract" definition, contract data | Material contract schedule | `/corporate:diligence` |
@@ -72,6 +75,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/real-estate:closing-tracker` | `skills/real-estate/closing-deliverables-tracker/SKILL.md` | "build a closing checklist for this real estate deal" | Transaction type, party role, transaction agreement | Closing-deliverables tracker | `/real-estate:psa-review` |
 | `/real-estate:estoppel-snda` | `skills/real-estate/estoppel-snda-review/SKILL.md` | "review this estoppel or SNDA" | The estoppel or SNDA, perspective, lease if available | Issue list and lease discrepancy table | `/real-estate:lease-abstract` |
 | `/real-estate:zoning-issues` | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` | "spot zoning and use-restriction issues" | Intended use, provided materials, jurisdiction | Issue list and questions for local counsel | `/real-estate:diligence-checklist` |
+| `/real-estate:loan-documents` | `skills/real-estate/loan-document-review/SKILL.md` | "review these loan documents", "review the mortgage / note / guaranty" | Loan documents, client perspective, property/transaction context | Economic-terms and recourse/covenant issue list | `/real-estate:psa-review`, `/insurance:contract-requirements` |
 
 ## Antitrust / Competition
 
@@ -98,6 +102,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/m-and-a:purchase-agreement` | `skills/m-and-a/purchase-agreement-issue-list/SKILL.md` | "review this purchase agreement" | The purchase agreement, side, deal type | Issue list and risk matrix | `/m-and-a:reps-disclosure`, `/m-and-a:indemnity-escrow` |
 | `/m-and-a:reps-disclosure` | `skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md` | "compare reps against the disclosure schedules" | The reps article, the disclosure schedules, the side | Rep-by-rep review table | `/m-and-a:purchase-agreement` |
 | `/m-and-a:indemnity-escrow` | `skills/m-and-a/indemnity-escrow-risk-review/SKILL.md` | "review the indemnity and escrow terms" | The indemnity and escrow provisions, the side | Indemnity architecture and risk matrix | `/m-and-a:purchase-agreement` |
+| `/m-and-a:rwi` | `skills/m-and-a/rw-insurance-review/SKILL.md` | "review the R&W insurance policy / quote against the deal" | RWI policy/quote package, purchase agreement, client posture | Coverage-to-reps map and exclusions register | `/m-and-a:indemnity-escrow`, `/m-and-a:purchase-agreement` |
 | `/m-and-a:closing-tracker` | `skills/m-and-a/closing-deliverables-tracker/SKILL.md` | "build the M&A closing checklist" | Deal type, side, agreement and ancillary documents | Closing-deliverables tracker | `/m-and-a:consents` |
 | `/m-and-a:consents` | `skills/m-and-a/third-party-consents-assignment-review/SKILL.md` | "what consents does this deal need" | Contracts or diligence summaries, deal structure, side | Consent tracker | `/m-and-a:closing-tracker` |
 | `/m-and-a:post-closing` | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` | "track the post-closing obligations" | The acquisition agreement and ancillary documents, the side | Post-closing obligation tracker | `/m-and-a:integration` |
@@ -109,6 +114,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 |---|---|---|---|---|---|
 | `/employment:termination` | `skills/employment/termination-risk/SKILL.md` | "assess a termination", "is it risky to let this person go" | Employee facts, stated reason, history | Risk checklist and factors | `/employment:severance`, `/employment:leave` |
 | `/employment:severance` | `skills/employment/severance-review/SKILL.md` | "review this severance agreement" | Severance agreement, party served | Review and issues table | `/employment:termination` |
+| `/employment:rif` | `skills/employment/reduction-in-force-review/SKILL.md` | "we're planning a layoff", "group termination / reduction in force" | Selection process and criteria, affected group, notice/release documents | RIF review with adverse-impact and notice questions | `/employment:termination`, `/employment:severance` |
+| `/employment:covenants` | `skills/employment/restrictive-covenant-review/SKILL.md` | "review these non-competes / non-solicits", "assess an incoming hire's prior covenants" | Covenant document(s), client posture, role and location | Covenant scope inventory and enforceability questions | `/employment:severance`, `/employment:hiring` |
 | `/employment:policy` | `skills/employment/employee-policy-review/SKILL.md` | "review our handbook", "review this workplace policy" | Policy or handbook text | Gap and issues table | `/ai:employee-policy` |
 | `/employment:classify` | `skills/employment/worker-classification/SKILL.md` | "employee or contractor", "classify a worker" | Proposed engagement facts, classification purpose, jurisdiction | Classification analysis memo | `/employment:wage-hour` |
 | `/employment:hiring` | `skills/employment/hiring-review/SKILL.md` | "review this offer letter" | Offer letter, work location, role and pay | Hiring review memo | `/employment:classify` |
@@ -145,6 +152,7 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/regulatory:rule-change` | `skills/regulatory/rule-change-summary/SKILL.md` | "summarize this new rule and its impact" | Rule text or official document | Summary and impact table | `/regulatory:gap-matrix` |
 | `/regulatory:gap-matrix` | `skills/regulatory/compliance-gap-matrix/SKILL.md` | "map these requirements against our controls" | Requirement source, current controls | Compliance gap matrix | `/regulatory:rule-change` |
 | `/regulatory:compliance-tracker` | `skills/regulatory/compliance-program-tracker/SKILL.md` | "track our compliance with this framework", "audit prep" | Framework source, control inventory, audit context | Compliance program tracker | `/regulatory:gap-matrix`, `/regulatory:rule-change` |
+| `/regulatory:exam-response` | `skills/regulatory/regulatory-exam-response/SKILL.md` | "we got an exam letter", "respond to this regulator information request" | The exam/inquiry letter, matter context, response deadline | Request-item tracker and response skeleton | `/regulatory:enforcement-risk`, `/litigation:legal-hold` |
 
 ## AI Governance
 
@@ -224,6 +232,7 @@ Only the four analytical-method skills below carry slash-style commands. The oth
 | `/securities:filing-consistency` | `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md` | "compare SEC drafts" | Filing set and versions | Inconsistency tracker | `/securities:offering-disclosure` |
 | `/securities:form-d-blue-sky` | `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md` | "Form D tracker" | Offering and investor-jurisdiction facts | Filing workflow tracker | `/securities:private-placement` |
 | `/securities:investor-rights` | `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md` | "review investor rights" | Financing agreement set and role | Terms/risk matrix | `/securities:private-placement` |
+| `/securities:equity-plan` | `skills/securities-capital-markets/equity-incentive-plan-review/SKILL.md` | "review this equity incentive plan", "review this option / RSU award" | Plan document, award form(s), issuer context | Plan/award review with securities and tax hooks | `/securities:investor-rights`, `/securities:insider-policy` |
 | `/securities:insider-policy` | `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md` | "review insider trading policy" | Policy docs and covered persons | Policy issue list | `/securities:section16-triage` |
 | `/securities:section16-triage` | `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md` | "Section 16 triage" | Ownership/role facts and docs | Facts-to-verify table | `/securities:reporting-intake` |
 | `/securities:closing-checklist` | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` | "capital markets closing checklist" | Transaction docs and responsibilities | Closing deliverables tracker | `/securities:comfort-backup` |

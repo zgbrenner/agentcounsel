@@ -8,6 +8,32 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Nine new skills** closing the audit backlog's "carved-out sibling" gaps
+  (workflows existing skills already pointed at) and rounding out the newer
+  areas:
+  - `corporate/shareholder-meeting-minutes` — the member/shareholder-meeting
+    sibling `board-minutes` explicitly carved out.
+  - `employment/reduction-in-force-review` — group-termination selection,
+    adverse-impact, notice, and group-release organization.
+  - `employment/restrictive-covenant-review` — non-compete/non-solicit/
+    confidentiality review from any party posture (enforceability framed as
+    questions, never asserted).
+  - `regulatory/regulatory-exam-response` — organizing a regulator's exam
+    letter or information request into a request-item tracker.
+  - `legal-research/negative-treatment-check` — a citator-style good-law check
+    that never asserts treatment from model memory.
+  - `litigation/discovery-response-workflow` — document-request, interrogatory,
+    and RFA responses into a tracker (no final objection, no admit/deny).
+  - `real-estate/loan-document-review` — CRE financing documents from a
+    borrower/guarantor/lender posture (no computed figures, no lien-priority or
+    title conclusions).
+  - `securities-capital-markets/equity-incentive-plan-review` — plan and award
+    review with securities and tax hooks (no share-pool, vesting, exemption, or
+    tax conclusions).
+  - `m-and-a/rw-insurance-review` — RWI policy/quote against the deal (coverage
+    map and exclusions register, never a coverage determination).
+  Each ships with starter evals, index/router/commands entries, and
+  cross-links from the sibling skills that route to it.
 - **Four area red-flag catalogs**, extending the `contracts/references/`
   shared-library model to the contract-review skills outside `contracts` (the
   July 2026 audit's top backlog item). Each follows the contracts catalog's

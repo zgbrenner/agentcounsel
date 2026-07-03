@@ -2,7 +2,7 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
   "normalized_schema_version": "1.0",
-  "skill_count": 198,
+  "skill_count": 207,
   "platforms": [
     "chatgpt",
     "claude",
@@ -54,42 +54,42 @@
     "antitrust-competition": 10,
     "bankruptcy-restructuring": 12,
     "contracts": 5,
-    "corporate": 6,
-    "employment": 8,
+    "corporate": 7,
+    "employment": 10,
     "family-law": 12,
     "financial-crime": 5,
     "insurance": 12,
     "ip": 7,
     "legal-methodology": 11,
     "legal-ops": 4,
-    "legal-research": 5,
-    "litigation": 9,
-    "m-and-a": 10,
+    "legal-research": 6,
+    "litigation": 10,
+    "m-and-a": 11,
     "privacy": 7,
     "product-legal": 4,
-    "real-estate": 9,
-    "regulatory": 4,
-    "securities-capital-markets": 12,
+    "real-estate": 10,
+    "regulatory": 5,
+    "securities-capital-markets": 13,
     "setup": 20,
     "tax": 10,
     "trusts-estates": 12
   },
   "task_types": {
-    "analysis": 26,
-    "drafting": 21,
+    "analysis": 29,
+    "drafting": 22,
     "extraction": 23,
     "intake": 19,
     "interview": 19,
     "research": 5,
-    "review": 55,
+    "review": 59,
     "summarization": 5,
-    "triage": 14,
+    "triage": 15,
     "verification": 11
   },
   "risk_levels": {
     "low": 22,
-    "medium": 78,
-    "high": 94,
+    "medium": 79,
+    "high": 102,
     "critical": 4
   },
   "skills": [
@@ -2799,7 +2799,8 @@
         "Draft minutes of the board or committee meeting for attorney review"
       ],
       "related_skills": [
-        "skills/corporate/written-consent/SKILL.md"
+        "skills/corporate/written-consent/SKILL.md",
+        "skills/corporate/shareholder-meeting-minutes/SKILL.md"
       ],
       "tags": [
         "corporate",
@@ -3122,6 +3123,85 @@
       ]
     },
     {
+      "id": "corporate/shareholder-meeting-minutes",
+      "title": "Shareholder Meeting Minutes",
+      "path": "skills/corporate/shareholder-meeting-minutes/SKILL.md",
+      "summary": "Use when drafting minutes of a shareholder or member meeting (annual or special) from user-provided meeting materials — notice, agenda, proxy materials, attendance, and vote tallies — producing a structured draft corporate record for attorney review.",
+      "use_when": [
+        "A user asks to \"draft the minutes of our annual meeting,\" \"write up the shareholder meeting,\" or \"memorialize the special meeting of members\" for a meeting that has already taken place.",
+        "The user has meeting materials — notice, agenda, proxy materials, a meeting script, an inspector of elections report, or vote tabulations — and needs a minutes document prepared for attorney review before adoption.",
+        "A member meeting of an LLC, a membership meeting of a nonprofit, or an equivalent holder-level meeting needs to be memorialized in the same way.",
+        "The user wants a starting draft that conforms to the organization's house format before the attorney finalizes it."
+      ],
+      "required_inputs": [
+        "Meeting details: entity, meeting type (annual or special), date, time, and location or platform",
+        "Notice and proxy record as provided: what was sent, to whom, and when, or waiver information",
+        "Attendance and representation figures as provided, including proxies",
+        "Proposals presented and vote tallies exactly as provided"
+      ],
+      "expected_outputs": [
+        "Draft minutes of the shareholder or member meeting for attorney review"
+      ],
+      "category": "drafting",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "corporate",
+        "corporate-records",
+        "drafting",
+        "governance",
+        "medium",
+        "meeting-minutes",
+        "shareholder-meeting"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Shareholder Meeting Minutes",
+      "description": "Use when drafting minutes of a shareholder or member meeting (annual or special) from user-provided meeting materials — notice, agenda, proxy materials, attendance, and vote tallies — producing a structured draft corporate record for attorney review.",
+      "practice_area": "corporate",
+      "task_type": "drafting",
+      "jurisdictions": [],
+      "risk_level": "medium",
+      "requires_attorney_review": true,
+      "inputs": [
+        "Meeting details: entity, meeting type (annual or special), date, time, and location or platform",
+        "Notice and proxy record as provided: what was sent, to whom, and when, or waiver information",
+        "Attendance and representation figures as provided, including proxies",
+        "Proposals presented and vote tallies exactly as provided"
+      ],
+      "outputs": [
+        "Draft minutes of the shareholder or member meeting for attorney review"
+      ],
+      "related_skills": [
+        "skills/corporate/board-minutes/SKILL.md",
+        "skills/corporate/written-consent/SKILL.md"
+      ],
+      "tags": [
+        "corporate",
+        "governance",
+        "shareholder-meeting",
+        "meeting-minutes",
+        "corporate-records",
+        "drafting"
+      ]
+    },
+    {
       "id": "corporate/written-consent",
       "title": "Written Consent",
       "path": "skills/corporate/written-consent/SKILL.md",
@@ -3344,7 +3424,8 @@
       ],
       "related_skills": [
         "skills/employment/employee-policy-review/SKILL.md",
-        "skills/employment/worker-classification/SKILL.md"
+        "skills/employment/worker-classification/SKILL.md",
+        "skills/employment/restrictive-covenant-review/SKILL.md"
       ],
       "tags": [
         "employment",
@@ -3513,6 +3594,184 @@
       ]
     },
     {
+      "id": "employment/reduction-in-force-review",
+      "title": "Reduction in Force Review",
+      "path": "skills/employment/reduction-in-force-review/SKILL.md",
+      "summary": "Use when organizing a proposed group termination or reduction in force for counsel — the selection process and criteria, adverse-impact questions, group-notice obligations, group-release formalities, severance consistency, and the communication plan — before the reduction proceeds.",
+      "use_when": [
+        "An employer, HR team, or in-house counsel is planning a layoff, restructuring, site closure, or other group termination and wants the legal review points organized before decisions are finalized.",
+        "Counsel needs a structured intake of a proposed RIF — rationale, decisional unit, criteria, selection list status, severance plan, and timeline — to begin their own risk assessment.",
+        "A user says \"we're planning a RIF — what should legal be looking at?\" or \"help me organize this layoff for outside counsel.\"",
+        "The selection process or criteria are still being designed and the team wants the adverse-impact and consistency questions surfaced early.",
+        "A group severance program is being prepared and the group-release documentation items need to be inventoried."
+      ],
+      "required_inputs": [
+        "The business rationale for the reduction as stated by the employer",
+        "The decisional unit(s), selection criteria, and selection process as described",
+        "The proposed selection list or its current status, with roles and work locations as provided",
+        "Proposed severance, benefits, and release terms, if any",
+        "Optional: the proposed timeline and communication plan"
+      ],
+      "expected_outputs": [
+        "Structured RIF fact-and-risk summary for attorney review before the reduction proceeds",
+        "Adverse-impact and comparator questions framed for counsel",
+        "Group-notice and group-release verification flags"
+      ],
+      "category": "analysis",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "analysis",
+        "employment",
+        "group-termination",
+        "high",
+        "layoff",
+        "reduction-in-force",
+        "risk-assessment",
+        "warn-notice"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Reduction in Force Review",
+      "description": "Use when organizing a proposed group termination or reduction in force for counsel — the selection process and criteria, adverse-impact questions, group-notice obligations, group-release formalities, severance consistency, and the communication plan — before the reduction proceeds.",
+      "practice_area": "employment",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The business rationale for the reduction as stated by the employer",
+        "The decisional unit(s), selection criteria, and selection process as described",
+        "The proposed selection list or its current status, with roles and work locations as provided",
+        "Proposed severance, benefits, and release terms, if any",
+        "Optional: the proposed timeline and communication plan"
+      ],
+      "outputs": [
+        "Structured RIF fact-and-risk summary for attorney review before the reduction proceeds",
+        "Adverse-impact and comparator questions framed for counsel",
+        "Group-notice and group-release verification flags"
+      ],
+      "related_skills": [
+        "skills/employment/termination-risk/SKILL.md",
+        "skills/employment/severance-review/SKILL.md",
+        "skills/employment/protected-leave-review/SKILL.md"
+      ],
+      "tags": [
+        "employment",
+        "reduction-in-force",
+        "layoff",
+        "group-termination",
+        "warn-notice",
+        "risk-assessment"
+      ]
+    },
+    {
+      "id": "employment/restrictive-covenant-review",
+      "title": "Restrictive Covenant Review",
+      "path": "skills/employment/restrictive-covenant-review/SKILL.md",
+      "summary": "Use when reviewing non-compete, non-solicit, no-hire, or confidentiality covenants — in an offer letter, employment agreement, equity award, or separation document, or when assessing an incoming hire's covenants from a prior employer — to inventory each covenant's scope verbatim, organize the enforceability factors as questions, and flag consideration and conflict issues for attorney review.",
+      "use_when": [
+        "An employer is drafting or imposing covenants in an offer, employment agreement, equity award, or separation document and wants the scope and risk points organized before finalizing.",
+        "An employee has been asked to sign covenants and wants a structured read of what each one restricts.",
+        "A new employer is assessing the covenants an incoming hire signed with a prior employer, to understand the conflict posture before the hire starts.",
+        "Covenants are being added or expanded at separation and their reach beyond any prior agreement needs to be mapped.",
+        "A user asks \"are these non-competes a problem?\" or \"what do these restrictions actually cover?\""
+      ],
+      "required_inputs": [
+        "The document(s) containing the restrictive covenants, in full",
+        "The client's posture: the employer imposing the covenants, the employee bound by them, or the new employer assessing an incoming hire's prior covenants",
+        "The role, compensation, and work location(s) of the affected individual, as provided",
+        "Optional: the consideration offered for the covenants (initial employment, a raise, equity, severance, or other)",
+        "Optional: any prior agreements the same individual has signed that bear on the covenants"
+      ],
+      "expected_outputs": [
+        "Covenant-by-covenant scope inventory with each term quoted verbatim",
+        "Enforceability-factor questions organized for attorney review",
+        "Consideration and conflict-posture flags"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "contract-review",
+        "employment",
+        "high",
+        "non-compete",
+        "non-solicit",
+        "restrictive-covenants",
+        "review",
+        "trade-secrets"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Restrictive Covenant Review",
+      "description": "Use when reviewing non-compete, non-solicit, no-hire, or confidentiality covenants — in an offer letter, employment agreement, equity award, or separation document, or when assessing an incoming hire's covenants from a prior employer — to inventory each covenant's scope verbatim, organize the enforceability factors as questions, and flag consideration and conflict issues for attorney review.",
+      "practice_area": "employment",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The document(s) containing the restrictive covenants, in full",
+        "The client's posture: the employer imposing the covenants, the employee bound by them, or the new employer assessing an incoming hire's prior covenants",
+        "The role, compensation, and work location(s) of the affected individual, as provided",
+        "Optional: the consideration offered for the covenants (initial employment, a raise, equity, severance, or other)",
+        "Optional: any prior agreements the same individual has signed that bear on the covenants"
+      ],
+      "outputs": [
+        "Covenant-by-covenant scope inventory with each term quoted verbatim",
+        "Enforceability-factor questions organized for attorney review",
+        "Consideration and conflict-posture flags"
+      ],
+      "related_skills": [
+        "skills/employment/severance-review/SKILL.md",
+        "skills/employment/hiring-review/SKILL.md",
+        "skills/employment/termination-risk/SKILL.md"
+      ],
+      "tags": [
+        "employment",
+        "restrictive-covenants",
+        "non-compete",
+        "non-solicit",
+        "trade-secrets",
+        "contract-review"
+      ]
+    },
+    {
       "id": "employment/severance-review",
       "title": "Severance Review",
       "path": "skills/employment/severance-review/SKILL.md",
@@ -3582,7 +3841,9 @@
       ],
       "related_skills": [
         "skills/contracts/contract-risk-review/SKILL.md",
-        "skills/employment/termination-risk/SKILL.md"
+        "skills/employment/termination-risk/SKILL.md",
+        "skills/employment/reduction-in-force-review/SKILL.md",
+        "skills/employment/restrictive-covenant-review/SKILL.md"
       ],
       "tags": [
         "employment",
@@ -3660,7 +3921,8 @@
       "related_skills": [
         "skills/employment/worker-classification/SKILL.md",
         "skills/employment/protected-leave-review/SKILL.md",
-        "skills/employment/severance-review/SKILL.md"
+        "skills/employment/severance-review/SKILL.md",
+        "skills/employment/reduction-in-force-review/SKILL.md"
       ],
       "tags": [
         "employment",
@@ -8070,6 +8332,7 @@
       "related_skills": [
         "skills/legal-research/legal-research-memo/SKILL.md",
         "skills/legal-research/case-brief/SKILL.md",
+        "skills/legal-research/negative-treatment-check/SKILL.md",
         "skills/legal-methodology/source-validation/SKILL.md"
       ],
       "tags": [
@@ -8228,6 +8491,7 @@
       ],
       "related_skills": [
         "skills/litigation/brief-section-drafter/SKILL.md",
+        "skills/legal-research/negative-treatment-check/SKILL.md",
         "skills/legal-methodology/statutory-interpretation/SKILL.md",
         "skills/legal-methodology/source-validation/SKILL.md"
       ],
@@ -8237,6 +8501,93 @@
         "irac",
         "legal-analysis",
         "citations"
+      ]
+    },
+    {
+      "id": "legal-research/negative-treatment-check",
+      "title": "Negative Treatment Check",
+      "path": "skills/legal-research/negative-treatment-check/SKILL.md",
+      "summary": "Use when you need to check whether the authorities cited in a draft or research memo are still good law — organizing a citator-style verification plan for each authority, recording provided citator-report signals as attributed claims, and classifying each authority's verification status, without ever asserting from model memory that a case is good law, overruled, or distinguished.",
+      "use_when": [
+        "A research memo or brief is nearly final and every cited authority needs a good-law check before it is filed or relied upon.",
+        "A user asks \"is this case still good law?\" or \"have any of these authorities been overruled?\" and wants the verification organized rather than guessed.",
+        "A citation list has been assembled and the team needs a treatment-verification plan before an attorney signs off.",
+        "Citator reports have been pulled from a vendor service and the signals need to be organized into a per-authority status table.",
+        "A cited authority is old, from a fast-moving area, or central to the argument, and its current status must be confirmed."
+      ],
+      "required_inputs": [
+        "The draft, memo, or citation list whose authorities need treatment verification",
+        "For each authority: the full citation as it appears in the source",
+        "Optional: any citator reports or validation printouts the user has already obtained",
+        "Optional: access to a citation-verification connector (e.g., connectors/courtlistener.md) for federal case law"
+      ],
+      "expected_outputs": [
+        "Authority-by-authority treatment-verification table",
+        "A verification plan for each authority, using available connectors and user-supplied citator reports",
+        "Verification-status classification and attorney sign-off items"
+      ],
+      "category": "analysis",
+      "requires_jurisdiction": false,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "analysis",
+        "citation-verification",
+        "citator",
+        "good-law",
+        "high",
+        "legal-research",
+        "negative-treatment",
+        "source-validation"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Negative Treatment Check",
+      "description": "Use when you need to check whether the authorities cited in a draft or research memo are still good law — organizing a citator-style verification plan for each authority, recording provided citator-report signals as attributed claims, and classifying each authority's verification status, without ever asserting from model memory that a case is good law, overruled, or distinguished.",
+      "practice_area": "legal-research",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft, memo, or citation list whose authorities need treatment verification",
+        "For each authority: the full citation as it appears in the source",
+        "Optional: any citator reports or validation printouts the user has already obtained",
+        "Optional: access to a citation-verification connector (e.g., connectors/courtlistener.md) for federal case law"
+      ],
+      "outputs": [
+        "Authority-by-authority treatment-verification table",
+        "A verification plan for each authority, using available connectors and user-supplied citator reports",
+        "Verification-status classification and attorney sign-off items"
+      ],
+      "related_skills": [
+        "skills/legal-research/authority-synthesis/SKILL.md",
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-methodology/citation-integrity-check/SKILL.md"
+      ],
+      "tags": [
+        "legal-research",
+        "citator",
+        "negative-treatment",
+        "good-law",
+        "citation-verification",
+        "source-validation"
       ]
     },
     {
@@ -8708,6 +9059,97 @@
         "discovery",
         "witness-prep",
         "outline"
+      ]
+    },
+    {
+      "id": "litigation/discovery-response-workflow",
+      "title": "Discovery Response Workflow",
+      "path": "skills/litigation/discovery-response-workflow/SKILL.md",
+      "summary": "Use when organizing responses to written discovery — document requests, interrogatories, or requests for admission — inventorying each request verbatim into a response tracker, organizing objection candidates and privilege candidates as questions for counsel, planning collection and custodians, and drafting response shells with placeholders, without ever drafting a final objection or recommending an admit/deny.",
+      "use_when": [
+        "Written discovery has been served and the team needs it organized into a trackable, request-by-request response plan.",
+        "A responding party wants objection candidates and privilege candidates surfaced for counsel before drafting responses.",
+        "Interrogatories or document requests need to be mapped to custodians, data sources, and owners for collection.",
+        "Requests for admission have been served and each needs to be organized with its factual basis for counsel's admit/deny decision.",
+        "Counsel wants response shells drafted with placeholders so the substantive positions can be filled in efficiently."
+      ],
+      "required_inputs": [
+        "The written discovery served: the document requests, interrogatories, and/or requests for admission, in full",
+        "The matter context: parties, claims, the client's role, and the governing forum as stated",
+        "The response deadline as stated (recorded, never computed)",
+        "Optional: the operative pleadings and any prior discovery in the matter",
+        "Optional: a custodian and data-source list, if collection has begun"
+      ],
+      "expected_outputs": [
+        "Request-by-request response tracker with each request quoted verbatim",
+        "Objection candidates and privilege candidates organized as questions for counsel",
+        "Collection and custodian plan, and draft response shells with placeholders"
+      ],
+      "category": "analysis",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "analysis",
+        "discovery",
+        "document-requests",
+        "high",
+        "interrogatories",
+        "litigation",
+        "objections",
+        "requests-for-admission"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Discovery Response Workflow",
+      "description": "Use when organizing responses to written discovery — document requests, interrogatories, or requests for admission — inventorying each request verbatim into a response tracker, organizing objection candidates and privilege candidates as questions for counsel, planning collection and custodians, and drafting response shells with placeholders, without ever drafting a final objection or recommending an admit/deny.",
+      "practice_area": "litigation",
+      "task_type": "analysis",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The written discovery served: the document requests, interrogatories, and/or requests for admission, in full",
+        "The matter context: parties, claims, the client's role, and the governing forum as stated",
+        "The response deadline as stated (recorded, never computed)",
+        "Optional: the operative pleadings and any prior discovery in the matter",
+        "Optional: a custodian and data-source list, if collection has begun"
+      ],
+      "outputs": [
+        "Request-by-request response tracker with each request quoted verbatim",
+        "Objection candidates and privilege candidates organized as questions for counsel",
+        "Collection and custodian plan, and draft response shells with placeholders"
+      ],
+      "related_skills": [
+        "skills/litigation/subpoena-triage/SKILL.md",
+        "skills/litigation/privilege-log-review/SKILL.md",
+        "skills/litigation/legal-hold/SKILL.md",
+        "skills/litigation/litigation-chronology/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md"
+      ],
+      "tags": [
+        "litigation",
+        "discovery",
+        "interrogatories",
+        "requests-for-admission",
+        "document-requests",
+        "objections"
       ]
     },
     {
@@ -9400,7 +9842,8 @@
       "related_skills": [
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
-        "skills/m-and-a/loi-term-sheet-review/SKILL.md"
+        "skills/m-and-a/loi-term-sheet-review/SKILL.md",
+        "skills/m-and-a/rw-insurance-review/SKILL.md"
       ],
       "tags": [
         "m-and-a",
@@ -9804,6 +10247,96 @@
         "disclosure-schedules",
         "review",
         "source-cited"
+      ]
+    },
+    {
+      "id": "m-and-a/rw-insurance-review",
+      "title": "R&W Insurance Review",
+      "path": "skills/m-and-a/rw-insurance-review/SKILL.md",
+      "summary": "Use when reviewing a representations-and-warranties insurance policy or quote package against the deal documents — inventorying the policy, binder, and exclusions; mapping coverage to the purchase agreement's reps; building an exclusions register; and recording retention, limit, and no-claims-declaration terms — without ever concluding coverage or computing adequacy.",
+      "use_when": [
+        "A buyer's or seller's deal team has received an RWI quote, binder, or policy and needs it reviewed against the purchase agreement before binding or closing.",
+        "The coverage-to-reps mapping needs to be built so the team can see which representation areas are covered, excluded, or conditioned.",
+        "The exclusions list (standard and deal-specific) needs to be inventoried and its carve-outs flagged.",
+        "The retention, limit, and no-claims-declaration mechanics need to be recorded and their interplay with the purchase agreement's knowledge definitions checked.",
+        "The RWI structure needs to be reconciled with the deal's indemnity architecture (walk-away vs. indemnity-backstop)."
+      ],
+      "required_inputs": [
+        "The RWI policy or quote package (binder, policy form, exclusions list, underwriting call agenda)",
+        "The purchase agreement whose representations the policy is meant to cover",
+        "The client's posture: buyer/insured, seller, or the deal team coordinating the placement",
+        "Optional: the disclosure schedules and the diligence reports the underwriter reviewed",
+        "Optional: the indemnity structure the policy backstops (walk-away or indemnity-backstop)"
+      ],
+      "expected_outputs": [
+        "Policy and quote inventory with terms recorded verbatim",
+        "Coverage-to-representations map and an exclusions register",
+        "Retention/limit structure and no-claims-declaration interplay flags for attorney review"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "exclusions",
+        "high",
+        "indemnity",
+        "m-and-a",
+        "reps-and-warranties",
+        "review",
+        "rwi",
+        "transaction-insurance"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "R&W Insurance Review",
+      "description": "Use when reviewing a representations-and-warranties insurance policy or quote package against the deal documents — inventorying the policy, binder, and exclusions; mapping coverage to the purchase agreement's reps; building an exclusions register; and recording retention, limit, and no-claims-declaration terms — without ever concluding coverage or computing adequacy.",
+      "practice_area": "m-and-a",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The RWI policy or quote package (binder, policy form, exclusions list, underwriting call agenda)",
+        "The purchase agreement whose representations the policy is meant to cover",
+        "The client's posture: buyer/insured, seller, or the deal team coordinating the placement",
+        "Optional: the disclosure schedules and the diligence reports the underwriter reviewed",
+        "Optional: the indemnity structure the policy backstops (walk-away or indemnity-backstop)"
+      ],
+      "outputs": [
+        "Policy and quote inventory with terms recorded verbatim",
+        "Coverage-to-representations map and an exclusions register",
+        "Retention/limit structure and no-claims-declaration interplay flags for attorney review"
+      ],
+      "related_skills": [
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+        "skills/insurance/coverage-issue-spotter/SKILL.md"
+      ],
+      "tags": [
+        "m-and-a",
+        "rwi",
+        "transaction-insurance",
+        "reps-and-warranties",
+        "exclusions",
+        "indemnity"
       ]
     },
     {
@@ -11236,6 +11769,97 @@
       ]
     },
     {
+      "id": "real-estate/loan-document-review",
+      "title": "Loan Document Review",
+      "path": "skills/real-estate/loan-document-review/SKILL.md",
+      "summary": "Use when reviewing commercial real-estate financing documents — a loan agreement, promissory note, mortgage or deed of trust, assignment of leases and rents, guaranty, or environmental indemnity — from a borrower, guarantor, or lender perspective, to inventory the documents, record economic terms verbatim, flag recourse and covenant structures, and organize issues for attorney review.",
+      "use_when": [
+        "A borrower or guarantor has received a financing package and needs the terms and risk points organized before signing.",
+        "A lender's counsel wants a structured review of a loan package against the deal terms.",
+        "A refinance, construction loan, or bridge facility needs its covenants, recourse structure, and transfer restrictions mapped.",
+        "A guaranty (payment, carry, completion, or \"bad-boy\" carve-out) needs its triggers quoted and organized.",
+        "Diligence on an acquisition surfaces assumed or new debt whose documents need review alongside the purchase agreement."
+      ],
+      "required_inputs": [
+        "The financing documents to review, in full (loan agreement, note, mortgage/deed of trust, assignment of leases and rents, guaranty, environmental indemnity, and any riders)",
+        "The client's perspective: borrower, guarantor, or lender",
+        "The property type and the transaction context (acquisition, refinance, construction, or bridge), as stated",
+        "Optional: the term sheet or commitment letter the documents are meant to implement",
+        "Optional: the practice group's practice-profiles/real-estate.md, if populated"
+      ],
+      "expected_outputs": [
+        "Document inventory and defined-terms map",
+        "Economic-terms and recourse-structure summary with terms quoted verbatim",
+        "Covenant, transfer-restriction, and default/remedies issue list for attorney review"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "contract-review",
+        "financing",
+        "guaranty",
+        "high",
+        "loan-documents",
+        "mortgage",
+        "real-estate",
+        "review"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Loan Document Review",
+      "description": "Use when reviewing commercial real-estate financing documents — a loan agreement, promissory note, mortgage or deed of trust, assignment of leases and rents, guaranty, or environmental indemnity — from a borrower, guarantor, or lender perspective, to inventory the documents, record economic terms verbatim, flag recourse and covenant structures, and organize issues for attorney review.",
+      "practice_area": "real-estate",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The financing documents to review, in full (loan agreement, note, mortgage/deed of trust, assignment of leases and rents, guaranty, environmental indemnity, and any riders)",
+        "The client's perspective: borrower, guarantor, or lender",
+        "The property type and the transaction context (acquisition, refinance, construction, or bridge), as stated",
+        "Optional: the term sheet or commitment letter the documents are meant to implement",
+        "Optional: the practice group's practice-profiles/real-estate.md, if populated"
+      ],
+      "outputs": [
+        "Document inventory and defined-terms map",
+        "Economic-terms and recourse-structure summary with terms quoted verbatim",
+        "Covenant, transfer-restriction, and default/remedies issue list for attorney review"
+      ],
+      "related_skills": [
+        "skills/real-estate/psa-review/SKILL.md",
+        "skills/real-estate/commercial-lease-review/SKILL.md",
+        "skills/real-estate/estoppel-snda-review/SKILL.md",
+        "skills/real-estate/title-survey-objection-tracker/SKILL.md",
+        "skills/insurance/insurance-requirements-contract-review/SKILL.md"
+      ],
+      "tags": [
+        "real-estate",
+        "loan-documents",
+        "mortgage",
+        "guaranty",
+        "financing",
+        "contract-review"
+      ]
+    },
+    {
       "id": "real-estate/psa-review",
       "title": "Purchase and Sale Agreement Review",
       "path": "skills/real-estate/psa-review/SKILL.md",
@@ -11797,6 +12421,98 @@
       ]
     },
     {
+      "id": "regulatory/regulatory-exam-response",
+      "title": "Regulatory Exam Response",
+      "path": "skills/regulatory/regulatory-exam-response/SKILL.md",
+      "summary": "Use when a regulator's examination letter, information request, or supervisory inquiry has been received and the response must be organized for counsel — inventorying each request item verbatim, building a request-item-to-owner-to-source tracker, framing scope and responsiveness questions for counsel decision, and drafting a cover-response skeleton with placeholders.",
+      "use_when": [
+        "A regulator has sent an examination letter, an information or document request, a questionnaire, or a supervisory inquiry, and the response effort needs structure.",
+        "A user asks to \"organize this exam request,\" \"build a tracker for this information request,\" or \"get us ready to respond to the regulator.\"",
+        "Counsel needs every request item inventoried, assigned an owner, and mapped to likely sources before deciding the response approach.",
+        "A compliance or legal-operations team needs a repeatable intake-and-tracking process for recurring supervisory examinations.",
+        "A first-pass screen is needed to spot enforcement-adjacent signals in an inquiry so counsel can be alerted immediately."
+      ],
+      "required_inputs": [
+        "The full text of the examination letter, information request, or inquiry",
+        "The identity of the regulator and of the recipient entity",
+        "The date of receipt and any response date stated on the face of the request",
+        "The business units, systems, and personnel implicated, as known",
+        "Optional: prior correspondence with the regulator on the same matter"
+      ],
+      "expected_outputs": [
+        "Verbatim request-item inventory",
+        "Request-item-to-owner-to-source tracker",
+        "Scope and responsiveness questions framed for counsel decision",
+        "Privilege, preservation, and escalation flags",
+        "Draft cover-response skeleton with placeholders for attorney review"
+      ],
+      "category": "triage",
+      "requires_jurisdiction": false,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "assumption-audit",
+        "citation-integrity-check",
+        "source-validation-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "examination",
+        "high",
+        "information-request",
+        "regulator-response",
+        "regulatory",
+        "response-tracker",
+        "triage"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Regulatory Exam Response",
+      "description": "Use when a regulator's examination letter, information request, or supervisory inquiry has been received and the response must be organized for counsel — inventorying each request item verbatim, building a request-item-to-owner-to-source tracker, framing scope and responsiveness questions for counsel decision, and drafting a cover-response skeleton with placeholders.",
+      "practice_area": "regulatory",
+      "task_type": "triage",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The full text of the examination letter, information request, or inquiry",
+        "The identity of the regulator and of the recipient entity",
+        "The date of receipt and any response date stated on the face of the request",
+        "The business units, systems, and personnel implicated, as known",
+        "Optional: prior correspondence with the regulator on the same matter"
+      ],
+      "outputs": [
+        "Verbatim request-item inventory",
+        "Request-item-to-owner-to-source tracker",
+        "Scope and responsiveness questions framed for counsel decision",
+        "Privilege, preservation, and escalation flags",
+        "Draft cover-response skeleton with placeholders for attorney review"
+      ],
+      "related_skills": [
+        "skills/regulatory/enforcement-risk-memo/SKILL.md",
+        "skills/litigation/subpoena-triage/SKILL.md",
+        "skills/legal-methodology/privilege-confidentiality-check/SKILL.md",
+        "skills/litigation/legal-hold/SKILL.md"
+      ],
+      "tags": [
+        "regulatory",
+        "examination",
+        "information-request",
+        "regulator-response",
+        "response-tracker"
+      ]
+    },
+    {
       "id": "regulatory/rule-change-summary",
       "title": "Rule Change Summary",
       "path": "skills/regulatory/rule-change-summary/SKILL.md",
@@ -12053,6 +12769,96 @@
         "offering-document",
         "backup-support",
         "bring-down"
+      ]
+    },
+    {
+      "id": "securities-capital-markets/equity-incentive-plan-review",
+      "title": "Equity Incentive Plan Review",
+      "path": "skills/securities-capital-markets/equity-incentive-plan-review/SKILL.md",
+      "summary": "Use when reviewing an equity incentive plan and its award agreements (options, RSUs, restricted stock, phantom units, or SARs) to record plan-capacity and share-counting provisions, map vesting and termination-treatment matrices as drafted, organize the securities-law and governance-approval hooks as questions, and flag tax hooks for tax counsel — without computing shares, vesting outcomes, or asserting exemption or tax treatment.",
+      "use_when": [
+        "A company is adopting or amending an equity incentive plan and wants the plan and award forms reviewed before board or shareholder approval.",
+        "Award agreement forms (option, RSU, restricted stock, phantom, SAR) need their vesting, termination, and change-in-control terms mapped against the plan.",
+        "A plan's share-counting, evergreen, or fungible-share provisions need to be recorded and their questions surfaced.",
+        "The securities-law posture of award issuances needs to be organized as questions before grants are made.",
+        "A plan-versus-award-agreement consistency check is needed before a grant cycle."
+      ],
+      "required_inputs": [
+        "The equity incentive plan document, in full",
+        "The award agreement form(s) or specific award(s) to review (options, RSUs, restricted stock, phantom, SAR)",
+        "The issuer context: entity type, public/private status, and the plan's purpose as stated",
+        "Optional: the board/committee charter and any prior plan or amendment history",
+        "Optional: the capitalization context relevant to share-counting provisions"
+      ],
+      "expected_outputs": [
+        "Plan and award-agreement inventory with plan-capacity and share-counting provisions recorded verbatim",
+        "Vesting and termination-treatment matrices as drafted",
+        "Securities-law, governance-approval, and tax hooks organized as questions for the relevant counsel"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "equity-compensation",
+        "equity-incentive-plan",
+        "governance",
+        "high",
+        "review",
+        "rsus",
+        "securities-capital-markets",
+        "stock-options"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Equity Incentive Plan Review",
+      "description": "Use when reviewing an equity incentive plan and its award agreements (options, RSUs, restricted stock, phantom units, or SARs) to record plan-capacity and share-counting provisions, map vesting and termination-treatment matrices as drafted, organize the securities-law and governance-approval hooks as questions, and flag tax hooks for tax counsel — without computing shares, vesting outcomes, or asserting exemption or tax treatment.",
+      "practice_area": "securities-capital-markets",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The equity incentive plan document, in full",
+        "The award agreement form(s) or specific award(s) to review (options, RSUs, restricted stock, phantom, SAR)",
+        "The issuer context: entity type, public/private status, and the plan's purpose as stated",
+        "Optional: the board/committee charter and any prior plan or amendment history",
+        "Optional: the capitalization context relevant to share-counting provisions"
+      ],
+      "outputs": [
+        "Plan and award-agreement inventory with plan-capacity and share-counting provisions recorded verbatim",
+        "Vesting and termination-treatment matrices as drafted",
+        "Securities-law, governance-approval, and tax hooks organized as questions for the relevant counsel"
+      ],
+      "related_skills": [
+        "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md",
+        "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
+        "skills/securities-capital-markets/securities-exemption-issue-spotter/SKILL.md",
+        "skills/tax/tax-issue-intake/SKILL.md"
+      ],
+      "tags": [
+        "securities-capital-markets",
+        "equity-incentive-plan",
+        "equity-compensation",
+        "stock-options",
+        "rsus",
+        "governance"
       ]
     },
     {

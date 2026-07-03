@@ -60,6 +60,7 @@
         "skills/legal-research/authority-synthesis/SKILL.md",
         "skills/legal-research/case-brief/SKILL.md",
         "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/negative-treatment-check/SKILL.md",
         "skills/legal-research/regulatory-history-tracer/SKILL.md",
         "skills/legal-research/research-plan/SKILL.md"
       ],
@@ -80,7 +81,9 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "output-format-compliance-check"
+        "output-format-compliance-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -124,6 +127,7 @@
         "skills/legal-research/authority-synthesis/SKILL.md",
         "skills/legal-research/case-brief/SKILL.md",
         "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/negative-treatment-check/SKILL.md",
         "skills/legal-research/regulatory-history-tracer/SKILL.md",
         "skills/legal-research/research-plan/SKILL.md"
       ],
@@ -144,7 +148,9 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "output-format-compliance-check"
+        "output-format-compliance-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -188,6 +194,7 @@
         "skills/legal-research/authority-synthesis/SKILL.md",
         "skills/legal-research/case-brief/SKILL.md",
         "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/negative-treatment-check/SKILL.md",
         "skills/legal-research/regulatory-history-tracer/SKILL.md",
         "skills/legal-research/research-plan/SKILL.md"
       ],
@@ -208,7 +215,9 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "output-format-compliance-check"
+        "output-format-compliance-check",
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [
@@ -253,6 +262,7 @@
         "skills/litigation/claim-chart/SKILL.md",
         "skills/litigation/demand-letter/SKILL.md",
         "skills/litigation/deposition-prep/SKILL.md",
+        "skills/litigation/discovery-response-workflow/SKILL.md",
         "skills/litigation/legal-hold/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
@@ -328,6 +338,7 @@
         "skills/litigation/claim-chart/SKILL.md",
         "skills/litigation/demand-letter/SKILL.md",
         "skills/litigation/deposition-prep/SKILL.md",
+        "skills/litigation/discovery-response-workflow/SKILL.md",
         "skills/litigation/legal-hold/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
@@ -403,6 +414,7 @@
         "skills/litigation/claim-chart/SKILL.md",
         "skills/litigation/demand-letter/SKILL.md",
         "skills/litigation/deposition-prep/SKILL.md",
+        "skills/litigation/discovery-response-workflow/SKILL.md",
         "skills/litigation/legal-hold/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
@@ -692,6 +704,7 @@
         "skills/corporate/diligence-issue-extraction/SKILL.md",
         "skills/corporate/entity-compliance/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
+        "skills/corporate/shareholder-meeting-minutes/SKILL.md",
         "skills/corporate/written-consent/SKILL.md"
       ],
       "included_core_rules": [
@@ -763,6 +776,7 @@
         "skills/corporate/diligence-issue-extraction/SKILL.md",
         "skills/corporate/entity-compliance/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
+        "skills/corporate/shareholder-meeting-minutes/SKILL.md",
         "skills/corporate/written-consent/SKILL.md"
       ],
       "included_core_rules": [
@@ -834,6 +848,7 @@
         "skills/corporate/diligence-issue-extraction/SKILL.md",
         "skills/corporate/entity-compliance/SKILL.md",
         "skills/corporate/material-contract-schedule/SKILL.md",
+        "skills/corporate/shareholder-meeting-minutes/SKILL.md",
         "skills/corporate/written-consent/SKILL.md"
       ],
       "included_core_rules": [
@@ -904,6 +919,8 @@
         "skills/employment/hiring-review/SKILL.md",
         "skills/employment/internal-investigation/SKILL.md",
         "skills/employment/protected-leave-review/SKILL.md",
+        "skills/employment/reduction-in-force-review/SKILL.md",
+        "skills/employment/restrictive-covenant-review/SKILL.md",
         "skills/employment/severance-review/SKILL.md",
         "skills/employment/termination-risk/SKILL.md",
         "skills/employment/wage-hour-qa/SKILL.md",
@@ -975,6 +992,8 @@
         "skills/employment/hiring-review/SKILL.md",
         "skills/employment/internal-investigation/SKILL.md",
         "skills/employment/protected-leave-review/SKILL.md",
+        "skills/employment/reduction-in-force-review/SKILL.md",
+        "skills/employment/restrictive-covenant-review/SKILL.md",
         "skills/employment/severance-review/SKILL.md",
         "skills/employment/termination-risk/SKILL.md",
         "skills/employment/wage-hour-qa/SKILL.md",
@@ -1046,6 +1065,8 @@
         "skills/employment/hiring-review/SKILL.md",
         "skills/employment/internal-investigation/SKILL.md",
         "skills/employment/protected-leave-review/SKILL.md",
+        "skills/employment/reduction-in-force-review/SKILL.md",
+        "skills/employment/restrictive-covenant-review/SKILL.md",
         "skills/employment/severance-review/SKILL.md",
         "skills/employment/termination-risk/SKILL.md",
         "skills/employment/wage-hour-qa/SKILL.md",
@@ -1473,6 +1494,7 @@
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/compliance-program-tracker/SKILL.md",
         "skills/regulatory/enforcement-risk-memo/SKILL.md",
+        "skills/regulatory/regulatory-exam-response/SKILL.md",
         "skills/regulatory/rule-change-summary/SKILL.md"
       ],
       "included_core_rules": [
@@ -1535,6 +1557,7 @@
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/compliance-program-tracker/SKILL.md",
         "skills/regulatory/enforcement-risk-memo/SKILL.md",
+        "skills/regulatory/regulatory-exam-response/SKILL.md",
         "skills/regulatory/rule-change-summary/SKILL.md"
       ],
       "included_core_rules": [
@@ -1597,6 +1620,7 @@
         "skills/regulatory/compliance-gap-matrix/SKILL.md",
         "skills/regulatory/compliance-program-tracker/SKILL.md",
         "skills/regulatory/enforcement-risk-memo/SKILL.md",
+        "skills/regulatory/regulatory-exam-response/SKILL.md",
         "skills/regulatory/rule-change-summary/SKILL.md"
       ],
       "included_core_rules": [
@@ -3519,6 +3543,7 @@
         "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+        "skills/m-and-a/rw-insurance-review/SKILL.md",
         "skills/m-and-a/third-party-consents-assignment-review/SKILL.md"
       ],
       "included_core_rules": [
@@ -3540,7 +3565,8 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "assumption-audit"
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/m-and-a.md"
@@ -3584,6 +3610,7 @@
         "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+        "skills/m-and-a/rw-insurance-review/SKILL.md",
         "skills/m-and-a/third-party-consents-assignment-review/SKILL.md"
       ],
       "included_core_rules": [
@@ -3605,7 +3632,8 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "assumption-audit"
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/m-and-a.md"
@@ -3649,6 +3677,7 @@
         "skills/m-and-a/post-closing-obligations-tracker/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
+        "skills/m-and-a/rw-insurance-review/SKILL.md",
         "skills/m-and-a/third-party-consents-assignment-review/SKILL.md"
       ],
       "included_core_rules": [
@@ -3670,7 +3699,8 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "assumption-audit"
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/m-and-a.md"
@@ -3710,6 +3740,7 @@
         "skills/real-estate/estoppel-snda-review/SKILL.md",
         "skills/real-estate/lease-abstract/SKILL.md",
         "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+        "skills/real-estate/loan-document-review/SKILL.md",
         "skills/real-estate/psa-review/SKILL.md",
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
         "skills/real-estate/title-survey-objection-tracker/SKILL.md",
@@ -3732,7 +3763,8 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "assumption-audit"
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/real-estate.md"
@@ -3772,6 +3804,7 @@
         "skills/real-estate/estoppel-snda-review/SKILL.md",
         "skills/real-estate/lease-abstract/SKILL.md",
         "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+        "skills/real-estate/loan-document-review/SKILL.md",
         "skills/real-estate/psa-review/SKILL.md",
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
         "skills/real-estate/title-survey-objection-tracker/SKILL.md",
@@ -3794,7 +3827,8 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "assumption-audit"
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/real-estate.md"
@@ -3834,6 +3868,7 @@
         "skills/real-estate/estoppel-snda-review/SKILL.md",
         "skills/real-estate/lease-abstract/SKILL.md",
         "skills/real-estate/lease-amendment-reconciliation/SKILL.md",
+        "skills/real-estate/loan-document-review/SKILL.md",
         "skills/real-estate/psa-review/SKILL.md",
         "skills/real-estate/real-estate-diligence-checklist/SKILL.md",
         "skills/real-estate/title-survey-objection-tracker/SKILL.md",
@@ -3856,7 +3891,8 @@
         "source-validation-check",
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
-        "assumption-audit"
+        "assumption-audit",
+        "hallucination-red-team"
       ],
       "included_matter_packs": [
         "matter-packs/real-estate.md"
@@ -3893,6 +3929,7 @@
       "included_skills": [
         "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
         "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+        "skills/securities-capital-markets/equity-incentive-plan-review/SKILL.md",
         "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
         "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
         "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md",
@@ -3961,6 +3998,7 @@
       "included_skills": [
         "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
         "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+        "skills/securities-capital-markets/equity-incentive-plan-review/SKILL.md",
         "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
         "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
         "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md",
@@ -4029,6 +4067,7 @@
       "included_skills": [
         "skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md",
         "skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md",
+        "skills/securities-capital-markets/equity-incentive-plan-review/SKILL.md",
         "skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md",
         "skills/securities-capital-markets/insider-trading-policy-review/SKILL.md",
         "skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md",
