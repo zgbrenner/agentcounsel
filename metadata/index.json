@@ -4257,7 +4257,8 @@
       "path": "skills/family-law/custody-order-review-checklist/SKILL.md",
       "summary": "Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review.",
       "use_when": [
-        "An existing or proposed custody or parenting order must be checked for clarity and administrability.",
+        "An existing or proposed custody or parenting order is the whole subject of the review and must be checked for clarity and administrability.",
+        "The review is scoped to custody and parenting terms alone, standing apart from any broader settlement agreement.",
         "An attorney wants the ambiguities, gaps, and enforcement-friction points in an order surfaced.",
         "A proposed order must be reviewed for missing administration details before it is finalized."
       ],
@@ -4912,9 +4913,10 @@
       "path": "skills/family-law/settlement-agreement-issue-spotter/SKILL.md",
       "summary": "Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review.",
       "use_when": [
-        "A marital settlement, parenting, support, or custody-stipulation agreement or draft needs an organized review for an attorney.",
+        "A marital settlement, parenting, support, or custody-stipulation agreement or draft needs an organized, cross-issue review for an attorney.",
+        "The document spans more than one family-law issue area — custody, support, property, tax, or enforceability — and a single review across all of them is wanted.",
         "An attorney wants the key terms, issues, ambiguities, and missing provisions surfaced before a client discussion or negotiation.",
-        "A settlement draft must be checked for internal consistency and gaps."
+        "A settlement draft must be checked for internal consistency and gaps across the whole agreement."
       ],
       "required_inputs": [
         "The full settlement, parenting, support, or stipulation agreement text or draft",
@@ -6994,12 +6996,13 @@
       ],
       "category": "triage",
       "requires_jurisdiction": false,
-      "requires_deadline_check": false,
+      "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
         "citation-integrity-check",
         "source-validation-check",
+        "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
         "output-format-compliance-check"
       ],
