@@ -119,6 +119,15 @@ Also out of scope (this skill does not): determine the legal effect or enforceab
 
 ## Workflow
 
+This skill draws on the shared real-estate red-flag catalog in
+`skills/real-estate/references/red-flags.md`. For an estoppel or SNDA, scan the
+**lease family (Sections 1–8), especially Section 7 (SNDA, estoppel, and
+subordination obligations)**, plus the cross-cutting sections (**19** title/lien
+priority, **21** jurisdiction-specific property law). Consult it at the steps
+noted below. The catalog never confirms title or lien priority, never opines on
+the legal effect of a subordination, non-disturbance, or attornment provision,
+and never computes a figure or a date.
+
 1. **Confirm inputs.** Verify you have the full text of the estoppel, SNDA, or
    recognition agreement, and the review perspective (lender, tenant, or
    landlord). If the document text or the perspective is missing, stop and
@@ -136,10 +145,21 @@ Also out of scope (this skill does not): determine the legal effect or enforceab
    the property, and any effective or required-return date as the document
    states it — flagged `[deadline verification required]`, never computed.
 
-4. **Review the document from the stated perspective.** Work through the
-   document and identify the issues that matter for the review perspective.
-   Cite the section, certification item, or page for each. Cover, as
-   applicable:
+4. **Red flags quick scan.** Run a fast first pass against the lease family
+   (Sections 1–8, especially Section 7 on SNDA, estoppel, and subordination
+   obligations) and the cross-cutting sections (19 and 21) of
+   `skills/real-estate/references/red-flags.md`. Record each red-flag pattern
+   present, or note that none surfaced. This scan orients the deeper review; it
+   does not replace it, confirm title or lien priority, opine on the effect of
+   a subordination, non-disturbance, or attornment provision, or compute any
+   figure or date.
+
+5. **Review the document from the stated perspective.** Work through the
+   document and identify the issues that matter for the review perspective,
+   cross-checking against the corresponding entries in
+   `skills/real-estate/references/red-flags.md` (especially Section 7) and
+   folding any pattern found into the issue list. Cite the section,
+   certification item, or page for each. Cover, as applicable:
    - **Factual certifications** — the rent, the term and commencement and
      expiration dates, the security deposit, the abatements, and the parties as
      certified.
@@ -160,7 +180,7 @@ Also out of scope (this skill does not): determine the legal effect or enforceab
    - **Blanks, conflicts, and one-sided terms** — unfilled blanks, internal
      inconsistencies, and terms that are unusual for the stated perspective.
 
-5. **Compare against the lease — only if the lease is provided.** For each
+6. **Compare against the lease — only if the lease is provided.** For each
    factual statement in the estoppel or SNDA, locate the corresponding lease
    provision and check for consistency. Flag inconsistencies in, at least:
    rent, term, defaults, options, security deposit, amendments, side
@@ -169,17 +189,17 @@ Also out of scope (this skill does not): determine the legal effect or enforceab
    provided, omit this step and carry forward the note that the comparison
    could not be performed.
 
-6. **Build the issue list.** Collect every issue from the stated perspective,
+7. **Build the issue list.** Collect every issue from the stated perspective,
    rank each High / Medium / Low, and for each state what it is, why it matters
    for the review perspective, and the open question for the attorney — not a
    decision to sign or not sign.
 
-7. **List open items and missing documents.** Collect every referenced-but-
+8. **List open items and missing documents.** Collect every referenced-but-
    not-provided document, every unfilled blank, every `[CONFIRM: ...]`
    placeholder, every date flagged for verification, and every issue requiring
    legal judgment, into a single list.
 
-8. **Assemble the output** and label it a draft for attorney review.
+9. **Assemble the output** and label it a draft for attorney review.
 
 ## Output Format
 
@@ -193,19 +213,24 @@ Deliver, in order:
    missing.
 3. **Document Summary** — a plain-language summary of what the estoppel, SNDA,
    or recognition agreement certifies or grants, with section or page citations.
-4. **Issue List** — issues from the stated perspective, ranked High / Medium /
+4. **Red Flags Quick Scan** — each red-flag pattern from the lease family
+   (Sections 1–8, especially Section 7) and cross-cutting sections (19 and 21)
+   of `skills/real-estate/references/red-flags.md` found in the document, or a
+   note that none surfaced in the scan. No item is treated as a title,
+   priority, or legal-effect conclusion, and no figure or date is computed.
+5. **Issue List** — issues from the stated perspective, ranked High / Medium /
    Low. For each: `Issue | Why it matters (perspective) | Source (section /
    item / page) | Open question for attorney`.
-5. **Lease-versus-Estoppel Discrepancy Table** — included only if the lease was
+6. **Lease-versus-Estoppel Discrepancy Table** — included only if the lease was
    provided: `Topic | Estoppel/SNDA states (cite) | Lease states (cite) |
    Discrepancy`, covering at least rent, term, defaults, options, security
    deposit, amendments, side agreements, and notice rights. If the lease was
    not provided, state in this section that the comparison could not be
    performed and why.
-6. **Open Items and Missing Documents** — a consolidated list of
+7. **Open Items and Missing Documents** — a consolidated list of
    referenced-but-not-provided documents, unfilled blanks, flagged dates, and
    `[CONFIRM: ...]` placeholders.
-7. **Attorney Verification Items** — see the checklist below.
+8. **Attorney Verification Items** — see the checklist below.
 
 Use `[CONFIRM: ...]` wherever a fact, a comparison, or a term is uncertain, and
 `[deadline verification required]` for every date. Do not fill a gap with an
@@ -220,6 +245,11 @@ invented term, law, or date.
       located and considered.
 - [ ] Every issue and every discrepancy has been spot-checked against the cited
       section, item, or page of the estoppel or SNDA and of the lease.
+- [ ] The Red Flags Quick Scan against `skills/real-estate/references/red-flags.md`
+      (lease Sections 1–8, especially Section 7; cross-cutting 19 and 21) has
+      been reviewed; every pattern it surfaced has been assessed, and no scan
+      item was treated as a title, priority, or legal-effect conclusion or as a
+      computed figure or date.
 - [ ] Where the lease was not provided, the comparison gap has been
       consciously accepted and the lease has been obtained if needed.
 - [ ] Every date has been independently verified; no date in the review was

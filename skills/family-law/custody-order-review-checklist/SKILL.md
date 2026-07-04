@@ -31,11 +31,12 @@ tags:
 
 ## Purpose
 
-Review an existing or proposed custody or parenting order for clarity and day-to-day administration issues — legal and physical custody language, the parenting schedule, holidays, exchanges, travel, communication, school and medical decisions, relocation and travel notices, dispute resolution, enforcement and ambiguity points, and any safety provisions — and produce an order-clarity checklist, an ambiguity table, and a missing-details list, so a qualified, licensed attorney has an organized review. This skill checks whether the order is clear and administrable; it recommends no custody outcome and decides no enforceability question.
+Review an existing or proposed **custody or parenting order specifically** — not a full marital settlement agreement — for clarity and day-to-day administration issues, covering legal and physical custody language, the parenting schedule, holidays, exchanges, travel, communication, school and medical decisions, relocation and travel notices, dispute resolution, enforcement and ambiguity points, and any safety provisions, and produce an order-clarity checklist, an ambiguity table, and a missing-details list, so a qualified, licensed attorney has an organized review. This skill checks whether the order is clear and administrable; it recommends no custody outcome and decides no enforceability question. It draws on the custody-and-parenting, safety, and schedule-consistency patterns in `skills/family-law/references/issue-catalog.md`. Where the document is a broader settlement agreement spanning support, property, tax, and enforceability alongside custody, use `settlement-agreement-issue-spotter` instead for a single cross-issue review.
 
 ## Use When
 
-- An existing or proposed custody or parenting order must be checked for clarity and administrability.
+- An existing or proposed custody or parenting order is the whole subject of the review and must be checked for clarity and administrability.
+- The review is scoped to custody and parenting terms alone, standing apart from any broader settlement agreement.
 - An attorney wants the ambiguities, gaps, and enforcement-friction points in an order surfaced.
 - A proposed order must be reviewed for missing administration details before it is finalized.
 
@@ -75,26 +76,31 @@ Also out of scope (this skill does not): recommend a custody outcome, a parentin
 
 ## Workflow
 
+This skill draws on the shared family-law reference `skills/family-law/references/issue-catalog.md`. Because this review is scoped to a custody or parenting order, consult chiefly Section 1 (Custody and Parenting Provisions), Section 5 (Safety and Vulnerable-Party Indicators), and pattern 8.2 (Inconsistent or conflicting parenting schedules); each catalog entry frames facts to record and questions for counsel.
+
 1. Confirm the inputs: the full order text, the parties and roles, the children involved, whether the order is existing or proposed, and the jurisdiction. Record any missing input as `not provided`; if the text is missing, request it.
 2. Run a brief safety screen; if the order contains safety provisions or the user raises a safety concern, flag it and, where appropriate, route to `domestic-violence-safety-referral-checklist`.
-3. Work through the standard administration topics, checking each against the order's language: legal custody / decision-making; physical custody / residence; the parenting schedule; holidays and special days; vacations and travel; exchanges (time, place, responsibility); communication between the parties and with the children; school and education decisions; medical and health decisions; relocation and travel-notice provisions; dispute-resolution provisions; enforcement and compliance language; safety provisions if present.
-4. For each topic, mark the order-clarity checklist: clear / unclear / `not addressed`, with the section reference and a neutral note.
-5. Build the **ambiguity table** — each unclear term or mechanic, its section, and the readings it is open to — without resolving it.
-6. Build the **missing-details list** — administration details a workable order usually specifies that this order does not, framed as observations for counsel.
-7. Echo every date and notice period in the order for verification; draft attorney verification questions.
+3. **Issue-catalog scan.** Run a first pass against `skills/family-law/references/issue-catalog.md`, focusing on Section 1 (custody and parenting provisions), Section 5 (safety and vulnerable-party indicators), and pattern 8.2 (inconsistent or conflicting parenting schedules). For each relevant pattern present, record it with its section reference in the order and a neutral note; if none surfaced, note that. This scan orients the deeper review; it does not replace it. If any Section 5 pattern surfaces, stop expanding the deliverable, surface it prominently, escalate per the safety screen, and route to `domestic-violence-safety-referral-checklist`.
+4. Work through the standard administration topics, checking each against the order's language: legal custody / decision-making; physical custody / residence; the parenting schedule; holidays and special days; vacations and travel; exchanges (time, place, responsibility); communication between the parties and with the children; school and education decisions; medical and health decisions; relocation and travel-notice provisions; dispute-resolution provisions; enforcement and compliance language; safety provisions if present. Use the Section 1 catalog patterns to frame the open questions for the decision-making, residential-schedule, right-of-first-refusal, and relocation topics.
+5. For each topic, mark the order-clarity checklist: clear / unclear / `not addressed`, with the section reference and a neutral note.
+6. Build the **ambiguity table** — each unclear term or mechanic, its section, and the readings it is open to — without resolving it, drawing on pattern 8.2 where the schedule provisions overlap, conflict, or leave gaps.
+7. Build the **missing-details list** — administration details a workable order usually specifies that this order does not, framed as observations for counsel.
+8. Echo every date and notice period in the order for verification; draft attorney verification questions.
 
 ## Output Format
 
 1. **Safety note** — any safety provision or concern flagged and routed, or a plain statement that none surfaced.
 2. **Gates table** — parties and roles, children involved, existing/proposed, jurisdiction, with status and source.
-3. **Order-clarity checklist** — topic | clear / unclear / not addressed | section reference | neutral note.
-4. **Ambiguity table** — ambiguous term | section | the readings it is open to.
-5. **Missing details** — administration details not specified, marked `not found`.
-6. **Attorney verification questions** and **assumptions**.
+3. **Issue-catalog scan** — each relevant pattern from `skills/family-law/references/issue-catalog.md` (chiefly Sections 1 and 5 and pattern 8.2) found in the order, with its section reference in the order, or a note that none surfaced.
+4. **Order-clarity checklist** — topic | clear / unclear / not addressed | section reference | neutral note.
+5. **Ambiguity table** — ambiguous term | section | the readings it is open to.
+6. **Missing details** — administration details not specified, marked `not found`.
+7. **Attorney verification questions** and **assumptions**.
 
 ## Attorney Verification Checklist
 
 - [ ] The order text, the parties and roles, the children involved, and the jurisdiction are confirmed or flagged `not provided`.
+- [ ] The issue-catalog scan against `skills/family-law/references/issue-catalog.md` (chiefly Sections 1 and 5 and pattern 8.2) is complete; each surfaced pattern is recorded as an open question, and any Section 5 safety pattern was escalated and routed.
 - [ ] All section references and quotations match the source order.
 - [ ] No custody outcome or parenting-time allocation is recommended.
 - [ ] No conclusion on enforceability, validity, or a best-interests question appears.

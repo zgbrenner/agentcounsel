@@ -78,21 +78,24 @@ If no loan documents are provided, stop and request them. Never reconstruct fina
 
 ## Workflow
 
+This skill draws on the shared real-estate red-flag catalog in `skills/real-estate/references/red-flags.md`. For a financing package, scan its **loan family (Sections 15–18)** — recourse carve-outs, covenants and transfer/due-on-sale restrictions, reserves/cash-management and prepayment, and cross-default/remedies — plus the cross-cutting sections (**19** title/lien priority, **20** insurance, **21** jurisdiction-specific property law). Consult it at the steps noted below. The catalog is a scan aid only; it never confirms lien perfection, priority, or title status, never concludes enforceability, and never computes a figure or a date.
+
 1. **Confirm inputs.** Verify the financing documents, the client perspective, and the transaction context are provided. List any referenced-but-missing documents. Request anything essential before proceeding.
 2. **State the gates.** Record the client perspective, the property type and transaction context, the governing-law and jurisdiction(s) as stated (`[verify jurisdiction]`), and the "as of" date.
 3. **Build the document inventory.** List each document in the package by type and title, note which are present and which are referenced but missing, and identify the document hierarchy (which controls on conflict, as the documents state it).
-4. **Map the defined terms.** Extract the defined terms that set the deal's reach — Loan, Obligations, Indebtedness, Property, Permitted Transfers, Permitted Liens, Event of Default, Guaranteed Obligations — and note where they are defined. Flag circular or ambiguous definitions.
-5. **Record the economic terms verbatim.** Capture, as written and never computed: principal, interest rate and default rate, payment terms, maturity, amortization, prepayment provisions (lockout, yield maintenance, defeasance, exit fee), and any holdbacks or earn-out/advance mechanics. Each figure or formula is quoted; every date `[deadline verification required]`.
-6. **Map the recourse structure.** Record whether the loan is recourse, non-recourse, or limited-recourse, and quote the recourse carve-outs ("bad-boy" triggers) verbatim — springing full recourse vs. loss-only carve-outs, and the specific triggering acts (transfers, bankruptcy, waste, fraud, environmental). Flag broad or springing triggers prominently for the client's side. Never conclude enforceability.
-7. **Inventory the guaranties.** For each guaranty (payment, carry/carve-out, completion), record the guarantor, the guaranteed obligations, the triggers, any caps or burn-downs, and waivers of guarantor defenses — quoted. Flag guaranties whose scope exceeds the carve-outs they are meant to backstop.
-8. **Record the covenants as drafted.** Capture financial covenants (DSCR, LTV, net-worth, liquidity), reporting covenants, and operating covenants — as written, never tested against any number. Note single-purpose-entity and separateness covenants where present.
-9. **Map transfer and due-on-sale restrictions.** Record restrictions on transfer, change of control, secondary financing, and lease-related actions, and any permitted-transfer and assumption provisions — quoted, with the consent standards flagged.
-10. **Record cash-management and reserve provisions.** Capture lockbox/cash-management triggers, sweep conditions, and required reserves/escrows (tax, insurance, replacement, TI/LC) as written, with funding dates `[deadline verification required]`.
-11. **Flag the security, perfection, and title questions.** Note the collateral the mortgage/deed of trust and assignment of leases and rents purport to encumber, and flag perfection, priority, and title-status questions `[ATTORNEY TO CONFIRM]`, routing to `title-survey-objection-tracker`. Never confirm perfection or priority.
-12. **Route insurance and casualty/condemnation.** Flag the loan's insurance requirements and route them to `insurance-requirements-contract-review`; record casualty and condemnation provisions (application of proceeds, restoration conditions) as written.
-13. **Map default and remedies.** Record events of default, notice and cure provisions (dates `[deadline verification required]`), and the remedies (acceleration, foreclosure, receiver, assignment enforcement) as written, noting the interplay between the note, the mortgage, and the guaranties. Flag `[verify jurisdiction]` on remedy availability.
-14. **Check against the term sheet.** Where a term sheet was provided, note where the documents deviate from the agreed terms.
-15. **List attorney verification items and assemble the output**, labeled a draft for attorney review, with the checklist attached.
+4. **Red flags quick scan.** Run a fast first pass against the loan family (Sections 15–18) and the cross-cutting sections (19–21) of `skills/real-estate/references/red-flags.md`. Record each red-flag pattern present, or note that none surfaced. This scan orients the deeper review that follows; it does not replace it, confirm lien perfection, priority, or title status, conclude enforceability, or compute any figure or date.
+5. **Map the defined terms.** Extract the defined terms that set the deal's reach — Loan, Obligations, Indebtedness, Property, Permitted Transfers, Permitted Liens, Event of Default, Guaranteed Obligations — and note where they are defined. Flag circular or ambiguous definitions.
+6. **Record the economic terms verbatim.** Capture, as written and never computed: principal, interest rate and default rate, payment terms, maturity, amortization, prepayment provisions (lockout, yield maintenance, defeasance, exit fee), and any holdbacks or earn-out/advance mechanics. Each figure or formula is quoted; every date `[deadline verification required]`.
+7. **Map the recourse structure.** Record whether the loan is recourse, non-recourse, or limited-recourse, and quote the recourse carve-outs ("bad-boy" triggers) verbatim — springing full recourse vs. loss-only carve-outs, and the specific triggering acts (transfers, bankruptcy, waste, fraud, environmental). Flag broad or springing triggers prominently for the client's side. Cross-check the carve-outs, covenants, and transfer restrictions against loan Sections 15–18 of `skills/real-estate/references/red-flags.md`, folding any pattern found into the issue list. Never conclude enforceability.
+8. **Inventory the guaranties.** For each guaranty (payment, carry/carve-out, completion), record the guarantor, the guaranteed obligations, the triggers, any caps or burn-downs, and waivers of guarantor defenses — quoted. Flag guaranties whose scope exceeds the carve-outs they are meant to backstop.
+9. **Record the covenants as drafted.** Capture financial covenants (DSCR, LTV, net-worth, liquidity), reporting covenants, and operating covenants — as written, never tested against any number. Note single-purpose-entity and separateness covenants where present.
+10. **Map transfer and due-on-sale restrictions.** Record restrictions on transfer, change of control, secondary financing, and lease-related actions, and any permitted-transfer and assumption provisions — quoted, with the consent standards flagged.
+11. **Record cash-management and reserve provisions.** Capture lockbox/cash-management triggers, sweep conditions, and required reserves/escrows (tax, insurance, replacement, TI/LC) as written, with funding dates `[deadline verification required]`.
+12. **Flag the security, perfection, and title questions.** Note the collateral the mortgage/deed of trust and assignment of leases and rents purport to encumber, and flag perfection, priority, and title-status questions `[ATTORNEY TO CONFIRM]`, routing to `title-survey-objection-tracker`. Never confirm perfection or priority.
+13. **Route insurance and casualty/condemnation.** Flag the loan's insurance requirements and route them to `insurance-requirements-contract-review`; record casualty and condemnation provisions (application of proceeds, restoration conditions) as written.
+14. **Map default and remedies.** Record events of default, notice and cure provisions (dates `[deadline verification required]`), and the remedies (acceleration, foreclosure, receiver, assignment enforcement) as written, noting the interplay between the note, the mortgage, and the guaranties. Flag `[verify jurisdiction]` on remedy availability.
+15. **Check against the term sheet.** Where a term sheet was provided, note where the documents deviate from the agreed terms.
+16. **List attorney verification items and assemble the output**, labeled a draft for attorney review, with the checklist attached.
 
 ## Output Format
 
@@ -101,19 +104,20 @@ Deliver the following, in order, labeled `DRAFT — For Attorney Review — Not 
 1. **Summary** — one paragraph: the facility, the client perspective, the property, and the top issues — with the explicit statement that no title, perfection, priority, or enforceability conclusion is drawn and no figure computed.
 2. **Gates** — client perspective, property type, transaction context, governing law/jurisdiction (`[verify jurisdiction]`), relevant date.
 3. **Document Inventory** — present, missing, and controlling-on-conflict.
-4. **Defined-Terms Map** — the key definitions and any ambiguity flags.
-5. **Economic Terms** — quoted verbatim; no computed figures; dates `[deadline verification required]`.
-6. **Recourse Structure and Carve-Outs** — quoted triggers, with broad/springing triggers flagged.
-7. **Guaranty Inventory** — per guaranty: guarantor, obligations, triggers, caps, waivers.
-8. **Covenants** — financial, reporting, operating, and SPE/separateness, as drafted.
-9. **Transfer and Due-on-Sale Restrictions** — quoted, with consent standards flagged.
-10. **Cash Management and Reserves** — triggers and reserves, dates `[deadline verification required]`.
-11. **Security, Perfection, and Title Flags** — `[ATTORNEY TO CONFIRM]`, routed to `title-survey-objection-tracker`.
-12. **Insurance / Casualty / Condemnation** — requirements routed to `insurance-requirements-contract-review`; casualty/condemnation as written.
-13. **Default and Remedies** — events of default, cure provisions, remedies, cross-document interplay, `[verify jurisdiction]`.
-14. **Term-Sheet Deviations** — where the documents differ from the agreed terms.
-15. **Attorney Verification Items** — every placeholder consolidated.
-16. **Assumptions** — every assumption made, listed explicitly.
+4. **Red Flags Quick Scan** — each red-flag pattern from the loan family (Sections 15–18) and cross-cutting sections (19–21) of `skills/real-estate/references/red-flags.md` found in the package, or a note that none surfaced. No item is treated as a lien-perfection, priority, title, or enforceability conclusion, and no figure or date is computed.
+5. **Defined-Terms Map** — the key definitions and any ambiguity flags.
+6. **Economic Terms** — quoted verbatim; no computed figures; dates `[deadline verification required]`.
+7. **Recourse Structure and Carve-Outs** — quoted triggers, with broad/springing triggers flagged.
+8. **Guaranty Inventory** — per guaranty: guarantor, obligations, triggers, caps, waivers.
+9. **Covenants** — financial, reporting, operating, and SPE/separateness, as drafted.
+10. **Transfer and Due-on-Sale Restrictions** — quoted, with consent standards flagged.
+11. **Cash Management and Reserves** — triggers and reserves, dates `[deadline verification required]`.
+12. **Security, Perfection, and Title Flags** — `[ATTORNEY TO CONFIRM]`, routed to `title-survey-objection-tracker`.
+13. **Insurance / Casualty / Condemnation** — requirements routed to `insurance-requirements-contract-review`; casualty/condemnation as written.
+14. **Default and Remedies** — events of default, cure provisions, remedies, cross-document interplay, `[verify jurisdiction]`.
+15. **Term-Sheet Deviations** — where the documents differ from the agreed terms.
+16. **Attorney Verification Items** — every placeholder consolidated.
+17. **Assumptions** — every assumption made, listed explicitly.
 
 Use `[CONFIRM: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and `[deadline verification required]` throughout. Do not fill gaps with invented content.
 
@@ -124,6 +128,7 @@ Use `[CONFIRM: ...]`, `[ATTORNEY TO CONFIRM: ...]`, `[verify jurisdiction]`, and
 - [ ] Governing law and jurisdiction have been confirmed for each document. `[verify jurisdiction]`
 - [ ] Every economic term matches the term sheet/commitment, and no figure in this draft was computed. `[deadline verification required]`
 - [ ] The recourse structure and every carve-out ("bad-boy") trigger have been reviewed for scope and, where relevant, enforceability. `[verify jurisdiction]`
+- [ ] The Red Flags Quick Scan against `skills/real-estate/references/red-flags.md` (loan Sections 15–18, cross-cutting 19–21) has been reviewed; every pattern it surfaced has been assessed, no scan item was treated as a lien-perfection, priority, title, or enforceability conclusion, and no figure or date was computed from it.
 - [ ] Each guaranty's scope, triggers, caps, and defense waivers have been reviewed and reconciled with the recourse structure.
 - [ ] Financial, reporting, operating, and SPE/separateness covenants have been assessed against the borrower's actual circumstances.
 - [ ] Transfer, change-of-control, secondary-financing, and assumption provisions have been reviewed.

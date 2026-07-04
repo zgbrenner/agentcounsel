@@ -128,6 +128,16 @@ Also out of scope (this skill does not): give a final answer, a legal opinion, o
 
 ## Workflow
 
+This skill draws on the shared real-estate red-flag catalog in
+`skills/real-estate/references/red-flags.md`. For a PSA, scan its
+**purchase-and-sale family (Sections 9–14)** plus the cross-cutting sections
+(**19** title/lien priority, **20** insurance, **21** jurisdiction-specific
+property law); where the PSA interacts with financing or the review is from the
+lender's side, also scan the loan family (Sections 15–18) and route deep loan
+analysis to `loan-document-review`. Consult it at the steps noted below. The
+catalog never confirms title, marketability, or lien priority and never
+computes a figure or a date.
+
 1. **Confirm inputs.** Verify you have the full PSA text, the review
    perspective (buyer, seller, or lender), the property type, the transaction
    posture, and the jurisdiction. Note which amendments, addenda, exhibits,
@@ -147,10 +157,22 @@ Also out of scope (this skill does not): give a final answer, a legal opinion, o
    major section of the PSA and confirm which standard categories are present
    and which are absent. A missing standard provision is itself an issue.
 
-4. **Review clause by clause across the PSA categories.** For each category
+4. **Red flags quick scan.** Run a fast first pass against the
+   purchase-and-sale family (Sections 9–14) and the cross-cutting sections
+   (19–21) of `skills/real-estate/references/red-flags.md` — and the loan
+   family (Sections 15–18) where the PSA interacts with financing or the review
+   is from the lender's side. Record each red-flag pattern present, or note
+   that none surfaced in the scan. This scan orients the deeper clause-by-clause
+   review; it does not replace it, confirm title or lien priority, or compute
+   any figure or date.
+
+5. **Review clause by clause across the PSA categories.** For each category
    below, summarize what the agreement says in plain language, identify the
-   risk to the reviewing party from the stated perspective, and note what
-   direction of change — if any — is warranted:
+   risk to the reviewing party from the stated perspective, cross-check the
+   category against the corresponding entries in
+   `skills/real-estate/references/red-flags.md` (folding any pattern found into
+   the issue and keeping every title or priority point `[ATTORNEY TO
+   CONFIRM]`), and note what direction of change — if any — is warranted:
    - **Purchase price and deposit** — the price, how it is allocated, the
      earnest-money deposit amount, when it is paid, and when it becomes
      non-refundable or "hard."
@@ -193,33 +215,33 @@ Also out of scope (this skill does not): give a final answer, a legal opinion, o
    - **Unusual, one-sided, or non-standard clauses** — anything that departs
      from a balanced allocation for the reviewing party.
 
-5. **Assess missing protections.** Note standard PSA protections that are
+6. **Assess missing protections.** Note standard PSA protections that are
    absent from the agreement and assess whether their absence is a material
    risk to the reviewing party.
 
-6. **Build the risk matrix.** For each PSA category reviewed, record the issue,
+7. **Build the risk matrix.** For each PSA category reviewed, record the issue,
    the source clause, the risk to the reviewing party, a severity rating (High
    / Medium / Low), and a suggested direction of change. Do not collapse
    distinct issues within a category into one row.
 
-7. **Build the key-dates table.** List every date-driven obligation or right
+8. **Build the key-dates table.** List every date-driven obligation or right
    the agreement states — the effective date, the diligence-period expiry, the
    financing-contingency date, the closing date, notice windows, and survival
    periods. Record each date only as the document states it and flag each
    `[deadline verification required]`. Do not compute or confirm any date.
 
-8. **Draft the prioritized issue list.** Rank every identified issue High /
+9. **Draft the prioritized issue list.** Rank every identified issue High /
    Medium / Low for the reviewing party based on likelihood and impact. For
    each High and Medium item, state the issue, why it matters from the stated
    perspective, and a suggested direction of change — the direction, not final
    clause language.
 
-9. **List open items for attorney verification.** Collect every `[CONFIRM:
+10. **List open items for attorney verification.** Collect every `[CONFIRM:
    ...]` placeholder, every unverified assumption, every missing or
    referenced-but-not-provided document, and every issue that requires legal
    judgment — including all jurisdiction-specific points and every date.
 
-10. **Assemble the output** and label it clearly as a draft for attorney
+11. **Assemble the output** and label it clearly as a draft for attorney
     review.
 
 ## Output Format
@@ -234,25 +256,31 @@ Deliver, in order:
    references but that was not provided.
 3. **Structural Map** — the PSA sections present and the standard categories
    absent.
-4. **Clause-by-Clause Issue List** — for each PSA category, a plain-language
+4. **Red Flags Quick Scan** — each red-flag pattern from the purchase-and-sale
+   family (Sections 9–14), the cross-cutting sections (19–21), and — where
+   financing is involved — the loan family (Sections 15–18) of
+   `skills/real-estate/references/red-flags.md` found in the agreement, or a
+   note that none surfaced in the scan. No item is treated as a title,
+   priority, or enforceability conclusion, and no figure or date is computed.
+5. **Clause-by-Clause Issue List** — for each PSA category, a plain-language
    summary of what the agreement says and the issue or issues it raises for the
    reviewing party, with a source citation (section / clause / page) for each.
-5. **Risk Matrix** — a table with columns: `Category | Issue | Source clause |
+6. **Risk Matrix** — a table with columns: `Category | Issue | Source clause |
    Risk to [perspective] | Severity (High / Med / Low) | Suggested direction`.
    Every row has a source citation; the suggested direction is a direction of
    change, not drafted language.
-6. **Key Dates** — a table with columns: `Event | Date as stated | Source |
+7. **Key Dates** — a table with columns: `Event | Date as stated | Source |
    Note`, with every date flagged `[deadline verification required]`. No date
    is computed or confirmed.
-7. **Prioritized Issue List** — issues ranked High / Medium / Low for the
+8. **Prioritized Issue List** — issues ranked High / Medium / Low for the
    reviewing party. For each High and Medium item: the issue, why it matters
    from the stated perspective, and a suggested direction of change.
-8. **Missing Provisions** — standard PSA protections absent from the agreement,
+9. **Missing Provisions** — standard PSA protections absent from the agreement,
    with an assessment of materiality.
-9. **Open Items for Attorney Verification** — a checkbox list of every
-   `[CONFIRM: ...]` placeholder, every unverified assumption, every missing
-   document, and every jurisdiction-specific or date-related point.
-10. **Assumptions** — an explicit list of every assumption made about facts,
+10. **Open Items for Attorney Verification** — a checkbox list of every
+    `[CONFIRM: ...]` placeholder, every unverified assumption, every missing
+    document, and every jurisdiction-specific or date-related point.
+11. **Assumptions** — an explicit list of every assumption made about facts,
     posture, or context.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or value is unverified or
@@ -269,6 +297,11 @@ ambiguous. Do not fill a gap with an invented term.
       financing, local forms — has been independently assessed.
 - [ ] Every issue in the risk matrix has been spot-checked against the cited
       section or clause in the agreement.
+- [ ] The Red Flags Quick Scan against `skills/real-estate/references/red-flags.md`
+      has been reviewed; every pattern it surfaced has been assessed for this
+      transaction, every title or priority point remains `[ATTORNEY TO CONFIRM]`
+      with the title company, and no scan item was treated as a computed figure
+      or date.
 - [ ] Every key date has been independently verified; no date — including the
       diligence-period expiry, the financing-contingency date, and the closing
       date — was computed or confirmed by the agent.
