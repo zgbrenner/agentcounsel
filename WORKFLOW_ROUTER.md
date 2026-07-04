@@ -87,6 +87,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 |---|---|
 | "Draft minutes for this board meeting" | `skills/corporate/board-minutes/SKILL.md` |
 | "Draft a board written consent" / "action by written consent" | `skills/corporate/written-consent/SKILL.md` |
+| "Draft minutes for this shareholder / member meeting" / "annual meeting minutes" | `skills/corporate/shareholder-meeting-minutes/SKILL.md` |
 | "Build a closing checklist for this deal" | `skills/corporate/closing-checklist/SKILL.md` |
 | "Pull the issues out of these diligence documents" | `skills/corporate/diligence-issue-extraction/SKILL.md` |
 | "Build the material contracts schedule" | `skills/corporate/material-contract-schedule/SKILL.md` |
@@ -105,6 +106,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Build a closing checklist for this real estate deal" | `skills/real-estate/closing-deliverables-tracker/SKILL.md` |
 | "Review this estoppel certificate or SNDA" | `skills/real-estate/estoppel-snda-review/SKILL.md` |
 | "Spot the zoning and use-restriction issues" | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` |
+| "Review these loan documents" / "review the mortgage / note / guaranty" | `skills/real-estate/loan-document-review/SKILL.md` |
 
 ### Mergers and acquisitions
 
@@ -116,6 +118,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Review this purchase agreement" / "issues in this merger, stock, or asset purchase agreement" | `skills/m-and-a/purchase-agreement-issue-list/SKILL.md` |
 | "Compare the reps against the disclosure schedules" | `skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md` |
 | "Review the indemnity and escrow terms" | `skills/m-and-a/indemnity-escrow-risk-review/SKILL.md` |
+| "Review the R&W insurance policy / quote against the deal" | `skills/m-and-a/rw-insurance-review/SKILL.md` |
 | "Build the M&A closing checklist" | `skills/m-and-a/closing-deliverables-tracker/SKILL.md` |
 | "What third-party consents does this deal need?" | `skills/m-and-a/third-party-consents-assignment-review/SKILL.md` |
 | "Track the post-closing obligations" | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` |
@@ -148,6 +151,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Prepare for a deposition" / "build a deposition outline" | `skills/litigation/deposition-prep/SKILL.md` |
 | "Issue a litigation hold" / "preserve documents for a matter" | `skills/litigation/legal-hold/SKILL.md` |
 | "Review our privilege log" | `skills/litigation/privilege-log-review/SKILL.md` |
+| "Organize our responses to these discovery requests / interrogatories / RFAs" | `skills/litigation/discovery-response-workflow/SKILL.md` |
 | "Build a claim chart" / "map claim elements to the evidence" | `skills/litigation/claim-chart/SKILL.md` |
 | "Draft a section of a brief" | `skills/litigation/brief-section-drafter/SKILL.md` |
 | "Research this legal question and write a memo" | `skills/legal-research/legal-research-memo/SKILL.md` |
@@ -155,6 +159,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Brief this case" / "give me a structured brief of this opinion" | `skills/legal-research/case-brief/SKILL.md` |
 | "Synthesize a rule across these cases" / "what's the rule across this set of authorities" | `skills/legal-research/authority-synthesis/SKILL.md` |
 | "Trace the regulatory history of this CFR section" / "what did this regulation say on this date" | `skills/legal-research/regulatory-history-tracer/SKILL.md` |
+| "Is this case still good law?" / "check these authorities for negative treatment" | `skills/legal-research/negative-treatment-check/SKILL.md` |
 
 ### Employment
 
@@ -167,6 +172,8 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Run an internal investigation" / "investigate this complaint" | `skills/employment/internal-investigation/SKILL.md` |
 | "Employee is on (or returning from) protected leave" / "medical or family leave situation" | `skills/employment/protected-leave-review/SKILL.md` |
 | "Review this severance / separation agreement" | `skills/employment/severance-review/SKILL.md` |
+| "We're planning a layoff / reduction in force" / "group termination" | `skills/employment/reduction-in-force-review/SKILL.md` |
+| "Review these non-compete / non-solicit covenants" / "can this new hire's prior covenants be a problem?" | `skills/employment/restrictive-covenant-review/SKILL.md` |
 | "Review our employee handbook / this workplace policy" | `skills/employment/employee-policy-review/SKILL.md` |
 | "Review our internal employee AI-use policy" | `skills/ai-governance/employee-ai-policy/SKILL.md` |
 
@@ -200,6 +207,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Summarize this new rule / regulation and its impact" | `skills/regulatory/rule-change-summary/SKILL.md` |
 | "Map these requirements against our controls" | `skills/regulatory/compliance-gap-matrix/SKILL.md` |
 | "Track our compliance with this framework over time" / "audit prep" | `skills/regulatory/compliance-program-tracker/SKILL.md` |
+| "We got an exam letter / information request from a regulator" / "respond to this supervisory inquiry" | `skills/regulatory/regulatory-exam-response/SKILL.md` |
 
 ### Intellectual property
 
@@ -236,6 +244,7 @@ The Securities / Capital Markets skills produce **draft work product for a quali
 | "Compare these SEC filing drafts for consistency" | `skills/securities-capital-markets/sec-filing-consistency-check/SKILL.md` |
 | "Track Form D and state notice filings" | `skills/securities-capital-markets/form-d-blue-sky-tracker/SKILL.md` |
 | "Review this investor rights or governance agreement" | `skills/securities-capital-markets/investor-rights-agreement-review/SKILL.md` |
+| "Review this equity incentive plan / stock-option / RSU award" | `skills/securities-capital-markets/equity-incentive-plan-review/SKILL.md` |
 | "Review this insider-trading policy" | `skills/securities-capital-markets/insider-trading-policy-review/SKILL.md` |
 | "Triage Section 16 or 13D/G beneficial ownership facts" | `skills/securities-capital-markets/section-16-beneficial-ownership-triage/SKILL.md` |
 | "Build a capital-markets closing checklist" | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` |

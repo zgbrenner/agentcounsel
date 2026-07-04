@@ -15,6 +15,7 @@ outputs:
 related_skills:
   - skills/employment/employee-policy-review/SKILL.md
   - skills/employment/worker-classification/SKILL.md
+  - skills/employment/restrictive-covenant-review/SKILL.md
 tags:
   - employment
   - hiring

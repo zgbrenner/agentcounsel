@@ -16,6 +16,8 @@ outputs:
 related_skills:
   - skills/contracts/contract-risk-review/SKILL.md
   - skills/employment/termination-risk/SKILL.md
+  - skills/employment/reduction-in-force-review/SKILL.md
+  - skills/employment/restrictive-covenant-review/SKILL.md
 tags:
   - employment
   - severance

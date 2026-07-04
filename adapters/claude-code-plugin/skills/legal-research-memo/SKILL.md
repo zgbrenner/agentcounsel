@@ -15,6 +15,7 @@ outputs:
   - "Structured legal research memo using IRAC discipline for attorney review"
 related_skills:
   - skills/litigation/brief-section-drafter/SKILL.md
+  - skills/legal-research/negative-treatment-check/SKILL.md
   - skills/legal-methodology/statutory-interpretation/SKILL.md
   - skills/legal-methodology/source-validation/SKILL.md
 tags:

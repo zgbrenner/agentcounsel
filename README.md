@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-198-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-207-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 [![Site](https://github.com/zgbrenner/agentcounsel/actions/workflows/deploy-pages.yml/badge.svg)](https://zgbrenner.github.io/agentcounsel/)
@@ -52,25 +52,25 @@ A worked, step-by-step version of this — with copy-paste prompts for each plat
 
 ## Practice areas
 
-AgentCounsel has **198 skills**: 163 across **20 practice areas**, plus 35 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
+AgentCounsel has **207 skills**: 172 across **20 practice areas**, plus 35 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
 
 | Practice area | Skills | Covers |
 |---|--:|---|
-| Legal Research | 5 | Research planning (roadmap before authority gathering), structured IRAC memos, case briefs, multi-authority rule synthesis, and CFR amendment-history tracing. |
-| Litigation | 9 | Matter intake, chronologies, demand letters, subpoena triage, depositions, legal holds, privilege logs, claim charts, brief drafting. |
+| Legal Research | 6 | Research planning (roadmap before authority gathering), structured IRAC memos, case briefs, multi-authority rule synthesis, negative-treatment (good-law) checks, and CFR amendment-history tracing. |
+| Litigation | 10 | Matter intake, chronologies, demand letters, subpoena triage, discovery-response organization, depositions, legal holds, privilege logs, claim charts, brief drafting. |
 | Contracts | 5 | NDAs, commercial contracts, redlines, statements of work, vendor agreement status. |
-| Corporate | 6 | Board minutes, written consents, closing checklists, diligence review, material-contract schedules, entity compliance. |
-| Employment | 8 | Terminations, worker classification, hiring, internal investigations, protected leave, severance, workplace policies. |
+| Corporate | 7 | Board minutes, shareholder-meeting minutes, written consents, closing checklists, diligence review, material-contract schedules, entity compliance. |
+| Employment | 10 | Terminations, reductions in force, worker classification, hiring, restrictive-covenant review, internal investigations, protected leave, severance, workplace policies. |
 | Privacy | 7 | Data processing agreements, impact assessments, data subject requests, policy gaps, breach and incident response, cross-border transfer review, vendor privacy diligence. |
 | Product Legal | 4 | Launch review, marketing claims, terms of service, AI features. |
-| Regulatory | 4 | Enforcement risk, rule-change summaries, compliance gaps, compliance-program tracking. |
+| Regulatory | 5 | Enforcement risk, rule-change summaries, compliance gaps, compliance-program tracking, examination/inquiry response. |
 | AI Governance | 4 | AI use-case intake, vendor terms, model risk, AI policies. |
 | Intellectual Property | 7 | Trademark triage, infringement triage, cease-and-desist response, patent FTO triage, invention intake, DMCA, open-source licensing. |
 | Financial Crime / AML | 5 | KYC onboarding review, sanctions / PEP / adverse-media screening review, transaction-monitoring alert triage, AML program gap review, and EDD file review. |
-| Real Estate | 9 | Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, title and survey objection tracking, diligence and closing checklists, estoppel and SNDA review, zoning issue-spotting. |
-| Mergers & Acquisitions | 10 | LOI and term-sheet review, acquisition diligence and data-room review, purchase-agreement and disclosure-schedule review, indemnity and escrow analysis, third-party consents, and closing, post-closing, and integration tracking. |
+| Real Estate | 10 | Commercial lease abstraction and review, amendment reconciliation, purchase and sale agreement review, loan-document review, title and survey objection tracking, diligence and closing checklists, estoppel and SNDA review, zoning issue-spotting. |
+| Mergers & Acquisitions | 11 | LOI and term-sheet review, acquisition diligence and data-room review, purchase-agreement and disclosure-schedule review, indemnity and escrow analysis, R&W-insurance review, third-party consents, and closing, post-closing, and integration tracking. |
 | Antitrust / Competition | 10 | Antitrust risk intake, competitor-collaboration and information-sharing review, pricing-algorithm and distribution-restraint review, merger issue-spotting, gun-jumping checklists, and compliance-policy review. |
-| Securities / Capital Markets | 12 | Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights and insider-trading review, beneficial-ownership triage, and capital-markets closings. |
+| Securities / Capital Markets | 13 | Private and public offerings, exemption issue-spotting, offering-document and risk-factor review, SEC filing consistency, Form D and blue-sky tracking, investor-rights, equity-incentive-plan, and insider-trading review, beneficial-ownership triage, and capital-markets closings. |
 | Tax | 10 | Tax issue intake, entity tax-classification facts, transaction tax diligence, sales/use tax nexus triage, employment-tax worker-classification intake, contract tax-provision and covenant/indemnity review, tax document organization, international tax issue-spotting, and crypto/digital-asset tax intake. |
 | Bankruptcy / Restructuring | 12 | Bankruptcy and creditor-claim intake, proof-of-claim checklists, automatic-stay and preference issue-spotting, executory-contract assumption/rejection review, distressed-M&A diligence and asset-sale checklists, restructuring term-sheet review, plan and disclosure-statement issue-spotting, DIP financing issue-spotting, and deadline-tracker intake. |
 | Insurance | 12 | Insurance policy summaries, coverage issue-spotting, claim chronologies, reservation of rights and tender review, coverage-position outlines, bad-faith risk triage, certificate of insurance and contract insurance-requirements review, subrogation/recovery tracking, and renewal/placement diligence checklists. |

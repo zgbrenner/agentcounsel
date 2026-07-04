@@ -42,22 +42,22 @@ met.
 
 | Area | Tier | Maturity | Practice profile | Cold-start interview | Eval coverage |
 |---|---|---|---|---|---|
-| `legal-research` | 1 — Core | stable | No | No | 5 of 5 skills |
-| `litigation` | 1 — Core | stable | Yes | Yes | 9 of 9 skills |
+| `legal-research` | 1 — Core | stable | No | No | 6 of 6 skills |
+| `litigation` | 1 — Core | stable | Yes | Yes | 10 of 10 skills |
 | `contracts` | 1 — Core | stable | Yes | Yes | 5 of 5 skills |
-| `corporate` | 1 — Core | stable | Yes | Yes | 6 of 6 skills |
-| `employment` | 1 — Core | stable | Yes | Yes | 8 of 8 skills |
+| `corporate` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
+| `employment` | 1 — Core | stable | Yes | Yes | 10 of 10 skills |
 | `ip` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
 | `privacy` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
 | `product-legal` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
-| `regulatory` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
+| `regulatory` | 2 — Advanced / specialized | stable | Yes | Yes | 5 of 5 skills |
 | `ai-governance` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
 | `financial-crime` | 2 — Advanced / specialized | stable | Yes | Yes | 5 of 5 skills |
-| `real-estate` | 2 — Advanced / specialized | experimental | Yes | Yes | 9 of 9 skills |
-| `m-and-a` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
+| `real-estate` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
+| `m-and-a` | 2 — Advanced / specialized | experimental | Yes | Yes | 11 of 11 skills |
 | `family-law` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
 | `antitrust-competition` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
-| `securities-capital-markets` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
+| `securities-capital-markets` | 2 — Advanced / specialized | experimental | Yes | Yes | 13 of 13 skills |
 | `tax` | 2 — Advanced / specialized | experimental | Yes | Yes | 10 of 10 skills |
 | `bankruptcy-restructuring` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
 | `insurance` | 2 — Advanced / specialized | experimental | Yes | Yes | 12 of 12 skills |
@@ -94,7 +94,7 @@ The columns above record the remaining gaps:
 - **Practice profiles** are missing for `legal-research`.
 - **Cold-start interviews** are missing for `legal-research`; each of the other
   19 practice areas has one under `skills/setup/`.
-- **Evals** now cover every skill — all 198 skills have a skill eval file
+- **Evals** now cover every skill — all 207 skills have a skill eval file
   (`reports/eval-coverage.md` reports 0 skills without coverage); the
   pre-release baseline of 8 covered skills has been fully closed.
 

@@ -162,15 +162,20 @@ starter evals, and index/router/commands entries.
    per-topic steps) and `tax-covenants-indemnities-review` (132 → 284 lines,
    14 per-topic steps). *Remaining:* apply the same treatment to the other
    bankruptcy and tax skills with single-bullet analyses.
-4. **"Explicitly carved-out sibling" skills.** Gaps that existing skills
-   already point at: shareholder/member-meeting minutes (corporate),
-   RIF/WARN + OWBPA group termination and standalone restrictive-covenant
-   review (employment), regulatory examination/inquiry response (regulatory),
-   citator / negative-treatment check (legal-research), discovery
-   request/response and motion-opposition (litigation).
-5. **Round out the newer areas:** real-estate loan/financing-document review
-   (the clearest true coverage gap in the newer areas),
-   securities equity-incentive-plan review, m-and-a R&W-insurance review.
+4. **"Explicitly carved-out sibling" skills.** *Done (third pass):*
+   `corporate/shareholder-meeting-minutes`,
+   `employment/reduction-in-force-review`,
+   `employment/restrictive-covenant-review`,
+   `regulatory/regulatory-exam-response`,
+   `legal-research/negative-treatment-check`, and
+   `litigation/discovery-response-workflow` are built and integrated.
+   *Remaining:* a motion-opposition counterpart to `brief-section-drafter`
+   (litigation).
+5. **Round out the newer areas:** *Done (third pass):*
+   `real-estate/loan-document-review`,
+   `securities-capital-markets/equity-incentive-plan-review`, and
+   `m-and-a/rw-insurance-review` are built and integrated. *Remaining:*
+   consider a transition-services-agreement review (m-and-a).
 6. **Differentiate the family-law review skills** with a shared
    `family-law/references/` issue catalog; add `real-estate/references/`.
 7. **More connectors:** PACER/RECAP (litigation, bankruptcy), USPTO
