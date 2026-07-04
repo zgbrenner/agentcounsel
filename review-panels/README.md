@@ -41,7 +41,7 @@ A typical use: a skill or matter pack produces a draft; the draft is stored in a
 matter workspace; a review panel is run over it; the consolidated findings go to
 the supervising attorney through the attorney-review gate.
 
-## The six panels
+## The eight panels
 
 | Panel | When to use |
 |---|---|
@@ -51,6 +51,8 @@ the supervising attorney through the attorney-review gate.
 | `citation-source-red-team-panel.md` | Any draft that relies on cited authority needs a focused source and citation red-team before reliance. |
 | `external-communication-review-panel.md` | A draft leaving the firm (client letter, counterparty email, public statement) needs a client-position, privilege, and tone review. |
 | `deal-diligence-review-panel.md` | A diligence work product (issue list, gap matrix, summary) needs a completeness, position, and risk review before it informs a deal decision. |
+| `individual-client-capacity-panel.md` | An individual-client draft (family-law or trusts-and-estates) needs a capacity, safety, confidentiality, and plain-language review before it reaches the client. |
+| `deadline-critical-bankruptcy-panel.md` | A deadline-sensitive bankruptcy or restructuring draft needs a deadline-discipline, automatic-stay, and no-conclusions review before it informs a filing. |
 
 ## How to use a review panel
 

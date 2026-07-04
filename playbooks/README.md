@@ -50,6 +50,10 @@ an attorney reviews it.
 | `privacy-dpa-review.md` | A data processing agreement or addendum needs review against the client's data-protection positions. |
 | `corporate-governance-review.md` | A proposed board or shareholder action needs draft consents/minutes and a governance-authority check. |
 | `securities-disclosure-review.md` | An offering document, periodic report, or risk-factor set needs a disclosure-consistency and completeness review. |
+| `ip-brand-clearance-and-enforcement.md` | A new brand or mark needs a clearance read, or an infringement / cease-and-desist situation needs a triage and draft response. |
+| `ai-governance-use-case-review.md` | A proposed AI/ML use case needs intake, model-risk triage, and routing through governance review. |
+| `product-launch-legal-review.md` | A product, feature, or campaign approaching launch needs a pre-launch review of launch issues, marketing claims, and terms of service. |
+| `aml-customer-lifecycle-review.md` | A customer needs an AML/BSA lifecycle review — KYC onboarding, sanctions screening, monitoring-alert triage, or enhanced due diligence. |
 
 ## Safety posture
 
