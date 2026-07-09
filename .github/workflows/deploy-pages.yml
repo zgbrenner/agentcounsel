@@ -44,6 +44,9 @@ jobs:
       - name: Build static site
         run: node site/generate.mjs
 
+      - name: Index search with Pagefind
+        run: npx pagefind@1 --site site/public
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

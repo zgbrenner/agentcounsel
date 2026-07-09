@@ -33,13 +33,27 @@ Everything is written to `site/public/`:
 - `llms.txt` and `llms-full.txt` — machine-readable summaries for LLM agents.
 - `style.css` and `app.js` — one stylesheet and a small copy-to-clipboard script.
 
+## Search
+
+The home page and the skill index embed a [Pagefind](https://pagefind.app)
+(MIT) search box (`<div id="search">`, `data-pagefind-body` scopes indexing to
+each page's `<main>` so nav/footer boilerplate doesn't pollute results).
+Pagefind's own assets (`pagefind/pagefind-ui.{css,js}`) are **not** produced by
+`generate.mjs` — the deploy workflow indexes the built site with
+`npx pagefind@1 --site site/public` after the `node site/generate.mjs` step.
+In a local `npm run build` preview, those assets don't exist yet, so the
+search box shows a muted fallback message instead of erroring; it only comes
+alive on the deployed Pages site.
+
 ## Deploy
 
 The site is built and deployed automatically by GitHub Actions on every
-push to `main` — see `.github/workflows/deploy-pages.yml`. The generated
-`site/public/` directory is gitignored; pull requests verify that the
-generator still runs cleanly but do not deploy. `llms.txt` is written at
-the root of the output so it is served at `/llms.txt`.
+push to `main` — see `.github/workflows/deploy-pages.yml`, which builds the
+site, then runs Pagefind over `site/public` to generate the search index
+before uploading the Pages artifact. The generated `site/public/` directory
+is gitignored; pull requests verify that the generator still runs cleanly but
+do not deploy. `llms.txt` is written at the root of the output so it is
+served at `/llms.txt`.
 
 ## Keeping it current
 
