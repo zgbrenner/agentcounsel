@@ -97,7 +97,9 @@ Also out of scope (this skill does not): value or appraise an asset (it records 
    trust status, and the review purpose.
 2. Build a source register and cite every asset and liability.
 3. Tabulate each asset and liability with owner/title as provided, the source,
-   and any user-supplied value (marked as user-stated).
+   and any user-supplied value (marked as user-stated), consulting
+   `skills/trusts-estates/references/issue-catalog.md` (Section 5) for the
+   recurring patterns and questions to surface.
 4. Record beneficiary or titling notes where provided.
 5. Flag missing facts and ambiguous or unverified assets.
 6. Draft attorney verification items.

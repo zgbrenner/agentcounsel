@@ -77,7 +77,7 @@ Also out of scope (this skill does not): recommend or compare carriers; bind, pl
 
 1. Confirm the gates: the renewal/placement context, the expiring program if any, the lines in scope, the user's role, and the jurisdictions. Record any missing gate as `not provided`.
 2. Build a source register for the materials provided.
-3. Assemble the diligence checklist by workstream, tailoring it to the lines in scope:
+3. Assemble the diligence checklist by workstream, tailoring it to the lines in scope, cross-checking against `skills/insurance/references/red-flags.md` (Section 9) and folding any pattern found into the checklist:
    - Expiring program — policies, limits, deductibles/SIRs, endorsements, and exclusions to review.
    - Claims history — open and closed claims, loss runs, and open-claim implications for renewal.
    - Material changes — changes in operations, revenue, headcount, assets, or structure since the last term.

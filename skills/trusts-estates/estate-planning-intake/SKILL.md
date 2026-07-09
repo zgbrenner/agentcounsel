@@ -111,7 +111,8 @@ Also out of scope (this skill does not): provide estate-planning, tax, or probat
 3. Capture the family, asset, liability, fiduciary, incapacity, charitable, and
    tax facts, separating facts from uncertainties.
 4. Map estate-planning issues as questions for the attorney — never as
-   recommendations.
+   recommendations — drawing on `skills/trusts-estates/references/issue-catalog.md`
+   across its full range of issue areas.
 5. List missing facts and produce a targeted document request list.
 6. Draft attorney verification questions and assemble the working paper.
 

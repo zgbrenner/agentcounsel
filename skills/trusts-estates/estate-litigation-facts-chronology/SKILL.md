@@ -95,7 +95,9 @@ Also out of scope (this skill does not): assess the merits of any claim or defen
    dispute type.
 2. Build a source register and cite every event to a document or record.
 3. Build the chronology — date, event, actor, source — using only
-   source-supported events; echo dates as written.
+   source-supported events; echo dates as written; consult
+   `skills/trusts-estates/references/issue-catalog.md` (Section 8) for the
+   recurring contest and dispute fact patterns to surface.
 4. Note disputed/undisputed status where the user provides it; never resolve a
    disputed fact.
 5. Add a short relevance note per event where helpful, framed neutrally.

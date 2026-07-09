@@ -94,7 +94,9 @@ Also out of scope (this skill does not): prepare filing-ready probate forms, pet
    and the review purpose.
 2. Build a source register for the documents already collected.
 3. Assemble the probate document checklist across the relevant categories,
-   recording a status and source for each item.
+   recording a status and source for each item, consulting
+   `skills/trusts-estates/references/issue-catalog.md` (Section 7) for the
+   recurring task categories and questions to surface.
 4. List the documents that are still missing and assign a responsible party.
 5. Echo any user-supplied date as `[deadline verification required]`; compute
    nothing.

@@ -101,9 +101,11 @@ Also out of scope (this skill does not): conclude whether a document is valid, p
 2. Build a source register and locate each provision by article or section.
 3. Extract and summarize the parties, fiduciaries, beneficiaries, dispositive
    provisions, powers, conditions, and amendment/revocation language into the
-   key terms table.
+   key terms table, consulting `skills/trusts-estates/references/issue-catalog.md`
+   (Section 1) for the recurring patterns and questions to surface.
 4. Record execution, notary, and witness facts exactly as provided — without
-   concluding proper execution.
+   concluding proper execution — consulting the same catalog's Section 2 for
+   the formality flags to record.
 5. Flag ambiguous or conflicting provisions; do not resolve them.
 6. List missing related documents and draft the verification checklist.
 

@@ -79,7 +79,7 @@ Also out of scope (this skill does not): decide whether a claim is covered; conc
 1. Confirm the gates: the policy, the claim facts, the policy type, the user's role, the claim stage, and jurisdiction. Record any missing gate as `not provided`.
 2. Build a source register for the policy provisions and the claim documents.
 3. Assemble the **facts** section — the material facts as provided, each source-cited; flag disputed or missing facts.
-4. Assemble the **policy provisions** section — declarations, insuring agreements, definitions, exclusions, endorsements, and conditions relevant to the claim, each source-cited.
+4. Assemble the **policy provisions** section — declarations, insuring agreements, definitions, exclusions, endorsements, and conditions relevant to the claim, each source-cited. Cross-check against `skills/insurance/references/red-flags.md` (Sections 1–2, 6) and fold any pattern found into the open-issues list.
 5. List **potential coverage grants** — the insuring-agreement theories under which the claim could fall, framed as candidates for the attorney, with the provision and the fact that raises each.
 6. List **potentially applicable exclusions and endorsements** — framed as candidates, never as decided, each with its provision and the fact in play.
 7. List **conditions** — notice, cooperation, and other conditions, and the claim facts bearing on each, as open questions.

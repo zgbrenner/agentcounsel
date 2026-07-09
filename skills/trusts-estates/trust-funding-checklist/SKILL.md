@@ -94,7 +94,9 @@ Also out of scope (this skill does not): prepare deeds, assignments, or transfer
    jurisdiction, and the review purpose.
 2. Build a source register and cite every funding item.
 3. Build the funding checklist across the asset categories, recording for each
-   asset whether funding evidence was provided and what it is.
+   asset whether funding evidence was provided and what it is, consulting
+   `skills/trusts-estates/references/issue-catalog.md` (Section 5.2) for the
+   recurring funding-gap patterns and questions to surface.
 4. Flag assets with missing or ambiguous funding evidence.
 5. Assign a responsible party and a status to each item.
 6. Draft attorney verification questions.

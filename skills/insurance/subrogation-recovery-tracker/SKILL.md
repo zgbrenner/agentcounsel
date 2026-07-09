@@ -80,7 +80,7 @@ Also out of scope (this skill does not): determine whether a subrogation, contri
 5. Extract the **contract and indemnity facts** — contracts between the parties, indemnity and hold-harmless provisions, insurance and waiver-of-subrogation provisions, source-cited.
 6. Extract the **policy subrogation/transfer-of-rights provisions** and any consent, cooperation, or recovery-sharing terms.
 7. Extract the **payments made** if provided — what the insurer or insured has paid, from the ledger, without computing totals beyond what the documents state.
-8. Note **evidence-preservation** facts — physical evidence, the loss site, products, and records — and flag preservation concerns.
+8. Note **evidence-preservation** facts — physical evidence, the loss site, products, and records — and flag preservation concerns. Cross-check against `skills/insurance/references/red-flags.md` (Section 8) and fold any pattern found into the recovery fact map.
 9. Note **notices and litigation status** — recovery notices sent, litigation filed, and the posture, source-cited.
 10. Build the recovery fact map organized by recovery theory; list missing facts and a document request list; echo deadlines for verification; draft attorney verification questions.
 
