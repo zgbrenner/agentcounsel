@@ -1957,7 +1957,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/insurance/references/output-patterns.md"
+        "skills/insurance/references/output-patterns.md",
+        "skills/insurance/references/red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -2025,7 +2026,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/insurance/references/output-patterns.md"
+        "skills/insurance/references/output-patterns.md",
+        "skills/insurance/references/red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -2093,7 +2095,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/insurance/references/output-patterns.md"
+        "skills/insurance/references/output-patterns.md",
+        "skills/insurance/references/red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -2351,7 +2354,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-methodology/references/plain-language-checklist.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -2441,7 +2446,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-methodology/references/plain-language-checklist.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -2531,7 +2538,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-methodology/references/plain-language-checklist.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -3004,6 +3013,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/bankruptcy-restructuring/references/issue-catalog.md",
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -3074,6 +3084,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/bankruptcy-restructuring/references/issue-catalog.md",
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -3144,6 +3155,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/bankruptcy-restructuring/references/issue-catalog.md",
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [

@@ -27,6 +27,7 @@ derived artifact from the canonical files.
 | `scripts/generate_skill_improvement_prompts.py` | Yes (writes reports) | `--check` |
 | `scripts/generate_cold_start_interviews.py` | Yes (writes setup skills) | `--check`, `--list` |
 | `scripts/init_matter_workspace.py` | Yes (writes a new matter under `matters/`) | `--practice-area`, `--jurisdiction`, `--pack`, `--output-dir`, `--force`, `--dry-run`, `--list-templates` |
+| `scripts/build_flashcards.py` | Yes (writes `dist/flashcards/`) | — |
 | `site/generate.mjs` | Yes (writes `site/public/`) | — |
 
 ---
@@ -211,6 +212,31 @@ nothing), `--list-templates` (list the template and known practice areas).
 
 **Common failure modes.** Destination already exists without `--force`; the
 template directory is missing. See `docs/MATTER_WORKSPACES.md`.
+
+---
+
+## scripts/build_flashcards.py
+
+**Purpose.** A "training mode" for a lawyer learning the library's routing —
+not a build step the repository depends on. It reads `metadata/index.json`
+and writes `dist/flashcards/agentcounsel-router-deck.txt`, an Anki-importable
+tab-separated deck with one card per skill: the **Front** is a routing
+question derived from the skill's `description` ("Which skill: review an NDA
+for the receiving party?"), and the **Back** names the skill, its canonical
+path, and its `COMMANDS.md` shorthand where one exists. Studying the deck with
+spaced repetition is a way to internalize `WORKFLOW_ROUTER.md`'s and
+`COMMANDS.md`'s mappings before you need them live in a matter.
+
+**Example.** `python scripts/build_flashcards.py`
+
+**Mutates files?** Yes — writes into the git-ignored `dist/` directory. There
+is no `--check` mode; the output is a personal study aid, not a committed
+artifact.
+
+**Common failure modes.** `metadata/index.json` missing or stale — run
+`scripts/build_skill_index.py` first. A skill with no `COMMANDS.md` entry gets
+a card noting no shorthand exists; that is expected for skills not yet given a
+command.
 
 ---
 

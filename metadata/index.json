@@ -478,7 +478,7 @@
         "review",
         "training"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Antitrust Compliance Policy Review",
       "description": "Use when a company's antitrust compliance policy, competition code-of-conduct section, or training program needs a gap review — after an incident, an acquisition, a regulatory development, or as a periodic refresh — to produce a draft topic-coverage and jurisdiction-coverage matrix, training/reporting and dawn-raid gap assessments, and a drafting-suggestion list for attorney review, without attesting compliance or approving the policy.",
       "practice_area": "antitrust-competition",
@@ -1364,7 +1364,7 @@
         "high",
         "issue-spotting"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Automatic Stay Issue Spotter",
       "description": "Use when issue-spotting automatic stay concerns from user-provided facts into a source-cited stay-risk fact map for attorney review, without concluding whether the stay applies.",
       "practice_area": "bankruptcy-restructuring",
@@ -6554,7 +6554,7 @@
         "ip-demand",
         "triage"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Cease and Desist Response",
       "description": "Use when a client has received a cease-and-desist letter or similar IP demand and needs a structured triage memo — covering the assertion, exposure, response options, and immediate actions — for attorney review before responding.",
       "practice_area": "ip",
@@ -12828,7 +12828,7 @@
         "securities-capital-markets",
         "underwriting"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Capital Markets Closing Checklist",
       "description": "Use when organizing the closing universe for a public or private capital-markets transaction into a draft closing-workstream tracker covering approvals, agreement bring-down, opinions, certificates, comfort, lock-ups, and post-closing filings for attorney review, without approving closing or any closing condition.",
       "practice_area": "securities-capital-markets",
@@ -16423,7 +16423,7 @@
         "review",
         "trusts-estates"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Beneficiary Designation Review",
       "description": "Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review.",
       "practice_area": "trusts-estates",

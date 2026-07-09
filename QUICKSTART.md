@@ -113,7 +113,9 @@ requires no technical setup.
 ## Where to go next
 
 - [`README.md`](README.md) — what AgentCounsel is, who it is for, how it is organized.
+- [`docs/tutorials/practice-matter.md`](docs/tutorials/practice-matter.md) — a guided, fictional first run of a skill end-to-end, if you have not run one yet.
 - [`docs/CHOOSE_YOUR_WORKFLOW.md`](docs/CHOOSE_YOUR_WORKFLOW.md) — choosing among skills, packs, workspaces, playbooks, panels, and quality checks.
 - [`docs/SAFETY_MODEL.md`](docs/SAFETY_MODEL.md) — the safety model and using AgentCounsel with confidential material.
 - [`docs/QUALITY_LAYER.md`](docs/QUALITY_LAYER.md) — the quality checks and when to run them.
+- [`docs/MARKDOWN_TO_WORD.md`](docs/MARKDOWN_TO_WORD.md) — converting a Markdown draft to a Word redline or PDF.
 - [`docs/FAQ.md`](docs/FAQ.md) — common questions.

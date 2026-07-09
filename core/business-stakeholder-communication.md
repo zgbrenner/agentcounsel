@@ -52,3 +52,5 @@ Keep the section short. It is an entry point to the analysis, not a replacement 
 - This mode is **not legal advice** and does not tell the business what it must do.
 - Placeholders (`[CONFIRM: ...]`, `[verify jurisdiction]`, and the rest) are preserved, not smoothed away for readability. A plain-language summary still shows its gaps.
 - The summary is an **addition** to the skill's normal Output Format — never a replacement for it.
+
+See also: `skills/legal-methodology/references/plain-language-checklist.md` for sentence-level plain-language checks to apply to this summary layer only, never to the underlying legal drafting.

@@ -1,0 +1,15 @@
+{
+  "name": "AgentCounsel",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postCreateCommand": "python scripts/check_all.py --quick",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker",
+        "bierner.markdown-mermaid"
+      ]
+    }
+  }
+}
