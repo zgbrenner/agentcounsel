@@ -109,7 +109,9 @@ Also out of scope (this skill does not): conclude whether a plan is confirmable,
 3. Extract classification and treatment into a source-cited treatment table.
 4. Surface issues across voting, releases, exculpation, injunctions, executory
    contracts, claims reconciliation, feasibility facts as provided, liquidation
-   analysis as provided, governance, and equity treatment — as questions.
+   analysis as provided, governance, and equity treatment — as questions —
+   consulting `skills/bankruptcy-restructuring/references/issue-catalog.md`
+   (Section 6) for the recurring patterns and questions to surface.
 5. Flag internal inconsistencies between the plan and the disclosure statement.
 6. List missing facts and draft attorney verification questions.
 

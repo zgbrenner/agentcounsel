@@ -105,6 +105,9 @@ summarize with a verbatim quote of the operative phrase) with a source citation
 to the section, clause, budget line, or page, and **frame a question for
 counsel** — never a conclusion. Where a topic's provisions are absent after a
 full review, record `not found`.
+`skills/bankruptcy-restructuring/references/issue-catalog.md` (Section 5)
+generalizes this topic taxonomy as a scan aid; the step-by-step review below
+remains the authoritative, line-by-line mapping.
 
 1. **Confirm the gates.** Verify the document, the user's party role, the
    lenders, and the collateral. If any is missing, record it as `not provided`

@@ -105,7 +105,9 @@ Also out of scope (this skill does not): prepare a filing-ready proof of claim o
 3. Assemble the preparation checklist — claimant identity, debtor/case detail,
    basis, amount as stated, supporting documents, any secured/priority
    assertion, interest/fees as provided, assignment/transfer, redaction needs,
-   and signature authority.
+   and signature authority — consulting
+   `skills/bankruptcy-restructuring/references/issue-catalog.md` (Section 2.4)
+   for the recurring bar-date and preparation-gap patterns to surface.
 4. Build a supporting-document tracker linking each checklist item to the
    document that evidences it.
 5. Echo any user-supplied bar date as `[deadline verification required]`;

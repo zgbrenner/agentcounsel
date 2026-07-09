@@ -106,7 +106,9 @@ Also out of scope (this skill does not): conclude whether a document or any term
 3. Extract and summarize the key terms into the key terms table, with source
    citations.
 4. Build a role-aware issue list and risk matrix — issue, factual trigger,
-   source, why it matters to the user's side, and an attorney follow-up.
+   source, why it matters to the user's side, and an attorney follow-up —
+   consulting `skills/bankruptcy-restructuring/references/issue-catalog.md`
+   (Section 8) for the recurring patterns and questions to surface.
 5. After a full review, list expected terms that are `not found`; echo every
    milestone date for verification.
 6. List negotiation points (direction only) and draft the verification
