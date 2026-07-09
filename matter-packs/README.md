@@ -44,10 +44,12 @@ matter-packs/
   README.md                       - this file
   antitrust-competition.md        - workflow bundles for the Antitrust / Competition practice area
   bankruptcy-restructuring.md     - workflow bundles for the Bankruptcy / Restructuring practice area
+  corporate.md                    - workflow bundles for the Corporate practice area
   family-law.md                   - workflow bundles for the Family Law practice area
   insurance.md                    - workflow bundles for the Insurance practice area
   litigation.md                   - workflow bundles for the Litigation practice area
   m-and-a.md                      - workflow bundles for the Mergers & Acquisitions practice area
+  privacy.md                      - workflow bundles for the Privacy practice area
   real-estate.md                  - workflow bundles for the Real Estate practice area
   securities-capital-markets.md   - workflow bundles for the Securities / Capital Markets practice area
   tax.md                          - workflow bundles for the Tax practice area

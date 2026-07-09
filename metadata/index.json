@@ -2942,7 +2942,7 @@
         "issue-extraction",
         "m-and-a"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Diligence Issue Extraction",
       "description": "Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review.",
       "practice_area": "corporate",
@@ -3902,7 +3902,7 @@
         "termination",
         "wrongful-termination"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Termination Risk",
       "description": "Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs.",
       "practice_area": "employment",
@@ -5574,7 +5574,7 @@
         "insurance",
         "triage"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Bad Faith Risk Triage",
       "description": "Use when issue-spotting potential claim-handling and bad-faith risk themes from claim file materials into a source-cited risk-theme list for attorney review.",
       "practice_area": "insurance",
@@ -7178,7 +7178,7 @@
         "review-gate",
         "verification"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Attorney Review Gate",
       "description": "Use when running a final quality gate before legal draft work product is sent, filed, relied upon, or delivered for attorney review, producing must-confirm facts, law, citations, client decisions, ethics flags, privilege flags, jurisdiction/deadline flags, and a ready-or-not-ready status.",
       "practice_area": "legal-methodology",
@@ -8561,7 +8561,7 @@
         "negative-treatment",
         "source-validation"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Negative Treatment Check",
       "description": "Use when you need to check whether the authorities cited in a draft or research memo are still good law — organizing a citator-style verification plan for each authority, recording provided citator-report signals as attributed claims, and classifying each authority's verification status, without ever asserting from model memory that a case is good law, overruled, or distinguished.",
       "practice_area": "legal-research",
@@ -10398,7 +10398,7 @@
         "rwi",
         "transaction-insurance"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "R&W Insurance Review",
       "description": "Use when reviewing a representations-and-warranties insurance policy or quote package against the deal documents — inventorying the policy, binder, and exclusions; mapping coverage to the purchase agreement's reps; building an exclusions register; and recording retention, limit, and no-claims-declaration terms — without ever concluding coverage or computing adequacy.",
       "practice_area": "m-and-a",
@@ -15504,7 +15504,7 @@
         "intake",
         "tax"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Crypto Digital Asset Tax Intake",
       "description": "Use when intaking crypto and digital-asset activity and organizing wallet, exchange, and transaction records into a source-cited intake matrix for tax professional review.",
       "practice_area": "tax",
