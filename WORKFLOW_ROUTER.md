@@ -127,6 +127,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Compare the reps against the disclosure schedules" | `skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md` |
 | "Review the indemnity and escrow terms" | `skills/m-and-a/indemnity-escrow-risk-review/SKILL.md` |
 | "Review the R&W insurance policy / quote against the deal" | `skills/m-and-a/rw-insurance-review/SKILL.md` |
+| "Review this TSA" / "review the transition services agreement against the deal perimeter" | `skills/m-and-a/transition-services-agreement-review/SKILL.md` |
 | "Build the M&A closing checklist" | `skills/m-and-a/closing-deliverables-tracker/SKILL.md` |
 | "What third-party consents does this deal need?" | `skills/m-and-a/third-party-consents-assignment-review/SKILL.md` |
 | "Track the post-closing obligations" | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` |
@@ -164,6 +165,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Organize our responses to these discovery requests / interrogatories / RFAs" | `skills/litigation/discovery-response-workflow/SKILL.md` |
 | "Build a claim chart" / "map claim elements to the evidence" | `skills/litigation/claim-chart/SKILL.md` |
 | "Draft a section of a brief" | `skills/litigation/brief-section-drafter/SKILL.md` |
+| "Draft an opposition to this motion" / "respond to their motion for summary judgment / to dismiss" | `skills/litigation/motion-opposition-drafter/SKILL.md` |
 | "Research this legal question and write a memo" | `skills/legal-research/legal-research-memo/SKILL.md` |
 | "Scope the research first" / "plan a research roadmap" / "what should we research before we start" | `skills/legal-research/research-plan/SKILL.md` |
 | "Brief this case" / "give me a structured brief of this opinion" | `skills/legal-research/case-brief/SKILL.md` |

@@ -4744,6 +4744,49 @@
       ]
     },
     {
+      "id": "litigation/motion-opposition-drafter",
+      "title": "Motion Opposition Drafter",
+      "route_type": "one-off skill",
+      "path": "skills/litigation/motion-opposition-drafter/SKILL.md",
+      "practice_area": "litigation",
+      "category": "drafting",
+      "summary": "Use when organizing and drafting a DRAFT opposition or response brief to a pending motion — deconstructing the movant's arguments into a point-by-point response outline, mapping the movant's cited authorities to verification placeholders, and assembling a source-cited opposition draft for attorney review before filing.",
+      "triggers": [
+        "Counsel has received a motion (dispositive or non-dispositive — e.g., a motion to dismiss, motion for summary judgment, motion to compel, motion for sanctions, motion in limine, or similar) and needs a first-draft opposition or response brief.",
+        "A user asks to \"draft an opposition to this motion,\" \"respond to their motion for summary judgment,\" \"outline our response to the motion to dismiss,\" or \"help me push back on this motion.\"",
+        "The movant's motion papers and the record materials needed to answer it are available and can be provided as inputs.",
+        "The matter is in active litigation, a motion has been filed against the client, and a response is due or anticipated.",
+        "The draft is for a written opposition or response brief, or, with appropriate scope adjustment, a structured outline for oral argument in opposition to the motion."
+      ],
+      "required_inputs": [
+        "The movant's motion, memorandum, and any supporting declarations or exhibits",
+        "The case theory and the client's position in opposition",
+        "The relevant record materials that support the opposition",
+        "The response deadline as stated on the docket or scheduling order"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "legal-prose-polish",
+        "output-format-compliance-check",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/litigation/brief-section-drafter/SKILL.md",
+        "skills/legal-research/legal-research-memo/SKILL.md",
+        "skills/legal-research/negative-treatment-check/SKILL.md",
+        "skills/litigation/litigation-chronology/SKILL.md"
+      ]
+    },
+    {
       "id": "litigation/privilege-log-review",
       "title": "Privilege Log Review",
       "route_type": "one-off skill",
@@ -5243,6 +5286,48 @@
         "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
         "skills/m-and-a/acquisition-diligence-request-list/SKILL.md",
         "skills/contracts/contract-risk-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "m-and-a/transition-services-agreement-review",
+      "title": "Transition Services Agreement Review",
+      "route_type": "one-off skill",
+      "path": "skills/m-and-a/transition-services-agreement-review/SKILL.md",
+      "practice_area": "m-and-a",
+      "category": "review",
+      "summary": "Use when reviewing a draft or executed transition services agreement (TSA) in an M&A transaction — checking service-schedule completeness against the deal perimeter, service standards, duration and termination mechanics, pricing, IP/data/systems access, consistency with the purchase agreement, exit and migration obligations, and any reverse-TSA terms — for attorney review.",
+      "triggers": [
+        "A buyer or seller's deal team has a draft TSA (or a term sheet for one) and needs it checked against the deal perimeter before signing.",
+        "The service schedules need to be checked for completeness — whether every function the target relies on during the transition is actually scheduled and priced.",
+        "The TSA's duration, extension, and early-termination mechanics need review, including whether they align with the buyer's stand-up or migration plan.",
+        "The TSA's pricing and cost-plus mechanics need to be recorded and checked for consistency and for unpriced gaps.",
+        "The TSA needs to be checked against the purchase agreement for consistent definitions, entities, and indemnity treatment.",
+        "A reverse TSA (buyer providing services back to seller) is part of the deal and needs the same review from the other direction."
+      ],
+      "required_inputs": [
+        "The draft or executed TSA, uploaded or pasted",
+        "The purchase agreement and the definition of the deal perimeter (what is being carved out or acquired)",
+        "The side the review is for — service provider (seller/parent) or service recipient (buyer/carved-out entity)",
+        "Optional: the disclosure schedules, the diligence functional workstream lists, and any prior transition planning materials"
+      ],
+      "jurisdiction_gate": true,
+      "deadline_gate": true,
+      "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "source_validation_mandatory": false,
+      "related_skills": [
+        "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
+        "skills/m-and-a/closing-deliverables-tracker/SKILL.md",
+        "skills/contracts/contract-risk-review/SKILL.md",
+        "skills/corporate/material-contract-schedule/SKILL.md"
       ]
     },
     {

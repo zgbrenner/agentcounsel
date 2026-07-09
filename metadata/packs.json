@@ -278,6 +278,7 @@
         "skills/litigation/legal-hold/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
+        "skills/litigation/motion-opposition-drafter/SKILL.md",
         "skills/litigation/privilege-log-review/SKILL.md",
         "skills/litigation/subpoena-triage/SKILL.md"
       ],
@@ -296,6 +297,7 @@
         "skills/litigation/legal-hold/templates/legal-hold-notice.md",
         "skills/litigation/litigation-chronology/templates/chronology-table.md",
         "skills/litigation/matter-intake/templates/matter-intake-summary.md",
+        "skills/litigation/motion-opposition-drafter/templates/opposition-response-outline.md",
         "skills/litigation/privilege-log-review/templates/privilege-log-review-table.md",
         "skills/litigation/references/output-patterns.md"
       ],
@@ -357,6 +359,7 @@
         "skills/litigation/legal-hold/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
+        "skills/litigation/motion-opposition-drafter/SKILL.md",
         "skills/litigation/privilege-log-review/SKILL.md",
         "skills/litigation/subpoena-triage/SKILL.md"
       ],
@@ -375,6 +378,7 @@
         "skills/litigation/legal-hold/templates/legal-hold-notice.md",
         "skills/litigation/litigation-chronology/templates/chronology-table.md",
         "skills/litigation/matter-intake/templates/matter-intake-summary.md",
+        "skills/litigation/motion-opposition-drafter/templates/opposition-response-outline.md",
         "skills/litigation/privilege-log-review/templates/privilege-log-review-table.md",
         "skills/litigation/references/output-patterns.md"
       ],
@@ -436,6 +440,7 @@
         "skills/litigation/legal-hold/SKILL.md",
         "skills/litigation/litigation-chronology/SKILL.md",
         "skills/litigation/matter-intake/SKILL.md",
+        "skills/litigation/motion-opposition-drafter/SKILL.md",
         "skills/litigation/privilege-log-review/SKILL.md",
         "skills/litigation/subpoena-triage/SKILL.md"
       ],
@@ -454,6 +459,7 @@
         "skills/litigation/legal-hold/templates/legal-hold-notice.md",
         "skills/litigation/litigation-chronology/templates/chronology-table.md",
         "skills/litigation/matter-intake/templates/matter-intake-summary.md",
+        "skills/litigation/motion-opposition-drafter/templates/opposition-response-outline.md",
         "skills/litigation/privilege-log-review/templates/privilege-log-review-table.md",
         "skills/litigation/references/output-patterns.md"
       ],
@@ -3787,7 +3793,8 @@
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/rw-insurance-review/SKILL.md",
-        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md"
+        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
+        "skills/m-and-a/transition-services-agreement-review/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -3798,7 +3805,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/m-and-a/references/output-patterns.md"
+        "skills/m-and-a/references/output-patterns.md",
+        "skills/m-and-a/transition-services-agreement-review/templates/tsa-review-matrix.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -3854,7 +3862,8 @@
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/rw-insurance-review/SKILL.md",
-        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md"
+        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
+        "skills/m-and-a/transition-services-agreement-review/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -3865,7 +3874,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/m-and-a/references/output-patterns.md"
+        "skills/m-and-a/references/output-patterns.md",
+        "skills/m-and-a/transition-services-agreement-review/templates/tsa-review-matrix.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -3921,7 +3931,8 @@
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/rw-insurance-review/SKILL.md",
-        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md"
+        "skills/m-and-a/third-party-consents-assignment-review/SKILL.md",
+        "skills/m-and-a/transition-services-agreement-review/SKILL.md"
       ],
       "included_core_rules": [
         "core/legal-work-product.md",
@@ -3932,7 +3943,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/m-and-a/references/output-patterns.md"
+        "skills/m-and-a/references/output-patterns.md",
+        "skills/m-and-a/transition-services-agreement-review/templates/tsa-review-matrix.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
