@@ -117,15 +117,15 @@ All checks pass on this release (Python standard library and one Node script onl
 no network calls, no API keys):
 
 ```
-py scripts/validate_repo.py
-py scripts/build_skill_index.py --check
-py scripts/build_platform_packs.py --check
-py scripts/check_evals.py
-py scripts/run_evals.py --strict --quiet
-py scripts/generate_eval_report.py --check
-py scripts/sync_plugin_skills.py --check
-py scripts/generate_skill_improvement_prompts.py --check
-py scripts/generate_cold_start_interviews.py --check
+python scripts/validate_repo.py
+python scripts/build_skill_index.py --check
+python scripts/build_platform_packs.py --check
+python scripts/check_evals.py
+python scripts/run_evals.py --strict --quiet
+python scripts/generate_eval_report.py --check
+python scripts/sync_plugin_skills.py --check
+python scripts/generate_skill_improvement_prompts.py --check
+python scripts/generate_cold_start_interviews.py --check
 node site/generate.mjs
 ```
 

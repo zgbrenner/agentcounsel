@@ -42,13 +42,9 @@ Whoever you are, the assumption is the same: a licensed attorney reviews the out
 
 ## Quick start
 
-1. Read the files in [`core/`](core/) — the operating rules every skill inherits.
-2. Open [`WORKFLOW_ROUTER.md`](WORKFLOW_ROUTER.md) and find the workflow that matches your task.
-3. Open that skill's `SKILL.md` and gather its **Required Inputs**.
-4. Follow the **Workflow**, and produce the **Output Format**.
-5. Complete the **Attorney Verification Checklist** before relying on anything.
+**[QUICKSTART.md](QUICKSTART.md) is the one place to start** — pick your platform, install a practice-area pack, and run your first skill in about five minutes. Sample outputs are in **[`examples/`](examples/)**.
 
-A worked, step-by-step version of this — with copy-paste prompts for each platform — is in **[QUICKSTART.md](QUICKSTART.md)**. Sample outputs are in **[`examples/`](examples/)**.
+You do not need to read `core/` to get started: every pack and adapter loads those operating rules for the AI automatically. Read [`core/`](core/) yourself only if you are using a raw `SKILL.md` file on its own, or you want to understand the rules your AI is following (a worthwhile ten minutes, but not a prerequisite).
 
 ## Practice areas
 
@@ -161,7 +157,9 @@ AgentCounsel is plain Markdown, so it works anywhere an agent or person can read
 |---|---|---|
 | **Generic Markdown** | Open any `SKILL.md`, paste it into your assistant as context, and follow the workflow. Works with any model. | [`adapters/generic-md/`](adapters/generic-md/) |
 | **ChatGPT** | Create a ChatGPT Project and add individual skill files. (For the consolidated practice-area pack, use the packs page above.) | [`adapters/generic-md/`](adapters/generic-md/) |
-| **Claude** | Use the Claude Code plugin-style bundle, or keep the repo in a folder Claude can read as a local playbook. | [`adapters/claude-code-plugin/`](adapters/claude-code-plugin/), [`adapters/claude-cowork/`](adapters/claude-cowork/) |
+| **Claude (claude.ai)** | Create a Claude Project and upload a practice-area pack from the packs page — no command line needed. | [QUICKSTART.md](QUICKSTART.md) |
+| **Claude Code** | Use the Claude Code plugin-style bundle, or keep the repo in a folder Claude can read as a local playbook. | [`adapters/claude-code-plugin/`](adapters/claude-code-plugin/) |
+| **Claude Cowork** | Point Cowork at the repo folder; `START_HERE.md` gives it the operating model. | [`adapters/claude-cowork/`](adapters/claude-cowork/) |
 | **Gemini** | Install the repository as a Gemini CLI extension — `gemini-extension.json` and `GEMINI.md` load the operating model automatically. | [`adapters/gemini/`](adapters/gemini/) |
 | **Codex / repo agents** | Point a repo-based coding or legal agent at the library through `AGENTS.md` so it selects the narrowest relevant skill. | [`adapters/codex/`](adapters/codex/), [`AGENTS.md`](AGENTS.md) |
 | **Cursor** | Add the library to a project and reference it from a `.cursorrules` file or `AGENTS.md`. (The packs page above also serves a ready-made `.cursorrules`.) | [`adapters/codex/`](adapters/codex/) |

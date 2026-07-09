@@ -50,7 +50,7 @@ matter; do not maintain both for the same matter.
 **Option A — script.** From the repository root:
 
 ```
-py scripts/init_matter_workspace.py "Contoso MSA Review" --practice-area contracts
+python scripts/init_matter_workspace.py "Contoso MSA Review" --practice-area contracts
 ```
 
 The script copies this template into a new, safely named matter directory and

@@ -25,7 +25,7 @@ labels: eval
 ## Steps to reproduce
 
 <!-- The exact command you ran and its output, e.g.
-     py scripts/check_evals.py  or  py scripts/run_evals.py --strict --quiet -->
+     python scripts/check_evals.py  or  python scripts/run_evals.py --strict --quiet -->
 
 ## Scope reminder
 

@@ -12,6 +12,12 @@ workspaces, playbooks, and review panels — that wrap, bundle, or organize thos
 skills. Start narrow; reach for a heavier surface only when the task actually
 needs it.
 
+**New to AgentCounsel?** You only need the first row of the table below — a
+one-off skill (or the practice-area pack you installed from
+[QUICKSTART.md](../QUICKSTART.md), which routes to skills for you). Ignore
+matter packs, workspaces, playbooks, and review panels until you have run a few
+skills; they will make much more sense then.
+
 For mapping a specific "I need to do X" request to a skill, use
 [`../WORKFLOW_ROUTER.md`](../WORKFLOW_ROUTER.md). This page is about choosing the
 *shape* of the work.

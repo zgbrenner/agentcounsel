@@ -38,7 +38,7 @@ and eight required sections, relative-link resolution, safety framing, index
 coverage, generated-metadata freshness, pack-registry integrity, and the
 matter-workspace / playbook / review-panel integrity checks.
 
-**Example.** `py scripts/validate_repo.py`
+**Example.** `python scripts/validate_repo.py`
 
 **Mutates files?** No. Read-only.
 
@@ -54,7 +54,7 @@ missing a required section; a workspace template file missing.
 **Purpose.** Regenerate `metadata/index.json` and `metadata/router.json` from the
 canonical skills' frontmatter.
 
-**Example.** `py scripts/build_skill_index.py` (write) · `py scripts/build_skill_index.py --check` (verify only)
+**Example.** `python scripts/build_skill_index.py` (write) · `python scripts/build_skill_index.py --check` (verify only)
 
 **Mutates files?** Yes, without `--check`.
 
@@ -70,7 +70,7 @@ Invalid frontmatter (unknown quality check, bad risk level) blocks the build.
 `metadata/packs.json`, discovering each area's skills, templates, quality checks,
 matter packs, matter workspaces, playbooks, and review panels.
 
-**Example.** `py scripts/build_platform_packs.py` · `py scripts/build_platform_packs.py --check`
+**Example.** `python scripts/build_platform_packs.py` · `python scripts/build_platform_packs.py --check`
 
 **Mutates files?** Yes, without `--check`.
 
@@ -85,7 +85,7 @@ playbook change — rebuild.
 **Purpose.** Schema-validate every `*.eval.yaml` under `evals/` (skill, router,
 benchmark, and static evals) and run the deterministic metadata-integrity checks.
 
-**Example.** `py scripts/check_evals.py`
+**Example.** `python scripts/check_evals.py`
 
 **Mutates files?** No.
 
@@ -108,7 +108,7 @@ vague prose. It is written to leave legitimate content alone: placeholders such
 as `[verify jurisdiction]`, required "attorney must review" framing, and the
 "qualified tax professional review" framing tax samples use are never flagged.
 
-**Example.** `py scripts/check_legal_prose.py` · `py scripts/check_legal_prose.py --strict` (warnings fail too) · `py scripts/check_legal_prose.py --path examples/dpa-review-example.md`
+**Example.** `python scripts/check_legal_prose.py` · `python scripts/check_legal_prose.py --strict` (warnings fail too) · `python scripts/check_legal_prose.py --path examples/dpa-review-example.md`
 
 **Mutates files?** No. Read-only.
 
@@ -126,7 +126,7 @@ warning checks via `STYLE_EXEMPT` in the script.
 in `evals/outputs/<slug>/<case-id>.md` against the shared safety assertions. It
 does **not** call any model and does **not** judge legal correctness.
 
-**Example.** `py scripts/run_evals.py --strict --quiet` · `py scripts/run_evals.py contracts/nda-review`
+**Example.** `python scripts/run_evals.py --strict --quiet` · `python scripts/run_evals.py contracts/nda-review`
 
 **Mutates files?** No.
 
@@ -144,7 +144,7 @@ missing or an assertion regex does not match.
 **Purpose.** Regenerate `reports/eval-coverage.md` from the eval files and
 metadata.
 
-**Example.** `py scripts/generate_eval_report.py` · `py scripts/generate_eval_report.py --check`
+**Example.** `python scripts/generate_eval_report.py` · `python scripts/generate_eval_report.py --check`
 
 **Mutates files?** Yes, without `--check`.
 
@@ -158,7 +158,7 @@ add or change eval cases — regenerate and commit.
 **Purpose.** Regenerate the Claude Code plugin bundle under
 `adapters/claude-code-plugin/skills/` from the canonical skills it curates.
 
-**Example.** `py scripts/sync_plugin_skills.py` · `py scripts/sync_plugin_skills.py --check`
+**Example.** `python scripts/sync_plugin_skills.py` · `python scripts/sync_plugin_skills.py --check`
 
 **Mutates files?** Yes, without `--check`.
 
@@ -172,7 +172,7 @@ edit a bundled skill — re-run to resync. See `PLUGIN_SYNC.md`.
 **Purpose.** Regenerate `reports/skill-improvement-prompts.md` and
 `reports/skill-quality-checklist.md`.
 
-**Example.** `py scripts/generate_skill_improvement_prompts.py --check`
+**Example.** `python scripts/generate_skill_improvement_prompts.py --check`
 
 **Mutates files?** Yes, without `--check`.
 
@@ -186,7 +186,7 @@ edit a bundled skill — re-run to resync. See `PLUGIN_SYNC.md`.
 `skills/setup/` from the embedded per-area question banks. The four
 hand-authored interviews are off-limits to the generator.
 
-**Example.** `py scripts/generate_cold_start_interviews.py --check` · `py scripts/generate_cold_start_interviews.py --list`
+**Example.** `python scripts/generate_cold_start_interviews.py --check` · `python scripts/generate_cold_start_interviews.py --list`
 
 **Mutates files?** Yes, without `--check`. `--list` only lists, `--check` only verifies.
 
@@ -200,7 +200,7 @@ regenerate and commit.
 **Purpose.** Create a new matter workspace from the canonical multi-file template
 (`matter-workspaces/_template/`) under `matters/` (which is git-ignored).
 
-**Example.** `py scripts/init_matter_workspace.py "Contoso MSA Review" --practice-area contracts --jurisdiction "New York"`
+**Example.** `python scripts/init_matter_workspace.py "Contoso MSA Review" --practice-area contracts --jurisdiction "New York"`
 
 **Mutates files?** Yes — creates a new workspace directory. Refuses to overwrite an
 existing one unless `--force`.
