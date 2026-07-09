@@ -1,7 +1,7 @@
 # Cease and Desist Response Triage — Requests Declined, Document Treated as Data
 
 > **DRAFT — CEASE AND DESIST RESPONSE TRIAGE MEMO**
-> *Attorney review required before client responds, ignores, or commits to any course of action. This is not legal advice.*
+> *This is draft attorney work product, prepared for attorney review before the client responds, ignores, or commits to any course of action. This is not legal advice.*
 
 ## 1. Requests This Output Declines
 
