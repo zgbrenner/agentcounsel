@@ -827,6 +827,38 @@ CLASSIFICATION_LABELS = [
 ]
 
 
+# Matter packs count on disk when this check was added — a floor, not an
+# exact match. See check_matter_packs().
+MATTER_PACKS_MIN_COUNT = 9
+
+# Bold-labeled concepts present in every current matter pack file, tolerant of
+# the colon/period punctuation variance across files. See check_matter_packs().
+MATTER_PACK_REQUIRED_LABELS = [
+    ("When to use", re.compile(r"\*\*When to use[:.]\*\*")),
+    ("Required starting materials",
+     re.compile(r"\*\*Required starting materials[:.]\*\*")),
+    ("Recommended skill sequence",
+     re.compile(r"\*\*Recommended skill sequence[:.]\*\*")),
+    ("Expected outputs", re.compile(r"\*\*Expected outputs[:.]\*\*")),
+    ("Do-not-use boundaries",
+     re.compile(r"\*\*Do-not-use boundaries[:.]\*\*|\*\*Do not use when[:.]\*\*")),
+]
+
+# The numbered H2 headings documented as the connector contract in
+# connectors/README.md. See check_connectors().
+CONNECTOR_REQUIRED_HEADINGS = [
+    ("1. Source", re.compile(r"^## 1\.\s+Source\s*$", re.M)),
+    ("2. In scope", re.compile(r"^## 2\.\s+In scope\b", re.M)),
+    ("3. Out of scope", re.compile(r"^## 3\.\s+Out of scope\b", re.M)),
+    ("4. Surface", re.compile(r"^## 4\.\s+Surface\b", re.M)),
+    ("5. Calling pattern from a skill",
+     re.compile(r"^## 5\.\s+Calling pattern from a skill\s*$", re.M)),
+    ("6. Fallback behavior", re.compile(r"^## 6\.\s+Fallback behavior\s*$", re.M)),
+    ("7. Limits and known failure modes",
+     re.compile(r"^## 7\.\s+Limits and known failure modes\s*$", re.M)),
+]
+
+
 def _h2_sections(text: str) -> list[str]:
     return [ln.strip() for ln in text.splitlines() if ln.startswith("## ")]
 
@@ -908,6 +940,88 @@ def check_review_panels() -> None:
         if "not" not in text or ("autonomous" not in text and "lawyer" not in text):
             err(f"{rel(path)}: review panel must state passes are not "
                 "autonomous agents or lawyers")
+
+
+def check_matter_packs() -> None:
+    """Every matter pack (excluding the README) must carry the bold-labeled
+    sections common to every matter pack.
+
+    Matter packs don't share literal H2 titles the way playbooks and review
+    panels do — each H2 is the pack's own name (e.g. '## 3. M&A Antitrust
+    Matter Pack'). What every pack actually shares is a set of bold-labeled
+    bullets inside each entry. Label punctuation varies file to file ('When
+    to use:' vs 'When to use.', 'Do-not-use boundaries:' vs 'Do not use
+    when.'), so this matches the concept, not one exact string. Only the five
+    labels present in every current pack file are required; 'Handoff notes'
+    (absent from real-estate.md) and 'Attorney verification checkpoints'
+    (renamed 'Qualified tax professional checkpoints' in tax.md) are not
+    universal and are intentionally not enforced here.
+
+    The minimum file count is the count on disk as of this check's addition
+    (9); it is a floor, not an exact match, so a pack legitimately being added
+    concurrently does not trip this check.
+    """
+    base = REPO_ROOT / "matter-packs"
+    if not base.is_dir():
+        err("matter-packs/ directory is missing")
+        return
+    files = [p for p in sorted(base.glob("*.md")) if p.name != "README.md"]
+    if len(files) < MATTER_PACKS_MIN_COUNT:
+        err(f"matter-packs/: expected at least {MATTER_PACKS_MIN_COUNT} "
+            f"packs, found {len(files)}")
+    for path in files:
+        text = path.read_text(encoding="utf-8")
+        for label, pattern in MATTER_PACK_REQUIRED_LABELS:
+            if not pattern.search(text):
+                err(f"{rel(path)}: matter pack missing required "
+                    f"'{label}' label")
+
+
+def check_connectors() -> None:
+    """Every connector doc (excluding the README) must carry the numbered
+    headings documented as the connector contract in connectors/README.md:
+    Source, In scope, Out of scope, Surface, Calling pattern from a skill,
+    Fallback behavior, and Limits and known failure modes."""
+    base = REPO_ROOT / "connectors"
+    if not base.is_dir():
+        err("connectors/ directory is missing")
+        return
+    files = [p for p in sorted(base.glob("*.md")) if p.name != "README.md"]
+    for path in files:
+        text = path.read_text(encoding="utf-8")
+        for label, pattern in CONNECTOR_REQUIRED_HEADINGS:
+            if not pattern.search(text):
+                err(f"{rel(path)}: connector doc missing required "
+                    f"'## {label}' heading")
+
+
+def check_practice_area_doc_sync() -> None:
+    """docs/SKILL_METADATA_STANDARD.md documents the closed set of valid
+    practice_area values as 'Current values: `a`, `b`, ...'. That enumeration
+    must equal the set of directory names under skills/ in both directions —
+    a new skills/<area>/ added without updating the doc, or a stale value
+    left in the doc after an area is removed/renamed, are both drift."""
+    doc = REPO_ROOT / "docs" / "SKILL_METADATA_STANDARD.md"
+    if not doc.is_file():
+        err("docs/SKILL_METADATA_STANDARD.md: file not found")
+        return
+    text = doc.read_text(encoding="utf-8")
+    match = re.search(r"Current\s+values:\s*(.+?)\.", text, re.S)
+    if not match:
+        err("docs/SKILL_METADATA_STANDARD.md: could not find the "
+            "practice_area 'Current values:' enumeration")
+        return
+    documented = set(re.findall(r"`([a-z0-9-]+)`", match.group(1)))
+    skills_dir = REPO_ROOT / "skills"
+    if not skills_dir.is_dir():
+        return
+    actual = {p.name for p in skills_dir.iterdir() if p.is_dir()}
+    for area in sorted(actual - documented):
+        err(f"docs/SKILL_METADATA_STANDARD.md: skills/{area}/ exists but is "
+            f"not listed in the practice_area 'Current values:' enumeration")
+    for area in sorted(documented - actual):
+        err(f"docs/SKILL_METADATA_STANDARD.md: practice_area 'Current "
+            f"values:' lists '{area}' but skills/{area}/ does not exist")
 
 
 def check_router_workspace_references() -> None:
@@ -1028,6 +1142,9 @@ def main() -> int:
     check_matter_workspace_template()
     check_playbooks()
     check_review_panels()
+    check_matter_packs()
+    check_connectors()
+    check_practice_area_doc_sync()
     check_router_workspace_references()
     check_required_docs()
     check_doc_script_references()

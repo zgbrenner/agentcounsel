@@ -1,0 +1,35 @@
+name: External Link Check
+
+# Checks external (http/https) links across the Markdown library on a weekly
+# schedule and on manual dispatch. This is separate from validate.yml, which
+# checks internal relative links on every PR (fast, offline, blocking).
+# External links depend on third-party uptime, so this workflow is
+# non-blocking for pull requests — schedule/dispatch only.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # weekly, Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --exclude-loopback
+            --exclude 'https?://(localhost|127\.0\.0\.1|example\.com|example\.org|example\.net)'
+            --exclude-path site
+            --exclude-path dist
+            --exclude-path metadata
+            '**/*.md'
+          fail: false

@@ -116,6 +116,9 @@ tracking.
   tip off the customer.
 - `skills/legal-methodology/output-format-compliance-check/` — the review output
   conforms to each skill's format.
+- For a high-risk lifecycle event (an enhanced due-diligence escalation or a
+  SAR-adjacent alert), run `review-panels/regulatory-risk-panel.md` before the
+  attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — the deliverable ships with
   its checklist unchecked.
 

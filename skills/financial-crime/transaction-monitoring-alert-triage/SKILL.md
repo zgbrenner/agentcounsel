@@ -114,7 +114,7 @@ If the alert record, the customer profile, or the triage procedure is missing, s
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/tm-alert-triage-packet.md`, in order:
 
 **DRAFT TRANSACTION-MONITORING ALERT TRIAGE — FOR COMPLIANCE AND ATTORNEY REVIEW ONLY**
 

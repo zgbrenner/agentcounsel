@@ -104,7 +104,8 @@ first.
 
 ### Done means validation passes
 
-A library change is not done until these succeed:
+A library change is not done until at least this trio succeeds — the
+minimum, not the whole story:
 
 ```
 python scripts/sync_plugin_skills.py --check   # plugin bundle in sync
@@ -112,9 +113,15 @@ python scripts/validate_repo.py                # structure, links, safety framin
 python scripts/check_evals.py                  # eval files conform
 ```
 
-Run them and read the output before reporting the task complete. "Done" means
-the checks pass — not "I think it looks right." CI
-(`.github/workflows/validate.yml`) runs the same checks on every pull request.
+`python scripts/check_all.py --quick` runs exactly that trio. For the full
+local equivalent of CI — every step `.github/workflows/validate.yml` runs, in
+the same order, stopping at the first failure — run `python
+scripts/check_all.py` with no flags.
+
+Run the checks and read the output before reporting the task complete.
+"Done" means the checks pass — not "I think it looks right." CI
+(`.github/workflows/validate.yml`) runs the same list of checks on every pull
+request.
 
 ## Repository map
 

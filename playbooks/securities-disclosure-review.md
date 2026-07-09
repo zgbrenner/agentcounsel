@@ -90,6 +90,9 @@ backup sources, and the consistency comparison.
   framework, materiality, and scope.
 - `skills/legal-methodology/hallucination-red-team/` — challenge any asserted
   requirement or unsupported claim.
+- For a high-risk disclosure draft (a new risk factor, a materiality call, or
+  pre-filing timing), run `review-panels/regulatory-risk-panel.md` before the
+  attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — checklist ships unchecked.
 
 ## Attorney Escalation Triggers

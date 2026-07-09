@@ -2,6 +2,11 @@
 
 All packs produce **draft-only work product for attorney review**. Outputs are not legality conclusions, merger-clearance advice, HSR/reportability conclusions, or approval of competitor conduct.
 
+**Quality check.** Before a compliance memo or filing-adjacent draft from any
+pack below reaches the final attorney-review checkpoint, run it through
+`review-panels/regulatory-risk-panel.md` for a compliance, source, and
+business-risk review.
+
 ## 1. Competitor Collaboration Matter Pack
 - **When to use:** competitor collaborations, JVs, benchmarking, standards, joint purchasing/marketing/R&D, or settlement-adjacent collaboration planning.
 - **Required starting materials:** jurisdiction, industry/market context, party roles, collaboration docs, information-sharing proposals, governance terms, timeline/urgency.

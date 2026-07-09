@@ -16,12 +16,12 @@ per-script detail is in `docs/CLI.md`.
 
 | Generated file / dir | Refresh with |
 |---|---|
-| `metadata/index.json`, `metadata/router.json` | `py scripts/build_skill_index.py` |
-| `metadata/packs.json`, `dist/` | `py scripts/build_platform_packs.py` |
-| `reports/eval-coverage.md` | `py scripts/generate_eval_report.py` |
-| `reports/skill-improvement-prompts.md`, `reports/skill-quality-checklist.md` | `py scripts/generate_skill_improvement_prompts.py` |
-| `adapters/claude-code-plugin/skills/` | `py scripts/sync_plugin_skills.py` |
-| generated cold-start interviews under `skills/setup/` | `py scripts/generate_cold_start_interviews.py` |
+| `metadata/index.json`, `metadata/router.json` | `python scripts/build_skill_index.py` |
+| `metadata/packs.json`, `dist/` | `python scripts/build_platform_packs.py` |
+| `reports/eval-coverage.md` | `python scripts/generate_eval_report.py` |
+| `reports/skill-improvement-prompts.md`, `reports/skill-quality-checklist.md` | `python scripts/generate_skill_improvement_prompts.py` |
+| `adapters/claude-code-plugin/skills/` | `python scripts/sync_plugin_skills.py` |
+| generated cold-start interviews under `skills/setup/` | `python scripts/generate_cold_start_interviews.py` |
 | `site/public/` | `node site/generate.mjs` |
 
 ## Validation sequence before commit
@@ -29,15 +29,15 @@ per-script detail is in `docs/CLI.md`.
 Run this full sequence and read the output before claiming done. All must pass:
 
 ```
-py scripts/validate_repo.py
-py scripts/build_skill_index.py --check
-py scripts/build_platform_packs.py --check
-py scripts/check_evals.py
-py scripts/run_evals.py --strict --quiet
-py scripts/generate_eval_report.py --check
-py scripts/sync_plugin_skills.py --check
-py scripts/generate_skill_improvement_prompts.py --check
-py scripts/generate_cold_start_interviews.py --check
+python scripts/validate_repo.py
+python scripts/build_skill_index.py --check
+python scripts/build_platform_packs.py --check
+python scripts/check_evals.py
+python scripts/run_evals.py --strict --quiet
+python scripts/generate_eval_report.py --check
+python scripts/sync_plugin_skills.py --check
+python scripts/generate_skill_improvement_prompts.py --check
+python scripts/generate_cold_start_interviews.py --check
 node site/generate.mjs
 ```
 
@@ -47,34 +47,34 @@ without `--check` to regenerate, commit the result, and re-run the sequence.
 ## After editing... (do this)
 
 **...a skill (`skills/<area>/<slug>/SKILL.md`):**
-1. `py scripts/build_skill_index.py` (regenerate index + router).
-2. If the skill is in the Claude Code plugin bundle: `py scripts/sync_plugin_skills.py`.
-3. `py scripts/build_platform_packs.py` (its pack changed).
+1. `python scripts/build_skill_index.py` (regenerate index + router).
+2. If the skill is in the Claude Code plugin bundle: `python scripts/sync_plugin_skills.py`.
+3. `python scripts/build_platform_packs.py` (its pack changed).
 4. Update `SKILLS_INDEX.md` and, where relevant, `WORKFLOW_ROUTER.md` / `COMMANDS.md`.
-5. `py scripts/generate_skill_improvement_prompts.py`; `node site/generate.mjs`.
-6. `py scripts/validate_repo.py` and the full sequence above.
+5. `python scripts/generate_skill_improvement_prompts.py`; `node site/generate.mjs`.
+6. `python scripts/validate_repo.py` and the full sequence above.
 
 **...packs (`scripts/build_platform_packs.py` logic):**
-1. `py scripts/build_platform_packs.py` to regenerate `metadata/packs.json` + `dist/`.
+1. `python scripts/build_platform_packs.py` to regenerate `metadata/packs.json` + `dist/`.
 2. `node site/generate.mjs` (the packs page reads the manifest).
-3. `py scripts/validate_repo.py` (pack-registry integrity).
+3. `python scripts/validate_repo.py` (pack-registry integrity).
 
 **...evals (`evals/**/*.eval.yaml` or `evals/outputs/`):**
-1. `py scripts/check_evals.py` (schema + metadata integrity).
-2. `py scripts/run_evals.py --strict --quiet` (candidate outputs).
-3. `py scripts/generate_eval_report.py` (refresh `reports/eval-coverage.md`).
+1. `python scripts/check_evals.py` (schema + metadata integrity).
+2. `python scripts/run_evals.py --strict --quiet` (candidate outputs).
+3. `python scripts/generate_eval_report.py` (refresh `reports/eval-coverage.md`).
 
 **...site data (`site/generate.mjs`, assets, or any displayed metadata):**
 1. `node site/generate.mjs`.
-2. `py scripts/validate_repo.py` (doc/site link checks).
+2. `python scripts/validate_repo.py` (doc/site link checks).
 
 **...matter workspace templates (`matter-workspaces/_template/`), playbooks (`playbooks/`), or review panels (`review-panels/`):**
-1. `py scripts/build_platform_packs.py` (packs include these where justified).
-2. `py scripts/validate_repo.py` (template completeness, required sections, classification vocabulary).
-3. `py scripts/check_evals.py` if you touched the related static evals.
+1. `python scripts/build_platform_packs.py` (packs include these where justified).
+2. `python scripts/validate_repo.py` (template completeness, required sections, classification vocabulary).
+3. `python scripts/check_evals.py` if you touched the related static evals.
 
 **...top-level docs (`README.md`, `docs/*.md`, `QUICKSTART.md`, `CONTRIBUTING.md`):**
-1. `py scripts/validate_repo.py` (required-docs presence + link resolution).
+1. `python scripts/validate_repo.py` (required-docs presence + link resolution).
 
 ## Do not touch without a specific reason
 

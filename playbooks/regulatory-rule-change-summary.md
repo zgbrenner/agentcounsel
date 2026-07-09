@@ -88,6 +88,9 @@ the change comparison spans many provisions.
   and applicability.
 - `skills/legal-methodology/hallucination-red-team/` — challenge any asserted
   requirement not in the source.
+- For a high-impact rule change (a new compliance obligation or a short
+  effective-date window), run `review-panels/regulatory-risk-panel.md` before
+  the attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — checklist ships unchecked.
 
 ## Attorney Escalation Triggers

@@ -54,6 +54,8 @@ an attorney reviews it.
 | `ai-governance-use-case-review.md` | A proposed AI/ML use case needs intake, model-risk triage, and routing through governance review. |
 | `product-launch-legal-review.md` | A product, feature, or campaign approaching launch needs a pre-launch review of launch issues, marketing claims, and terms of service. |
 | `aml-customer-lifecycle-review.md` | A customer needs an AML/BSA lifecycle review — KYC onboarding, sanctions screening, monitoring-alert triage, or enhanced due diligence. |
+| `legal-research-memo.md` | A specific legal question needs a scoped, IRAC-structured research memo with synthesized and treatment-checked authority. |
+| `legal-intake-response.md` | An inbound business request to the legal team needs triage, a templated or briefed response, and, where relevant, signature routing. |
 
 ## Safety posture
 

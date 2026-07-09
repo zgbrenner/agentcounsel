@@ -34,6 +34,8 @@ ongoing.
 | `playbooks/privacy-dpa-review.md` | Reviewing a data processing agreement. |
 | `playbooks/corporate-governance-review.md` | Board consent / corporate governance review. |
 | `playbooks/securities-disclosure-review.md` | Securities / capital-markets disclosure review. |
+| `playbooks/legal-research-memo.md` | Scoping and drafting an IRAC-structured legal research memo. |
+| `playbooks/legal-intake-response.md` | Triaging and responding to an inbound legal-team request. |
 
 ## Required sections
 

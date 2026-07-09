@@ -11,12 +11,12 @@ The canonical source is `skills/` and `core/`; several files are generated from
 them and must be refreshed and committed. See [`CLI.md`](CLI.md).
 
 ```
-py scripts/build_skill_index.py            # metadata/index.json, metadata/router.json
-py scripts/build_platform_packs.py         # metadata/packs.json, dist/
-py scripts/generate_eval_report.py         # reports/eval-coverage.md
-py scripts/generate_skill_improvement_prompts.py
-py scripts/generate_cold_start_interviews.py
-py scripts/sync_plugin_skills.py           # adapters/claude-code-plugin/skills/
+python scripts/build_skill_index.py            # metadata/index.json, metadata/router.json
+python scripts/build_platform_packs.py         # metadata/packs.json, dist/
+python scripts/generate_eval_report.py         # reports/eval-coverage.md
+python scripts/generate_skill_improvement_prompts.py
+python scripts/generate_cold_start_interviews.py
+python scripts/sync_plugin_skills.py           # adapters/claude-code-plugin/skills/
 node site/generate.mjs                     # site/public/
 ```
 
@@ -25,15 +25,15 @@ node site/generate.mjs                     # site/public/
 All must pass (CI runs the same set on every push):
 
 ```
-py scripts/validate_repo.py
-py scripts/build_skill_index.py --check
-py scripts/build_platform_packs.py --check
-py scripts/check_evals.py
-py scripts/run_evals.py --strict --quiet
-py scripts/generate_eval_report.py --check
-py scripts/sync_plugin_skills.py --check
-py scripts/generate_skill_improvement_prompts.py --check
-py scripts/generate_cold_start_interviews.py --check
+python scripts/validate_repo.py
+python scripts/build_skill_index.py --check
+python scripts/build_platform_packs.py --check
+python scripts/check_evals.py
+python scripts/run_evals.py --strict --quiet
+python scripts/generate_eval_report.py --check
+python scripts/sync_plugin_skills.py --check
+python scripts/generate_skill_improvement_prompts.py --check
+python scripts/generate_cold_start_interviews.py --check
 node site/generate.mjs
 ```
 

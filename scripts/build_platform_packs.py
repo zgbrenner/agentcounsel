@@ -613,6 +613,10 @@ def claude_md(nm: str) -> str:
         + GEN_NOTICE +
         f"\nThis Claude Project contains the AgentCounsel **{nm}** practice "
         f"area. Treat the files in Project knowledge as a reference library.\n\n"
+        "Claude Project knowledge does not preserve folder structure — every "
+        "file uploads flat. Every file in this pack has a unique name for "
+        "that reason: skills are named `<skill-slug>.md`, templates are "
+        "named `<skill-slug>--<template-name>`, so nothing collides.\n\n"
         "## How to work\n\n"
         "1. The core operating rules are embedded in every skill's context "
         "and summarized here: produce **draft legal work product for review "
@@ -645,13 +649,22 @@ def claude_readme(nm: str, skills: list) -> str:
              "- `practice-profile-template.md` — the team configuration "
              "profile.",
              "- `commands.md` — slash-style commands for this practice area.",
-             "- `skills/` — one `SKILL.md` per skill.",
-             "- `templates/` — copyable, attorney-review-ready templates.",
+             "- `skills/` — one `<skill-slug>.md` file per skill.",
+             "- `templates/` — copyable, attorney-review-ready templates, "
+             "named `<skill-slug>--<template-name>`.",
              "- `README.md` — this file.\n",
+             "## A note on folder structure\n",
+             "Claude Project knowledge does **not** preserve folder "
+             "structure — every uploaded file lands in one flat list. This "
+             "pack is built for that: every file's name is unique across "
+             "the whole archive (skills are `<skill-slug>.md`, not "
+             "`SKILL.md`), so nothing collides. You can safely upload every "
+             "file in this archive flat, without recreating the "
+             "`skills/`/`templates/` folders.\n",
              "## Install\n",
              "1. Create a new Project in Claude.",
-             "2. Add every file in this archive to the Project knowledge, "
-             "keeping the folder structure.",
+             "2. Add every file in this archive to the Project knowledge — "
+             "flat is fine; every filename is unique.",
              "3. Paste the guidance from `CLAUDE.md` into the Project "
              "instructions.",
              "4. Start a conversation and name your task.\n",
@@ -848,6 +861,21 @@ def check_not_empty(label: str, members: list) -> None:
             f"({len(members)} files, {total} bytes)")
 
 
+def check_unique_basenames(label: str, members: list) -> None:
+    """claude.ai Project knowledge flattens uploads — folder structure is
+    not preserved, so two archive members with the same basename in
+    different folders (e.g. skills/a/SKILL.md and skills/b/SKILL.md) collide
+    on upload. Every member's basename must be unique across the archive."""
+    seen: dict[str, str] = {}
+    for arcname, _ in members:
+        basename = arcname.rsplit("/", 1)[-1]
+        if basename in seen:
+            err(f"{label}: duplicate basename '{basename}' would collide on "
+                f"a flat claude.ai upload ('{seen[basename]}' and '{arcname}')")
+            continue
+        seen[basename] = arcname
+
+
 # --- main ------------------------------------------------------------------
 
 def run_check() -> int:
@@ -912,7 +940,15 @@ def run_write() -> int:
                 f"({len(text)} bytes)")
         write_text(f"chatgpt/{area}.md", text)
 
-    # Claude: one ZIP per area, folder structure preserved.
+    # Claude: one ZIP per area. claude.ai Project knowledge flattens uploads
+    # (it does not preserve folder structure), so every member's BASENAME —
+    # not its full arcname — must be unique across the whole archive. Skills
+    # become skills/<slug>.md (not skills/<slug>/SKILL.md, which would make
+    # every skill's basename literally "SKILL.md"); templates become
+    # templates/<slug>--<template-name>; references keep their own name
+    # unless that would collide, in which case they're prefixed
+    # "references--". See claude_readme()/claude_md() and
+    # docs/PLUGIN_COMPATIBILITY.md.
     for area in order:
         info = areas[area]
         nm = area_name(area)
@@ -923,18 +959,29 @@ def run_write() -> int:
             ("commands.md", commands_doc(nm, skills, commands)),
             ("README.md", claude_readme(nm, skills)),
         ]
+        used_basenames = {arcname for arcname, _ in members}
         for sk in skills:
-            members.append((f"skills/{sk['slug']}/SKILL.md", sk["raw"]))
+            members.append((f"skills/{sk['slug']}.md", sk["raw"]))
+            used_basenames.add(f"{sk['slug']}.md")
             for tname, tcontent in sk["templates"]:
-                members.append((f"templates/{sk['slug']}/{tname}", tcontent))
+                basename = f"{sk['slug']}--{tname}"
+                members.append((f"templates/{basename}", tcontent))
+                used_basenames.add(basename)
         for rname, rcontent in info["references"]:
-            members.append((f"templates/references/{rname}", rcontent))
+            if rname in used_basenames:
+                basename = f"references--{rname}"
+                members.append((f"templates/{basename}", rcontent))
+            else:
+                basename = rname
+                members.append((f"templates/references/{rname}", rcontent))
+            used_basenames.add(basename)
         if not any(a.startswith("templates/") for a, _ in members):
-            members.append(("templates/README.md",
+            members.append(("templates/no-templates-in-this-pack.md",
                             "The skills in this practice area do not ship "
                             "templates.\n"))
         check_safety(f"claude/{area}.zip:CLAUDE.md", members[0][1])
         check_not_empty(f"claude/{area}.zip", members)
+        check_unique_basenames(f"claude/{area}.zip", members)
         write_zip(f"claude/{area}.zip", members)
 
     # Gemini: one ZIP per area with four notebook sources.
@@ -1084,8 +1131,9 @@ def skill_packs_index(index_areas: list) -> str:
         "that area's `chatgpt/<area>.md` file. Use "
         "`chatgpt/project-instructions.md` for the Project instructions.\n",
         "**Claude Projects.** Unzip `claude/<area>.zip` and add its files to "
-        "a Claude Project's knowledge, keeping the folder structure. Follow "
-        "the included `CLAUDE.md`.\n",
+        "a Claude Project's knowledge — flat is fine, since Project "
+        "knowledge does not preserve folder structure and every filename in "
+        "the pack is unique. Follow the included `CLAUDE.md`.\n",
         "**Gemini Notebooks.** Unzip `gemini/<area>.zip` and add the four "
         "`source-*.md` files as notebook sources. Follow "
         "`notebook-instructions.md`.\n",

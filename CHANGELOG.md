@@ -8,6 +8,73 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Two new skills** closing gaps named in the July 2026 audit backlog:
+  `skills/litigation/motion-opposition-drafter` (the opposition counterpart to
+  `brief-section-drafter` — deconstructs movant arguments, flags every movant
+  authority `[VERIFY]`, routes counter-authority research to the
+  legal-research skills) and
+  `skills/m-and-a/transition-services-agreement-review` (13 per-topic steps
+  with named red flags — evergreen extensions, unpriced omitted services,
+  TSA-to-purchase-agreement consistency). Both ship templates, starter evals,
+  and index/router/commands entries. Library total: 209 skills.
+- **OSS-derived reference catalogs** (taxonomies adapted with attribution in
+  `THIRD_PARTY_NOTICES.md`; all descriptions rewritten):
+  `skills/contracts/references/clause-category-checklist.md` (40 clause
+  categories adapted from the CUAD dataset, CC-BY-4.0),
+  `skills/contracts/references/market-standard-baselines.md` (oneNDA /
+  Bonterms / Common Paper as labeled-inference comparison baselines),
+  `skills/legal-research/references/citation-type-taxonomy.md` (citation
+  forms adapted from eyecite's classification, with per-type verification
+  needs and hallucination risks), and `connectors/reporters-and-courts.md`
+  (Free Law Project reporters-db / courts-db as existence-verification
+  sources). Wired with minimal touches into `nda-review`,
+  `contract-risk-review`, `citation-integrity-check`, and
+  `source-validation`.
+- **Composition layer completed:** `matter-packs/litigation.md` (three
+  bundles with handoff notes), `playbooks/legal-research-memo.md`, and
+  `playbooks/legal-intake-response.md`; every playbook and matter pack now
+  names its matching review panel in its quality-checks section (the panels
+  were previously unreachable from the production layers);
+  `WORKFLOW_ROUTER.md` gained a new-user cue and one whole-matter routing row
+  per area with a pack or playbook.
+- **Thirteen output templates** for the skills that had none: contracts
+  redline-summary, employment severance-review, legal-research case-brief,
+  privacy dsar-workflow, all five financial-crime skills, and all four
+  legal-ops skills.
+- **Decision records:** `docs/decisions/` (MADR-style) documenting three
+  standing architecture decisions — the generated plugin bundle, the
+  eight-section skill structure, and the Markdown-only/no-runtime rule.
+- **Tooling:** three new validators in `scripts/validate_repo.py`
+  (`check_matter_packs`, `check_connectors`, and
+  `check_practice_area_doc_sync`, closing the doc-drift risk the July audit
+  flagged); `scripts/check_all.py` runs the full 12-step CI sequence locally
+  (`--quick` for the core trio); a weekly external-link workflow
+  (`.github/workflows/links.yml`) so cited source URLs cannot rot silently;
+  unit tests for the new validators.
+
+### Changed
+
+- **Novice onboarding path fixed:** `QUICKSTART.md` now gives claude.ai users
+  their own no-command-line path (separate from Claude Code) with a literal
+  copy-paste Project instruction block; `README.md` points to QUICKSTART as
+  the single starting point and no longer asks new users to read `core/`
+  first (packs load it for the AI automatically); `docs/CHOOSE_YOUR_WORKFLOW.md`
+  tells first-time users to start with a single skill.
+- **Claude platform packs restructured for claude.ai:** every file in each
+  Claude pack zip now has a unique basename (claude.ai Project knowledge
+  flattens uploads, so the previous per-skill `SKILL.md` files collided);
+  install instructions updated to match.
+- **Skill-quality backlog:** the canonical source-and-citation-discipline
+  bullet added to the ten analytical skills that restated it informally;
+  `tax/tax-document-organizer` and
+  `bankruptcy-restructuring/creditor-claim-intake` deepened from the generic
+  intake skeleton to per-topic steps with named red flags; reciprocal
+  `related_skills` links fixed for four skill pairs.
+- Stale hardcoded counts in `docs/FAQ.md` and `docs/DEMO_SCRIPT.md` replaced
+  with count-free wording; Windows-only `py scripts/...` invocations replaced
+  with `python scripts/...` across all docs; `AGENTS.md` now points to
+  `scripts/check_all.py` as the full local equivalent of CI.
+
 - **Three connectors** extending the citation-verification surface (Markdown
   integration contracts, no runtime): `connectors/pacer-recap.md` (federal
   dockets via PACER / the free RECAP archive — for litigation and bankruptcy),

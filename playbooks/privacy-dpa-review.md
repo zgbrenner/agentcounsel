@@ -88,6 +88,8 @@ transfer annex together justify multi-file tracking.
   and client facts out of reusable artifacts.
 - `skills/legal-methodology/output-format-compliance-check/` — risk output
   conforms to the expected format.
+- For a high-risk DPA (a cross-border transfer or sub-processor chain issue),
+  run `review-panels/contract-review-panel.md` before the attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — checklist ships unchecked.
 
 ## Attorney Escalation Triggers

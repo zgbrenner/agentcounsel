@@ -100,7 +100,7 @@ If the meeting context is missing, request it. If background materials are thin,
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/meeting-briefing-pack.md`, in order:
 
 **DRAFT MEETING BRIEFING — FOR REVIEW**
 

@@ -91,6 +91,9 @@ the source map, and successive drafts.
   fact, figure, or citation.
 - `skills/legal-methodology/legal-prose-polish/` — tighten tone and clarity
   without overstating the claim.
+- For a high-risk demand (a large figure, litigation-imminent tone, or a
+  represented recipient), run `review-panels/litigation-risk-panel.md` before
+  the attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — checklist ships unchecked.
 
 ## Attorney Escalation Triggers

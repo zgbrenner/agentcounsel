@@ -90,6 +90,9 @@ chronology, and drafts when the history is complex.
   analysis as privileged; keep personnel facts out of templates.
 - `skills/legal-methodology/hallucination-red-team/` — challenge any asserted
   legal conclusion or invented authority.
+- For a high-risk termination (a protected-characteristic or recent-complaint
+  fact pattern), run `review-panels/litigation-risk-panel.md` before the
+  attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — checklist ships unchecked.
 
 ## Attorney Escalation Triggers

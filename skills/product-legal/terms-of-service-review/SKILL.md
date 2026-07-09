@@ -17,6 +17,7 @@ related_skills:
   - skills/contracts/nda-review/SKILL.md
   - skills/privacy/privacy-policy-gap-review/SKILL.md
   - skills/product-legal/launch-review/SKILL.md
+  - skills/product-legal/marketing-claims-review/SKILL.md
 tags:
   - product-legal
   - terms-of-service

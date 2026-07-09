@@ -18,6 +18,12 @@ Each pack ends with **handoff notes** — what the output of one step contribute
 to the next. The handoffs are passed by the human running the pack: an output
 is reviewed, then carried forward as an input or as context.
 
+**Quality check.** Before a diligence work product (an issue list, a gap
+matrix, or an indemnity or disclosure-schedule review) reaches the final
+attorney-review checkpoint, run it through
+`review-panels/deal-diligence-review-panel.md` for a completeness, position,
+and risk review.
+
 ---
 
 ## 1. Buyer-Side Acquisition Matter Pack

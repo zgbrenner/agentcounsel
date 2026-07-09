@@ -114,6 +114,9 @@ documentation, and vendor terms together justify multi-file tracking.
   matter facts out of reusable artifacts.
 - `skills/legal-methodology/output-format-compliance-check/` — the intake record
   and risk register conform to each skill's format.
+- For a high-risk use case (a high risk-tier rating or a novel regulatory
+  question), run `review-panels/regulatory-risk-panel.md` before the
+  attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — the deliverable ships with
   its checklist unchecked.
 

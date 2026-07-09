@@ -66,7 +66,7 @@ attorney task.
 **Script (recommended):**
 
 ```
-py scripts/init_matter_workspace.py "Contoso MSA Review" --practice-area contracts
+python scripts/init_matter_workspace.py "Contoso MSA Review" --practice-area contracts
 ```
 
 Options: `--jurisdiction`, `--pack matter-packs/m-and-a.md`, `--output-dir`,

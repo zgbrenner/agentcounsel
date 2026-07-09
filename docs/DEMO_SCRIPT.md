@@ -44,7 +44,7 @@ Total target: ~3 minutes. Times are guides.
 - In a terminal:
 
   ```
-  py scripts/init_matter_workspace.py "Contoso NDA Review" --practice-area contracts
+  python scripts/init_matter_workspace.py "Contoso NDA Review" --practice-area contracts
   ```
 
 - Open the created folder under `matters/` (git-ignored). Show
@@ -75,11 +75,11 @@ Total target: ~3 minutes. Times are guides.
 - In a terminal:
 
   ```
-  py scripts/check_evals.py
-  py scripts/run_evals.py --strict --quiet
+  python scripts/check_evals.py
+  python scripts/run_evals.py --strict --quiet
   ```
 
-- Briefly show `reports/eval-coverage.md`. Say: "191 eval files, run with no API
+- Briefly show `reports/eval-coverage.md`. Say: "An eval file for every skill, run with no API
   keys. They check structure and safety signals — not legal correctness."
 
 ## 3:00 — Site navigation + close (15s)

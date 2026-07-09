@@ -99,7 +99,7 @@ If the screening results or the disposition policy is missing, stop and request 
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/sanctions-alert-adjudication.md`, in order:
 
 **DRAFT SANCTIONS / PEP / ADVERSE-MEDIA SCREENING REVIEW — FOR COMPLIANCE AND ATTORNEY REVIEW ONLY**
 

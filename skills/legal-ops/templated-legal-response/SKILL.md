@@ -60,6 +60,7 @@ This skill drafts a response; it does not send anything.
 ## Legal Safety Rules
 
 - Produce draft legal work product for attorney review. This is not legal advice. A templated response is still a legal communication; it must be reviewed before it is sent.
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Run the escalation gate before drafting. If any trigger fires, stop the templated path, alert the user, explain the trigger, recommend an escalation path, and produce a draft marked "DRAFT — FOR COUNSEL REVIEW ONLY."
 - Never invent facts, reference numbers, deadlines, regulations, or template language. Use `[CONFIRM: ...]` placeholders for anything not supplied.
 - Do not state legal rights or obligations as authoritative; the legal content carried by a template is attorney-verification material.
@@ -92,7 +93,7 @@ This skill drafts a response; it does not send anything.
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/templated-response-draft.md`, in order:
 
 **DRAFT TEMPLATED LEGAL RESPONSE — FOR ATTORNEY REVIEW**
 

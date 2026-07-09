@@ -14,7 +14,7 @@ product for review by a licensed attorney, not legal advice.
 | Surface | How to use AgentCounsel | Generated pack shape |
 |---|---|---|
 | ChatGPT Projects | Create one Project per practice area, upload the generated Markdown pack, and paste the generated Project instructions. | `dist/chatgpt/<area>.md` |
-| Claude Projects / plugin-style workflows | Upload the files from the generated ZIP to Project knowledge or a plugin-style workspace and follow `CLAUDE.md`. | `dist/claude/<area>.zip` |
+| Claude Projects / plugin-style workflows | Upload the files from the generated ZIP to Project knowledge or a plugin-style workspace and follow `CLAUDE.md`. Project knowledge does not preserve folder structure — every file in the ZIP has a unique name, so a flat upload is safe. | `dist/claude/<area>.zip` |
 | Cursor | Use the repo-agent generated `.cursorrules` file with a checkout that contains `skills/` and `core/`. | `dist/repo-agents/.cursorrules` |
 | Codex / repo agents | Put generated `AGENTS.md` at the repository root, or use `adapters/codex/AGENTS.md` in this repo. | `dist/repo-agents/AGENTS.md` |
 | Gemini | Add the generated notebook source files from the Gemini ZIP as sources and follow `notebook-instructions.md`. | `dist/gemini/<area>.zip` |

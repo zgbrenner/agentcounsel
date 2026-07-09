@@ -15,6 +15,7 @@ outputs:
 related_skills:
   - skills/litigation/litigation-chronology/SKILL.md
   - skills/litigation/matter-intake/SKILL.md
+  - skills/litigation/subpoena-triage/SKILL.md
 tags:
   - litigation
   - legal-hold

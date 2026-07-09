@@ -64,6 +64,7 @@ If the framework source is not provided, stop and request it.
 ## Legal Safety Rules
 
 - Produce draft legal work product for attorney review. This is not legal advice, a compliance certification, or an audit opinion.
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Every requirement in the tracker must trace to the provided framework source. Do not add requirements from model background knowledge without clearly marking them `[UNVERIFIED — not from provided source]`.
 - A "control in place" or "evidence current" status reflects the information provided — not an assurance that the control operates effectively or would satisfy an assessor.
 - Never fabricate controls, control owners, evidence locations, evidence-collection dates, or audit dates.

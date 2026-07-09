@@ -90,6 +90,9 @@ multiple consents, approvals, and conditions.
   sections are cited exactly; none invented.
 - `skills/legal-methodology/privilege-confidentiality-check/` — treat drafts as
   privileged board materials.
+- For a high-risk governance action (a financing, a related-party
+  transaction, or a ratification of a prior act), run
+  `review-panels/contract-review-panel.md` before the attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — checklist ships unchecked.
 
 ## Attorney Escalation Triggers
