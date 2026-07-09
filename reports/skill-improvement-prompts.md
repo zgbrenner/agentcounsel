@@ -11094,7 +11094,7 @@ TARGET SKILL
 - Current skill name: Custody Order Review Checklist
 - Practice area: Family Law
 - Current description: Use when reviewing an existing or proposed custody or parenting order for clarity and administration issues, producing an order-clarity checklist and ambiguity table for attorney review.
-- Core purpose (must not change): Review an existing or proposed custody or parenting order for clarity and day-to-day administration issues — legal and physical custody language, the parenting schedule, holidays, exchanges, travel, communication, school and medical decisions, relocation and travel notices, dispute resolution, enforcement and ambiguity points, and any safety provisions — and produce an order-clarity checklist,...
+- Core purpose (must not change): Review an existing or proposed **custody or parenting order specifically** — not a full marital settlement agreement — for clarity and day-to-day administration issues, covering legal and physical custody language, the parenting schedule, holidays, exchanges, travel, communication, school and medical decisions, relocation and travel notices, dispute resolution, enforcement and ambiguity points,...
 
 CONTEXT TO READ FIRST
 - Read skills/family-law/custody-order-review-checklist/SKILL.md in full.
@@ -11710,7 +11710,7 @@ TARGET SKILL
 - Current skill name: Settlement Agreement Issue Spotter
 - Practice area: Family Law
 - Current description: Use when reviewing a marital settlement, parenting, support, or custody-stipulation agreement to produce a key-terms table, issue list, ambiguity list, and missing-provisions list for attorney review.
-- Core purpose (must not change): Review a marital settlement agreement, parenting agreement, support agreement, custody stipulation, or related settlement draft and produce a key-terms table, an issue list, an ambiguity list, and a missing-provisions list, so a qualified, licensed attorney has an organized review.
+- Core purpose (must not change): Review a proposed or executed marital settlement agreement, parenting agreement, support agreement, custody stipulation, or related settlement draft **across every family-law issue area at once** — custody and parenting, child support, spousal support, property and debt, tax and benefits, safety, enforceability and formality, and internal consistency — and produce a key-terms table, an issue li...
 
 CONTEXT TO READ FIRST
 - Read skills/family-law/settlement-agreement-issue-spotter/SKILL.md in full.

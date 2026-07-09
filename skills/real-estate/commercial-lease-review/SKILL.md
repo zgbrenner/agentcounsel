@@ -124,6 +124,13 @@ Also out of scope (this skill does not): give final advice or a recommendation; 
 
 ## Workflow
 
+This skill draws on the shared real-estate red-flag catalog in
+`skills/real-estate/references/red-flags.md`. For a lease, scan its **lease
+family (Sections 1–8)** plus the cross-cutting sections (**19** title/lien
+priority, **20** insurance, **21** jurisdiction-specific property law). Consult
+it at the steps noted below. The catalog never confirms title or lien priority
+and never computes a figure or a date.
+
 1. **Confirm inputs.** Verify you have the full lease and any amendments, the
    party perspective, the property type, the transaction posture, and the
    jurisdiction (or an explicit statement that it is unknown). Note which
@@ -139,13 +146,23 @@ Also out of scope (this skill does not): give final advice or a recommendation; 
    provided. If amendments exist and have not been reconciled, note that a
    `lease-amendment-reconciliation` is needed to confirm controlling terms.
 
-3. **Review clause by clause from the stated perspective.** For each risk
+3. **Red flags quick scan.** Run a fast first pass against the lease family
+   (Sections 1–8) and the cross-cutting sections (19–21) of
+   `skills/real-estate/references/red-flags.md`. Record each red-flag pattern
+   present, or note that none surfaced in the scan. This scan orients the
+   deeper clause-by-clause review; it does not replace it, confirm title or
+   lien priority, or compute any figure or date.
+
+4. **Review clause by clause from the stated perspective.** For each risk
    category below, summarize what the lease says in plain language, identify
    the risk to the reviewing party specifically, cite the affected clause
    (section / clause / exhibit / page), and note the direction a change would
-   move risk for that party. Where the lease is silent on a category, record
-   that the category is `Not addressed` and assess whether the absence is
-   itself a risk.
+   move risk for that party. Cross-check each category against the
+   corresponding entries in `skills/real-estate/references/red-flags.md` (lease
+   Sections 1–8; cross-cutting 19–21) and fold any pattern found into the issue
+   for that category, keeping every title or priority point `[ATTORNEY TO
+   CONFIRM]`. Where the lease is silent on a category, record that the category
+   is `Not addressed` and assess whether the absence is itself a risk.
 
    - **Rent and economic terms** — base rent, escalations, percentage rent,
      operating expenses or CAM, base year or expense stop, tenant's share,
@@ -177,29 +194,29 @@ Also out of scope (this skill does not): give final advice or a recommendation; 
      right of first refusal: scope, trigger, notice window, and pricing
      method.
 
-4. **Note date-driven obligations.** Identify every date-driven right or
+5. **Note date-driven obligations.** Identify every date-driven right or
    obligation the review touches — option-notice windows, cure periods,
    renewal deadlines, and similar. Record each date as the lease states it and
    flag each `[deadline verification required]`. Do not compute any date.
 
-5. **Build the risk matrix.** For each risk category reviewed, record the
+6. **Build the risk matrix.** For each risk category reviewed, record the
    affected clause and its source citation, the risk to the reviewing party,
    the severity, and the suggested direction of change. Categories the lease
    does not address are themselves entries in the matrix.
 
-6. **Draft the prioritized issue list.** Rank every identified issue High,
+7. **Draft the prioritized issue list.** Rank every identified issue High,
    Medium, or Low priority for the reviewing party based on likelihood and
    impact. For each High and Medium issue, state the issue and why it matters
    to that party, the affected clause with its source citation, and a
    **Suggested Direction** — the direction the change would move risk, not
    drafted language. Route substantive drafting to an attorney.
 
-7. **List open items for attorney verification.** Collect every `[CONFIRM: ...]`
+8. **List open items for attorney verification.** Collect every `[CONFIRM: ...]`
    placeholder, every assumption, every category marked `Not addressed` or
    `Ambiguous`, every referenced-but-not-provided document, and every point
    that needs jurisdiction-specific legal judgment.
 
-8. **Assemble the output** and label it clearly as a draft for attorney
+9. **Assemble the output** and label it clearly as a draft for attorney
    review.
 
 ## Output Format
@@ -212,25 +229,30 @@ Deliver, in order:
    the documents referenced but not provided.
 2. **Document Set** — every document provided and every document referenced but
    missing, with a note if a `lease-amendment-reconciliation` is needed.
-3. **Clause-by-Clause Issue List** — for each risk category from Workflow step
-   3, a plain-language summary of what the lease says, the risk to the
+3. **Red Flags Quick Scan** — each red-flag pattern from the lease family
+   (Sections 1–8) and cross-cutting sections (19–21) of
+   `skills/real-estate/references/red-flags.md` found in the lease, or a note
+   that none surfaced in the scan. No item is treated as a title, priority, or
+   enforceability conclusion, and no figure or date is computed.
+4. **Clause-by-Clause Issue List** — for each risk category from Workflow step
+   4, a plain-language summary of what the lease says, the risk to the
    reviewing party, the affected clause with a source citation, and the
    suggested direction of change. Categories the lease does not address are
    marked `Not addressed`.
-4. **Risk Matrix** — a table across the risk categories with columns: `Risk
+5. **Risk Matrix** — a table across the risk categories with columns: `Risk
    Category | Affected Clause (source) | Risk to [reviewing party] | Severity
    (High / Med / Low) | Suggested Direction`.
-5. **Date-Driven Obligations** — a table of date-driven rights and
+6. **Date-Driven Obligations** — a table of date-driven rights and
    obligations: `Item | Date or window as stated | Source | Note`, with each
    date flagged `[deadline verification required]`.
-6. **Prioritized Issue List** — issues ranked High / Medium / Low. For each
+7. **Prioritized Issue List** — issues ranked High / Medium / Low. For each
    High and Medium issue: the issue and why it matters to the reviewing party;
    the affected clause with its source citation; and a **Suggested Direction**
    (the direction of the change, not final clause language).
-7. **Open Items for Attorney Verification** — a checkbox list of every
+8. **Open Items for Attorney Verification** — a checkbox list of every
    `[CONFIRM: ...]` placeholder, assumption, `Not addressed` or `Ambiguous`
    item, missing document, and point needing jurisdiction-specific judgment.
-8. **Assumptions** — an explicit list of every assumption made about business
+9. **Assumptions** — an explicit list of every assumption made about business
    context, facts, or posture, kept separate from what the lease says.
 
 Use `[CONFIRM: ...]` wherever a fact, clause meaning, or conclusion is
@@ -245,6 +267,10 @@ unverified or ambiguous. Do not fill a gap with an invented term.
       jurisdiction are accurately stated.
 - [ ] Every issue raised has been spot-checked against the cited clause in the
       lease, and every quotation verified.
+- [ ] The Red Flags Quick Scan against `skills/real-estate/references/red-flags.md`
+      has been reviewed; every pattern it surfaced has been assessed for this
+      lease, and no scan item was treated as a title, priority, or
+      enforceability conclusion or as a computed figure or date.
 - [ ] Where amendments exist, controlling terms have been confirmed through a
       reconciliation rather than read from the base lease alone.
 - [ ] Governing law and jurisdiction have been confirmed, and any

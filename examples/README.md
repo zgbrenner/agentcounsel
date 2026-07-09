@@ -23,6 +23,11 @@ Notice the visible placeholders — `[CONFIRM: ...]`, `[verify jurisdiction]`, `
 | [`dpa-review-example.md`](dpa-review-example.md) | [DPA Review](../skills/privacy/dpa-review/SKILL.md) — a risk review of a data processing agreement. |
 | [`product-launch-review-example.md`](product-launch-review-example.md) | [Launch Review](../skills/product-legal/launch-review/SKILL.md) — pre-launch legal issue-spotting for a product feature. |
 | [`red-team-verifier-example.md`](red-team-verifier-example.md) | [Red-Team Verifier](../skills/legal-methodology/red-team-verifier/SKILL.md) — a final quality-control pass on a draft. |
+| [`termination-risk-example.md`](termination-risk-example.md) | [Termination Risk](../skills/employment/termination-risk/SKILL.md) — a fact-and-risk-factor organization for a proposed employee termination, with a completed risk checklist. |
+| [`board-minutes-example.md`](board-minutes-example.md) | [Board Minutes](../skills/corporate/board-minutes/SKILL.md) — a draft set of board minutes showing quorum handling, a recusal, and the attorney-verification framing. |
+| [`claim-chart-example.md`](claim-chart-example.md) | [Claim Chart](../skills/litigation/claim-chart/SKILL.md) — an element-by-element claim-to-evidence chart with a gap list, every element and authority flagged for attorney verification. |
+| [`rule-change-summary-example.md`](rule-change-summary-example.md) | [Rule Change Summary](../skills/regulatory/rule-change-summary/SKILL.md) — a plain-language summary and impact table for a fictional agency rule change, with every citation and date flagged. |
+| [`legal-research-memo-example.md`](legal-research-memo-example.md) | [Legal Research Memo](../skills/legal-research/legal-research-memo/SKILL.md) — an IRAC research memo whose every authority is a visible placeholder for attorney insertion. |
 
 ## Quality-layer examples
 

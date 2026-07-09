@@ -176,21 +176,33 @@ starter evals, and index/router/commands entries.
    `securities-capital-markets/equity-incentive-plan-review`, and
    `m-and-a/rw-insurance-review` are built and integrated. *Remaining:*
    consider a transition-services-agreement review (m-and-a).
-6. **Differentiate the family-law review skills** with a shared
-   `family-law/references/` issue catalog; add `real-estate/references/`.
-7. **More connectors:** PACER/RECAP (litigation, bankruptcy), USPTO
-   (the ip cluster), state-court/state-register aggregators.
-8. **Examples for flagship older skills** (employment `termination-risk`,
-   corporate `board-minutes`, ip `claim-chart`, regulatory
-   `rule-change-summary`, legal-research `legal-research-memo`) — seven areas
-   have no sample output.
-9. **Individual-client / capacity review panel** pairing with the new core
-   rule; a bankruptcy deadline-lens panel.
+6. **Differentiate the family-law review skills.** *Done (fourth pass):*
+   `skills/family-law/references/issue-catalog.md` and
+   `skills/real-estate/references/red-flags.md` are built, and the family-law
+   and real-estate review skills are wired to them (the two family-law review
+   skills were also differentiated so they no longer read as interchangeable).
+   *Remaining:* grow the one-file `output-patterns.md` reference areas
+   (bankruptcy, insurance, m-and-a, tax, trusts-estates) toward the six-file
+   `contracts/references/` depth.
+7. **More connectors.** *Done (fourth pass):* `connectors/pacer-recap.md`,
+   `connectors/uspto.md`, and `connectors/state-courts.md` are built and wired.
+   *Remaining:* statutory/legislative sources and foreign/international
+   tribunals if demand arises.
+8. **Examples for flagship older skills.** *Done (fourth pass):* worked
+   examples for `termination-risk`, `board-minutes`, `claim-chart`,
+   `rule-change-summary`, and `legal-research-memo` are built (fictional facts,
+   every authority a visible placeholder). *Remaining:* examples for the other
+   older areas' flagship skills as needed.
+9. **Individual-client / capacity review panel + bankruptcy deadline-lens
+   panel.** *Done (fourth pass):*
+   `review-panels/individual-client-capacity-panel.md` and
+   `review-panels/deadline-critical-bankruptcy-panel.md` are built.
 10. **Level the legal-methodology depth split** (seven ~100-line QC skills vs.
-    four ~200-line siblings) or document the lean profile as intentional; and
-    consider an orchestration entry (playbook or matter-pack) for the four
-    areas that have neither (ip, ai-governance, product-legal — financial-crime
-    gains skills in this change but still lacks a playbook).
+    four ~200-line siblings) or document the lean profile as intentional.
+    *Orchestration part done (fourth pass):* the four areas that had neither a
+    playbook nor a matter-pack (ip, ai-governance, product-legal,
+    financial-crime) now each have a playbook. *Remaining:* the QC-depth
+    decision itself.
 11. **Benchmark eval expansion** — 13 areas have zero benchmark cases.
 12. **Remaining expansion-plan items:** entertainment-media-sports overlay;
     government-contracts and immigration as candidate areas (run them through

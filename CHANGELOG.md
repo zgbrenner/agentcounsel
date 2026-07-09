@@ -8,6 +8,52 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Three connectors** extending the citation-verification surface (Markdown
+  integration contracts, no runtime): `connectors/pacer-recap.md` (federal
+  dockets via PACER / the free RECAP archive — for litigation and bankruptcy),
+  `connectors/uspto.md` (patent and trademark existence/status — for the ip
+  cluster), and `connectors/state-courts.md` (state-court and state-register
+  aggregators). Each verifies existence and metadata only — never legal
+  sufficiency, never a deadline — and is lightly wired into its consuming
+  skills (subpoena-triage, bankruptcy-deadline-tracker-intake, fto-triage,
+  trademark-clearance-triage, case-brief).
+- **Two shared reference catalogs** in the `contracts/references/` model:
+  `skills/family-law/references/issue-catalog.md` (449 lines, 8 issue areas,
+  framed as facts-and-questions per the area's no-conclusions posture, with a
+  safety-escalation section keyed to `core/capacity-and-vulnerable-parties.md`)
+  and `skills/real-estate/references/red-flags.md` (588 lines, 21 topic
+  sections across lease / purchase-and-sale / loan / cross-cutting families).
+- **Four playbooks** closing the orchestration gap for the areas that had
+  neither a playbook nor a matter-pack: `ip-brand-clearance-and-enforcement`,
+  `ai-governance-use-case-review`, `product-launch-legal-review`, and
+  `aml-customer-lifecycle-review`.
+- **Two review panels** for the individual-client and deadline-critical work
+  the existing six panels did not cover:
+  `review-panels/individual-client-capacity-panel.md` (operationalizes
+  `core/capacity-and-vulnerable-parties.md`) and
+  `review-panels/deadline-critical-bankruptcy-panel.md`.
+- **Five worked examples** for flagship older skills that had no sample output:
+  `termination-risk`, `board-minutes`, `claim-chart`, `rule-change-summary`,
+  and `legal-research-memo` — all on fictional facts with every citation,
+  case name, and authority a visible placeholder (no real-looking citations).
+
+### Changed
+
+- **Two family-law review skills de-boilerplated and differentiated** —
+  `settlement-agreement-issue-spotter` (now a cross-issue review across all
+  eight catalog areas) and `custody-order-review-checklist` (now scoped to a
+  custody/parenting order), each wired to the new issue catalog with a
+  scan step, output section, and checklist line, so they no longer read as
+  near-interchangeable.
+- **Four real-estate review skills wired** to the new red-flag catalog
+  (`commercial-lease-review`, `psa-review`, `loan-document-review`,
+  `estoppel-snda-review`) — each with a red-flags quick-scan step, output
+  section, and checklist line.
+- Updated `connectors/README.md`, `playbooks/README.md`,
+  `review-panels/README.md` (six → eight panels), and `examples/README.md`;
+  marked audit backlog items 6–10 (orchestration) progressed in
+  `reports/repository-audit-2026-07.md`; regenerated `metadata/`.
+
 - **Nine new skills** closing the audit backlog's "carved-out sibling" gaps
   (workflows existing skills already pointed at) and rounding out the newer
   areas:
