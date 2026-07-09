@@ -134,7 +134,7 @@ If the request text and date received are not provided, stop and request them. D
 
 ## Output Format
 
-Deliver the following, in order:
+Deliver the following, using `templates/dsar-handling-record.md`, in order:
 
 1. **Intake Log** — reference number, date received, channel, requester identification, request text or faithful summary.
 2. **Request Classification** — right(s) invoked; ambiguities noted.

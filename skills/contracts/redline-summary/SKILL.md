@@ -117,7 +117,7 @@ If only one version is provided (and no amendment chain), stop and request the o
 
 ## Output Format
 
-Deliver, in order:
+Deliver, using `templates/redline-summary-table.md`, in order:
 
 1. **Header** — Document title, base version and all amendments in sequence (or the two versions being compared), client's role, negotiation stage or review purpose, review date. For amendment chains, include the confirmed document sequence with dates or amendment numbers. Flag any inferred ordering: `[CONFIRM: ...]`.
 2. **Change-by-Change Table** — one row per substantive change, with columns: # | Source (amendment or round) | Section | Clause Topic | What Changed (Before → After) | Party Favored | Materiality (High/Med/Low) | Nature | Warrants Pushback (Yes/No/Attorney) | Suggested Response. For two-version comparisons, the Source column may be omitted.

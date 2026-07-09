@@ -48,27 +48,16 @@ import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from _shared import EvalParseError, parse_eval_yaml
+from _shared import EvalParseError, parse_eval_yaml, REQUIRED_EVAL_SLUGS
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVALS_DIR = REPO_ROOT / "evals"
 OUTPUTS_DIR = EVALS_DIR / "outputs"
 EVAL_SUFFIX = ".eval.yaml"
 
-# Slugs that must have a complete set of passing candidates under --strict.
-# Kept in sync with check_evals.py REQUIRED_EVAL_SLUGS by convention; the
-# two scripts share the eval-YAML parser via the neutral _shared module
-# rather than importing each other.
-REQUIRED_EVAL_SLUGS = [
-    "contract-risk-review",
-    "nda-review",
-    "matter-intake",
-    "litigation-chronology",
-    "privilege-log-review",
-    "dpa-review",
-    "launch-review",
-    "compliance-gap-matrix",
-]
+# REQUIRED_EVAL_SLUGS (slugs that must have a complete set of passing
+# candidates under --strict) lives in _shared.py (imported above) so
+# check_evals.py and run_evals.py share one list.
 
 
 # EvalParseError and parse_eval_yaml live in _shared.py (imported above) so

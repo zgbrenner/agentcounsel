@@ -103,7 +103,7 @@ This skill draws on shared employment reference material in `skills/employment/r
 
 ## Output Format
 
-Deliver the following sections, clearly labeled:
+Deliver the following sections, using `templates/severance-review-issues-table.md`, clearly labeled:
 
 1. **Agreement Overview** — parties, effective date, structure, and defined terms of significance.
 2. **Red Flags Quick Scan** — each red-flag pattern from `skills/employment/references/severance-release-red-flags.md` found in the agreement, or a note that none surfaced in the scan.

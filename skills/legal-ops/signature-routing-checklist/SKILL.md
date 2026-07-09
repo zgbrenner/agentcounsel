@@ -61,6 +61,7 @@ If the document is not provided, stop and request it. If signer information is i
 ## Legal Safety Rules
 
 - Produce draft work product for attorney review. This is not legal advice. A passing checklist is not authorization to execute; counsel sign-off remains required before a document is sent for signature.
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available.
 - Check only what is present in the document. Never invent entity names, signature blocks, exhibits, dates, or approvals.
 - Do not confirm that a signer is authorized to bind an entity — flag signing authority as a verification item.
 - Do not represent the document as "final"; only the responsible attorney or business owner confirms final form.
@@ -99,7 +100,7 @@ If the document is not provided, stop and request it. If signer information is i
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/signature-readiness-review.md`, in order:
 
 **DRAFT SIGNATURE READINESS REVIEW — FOR ATTORNEY REVIEW**
 

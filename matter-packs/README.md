@@ -46,6 +46,7 @@ matter-packs/
   bankruptcy-restructuring.md     - workflow bundles for the Bankruptcy / Restructuring practice area
   family-law.md                   - workflow bundles for the Family Law practice area
   insurance.md                    - workflow bundles for the Insurance practice area
+  litigation.md                   - workflow bundles for the Litigation practice area
   m-and-a.md                      - workflow bundles for the Mergers & Acquisitions practice area
   real-estate.md                  - workflow bundles for the Real Estate practice area
   securities-capital-markets.md   - workflow bundles for the Securities / Capital Markets practice area

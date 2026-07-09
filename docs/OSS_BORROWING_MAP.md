@@ -11,6 +11,13 @@ limited to license-compatible sources and must follow
 prose, prompts, schemas, examples, or eval content, so `THIRD_PARTY_NOTICES.md`
 does not need an update.
 
+A later addition to this map (the rows below covering `eyecite`,
+`reporters-db`/`courts-db`, `cuad`, the oneNDA/Bonterms/Common Paper open
+standards, and `adr/madr`) does adapt category taxonomies and a template
+shape under CC-BY-4.0, BSD-2-Clause, and MIT/CC0 terms, written independently
+in AgentCounsel's own words. That addition's attribution entries are recorded
+in `THIRD_PARTY_NOTICES.md`.
+
 | Repo | License | Category | Use now / use later / inspiration only / avoid | What to borrow | What not to borrow | Files or folders in AgentCounsel that should be affected | Attribution requirements | Risk notes |
 |---|---|---|---|---|---|---|---|---|
 | `Lum1104/Understand-Anything` | MIT | Code graph / knowledge graph | Use later | Local graph navigation patterns for explaining skill, pack, adapter, and connector relationships. | Do not import app/runtime code into the Markdown library. | `metadata/`, `site/`, future graph docs. | Attribute in `THIRD_PARTY_NOTICES.md` only if code or close schema patterns are adapted. | Useful for site UX and registry visualization; not needed for core skills. |
@@ -55,6 +62,15 @@ does not need an update.
 | `iOfficeAI/AionUi` | Apache-2.0 | Local CLI/cowork app | Use later | Local assistant UI and multi-agent workspace ideas for optional app path. | Do not add app runtime to the core library. | future `docs/LOCAL_APP_PATH.md`, optional companion app. | Attribute if code or UI structure is adapted. | Compatible license; defer behind app design. |
 | `prowler-cloud/prowler` | Apache-2.0 | Compliance evidence / checks | Use later | Evidence-based check result model, severity/status vocabulary, and compliance reporting concepts. | Do not copy cloud checks or compliance controls. | future `core/legal-review-panel.md`, `evals/`, `reports/`. | Attribute if result schemas or report structures are adapted. | Useful for review panels and validation reports. |
 | `OpenBMB/ChatDev` | Apache-2.0 | Multi-agent collaboration | Inspiration only | High-level role separation and review-loop concepts. | Do not import multi-agent software-factory flow into legal core. | future review workflow docs; adapter-specific experiments only. | Attribute if specific structures are adapted. | Interesting but likely too heavy for current roadmap. |
+| `freelawproject/eyecite` | BSD-2-Clause | Citation extraction / classification library | Use now | Citation-type classification (full case, short-form, supra, id., statutory, regulation, law-journal, unknown/partial), rewritten as an AgentCounsel taxonomy. | Do not copy code, regex patterns, or docstring text verbatim. | `skills/legal-research/references/citation-type-taxonomy.md`, `skills/legal-methodology/citation-integrity-check/SKILL.md`, `skills/legal-methodology/source-validation/SKILL.md`. | Attributed in `THIRD_PARTY_NOTICES.md` (BSD-2-Clause). | Classification categories are a taxonomy, not protectable expression, but every description is independently written. |
+| `freelawproject/reporters-db` + `freelawproject/courts-db` | BSD-2-Clause | Reporter / court reference datasets | Use now | Documented as a verification connector for reporter-abbreviation and court-name/abbreviation existence checks. | Do not bundle or redistribute the underlying datasets. | `connectors/reporters-and-courts.md`, `connectors/README.md`. | Attributed in `THIRD_PARTY_NOTICES.md` (BSD-2-Clause). | Existence-only check; does not confirm the cited case itself exists — documented as a limitation. |
+| `TheAtticusProject/cuad` | CC-BY-4.0 | Contract clause category taxonomy / dataset | Use now | Category names and grouping for a clause-category completeness checklist, with independently written descriptions of what to check and why. | Do not copy CUAD paper text, annotation guidelines, or dataset examples verbatim. | `skills/contracts/references/clause-category-checklist.md`, `skills/contracts/nda-review/SKILL.md`, `skills/contracts/contract-risk-review/SKILL.md`. | Attributed in `THIRD_PARTY_NOTICES.md` (CC-BY-4.0). | Category names/taxonomy are facts, not independently copyrightable; the checklist's descriptions are original. |
+| `oneNDA` / `Bonterms` / `Common Paper` | CC-BY-4.0 | Open standard commercial agreement templates | Use now | Own-words descriptions of each standard's scope, used as a labeled comparison baseline for contract review. | Do not copy template clause text or reproduce the standard agreements themselves. | `skills/contracts/references/market-standard-baselines.md`, `skills/contracts/nda-review/SKILL.md`, `skills/contracts/contract-risk-review/SKILL.md`. | Attributed in `THIRD_PARTY_NOTICES.md` (CC-BY-4.0). | Baseline comparisons are framed as a labeled legal inference for attorney review only, never as a compliance requirement. |
+| `HazyResearch/legalbench` | MIT repo license / mixed per-task licenses | Legal reasoning benchmark tasks | Use later — eval taxonomy only | High-level task-category taxonomy for possible future legal-methodology eval design. | Do not copy task text, prompts, or labeled examples; per-task data licenses vary and must each be confirmed before any content-level reuse. | future `evals/`, `docs/EVAL_COVERAGE.md`. | Attribute only if a task-category structure is directly adapted; confirm each task's own license before reuse. | The repository's MIT license does not guarantee every included task's data is MIT — treat as mixed until confirmed per task. |
+| `ICLRandD/Blackstone` | Apache-2.0 | Legal NLP entity-recognition model | Use later | High-level awareness of legal-entity and clause-type recognition categories for a possible future NLP-assisted intake skill. | Do not ship model weights, code, or training data into the Markdown library. | possibly future `skills/legal-research/`, `connectors/`. | Attribute in `THIRD_PARTY_NOTICES.md` if a schema or category structure is directly adapted. | License-compatible, but a model/runtime dependency does not fit the Markdown-only architecture — see `docs/decisions/0003-markdown-only-no-runtime.md`. |
+| `vale-cli/vale` | MIT | Declarative prose-linting rule engine | Use later | The declarative-rule pattern (style rules expressed as data, not code) as a possible future model for a Markdown-only prose-quality reference. | Do not import Vale's rule syntax, code, or bundled style packages. | future `skills/legal-methodology/legal-prose-polish/`, `evals/`. | Attribute if a rule-file format or concrete rule text is closely adapted. | Any adaptation must stay declarative Markdown/data, not an actual linter dependency, to preserve the no-runtime decision. |
+| `lycheeverse/lychee` | Dual MIT/Apache-2.0 | Link-checking CLI | Use now — link-rot CI | The concept of a scheduled, CI-run external-link liveness check, complementing `scripts/validate_repo.py`'s relative-link check (which does not reach external URLs). | Do not import lychee's code; if adopted, add it as an external CI dependency, not code inside `skills/`. | `.github/workflows/`, `docs/CLI.md` (if adopted). | Attribute only if configuration text is closely copied; as an external CI dependency it needs no code-level `THIRD_PARTY_NOTICES.md` entry unless text is copied. | Relevant to CI tooling only, not to the Markdown library itself; keep any adoption outside `skills/`. |
+| `adr/madr` | MIT/CC0 | Architecture decision record template | Use now | The lightweight Status/Context/Decision/Consequences record shape, applied to AgentCounsel's own existing decisions. | Do not copy MADR's full template text, example decisions, or its complete optional-field set wholesale. | `docs/decisions/`. | Attributed in `THIRD_PARTY_NOTICES.md` and noted in `docs/decisions/README.md` (MIT/CC0). | AgentCounsel's records are a shortened, independently written adaptation of MADR's shape, not a copy of its template file. |
 
 ## Direct-Reuse Shortlist
 
@@ -67,6 +83,13 @@ licensed and aligned with existing AgentCounsel systems:
 - `harveyai/harvey-labs` for eval maturity.
 - `public-api-lists/public-api-lists` for connector registry organization.
 - `mukul975/Anthropic-Cybersecurity-Skills` for large skill-registry patterns.
+- `freelawproject/eyecite` and `freelawproject/reporters-db`/`courts-db` for
+  citation-type taxonomy and reporter/court existence verification.
+- `TheAtticusProject/cuad` for a contract clause-category completeness
+  checklist.
+- `oneNDA`, `Bonterms`, and `Common Paper` for open-standard baseline
+  comparisons in contract review.
+- `adr/madr` for the decision-record shape in `docs/decisions/`.
 
 ## Inspiration-Only Watchlist
 

@@ -18,7 +18,7 @@ import re
 import sys
 import json
 from pathlib import Path
-from _shared import EvalParseError, parse_eval_yaml
+from _shared import EvalParseError, parse_eval_yaml, REQUIRED_EVAL_SLUGS
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVALS_DIR = REPO_ROOT / "evals"
@@ -30,18 +30,8 @@ def err(msg: str) -> None:
     errors.append(msg)
 
 
-# The eight skills that must each have a sample eval file under evals/skills/.
-# Each slug matches the canonical skill folder name under skills/.
-REQUIRED_EVAL_SLUGS = [
-    "contract-risk-review",
-    "nda-review",
-    "matter-intake",
-    "litigation-chronology",
-    "privilege-log-review",
-    "dpa-review",
-    "launch-review",
-    "compliance-gap-matrix",
-]
+# REQUIRED_EVAL_SLUGS lives in _shared.py (imported above) so check_evals.py
+# and run_evals.py share one list.
 
 # The recurring shared assertions evals/shared/assertions.md must define.
 REQUIRED_ASSERTION_IDS = [

@@ -47,6 +47,20 @@ REQUIRED_FIELDS = [
     "tags",
 ]
 
+# The eight skills that must each have a sample eval file under evals/skills/.
+# Each slug matches the canonical skill folder name under skills/. Shared by
+# check_evals.py and run_evals.py so the two scripts cannot drift apart.
+REQUIRED_EVAL_SLUGS = [
+    "contract-risk-review",
+    "nda-review",
+    "matter-intake",
+    "litigation-chronology",
+    "privilege-log-review",
+    "dpa-review",
+    "launch-review",
+    "compliance-gap-matrix",
+]
+
 
 # --- Restricted YAML subset parser ----------------------------------------
 #

@@ -20,6 +20,7 @@ related_skills:
   - skills/tax/tax-provision-review-checklist/SKILL.md
   - skills/tax/transaction-tax-diligence-request-list/SKILL.md
   - skills/tax/tax-issue-intake/SKILL.md
+  - skills/m-and-a/indemnity-escrow-risk-review/SKILL.md
   - skills/m-and-a/purchase-agreement-issue-list/SKILL.md
 tags:
   - tax

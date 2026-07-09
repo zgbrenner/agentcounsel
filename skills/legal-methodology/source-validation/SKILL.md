@@ -83,7 +83,7 @@ If the draft is not provided, stop and request it. If source documents are not p
 
 1. **Confirm inputs.** Verify that you have the complete draft text. Note whether source documents have been provided and, if not, record the resulting limitation: without source documents, only citation-tier classification is possible — quotation checking and claim-source tracing require the underlying documents.
 
-2. **Enumerate every citation and claim.** Read through the draft systematically and build a complete inventory of:
+2. **Enumerate every citation and claim.** Use `skills/legal-research/references/citation-type-taxonomy.md` to classify each citation's form (full case citation, short-form, supra, `Id.`, statutory, regulation, law-journal, or unknown/partial) so that short forms, supras, and `Id.` citations are correctly matched to their antecedent before verification. Read through the draft systematically and build a complete inventory of:
    - Case citations: case name, citation, reporter, year, court.
    - Statutory and regulatory citations: instrument name, section, version or effective date.
    - Secondary source citations: treatise, article, report, guidance document.

@@ -6606,7 +6606,7 @@
       ],
       "category": "drafting",
       "requires_jurisdiction": true,
-      "requires_deadline_check": false,
+      "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
         "legal-prose-polish",
@@ -8127,11 +8127,12 @@
       ],
       "category": "verification",
       "requires_jurisdiction": false,
-      "requires_deadline_check": false,
+      "requires_deadline_check": true,
       "recommended_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
         "source-validation-check",
+        "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
         "output-format-compliance-check"
       ],
@@ -9223,7 +9224,8 @@
       ],
       "related_skills": [
         "skills/litigation/litigation-chronology/SKILL.md",
-        "skills/litigation/matter-intake/SKILL.md"
+        "skills/litigation/matter-intake/SKILL.md",
+        "skills/litigation/subpoena-triage/SKILL.md"
       ],
       "tags": [
         "litigation",
@@ -9846,7 +9848,8 @@
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/loi-term-sheet-review/SKILL.md",
-        "skills/m-and-a/rw-insurance-review/SKILL.md"
+        "skills/m-and-a/rw-insurance-review/SKILL.md",
+        "skills/tax/tax-covenants-indemnities-review/SKILL.md"
       ],
       "tags": [
         "m-and-a",
@@ -11358,7 +11361,8 @@
       "related_skills": [
         "skills/contracts/nda-review/SKILL.md",
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
-        "skills/product-legal/launch-review/SKILL.md"
+        "skills/product-legal/launch-review/SKILL.md",
+        "skills/product-legal/marketing-claims-review/SKILL.md"
       ],
       "tags": [
         "product-legal",
@@ -15767,6 +15771,7 @@
         "skills/tax/tax-provision-review-checklist/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
         "skills/tax/tax-issue-intake/SKILL.md",
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md"
       ],
       "tags": [

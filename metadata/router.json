@@ -3368,7 +3368,7 @@
         "Whether the task is an outbound notice or a response to a received notice"
       ],
       "jurisdiction_gate": true,
-      "deadline_gate": false,
+      "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
         "attorney-review-gate",
@@ -4126,12 +4126,13 @@
         "The signing preferences: sequential or parallel order and any CC recipients"
       ],
       "jurisdiction_gate": false,
-      "deadline_gate": false,
+      "deadline_gate": true,
       "attorney_escalation": "Required before reliance; escalate immediately for missing jurisdiction, missing deadlines, source uncertainty, privilege/confidentiality risk, or any high-stakes legal conclusion.",
       "recommended_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
         "source-validation-check",
+        "jurisdiction-deadline-gates",
         "privilege-confidentiality-check",
         "output-format-compliance-check"
       ],
@@ -4660,7 +4661,8 @@
       "source_validation_mandatory": false,
       "related_skills": [
         "skills/litigation/litigation-chronology/SKILL.md",
-        "skills/litigation/matter-intake/SKILL.md"
+        "skills/litigation/matter-intake/SKILL.md",
+        "skills/litigation/subpoena-triage/SKILL.md"
       ]
     },
     {
@@ -4969,7 +4971,8 @@
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md",
         "skills/m-and-a/reps-warranties-disclosure-schedule-review/SKILL.md",
         "skills/m-and-a/loi-term-sheet-review/SKILL.md",
-        "skills/m-and-a/rw-insurance-review/SKILL.md"
+        "skills/m-and-a/rw-insurance-review/SKILL.md",
+        "skills/tax/tax-covenants-indemnities-review/SKILL.md"
       ]
     },
     {
@@ -5705,7 +5708,8 @@
       "related_skills": [
         "skills/contracts/nda-review/SKILL.md",
         "skills/privacy/privacy-policy-gap-review/SKILL.md",
-        "skills/product-legal/launch-review/SKILL.md"
+        "skills/product-legal/launch-review/SKILL.md",
+        "skills/product-legal/marketing-claims-review/SKILL.md"
       ]
     },
     {
@@ -7783,6 +7787,7 @@
         "skills/tax/tax-provision-review-checklist/SKILL.md",
         "skills/tax/transaction-tax-diligence-request-list/SKILL.md",
         "skills/tax/tax-issue-intake/SKILL.md",
+        "skills/m-and-a/indemnity-escrow-risk-review/SKILL.md",
         "skills/m-and-a/purchase-agreement-issue-list/SKILL.md"
       ]
     },

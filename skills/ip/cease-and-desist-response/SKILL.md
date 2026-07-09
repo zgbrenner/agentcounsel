@@ -59,12 +59,12 @@ Optional input: the client's IP enforcement posture or policy, if available, whi
 
 ## Legal Safety Rules
 
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available. Do not invent registration numbers or filing dates either; treat model background knowledge about any specific case, statute, or regulation as unverified and use `[citation needed]` or `[verify jurisdiction]` as appropriate.
 - Produce draft legal work product for attorney review. This memo is NOT legal advice and NOT a merits opinion. The client must not respond, decide to ignore the letter, or commit to any course of action based solely on this memo.
 - The triage rating assigned in this memo is a structured read of the letter for routing purposes only. It is NOT a determination of whether the client infringes or whether the asserted right is valid.
 - The validity of the asserted right and the applicable legal test are attorney determinations. Do not autonomously verify the sender's cited authority, assert that a cited registration is valid or invalid, or claim that a particular legal test applies. Flag all such points `[verify jurisdiction]` or `[ATTORNEY TO CONFIRM]`.
 - A deadline stated in a received cease-and-desist letter does not necessarily bind the recipient — but never compute, assert, or extend any deadline. Apply `[deadline verification required]` to every stated or derived date.
 - A received cease-and-desist letter may trigger a duty to preserve documents and other material. Flag issuing a legal hold as an immediate action without rendering any legal opinion about whether such a duty has attached `[ATTORNEY TO CONFIRM]`.
-- Do not invent facts, legal authority, citations, registration numbers, filing dates, or quotations. Treat model background knowledge about any specific case, statute, or regulation as unverified; use `[citation needed]` or `[verify jurisdiction]` as appropriate.
 - Separate clearly: (a) what the letter states, (b) what the client has disclosed, (c) your analytical observations, and (d) items requiring attorney or third-party verification.
 - Preserve confidentiality and privilege. Do not include client-sensitive facts in reusable templates or in any output that might be shared outside the privileged engagement.
 - Flag every uncertainty with a placeholder rather than resolving it silently.

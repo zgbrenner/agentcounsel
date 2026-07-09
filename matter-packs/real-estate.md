@@ -12,6 +12,11 @@ and document set for the matter. None of these skills computes a deadline,
 states jurisdiction-specific law, or reaches a title, zoning, or other legal
 conclusion — those remain attorney work.
 
+**Quality check.** Before a drafted or marked-up agreement from any pack below
+reaches the final attorney-review checkpoint, run it through
+`review-panels/contract-review-panel.md` for a multi-lens issue, position, and
+risk review.
+
 ---
 
 ## 1. Commercial Lease Review Matter Pack

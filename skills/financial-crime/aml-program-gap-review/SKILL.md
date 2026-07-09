@@ -107,7 +107,7 @@ If the document set or the framework is missing, stop and request it. If the fra
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/aml-program-gap-matrix.md`, in order:
 
 **DRAFT AML PROGRAM GAP REVIEW — PRIVILEGED AND CONFIDENTIAL — FOR COMPLIANCE AND ATTORNEY REVIEW ONLY**
 

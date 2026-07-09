@@ -108,6 +108,9 @@ terms, and substantiation file together justify multi-file tracking.
   matter facts out of reusable artifacts.
 - `skills/legal-methodology/output-format-compliance-check/` — the registers
   conform to each skill's format.
+- For a high-risk claim or launch issue (an unsubstantiated superiority claim
+  or a regulated-industry touchpoint), run
+  `review-panels/regulatory-risk-panel.md` before the attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — the deliverable ships with
   its checklist unchecked.
 

@@ -4,6 +4,11 @@ This guide maps a task to the right skill. Use it to go from "I need to do X" to
 
 > Before running any skill, read the `core/` operating rules. Every skill produces **draft legal work product for attorney review** — never legal advice.
 
+**New here?** Start with a single skill from the tables below. The multi-skill
+surfaces — matter packs, playbooks, review panels, and matter workspaces — are
+useful once you have run a few skills and see the recurring pattern; they can
+wait until then.
+
 ## How routing works
 
 1. Identify the task type from the user's request.
@@ -51,14 +56,14 @@ Machine-readable routing data is generated in `metadata/router.json`.
 | "Draft a demand letter" | `skills/litigation/demand-letter/SKILL.md` | Parties; factual chronology; counsel-approved claim theory; jurisdiction; response deadline; settlement authority. | Deadline gate; `source-validation-check` and `citation-integrity-check` for legal assertions; `hallucination-red-team`; `privilege-confidentiality-check`; attorney review before sending. |
 | "Check this contract for risk" | `skills/contracts/contract-risk-review/SKILL.md`; use a contracts practice-area pack for repeated contract work. | Contract text; client role; deal context; governing law; fallback positions or playbook. | `source-validation-check` if legal authority is cited; `assumption-audit`; `legal-prose-polish`; `attorney-review-gate`. |
 | "I need help with a California employee termination" | `skills/employment/termination-risk/SKILL.md`; create a matter workspace if this is a live matter. | Employee role/tenure; reason; protected-class, leave, accommodation, retaliation, complaint, and wage facts; policies; planned date. | California jurisdiction gate; deadline/final-pay timing gate; `privilege-confidentiality-check`; `source-validation-check`; `hallucination-red-team`; `attorney-review-gate`. |
-| "Open a new acquisition that will run for months" | A **matter workspace**: `matter-workspaces/_template/` via `py scripts/init_matter_workspace.py`. | Deal type, side, structure; parties; jurisdiction; key deadlines; document set; supervising attorney. | Multi-step/deadline-sensitive — workspace first; jurisdiction and deadline gates; `source-validation-check`; `citation-integrity-check`; `privilege-confidentiality-check`; `attorney-review-gate`. |
+| "Open a new acquisition that will run for months" | A **matter workspace**: `matter-workspaces/_template/` via `python scripts/init_matter_workspace.py`. | Deal type, side, structure; parties; jurisdiction; key deadlines; document set; supervising attorney. | Multi-step/deadline-sensitive — workspace first; jurisdiction and deadline gates; `source-validation-check`; `citation-integrity-check`; `privilege-confidentiality-check`; `attorney-review-gate`. |
 | "Run a full multi-pass review of this contract before signing" | A **review panel**: `review-panels/contract-review-panel.md`. | Final contract text; client role and priorities; fallback positions; governing law. | Passes are not autonomous agents/lawyers; `assumption-audit`; `source-validation-check`; `privilege-confidentiality-check`; `legal-prose-polish`; `attorney-review-gate`. |
 | "We review NDAs the same way every week" | A **playbook**: `playbooks/nda-review.md` (anchored on `skills/contracts/nda-review/SKILL.md`). | Full NDA text; client role; transaction context; client risk tolerance. | `source-validation-check`; `legal-prose-polish`; `attorney-review-gate`. |
 | "Just check this memo for invented or unsupported citations" | A **quality check**: `skills/legal-methodology/citation-integrity-check/SKILL.md`. | The draft; the sources relied on; jurisdiction if authorities are jurisdiction-specific. | `citation-integrity-check`; `source-validation-check`; `hallucination-red-team`. |
 
 ## Before you start: complex or multi-step matters
 
-If the task is more than a single, self-contained skill run — it is multi-step, document-heavy, high-risk, ongoing, jurisdiction-sensitive, deadline-sensitive, source/citation-heavy, likely to require multiple quality checks, or likely to require attorney escalation — create a **matter workspace** first. Run `skills/setup/create-matter-workspace/SKILL.md`, or initialize the canonical multi-file template directly with `py scripts/init_matter_workspace.py "<matter name>" --practice-area <area>`. The workspace carries the matter's parties, facts, jurisdiction, deadlines, sources, assumptions, and the draft work product produced by every skill you run, so context is not lost between steps. Single-file templates live at `matter-workspaces/<matter-type>.md`; the multi-file template lives at `matter-workspaces/_template/`. See `docs/MATTER_WORKSPACES.md`. For a one-off task, skip this and go straight to the skill.
+If the task is more than a single, self-contained skill run — it is multi-step, document-heavy, high-risk, ongoing, jurisdiction-sensitive, deadline-sensitive, source/citation-heavy, likely to require multiple quality checks, or likely to require attorney escalation — create a **matter workspace** first. Run `skills/setup/create-matter-workspace/SKILL.md`, or initialize the canonical multi-file template directly with `python scripts/init_matter_workspace.py "<matter name>" --practice-area <area>`. The workspace carries the matter's parties, facts, jurisdiction, deadlines, sources, assumptions, and the draft work product produced by every skill you run, so context is not lost between steps. Single-file templates live at `matter-workspaces/<matter-type>.md`; the multi-file template lives at `matter-workspaces/_template/`. See `docs/MATTER_WORKSPACES.md`. For a one-off task, skip this and go straight to the skill.
 
 For a recurring task *type* (for example NDA review or a demand letter) that you run the same way each time, use a **playbook** in `playbooks/` — it adds default client-position questions, risk-tolerance settings, required source materials, and required quality checks on top of the underlying skill. See `docs/PLAYBOOKS.md`.
 
@@ -80,6 +85,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Review this data processing agreement / DPA" | `skills/privacy/dpa-review/SKILL.md` |
 | "Review this AI vendor's terms" | `skills/ai-governance/ai-vendor-terms-review/SKILL.md` |
 | "Review these terms of service" | `skills/product-legal/terms-of-service-review/SKILL.md` |
+| "We review NDAs / commercial contracts the same way every time" | `playbooks/nda-review.md` / `playbooks/commercial-contract-review.md` |
 
 ### Corporate and transactions
 
@@ -92,6 +98,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Pull the issues out of these diligence documents" | `skills/corporate/diligence-issue-extraction/SKILL.md` |
 | "Build the material contracts schedule" | `skills/corporate/material-contract-schedule/SKILL.md` |
 | "Review our entities' annual-report / good-standing status" | `skills/corporate/entity-compliance/SKILL.md` |
+| "We run this board/governance action the same way every time" | `playbooks/corporate-governance-review.md` |
 
 ### Real estate
 
@@ -107,6 +114,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Review this estoppel certificate or SNDA" | `skills/real-estate/estoppel-snda-review/SKILL.md` |
 | "Spot the zoning and use-restriction issues" | `skills/real-estate/zoning-use-restriction-issue-spotter/SKILL.md` |
 | "Review these loan documents" / "review the mortgage / note / guaranty" | `skills/real-estate/loan-document-review/SKILL.md` |
+| "Running this real estate matter end to end" | `matter-packs/real-estate.md` |
 
 ### Mergers and acquisitions
 
@@ -123,6 +131,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "What third-party consents does this deal need?" | `skills/m-and-a/third-party-consents-assignment-review/SKILL.md` |
 | "Track the post-closing obligations" | `skills/m-and-a/post-closing-obligations-tracker/SKILL.md` |
 | "Build a legal integration checklist" | `skills/m-and-a/integration-legal-issues-checklist/SKILL.md` |
+| "Running the whole deal end to end" | `matter-packs/m-and-a.md` |
 
 
 ### Antitrust / competition
@@ -139,6 +148,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Build pre-closing gun-jumping checklist" | `skills/antitrust-competition/gun-jumping-clean-team-checklist/SKILL.md` |
 | "Review trade-association agenda/minutes" | `skills/antitrust-competition/trade-association-meeting-review/SKILL.md` |
 | "Review antitrust compliance policy/training" | `skills/antitrust-competition/antitrust-compliance-policy-review/SKILL.md` |
+| "Running this antitrust matter end to end" | `matter-packs/antitrust-competition.md` |
 
 ### Litigation and disputes
 
@@ -160,6 +170,8 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Synthesize a rule across these cases" / "what's the rule across this set of authorities" | `skills/legal-research/authority-synthesis/SKILL.md` |
 | "Trace the regulatory history of this CFR section" / "what did this regulation say on this date" | `skills/legal-research/regulatory-history-tracer/SKILL.md` |
 | "Is this case still good law?" / "check these authorities for negative treatment" | `skills/legal-research/negative-treatment-check/SKILL.md` |
+| "Running this litigation matter end to end" | `matter-packs/litigation.md` |
+| "We draft demand letters / research memos the same way every time" | `playbooks/litigation-demand-letter.md` / `playbooks/legal-research-memo.md` |
 
 ### Employment
 
@@ -176,6 +188,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Review these non-compete / non-solicit covenants" / "can this new hire's prior covenants be a problem?" | `skills/employment/restrictive-covenant-review/SKILL.md` |
 | "Review our employee handbook / this workplace policy" | `skills/employment/employee-policy-review/SKILL.md` |
 | "Review our internal employee AI-use policy" | `skills/ai-governance/employee-ai-policy/SKILL.md` |
+| "We run this termination risk read the same way every time" | `playbooks/employment-termination-analysis.md` |
 
 ### Privacy and data
 
@@ -188,6 +201,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "We had a security incident" / "someone got into the system" / "do we have to notify anyone?" | `skills/privacy/breach-response-workflow/SKILL.md` |
 | "This vendor hosts data abroad" / "map our cross-border transfers" / "organize the TIA facts" | `skills/privacy/cross-border-transfer-review/SKILL.md` |
 | "Run privacy diligence on this vendor" / "the security questionnaire came back" | `skills/privacy/vendor-privacy-diligence/SKILL.md` |
+| "We review DPAs the same way every time" | `playbooks/privacy-dpa-review.md` |
 
 ### Product, marketing, and AI features
 
@@ -198,6 +212,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Review the legal risk of this AI feature" | `skills/product-legal/ai-feature-review/SKILL.md` |
 | "Intake / triage a proposed AI use case" | `skills/ai-governance/ai-use-case-intake/SKILL.md` |
 | "Triage the risk of this AI model / system" | `skills/ai-governance/model-risk-triage/SKILL.md` |
+| "We run pre-launch reviews / AI use-case intake the same way every time" | `playbooks/product-launch-legal-review.md` / `playbooks/ai-governance-use-case-review.md` |
 
 ### Regulatory and compliance
 
@@ -208,6 +223,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Map these requirements against our controls" | `skills/regulatory/compliance-gap-matrix/SKILL.md` |
 | "Track our compliance with this framework over time" / "audit prep" | `skills/regulatory/compliance-program-tracker/SKILL.md` |
 | "We got an exam letter / information request from a regulator" / "respond to this supervisory inquiry" | `skills/regulatory/regulatory-exam-response/SKILL.md` |
+| "We summarize rule changes the same way every time" | `playbooks/regulatory-rule-change-summary.md` |
 
 ### Intellectual property
 
@@ -220,6 +236,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "Is this infringing?" / "triage a possible IP infringement" | `skills/ip/infringement-triage/SKILL.md` |
 | "Prepare / respond to a DMCA takedown" | `skills/ip/dmca-takedown/SKILL.md` |
 | "Review the open-source licenses in this project" | `skills/ip/open-source-license-review/SKILL.md` |
+| "We run brand clearance / enforcement the same way every time" | `playbooks/ip-brand-clearance-and-enforcement.md` |
 
 ### Financial crime and AML
 
@@ -230,6 +247,7 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "A monitoring alert fired on this customer" / "triage this transaction alert" | `skills/financial-crime/transaction-monitoring-alert-triage/SKILL.md` |
 | "Check our AML program against the required elements" / "gap-review our BSA program" | `skills/financial-crime/aml-program-gap-review/SKILL.md` |
 | "Review this EDD file" / "work up this high-risk customer's due-diligence file" | `skills/financial-crime/edd-file-review/SKILL.md` |
+| "We run this customer's AML lifecycle review the same way every time" | `playbooks/aml-customer-lifecycle-review.md` |
 
 ### Securities / capital markets
 
@@ -250,6 +268,8 @@ The Securities / Capital Markets skills produce **draft work product for a quali
 | "Build a capital-markets closing checklist" | `skills/securities-capital-markets/capital-markets-closing-checklist/SKILL.md` |
 | "Track comfort and backup requests" | `skills/securities-capital-markets/comfort-backup-request-tracker/SKILL.md` |
 | "Intake public-company reporting calendar facts" | `skills/securities-capital-markets/public-company-reporting-calendar-intake/SKILL.md` |
+| "Running this offering / matter end to end" | `matter-packs/securities-capital-markets.md` |
+| "We review disclosure drafts the same way every time" | `playbooks/securities-disclosure-review.md` |
 
 ### Tax
 
@@ -267,6 +287,7 @@ The Tax skills produce **draft work product for qualified tax counsel or a licen
 | "Review tax covenants and indemnities in a transaction agreement" | `skills/tax/tax-covenants-indemnities-review/SKILL.md` |
 | "Issue-spot cross-border tax questions" | `skills/tax/international-tax-issue-spotter/SKILL.md` |
 | "Intake crypto and digital-asset activity and records" | `skills/tax/crypto-digital-asset-tax-intake/SKILL.md` |
+| "Running this tax matter end to end" | `matter-packs/tax.md` |
 
 ### Bankruptcy / restructuring
 
@@ -286,6 +307,7 @@ The Bankruptcy / Restructuring skills produce **draft work product for a qualifi
 | "Build a bankruptcy or distressed asset-sale checklist" | `skills/bankruptcy-restructuring/distressed-asset-sale-checklist/SKILL.md` |
 | "Issue-spot a cash collateral or DIP financing document" | `skills/bankruptcy-restructuring/cash-collateral-dip-financing-issue-spotter/SKILL.md` |
 | "Intake bankruptcy dates into a draft deadline tracker" | `skills/bankruptcy-restructuring/bankruptcy-deadline-tracker-intake/SKILL.md` |
+| "Running this bankruptcy matter end to end" | `matter-packs/bankruptcy-restructuring.md` |
 
 ### Insurance
 
@@ -305,6 +327,7 @@ The Insurance skills produce **draft work product for a qualified, licensed atto
 | "Organize potential subrogation and recovery facts" | `skills/insurance/subrogation-recovery-tracker/SKILL.md` |
 | "Build a renewal or placement diligence checklist" | `skills/insurance/policy-renewal-placement-diligence-checklist/SKILL.md` |
 | "Review insurer/insured/claimant/broker communications" | `skills/insurance/insurer-insured-communications-review/SKILL.md` |
+| "Running this insurance matter end to end" | `matter-packs/insurance.md` |
 
 ### Trusts & estates
 
@@ -324,6 +347,7 @@ The Trusts & Estates skills produce **draft work product for a qualified, licens
 | "Build a trust funding checklist" | `skills/trusts-estates/trust-funding-checklist/SKILL.md` |
 | "Build a post-death administration task tracker" | `skills/trusts-estates/post-death-administration-task-tracker/SKILL.md` |
 | "Intake estate, gift, GST, or inheritance tax issues" | `skills/trusts-estates/estate-tax-issue-intake/SKILL.md` |
+| "Running this trusts & estates matter end to end" | `matter-packs/trusts-estates.md` |
 
 ### Family law
 
@@ -343,6 +367,7 @@ The Family Law skills produce **draft work product for a qualified, licensed att
 | "Family law discovery tracker" | `skills/family-law/discovery-tracker/SKILL.md` |
 | "Family law hearing preparation" | `skills/family-law/hearing-prep-checklist/SKILL.md` |
 | "Domestic violence safety referral considerations" | `skills/family-law/domestic-violence-safety-referral-checklist/SKILL.md` |
+| "Running this family law matter end to end" | `matter-packs/family-law.md` |
 
 ### Legal operations
 
@@ -352,6 +377,7 @@ The Family Law skills produce **draft work product for a qualified, licensed att
 | "Draft a response to this data subject request / litigation hold / vendor question" | `skills/legal-ops/templated-legal-response/SKILL.md` |
 | "Prepare me for this meeting" / "build a meeting briefing" | `skills/legal-ops/legal-meeting-briefing/SKILL.md` |
 | "Is this ready to sign?" / "set up signing for this document" | `skills/legal-ops/signature-routing-checklist/SKILL.md` |
+| "We triage and answer inbound legal requests the same way every time" | `playbooks/legal-intake-response.md` |
 
 ### Setting up and configuring AgentCounsel
 

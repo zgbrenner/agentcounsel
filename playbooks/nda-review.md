@@ -87,6 +87,9 @@ attorney decision.
   role, term, or context.
 - `skills/legal-methodology/privilege-confidentiality-check/` — keep client
   facts out of any reusable artifact.
+- For a high-risk NDA (a client "never accept" term, or a non-standard
+  counterparty), run `review-panels/contract-review-panel.md` before the
+  attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — confirm the deliverable
   ships with its checklist unchecked.
 

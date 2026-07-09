@@ -73,7 +73,9 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/legal-research/legal-research-memo/templates/legal-research-memo.md"
+        "skills/legal-research/case-brief/templates/case-brief-outline.md",
+        "skills/legal-research/legal-research-memo/templates/legal-research-memo.md",
+        "skills/legal-research/references/citation-type-taxonomy.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -95,7 +97,9 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/regulatory-matter.md"
       ],
-      "included_playbooks": [],
+      "included_playbooks": [
+        "playbooks/legal-research-memo.md"
+      ],
       "included_review_panels": [],
       "included_source_citation_templates": [
         "matter-workspaces/_template/source_log.md",
@@ -140,7 +144,9 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/legal-research/legal-research-memo/templates/legal-research-memo.md"
+        "skills/legal-research/case-brief/templates/case-brief-outline.md",
+        "skills/legal-research/legal-research-memo/templates/legal-research-memo.md",
+        "skills/legal-research/references/citation-type-taxonomy.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -162,7 +168,9 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/regulatory-matter.md"
       ],
-      "included_playbooks": [],
+      "included_playbooks": [
+        "playbooks/legal-research-memo.md"
+      ],
       "included_review_panels": [],
       "included_source_citation_templates": [
         "matter-workspaces/_template/source_log.md",
@@ -207,7 +215,9 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/legal-research/legal-research-memo/templates/legal-research-memo.md"
+        "skills/legal-research/case-brief/templates/case-brief-outline.md",
+        "skills/legal-research/legal-research-memo/templates/legal-research-memo.md",
+        "skills/legal-research/references/citation-type-taxonomy.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -229,7 +239,9 @@
         "matter-workspaces/privacy-matter.md",
         "matter-workspaces/regulatory-matter.md"
       ],
-      "included_playbooks": [],
+      "included_playbooks": [
+        "playbooks/legal-research-memo.md"
+      ],
       "included_review_panels": [],
       "included_source_citation_templates": [
         "matter-workspaces/_template/source_log.md",
@@ -298,12 +310,15 @@
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/litigation.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/litigation-matter.md"
       ],
       "included_playbooks": [
+        "playbooks/legal-research-memo.md",
         "playbooks/litigation-demand-letter.md"
       ],
       "included_review_panels": [],
@@ -374,12 +389,15 @@
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/litigation.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/litigation-matter.md"
       ],
       "included_playbooks": [
+        "playbooks/legal-research-memo.md",
         "playbooks/litigation-demand-letter.md"
       ],
       "included_review_panels": [],
@@ -450,12 +468,15 @@
         "jurisdiction-deadline-gates",
         "privilege-confidentiality-check"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/litigation.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/litigation-matter.md"
       ],
       "included_playbooks": [
+        "playbooks/legal-research-memo.md",
         "playbooks/litigation-demand-letter.md"
       ],
       "included_review_panels": [],
@@ -503,9 +524,12 @@
       "included_templates": [
         "skills/contracts/contract-risk-review/templates/contract-risk-matrix.md",
         "skills/contracts/nda-review/templates/nda-risk-table.md",
+        "skills/contracts/redline-summary/templates/redline-summary-table.md",
+        "skills/contracts/references/clause-category-checklist.md",
         "skills/contracts/references/document-type-checklists.md",
         "skills/contracts/references/fallback-language-bank.md",
         "skills/contracts/references/market-benchmark-framework.md",
+        "skills/contracts/references/market-standard-baselines.md",
         "skills/contracts/references/negotiability-ratings.md",
         "skills/contracts/references/red-flags.md",
         "skills/contracts/references/redline-output-guidance.md"
@@ -574,9 +598,12 @@
       "included_templates": [
         "skills/contracts/contract-risk-review/templates/contract-risk-matrix.md",
         "skills/contracts/nda-review/templates/nda-risk-table.md",
+        "skills/contracts/redline-summary/templates/redline-summary-table.md",
+        "skills/contracts/references/clause-category-checklist.md",
         "skills/contracts/references/document-type-checklists.md",
         "skills/contracts/references/fallback-language-bank.md",
         "skills/contracts/references/market-benchmark-framework.md",
+        "skills/contracts/references/market-standard-baselines.md",
         "skills/contracts/references/negotiability-ratings.md",
         "skills/contracts/references/red-flags.md",
         "skills/contracts/references/redline-output-guidance.md"
@@ -645,9 +672,12 @@
       "included_templates": [
         "skills/contracts/contract-risk-review/templates/contract-risk-matrix.md",
         "skills/contracts/nda-review/templates/nda-risk-table.md",
+        "skills/contracts/redline-summary/templates/redline-summary-table.md",
+        "skills/contracts/references/clause-category-checklist.md",
         "skills/contracts/references/document-type-checklists.md",
         "skills/contracts/references/fallback-language-bank.md",
         "skills/contracts/references/market-benchmark-framework.md",
+        "skills/contracts/references/market-standard-baselines.md",
         "skills/contracts/references/negotiability-ratings.md",
         "skills/contracts/references/red-flags.md",
         "skills/contracts/references/redline-output-guidance.md"
@@ -938,6 +968,7 @@
         "skills/employment/internal-investigation/templates/investigation-memo-outline.md",
         "skills/employment/references/output-patterns.md",
         "skills/employment/references/severance-release-red-flags.md",
+        "skills/employment/severance-review/templates/severance-review-issues-table.md",
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
@@ -1011,6 +1042,7 @@
         "skills/employment/internal-investigation/templates/investigation-memo-outline.md",
         "skills/employment/references/output-patterns.md",
         "skills/employment/references/severance-release-red-flags.md",
+        "skills/employment/severance-review/templates/severance-review-issues-table.md",
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
@@ -1084,6 +1116,7 @@
         "skills/employment/internal-investigation/templates/investigation-memo-outline.md",
         "skills/employment/references/output-patterns.md",
         "skills/employment/references/severance-release-red-flags.md",
+        "skills/employment/severance-review/templates/severance-review-issues-table.md",
         "skills/employment/termination-risk/templates/termination-risk-checklist.md"
       ],
       "included_quality_checks": [
@@ -1152,6 +1185,7 @@
       ],
       "included_templates": [
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
+        "skills/privacy/dsar-workflow/templates/dsar-handling-record.md",
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
         "skills/privacy/references/dpa-red-flags.md"
       ],
@@ -1223,6 +1257,7 @@
       ],
       "included_templates": [
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
+        "skills/privacy/dsar-workflow/templates/dsar-handling-record.md",
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
         "skills/privacy/references/dpa-red-flags.md"
       ],
@@ -1294,6 +1329,7 @@
       ],
       "included_templates": [
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
+        "skills/privacy/dsar-workflow/templates/dsar-handling-record.md",
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
         "skills/privacy/references/dpa-red-flags.md"
       ],
@@ -2332,6 +2368,8 @@
         "playbooks/corporate-governance-review.md",
         "playbooks/employment-termination-analysis.md",
         "playbooks/ip-brand-clearance-and-enforcement.md",
+        "playbooks/legal-intake-response.md",
+        "playbooks/legal-research-memo.md",
         "playbooks/litigation-demand-letter.md",
         "playbooks/nda-review.md",
         "playbooks/privacy-dpa-review.md",
@@ -2420,6 +2458,8 @@
         "playbooks/corporate-governance-review.md",
         "playbooks/employment-termination-analysis.md",
         "playbooks/ip-brand-clearance-and-enforcement.md",
+        "playbooks/legal-intake-response.md",
+        "playbooks/legal-research-memo.md",
         "playbooks/litigation-demand-letter.md",
         "playbooks/nda-review.md",
         "playbooks/privacy-dpa-review.md",
@@ -2508,6 +2548,8 @@
         "playbooks/corporate-governance-review.md",
         "playbooks/employment-termination-analysis.md",
         "playbooks/ip-brand-clearance-and-enforcement.md",
+        "playbooks/legal-intake-response.md",
+        "playbooks/legal-research-memo.md",
         "playbooks/litigation-demand-letter.md",
         "playbooks/nda-review.md",
         "playbooks/privacy-dpa-review.md",
@@ -3371,7 +3413,13 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/financial-crime/aml-program-gap-review/templates/aml-program-gap-matrix.md",
+        "skills/financial-crime/edd-file-review/templates/edd-file-review-packet.md",
+        "skills/financial-crime/kyc-onboarding-review/templates/kyc-entity-file.md",
+        "skills/financial-crime/sanctions-screening-review/templates/sanctions-alert-adjudication.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/templates/tm-alert-triage-packet.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -3429,7 +3477,13 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/financial-crime/aml-program-gap-review/templates/aml-program-gap-matrix.md",
+        "skills/financial-crime/edd-file-review/templates/edd-file-review-packet.md",
+        "skills/financial-crime/kyc-onboarding-review/templates/kyc-entity-file.md",
+        "skills/financial-crime/sanctions-screening-review/templates/sanctions-alert-adjudication.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/templates/tm-alert-triage-packet.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -3487,7 +3541,13 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/financial-crime/aml-program-gap-review/templates/aml-program-gap-matrix.md",
+        "skills/financial-crime/edd-file-review/templates/edd-file-review-packet.md",
+        "skills/financial-crime/kyc-onboarding-review/templates/kyc-entity-file.md",
+        "skills/financial-crime/sanctions-screening-review/templates/sanctions-alert-adjudication.md",
+        "skills/financial-crime/transaction-monitoring-alert-triage/templates/tm-alert-triage-packet.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "source-validation-check",
@@ -3544,7 +3604,12 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-ops/legal-intake-triage/templates/intake-triage-record.md",
+        "skills/legal-ops/legal-meeting-briefing/templates/meeting-briefing-pack.md",
+        "skills/legal-ops/signature-routing-checklist/templates/signature-readiness-review.md",
+        "skills/legal-ops/templated-legal-response/templates/templated-response-draft.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
@@ -3557,10 +3622,19 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
-      "included_playbooks": [],
+      "included_playbooks": [
+        "playbooks/legal-intake-response.md"
+      ],
       "included_review_panels": [],
-      "included_source_citation_templates": [],
-      "included_attorney_review_templates": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3592,7 +3666,12 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-ops/legal-intake-triage/templates/intake-triage-record.md",
+        "skills/legal-ops/legal-meeting-briefing/templates/meeting-briefing-pack.md",
+        "skills/legal-ops/signature-routing-checklist/templates/signature-readiness-review.md",
+        "skills/legal-ops/templated-legal-response/templates/templated-response-draft.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
@@ -3605,10 +3684,19 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
-      "included_playbooks": [],
+      "included_playbooks": [
+        "playbooks/legal-intake-response.md"
+      ],
       "included_review_panels": [],
-      "included_source_citation_templates": [],
-      "included_attorney_review_templates": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",
@@ -3640,7 +3728,12 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-ops/legal-intake-triage/templates/intake-triage-record.md",
+        "skills/legal-ops/legal-meeting-briefing/templates/meeting-briefing-pack.md",
+        "skills/legal-ops/signature-routing-checklist/templates/signature-readiness-review.md",
+        "skills/legal-ops/templated-legal-response/templates/templated-response-draft.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "assumption-audit",
@@ -3653,10 +3746,19 @@
       ],
       "included_matter_packs": [],
       "included_matter_workspace_templates": [],
-      "included_playbooks": [],
+      "included_playbooks": [
+        "playbooks/legal-intake-response.md"
+      ],
       "included_review_panels": [],
-      "included_source_citation_templates": [],
-      "included_attorney_review_templates": [],
+      "included_source_citation_templates": [
+        "matter-workspaces/_template/source_log.md",
+        "matter-workspaces/_template/citation_map.md",
+        "matter-workspaces/_template/unsupported_claims.md",
+        "matter-workspaces/_template/assumptions.md"
+      ],
+      "included_attorney_review_templates": [
+        "matter-workspaces/_template/attorney_review.md"
+      ],
       "safety_disclaimer": "Every AgentCounsel pack produces draft legal work product for review by a licensed attorney. It is not legal advice, and it does not replace attorney verification.",
       "attorney_review_requirements": [
         "A licensed attorney must review and adopt all outputs before reliance.",

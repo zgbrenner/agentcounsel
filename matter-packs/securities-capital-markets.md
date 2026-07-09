@@ -2,6 +2,11 @@
 
 All packs produce **draft work product for attorney review only**. Outputs are not filing approval, exemption conclusions, trading advice, investment advice, or permission to sign/close.
 
+**Quality check.** Before a filing or disclosure draft from any pack below
+reaches the final attorney-review checkpoint, run it through
+`review-panels/regulatory-risk-panel.md` for a compliance, source, and
+business-risk review.
+
 ## Private Placement Matter Pack
 - **When to use:** Private financing from intake through closing coordination.
 - **Required starting materials:** issuer profile; jurisdiction/governing law (or unknown); issuer public/private status; transaction type/stage; security type; investor type and residence; draft offering docs; investor-rights drafts; role assignments.

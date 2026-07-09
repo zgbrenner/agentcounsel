@@ -112,7 +112,7 @@ If the EDD file or the EDD policy is missing, stop and request it. If the risk d
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/edd-file-review-packet.md`, in order:
 
 **DRAFT EDD FILE REVIEW — FOR COMPLIANCE AND ATTORNEY REVIEW ONLY**
 

@@ -66,7 +66,7 @@ If the legal question, jurisdiction, or relevant facts are not provided, stop an
 ## Legal Safety Rules
 
 - Produce draft legal work product for attorney review. This is not legal advice.
-- **Do not invent legal authority.** Never state a case name, citation, holding, statute section, regulation, or quotation unless it is present in a user-provided document or has been retrieved from and verified through a reliable research source. Fabricated citations are a serious professional and ethical hazard.
+- **Source and citation discipline.** Follow `core/source-and-citation-discipline.md`. Never invent legal authority, citations, quotations, statutes, cases, regulations, filing deadlines, or procedural rules. Label what is a provided source, a user-provided fact, an assumption, a legal inference, or an item requiring attorney verification, and use a citation placeholder such as `[Attorney to insert authority]` when no source is available. Never state a case name, citation, holding, statute section, regulation, or quotation unless it is present in a user-provided document or has been retrieved from and verified through a reliable research source. Fabricated citations are a serious professional and ethical hazard.
 - Every legal authority cited must be either (a) provided by the user or (b) explicitly noted as requiring attorney verification if it cannot be independently confirmed in this session.
 - Do not paraphrase a case holding without citing the source. Do not cite a source without identifying where the specific proposition comes from.
 - Distinguish clearly: (1) what the facts show, (2) what you are assuming, (3) what the law provides (with source), (4) what the analysis concludes, and (5) what remains for the attorney to confirm.

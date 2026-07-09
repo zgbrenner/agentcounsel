@@ -90,6 +90,9 @@ For a multi-document, source-intensive agreement, open a workspace from
   facts out of reusable artifacts.
 - `skills/legal-methodology/output-format-compliance-check/` — confirm the risk
   matrix conforms to the template.
+- For a high-risk draft (uncapped liability, one-sided indemnity, or a
+  counterparty markup), run `review-panels/contract-review-panel.md` before
+  the attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — deliverable ships with its
   checklist unchecked.
 

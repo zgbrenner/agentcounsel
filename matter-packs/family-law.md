@@ -18,6 +18,11 @@ escalate to a supervising attorney. If immediate danger is indicated, the first
 step is always to contact local emergency services and a qualified local crisis
 resource — never to continue the workflow.
 
+**Quality check.** Before a client-facing draft from any pack below reaches the
+final attorney-review checkpoint, run it through
+`review-panels/individual-client-capacity-panel.md` for a capacity, safety,
+confidentiality, and plain-language review.
+
 ## 1. New Family Law Matter Intake Pack
 
 - **When to use:** a new family law matter of any type arrives and the facts,

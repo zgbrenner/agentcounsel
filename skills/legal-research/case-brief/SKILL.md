@@ -111,7 +111,7 @@ If the opinion text is not available in the session, stop and request it. Do not
 
 ## Output Format
 
-A case brief with the following sections, in order:
+A case brief built on `templates/case-brief-outline.md`, with the following sections, in order:
 
 1. **Header** — case name, full citation, issuing court, date filed, verified opinion URL (if connector-verified), operative-matter context, brief's purpose, privilege designation.
 2. **Procedural posture** — one paragraph, pinpoint cited.

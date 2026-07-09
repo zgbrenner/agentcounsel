@@ -102,7 +102,7 @@ If the packet or the rules grid is missing, stop and request it. If documents ar
 
 ## Output Format
 
-Deliver the following sections in order:
+Deliver the following sections, using `templates/kyc-entity-file.md`, in order:
 
 **DRAFT KYC ONBOARDING REVIEW — FOR COMPLIANCE AND ATTORNEY REVIEW ONLY**
 

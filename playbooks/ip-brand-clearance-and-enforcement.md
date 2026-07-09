@@ -112,6 +112,9 @@ letter, and exhibits together justify multi-file tracking.
   matter facts out of any reusable artifact.
 - `skills/legal-methodology/output-format-compliance-check/` — triage output
   conforms to each skill's format.
+- For a cease-and-desist letter or any other draft leaving the firm, run
+  `review-panels/external-communication-review-panel.md` before the
+  attorney-review gate.
 - `skills/legal-methodology/attorney-review-gate/` — the deliverable ships with
   its checklist unchecked.
 

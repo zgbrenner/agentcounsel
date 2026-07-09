@@ -108,7 +108,7 @@ If the request text itself is missing, stop and request it. Do not reconstruct w
 
 ## Output Format
 
-Deliver the following sections in order, labeled **DRAFT INTAKE TRIAGE — FOR LEGAL TEAM REVIEW — ROUTING TO BE DECIDED BY THE LEGAL TEAM**:
+Deliver the following sections, using `templates/intake-triage-record.md`, in order, labeled **DRAFT INTAKE TRIAGE — FOR LEGAL TEAM REVIEW — ROUTING TO BE DECIDED BY THE LEGAL TEAM**:
 
 1. **Intake Header** — intake date, channel, requester name / team / role, and a short request title suitable for a matter system.
 2. **Request as Received** — the original text or an accurate excerpt, plus the attached or referenced documents, each marked in hand or missing.
