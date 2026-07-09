@@ -392,8 +392,27 @@ function useWhenBullets(skill) {
 
 // --- HTML layout -----------------------------------------------------------
 
-function page({ title, depth, desc, body }) {
+function page({ title, depth, desc, body, search }) {
   const r = depth === 0 ? '' : '../'.repeat(depth);
+  const searchHead = search
+    ? `<link rel="stylesheet" href="${r}pagefind/pagefind-ui.css">\n`
+    : '';
+  const searchScripts = search
+    ? `<script src="${r}pagefind/pagefind-ui.js"></script>
+<script>
+(function () {
+  var box = document.getElementById('search');
+  var fallback = document.getElementById('search-fallback');
+  if (typeof PagefindUI !== 'undefined') {
+    new PagefindUI({ element: '#search', showSubResults: true });
+  } else if (fallback) {
+    fallback.hidden = false;
+    if (box) box.hidden = true;
+  }
+})();
+</script>
+`
+    : '';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -402,7 +421,7 @@ function page({ title, depth, desc, body }) {
 <title>${esc(title)} — AgentCounsel</title>
 <meta name="description" content="${attr(desc || 'AgentCounsel legal skills catalog.')}">
 <link rel="stylesheet" href="${r}style.css">
-</head>
+${searchHead}</head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
@@ -416,7 +435,7 @@ function page({ title, depth, desc, body }) {
     <a href="${r}llms.txt">llms.txt</a>
   </nav>
 </header>
-<main id="main-content">
+<main id="main-content" data-pagefind-body>
 ${body}
 </main>
 <footer class="site-footer">
@@ -447,8 +466,19 @@ ${body}
   </div>
 </footer>
 <script src="${r}app.js"></script>
-</body>
+${searchScripts}</body>
 </html>
+`;
+}
+
+function searchSection() {
+  return `<section class="site-search" id="site-search">
+<h2>Search the catalog</h2>
+<div id="search"></div>
+<p class="search-fallback" id="search-fallback" hidden>Full-text search isn't available in this
+local preview — it's built by the CI deploy step (Pagefind indexes the published site). Meanwhile,
+use the filter box below or browse by practice area.</p>
+</section>
 `;
 }
 
@@ -475,6 +505,8 @@ function buildHome(skills, byArea) {
 <h1>AgentCounsel</h1>
 <p class="lead">An open, Markdown-native library of legal skills for AI agents — and the legal professionals who supervise them.</p>
 </section>
+
+${searchSection()}
 
 <section>
 <h2>What this is</h2>
@@ -518,6 +550,7 @@ ${cards}</div>
     depth: 0,
     desc: 'An open, platform-agnostic legal AI skills library. Every output is draft legal work product for review by a licensed attorney.',
     body,
+    search: true,
   });
 }
 
@@ -525,6 +558,9 @@ function buildSkillIndex(skills, byArea) {
   let body = `<nav class="breadcrumb"><a href="index.html">Home</a> / <span>Skill index</span></nav>
 <h1>Skill index</h1>
 <p class="lead">All ${skills.length} skills in the library, grouped by practice area. Each skill produces draft legal work product for review by a licensed attorney.</p>
+
+${searchSection()}
+
 <input type="search" class="skill-filter" id="skill-filter" placeholder="Filter skills (try 'nda', 'privacy', 'antitrust')...">`;
   for (const area of AREA_ORDER) {
     const list = byArea[area] || [];
@@ -546,7 +582,7 @@ ${rows}</tbody>
 </table>
 </section>`;
   }
-  return page({ title: 'Skill index', depth: 0, desc: 'The full AgentCounsel skill index.', body });
+  return page({ title: 'Skill index', depth: 0, desc: 'The full AgentCounsel skill index.', body, search: true });
 }
 
 function buildAreaPage(area, list) {
