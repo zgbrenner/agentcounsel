@@ -104,7 +104,9 @@ Also out of scope (this skill does not): determine an entity's tax classificatio
 2. Build a source register and cite every fact to a governing document, a
    filing, or a user-stated fact.
 3. Extract formation, ownership, election, governance, ownership-change, and
-   foreign-owner facts into the facts table.
+   foreign-owner facts into the facts table, consulting
+   `skills/tax/references/issue-catalog.md` (Section 1) for the recurring
+   patterns and questions to surface.
 4. Note each fact's status (provided / `not provided` / `ambiguous`) and the
    classification question it bears on.
 5. List the documents a tax professional should review and the open

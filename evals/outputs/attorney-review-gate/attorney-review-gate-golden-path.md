@@ -58,7 +58,7 @@
 
 **Assumptions:** This gate assumes the provided prior quality-check reports are current and complete; it does not re-run those checks independently. No assumption is made about the accuracy of the underlying invoice amount, the limitations period, or the citation's current treatment — each is flagged above for attorney confirmation.
 
-## 12. Attorney Review Checklist
+## 12. Attorney Review Checklist (Attorney Verification Checklist)
 
 - [ ] All must-confirm facts in Section 4 have been checked against the record or client instructions.
 - [ ] All must-confirm law in Section 5 has been researched and confirmed by counsel `[CONFIRM: applicable limitations period]`.

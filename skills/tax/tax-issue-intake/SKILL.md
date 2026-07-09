@@ -117,7 +117,9 @@ Also out of scope (this skill does not): provide tax advice; compute tax, gain, 
    notices received — separating facts from uncertainties.
 4. Map potential tax issues across income, sales/use, payroll/employment,
    property, transfer, excise, international, and digital-asset areas — as
-   questions for a tax professional, never as conclusions.
+   questions for a tax professional, never as conclusions — drawing on
+   `skills/tax/references/issue-catalog.md` across its full range of issue
+   areas.
 5. List missing facts and produce a targeted document request list.
 6. Draft verification questions and assemble the reviewer-ready working paper.
 
