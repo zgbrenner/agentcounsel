@@ -138,7 +138,9 @@ Also out of scope (this skill does not): opine on whether any clause is enforcea
 
 4. **Review each contract for trigger clauses.** Work through each provided
    contract or summary and record, with a contract-and-section citation, every
-   clause that the deal may implicate:
+   clause that the deal may implicate. Cross-check against
+   `skills/m-and-a/references/red-flags.md` (Section 6) and fold any pattern
+   found into the tracker:
    - Consent-to-assignment and anti-assignment clauses.
    - Change-of-control clauses (including deemed-assignment language).
    - Notice requirements tied to assignment or change of control.

@@ -141,7 +141,9 @@ Also out of scope (this skill does not): assess, summarize, or assume what is *i
    reference. Where a single named file is the only entry for a broad category,
    note that the index shows one file but its contents are not known.
 
-5. **Flag index-quality issues.** Across the index, identify and cite:
+5. **Flag index-quality issues.** Across the index, identify and cite,
+   cross-checking against `skills/m-and-a/references/red-flags.md` (Section 8)
+   and folding any pattern found into the gap matrix:
    - Duplicate or near-duplicate file names, and ambiguous or generic names
      (for example `Document1`, `Final_v3`, `misc`).
    - Stale or outdated documents, by the date the index records — flag each

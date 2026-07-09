@@ -106,7 +106,8 @@ Also out of scope (this skill does not): conclude treaty benefits or withholding
 3. Map cross-border issues — withholding, PE concepts, transfer pricing,
    intercompany services, royalties/IP, VAT/GST, treaty questions, foreign
    accounts, CFC/PFIC questions, and cross-border employment — as open
-   questions.
+   questions, consulting `skills/tax/references/issue-catalog.md` (Section 7)
+   for the routing questions each issue area raises.
 4. Identify the jurisdictions each issue touches.
 5. List missing facts and produce a document request list.
 6. Frame the questions tax counsel must evaluate and assemble the working

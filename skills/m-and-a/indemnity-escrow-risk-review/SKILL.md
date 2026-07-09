@@ -147,7 +147,9 @@ Also out of scope (this skill does not): conclude whether any term is "market st
 3. **Map the indemnity architecture.** Work through the indemnification,
    escrow, and survival provisions and record, for each element below, what the
    agreement states, with a source citation. Where the agreement is silent,
-   record `Not found`.
+   record `Not found`. Cross-check each element against
+   `skills/m-and-a/references/red-flags.md` (Section 4) and fold any pattern
+   found into the risk matrix.
    - **Survival** — survival periods for general representations, for
      fundamental representations, for covenants, and for special indemnities;
      each date or period flagged `[deadline verification required]`.

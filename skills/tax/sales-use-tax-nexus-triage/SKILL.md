@@ -101,7 +101,9 @@ Also out of scope (this skill does not): conclude nexus, taxability, a registrat
    type, tax period, and document set. Record each gap.
 2. Build a source register and cite every figure and record.
 3. For each jurisdiction, record physical-presence, activity/revenue,
-   product/service, marketplace, and certificate facts.
+   product/service, marketplace, and certificate facts, consulting
+   `skills/tax/references/issue-catalog.md` (Section 2) for the recurring
+   patterns and questions to surface.
 4. Note the user-supplied economic-nexus figures as facts only — never as a
    nexus conclusion.
 5. List missing facts and produce a document request list.

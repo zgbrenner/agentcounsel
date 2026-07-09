@@ -133,7 +133,9 @@ Also out of scope (this skill does not): invent an obligation, an owner, a trigg
    record the obligation, the owner, the trigger, the due date if the documents
    state one, the source (document and section, clause, or schedule), and any
    dependency. Cover at least the topics below; record `Not found` where the
-   documents are silent on a topic:
+   documents are silent on a topic. Cross-check the TSA and tax-cooperation
+   items against `skills/m-and-a/references/red-flags.md` (Section 7) and fold
+   any pattern found into the tracker:
    - Purchase-price adjustment / true-up process (closing statement, dispute
      mechanism, payment of the final adjustment).
    - Earnout milestones and earnout payment obligations.

@@ -104,7 +104,9 @@ Also out of scope (this skill does not): determine whether a person had capacity
 4. Record document-execution facts and the attorney, witness, and notary
    involvement as stated.
 5. Surface red-flag themes (dependency, isolation, plan changes, pressure
-   allegations) as questions — never as conclusions.
+   allegations) as questions — never as conclusions — consulting
+   `skills/trusts-estates/references/issue-catalog.md` (Section 9) for the
+   governing indicators and escalation rule.
 6. List missing facts and draft attorney verification questions.
 
 ## Output Format

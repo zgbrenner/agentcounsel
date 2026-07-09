@@ -38,7 +38,9 @@ Review the tax covenants and indemnities of a transaction agreement and map
 their architecture, issues, and negotiation points — all source-cited — so tax
 counsel can verify the tax-risk allocation from the user's perspective. This
 skill maps and organizes the provisions; it does not determine enforceability,
-tax treatment, or adequacy.
+tax treatment, or adequacy. `skills/tax/references/issue-catalog.md` (Section
+5) generalizes this mechanic taxonomy as a scan aid; this skill's own
+step-by-step workflow below remains the authoritative, line-by-line review.
 
 ## Use When
 

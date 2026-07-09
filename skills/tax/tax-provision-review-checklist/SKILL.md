@@ -101,7 +101,9 @@ Also out of scope (this skill does not): determine the tax consequences of a pro
    transaction type, jurisdictions, and review purpose.
 2. Build a source register and locate each tax provision by section or clause.
 3. Extract and summarize each tax provision into the key-terms table and the
-   provision checklist, with source citations.
+   provision checklist, with source citations, consulting
+   `skills/tax/references/issue-catalog.md` (Section 6) for the recurring
+   provision patterns and questions to surface.
 4. For each provision, note the issue from the user's perspective, a status,
    and a negotiation point — never drafted clause language.
 5. After reviewing the full document, list expected provisions that are

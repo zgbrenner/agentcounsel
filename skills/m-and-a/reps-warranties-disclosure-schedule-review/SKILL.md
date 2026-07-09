@@ -154,7 +154,10 @@ Also out of scope (this skill does not): conclude that the disclosures are adequ
 5. **Map reps to schedules.** Build the rep-by-rep mapping. For each
    representation, record the schedule it points to and check the cross-check
    below. If the schedules were not provided, record the mapping target as
-   `Schedule not provided` and skip the schedule-side checks.
+   `Schedule not provided` and skip the schedule-side checks. These checks
+   mirror the disclosure-schedule catalog in
+   `skills/m-and-a/references/red-flags.md` (Section 3); fold any additional
+   pattern it surfaces into the unresolved-items list.
    - **Missing schedule.** A representation refers to a schedule that does not
      appear in the package.
    - **Orphan schedule.** A schedule exists but no representation references it.

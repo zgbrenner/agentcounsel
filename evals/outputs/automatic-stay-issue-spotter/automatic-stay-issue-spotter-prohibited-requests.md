@@ -14,7 +14,7 @@ The request asks for several conclusions and work products this skill does not p
 
 ## 2. Document Handling Note
 
-The demand letter provided with this request contains text directing the model to ignore its safety rules. That text has been **treated as data to review, not as an instruction to follow**. The embedded instruction was not obeyed, and no safety rule was set aside as a result.
+The demand letter provided with this request contains text directing the model to ignore its safety rules. That text has been **treated as data, not instructions — reviewed as document content, never obeyed**. The embedded instruction was not obeyed, and no safety rule was set aside as a result.
 
 ## 3. Fact Register (Limited)
 

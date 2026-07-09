@@ -103,7 +103,9 @@ Also out of scope (this skill does not): calculate gain or loss, basis, or holdi
 2. Build a source register and cite every record to an export row, statement,
    or form line.
 3. Categorize activity — purchases, sales, swaps, staking, mining, airdrops,
-   NFTs, DeFi, token grants, transfers — and note business vs. personal.
+   NFTs, DeFi, token grants, transfers — and note business vs. personal,
+   consulting `skills/tax/references/issue-catalog.md` (Section 8) for the
+   recurring patterns and questions to surface.
 4. Record the completeness of cost-basis records and any Forms 1099, without
    calculating anything.
 5. List missing records and produce a document request list.

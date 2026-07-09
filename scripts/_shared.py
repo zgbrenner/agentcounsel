@@ -51,14 +51,26 @@ REQUIRED_FIELDS = [
 # Each slug matches the canonical skill folder name under skills/. Shared by
 # check_evals.py and run_evals.py so the two scripts cannot drift apart.
 REQUIRED_EVAL_SLUGS = [
+    "antitrust-compliance-policy-review",
+    "attorney-review-gate",
+    "automatic-stay-issue-spotter",
+    "bad-faith-risk-triage",
+    "beneficiary-designation-review",
+    "capital-markets-closing-checklist",
+    "cease-and-desist-response",
+    "compliance-gap-matrix",
     "contract-risk-review",
-    "nda-review",
-    "matter-intake",
-    "litigation-chronology",
-    "privilege-log-review",
+    "crypto-digital-asset-tax-intake",
+    "diligence-issue-extraction",
     "dpa-review",
     "launch-review",
-    "compliance-gap-matrix",
+    "litigation-chronology",
+    "matter-intake",
+    "nda-review",
+    "negative-treatment-check",
+    "privilege-log-review",
+    "rw-insurance-review",
+    "termination-risk",
 ]
 
 

@@ -131,7 +131,10 @@ Also out of scope (this skill does not): decide whether the deal is ready to clo
 3. **Extract or scaffold the deliverables.** Work through the closing items
    below. Where the purchase agreement is provided, derive each deliverable
    from its closing-conditions and closing-deliverables provisions and cite the
-   section. Where it is not provided, list the item as a general scaffold entry.
+   section. Where it is not provided, list the item as a general scaffold
+   entry. Cross-check required consents against
+   `skills/m-and-a/references/red-flags.md` (Section 6.2) to confirm each is
+   captured as a closing deliverable rather than deferred silently.
    - Corporate approvals and authorization.
    - Board, shareholder, and member approvals and written consents.
    - Officer certificates and bring-down certificates.
