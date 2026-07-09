@@ -214,7 +214,7 @@ Both are plain Markdown and add no backend, runtime, or vendor dependency.
 
 ## Examples
 
-The [`examples/`](examples/) directory contains illustrative sample outputs — including primary skill outputs and quality-layer passes such as source validation, prose polish, hallucination red-team, and attorney-review gating. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter.
+The [`examples/`](examples/) directory contains illustrative sample outputs — including primary skill outputs and quality-layer passes such as source validation, prose polish, hallucination red-team, and attorney-review gating. **Every fact in them is fictional.** They show the shape and quality of a skill's deliverable; they are not legal advice and not templates for a real matter. If you have not run a skill end-to-end yet, [`docs/tutorials/practice-matter.md`](docs/tutorials/practice-matter.md) is a guided, fictional first-run walkthrough.
 
 ## Validation and continuous integration
 

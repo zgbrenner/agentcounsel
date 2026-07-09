@@ -86,5 +86,41 @@ examples, or template clause text, which are rewritten independently. See
   adaptation of MADR's structure, not a copy of its template file or example
   content.
 
+- **Federal Plain Language Guidelines** — plainlanguage.gov, a U.S. government
+  interagency initiative —
+  https://www.plainlanguage.gov/guidelines/
+  License: U.S. government public domain / CC0
+  Material used: sentence-level plain-language techniques, distilled into a
+  checklist
+  Affected AgentCounsel files: `skills/legal-methodology/references/plain-language-checklist.md`
+  Use type: adapted
+  Notes: rewritten in AgentCounsel's own words and explicitly scoped to
+  client- and business-stakeholder-facing prose only, never to legal
+  drafting itself; attribution is noted here though not legally required for
+  public-domain material.
+
+- **CISA Cybersecurity Tabletop Exercise Program (CTEP)** — Cybersecurity and
+  Infrastructure Security Agency —
+  https://www.cisa.gov/resources-tools/services/cybersecurity-tabletop-exercise-program-ctep
+  License: U.S. government public domain
+  Material used: the tabletop-exercise structure (a scenario walked through
+  with mid-run "injects")
+  Affected AgentCounsel files: `docs/tutorials/practice-matter.md`
+  Use type: adapted
+  Notes: only the exercise-structure concept is reused; the scenario, facts,
+  and injects in the tutorial are original and fictional, and attribution is
+  noted here though not legally required for public-domain material.
+
+- **Citation File Format (CFF)** —
+  https://citation-file-format.github.io/
+  License: CC-BY-4.0 (specification)
+  Material used: the `cff-version` schema and standard field names for
+  software citation metadata
+  Affected AgentCounsel files: `CITATION.cff`
+  Use type: spec usage note
+  Notes: only the public schema's field names and structure are used to
+  describe this repository's own metadata; no specification prose is
+  reproduced.
+
 AgentCounsel is an independent open-source project. It is not affiliated with,
 endorsed by, or sponsored by Anthropic, OpenAI, or Google.
