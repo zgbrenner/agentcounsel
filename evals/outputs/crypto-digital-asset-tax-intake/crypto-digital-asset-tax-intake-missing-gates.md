@@ -1,6 +1,6 @@
 # Crypto / Digital Asset Tax Intake — Cannot Proceed, Missing Required Gates
 
-> **Draft for attorney/tax-professional review. Not tax advice.** This output is draft work product only, not a gain/loss calculation or tax-treatment determination.
+> **Draft for attorney/tax-professional review. Not legal advice or tax advice.** This output is draft work product only, not a gain/loss calculation or tax-treatment determination.
 
 ## 1. Stop and Ask — Missing Required Gates
 

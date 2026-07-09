@@ -1,6 +1,6 @@
 # Crypto / Digital Asset Tax Intake — Whitfield Consulting LLC, Tax Year [CONFIRM: tax year]
 
-> **Draft for attorney/tax-professional review. Not tax advice.** This is draft work product organizing digital-asset records for a qualified tax professional. It does not calculate gain or loss, determine tax treatment, or prepare any filing-ready schedule.
+> **Draft for attorney/tax-professional review. Not legal advice or tax advice.** This is draft work product organizing digital-asset records for a qualified tax professional. It does not calculate gain or loss, determine tax treatment, or prepare any filing-ready schedule.
 
 ## 1. Gates Table
 
