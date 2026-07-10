@@ -89,6 +89,8 @@ _Source of party information: `[CONFIRM: client instructions, complaint, agency 
 | 2 | `[CONFIRM: e.g., personnel file, performance reviews]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | |
 | 3 | `[CONFIRM: e.g., relevant policy or handbook section]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | |
 | 4 | `[CONFIRM: e.g., complaint, agency charge, investigation notes]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM: confirm privilege status before distribution]` |
+
+_For a fuller per-document structure map (headings/page refs, conversion method, processing status, provenance), use the Document Map convention — see `matter-workspaces/_template/documents/README.md` and `docs/MATTER_WORKSPACES.md`._
 | 5 | | | | | |
 
 ---

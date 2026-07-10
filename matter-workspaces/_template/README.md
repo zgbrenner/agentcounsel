@@ -29,7 +29,9 @@ matter; do not maintain both for the same matter.
 ├── matter_profile.md      Matter header: parties, jurisdiction, deadlines, posture
 ├── facts.md               Known facts and disputed facts, each labeled by source
 ├── open_questions.md      Unresolved questions blocking or shaping the analysis
-├── documents/             Source documents and a documents index
+├── documents/             Source documents, a documents index, and a
+│   │                      per-document Document Map (structure, conversion
+│   │                      method, processing status, provenance)
 │   └── README.md
 ├── source_log.md          Every source consulted, with quality-layer classification
 ├── citation_map.md        Each drafted statement mapped to its supporting source
@@ -42,7 +44,8 @@ matter; do not maintain both for the same matter.
 ├── quality_checks/        Records of quality-layer passes run on the outputs
 │   └── README.md
 ├── attorney_review.md     The attorney sign-off gate for the whole matter
-└── matter_status.md       Current status, next steps, and a change log
+└── matter_status.md       Current status, next steps, a change log, and an
+                          append-only Session Notes log (see below)
 ```
 
 ## How to create a populated workspace
@@ -67,6 +70,25 @@ throughout.
 
 Do not edit the files inside `_template/` itself — they are the reusable blank
 scaffold. Edit only the copy you create.
+
+## Document Map and Session Notes conventions
+
+- **Document Map** (`documents/README.md`) — a per-source hierarchical index:
+  for each ingested document, its top-level structure (sections/headings with
+  page references), how it was converted to text (native text or OCR — see
+  `docs/SCANNED_DOCUMENTS.md` for OCR handling), its processing status
+  (ingested / summarized by a named skill on a date / verification pending),
+  and its provenance. It organizes and labels documents; it does not verify
+  them.
+- **Session Notes** (`matter_status.md`) — an append-only dated log: one entry
+  per skill run, recording the skill run, key outputs produced, gaps flagged
+  (open `[CONFIRM]`/`[VERIFY]` items), and what the next session should pick
+  up. These notes are drafting context for continuity between sessions, not
+  work product — the Attorney Verification Checklist discipline applies to the
+  outputs the notes reference, not to the notes themselves.
+
+See `docs/MATTER_WORKSPACES.md` for more and `THIRD_PARTY_NOTICES.md` for the
+open-source concepts each convention adapts.
 
 ## Quality-layer classifications
 

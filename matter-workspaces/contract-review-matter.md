@@ -108,6 +108,8 @@ _Skills for review and redline work: `skills/contracts/contract-risk-review/SKIL
 | 3 | `[CONFIRM: e.g., executed final agreement]` | `[CONFIRM]` | `[CONFIRM: final executed]` | `[CONFIRM]` | |
 | 4 | | | | | |
 
+_For a fuller per-document structure map (headings/page refs, conversion method, processing status, provenance), use the Document Map convention — see `matter-workspaces/_template/documents/README.md` and `docs/MATTER_WORKSPACES.md`._
+
 ---
 
 ## 7. Deadlines and Key Dates

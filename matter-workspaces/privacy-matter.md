@@ -106,6 +106,8 @@ _Role determinations require attorney assessment under applicable privacy law. `
 | 2 | `[CONFIRM: e.g., privacy policy]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` |
 | 3 | `[CONFIRM: e.g., data breach incident report]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` |
 | 4 | `[CONFIRM: e.g., DSAR request letter]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` |
+
+_For a fuller per-document structure map (headings/page refs, conversion method, processing status, provenance), use the Document Map convention — see `matter-workspaces/_template/documents/README.md` and `docs/MATTER_WORKSPACES.md`._
 | 5 | | | | | |
 
 ---

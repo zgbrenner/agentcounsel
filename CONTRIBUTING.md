@@ -37,7 +37,7 @@ A skill will not be merged unless it meets all of these.
 ## How to contribute
 
 1. Open an issue using the appropriate template — **bug report**, **skill request**, or **skill improvement** — so scope and naming can be agreed. The templates live in `.github/ISSUE_TEMPLATE/`.
-2. Create the skill folder under the right practice area in `skills/`, with `SKILL.md` and any `templates/`.
+2. Create the skill folder under the right practice area in `skills/`, with `SKILL.md` and any `templates/`. Start from [`docs/templates/SKILL_TEMPLATE.md`](docs/templates/SKILL_TEMPLATE.md), a fill-in-the-blanks scaffold with the full frontmatter and section set.
 3. Add the skill to `SKILLS_INDEX.md` and, where relevant, `WORKFLOW_ROUTER.md`.
 4. Re-read the `core/` rules and self-check against the hard requirements above.
 5. If you changed a skill that is part of the Claude Code plugin bundle, run `python scripts/sync_plugin_skills.py`. See `PLUGIN_SYNC.md`.

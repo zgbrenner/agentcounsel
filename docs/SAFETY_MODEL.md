@@ -80,3 +80,5 @@ Operational security guidance and vulnerability reporting are in [`SECURITY.md`]
 This safety model reduces risk; it does not eliminate it. AgentCounsel cannot judge whether a workflow is legally sound for your matter, whether a model's output is correct, or whether the framing is right for your jurisdiction. The validator checks structure and consistency, not legal accuracy.
 
 The model works only if the human part works. AgentCounsel is built to make attorney review **easy and reliable** — it is not built to make it **optional**. Used as intended, with a qualified, licensed attorney reviewing the output, it makes AI-assisted legal work more consistent and more auditable. Used as a shortcut around that review, it is unsafe.
+
+A firm's risk or compliance team evaluating AgentCounsel for adoption should start with [`docs/AI_GOVERNANCE_DISCLOSURE.md`](AI_GOVERNANCE_DISCLOSURE.md), which maps the mechanisms above to common governance-framework questions.

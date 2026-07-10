@@ -188,6 +188,8 @@ Every skill inherits the operating rules in [`core/`](core/):
 
 The full safety model — the threat model, what AgentCounsel deliberately does *not* do, and how to use it safely with confidential material — is in **[docs/SAFETY_MODEL.md](docs/SAFETY_MODEL.md)**. Security reporting and guidance are in [`SECURITY.md`](SECURITY.md).
 
+A firm's risk or compliance team assessing AgentCounsel for adoption should start with [docs/AI_GOVERNANCE_DISCLOSURE.md](docs/AI_GOVERNANCE_DISCLOSURE.md), which maps these controls to common AI-governance framework questions.
+
 ## Configuring AgentCounsel for a team
 
 AgentCounsel runs out-of-the-box without configuration. To improve output quality for a practice group adopting the library across multiple matters, you can populate a practice-group profile at `practice-profiles/<area>.md`. The profile gives ~20 skills access to the group's standing positions, escalation thresholds, and output preferences.
