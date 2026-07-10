@@ -16,6 +16,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 ## Contracts
 
+*Typical chain:* `/contracts:review` → `/contracts:redline-summary` → `/contracts:vendor-status`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/contracts:nda` | `skills/contracts/nda-review/SKILL.md` | "review this NDA", "check this confidentiality agreement" | NDA text, client role, transaction context | Triage rating, risk table, prioritized redline points | `/contracts:review`, `/contracts:redline-summary` |
@@ -25,6 +27,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/contracts:vendor-status` | `skills/contracts/vendor-agreement-status/SKILL.md` | "vendor agreement status", "what agreements do we have with this vendor" | Vendor identity, agreement records, relationship context | Vendor agreement status report | `/contracts:review`, `/privacy:dpa` |
 
 ## Litigation
+
+*Typical chain:* `/litigation:intake` → `/litigation:legal-hold` → `/litigation:chronology` → `/litigation:demand` (or `/litigation:subpoena`)
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -41,6 +45,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/litigation:opposition` | `skills/litigation/motion-opposition-drafter/SKILL.md` | "draft an opposition to this motion", "respond to their motion for summary judgment" | Movant's motion papers, case theory, record, response deadline | Response outline and opposition draft | `/research:memo`, `/research:treatment-check`, `/method:source-validation` |
 
 ## Legal Research
+
+*Typical chain:* `/research:plan` → `/research:memo` → `/research:synthesis` → `/research:treatment-check`
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -95,6 +101,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 ## Mergers & Acquisitions
 
+*Typical chain:* `/m-and-a:loi-review` → `/m-and-a:diligence-request-list` → `/m-and-a:purchase-agreement` → `/m-and-a:closing-tracker`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/m-and-a:loi-review` | `skills/m-and-a/loi-term-sheet-review/SKILL.md` | "review this LOI", "review this term sheet" | The LOI or term sheet, the side, the deal type | Binding/non-binding table and deal-terms issue list | `/m-and-a:purchase-agreement` |
@@ -126,6 +134,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/employment:leave` | `skills/employment/protected-leave-review/SKILL.md` | "protected leave situation", "medical or family leave" | Leave situation, procedural status, jurisdiction | Protected-leave review | `/employment:termination` |
 
 ## Privacy
+
+*Typical chain:* `/privacy:dpa` → `/privacy:transfers` → `/privacy:vendor-diligence`
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -263,6 +273,8 @@ Only the four analytical-method skills below carry slash-style commands. The oth
 
 ## Bankruptcy / Restructuring
 
+*Typical chain:* `/bankruptcy:intake` → `/bankruptcy:claim-intake` → `/bankruptcy:proof-of-claim` → `/bankruptcy:deadline-tracker`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/bankruptcy:intake` | `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md` | "bankruptcy matter intake", "restructuring intake" | Parties, party role, case status, document set | Matter summary + risk themes | `/bankruptcy:claim-intake`, `/bankruptcy:deadline-tracker` |
@@ -280,6 +292,8 @@ Only the four analytical-method skills below carry slash-style commands. The oth
 
 
 ## Insurance
+
+*Typical chain:* `/insurance:policy-summary` → `/insurance:coverage-issues` → `/insurance:claims-chronology` → `/insurance:position-outline`
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
