@@ -2,7 +2,7 @@
   "generated_by": "scripts/build_skill_index.py",
   "schema": "docs/SKILL_METADATA_STANDARD.md",
   "normalized_schema_version": "1.0",
-  "skill_count": 209,
+  "skill_count": 212,
   "platforms": [
     "chatgpt",
     "claude",
@@ -65,7 +65,7 @@
     "legal-research": 6,
     "litigation": 11,
     "m-and-a": 12,
-    "privacy": 7,
+    "privacy": 10,
     "product-legal": 4,
     "real-estate": 10,
     "regulatory": 5,
@@ -81,7 +81,7 @@
     "intake": 19,
     "interview": 19,
     "research": 5,
-    "review": 60,
+    "review": 63,
     "summarization": 5,
     "triage": 15,
     "verification": 11
@@ -89,8 +89,8 @@
   "risk_levels": {
     "low": 22,
     "medium": 80,
-    "high": 103,
-    "critical": 4
+    "high": 105,
+    "critical": 5
   },
   "skills": [
     {
@@ -10703,6 +10703,210 @@
       ]
     },
     {
+      "id": "privacy/childrens-privacy-review",
+      "title": "Children's Privacy Review",
+      "path": "skills/privacy/childrens-privacy-review/SKILL.md",
+      "summary": "Use when reviewing a product or service that may attract minors to organize audience-analysis facts, age-gating and parental-consent mechanics, data-minimization and profiling facts, and cross-jurisdiction age-threshold divergence for attorney review.",
+      "use_when": [
+        "A product, app, game, or online service is being reviewed for whether children's-privacy obligations may apply.",
+        "A product team is designing or has implemented an age gate, age-assurance mechanism, or parental-consent flow and wants the mechanics organized for legal review.",
+        "A launch review, feature review, or marketing-claims review has surfaced signals that minors may be part of the actual or likely audience.",
+        "The organization operates or is evaluating a school-facing or edtech product and needs the school/education context flagged for specialized review.",
+        "A vendor, partner, or internal team raises a concern that underage users may be present despite the stated age gate or terms of service.",
+        "The organization needs a periodic children's-privacy fact review as part of a broader privacy or product-legal audit."
+      ],
+      "required_inputs": [
+        "A description of the product or service: what it does, who it is marketed to, and how it is accessed",
+        "Audience-analysis facts: content, marketing, design, and usage signals bearing on whether minors are a likely or actual audience",
+        "The age-gating mechanics as implemented or designed (age screen, self-declaration, verification method, if any)",
+        "The parental-consent flow, if one exists, as implemented or designed",
+        "The data collected from users, defaults applied, and any profiling, personalization, or advertising practices",
+        "Whether the product is offered in or to a school or educational (edtech) context",
+        "Optional: any known instance of actual knowledge of underage use inconsistent with the stated audience or age gate"
+      ],
+      "expected_outputs": [
+        "Audience-analysis fact table (directed-to-children signals)",
+        "Age-gating mechanics summary, described not endorsed",
+        "Parental-consent flow fact table",
+        "Data-minimization, defaults, profiling, and advertising fact table",
+        "School/edtech context flag",
+        "Cross-jurisdiction age-threshold divergence note",
+        "Prominent escalation flag for any actual-knowledge indicator"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "age-gating",
+        "childrens-privacy",
+        "critical",
+        "data-minimization",
+        "edtech",
+        "parental-consent",
+        "privacy",
+        "review"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Children's Privacy Review",
+      "description": "Use when reviewing a product or service that may attract minors to organize audience-analysis facts, age-gating and parental-consent mechanics, data-minimization and profiling facts, and cross-jurisdiction age-threshold divergence for attorney review.",
+      "practice_area": "privacy",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "critical",
+      "requires_attorney_review": true,
+      "inputs": [
+        "A description of the product or service: what it does, who it is marketed to, and how it is accessed",
+        "Audience-analysis facts: content, marketing, design, and usage signals bearing on whether minors are a likely or actual audience",
+        "The age-gating mechanics as implemented or designed (age screen, self-declaration, verification method, if any)",
+        "The parental-consent flow, if one exists, as implemented or designed",
+        "The data collected from users, defaults applied, and any profiling, personalization, or advertising practices",
+        "Whether the product is offered in or to a school or educational (edtech) context",
+        "Optional: any known instance of actual knowledge of underage use inconsistent with the stated audience or age gate"
+      ],
+      "outputs": [
+        "Audience-analysis fact table (directed-to-children signals)",
+        "Age-gating mechanics summary, described not endorsed",
+        "Parental-consent flow fact table",
+        "Data-minimization, defaults, profiling, and advertising fact table",
+        "School/edtech context flag",
+        "Cross-jurisdiction age-threshold divergence note",
+        "Prominent escalation flag for any actual-knowledge indicator"
+      ],
+      "related_skills": [
+        "skills/privacy/pia-generation/SKILL.md",
+        "skills/product-legal/launch-review/SKILL.md",
+        "skills/privacy/privacy-policy-gap-review/SKILL.md",
+        "skills/ai-governance/ai-use-case-intake/SKILL.md",
+        "skills/product-legal/marketing-claims-review/SKILL.md"
+      ],
+      "tags": [
+        "privacy",
+        "childrens-privacy",
+        "age-gating",
+        "parental-consent",
+        "data-minimization",
+        "edtech"
+      ]
+    },
+    {
+      "id": "privacy/cookie-consent-review",
+      "title": "Cookie Consent Review",
+      "path": "skills/privacy/cookie-consent-review/SKILL.md",
+      "summary": "Use when reviewing a website or app's cookie and tracking consent implementation to inventory trackers against disclosure, describe consent-banner mechanics, record consent-record facts, and flag dark-pattern and cross-border divergence issues for attorney review.",
+      "use_when": [
+        "A website or app's cookie banner, tracker inventory, or consent flow needs a first-pass legal/compliance read.",
+        "A privacy or marketing team has run a tracker scan and needs the results compared against the cookie notice or privacy policy.",
+        "The organization is evaluating or has just deployed a consent management platform (CMP) and wants its configuration facts organized for review.",
+        "A regulator inquiry, complaint, or internal audit has raised a question about whether disclosed and actual tracking match, or whether the consent flow gives users a genuine choice.",
+        "The organization operates across multiple markets and needs the site's consent mechanics checked for jurisdiction-specific divergence (for example, prior-consent vs. opt-out models, or reject-parity requirements).",
+        "A redesign of the cookie banner or consent flow is proposed and the current-state facts need to be captured before changes are made."
+      ],
+      "required_inputs": [
+        "The site or app's cookie/tracker inventory or a scan output listing trackers actually present",
+        "The cookie/tracking disclosure text (cookie notice, cookie policy, or privacy policy tracking section)",
+        "A description or screenshots of the consent banner and its behavior (timing, choices offered, layout)",
+        "Facts about consent-record keeping: what is logged, where, and for how long",
+        "Optional: whether a consent management platform (CMP) or IAB TCF-style framework is in use",
+        "Optional: the geographies/markets where the site or app operates"
+      ],
+      "expected_outputs": [
+        "Tracker inventory vs. disclosure comparison table",
+        "Consent-banner mechanics summary, described not endorsed",
+        "Consent-record fact table",
+        "Dark-pattern red-flag list, named neutrally",
+        "CMP/TCF-framework presence note",
+        "Cross-border divergence flags"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "adtech",
+        "consent-management",
+        "cookies",
+        "dark-patterns",
+        "high",
+        "privacy",
+        "review",
+        "tracking-technologies"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Cookie Consent Review",
+      "description": "Use when reviewing a website or app's cookie and tracking consent implementation to inventory trackers against disclosure, describe consent-banner mechanics, record consent-record facts, and flag dark-pattern and cross-border divergence issues for attorney review.",
+      "practice_area": "privacy",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The site or app's cookie/tracker inventory or a scan output listing trackers actually present",
+        "The cookie/tracking disclosure text (cookie notice, cookie policy, or privacy policy tracking section)",
+        "A description or screenshots of the consent banner and its behavior (timing, choices offered, layout)",
+        "Facts about consent-record keeping: what is logged, where, and for how long",
+        "Optional: whether a consent management platform (CMP) or IAB TCF-style framework is in use",
+        "Optional: the geographies/markets where the site or app operates"
+      ],
+      "outputs": [
+        "Tracker inventory vs. disclosure comparison table",
+        "Consent-banner mechanics summary, described not endorsed",
+        "Consent-record fact table",
+        "Dark-pattern red-flag list, named neutrally",
+        "CMP/TCF-framework presence note",
+        "Cross-border divergence flags"
+      ],
+      "related_skills": [
+        "skills/privacy/privacy-policy-gap-review/SKILL.md",
+        "skills/privacy/cross-border-transfer-review/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md",
+        "skills/product-legal/marketing-claims-review/SKILL.md",
+        "skills/privacy/dpa-review/SKILL.md"
+      ],
+      "tags": [
+        "privacy",
+        "cookies",
+        "tracking-technologies",
+        "consent-management",
+        "dark-patterns",
+        "adtech"
+      ]
+    },
+    {
       "id": "privacy/cross-border-transfer-review",
       "title": "Cross-Border Transfer Review",
       "path": "skills/privacy/cross-border-transfer-review/SKILL.md",
@@ -10797,6 +11001,103 @@
         "transfer-impact-assessment",
         "sccs",
         "data-protection"
+      ]
+    },
+    {
+      "id": "privacy/data-retention-schedule-review",
+      "title": "Data Retention Schedule Review",
+      "path": "skills/privacy/data-retention-schedule-review/SKILL.md",
+      "summary": "Use when reviewing a draft or existing data retention schedule to inventory data categories against stated purposes, collect retention-period facts, flag legal-hold interactions, and surface orphaned-data and vendor-coverage gaps for attorney review.",
+      "use_when": [
+        "The organization has a draft retention schedule and wants it checked for internal consistency and completeness before adoption.",
+        "An existing retention schedule needs a periodic review against the current data inventory.",
+        "A privacy, records-management, or legal-ops team wants retention periods, legal bases, and deletion mechanics organized for attorney sign-off.",
+        "A DSAR, audit, or regulatory inquiry has surfaced a question about how long a data category is actually kept versus what the schedule says.",
+        "Counsel needs to understand how a proposed litigation hold or preservation notice would interact with the standing retention schedule."
+      ],
+      "required_inputs": [
+        "The draft or existing data retention schedule, policy, or spreadsheet",
+        "The data inventory or record of processing activities, if available",
+        "The organization's stated business, legal, and regulatory purposes for each data category",
+        "Optional: known legal holds or preservation obligations currently in effect",
+        "Optional: vendor and backup system inventory covering the same data categories"
+      ],
+      "expected_outputs": [
+        "Retention-category inventory mapped to stated purposes",
+        "Retention-period fact table, flagged for legal sufficiency review",
+        "Legal-hold override interaction notes",
+        "Deletion and anonymization mechanics summary",
+        "Vendor and backup coverage gap list",
+        "Orphaned-data red-flag list"
+      ],
+      "category": "review",
+      "requires_jurisdiction": true,
+      "requires_deadline_check": true,
+      "recommended_quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "citation-integrity-check",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ],
+      "compatible_platforms": [
+        "chatgpt",
+        "claude",
+        "cursor",
+        "codex",
+        "gemini",
+        "generic-md"
+      ],
+      "pack_tags": [
+        "data-governance",
+        "data-minimization",
+        "data-retention",
+        "high",
+        "legal-hold",
+        "privacy",
+        "records-management",
+        "review"
+      ],
+      "eval_status": "manual-eval-ready",
+      "name": "Data Retention Schedule Review",
+      "description": "Use when reviewing a draft or existing data retention schedule to inventory data categories against stated purposes, collect retention-period facts, flag legal-hold interactions, and surface orphaned-data and vendor-coverage gaps for attorney review.",
+      "practice_area": "privacy",
+      "task_type": "review",
+      "jurisdictions": [],
+      "risk_level": "high",
+      "requires_attorney_review": true,
+      "inputs": [
+        "The draft or existing data retention schedule, policy, or spreadsheet",
+        "The data inventory or record of processing activities, if available",
+        "The organization's stated business, legal, and regulatory purposes for each data category",
+        "Optional: known legal holds or preservation obligations currently in effect",
+        "Optional: vendor and backup system inventory covering the same data categories"
+      ],
+      "outputs": [
+        "Retention-category inventory mapped to stated purposes",
+        "Retention-period fact table, flagged for legal sufficiency review",
+        "Legal-hold override interaction notes",
+        "Deletion and anonymization mechanics summary",
+        "Vendor and backup coverage gap list",
+        "Orphaned-data red-flag list"
+      ],
+      "related_skills": [
+        "skills/privacy/pia-generation/SKILL.md",
+        "skills/privacy/vendor-privacy-diligence/SKILL.md",
+        "skills/privacy/privacy-policy-gap-review/SKILL.md",
+        "skills/litigation/legal-hold/SKILL.md",
+        "skills/privacy/dsar-workflow/SKILL.md"
+      ],
+      "tags": [
+        "privacy",
+        "data-retention",
+        "data-governance",
+        "legal-hold",
+        "records-management",
+        "data-minimization"
       ]
     },
     {
