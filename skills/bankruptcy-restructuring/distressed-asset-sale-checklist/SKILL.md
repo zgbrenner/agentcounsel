@@ -105,7 +105,9 @@ Also out of scope (this skill does not): conclude that assets may be sold free a
 3. Assemble the sale-process checklist across the relevant areas — sale
    process, stalking-horse terms, bid procedures, liens and encumbrances, cure
    costs, assigned contracts, employee matters, IP, real estate, taxes,
-   regulatory approvals, closing deliverables, and sale-order issues.
+   regulatory approvals, closing deliverables, and sale-order issues —
+   consulting `skills/bankruptcy-restructuring/references/issue-catalog.md`
+   (Section 7) for the recurring patterns and questions to surface.
 4. Produce a diligence request list for the sale.
 5. Build a contract/cure tracker and a closing-deliverables tracker, recording
    amounts and dates as provided.

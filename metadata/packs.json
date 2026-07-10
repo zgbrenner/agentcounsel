@@ -771,7 +771,9 @@
         "assumption-audit",
         "hallucination-red-team"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/corporate.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/corporate-transaction-matter.md"
@@ -843,7 +845,9 @@
         "assumption-audit",
         "hallucination-red-team"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/corporate.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/corporate-transaction-matter.md"
@@ -915,7 +919,9 @@
         "assumption-audit",
         "hallucination-red-team"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/corporate.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/corporate-transaction-matter.md"
@@ -1206,7 +1212,9 @@
         "output-format-compliance-check",
         "legal-prose-polish"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/privacy.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
@@ -1278,7 +1286,9 @@
         "output-format-compliance-check",
         "legal-prose-polish"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/privacy.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
@@ -1350,7 +1360,9 @@
         "output-format-compliance-check",
         "legal-prose-polish"
       ],
-      "included_matter_packs": [],
+      "included_matter_packs": [
+        "matter-packs/privacy.md"
+      ],
       "included_matter_workspace_templates": [
         "matter-workspaces/README.md",
         "matter-workspaces/contract-review-matter.md",
@@ -1957,7 +1969,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/insurance/references/output-patterns.md"
+        "skills/insurance/references/output-patterns.md",
+        "skills/insurance/references/red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -2025,7 +2038,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/insurance/references/output-patterns.md"
+        "skills/insurance/references/output-patterns.md",
+        "skills/insurance/references/red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -2093,7 +2107,8 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
-        "skills/insurance/references/output-patterns.md"
+        "skills/insurance/references/output-patterns.md",
+        "skills/insurance/references/red-flags.md"
       ],
       "included_quality_checks": [
         "attorney-review-gate",
@@ -2351,7 +2366,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-methodology/references/plain-language-checklist.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -2441,7 +2458,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-methodology/references/plain-language-checklist.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -2531,7 +2550,9 @@
         "core/output-format-rules.md",
         "core/attorney-review-checklist.md"
       ],
-      "included_templates": [],
+      "included_templates": [
+        "skills/legal-methodology/references/plain-language-checklist.md"
+      ],
       "included_quality_checks": [
         "attorney-review-gate",
         "citation-integrity-check",
@@ -3004,6 +3025,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/bankruptcy-restructuring/references/issue-catalog.md",
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -3074,6 +3096,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/bankruptcy-restructuring/references/issue-catalog.md",
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -3144,6 +3167,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/bankruptcy-restructuring/references/issue-catalog.md",
         "skills/bankruptcy-restructuring/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -3806,6 +3830,7 @@
       ],
       "included_templates": [
         "skills/m-and-a/references/output-patterns.md",
+        "skills/m-and-a/references/red-flags.md",
         "skills/m-and-a/transition-services-agreement-review/templates/tsa-review-matrix.md"
       ],
       "included_quality_checks": [
@@ -3820,6 +3845,7 @@
         "hallucination-red-team"
       ],
       "included_matter_packs": [
+        "matter-packs/corporate.md",
         "matter-packs/m-and-a.md"
       ],
       "included_matter_workspace_templates": [],
@@ -3875,6 +3901,7 @@
       ],
       "included_templates": [
         "skills/m-and-a/references/output-patterns.md",
+        "skills/m-and-a/references/red-flags.md",
         "skills/m-and-a/transition-services-agreement-review/templates/tsa-review-matrix.md"
       ],
       "included_quality_checks": [
@@ -3889,6 +3916,7 @@
         "hallucination-red-team"
       ],
       "included_matter_packs": [
+        "matter-packs/corporate.md",
         "matter-packs/m-and-a.md"
       ],
       "included_matter_workspace_templates": [],
@@ -3944,6 +3972,7 @@
       ],
       "included_templates": [
         "skills/m-and-a/references/output-patterns.md",
+        "skills/m-and-a/references/red-flags.md",
         "skills/m-and-a/transition-services-agreement-review/templates/tsa-review-matrix.md"
       ],
       "included_quality_checks": [
@@ -3958,6 +3987,7 @@
         "hallucination-red-team"
       ],
       "included_matter_packs": [
+        "matter-packs/corporate.md",
         "matter-packs/m-and-a.md"
       ],
       "included_matter_workspace_templates": [],
@@ -4415,6 +4445,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/tax/references/issue-catalog.md",
         "skills/tax/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -4480,6 +4511,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/tax/references/issue-catalog.md",
         "skills/tax/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -4545,6 +4577,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/tax/references/issue-catalog.md",
         "skills/tax/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -4612,6 +4645,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/trusts-estates/references/issue-catalog.md",
         "skills/trusts-estates/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -4682,6 +4716,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/trusts-estates/references/issue-catalog.md",
         "skills/trusts-estates/references/output-patterns.md"
       ],
       "included_quality_checks": [
@@ -4752,6 +4787,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/trusts-estates/references/issue-catalog.md",
         "skills/trusts-estates/references/output-patterns.md"
       ],
       "included_quality_checks": [

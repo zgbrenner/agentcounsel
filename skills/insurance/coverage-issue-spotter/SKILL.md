@@ -76,7 +76,7 @@ Also out of scope (this skill does not): determine whether a claim is covered; d
 
 1. Confirm the gates: the policy, the claim facts, the policy type, the user's role, the claim type, the claim stage, and jurisdiction. Record any missing gate as `not provided`.
 2. Build a source register for the policy provisions and the claim documents.
-3. Work through the coverage architecture and spot issues in each layer, without deciding any of them:
+3. Work through the coverage architecture and spot issues in each layer, without deciding any of them, cross-checking against `skills/insurance/references/red-flags.md` (Sections 1–2, 6) and folding any pattern found into the issue matrix:
    - Insuring agreement triggers — what the policy must cover for this claim to fall within a grant.
    - Policy period — occurrence vs. claims-made/claims-made-and-reported timing questions, and trigger-of-coverage questions.
    - Notice and reporting — what the conditions require and what the claim facts show, as a question.

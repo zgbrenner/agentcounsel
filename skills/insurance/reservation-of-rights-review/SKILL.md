@@ -77,7 +77,7 @@ Also out of scope (this skill does not): conclude that a reservation is legally 
 
 1. Confirm the gates: the letter, the policy, the policy type, the user's role, and the claim. Record any missing gate as `not provided`.
 2. Build a source register for the letter paragraphs and the policy provisions.
-3. Map the letter's contents — policy identification; claim identification; facts the letter relies on; provisions the letter cites; the rights it reserves; the defense position stated (whether defense is being provided, and under what reservation); whether a conflict or independent-counsel issue is raised; cooperation expectations; and information requests.
+3. Map the letter's contents — policy identification; claim identification; facts the letter relies on; provisions the letter cites; the rights it reserves; the defense position stated (whether defense is being provided, and under what reservation); whether a conflict or independent-counsel issue is raised; cooperation expectations; and information requests. Cross-check against `skills/insurance/references/red-flags.md` (Section 3) and fold any pattern found into the review table.
 4. Cross-reference each cited provision to the policy: confirm the provision exists as cited, and flag any cite that does not match, is missing, or is `ambiguous`.
 5. Build the provision-reference table — letter reference | provision cited | policy location | match status.
 6. Flag clarity and consistency issues — internal contradictions, vague reservations, facts asserted without support in the claim record, and gaps.

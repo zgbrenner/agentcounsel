@@ -104,7 +104,9 @@ Also out of scope (this skill does not): calculate any tax, exemption, exclusion
    insurance, marital, charitable, and foreign facts, separating facts from
    uncertainties.
 4. Map estate, gift, GST, and inheritance tax issues as questions for a tax
-   professional — never as conclusions or computations.
+   professional — never as conclusions or computations — consulting
+   `skills/trusts-estates/references/issue-catalog.md` (Section 6) for the
+   recurring tax-issue categories and questions to surface.
 5. List missing facts and produce a document request list.
 6. Draft tax-professional verification questions.
 

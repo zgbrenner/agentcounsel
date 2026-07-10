@@ -8,6 +8,44 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Five shared reference catalogs**, completing the catalog program across
+  every large practice area: `skills/bankruptcy-restructuring/references/issue-catalog.md`,
+  `skills/tax/references/issue-catalog.md`,
+  `skills/trusts-estates/references/issue-catalog.md` (governed by the
+  capacity/vulnerable-party escalation rule),
+  `skills/insurance/references/red-flags.md`, and
+  `skills/m-and-a/references/red-flags.md` — wired with one-line pointers
+  into 50 skills across the five areas.
+- **Scored eval coverage expanded 8 → 20 skills** (35 new candidate outputs
+  across 12 skills in previously unscored areas — securities, bankruptcy,
+  trusts-estates, insurance, tax, employment, antitrust, ip, corporate,
+  m-and-a, legal-research, legal-methodology); `REQUIRED_EVAL_SLUGS` widened
+  so CI gates on all 20 permanently.
+- **Two matter packs:** `matter-packs/corporate.md` (Governance Cycle, Deal
+  Support) and `matter-packs/privacy.md` (Vendor & Data-Flow, Rights &
+  Incidents — notification clocks always flagged, never computed).
+- **Markdown→Word bridge:** `docs/MARKDOWN_TO_WORD.md` — pandoc
+  `--reference-doc` workflow for turning any skill's draft into a
+  firm-styled Word file for redlining, with a placeholder-survival check
+  before attorney review.
+- **Guided practice matter:** `docs/tutorials/practice-matter.md` — a
+  tabletop-style fictional first matter (structure adapted from CISA CTEP,
+  public domain) that walks a new user through routing, Required Inputs,
+  placeholder discipline, and the attorney-review gate.
+- **Plain-language pass:** `skills/legal-methodology/references/plain-language-checklist.md`
+  (distilled from the Federal Plain Language Guidelines, CC0) for
+  client-facing and stakeholder communications — explicitly not for legal
+  drafting, where precision outranks plainness.
+- **Site search:** the static catalog site now ships Pagefind search
+  (MIT; indexed at deploy time via a one-shot CI step — no repo
+  dependency), scoped to page content via `data-pagefind-body`.
+- **Learning deck:** `scripts/build_flashcards.py` (stdlib-only) emits an
+  Anki-importable TSV of routing flashcards from `metadata/index.json` —
+  one card per skill, for learning which skill fits which task.
+- **Repo trust & setup:** `CITATION.cff` (GitHub cite-this-repository
+  support) and `.devcontainer/devcontainer.json` (one-click validated
+  environment; runs the quick check suite on create).
+
 - **Two new skills** closing gaps named in the July 2026 audit backlog:
   `skills/litigation/motion-opposition-drafter` (the opposition counterpart to
   `brief-section-drafter` — deconstructs movant arguments, flags every movant

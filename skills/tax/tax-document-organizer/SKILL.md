@@ -144,7 +144,9 @@ skip it and say so.
    from step 2 as the checklist for this review. For each document, record
    complete / partial / illegible / `not provided`.
 
-6. **Run the completeness red-flag scan.** For each document family present,
+6. **Run the completeness red-flag scan**, consulting
+   `skills/tax/references/issue-catalog.md` (Section 9) for the recurring
+   inventory and notice-handling patterns. For each document family present,
    check for these common gaps and record every one found as a
    `[CONFIRM: ...]` item — never resolve, explain away, or characterize the
    consequence of a gap:

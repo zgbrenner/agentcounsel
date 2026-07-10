@@ -100,7 +100,9 @@ Also out of scope (this skill does not): calculate probate, tax, or notice deadl
 2. Build a source register for the notices, documents, and tasks already
    underway.
 3. Build the task tracker across the administration workstreams, with a source,
-   owner, status, dependency, and uncertainty flag for each task.
+   owner, status, dependency, and uncertainty flag for each task, consulting
+   `skills/trusts-estates/references/issue-catalog.md` (Section 7) for the
+   recurring task categories and questions to surface.
 4. Echo every user-supplied date as `[deadline verification required]`;
    calculate nothing.
 5. Flag near-term dates for prominent attorney attention.

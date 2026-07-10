@@ -103,7 +103,9 @@ Also out of scope (this skill does not): determine worker classification (employ
 2. Build a source register and cite every fact to a document or a user-stated
    fact.
 3. For each worker or group, capture engagement, payment, and document facts
-   into the facts-to-verify table, noting each fact's status.
+   into the facts-to-verify table, noting each fact's status, consulting
+   `skills/tax/references/issue-catalog.md` (Section 3) for the recurring
+   patterns and questions to surface.
 4. Surface risk themes — factual patterns counsel should examine — without
    stating a classification.
 5. List missing documents and produce questions for employment and tax counsel.

@@ -101,7 +101,8 @@ Also out of scope (this skill does not): conclude whether a fiduciary breached a
 3. Surface potential fiduciary-duty issues — conflicts, self-dealing concerns,
    investment decisions, communications, accounting, distributions, expenses,
    recordkeeping, co-fiduciary issues, and beneficiary objections — as
-   questions.
+   questions, consulting `skills/trusts-estates/references/issue-catalog.md`
+   (Section 3) for the recurring patterns and questions to surface.
 4. Flag escalation items for prominent attorney attention.
 5. List missing facts and draft attorney verification questions.
 6. Assemble the reviewer-ready working paper.

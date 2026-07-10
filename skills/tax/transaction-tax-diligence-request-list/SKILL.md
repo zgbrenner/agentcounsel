@@ -101,7 +101,9 @@ Also out of scope (this skill does not): calculate tax exposure, liability, or a
    points.
 3. Generate diligence requests workstream by workstream — income, sales/use,
    payroll/employment, property, transfer, returns, audits/notices, attributes,
-   tax sharing and intercompany arrangements, foreign issues, and withholding.
+   tax sharing and intercompany arrangements, foreign issues, and withholding
+   — consulting `skills/tax/references/issue-catalog.md` (Section 4) for the
+   categories and questions each workstream raises.
 4. Assign each request a priority, a one-line rationale, an owner, and a
    source/basis; mark conditional requests.
 5. Build a follow-up tracker linking each request to documents received and

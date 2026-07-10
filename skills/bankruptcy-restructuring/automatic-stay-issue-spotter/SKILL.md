@@ -106,7 +106,9 @@ Also out of scope (this skill does not): conclude whether the automatic stay app
 3. Inventory each action, communication, or proceeding, with its timing
    relative to the petition date as the user states it.
 4. Map the facts that bear on stay concerns for each action — without
-   concluding whether the stay applies.
+   concluding whether the stay applies — consulting
+   `skills/bankruptcy-restructuring/references/issue-catalog.md` (Section 1)
+   for the recurring patterns and questions to surface.
 5. Flag actions for prominent escalation to an attorney before any step is
    taken.
 6. List missing facts and draft attorney verification questions.

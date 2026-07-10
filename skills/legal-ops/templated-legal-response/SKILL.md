@@ -83,7 +83,7 @@ This skill drafts a response; it does not send anything.
 
 4. **Gather customization details.** If the gate passes, collect the facts the response needs: names, dates, reference numbers, jurisdiction and regulation, receipt date, and deadline.
 
-5. **Draft the response.** Populate the template. Adjust tone for the audience, the relationship, the sensitivity of the matter, and the urgency. Keep business-facing language plain.
+5. **Draft the response.** Populate the template. Adjust tone for the audience, the relationship, the sensitivity of the matter, and the urgency. Keep business-facing language plain, checking prose against `skills/legal-methodology/references/plain-language-checklist.md`.
 
 6. **Verify required elements.** Confirm the response contains the elements the inquiry type requires (for a data subject request: the applicable regime, the timeline, identity-verification requirements, the data subject's rights, a contact; for a litigation hold: the matter reference, the preservation scope, the no-spoliation instruction, an acknowledgment request, a contact).
 

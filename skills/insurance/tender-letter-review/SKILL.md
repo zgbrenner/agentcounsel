@@ -78,7 +78,7 @@ Also out of scope (this skill does not): conclude that a tender is timely, valid
 1. Confirm the gates: the letter, the asserted policy and/or contract basis, the user's role, the claim, and the duties tendered. Record any missing gate as `not provided`.
 2. Build a source register for the letter, the policy provisions, and the contract clauses.
 3. Map the tender's contents — recipient and addressee; the policy and/or contract basis asserted; claim identification (parties, matter, suit if any); the duties tendered (defense, indemnity, or both); the additional insured or indemnity basis cited; and the supporting documents enclosed or referenced.
-4. Run the completeness checklist — for each element a tender of this type usually contains, mark present, `not found`, or `ambiguous`, with a source.
+4. Run the completeness checklist — for each element a tender of this type usually contains, mark present, `not found`, or `ambiguous`, with a source. Cross-check against `skills/insurance/references/red-flags.md` (Section 5) and fold any pattern found into the checklist.
 5. List missing documents — supporting documents the tender references or that a recipient would expect but the package does not include.
 6. Flag risks — vague or unsupported assertions, mismatch between the cited contract requirements and the policy, unclear duties, and gaps.
 7. Propose attorney-review revisions — direction only, framed as suggestions, never final language to send.

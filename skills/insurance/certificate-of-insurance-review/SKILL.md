@@ -76,7 +76,7 @@ Also out of scope (this skill does not): confirm that coverage exists, is in for
 1. Confirm the gates: the certificate(s), the contract requirements (if any), the user's role, and the relationship evidenced. Record any missing gate as `not provided`.
 2. Build a source register for each certificate, each endorsement, and the contract clauses if provided.
 3. Extract the certificate fields — producer, insurers, named insured, certificate holder, policy types, policy numbers, policy periods, limits, and the boxes checked for additional insured, waiver of subrogation, and primary/noncontributory.
-4. Identify the endorsements actually attached or referenced — additional insured, waiver of subrogation, primary and noncontributory — and note whether the certificate merely checks a box versus attaching the endorsement form.
+4. Identify the endorsements actually attached or referenced — additional insured, waiver of subrogation, primary and noncontributory — and note whether the certificate merely checks a box versus attaching the endorsement form. Cross-check against `skills/insurance/references/red-flags.md` (Section 4) and fold any pattern found into the comparison table.
 5. If contract requirements are provided, build the comparison table — requirement | what the certificate/endorsement shows | source | match status (`matches` / `mismatch` / `not found` / `ambiguous`).
 6. List missing endorsements — endorsements the contract requires (or that a holder would expect) but the package does not include.
 7. List mismatches — limit shortfalls, expired or non-overlapping dates, wrong named insured or holder, wrong policy type.

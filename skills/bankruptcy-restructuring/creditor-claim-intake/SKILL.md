@@ -112,7 +112,9 @@ validity, classification, priority, or amount.
    can trace its source.
 
 3. **Capture the claim components.** Break the claimed amount into its stated
-   components — never compute or verify any figure:
+   components — never compute or verify any figure — consulting
+   `skills/bankruptcy-restructuring/references/issue-catalog.md` (Section 2)
+   for the recurring patterns and questions to surface:
    - **Principal** — the base amount claimed, with the originating contract,
      invoice, or note referenced.
    - **Interest** — the rate and accrual method as stated in the governing

@@ -78,7 +78,7 @@ Also out of scope (this skill does not): approve any communication for sending; 
 
 1. Confirm the gates: the communications, the policy/claim context, the user's role, the claim stage, and the review purpose. Record any missing gate as `not provided`.
 2. Build a source register for the communications.
-3. Review each communication and flag issues, neutrally framed, across:
+3. Review each communication and flag issues, neutrally framed, cross-checking against `skills/insurance/references/red-flags.md` (Section 10) and folding any pattern found into the issue list, across:
    - Clarity — vague, confusing, or incomplete statements.
    - Consistency — statements that conflict with each other, with the policy, or with the claim record.
    - Tone and accuracy — statements that overstate, understate, or could be read as a commitment or admission.

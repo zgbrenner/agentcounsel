@@ -105,7 +105,8 @@ Also out of scope (this skill does not): approve a distribution; determine benef
    status, and dependency — across assets, distributions, accountings, tax,
    real estate, investments, business interests, and debts.
 4. Record distributions and accountings as provided, without approving or
-   assessing them.
+   assessing them, consulting `skills/trusts-estates/references/issue-catalog.md`
+   (Section 3) for the recurring fiduciary patterns and questions to surface.
 5. Flag missing facts and open disputes as questions for the attorney.
 6. Draft attorney verification items and assemble the working paper.
 

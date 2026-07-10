@@ -104,7 +104,9 @@ Also out of scope (this skill does not): determine whether a transfer is avoidab
 3. Build a transfer timeline from the alleged transfers and the payment
    history, recording dates and amounts as stated.
 4. Assemble a defense-facts checklist — ordinary course, new value, and
-   contemporaneous exchange facts — as facts to verify, never as conclusions.
+   contemporaneous exchange facts — as facts to verify, never as conclusions —
+   consulting `skills/bankruptcy-restructuring/references/issue-catalog.md`
+   (Section 3) for the recurring patterns and questions to surface.
 5. List missing documents and identify response-planning issues for the
    attorney.
 6. Draft attorney verification questions and assemble the working paper.

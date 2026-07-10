@@ -73,9 +73,10 @@ If the draft is not provided, stop and request it. Do not polish from a summary 
 3. **Scan for AI-sounding prose.** Flag throat-clearing, filler transitions, fake balance, repetitive hedging, generic intensifiers, and words such as "delve," "landscape," "underscore," and "robust" where they add no legal precision.
 4. **Scan for legal overclaiming.** Flag conclusory legal statements, vague "legal risk" language, unsupported certainty, and caveats that obscure rather than clarify the issue.
 5. **Scan for agency and responsibility.** Where passive voice hides who must act, who said what, who bears risk, or who must confirm an item, recommend active phrasing. Preserve passive voice where it is legally or tactically appropriate.
-6. **Revise conservatively.** Tighten and clarify prose without changing substance. Where a sentence needs legal or factual support, add a placeholder instead of supplying unsupported substance.
-7. **List preserved items.** Record citations, quotations, defined terms, privilege legends, and warnings that were intentionally preserved.
-8. **Flag attorney decisions.** Identify any sentence whose revision requires legal judgment, tactical tone choice, client authorization, or privilege/confidentiality judgment.
+6. **For client- or business-stakeholder-facing drafts only**, also check against `skills/legal-methodology/references/plain-language-checklist.md` — never apply its simplifications to legal drafting itself (contract clauses, citations, statutory analysis).
+7. **Revise conservatively.** Tighten and clarify prose without changing substance. Where a sentence needs legal or factual support, add a placeholder instead of supplying unsupported substance.
+8. **List preserved items.** Record citations, quotations, defined terms, privilege legends, and warnings that were intentionally preserved.
+9. **Flag attorney decisions.** Identify any sentence whose revision requires legal judgment, tactical tone choice, client authorization, or privilege/confidentiality judgment.
 
 ## Output Format
 

@@ -108,7 +108,9 @@ Also out of scope (this skill does not): conclude whether a contract or lease is
    consent issues, and status.
 4. Build a cure/default tracker recording amounts and defaults as stated.
 5. Surface assumption, rejection, and assignment issues as questions for the
-   attorney — never as conclusions.
+   attorney — never as conclusions — consulting
+   `skills/bankruptcy-restructuring/references/issue-catalog.md` (Section 4)
+   for the recurring patterns and questions to surface.
 6. List missing facts and draft the attorney verification checklist.
 
 ## Output Format

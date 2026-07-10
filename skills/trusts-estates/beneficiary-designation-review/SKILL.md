@@ -99,7 +99,9 @@ Also out of scope (this skill does not): conclude the legal effect of a designat
 3. Tabulate named beneficiaries, contingent beneficiaries, percentages, account
    ownership, and form dates.
 4. Where estate documents are provided, flag inconsistencies between the
-   designations and the stated estate intent — without resolving them.
+   designations and the stated estate intent — without resolving them —
+   consulting `skills/trusts-estates/references/issue-catalog.md` (Section 4)
+   for the recurring patterns and questions to surface.
 5. List missing forms and designations.
 6. Draft the attorney verification checklist.
 

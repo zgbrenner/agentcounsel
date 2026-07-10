@@ -478,7 +478,7 @@
         "review",
         "training"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Antitrust Compliance Policy Review",
       "description": "Use when a company's antitrust compliance policy, competition code-of-conduct section, or training program needs a gap review — after an incident, an acquisition, a regulatory development, or as a periodic refresh — to produce a draft topic-coverage and jurisdiction-coverage matrix, training/reporting and dawn-raid gap assessments, and a drafting-suggestion list for attorney review, without attesting compliance or approving the policy.",
       "practice_area": "antitrust-competition",
@@ -1364,7 +1364,7 @@
         "high",
         "issue-spotting"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Automatic Stay Issue Spotter",
       "description": "Use when issue-spotting automatic stay concerns from user-provided facts into a source-cited stay-risk fact map for attorney review, without concluding whether the stay applies.",
       "practice_area": "bankruptcy-restructuring",
@@ -2942,7 +2942,7 @@
         "issue-extraction",
         "m-and-a"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Diligence Issue Extraction",
       "description": "Use when reviewing provided due-diligence documents for an M&A or investment transaction to extract material issues into a structured, severity-sorted issues memo for attorney review.",
       "practice_area": "corporate",
@@ -3902,7 +3902,7 @@
         "termination",
         "wrongful-termination"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Termination Risk",
       "description": "Use when organizing and reviewing the facts surrounding a proposed employee termination so an attorney can assess legal risk before the termination occurs.",
       "practice_area": "employment",
@@ -5574,7 +5574,7 @@
         "insurance",
         "triage"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Bad Faith Risk Triage",
       "description": "Use when issue-spotting potential claim-handling and bad-faith risk themes from claim file materials into a source-cited risk-theme list for attorney review.",
       "practice_area": "insurance",
@@ -6554,7 +6554,7 @@
         "ip-demand",
         "triage"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Cease and Desist Response",
       "description": "Use when a client has received a cease-and-desist letter or similar IP demand and needs a structured triage memo — covering the assertion, exposure, response options, and immediate actions — for attorney review before responding.",
       "practice_area": "ip",
@@ -7178,7 +7178,7 @@
         "review-gate",
         "verification"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Attorney Review Gate",
       "description": "Use when running a final quality gate before legal draft work product is sent, filed, relied upon, or delivered for attorney review, producing must-confirm facts, law, citations, client decisions, ethics flags, privilege flags, jurisdiction/deadline flags, and a ready-or-not-ready status.",
       "practice_area": "legal-methodology",
@@ -8561,7 +8561,7 @@
         "negative-treatment",
         "source-validation"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Negative Treatment Check",
       "description": "Use when you need to check whether the authorities cited in a draft or research memo are still good law — organizing a citator-style verification plan for each authority, recording provided citator-report signals as attributed claims, and classifying each authority's verification status, without ever asserting from model memory that a case is good law, overruled, or distinguished.",
       "practice_area": "legal-research",
@@ -10398,7 +10398,7 @@
         "rwi",
         "transaction-insurance"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "R&W Insurance Review",
       "description": "Use when reviewing a representations-and-warranties insurance policy or quote package against the deal documents — inventorying the policy, binder, and exclusions; mapping coverage to the purchase agreement's reps; building an exclusions register; and recording retention, limit, and no-claims-declaration terms — without ever concluding coverage or computing adequacy.",
       "practice_area": "m-and-a",
@@ -12828,7 +12828,7 @@
         "securities-capital-markets",
         "underwriting"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Capital Markets Closing Checklist",
       "description": "Use when organizing the closing universe for a public or private capital-markets transaction into a draft closing-workstream tracker covering approvals, agreement bring-down, opinions, certificates, comfort, lock-ups, and post-closing filings for attorney review, without approving closing or any closing condition.",
       "practice_area": "securities-capital-markets",
@@ -15504,7 +15504,7 @@
         "intake",
         "tax"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Crypto Digital Asset Tax Intake",
       "description": "Use when intaking crypto and digital-asset activity and organizing wallet, exchange, and transaction records into a source-cited intake matrix for tax professional review.",
       "practice_area": "tax",
@@ -16423,7 +16423,7 @@
         "review",
         "trusts-estates"
       ],
-      "eval_status": "manual-eval-ready",
+      "eval_status": "scored",
       "name": "Beneficiary Designation Review",
       "description": "Use when reviewing beneficiary designations and account titling into a source-cited table and inconsistency list for attorney review.",
       "practice_area": "trusts-estates",

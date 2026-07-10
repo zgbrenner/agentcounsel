@@ -141,7 +141,9 @@ Also out of scope (this skill does not): give final advice or a final negotiatin
 
 3. **Review the agreement topic by topic.** For each topic below, record what
    the agreement states, with a source citation, and note the issue from the
-   stated side. Where the agreement is silent, record `Not found`.
+   stated side. Where the agreement is silent, record `Not found`. Cross-check
+   each topic against `skills/m-and-a/references/red-flags.md` (Sections
+   1–6, 9–10) and fold any pattern found into the issue list.
    - Deal structure — merger, stock purchase, asset purchase,
      membership-interest purchase, or other; what is acquired and what, if
      anything, is excluded.

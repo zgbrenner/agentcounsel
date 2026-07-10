@@ -79,7 +79,7 @@ Also out of scope (this skill does not): conclude that bad faith did or did not 
 
 1. Confirm the gates: the claim file, the policy type, the user's role, the claim type, the claim stage, and jurisdiction. Record any missing gate as `not provided`.
 2. Build a source register for the claim documents.
-3. Review the claim-handling record and surface potential risk themes, framed neutrally, across:
+3. Review the claim-handling record and surface potential risk themes, framed neutrally, cross-checking against `skills/insurance/references/red-flags.md` (Section 7) and folding any theme found into the risk-theme list, across:
    - Investigation timeline — gaps, pauses, or sequencing the documents show.
    - Communications — tone, clarity, responsiveness, and consistency of what was told to the insured or claimant.
    - Delays — periods between key steps, described factually without judging reasonableness.
