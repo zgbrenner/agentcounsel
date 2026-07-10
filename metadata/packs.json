@@ -1180,7 +1180,10 @@
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
         "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/childrens-privacy-review/SKILL.md",
+        "skills/privacy/cookie-consent-review/SKILL.md",
         "skills/privacy/cross-border-transfer-review/SKILL.md",
+        "skills/privacy/data-retention-schedule-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
         "skills/privacy/pia-generation/SKILL.md",
@@ -1196,6 +1199,9 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/privacy/childrens-privacy-review/templates/childrens-privacy-facts-table.md",
+        "skills/privacy/cookie-consent-review/templates/cookie-consent-review-table.md",
+        "skills/privacy/data-retention-schedule-review/templates/data-retention-schedule-review-table.md",
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
         "skills/privacy/dsar-workflow/templates/dsar-handling-record.md",
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
@@ -1254,7 +1260,10 @@
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
         "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/childrens-privacy-review/SKILL.md",
+        "skills/privacy/cookie-consent-review/SKILL.md",
         "skills/privacy/cross-border-transfer-review/SKILL.md",
+        "skills/privacy/data-retention-schedule-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
         "skills/privacy/pia-generation/SKILL.md",
@@ -1270,6 +1279,9 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/privacy/childrens-privacy-review/templates/childrens-privacy-facts-table.md",
+        "skills/privacy/cookie-consent-review/templates/cookie-consent-review-table.md",
+        "skills/privacy/data-retention-schedule-review/templates/data-retention-schedule-review-table.md",
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
         "skills/privacy/dsar-workflow/templates/dsar-handling-record.md",
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
@@ -1328,7 +1340,10 @@
       "use_case": "practice-area legal workflow pack",
       "included_skills": [
         "skills/privacy/breach-response-workflow/SKILL.md",
+        "skills/privacy/childrens-privacy-review/SKILL.md",
+        "skills/privacy/cookie-consent-review/SKILL.md",
         "skills/privacy/cross-border-transfer-review/SKILL.md",
+        "skills/privacy/data-retention-schedule-review/SKILL.md",
         "skills/privacy/dpa-review/SKILL.md",
         "skills/privacy/dsar-workflow/SKILL.md",
         "skills/privacy/pia-generation/SKILL.md",
@@ -1344,6 +1359,9 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/privacy/childrens-privacy-review/templates/childrens-privacy-facts-table.md",
+        "skills/privacy/cookie-consent-review/templates/cookie-consent-review-table.md",
+        "skills/privacy/data-retention-schedule-review/templates/data-retention-schedule-review-table.md",
         "skills/privacy/dpa-review/templates/dpa-risk-table.md",
         "skills/privacy/dsar-workflow/templates/dsar-handling-record.md",
         "skills/privacy/pia-generation/templates/privacy-impact-assessment.md",
@@ -2367,6 +2385,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/legal-methodology/references/citation-confidence-tiers.md",
         "skills/legal-methodology/references/plain-language-checklist.md"
       ],
       "included_quality_checks": [
@@ -2459,6 +2478,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/legal-methodology/references/citation-confidence-tiers.md",
         "skills/legal-methodology/references/plain-language-checklist.md"
       ],
       "included_quality_checks": [
@@ -2551,6 +2571,7 @@
         "core/attorney-review-checklist.md"
       ],
       "included_templates": [
+        "skills/legal-methodology/references/citation-confidence-tiers.md",
         "skills/legal-methodology/references/plain-language-checklist.md"
       ],
       "included_quality_checks": [

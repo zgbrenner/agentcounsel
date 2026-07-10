@@ -102,6 +102,8 @@ _Reference: `skills/regulatory/compliance-gap-matrix/SKILL.md` for structured co
 | 2 | `[CONFIRM: e.g., client's internal audit or compliance report]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM: basis for compliance status assessment]` |
 | 3 | `[CONFIRM: e.g., client's prior regulatory filings or correspondence]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` |
 | 4 | `[CONFIRM: e.g., policies or procedures under review]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` | `[CONFIRM]` |
+
+_For a fuller per-document structure map (headings/page refs, conversion method, processing status, provenance), use the Document Map convention — see `matter-workspaces/_template/documents/README.md` and `docs/MATTER_WORKSPACES.md`._
 | 5 | | | | | |
 
 ---

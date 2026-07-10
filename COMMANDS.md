@@ -16,6 +16,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 ## Contracts
 
+*Typical chain:* `/contracts:review` → `/contracts:redline-summary` → `/contracts:vendor-status`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/contracts:nda` | `skills/contracts/nda-review/SKILL.md` | "review this NDA", "check this confidentiality agreement" | NDA text, client role, transaction context | Triage rating, risk table, prioritized redline points | `/contracts:review`, `/contracts:redline-summary` |
@@ -25,6 +27,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/contracts:vendor-status` | `skills/contracts/vendor-agreement-status/SKILL.md` | "vendor agreement status", "what agreements do we have with this vendor" | Vendor identity, agreement records, relationship context | Vendor agreement status report | `/contracts:review`, `/privacy:dpa` |
 
 ## Litigation
+
+*Typical chain:* `/litigation:intake` → `/litigation:legal-hold` → `/litigation:chronology` → `/litigation:demand` (or `/litigation:subpoena`)
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -41,6 +45,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/litigation:opposition` | `skills/litigation/motion-opposition-drafter/SKILL.md` | "draft an opposition to this motion", "respond to their motion for summary judgment" | Movant's motion papers, case theory, record, response deadline | Response outline and opposition draft | `/research:memo`, `/research:treatment-check`, `/method:source-validation` |
 
 ## Legal Research
+
+*Typical chain:* `/research:plan` → `/research:memo` → `/research:synthesis` → `/research:treatment-check`
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
@@ -95,6 +101,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 ## Mergers & Acquisitions
 
+*Typical chain:* `/m-and-a:loi-review` → `/m-and-a:diligence-request-list` → `/m-and-a:purchase-agreement` → `/m-and-a:closing-tracker`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/m-and-a:loi-review` | `skills/m-and-a/loi-term-sheet-review/SKILL.md` | "review this LOI", "review this term sheet" | The LOI or term sheet, the side, the deal type | Binding/non-binding table and deal-terms issue list | `/m-and-a:purchase-agreement` |
@@ -127,6 +135,8 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 
 ## Privacy
 
+*Typical chain:* `/privacy:dpa` → `/privacy:transfers` → `/privacy:vendor-diligence`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/privacy:dpa` | `skills/privacy/dpa-review/SKILL.md` | "review this DPA", "review a data processing agreement" | DPA text, client role | Risk table and review | `/contracts:review` |
@@ -136,6 +146,9 @@ A command never overrides a skill. The canonical source of truth is the `skills/
 | `/privacy:breach-response` | `skills/privacy/breach-response-workflow/SKILL.md` | "we had a security incident", "do we have to notify anyone" | Incident description, trigger dates, affected data, privilege posture | Incident intake, notification-obligation inventory, chronology | `/litigation:legal-hold`, `/privacy:dpa` |
 | `/privacy:transfers` | `skills/privacy/cross-border-transfer-review/SKILL.md` | "map our cross-border transfers", "organize the TIA facts" | Transfer documents, parties and roles, origin/destination countries | Flow inventory, mechanism map, gap list | `/privacy:dpa`, `/privacy:vendor-diligence` |
 | `/privacy:vendor-diligence` | `skills/privacy/vendor-privacy-diligence/SKILL.md` | "run privacy diligence on this vendor", "the security questionnaire came back" | Vendor diligence materials, data scope, requirements baseline | Risk/gap table, follow-up questions, contract asks | `/privacy:dpa`, `/ai:vendor-terms` |
+| `/privacy:retention-schedule` | `skills/privacy/data-retention-schedule-review/SKILL.md` | "review our retention schedule", "check this data retention policy" | Retention schedule, data inventory (if available), stated purposes | Retention-category inventory, retention-period fact table, gap flags | `/privacy:pia`, `/litigation:legal-hold` |
+| `/privacy:childrens-privacy` | `skills/privacy/childrens-privacy-review/SKILL.md` | "review this product for kids' privacy", "does this app need parental consent" | Product description, audience-analysis facts, age-gating and consent-flow facts | Audience/age-gate/consent fact tables, escalation flag | `/privacy:pia`, `/product:launch-review` |
+| `/privacy:cookie-consent` | `skills/privacy/cookie-consent-review/SKILL.md` | "review our cookie banner", "check our tracker disclosure vs. actual trackers" | Tracker inventory/scan, cookie disclosure text, banner description | Tracker-vs-disclosure table, banner mechanics, dark-pattern flags | `/privacy:policy-gap`, `/privacy:transfers` |
 
 ## Product Legal
 
@@ -260,6 +273,8 @@ Only the four analytical-method skills below carry slash-style commands. The oth
 
 ## Bankruptcy / Restructuring
 
+*Typical chain:* `/bankruptcy:intake` → `/bankruptcy:claim-intake` → `/bankruptcy:proof-of-claim` → `/bankruptcy:deadline-tracker`
+
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|
 | `/bankruptcy:intake` | `skills/bankruptcy-restructuring/bankruptcy-matter-intake/SKILL.md` | "bankruptcy matter intake", "restructuring intake" | Parties, party role, case status, document set | Matter summary + risk themes | `/bankruptcy:claim-intake`, `/bankruptcy:deadline-tracker` |
@@ -277,6 +292,8 @@ Only the four analytical-method skills below carry slash-style commands. The oth
 
 
 ## Insurance
+
+*Typical chain:* `/insurance:policy-summary` → `/insurance:coverage-issues` → `/insurance:claims-chronology` → `/insurance:position-outline`
 
 | Command | Skill | Trigger phrases | Required inputs | Expected output | Related |
 |---|---|---|---|---|---|

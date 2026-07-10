@@ -42,3 +42,6 @@ facts, source-dependent claims, quotations, legal propositions, or dates.
 For legal authorities, run `citation-integrity-check` as a companion check. For
 model-generated drafts, run `hallucination-red-team` if unsupported claims or
 invented authority risk is material.
+
+For source material that originates from a scanned or OCR'd document, see
+`docs/SCANNED_DOCUMENTS.md` before treating extracted text as a verified source.

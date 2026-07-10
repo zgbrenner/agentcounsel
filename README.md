@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Practice areas](https://img.shields.io/badge/practice%20areas-20-purple.svg)](SKILLS_INDEX.md)
-[![Skills](https://img.shields.io/badge/skills-209-success.svg)](SKILLS_INDEX.md)
+[![Skills](https://img.shields.io/badge/skills-212-success.svg)](SKILLS_INDEX.md)
 [![Works with](https://img.shields.io/badge/works%20with-ChatGPT%20%C2%B7%20Claude%20%C2%B7%20Gemini%20%C2%B7%20Codex%20%C2%B7%20Cursor-lightgrey.svg)](#ways-to-use-agentcounsel)
 [![CI](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml/badge.svg)](https://github.com/zgbrenner/agentcounsel/actions/workflows/validate.yml)
 [![Site](https://github.com/zgbrenner/agentcounsel/actions/workflows/deploy-pages.yml/badge.svg)](https://zgbrenner.github.io/agentcounsel/)
@@ -48,7 +48,7 @@ You do not need to read `core/` to get started: every pack and adapter loads tho
 
 ## Practice areas
 
-AgentCounsel has **209 skills**: 174 across **20 practice areas**, plus 35 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
+AgentCounsel has **212 skills**: 177 across **20 practice areas**, plus 35 cross-cutting skills in three supporting groups (Setup, Legal Operations, Legal Methodology).
 
 | Practice area | Skills | Covers |
 |---|--:|---|
@@ -57,7 +57,7 @@ AgentCounsel has **209 skills**: 174 across **20 practice areas**, plus 35 cross
 | Contracts | 5 | NDAs, commercial contracts, redlines, statements of work, vendor agreement status. |
 | Corporate | 7 | Board minutes, shareholder-meeting minutes, written consents, closing checklists, diligence review, material-contract schedules, entity compliance. |
 | Employment | 10 | Terminations, reductions in force, worker classification, hiring, restrictive-covenant review, internal investigations, protected leave, severance, workplace policies. |
-| Privacy | 7 | Data processing agreements, impact assessments, data subject requests, policy gaps, breach and incident response, cross-border transfer review, vendor privacy diligence. |
+| Privacy | 10 | Data processing agreements, impact assessments, data subject requests, policy gaps, breach and incident response, cross-border transfer review, vendor privacy diligence, data retention schedule review, children's privacy review, and cookie consent review. |
 | Product Legal | 4 | Launch review, marketing claims, terms of service, AI features. |
 | Regulatory | 5 | Enforcement risk, rule-change summaries, compliance gaps, compliance-program tracking, examination/inquiry response. |
 | AI Governance | 4 | AI use-case intake, vendor terms, model risk, AI policies. |
@@ -187,6 +187,8 @@ Every skill inherits the operating rules in [`core/`](core/):
 - **Flag uncertainty** with visible placeholders instead of guessing.
 
 The full safety model — the threat model, what AgentCounsel deliberately does *not* do, and how to use it safely with confidential material — is in **[docs/SAFETY_MODEL.md](docs/SAFETY_MODEL.md)**. Security reporting and guidance are in [`SECURITY.md`](SECURITY.md).
+
+A firm's risk or compliance team assessing AgentCounsel for adoption should start with [docs/AI_GOVERNANCE_DISCLOSURE.md](docs/AI_GOVERNANCE_DISCLOSURE.md), which maps these controls to common AI-governance framework questions.
 
 ## Configuring AgentCounsel for a team
 

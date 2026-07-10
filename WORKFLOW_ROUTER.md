@@ -203,6 +203,9 @@ For a recurring, multi-step matter *type*, `matter-packs/` bundles a recommended
 | "We had a security incident" / "someone got into the system" / "do we have to notify anyone?" | `skills/privacy/breach-response-workflow/SKILL.md` |
 | "This vendor hosts data abroad" / "map our cross-border transfers" / "organize the TIA facts" | `skills/privacy/cross-border-transfer-review/SKILL.md` |
 | "Run privacy diligence on this vendor" / "the security questionnaire came back" | `skills/privacy/vendor-privacy-diligence/SKILL.md` |
+| "Review our retention schedule" / "check this data retention policy" | `skills/privacy/data-retention-schedule-review/SKILL.md` |
+| "Review this product for kids' privacy" / "does this app need parental consent" / "is this directed to children" | `skills/privacy/childrens-privacy-review/SKILL.md` |
+| "Review our cookie banner" / "check our tracker disclosure against actual trackers" / "is this a dark pattern" | `skills/privacy/cookie-consent-review/SKILL.md` |
 | "We review DPAs the same way every time" | `playbooks/privacy-dpa-review.md` |
 
 ### Product, marketing, and AI features

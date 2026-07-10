@@ -8,6 +8,55 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Three privacy skills** filling gaps identified against the largest
+  open-source privacy-skills collection:
+  `privacy/data-retention-schedule-review`, `privacy/childrens-privacy-review`
+  (no age threshold ever stated as settled; actual-knowledge escalation),
+  and `privacy/cookie-consent-review` — each with a template, starter evals,
+  and full index/router/commands wiring. Library total: 212 skills.
+- **Citation-trust upgrade:**
+  `skills/legal-methodology/references/citation-confidence-tiers.md` (a
+  verification-status ladder — connector-verified / secondary-source /
+  model-knowledge→`[VERIFY]` / unresolvable→placeholder — complementing the
+  citation-type taxonomy), a "Citation provenance tags" convention in
+  `core/source-and-citation-discipline.md` (every citation carries its
+  provenance; no silent no-op when no verification source is available), and
+  a mechanical grounding pass (string-match quotations/pinpoints against
+  the provided sources before any judgment pass) opening
+  `review-panels/citation-source-red-team-panel.md`.
+- **Two connectors:** `connectors/congress-gov.md` (federal bill status,
+  enacted-vs-pending, public-law numbers — status only, never legal effect)
+  and `connectors/municipal-ordinances.md` (local-ordinance existence
+  checks; hosted codes are not operative — always re-verify against the
+  official municipal code).
+- **`docs/AI_GOVERNANCE_DISCLOSURE.md`** — the answer sheet for a firm's
+  risk/compliance team: every AgentCounsel safety mechanism mapped to NIST
+  AI RMF functions, EU AI Act framing, and vendor-diligence questions, with
+  what remains the firm's responsibility stated per row.
+- **`docs/SCANNED_DOCUMENTS.md`** — OCR-as-transcription discipline for
+  scanned exhibits: verify against the page image, record provenance,
+  red-flag checklist mapped to `[CONFIRM against original: ...]`.
+- **Matter-workspace conventions:** a per-source **Document Map**
+  (hierarchical structure, conversion method, processing status,
+  provenance) and an append-only **Session Notes** log (drafting context,
+  not work product) in the canonical template and documented in
+  `docs/MATTER_WORKSPACES.md`.
+- **`docs/templates/SKILL_TEMPLATE.md`** — fill-in-the-blanks scaffold for
+  new skills (all 11 frontmatter fields, eight canonical sections with
+  safety framing), linked from `CONTRIBUTING.md`.
+
+### Changed
+
+- `COMMANDS.md` practice-area sections now carry a one-line *Typical
+  chain* showing the natural command sequence, derived from the area's
+  matter pack or playbook.
+- `docs/OSS_BORROWING_MAP.md` gained 25 evaluated rows from the round-3
+  repo audit (including explicit rejections: AGPL/noncommercial licenses,
+  a deadline calculator contrary to the never-compute-deadlines rule, and
+  an output-compression skill flagged as a counter-pattern that would strip
+  verification language); `THIRD_PARTY_NOTICES.md` records the five
+  adapted structures.
+
 - **Five shared reference catalogs**, completing the catalog program across
   every large practice area: `skills/bankruptcy-restructuring/references/issue-catalog.md`,
   `skills/tax/references/issue-catalog.md`,

@@ -41,7 +41,9 @@ matter_profile.md      Matter header: parties, jurisdiction, deadlines, posture,
                        privilege status, practice profile/pack/playbook, escalation triggers
 facts.md               Established facts and disputed facts, each labeled by source
 open_questions.md      Unresolved questions blocking or shaping the analysis
-documents/             Source documents and a documents index
+documents/             Source documents, a documents index, and a per-document
+                       Document Map (hierarchical structure, conversion
+                       method, processing status, provenance)
 source_log.md          Every source consulted, with quality-layer classification
 citation_map.md        Each drafted statement mapped to its supporting source
 unsupported_claims.md  Statements with no adequate source — must be resolved
@@ -51,8 +53,41 @@ skills_used.md         Which AgentCounsel skills were run, when, and on what
 outputs/               Draft deliverables produced by skills
 quality_checks/        Records of quality-layer passes run on the outputs
 attorney_review.md     The attorney sign-off gate for the whole matter
-matter_status.md       Current status, next steps, and a change log
+matter_status.md       Current status, next steps, a change log, and an
+                       append-only Session Notes log
 ```
+
+## Document Map and Session Notes
+
+Two conventions in the template deserve their own mention:
+
+- **Document Map** (`documents/README.md`) — a per-source hierarchical index.
+  For each ingested document it records the document's top-level structure
+  (sections/headings with page references), the conversion method used to get
+  the document into reviewable text (native text or OCR — see
+  `docs/SCANNED_DOCUMENTS.md` for OCR-specific handling and verification
+  guidance), the document's processing status (ingested / summarized by a
+  named skill on a date / verification pending), and its provenance. It
+  organizes and labels documents for navigation; it does not perform automated
+  legal verification and is not a substitute for reading the source. Concept
+  adapted from VectifyAI/PageIndex's hierarchical tree-index idea and
+  lfnovo/open-notebook's per-source transformation log (both MIT), written
+  fresh — see `THIRD_PARTY_NOTICES.md`.
+- **Session Notes** (`matter_status.md`) — an append-only dated log. After
+  each skill run on the matter, one entry records the skill run, the key
+  outputs produced, the gaps flagged (open `[CONFIRM]`/`[VERIFY]` items), and
+  what the next session should pick up. **These notes are drafting context for
+  continuity between sessions, not work product** — the Attorney Verification
+  Checklist discipline applies to the outputs the notes reference, never to
+  the notes themselves. Pattern adapted from thedotmack/claude-mem's
+  capture-compress-resurface session-memory lifecycle (Apache-2.0), translated
+  to a plain Markdown convention — see `THIRD_PARTY_NOTICES.md`.
+
+The single-file workspaces (`matter-workspaces/*-matter.md`) that already have
+a Documents Index section carry a one-line pointer to the Document Map
+convention rather than duplicating its full structure; they do not carry a
+Session Notes section, since they are meant for a matter handled in one or two
+sittings.
 
 `source_log.md`, `citation_map.md`, `unsupported_claims.md`, and `assumptions.md`
 use the exact quality-layer classification vocabulary (see `docs/QUALITY_LAYER.md`

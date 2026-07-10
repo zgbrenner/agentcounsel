@@ -98,6 +98,8 @@ _Do not characterize the legal merit of any claim in this workspace. Merit analy
 
 _Skills that generate document-related work product: `skills/litigation/litigation-chronology/SKILL.md`, `skills/litigation/privilege-log-review/SKILL.md`_
 
+_For a fuller per-document structure map (headings/page refs, conversion method, processing status, provenance), use the Document Map convention — see `matter-workspaces/_template/documents/README.md` and `docs/MATTER_WORKSPACES.md`._
+
 ---
 
 ## 6. Deadlines and Key Dates

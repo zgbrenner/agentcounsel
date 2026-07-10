@@ -122,5 +122,80 @@ examples, or template clause text, which are rewritten independently. See
   describe this repository's own metadata; no specification prose is
   reproduced.
 
+A further round of adaptations, evaluated against the sources recorded in
+`docs/OSS_BORROWING_MAP.md`'s third round of evaluations, is attributed below.
+As above, only category names, factual conventions, or a lightweight
+structural shape are reused — never the source project's own prose, code, or
+examples.
+
+- **claude-for-legal** — Anthropic —
+  https://github.com/anthropics/claude-for-legal
+  License: Apache-2.0
+  Material used: the provenance-tagging convention (labeling drafted content
+  by where it came from)
+  Affected AgentCounsel files: `skills/legal-methodology/references/citation-confidence-tiers.md`,
+  `matter-workspaces/_template/documents/README.md` (Document Map provenance
+  field)
+  Use type: adapted
+  Notes: this is a separate, additional borrow from the same project already
+  noted in the Apache-2.0 lineage list above (via `agnostic-skills-for-legal`);
+  only the tagging convention is reused, not any skill text, prompt, or
+  installer logic.
+
+- **agent-governance-toolkit** — Microsoft —
+  https://github.com/microsoft/agent-governance-toolkit
+  License: MIT
+  Material used: the compliance-mapping shape (mapping a requirement to a
+  control, a status, and an evidence pointer)
+  Affected AgentCounsel files: `skills/regulatory/compliance-gap-matrix/SKILL.md`,
+  `skills/regulatory/compliance-program-tracker/SKILL.md`
+  Use type: adapted
+  Notes: AgentCounsel's compliance gap matrix already organized requirements,
+  controls, status, severity, remediation, and an attorney note as a shared
+  organizing shape; this entry formally records that shape as also informed
+  by this toolkit's convention. No governance-toolkit code, policy content, or
+  automated-enforcement logic is used.
+
+- **VectifyAI/PageIndex** — https://github.com/VectifyAI/PageIndex
+  License: MIT
+  Material used: the hierarchical tree-index idea — a per-document outline of
+  sections and headings, used for navigation rather than requiring a full
+  re-read of the source
+  Affected AgentCounsel files: `matter-workspaces/_template/documents/README.md`
+  (Document Map), `docs/MATTER_WORKSPACES.md`
+  Use type: adapted
+
+- **thedotmack/claude-mem** — https://github.com/thedotmack/claude-mem
+  License: Apache-2.0
+  Material used: the capture-compress-resurface session-memory lifecycle
+  (record what happened, compress it to what matters, resurface it at the
+  start of the next session)
+  Affected AgentCounsel files: `matter-workspaces/_template/matter_status.md`
+  (Session Notes), `docs/MATTER_WORKSPACES.md`
+  Use type: adapted
+  Notes: PageIndex and claude-mem are recorded together because both feed the
+  same round of matter-workspace template additions — the Document Map (from
+  PageIndex) and Session Notes (from claude-mem). Neither project's code,
+  storage backend, or coding-agent-specific content is used; both conventions
+  are translated to plain, append-only Markdown with no runtime, database, or
+  automatic compression. Session Notes are explicitly labeled as drafting
+  context for continuity between sessions, not work product — the Attorney
+  Verification Checklist discipline applies to the outputs the notes
+  reference, never to the notes themselves.
+
+- **AnttiHero/lavern** — https://github.com/AnttiHero/lavern
+  License: Apache-2.0
+  Material used: the mechanical grounding-check step — sorting each claim
+  into supported / needs-citation / unsupported before any other review
+  proceeds
+  Affected AgentCounsel files: `skills/legal-methodology/red-team-verifier/SKILL.md`
+  (source-support audit step)
+  Use type: adapted
+  Notes: this is one specific, narrow borrow from lavern's broader review
+  workflow; lavern's human-gate and evidence-backed-debate concepts more
+  generally remain a use-later item in `docs/OSS_BORROWING_MAP.md` and are not
+  otherwise adopted here. No lavern agent personas, prompts, or legal content
+  are used.
+
 AgentCounsel is an independent open-source project. It is not affiliated with,
 endorsed by, or sponsored by Anthropic, OpenAI, or Google.

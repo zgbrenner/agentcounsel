@@ -48,7 +48,7 @@ met.
 | `corporate` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
 | `employment` | 1 — Core | stable | Yes | Yes | 10 of 10 skills |
 | `ip` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
-| `privacy` | 1 — Core | stable | Yes | Yes | 7 of 7 skills |
+| `privacy` | 1 — Core | stable | Yes | Yes | 10 of 10 skills |
 | `product-legal` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
 | `regulatory` | 2 — Advanced / specialized | stable | Yes | Yes | 5 of 5 skills |
 | `ai-governance` | 2 — Advanced / specialized | stable | Yes | Yes | 4 of 4 skills |
@@ -94,7 +94,7 @@ The columns above record the remaining gaps:
 - **Practice profiles** are missing for `legal-research`.
 - **Cold-start interviews** are missing for `legal-research`; each of the other
   19 practice areas has one under `skills/setup/`.
-- **Evals** now cover every skill — all 209 skills have a skill eval file
+- **Evals** now cover every skill — all 212 skills have a skill eval file
   (`reports/eval-coverage.md` reports 0 skills without coverage); the
   pre-release baseline of 8 covered skills has been fully closed.
 
