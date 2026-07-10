@@ -70,6 +70,16 @@ When information is missing, always prefer an explicit placeholder to a guess.
 
 Never silently resolve a gap by guessing. Every placeholder is also an item requiring attorney verification and should appear in the deliverable's verification list.
 
+## Citation provenance tags
+
+Every citation in a deliverable carries a visible tag showing where it came from — never bare, unattributed authority:
+
+- **Connector-verified** — checked against a documented connector in `connectors/`; name the connector alongside the citation (see `skills/legal-methodology/references/citation-confidence-tiers.md` for the full tiering).
+- **User-provided document** — traced to a document the user supplied in this session; name the document and location.
+- **`[VERIFY: ...]`** — anything drawn from model background knowledge, describing what still needs checking.
+
+No silent no-op: if no connector or verification source is available for a citation, say so explicitly in the deliverable rather than leaving the tag off. A missing tag is not a neutral omission — it reads as an unearned claim of verification.
+
 ## Legal research tasks
 
 Research tasks carry special hallucination risk. For any task that asks what the law is, or for analysis that turns on legal authority:

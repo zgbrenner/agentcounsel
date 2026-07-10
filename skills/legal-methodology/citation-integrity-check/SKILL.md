@@ -75,7 +75,7 @@ If the draft is not provided, stop and request it. If sources are not provided, 
 ## Workflow
 
 1. **Inventory citations and propositions.** Extract every legal citation, quoted authority, legal-source URL, and proposition that depends on authority.
-2. **Classify source status.** Where the citation form is unclear (a short form, a `supra`, an `Id.`, or a partial fragment), first classify the citation type using `skills/legal-research/references/citation-type-taxonomy.md` so the correct antecedent can be located before source status is assigned. Assign each item one status:
+2. **Classify source status.** Where the citation form is unclear (a short form, a `supra`, an `Id.`, or a partial fragment), first classify the citation type using `skills/legal-research/references/citation-type-taxonomy.md` so the correct antecedent can be located before source status is assigned; then assign the citation's verification tier using `skills/legal-methodology/references/citation-confidence-tiers.md` so the integrity table reflects how verified the citation actually is, not just what kind it is. Assign each item one status:
    - **User-provided authority**
    - **Source-provided authority**
    - **Model-suggested authority requiring verification**

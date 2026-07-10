@@ -43,6 +43,22 @@ only as a limitation-heavy risk screen and say so.
 Each pass below is a review lens, not an autonomous agent and not a lawyer. It
 produces draft findings only.
 
+### Mechanical grounding pass
+
+- **Lens.** Before any reviewer weighs persuasiveness or risk, does every
+  quotation and pinpoint reference in the draft string-match the provided
+  source documents? This pass is mechanical, not judgment-based — it checks
+  text against text, nothing more.
+- **Inputs.** The draft; every provided source document.
+- **Produces.** A draft grounding-failure list: every quotation or pinpoint
+  reference that cannot be located verbatim in a provided source, flagged
+  before it reaches the source/citation reviewer or issue-spotter passes.
+  A quotation or pinpoint that fails this check is not weighed for
+  persuasiveness or relevance until it is corrected or replaced — an
+  ungrounded finding does not advance to the next pass. This pass does not
+  assess whether a matching passage actually supports the proposition cited
+  to it; that judgment belongs to the passes that follow.
+
 ### Source/citation reviewer pass
 
 - **Lens.** Is every citation, quotation, and pin cite traceable to a provided
@@ -76,9 +92,10 @@ produces draft findings only.
 
 | Order | Pass | Hands off |
 |---|---|---|
-| 1 | Source/citation reviewer | The claim-to-source table feeds the issue spotter and the gate. |
-| 2 | Issue spotter | The authority-risk list feeds the gate. |
-| 3 | Attorney gatekeeper | Consolidates all findings for the supervising attorney. |
+| 1 | Mechanical grounding | The grounding-failure list feeds the source/citation reviewer — an ungrounded quotation or pinpoint is flagged before any judgment pass weighs it. |
+| 2 | Source/citation reviewer | The claim-to-source table feeds the issue spotter and the gate. |
+| 3 | Issue spotter | The authority-risk list feeds the gate. |
+| 4 | Attorney gatekeeper | Consolidates all findings for the supervising attorney. |
 
 Findings are carried forward by the person running the panel: each pass's draft
 output is read, then passed as context into the next.
@@ -104,6 +121,8 @@ Run these quality-layer passes over the draft and the consolidated findings:
 
 ## Expected Outputs
 
+- A draft grounding-failure list of quotations and pinpoints that failed the
+  string-match check (mechanical grounding).
 - A draft claim-to-source table with verification markers (source/citation
   reviewer).
 - A draft authority-risk list (issue spotter).
