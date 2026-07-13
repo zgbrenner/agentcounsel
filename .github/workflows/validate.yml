@@ -44,6 +44,12 @@ jobs:
       - name: Check platform pack manifest is up to date
         run: python scripts/build_platform_packs.py --check
 
+      - name: Check context metrics are up to date
+        run: python scripts/generate_context_metrics.py --check
+
+      - name: Check skill readiness reports are up to date
+        run: python scripts/generate_skill_health_report.py --check
+
       - name: Validate skill eval framework
         run: python scripts/check_evals.py
 
