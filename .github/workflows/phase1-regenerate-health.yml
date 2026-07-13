@@ -1,0 +1,38 @@
+name: Phase 1 Readiness Regeneration
+
+on:
+  push:
+    branches: [feat/phase-1-mcp-router]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v7
+        with:
+          ref: feat/phase-1-mcp-router
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Regenerate readiness artifacts
+        run: python scripts/generate_skill_health_report.py
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metadata/skill_health.json reports/skill-health.md
+          if git diff --cached --quiet; then
+            echo "Readiness artifacts already current."
+          else
+            git commit -m "chore: refresh skill readiness report [skip ci]"
+            git push origin HEAD:feat/phase-1-mcp-router
+          fi
