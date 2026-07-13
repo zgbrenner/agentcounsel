@@ -117,7 +117,21 @@ class TestSkillHealthReport(unittest.TestCase):
         self.assertEqual(skill["template_count"], 1)
         self.assertEqual(skill["routing_metadata"], "complete")
         self.assertEqual(skill["readiness_band"], "scored")
-        self.assertIn(skill["improvement_priority"], {"low", "medium", "high"})
+        self.assertEqual(skill["improvement_priority"], "low")
+
+    def test_priority_policy_distinguishes_risk_and_evidence(self):
+        self.assertEqual(
+            health._priority("critical", "review-ready", "compact", True, 1),
+            "high",
+        )
+        self.assertEqual(
+            health._priority("high", "review-ready", "compact", True, 1),
+            "medium",
+        )
+        self.assertEqual(
+            health._priority("medium", "scored", "compact", False, 0),
+            "low",
+        )
 
     def test_report_disclaims_legal_correctness(self):
         report = health.render_markdown(health.collect_health(self.fixture.root))
