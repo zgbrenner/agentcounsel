@@ -12,7 +12,7 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 
 class CatalogLoadError(RuntimeError):
@@ -43,7 +43,6 @@ _STOP_WORDS = {
     "on",
     "or",
     "please",
-    "review",
     "that",
     "the",
     "this",
@@ -263,6 +262,7 @@ class CatalogService:
             ("description", skill.get("description") or skill.get("summary"), 10, 45),
             ("use_when", skill.get("use_when"), 9, 40),
             ("tags", skill.get("tags"), 10, 35),
+            ("task_type", skill.get("task_type") or skill.get("category"), 6, 24),
             ("practice_area", skill.get("practice_area"), 5, 20),
             ("required_inputs", skill.get("required_inputs") or skill.get("inputs"), 3, 12),
             ("expected_outputs", skill.get("expected_outputs") or skill.get("outputs"), 3, 12),
