@@ -91,14 +91,21 @@ def _priority(
     has_example: bool,
     template_count: int,
 ) -> str:
-    if risk_level in {"high", "critical"} and readiness_band != "scored":
+    """Convert repository evidence into an actionable improvement priority.
+
+    The band is about where maintainers should invest next, not how legally safe
+    a skill is to use. Scored, compact skills can be low priority even when the
+    underlying legal work is inherently high risk.
+    """
+    if readiness_band == "baseline":
         return "high"
-    if (
-        readiness_band == "baseline"
-        or context_pressure == "large"
-        or not has_example
-        or template_count == 0
-    ):
+    if risk_level == "critical" and readiness_band != "scored":
+        return "high"
+    if readiness_band == "scored" and context_pressure != "large":
+        return "low"
+    if risk_level == "high" and readiness_band != "scored":
+        return "medium"
+    if context_pressure == "large" or (not has_example and template_count == 0):
         return "medium"
     return "low"
 
@@ -218,8 +225,10 @@ def render_markdown(data: dict[str, Any]) -> str:
         f"- Medium improvement priority: {priority_counts.get('medium', 0)}",
         f"- Low improvement priority: {priority_counts.get('low', 0)}",
         "",
-        "Priority is conservative: unscored high- or critical-risk skills are high priority; "
-        "large-context, example-free, template-free, or baseline skills are at least medium priority.",
+        "Priority is a maintenance queue, not a legal-risk rating. Baseline skills and "
+        "unscored critical workflows are high priority; unscored high-risk workflows, "
+        "large-context skills, and skills with neither an example nor a template are "
+        "medium priority; scored compact skills can be low priority.",
         "",
         "## Per-skill signals",
         "",
