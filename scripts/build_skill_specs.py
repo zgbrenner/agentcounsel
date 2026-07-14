@@ -50,12 +50,25 @@ def _mentions(text: str, needles: tuple[str, ...]) -> bool:
     return any(needle in lowered for needle in needles)
 
 
+def _metadata_text(metadata: dict[str, Any]) -> str:
+    """Collapse routing-relevant metadata into text for conservative gate detection."""
+    values: list[str] = []
+    for field in ("description", "inputs", "outputs", "tags"):
+        value = metadata.get(field)
+        if isinstance(value, str):
+            values.append(value)
+        elif isinstance(value, list):
+            values.extend(item for item in value if isinstance(item, str))
+    return "\n".join(values)
+
+
 def _derived_fields(metadata: dict[str, Any], body: str) -> dict[str, Any]:
+    searchable_text = body + "\n" + _metadata_text(metadata)
     requires_jurisdiction = bool(metadata.get("jurisdictions")) or _mentions(
-        body, ("jurisdiction", "governing law", "venue", "forum")
+        searchable_text, ("jurisdiction", "governing law", "venue", "forum")
     )
     requires_deadline_check = _mentions(
-        body,
+        searchable_text,
         (
             "deadline",
             "due date",
