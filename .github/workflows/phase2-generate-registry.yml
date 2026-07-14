@@ -1,0 +1,33 @@
+name: Phase 2A Skill Contract Generation
+
+on:
+  push:
+    branches: [feat/phase-2-skill-spec-v2]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feat/phase-2-skill-spec-v2
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Generate typed skill contract registry
+        run: python scripts/build_skill_specs.py
+      - name: Commit generated registry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metadata/skill_specs.json
+          if git diff --cached --quiet; then
+            echo "Registry already current."
+          else
+            git commit -m "chore: generate typed skill contract registry [skip ci]"
+            git push origin HEAD:feat/phase-2-skill-spec-v2
+          fi
