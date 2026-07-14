@@ -23,9 +23,10 @@ mcp = FastMCP(
     instructions=(
         "AgentCounsel provides structured legal workflows for draft work product. "
         "Use the narrowest relevant skill, preserve uncertainty, gather required "
-        "inputs, apply the returned gates and quality checks, and require review "
-        "and adoption by a qualified licensed attorney before reliance. It does not "
-        "provide legal advice or create an attorney-client relationship."
+        "inputs, apply the returned typed gates, execution modes, and quality checks, "
+        "and require review and adoption by a qualified licensed attorney before "
+        "reliance. It does not provide legal advice or create an attorney-client "
+        "relationship."
     ),
     host="0.0.0.0",
     port=int(os.getenv("PORT", "8000")),
@@ -50,7 +51,7 @@ def search_skills(
 
 @mcp.tool()
 def route_legal_task(task: str, limit: int = 5) -> dict[str, Any]:
-    """Return a structured route, missing inputs, gates, and quality checks."""
+    """Return a structured route, typed inputs, modes, gates, and checks."""
     return CATALOG.route_task(task, limit=limit)
 
 
@@ -58,6 +59,12 @@ def route_legal_task(task: str, limit: int = 5) -> dict[str, Any]:
 def get_skill_card(skill_id: str) -> dict[str, Any]:
     """Return compact metadata for one skill without loading its Markdown body."""
     return CATALOG.get_skill_card(skill_id)
+
+
+@mcp.tool()
+def get_skill_spec(skill_id: str) -> dict[str, Any]:
+    """Return the complete typed Skill Specification v2 execution contract."""
+    return CATALOG.get_skill_spec(skill_id)
 
 
 @mcp.tool()
