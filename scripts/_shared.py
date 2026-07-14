@@ -47,7 +47,7 @@ REQUIRED_FIELDS = [
     "tags",
 ]
 
-# The eight skills that must each have a sample eval file under evals/skills/.
+# Skills whose candidate outputs are required by the strict static eval gate.
 # Each slug matches the canonical skill folder name under skills/. Shared by
 # check_evals.py and run_evals.py so the two scripts cannot drift apart.
 REQUIRED_EVAL_SLUGS = [

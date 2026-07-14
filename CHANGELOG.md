@@ -8,6 +8,13 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Phase 1 MCP and repository metrics:** `agentcounsel_mcp.py` now uses
+  canonical generated metadata for stable-ID discovery and structured routing;
+  `mcp_server.py` is a thin FastMCP adapter with compact skill-card retrieval.
+  Standard-library tests cover routing, aliases, missing-input gates, context
+  metrics, and readiness signals. New generated reports track per-skill and
+  per-pack context pressure plus repository-readiness evidence without claiming
+  legal correctness. CI and `scripts/check_all.py` enforce report drift checks.
 - **Three privacy skills** filling gaps identified against the largest
   open-source privacy-skills collection:
   `privacy/data-retention-schedule-review`, `privacy/childrens-privacy-review`
