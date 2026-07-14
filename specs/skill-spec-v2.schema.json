@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentcounsel.dev/schemas/skill-spec-v2.schema.json",
+  "title": "AgentCounsel Skill Specification v2",
+  "description": "Typed execution contract compiled from SKILL.md and an optional SPEC.json overlay. Repository tooling enforces additional non-weakening safety invariants.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "skill_id",
+    "title",
+    "skill_path",
+    "has_custom_spec",
+    "inherits",
+    "gates",
+    "execution_modes",
+    "input_schema",
+    "output_schema",
+    "evidence_schema",
+    "modules",
+    "quality_checks"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "skill_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*/[a-z0-9][a-z0-9-]*$"
+    },
+    "title": {"type": "string", "minLength": 1},
+    "skill_path": {"type": "string", "pattern": "^skills/.+/SKILL\\.md$"},
+    "spec_path": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^skills/.+/SPEC\\.json$"}
+      ]
+    },
+    "has_custom_spec": {"type": "boolean"},
+    "inherits": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "missing_inputs",
+        "attorney_review",
+        "jurisdiction",
+        "deadline",
+        "escalation",
+        "custom"
+      ],
+      "properties": {
+        "missing_inputs": {
+          "type": "object",
+          "required": ["behavior"],
+          "properties": {"behavior": {"const": "stop-and-ask"}},
+          "additionalProperties": true
+        },
+        "attorney_review": {
+          "type": "object",
+          "required": ["required"],
+          "properties": {"required": {"const": true}},
+          "additionalProperties": true
+        },
+        "jurisdiction": {
+          "type": "object",
+          "required": ["required"],
+          "properties": {"required": {"type": "boolean"}},
+          "additionalProperties": true
+        },
+        "deadline": {
+          "type": "object",
+          "required": ["required", "calculation_allowed"],
+          "properties": {
+            "required": {"type": "boolean"},
+            "calculation_allowed": {"const": false}
+          },
+          "additionalProperties": true
+        },
+        "escalation": {
+          "type": "object",
+          "required": ["minimum"],
+          "properties": {
+            "minimum": {
+              "enum": [
+                "attorney-review",
+                "attorney-escalation",
+                "immediate-attorney-attention"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "custom": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/customGate"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "execution_modes": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/executionMode"}
+    },
+    "input_schema": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/inputField"}
+    },
+    "output_schema": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/outputArtifact"}
+    },
+    "evidence_schema": {"$ref": "#/$defs/evidenceSchema"},
+    "modules": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/module"}
+    },
+    "quality_checks": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "executionMode": {
+      "type": "object",
+      "required": ["id", "enabled", "purpose", "output_detail", "quality_checks"],
+      "properties": {
+        "id": {"enum": ["quick-triage", "standard", "deep-review"]},
+        "enabled": {"type": "boolean"},
+        "purpose": {"type": "string", "minLength": 1},
+        "output_detail": {"enum": ["minimal", "standard", "expanded"]},
+        "quality_checks": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "inputField": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "type",
+        "required",
+        "description",
+        "source_requirement",
+        "may_infer",
+        "sensitive"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+        "label": {"type": "string", "minLength": 1},
+        "type": {
+          "enum": [
+            "text",
+            "document",
+            "document-set",
+            "enum",
+            "date",
+            "datetime",
+            "boolean",
+            "integer",
+            "number",
+            "jurisdiction",
+            "object"
+          ]
+        },
+        "required": {"type": "boolean"},
+        "description": {"type": "string", "minLength": 1},
+        "source_requirement": {"type": "string", "minLength": 1},
+        "may_infer": {"type": "boolean"},
+        "sensitive": {"type": "boolean"},
+        "enum": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "outputArtifact": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "type",
+        "required",
+        "description",
+        "attorney_review_required"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+        "label": {"type": "string", "minLength": 1},
+        "type": {
+          "enum": [
+            "section",
+            "table",
+            "checklist",
+            "memo",
+            "letter",
+            "tracker",
+            "timeline",
+            "matrix",
+            "structured-data"
+          ]
+        },
+        "required": {"type": "boolean"},
+        "description": {"type": "string", "minLength": 1},
+        "attorney_review_required": {"const": true}
+      },
+      "additionalProperties": true
+    },
+    "evidenceSchema": {
+      "type": "object",
+      "required": ["record_type", "required_fields", "fields"],
+      "properties": {
+        "record_type": {"const": "claim-support"},
+        "required_fields": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "description"],
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "type": {"type": "string", "minLength": 1},
+              "description": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "module": {
+      "type": "object",
+      "required": ["id", "kind", "path", "required", "load_when"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+        "kind": {
+          "enum": [
+            "reference",
+            "template",
+            "profile",
+            "connector",
+            "quality-check",
+            "workflow-module"
+          ]
+        },
+        "path": {"type": "string", "minLength": 1},
+        "required": {"type": "boolean"},
+        "load_when": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "customGate": {
+      "type": "object",
+      "required": ["id", "condition", "action", "reason"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+        "condition": {"type": "string", "minLength": 1},
+        "action": {
+          "enum": [
+            "flag",
+            "stop-and-ask",
+            "stop-and-escalate",
+            "require-attorney-confirmation"
+          ]
+        },
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
