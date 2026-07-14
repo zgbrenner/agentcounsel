@@ -2,9 +2,14 @@
 
 AgentCounsel can be exposed to MCP-compatible AI clients through the lightweight server in [`mcp_server.py`](../mcp_server.py).
 
-The server keeps the Markdown skill library as the source of truth and uses the generated catalog in `metadata/index.json` and `metadata/router.json` for discovery. It does not duplicate each skill as an individual MCP tool. Instead, it provides a compact routing and retrieval interface so clients can identify the narrowest relevant workflow, gather its missing inputs, apply the required gates, and load the complete instructions only when needed.
+The server keeps the Markdown skill library as the source of human-readable workflow guidance. It uses:
 
-The standard-library service in [`agentcounsel_mcp.py`](../agentcounsel_mcp.py) contains all catalog and routing logic. `mcp_server.py` is only the FastMCP transport adapter.
+- `metadata/index.json` and `metadata/router.json` for discovery and task routing;
+- `metadata/skill_specs.json` for typed inputs, outputs, execution modes, evidence contracts, safety gates, modules, and quality checks.
+
+It does not duplicate each skill as an individual MCP tool. Clients can identify the narrowest relevant workflow, gather typed missing inputs, apply the compiled gates, and load only the contract or Markdown content they actually need.
+
+The standard-library service in [`agentcounsel_mcp.py`](../agentcounsel_mcp.py) contains all catalog, contract, and routing logic. `mcp_server.py` is only the FastMCP transport adapter.
 
 ## Available tools
 
@@ -12,8 +17,9 @@ The standard-library service in [`agentcounsel_mcp.py`](../agentcounsel_mcp.py) 
 |---|---|
 | `list_practice_areas` | List practice areas and generated skill counts. |
 | `search_skills` | Search compact skill cards using stable IDs, titles, descriptions, use-when triggers, tags, inputs, and outputs. |
-| `route_legal_task` | Return a structured primary route, alternatives, confidence, missing inputs, gates, quality checks, and escalation signal. |
-| `get_skill_card` | Retrieve compact metadata for one skill without loading the Markdown body. |
+| `route_legal_task` | Return a structured route with typed missing inputs, execution modes, gates, quality checks, and escalation behavior. |
+| `get_skill_card` | Retrieve compact discovery metadata, spec version, custom-spec status, and available modes without loading the full workflow. |
+| `get_skill_spec` | Retrieve the complete typed Skill Specification v2 execution contract. |
 | `get_skill` | Retrieve the complete Markdown workflow for one skill. |
 | `get_core_rules` | Retrieve AgentCounsel's global operating and legal-safety rules. |
 
@@ -21,7 +27,22 @@ The server also exposes the read-only resource `agentcounsel://catalog`, which c
 
 ## Stable identifiers and compatibility
 
-Canonical skill IDs use the generated `<practice-area>/<skill-slug>` format, such as `contracts/nda-review`. `get_skill` and `get_skill_card` also accept a unique folder slug, title, or canonical repository path for backward compatibility. Returned records always use the stable generated ID.
+Canonical skill IDs use the generated `<practice-area>/<skill-slug>` format, such as `contracts/nda-review`. `get_skill`, `get_skill_card`, and `get_skill_spec` also accept a unique folder slug, title, or canonical repository path for backward compatibility. Returned records always use the stable generated ID.
+
+## Typed contracts
+
+Every canonical skill has a compiled v2 contract, even when it does not have a hand-authored `SPEC.json` sidecar. The contract includes:
+
+- baseline inherited safety rules;
+- normalized missing-input, jurisdiction, deadline, attorney-review, and escalation gates;
+- `quick-triage`, `standard`, and `deep-review` modes;
+- typed and non-inferable required inputs;
+- typed output artifacts that require attorney review;
+- a claim-support evidence record;
+- selectively loadable reference, template, profile, connector, quality-check, and workflow modules;
+- generated and sidecar-supplied quality checks.
+
+The compiler rejects contracts that weaken attorney review, permit deadline calculation, continue through missing required inputs, infer required legal inputs, remove baseline evidence fields, or remove baseline inherited safety rules. See [`SKILL_SPEC_V2.md`](SKILL_SPEC_V2.md).
 
 ## Structured routing response
 
@@ -32,16 +53,21 @@ Canonical skill IDs use the generated `<practice-area>/<skill-slug>` format, suc
 - `confidence`: `high`, `medium`, `low`, or `none`;
 - `primary_route` and `alternative_routes` as compact skill cards;
 - `why_selected` with the matched metadata fields and deterministic score;
-- `missing_required_inputs` from the selected skill metadata;
-- `mandatory_quality_checks` from the generated quality-check mapping;
+- `spec_version` for the compiled contract;
+- `missing_required_inputs` as typed input records;
+- `missing_input_labels` as a compact compatibility list;
+- `execution_modes` with enabled status, purpose, output detail, and mode-specific checks;
+- `custom_gates` from the selected skill contract;
+- `mandatory_quality_checks` from the compiled contract;
 - `gates` for jurisdiction, deadlines, and attorney review;
-- `escalation_required`, derived conservatively from the skill's risk level.
+- `deadline_calculation_allowed`, which remains false for current legal workflows;
+- `escalation_minimum` and `escalation_required` from the compiled contract.
 
-The router uses metadata fields designed for discovery. It does not rank skills by counting repeated words in complete skill bodies, so common safety boilerplate cannot dominate task-specific routing signals.
+The router uses metadata fields designed for discovery. It does not rank skills by counting repeated words in complete skill bodies, so common safety boilerplate cannot dominate task-specific routing signals. Once a route is selected, its gates and inputs come from the validated typed contract rather than being reconstructed from routing metadata.
 
 ## Legal-safety model
 
-AgentCounsel supplies structured workflows for draft legal work product. It does not provide legal advice or create an attorney-client relationship. Outputs must be reviewed and adopted by a qualified licensed attorney before reliance. A routing confidence score measures metadata fit only; it does not measure legal correctness.
+AgentCounsel supplies structured workflows for draft legal work product. It does not provide legal advice or create an attorney-client relationship. Outputs must be reviewed and adopted by a qualified licensed attorney before reliance. A routing confidence score measures metadata fit only; it does not measure legal correctness. A valid typed contract measures structural and repository-policy compliance, not the substantive correctness of work produced from it.
 
 ## Run locally
 
@@ -80,8 +106,10 @@ The Manufact GitHub App must have access to the repository before the initial de
 ## Example client flow
 
 1. Call `route_legal_task` with a task such as `Review a mutual NDA for a software vendor relationship`.
-2. Inspect the primary route, alternatives, missing inputs, gates, and quality checks.
-3. Call `get_skill_card` when only compact metadata is needed.
-4. Call `get_skill` with the returned stable skill ID when the full workflow is required.
-5. Follow the skill's required-input, workflow, output-format, and attorney-verification sections.
-6. Use `get_core_rules` when the client has not already loaded AgentCounsel's global safety rules.
+2. Inspect the primary route, typed missing inputs, modes, custom gates, quality checks, and escalation requirements.
+3. Gather every required input; never silently infer a required legal field.
+4. Call `get_skill_spec` to retrieve the complete typed execution contract and module-loading conditions.
+5. Call `get_skill` only when the full human-readable workflow is required.
+6. Follow the selected mode and apply all returned gates and quality checks.
+7. Use `get_core_rules` when the client has not already loaded AgentCounsel's global safety rules.
+8. Require qualified attorney review and adoption before reliance.
