@@ -1,0 +1,188 @@
+{
+  "schema_version": "2.0",
+  "skill_id": "legal-research/legal-research-memo",
+  "gates": {
+    "custom": [
+      {
+        "id": "specific-question-required",
+        "condition": "The legal question is vague, compound, or materially underspecified.",
+        "action": "stop-and-ask",
+        "reason": "The research scope must be confirmed before authorities are gathered or conclusions are drafted."
+      },
+      {
+        "id": "verified-authority-required",
+        "condition": "A legal proposition would be stated without user-provided or independently verified authority.",
+        "action": "require-attorney-confirmation",
+        "reason": "Unverified legal authority must remain a visible placeholder and may not be presented as existing or current law."
+      },
+      {
+        "id": "formal-opinion-boundary",
+        "condition": "The requested work product is a formal legal opinion letter or an immediate client-facing legal conclusion.",
+        "action": "stop-and-escalate",
+        "reason": "Formal opinions and real-time legal advice require direct attorney authorship and professional-responsibility review."
+      }
+    ]
+  },
+  "execution_modes": [
+    {
+      "id": "quick-triage",
+      "enabled": true,
+      "purpose": "Refine the question presented, identify jurisdiction and factual gaps, propose a research plan, and list authority types to verify without drafting a substantive conclusion.",
+      "output_detail": "minimal",
+      "quality_checks": [
+        "attorney-review-gate",
+        "jurisdiction-deadline-gates"
+      ]
+    },
+    {
+      "id": "standard",
+      "enabled": true,
+      "purpose": "Produce the complete attorney-review research memo with verified authority, explicit assumptions, qualified analysis, and open verification items.",
+      "output_detail": "standard",
+      "quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "legal-prose-polish"
+      ]
+    },
+    {
+      "id": "deep-review",
+      "enabled": true,
+      "purpose": "Run the standard memo plus adverse-authority, currentness, negative-treatment, proposition-support, and citation-integrity passes for each material proposition.",
+      "output_detail": "expanded",
+      "quality_checks": [
+        "attorney-review-gate",
+        "citation-integrity-check",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "output-format-compliance-check",
+        "privilege-confidentiality-check",
+        "legal-prose-polish"
+      ]
+    }
+  ],
+  "input_schema": [
+    {
+      "id": "specific-legal-question-presented",
+      "label": "Specific legal question presented",
+      "type": "text",
+      "required": true,
+      "description": "A discrete legal question with confirmed scope.",
+      "source_requirement": "user-provided-and-confirmed",
+      "may_infer": false,
+      "sensitive": false
+    },
+    {
+      "id": "known-facts",
+      "label": "Known facts",
+      "type": "object",
+      "required": true,
+      "description": "The legally material facts, each attributable to the user or a provided source.",
+      "source_requirement": "user-provided-or-provided-document",
+      "may_infer": false,
+      "sensitive": true
+    },
+    {
+      "id": "applicable-jurisdiction",
+      "label": "Applicable jurisdiction",
+      "type": "jurisdiction",
+      "required": true,
+      "description": "The jurisdiction and body of law governing the question.",
+      "source_requirement": "user-provided-and-attorney-confirmed",
+      "may_infer": false,
+      "sensitive": false
+    },
+    {
+      "id": "authority-already-provided",
+      "label": "Authority already provided",
+      "type": "document-set",
+      "required": false,
+      "description": "Cases, statutes, regulations, rules, or secondary sources already supplied for verification and use.",
+      "source_requirement": "provided-document",
+      "may_infer": false,
+      "sensitive": false
+    }
+  ],
+  "output_schema": [
+    {
+      "id": "structured-legal-research-memo-using-irac-discipline-for-attorney-review",
+      "label": "Structured legal research memo using IRAC discipline for attorney review",
+      "type": "memo",
+      "required": true,
+      "description": "Question presented, brief answer, facts, assumptions, issue-by-issue analysis, conclusion, authorities, and open attorney-verification items.",
+      "attorney_review_required": true
+    },
+    {
+      "id": "claim-authority-map",
+      "label": "Claim-to-authority map",
+      "type": "table",
+      "required": true,
+      "description": "Every material legal proposition mapped to the exact authority and locator that supports it, including verification status and contrary authority.",
+      "attorney_review_required": true
+    }
+  ],
+  "evidence_schema": {
+    "required_fields": [
+      "support_text",
+      "authority_status",
+      "proposition_supported"
+    ],
+    "fields": [
+      {
+        "id": "authority_status",
+        "type": "enum",
+        "description": "Whether the authority is user-provided, connector-verified, independently verified, secondary-only, or unresolved."
+      },
+      {
+        "id": "proposition_supported",
+        "type": "text",
+        "description": "The precise proposition for which the source is cited."
+      },
+      {
+        "id": "negative_treatment_status",
+        "type": "enum",
+        "description": "The recorded treatment status when a negative-treatment check is performed."
+      }
+    ]
+  },
+  "modules": [
+    {
+      "id": "legal-research-memo-template",
+      "kind": "template",
+      "path": "skills/legal-research/legal-research-memo/templates/legal-research-memo.md",
+      "required": true,
+      "load_when": "standard or deep-review mode"
+    },
+    {
+      "id": "citation-type-taxonomy",
+      "kind": "reference",
+      "path": "skills/legal-research/references/citation-type-taxonomy.md",
+      "required": false,
+      "load_when": "the memo uses multiple authority types or citation forms"
+    },
+    {
+      "id": "courtlistener-connector-guide",
+      "kind": "connector",
+      "path": "connectors/courtlistener.md",
+      "required": false,
+      "load_when": "US federal case existence or citation verification is available through CourtListener"
+    },
+    {
+      "id": "negative-treatment-workflow",
+      "kind": "workflow-module",
+      "path": "skills/legal-research/negative-treatment-check/SKILL.md",
+      "required": false,
+      "load_when": "deep-review mode or when a material case controls the analysis"
+    },
+    {
+      "id": "source-validation-workflow",
+      "kind": "quality-check",
+      "path": "skills/legal-methodology/source-validation/SKILL.md",
+      "required": true,
+      "load_when": "standard or deep-review mode"
+    }
+  ]
+}
