@@ -9,6 +9,13 @@ reference and `CONTRIBUTING.md` for the hard requirements a new skill must
 meet before it is merged. Match the depth and tone of
 `skills/contracts/nda-review/SKILL.md`.
 
+Every valid `SKILL.md` compiles automatically to a typed Skill Specification
+v2 contract. Add an optional sibling `SPEC.json` only when explicit types,
+execution modes, gates, evidence fields, or selective module-loading rules
+materially improve the workflow. Start from
+`docs/templates/SPEC_TEMPLATE.json` and follow `docs/SKILL_SPEC_V2.md`. Do
+not create a sidecar merely to duplicate the frontmatter below.
+
 ---
 name: <Skill Name in Title Case>
 description: "<Must begin with 'Use when' and name the concrete requests, documents, or situations that should route to this skill — trigger-rich, not a bare definition.>"
