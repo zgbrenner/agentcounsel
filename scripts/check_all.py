@@ -34,6 +34,8 @@ FULL_SUITE = [
      [sys.executable, "-m", "unittest", "discover", "-s", "tests"]),
     ("Check skill metadata and router are up to date",
      [sys.executable, "scripts/build_skill_index.py", "--check"]),
+    ("Check typed skill contract registry is up to date",
+     [sys.executable, "scripts/build_skill_specs.py", "--check"]),
     ("Check platform pack manifest is up to date",
      [sys.executable, "scripts/build_platform_packs.py", "--check"]),
     ("Check context metrics are up to date",

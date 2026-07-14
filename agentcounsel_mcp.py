@@ -2,14 +2,15 @@
 
 This module is standard-library only so routing and retrieval can be tested
 without installing the MCP transport package. Markdown remains the canonical
-source of workflow content; generated metadata is the canonical discovery and
-routing surface.
+source of workflow content; generated metadata is the canonical discovery,
+routing, and typed execution-contract surface.
 """
 
 from __future__ import annotations
 
 import json
 import re
+from copy import deepcopy
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -139,10 +140,12 @@ class CatalogService:
         root: Path,
         index: dict[str, Any],
         router: dict[str, Any],
+        skill_specs: dict[str, Any],
     ) -> None:
         self.root = root
         self.index = index
         self.router = router
+        self.skill_specs = skill_specs
 
         raw_skills = index.get("skills")
         if not isinstance(raw_skills, list) or not raw_skills:
@@ -178,12 +181,42 @@ class CatalogService:
             if len(ids) == 1
         }
 
+        raw_specs = skill_specs.get("skills")
+        if not isinstance(raw_specs, list) or not raw_specs:
+            raise CatalogLoadError(
+                "metadata/skill_specs.json must contain a non-empty 'skills' list"
+            )
+        self._specs: dict[str, dict[str, Any]] = {}
+        for raw in raw_specs:
+            if not isinstance(raw, dict):
+                raise CatalogLoadError(
+                    "metadata/skill_specs.json contains a non-object contract record"
+                )
+            skill_id = raw.get("skill_id")
+            if not isinstance(skill_id, str) or not skill_id:
+                raise CatalogLoadError("Every typed skill contract must have a skill_id")
+            if skill_id in self._specs:
+                raise CatalogLoadError(f"Duplicate typed skill contract id: {skill_id}")
+            if skill_id not in self._skills:
+                raise CatalogLoadError(
+                    f"Typed skill contract has no matching catalog skill: {skill_id}"
+                )
+            self._specs[skill_id] = dict(raw)
+
+        missing_specs = sorted(set(self._skills) - set(self._specs))
+        if missing_specs:
+            raise CatalogLoadError(
+                "metadata/skill_specs.json is missing contracts for: "
+                + ", ".join(missing_specs[:10])
+            )
+
     @classmethod
     def from_root(cls, root: Path | str) -> "CatalogService":
         root_path = Path(root).resolve()
         index = _read_json(root_path / "metadata" / "index.json")
         router = _read_json(root_path / "metadata" / "router.json")
-        return cls(root_path, index, router)
+        skill_specs = _read_json(root_path / "metadata" / "skill_specs.json")
+        return cls(root_path, index, router, skill_specs)
 
     def list_practice_areas(self) -> list[dict[str, Any]]:
         counts = self.index.get("practice_areas")
@@ -208,7 +241,21 @@ class CatalogService:
 
     def get_skill_card(self, skill_id: str) -> dict[str, Any]:
         stable_id = self._resolve_id(skill_id)
-        return _compact_skill(self._skills[stable_id])
+        card = _compact_skill(self._skills[stable_id])
+        spec = self._specs[stable_id]
+        card["spec_version"] = spec.get("schema_version")
+        card["has_custom_spec"] = bool(spec.get("has_custom_spec"))
+        card["available_modes"] = [
+            mode.get("id")
+            for mode in _as_list(spec.get("execution_modes"))
+            if isinstance(mode, dict) and mode.get("enabled") is True
+        ]
+        return card
+
+    def get_skill_spec(self, skill_id: str) -> dict[str, Any]:
+        """Return the complete typed execution contract for one skill."""
+        stable_id = self._resolve_id(skill_id)
+        return deepcopy(self._specs[stable_id])
 
     def get_skill(self, skill_id: str) -> dict[str, Any]:
         card = self.get_skill_card(skill_id)
@@ -304,6 +351,9 @@ class CatalogService:
         results: list[dict[str, Any]] = []
         for item in ranked[:limit]:
             result = dict(item.card)
+            spec = self._specs[str(result["id"])]
+            result["spec_version"] = spec.get("schema_version")
+            result["has_custom_spec"] = bool(spec.get("has_custom_spec"))
             result["relevance_score"] = item.score
             result["matched_fields"] = list(item.matched_fields)
             results.append(result)
@@ -340,13 +390,19 @@ class CatalogService:
                 "primary_route": None,
                 "alternative_routes": [],
                 "why_selected": "No generated skill metadata matched the task terms.",
+                "spec_version": None,
                 "missing_required_inputs": [],
+                "missing_input_labels": [],
+                "execution_modes": [],
+                "custom_gates": [],
                 "mandatory_quality_checks": [],
                 "gates": {
                     "jurisdiction": False,
                     "deadline": False,
                     "attorney_review": True,
                 },
+                "deadline_calculation_allowed": False,
+                "escalation_minimum": "immediate-attorney-attention",
                 "escalation_required": True,
             }
 
@@ -356,7 +412,18 @@ class CatalogService:
         confidence = self._confidence(primary["relevance_score"], alternative_score)
         matched_fields = primary.get("matched_fields", [])
         reason_fields = ", ".join(matched_fields) if matched_fields else "generated metadata"
-        risk_level = str(primary.get("risk_level", "medium")).lower()
+        spec = self._specs[str(primary["id"])]
+        gates = spec.get("gates") if isinstance(spec.get("gates"), dict) else {}
+        deadline_gate = gates.get("deadline") if isinstance(gates.get("deadline"), dict) else {}
+        jurisdiction_gate = gates.get("jurisdiction") if isinstance(gates.get("jurisdiction"), dict) else {}
+        attorney_gate = gates.get("attorney_review") if isinstance(gates.get("attorney_review"), dict) else {}
+        escalation_gate = gates.get("escalation") if isinstance(gates.get("escalation"), dict) else {}
+        escalation_minimum = str(escalation_gate.get("minimum", "attorney-review"))
+        required_inputs = [
+            deepcopy(field)
+            for field in _as_list(spec.get("input_schema"))
+            if isinstance(field, dict) and field.get("required") is True
+        ]
 
         return {
             "status": "matched",
@@ -369,14 +436,23 @@ class CatalogService:
                 f"Selected {primary['id']} from matches in {reason_fields}; "
                 f"metadata relevance score {primary['relevance_score']}."
             ),
-            "missing_required_inputs": list(primary.get("required_inputs", [])),
-            "mandatory_quality_checks": list(primary.get("recommended_quality_checks", [])),
+            "spec_version": spec.get("schema_version"),
+            "missing_required_inputs": required_inputs,
+            "missing_input_labels": [str(field.get("label", field.get("id", ""))) for field in required_inputs],
+            "execution_modes": deepcopy(_as_list(spec.get("execution_modes"))),
+            "custom_gates": deepcopy(_as_list(gates.get("custom"))),
+            "mandatory_quality_checks": deepcopy(_as_list(spec.get("quality_checks"))),
             "gates": {
-                "jurisdiction": bool(primary.get("requires_jurisdiction")),
-                "deadline": bool(primary.get("requires_deadline_check")),
-                "attorney_review": bool(primary.get("requires_attorney_review", True)),
+                "jurisdiction": bool(jurisdiction_gate.get("required")),
+                "deadline": bool(deadline_gate.get("required")),
+                "attorney_review": bool(attorney_gate.get("required", True)),
             },
-            "escalation_required": risk_level in {"high", "critical"},
+            "deadline_calculation_allowed": bool(
+                deadline_gate.get("calculation_allowed", False)
+            ),
+            "escalation_minimum": escalation_minimum,
+            "escalation_required": escalation_minimum
+            in {"attorney-escalation", "immediate-attorney-attention"},
         }
 
     def get_core_rules(self) -> dict[str, str]:
@@ -391,7 +467,7 @@ class CatalogService:
     def catalog_markdown(self) -> str:
         lines = ["# AgentCounsel Skill Catalog", ""]
         for skill_id in sorted(self._skills):
-            card = _compact_skill(self._skills[skill_id])
+            card = self.get_skill_card(skill_id)
             lines.append(
                 f"- `{card['id']}` — **{card['title']}** "
                 f"({card.get('practice_area', 'unknown')}): {card.get('description', '')}"

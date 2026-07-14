@@ -8,6 +8,14 @@ All notable changes to AgentCounsel are recorded in this file. The format follow
 
 ### Added
 
+- **Skill Specification v2 foundation:** every canonical skill now compiles
+  to a typed execution contract in `metadata/skill_specs.json`, with
+  non-weakening inheritance, missing-input and attorney-review gates,
+  three execution modes, typed inputs and outputs, claim-support evidence
+  records, selective modules, and compiled quality checks. Optional
+  `SPEC.json` sidecars pilot the format for NDA review, legal research
+  memos, and critical breach response. MCP routing now returns typed
+  required inputs, modes, custom gates, and compiled escalation behavior.
 - **Phase 1 MCP and repository metrics:** `agentcounsel_mcp.py` now uses
   canonical generated metadata for stable-ID discovery and structured routing;
   `mcp_server.py` is a thin FastMCP adapter with compact skill-card retrieval.

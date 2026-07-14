@@ -41,6 +41,9 @@ jobs:
       - name: Check skill metadata and router are up to date
         run: python scripts/build_skill_index.py --check
 
+      - name: Check typed skill contract registry is up to date
+        run: python scripts/build_skill_specs.py --check
+
       - name: Check platform pack manifest is up to date
         run: python scripts/build_platform_packs.py --check
 

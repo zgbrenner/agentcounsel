@@ -1,0 +1,168 @@
+{
+  "schema_version": "2.0",
+  "skill_id": "contracts/nda-review",
+  "inherits": [
+    "core/business-stakeholder-communication.md"
+  ],
+  "gates": {
+    "custom": [
+      {
+        "id": "specialist-transaction-context",
+        "condition": "The NDA is part of an M&A, employment, or investment transaction.",
+        "action": "stop-and-escalate",
+        "reason": "The confidentiality terms require transaction-specific specialist review rather than stand-alone commercial NDA triage."
+      },
+      {
+        "id": "non-confidentiality-obligations",
+        "condition": "The document contains standstill, exclusivity, non-solicitation, non-competition, IP assignment, license, right-of-first-refusal, most-favored-nation, or similarly broader obligations.",
+        "action": "require-attorney-confirmation",
+        "reason": "The document may be more than an NDA and cannot be routed for signature on confidentiality review alone."
+      }
+    ]
+  },
+  "execution_modes": [
+    {
+      "id": "quick-triage",
+      "enabled": true,
+      "purpose": "Confirm the document is a stand-alone commercial NDA, identify missing inputs, scan for obligations beyond confidentiality, and return only the preliminary escalation posture.",
+      "output_detail": "minimal",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check"
+      ]
+    },
+    {
+      "id": "standard",
+      "enabled": true,
+      "purpose": "Produce the standard NDA triage rating, key-term summary, risk table, negotiation priorities, and attorney-verification items.",
+      "output_detail": "standard",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "legal-prose-polish"
+      ]
+    },
+    {
+      "id": "deep-review",
+      "enabled": true,
+      "purpose": "Run the complete clause-category, red-flag, market-benchmark, negotiability, internal-consistency, and stakeholder-summary workflow with all applicable reference modules.",
+      "output_detail": "expanded",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "output-format-compliance-check",
+        "privilege-confidentiality-check",
+        "legal-prose-polish"
+      ]
+    }
+  ],
+  "input_schema": [
+    {
+      "id": "clients-role-disclosing-receiving-or-mutual",
+      "label": "Client role",
+      "type": "enum",
+      "required": true,
+      "description": "The client's role under the NDA.",
+      "source_requirement": "user-provided",
+      "may_infer": false,
+      "sensitive": false,
+      "enum": [
+        "disclosing",
+        "receiving",
+        "mutual"
+      ]
+    },
+    {
+      "id": "transaction-context",
+      "label": "Transaction context",
+      "type": "enum",
+      "required": true,
+      "description": "The transaction setting used to determine whether stand-alone NDA triage is appropriate.",
+      "source_requirement": "user-provided",
+      "may_infer": false,
+      "sensitive": false,
+      "enum": [
+        "standalone-commercial",
+        "m-and-a",
+        "employment",
+        "investment",
+        "other"
+      ]
+    }
+  ],
+  "output_schema": [
+    {
+      "id": "structured-risk-summary",
+      "label": "Structured risk summary",
+      "type": "table",
+      "required": true,
+      "description": "Material NDA provisions, exact section evidence, client risk, severity, preferred position, fallback position, and attorney action.",
+      "attorney_review_required": true
+    },
+    {
+      "id": "prioritized-redline-points-for-attorney-review",
+      "label": "Prioritized redline points for attorney review",
+      "type": "checklist",
+      "required": true,
+      "description": "High, medium, and low negotiation points with preferred and fallback positions and no final clause language unless attorney-directed.",
+      "attorney_review_required": true
+    }
+  ],
+  "evidence_schema": {
+    "required_fields": [
+      "support_text"
+    ],
+    "fields": [
+      {
+        "id": "provision_name",
+        "type": "text",
+        "description": "The provision or clause category supporting the issue."
+      },
+      {
+        "id": "client_position",
+        "type": "text",
+        "description": "The client role and playbook position used in the analysis."
+      }
+    ]
+  },
+  "modules": [
+    {
+      "id": "nda-risk-table-template",
+      "kind": "template",
+      "path": "skills/contracts/nda-review/templates/nda-risk-table.md",
+      "required": true,
+      "load_when": "standard or deep-review mode"
+    },
+    {
+      "id": "contract-red-flags",
+      "kind": "reference",
+      "path": "skills/contracts/references/red-flags.md",
+      "required": true,
+      "load_when": "all enabled modes"
+    },
+    {
+      "id": "negotiability-ratings",
+      "kind": "reference",
+      "path": "skills/contracts/references/negotiability-ratings.md",
+      "required": false,
+      "load_when": "standard or deep-review mode when negotiation prioritization is requested"
+    },
+    {
+      "id": "market-benchmark-framework",
+      "kind": "reference",
+      "path": "skills/contracts/references/market-benchmark-framework.md",
+      "required": false,
+      "load_when": "deep-review mode or when market practice is requested"
+    },
+    {
+      "id": "contracts-practice-profile",
+      "kind": "profile",
+      "path": "practice-profiles/contracts.md",
+      "required": false,
+      "load_when": "a populated and attorney-approved contracts profile is available"
+    }
+  ]
+}

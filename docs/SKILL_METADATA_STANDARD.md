@@ -190,6 +190,35 @@ Consumers — agents, site generators, package builders — should read
 `metadata/index.json` and `metadata/router.json` rather than re-parsing every
 `SKILL.md`.
 
+
+## Typed execution contracts
+
+The eleven frontmatter fields remain the compact discovery and routing
+standard. Every skill also compiles to a typed Skill Specification v2
+contract in `metadata/skill_specs.json`. The compiler derives safe defaults
+for legacy skills, so no sidecar is required.
+
+A skill may include `skills/<area>/<skill>/SPEC.json` when explicit input or
+output types, execution modes, custom gates, evidence requirements, or
+selectively loaded modules materially improve the workflow. `SPEC.json` is
+an overlay: it adds to or refines the frontmatter-derived contract and may
+not weaken attorney review, missing-input stops, deadline safeguards,
+required-input provenance, baseline evidence fields, or inherited core
+rules. See `docs/SKILL_SPEC_V2.md` and
+`docs/templates/SPEC_TEMPLATE.json`.
+
+Regenerate and validate typed contracts whenever frontmatter, a skill body,
+or a sidecar changes:
+
+```
+python scripts/build_skill_specs.py
+python scripts/build_skill_specs.py --check
+```
+
+Consumers that need execution modes, typed fields, gates, evidence records,
+or module-loading conditions should read `metadata/skill_specs.json` rather
+than reconstructing those fields from `SKILL.md`.
+
 ## Normalized generated fields
 
 The frontmatter remains intentionally small. The generated index adds derived
@@ -243,5 +272,6 @@ correctness.
 5. Keep `requires_attorney_review: true` for any legal work product.
 6. List concrete `inputs`, `outputs`, `related_skills` paths, and `tags`.
 7. Run `python scripts/build_skill_index.py` to regenerate the index and router.
-8. If the skill should affect platform packs, run `python scripts/build_platform_packs.py`.
-9. Run `python scripts/validate_repo.py` and confirm it passes.
+8. Run `python scripts/build_skill_specs.py` to regenerate and validate typed execution contracts.
+9. If the skill should affect platform packs, run `python scripts/build_platform_packs.py`.
+10. Run `python scripts/validate_repo.py` and confirm it passes.

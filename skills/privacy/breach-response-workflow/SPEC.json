@@ -1,0 +1,209 @@
+{
+  "schema_version": "2.0",
+  "skill_id": "privacy/breach-response-workflow",
+  "gates": {
+    "escalation": {
+      "minimum": "immediate-attorney-attention"
+    },
+    "deadline": {
+      "required": true,
+      "calculation_allowed": false
+    },
+    "custom": [
+      {
+        "id": "immediate-attorney-routing",
+        "condition": "A privacy or security incident is suspected or confirmed.",
+        "action": "stop-and-escalate",
+        "reason": "Potential legal, contractual, insurance, and regulatory clocks may already be running; intake must not delay immediate attorney attention."
+      },
+      {
+        "id": "reportability-conclusion-prohibited",
+        "condition": "A user asks whether the incident is legally a breach, whether notification is required, or whether an exception applies.",
+        "action": "require-attorney-confirmation",
+        "reason": "Reportability and notification are jurisdiction-specific legal conclusions that the workflow may frame only as questions for counsel."
+      },
+      {
+        "id": "deadline-calculation-prohibited",
+        "condition": "A user asks for a notification due date, days remaining, or calculation of any regulatory, contractual, insurance, or data-subject notice period.",
+        "action": "stop-and-escalate",
+        "reason": "The workflow records user-supplied trigger dates and written notice periods but never computes or asserts a deadline."
+      },
+      {
+        "id": "privilege-protocol-unconfirmed",
+        "condition": "The privilege posture or counsel direction for the investigation is unknown.",
+        "action": "require-attorney-confirmation",
+        "reason": "Distribution and investigation structure must be set by counsel before the working file is circulated beyond confirmed recipients."
+      }
+    ]
+  },
+  "execution_modes": [
+    {
+      "id": "quick-triage",
+      "enabled": true,
+      "purpose": "Post the critical attorney-attention banner, capture the minimum incident and trigger-date facts, identify missing privilege information, and route immediately without reaching a reportability conclusion.",
+      "output_detail": "minimal",
+      "quality_checks": [
+        "attorney-review-gate",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check"
+      ]
+    },
+    {
+      "id": "standard",
+      "enabled": true,
+      "purpose": "Build the privileged incident working file, question set, candidate notification inventory, contractual map, chronology, clock register, and preservation checklist without calculating deadlines or deciding notification duties.",
+      "output_detail": "standard",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ]
+    },
+    {
+      "id": "deep-review",
+      "enabled": true,
+      "purpose": "Expand the standard working file across all provided contracts, incident reports, policies, affected populations, systems, evidence sources, insurance materials, and escalation factors while preserving the same legal-conclusion boundaries.",
+      "output_detail": "expanded",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "jurisdiction-deadline-gates",
+        "privilege-confidentiality-check",
+        "output-format-compliance-check"
+      ]
+    }
+  ],
+  "input_schema": [
+    {
+      "id": "incident-description",
+      "label": "Incident description",
+      "type": "object",
+      "required": true,
+      "description": "What happened, how it was discovered, suspected vector, containment status, and facts known as of a stated time.",
+      "source_requirement": "user-provided-or-provided-document",
+      "may_infer": false,
+      "sensitive": true
+    },
+    {
+      "id": "discovery-and-trigger-dates",
+      "label": "Discovery and candidate trigger dates",
+      "type": "object",
+      "required": true,
+      "description": "Each user-supplied occurrence, detection, discovery, confirmation, and vendor-notice date with source and ambiguity recorded; no due date is calculated.",
+      "source_requirement": "user-provided-or-provided-document",
+      "may_infer": false,
+      "sensitive": true
+    },
+    {
+      "id": "privilege-posture",
+      "label": "Privilege posture",
+      "type": "object",
+      "required": true,
+      "description": "Whether counsel directs the investigation, who directs it, and confirmed distribution limits.",
+      "source_requirement": "user-provided-and-attorney-confirmed",
+      "may_infer": false,
+      "sensitive": true
+    }
+  ],
+  "output_schema": [
+    {
+      "id": "incident-facts-record",
+      "label": "Incident facts record",
+      "type": "structured-data",
+      "required": true,
+      "description": "A time-stamped provisional record in which every fact, estimate, vendor statement, and unknown is attributed and labeled.",
+      "attorney_review_required": true
+    },
+    {
+      "id": "candidate-notification-inventory",
+      "label": "Candidate notification inventory",
+      "type": "matrix",
+      "required": true,
+      "description": "Potential regulators, data subjects, counterparties, insurers, and other recipients framed only as attorney-confirmation questions with no asserted duty or computed due date.",
+      "attorney_review_required": true
+    },
+    {
+      "id": "trigger-date-clock-register",
+      "label": "Trigger-date and clock register",
+      "type": "tracker",
+      "required": true,
+      "description": "User-supplied trigger dates, candidate framework or contract, written notice period where provided, and a mandatory deadline-verification placeholder rather than a calculated due date.",
+      "attorney_review_required": true
+    },
+    {
+      "id": "working-chronology",
+      "label": "Working chronology",
+      "type": "timeline",
+      "required": true,
+      "description": "A sourced chronology of occurrence, detection, discovery, escalation, containment, notices, and decisions without interpolated events.",
+      "attorney_review_required": true
+    },
+    {
+      "id": "evidence-preservation-checklist",
+      "label": "Evidence preservation checklist",
+      "type": "checklist",
+      "required": true,
+      "description": "Potential evidence categories, owners, collection status, and at-risk sources for counsel to direct; not a substitute for a formal legal hold.",
+      "attorney_review_required": true
+    }
+  ],
+  "evidence_schema": {
+    "required_fields": [
+      "support_text",
+      "fact_as_of",
+      "privilege_status"
+    ],
+    "fields": [
+      {
+        "id": "fact_as_of",
+        "type": "datetime",
+        "description": "The date and time at which an incident fact or estimate was recorded as current."
+      },
+      {
+        "id": "privilege_status",
+        "type": "enum",
+        "description": "The counsel-confirmed privilege or distribution designation for the underlying material."
+      },
+      {
+        "id": "statement_owner",
+        "type": "text",
+        "description": "The person, vendor, report, system, or document to which the statement is attributed."
+      }
+    ]
+  },
+  "modules": [
+    {
+      "id": "privacy-practice-profile",
+      "kind": "profile",
+      "path": "practice-profiles/privacy.md",
+      "required": false,
+      "load_when": "a populated and attorney-approved privacy profile is available"
+    },
+    {
+      "id": "formal-legal-hold-workflow",
+      "kind": "workflow-module",
+      "path": "skills/litigation/legal-hold/SKILL.md",
+      "required": false,
+      "load_when": "counsel determines that a formal legal hold should be issued or managed"
+    },
+    {
+      "id": "litigation-chronology-workflow",
+      "kind": "workflow-module",
+      "path": "skills/litigation/litigation-chronology/SKILL.md",
+      "required": false,
+      "load_when": "the incident chronology becomes extensive or litigation-grade"
+    },
+    {
+      "id": "dpa-review-workflow",
+      "kind": "workflow-module",
+      "path": "skills/privacy/dpa-review/SKILL.md",
+      "required": false,
+      "load_when": "provided DPAs require substantive review beyond extraction of incident-notice language"
+    }
+  ]
+}

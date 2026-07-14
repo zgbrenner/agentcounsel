@@ -1,0 +1,100 @@
+{
+  "schema_version": "2.0",
+  "skill_id": "<practice-area>/<skill-slug>",
+  "inherits": [
+    "core/<additional-shared-rule>.md"
+  ],
+  "gates": {
+    "custom": [
+      {
+        "id": "<stable-gate-id>",
+        "condition": "<observable condition that triggers this gate>",
+        "action": "<flag | stop-and-ask | stop-and-escalate | require-attorney-confirmation>",
+        "reason": "<why the gate is necessary>"
+      }
+    ]
+  },
+  "execution_modes": [
+    {
+      "id": "quick-triage",
+      "enabled": true,
+      "purpose": "<what a deliberately limited triage pass may do>",
+      "output_detail": "minimal",
+      "quality_checks": [
+        "attorney-review-gate"
+      ]
+    },
+    {
+      "id": "standard",
+      "enabled": true,
+      "purpose": "<the normal attorney-ready workflow>",
+      "output_detail": "standard",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check"
+      ]
+    },
+    {
+      "id": "deep-review",
+      "enabled": true,
+      "purpose": "<the expanded workflow and when its additional context is justified>",
+      "output_detail": "expanded",
+      "quality_checks": [
+        "attorney-review-gate",
+        "source-validation-check",
+        "assumption-audit",
+        "hallucination-red-team",
+        "output-format-compliance-check"
+      ]
+    }
+  ],
+  "input_schema": [
+    {
+      "id": "<existing-or-new-field-id>",
+      "label": "<human-readable label>",
+      "type": "<text | document | document-set | enum | date | datetime | boolean | integer | number | jurisdiction | object>",
+      "required": true,
+      "description": "<what the field contains and why it is needed>",
+      "source_requirement": "<user-provided | provided-document | user-provided-and-attorney-confirmed>",
+      "may_infer": false,
+      "sensitive": false,
+      "enum": [
+        "<include only when type is enum>"
+      ]
+    }
+  ],
+  "output_schema": [
+    {
+      "id": "<existing-or-new-artifact-id>",
+      "label": "<human-readable label>",
+      "type": "<section | table | checklist | memo | letter | tracker | timeline | matrix | structured-data>",
+      "required": true,
+      "description": "<the artifact's required contents>",
+      "attorney_review_required": true
+    }
+  ],
+  "evidence_schema": {
+    "required_fields": [
+      "support_text"
+    ],
+    "fields": [
+      {
+        "id": "<additional-evidence-field-id>",
+        "type": "text",
+        "description": "<what this evidence field records>"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "id": "<stable-module-id>",
+      "kind": "<reference | template | profile | connector | quality-check | workflow-module>",
+      "path": "<existing-repository-path>",
+      "required": false,
+      "load_when": "<specific condition or execution mode>"
+    }
+  ],
+  "quality_checks": [
+    "<additional-quality-check-id>"
+  ]
+}
