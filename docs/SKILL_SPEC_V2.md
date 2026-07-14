@@ -24,6 +24,16 @@ metadata/skill_specs.json
 
 Do not edit that file by hand.
 
+## Phase 2A coverage
+
+The current registry contains typed execution contracts for all **212 canonical skills**. Of those, **209** use safe contracts compiled entirely from their existing Markdown metadata and **three** use reviewed custom sidecars:
+
+- `contracts/nda-review`
+- `legal-research/legal-research-memo`
+- `privacy/breach-response-workflow`
+
+No existing `SKILL.md` body was changed to establish this foundation. Future sidecars should be added incrementally in risk- and usage-priority order.
+
 ## Why a JSON sidecar
 
 AgentCounsel's YAML frontmatter deliberately supports only top-level scalars and lists. That keeps the library portable and parseable with the Python standard library. Typed inputs, nested gates, evidence records, and mode-specific behavior require a deeper structure, so v2 uses JSON rather than expanding the frontmatter parser or adding a YAML dependency.
