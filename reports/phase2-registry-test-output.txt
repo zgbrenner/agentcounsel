@@ -12,7 +12,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.023s
+Ran 4 tests in 0.020s
 
 FAILED (failures=1)
 exit_code=1
