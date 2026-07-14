@@ -655,6 +655,30 @@ def validate_compiled_spec(spec: dict[str, Any], root: Path) -> list[str]:
     return errors
 
 
+
+def _raw_overlay_duplicate_errors(custom: dict[str, Any]) -> list[str]:
+    """Detect duplicate stable IDs before merge normalization collapses them."""
+    groups: list[tuple[str, Any]] = [
+        ("execution mode", custom.get("execution_modes")),
+        ("input", custom.get("input_schema")),
+        ("output", custom.get("output_schema")),
+        ("module", custom.get("modules")),
+    ]
+    gates = custom.get("gates")
+    if isinstance(gates, dict):
+        groups.append(("custom gate", gates.get("custom")))
+    evidence = custom.get("evidence_schema")
+    if isinstance(evidence, dict):
+        groups.append(("evidence field", evidence.get("fields")))
+    errors: list[str] = []
+    for label, records in groups:
+        duplicates = _duplicate_ids(records)
+        if duplicates:
+            errors.append(
+                f"duplicate {label} ids in custom spec: " + ", ".join(duplicates)
+            )
+    return errors
+
 def compile_skill_spec(
     skill_dir: Path,
     metadata: dict[str, Any],
@@ -670,6 +694,12 @@ def compile_skill_spec(
     result = _default_contract(skill_dir, metadata, derived, root)
     custom = load_custom_spec(skill_dir)
     if custom is not None:
+        duplicate_errors = _raw_overlay_duplicate_errors(custom)
+        if duplicate_errors:
+            raise SpecValidationError(
+                f"{skill_dir / SPEC_FILENAME}: invalid Skill Specification v2:\n- "
+                + "\n- ".join(duplicate_errors)
+            )
         result = _merge_custom(result, custom, root, skill_dir)
         explicit_version = custom.get("schema_version")
         if explicit_version is not None and explicit_version != SCHEMA_VERSION:
